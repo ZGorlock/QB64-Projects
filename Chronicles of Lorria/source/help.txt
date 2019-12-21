@@ -1,0 +1,62 @@
+DIM helptrycount AS _UNSIGNED _BYTE
+
+DIM getsubject AS INTEGER
+DIM helpfiles AS INTEGER
+
+DIM helpsearch AS STRING
+DIM helpselected AS STRING
+
+Loading = -1
+
+REDIM helpfiles(32767) AS STRING
+REDIM helpsubject(0) AS STRING
+
+Help = 0
+
+helptrycount = 0
+DO
+    helptrycount = helptrycount + 1
+    SHELL _HIDE "dir resource\help\*.txt /b /o:n /s > temp\helpdir.txt"
+    IF helptrycount = 10 THEN EXIT DO
+LOOP UNTIL _FILEEXISTS("temp\helpdir.txt")
+IF helptrycount < 10 THEN
+helpfiles = 0
+    OPEN "temp\helpdir.txt" FOR INPUT AS #1
+    DO
+        helpfiles = helpfiles + 1
+        LINE INPUT #1, helpfiles$(helpfiles)
+    LOOP UNTIL EOF(1)
+    CLOSE #1
+    KILL "temp\helpdir.txt"
+    REDIM _PRESERVE helpfiles(helpfiles) AS STRING
+    REDIM helpsubject(helpfiles) AS STRING
+    FOR getsubject = 1 TO helpfiles
+        helpsubject$(getsubject) = filetitle$(helpfiles$(getsubject))
+    NEXT getsubject
+    CALL sort_insertion_str(helpsubject$())
+helpsearch$ = ""
+helpselected$ = ""
+Loading = 0
+
+    DO
+        _LIMIT setting.lps
+
+IF updatescreen THEN
+_DISPLAY
+        GOSUB resetscreen
+        FOR x = 1 TO helpfiles
+            PRINT helpsubject$(x)
+        NEXT x
+GOSUB cursor
+_DISPLAY
+_AUTODISPLAY
+END IF
+
+        Escact = 1
+        GOSUB getinput
+    LOOP UNTIL Keyboardinput
+END IF
+
+
+REDIM helpfiles(0) AS STRING
+REDIM helpsubject(0) AS STRING

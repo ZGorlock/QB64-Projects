@@ -1,0 +1,9 @@
+int16 *_SUB_BUTTONSETQUEUE_INTEGER_FINDQUEUE=NULL;
+if(_SUB_BUTTONSETQUEUE_INTEGER_FINDQUEUE==NULL){
+_SUB_BUTTONSETQUEUE_INTEGER_FINDQUEUE=(int16*)mem_static_malloc(2);
+*_SUB_BUTTONSETQUEUE_INTEGER_FINDQUEUE=0;
+}
+int32 fornext_value6448;
+int32 fornext_finalvalue6448;
+int32 fornext_step6448;
+uint8 fornext_step_negative6448;

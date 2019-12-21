@@ -1,0 +1,6 @@
+Strength determines your physical attack, defense against physical attack, and ability to preform other abilities which require strength.
+Dexterity determines your accuracy, certain aspects of damage with ranged weapons, and ability to preform abilities that require coordination.
+Intelligence determines your magic attack, defence against magic attack and spells, and the ability to preform abilities that require mental acuity.
+Wisdom determines your proficiency at learning new skills.
+Constitution determines your health, mana, stamina, speed of recovery, suceptability to poisons and disease, etc.
+Charisma determines your bargaining and persuasion abilities and your amiability.

@@ -1,0 +1,13 @@
+source2.txt
+	>Profession
+		>Profession Materials
+		>Recipe for Armour
+		>Recipe for Weapon
+		>Recipe for Accessory
+		>Recipe for Consumable
+		>Recipe for Android
+	>
+
+source3.txt
+	>
+	>

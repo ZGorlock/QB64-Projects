@@ -1,0 +1,7 @@
+int32 *_FUNC_RCLICKOLD_BIT1_RCLICKOLD=NULL;
+if(_FUNC_RCLICKOLD_BIT1_RCLICKOLD==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_RCLICKOLD_BIT1_RCLICKOLD=(int32*)(dblock+cmem_sp);
+*_FUNC_RCLICKOLD_BIT1_RCLICKOLD=0;
+}

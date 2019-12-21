@@ -1,0 +1,1 @@
+static int32 sc_6546;

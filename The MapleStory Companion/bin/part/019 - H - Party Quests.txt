@@ -1,0 +1,604 @@
+IF (k$ = CHR$(104) OR k$ = CHR$(72)) OR (_MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 365 AND _MOUSEY < 381 AND _MOUSEBUTTON(1)) THEN
+    DO
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "These guides are property of their respective owners and were obtained through Basil Market. None of these guides belong to me and I take credit in no way for the information within them."
+            PRINT "What type of party quest guide would you like to look at?"
+            PRINT "     0-Amoria"
+            PRINT "     1-Crimsonwood Keep"
+            PRINT "     2-Ellin Forest"
+            PRINT "     3-Ghost Ship in the Sea Mist"
+            PRINT "     4-Henesys"
+            PRINT "     5-Herb Town"
+            PRINT "     6-Kerning City"
+            PRINT "     7-Ludibrium"
+            PRINT "     8-Magatia"
+            PRINT "     9-Monster Carnival"
+            PRINT "     a-Monster Carnival 2"
+            PRINT "     b-Mu Lung Dojo"
+            PRINT "     c-Nett's Pyramid"
+            PRINT "     d-Orbis"
+            PRINT "     e-Sharenian"
+            bibliography = 2
+            GOSUB controls
+            IF k$ = CHR$(48) THEN
+                titleloc = 25.5
+                title$ = "Amorian Challenge Party Quest"
+                abrloc = 37.5
+                abr$ = "(APQ)"
+                rows = 214
+                file$ = "source\pq\apq.txt"
+                rsave$ = "user\row\pq\apqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/amorian-challenge"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(49) THEN
+                titleloc = 26
+                title$ = "Crimsonwood Keep Party Quest"
+                abrloc = 36.5
+                abr$ = "(CWKPQ)"
+                rows = 222
+                file$ = "source\pq\cwkpq.txt"
+                rsave$ = "user\row\pq\cwkpqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/crimsonwood-keep"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                titleloc = 28
+                title$ = "Ellin Forest Party Quest"
+                abrloc = 37
+                abr$ = "(EFPQ)"
+                rows = 149
+                file$ = "source\pq\efpq.txt"
+                rsave$ = "user\row\pq\efpqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/ellin-forest"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(51) THEN
+                titleloc = 21
+                title$ = "Ghost Ship in the Sea Mist Party Quest"
+                abrloc = 36
+                abr$ = "(GSPQ)"
+                rows = 106
+                file$ = "source\pq\gspq.txt"
+                rsave$ = "user\row\pq\gspqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/ghost-ship-in-the-sea-mist"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(52) THEN
+                titleloc = 30.5
+                title$ = "Henesys Party Quest"
+                abrloc = 37.5
+                abr$ = "(HPQ)"
+                rows = 67
+                file$ = "source\pq\hpq.txt"
+                rsave$ = "user\row\pq\hpqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/henesys"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(53) THEN
+                titleloc = 29.5
+                title$ = "Herb Town Party Quest"
+                abrloc = 37.5
+                abr$ = "(PPQ)"
+                rows = 198
+                file$ = "source\pq\ppq.txt"
+                rsave$ = "user\row\pq\ppqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/herb-town"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(54) THEN
+                titleloc = 28
+                title$ = "Kerning City Party Quest"
+                abrloc = 37.5
+                abr$ = "(KPQ)"
+                rows = 190
+                file$ = "source\pq\kpq.txt"
+                rsave$ = "user\row\pq\kpqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/kerning-city"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(55) THEN
+                titleloc = 29.5
+                title$ = "Ludibrium Party Quest"
+                abrloc = 37.5
+                abr$ = "(LPQ)"
+                rows = 239
+                file$ = "source\pq\lpq.txt"
+                rsave$ = "user\row\pq\lpqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/ludibrium"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(56) THEN
+                titleloc = 30.5
+                title$ = "Magatia Party Quest"
+                abrloc = 37.5
+                abr$ = "(MPQ)"
+                rows = 215
+                file$ = "source\pq\mpq.txt"
+                rsave$ = "user\row\pq\mpqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/magatia"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(57) THEN
+                titleloc = 26
+                title$ = "Monster Carnival Party Quest"
+                abrloc = 38
+                abr$ = "(MC)"
+                rows = 214
+                file$ = "source\pq\mcpq.txt"
+                rsave$ = "user\row\pq\mcrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/monster-carnival"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(97) THEN
+                titleloc = 25
+                title$ = "Monster Carnival 2 Party Quest"
+                abrloc = 37.5
+                abr$ = "(MC2)"
+                rows = 216
+                file$ = "source\pq\mc2pq.txt"
+                rsave$ = "user\row\pq\mc2rs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/monster-carnival-2"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(98) THEN
+                titleloc = 28
+                title$ = "Mu Lung Dojo Party Quest"
+                abrloc = 36
+                abr$ = "(Dojo)"
+                rows = 149
+                file$ = "source\pq\dojo.txt"
+                rsave$ = "user\row\pq\dojors.txt"
+                source$ = "http://global.hidden-street.net/party-quest/mu-lung-dojo"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(99) THEN
+                titleloc = 27
+                title$ = "Nett's Pyramid Party Quest"
+                abrloc = 32
+                abr$ = "(Nett's Pyramid)"
+                rows = 139
+                file$ = "source\pq\nettspyramid.txt"
+                rsave$ = "user\row\pq\nettspyramidrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/netts-pyramid"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(100) THEN
+                titleloc = 22
+                title$ = "Orbis Party Quest (Tower of Goddess)"
+                abrloc = 37.5
+                abr$ = "(OPQ)"
+                rows = 320
+                file$ = "source\pq\opq.txt"
+                rsave$ = "user\row\pq\opqrs.txt"
+                source$ = "http://global.hidden-street.net/party-quest/orbis"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(101) THEN
+                titleloc = 35.5
+                title$ = "Sharenian"
+                abrloc = 37.5
+                abr$ = "(GPQ)"
+                rows = 322
+                file$ = "source\pq\gpq.txt"
+                rsave$ = "user\row\pq\gpqrs.txt"
+                source$ = "http://global.hidden-street.net/guild-quest/sharenian"
+                EXIT DO
+            END IF
+            _DISPLAY
+        LOOP
+        exitloop = 0
+        bibliography = 1
+        DO
+            DO
+                _LIMIT 64
+                CLS
+                LOCATE 1, titleloc
+                PRINT title$
+                LOCATE 2, abrloc
+                PRINT abr$
+                LOCATE 4, 1
+                PRINT "What would you like to do?"
+                PRINT "     1-Read this PQ Guide"
+                PRINT "     2-Reset this PQ Guide's Row Save"
+                PRINT "     3-Read another PQ Guide"
+                PRINT "     4-Exit"
+                GOSUB controls
+                IF k$ = CHR$(49) THEN
+                    inputcount = 0
+                    OPEN rsave$ FOR INPUT AS #1
+                    INPUT #1, row
+                    CLOSE #1
+                    REDIM pq$(rows)
+                    OPEN file$ FOR INPUT AS #1
+                    DO UNTIL EOF(1)
+                        inputcount = inputcount + 1
+                        LINE INPUT #1, pq$(inputcount)
+                        IF inputcount = rows THEN EXIT DO
+                    LOOP
+                    CLOSE #1
+                    CLS
+                    FOR n = row TO row + 27
+                        PRINT pq$(n)
+                        GOSUB scrollbar
+                    NEXT
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        bibliopgraphy = 1
+                        GOSUB controls
+                        IF k$ = CHR$(113) THEN
+                            row = row - 1
+                            GOTO H1
+                        END IF
+                        IF k$ = CHR$(122) THEN
+                            row = row + 1
+                            GOTO H1
+                        END IF
+                        IF k$ = CHR$(119) THEN
+                            row = 1
+                            GOTO H1
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                            row = row - 27
+                            GOTO H1
+                        END IF
+                        IF k$ = CHR$(115) THEN
+                            row = (rows - 27)
+                            GOTO H1
+                        END IF
+                        IF k$ = CHR$(100) THEN
+                            row = row + 27
+                            GOTO H1
+                        END IF
+                        IF abr$ = "(APQ)" AND k$ = CHR$(101) THEN
+                            SCREEN 13
+                            apqpic = _LOADIMAGE("graphic\pq\apq1.png", 32)
+                            SCREEN picsreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), apqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(CWKPQ)" AND k$ = CHR$(101) THEN
+                            SCREEN 13
+                            cwkpqpic = _LOADIMAGE("graphic\pq\cwkpq1.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), cwkpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(CWKPQ)" AND k$ = CHR$(114) THEN
+                            SCREEN 13
+                            cwkpqpic = _LOADIMAGE("graphic\pq\cwkpq2.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), cwkpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(CWKPQ)" AND k$ = CHR$(116) THEN
+                            SCREEN 13
+                            cwkpqpic = _LOADIMAGE("graphic\pq\cwkpq3.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), cwkpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(CWKPQ)" AND k$ = CHR$(121) THEN
+                            SCREEN 13
+                            cwkpqpic = _LOADIMAGE("graphic\pq\cwkpq4.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), cwkpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(EFPQ)" AND k$ = CHR$(101) THEN
+                            SCREEN 13
+                            efpqpic = _LOADIMAGE("graphic\pq\efpq1.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), efpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(EFPQ)" AND k$ = CHR$(114) THEN
+                            SCREEN 13
+                            efpqpic = _LOADIMAGE("graphic\pq\efpq2.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), efpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(HPQ)" AND k$ = CHR$(101) THEN
+                            SCREEN 13
+                            hpqpic = _LOADIMAGE("graphic\pq\hpq1.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), hpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(OPQ)" AND k$ = CHR$(101) THEN
+                            SCREEN 13
+                            opqpic = _LOADIMAGE("graphic\pq\opq1.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), opqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(OPQ)" AND k$ = CHR$(114) THEN
+                            SCREEN 13
+                            opqpic = _LOADIMAGE("graphic\pq\opq2.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), opqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(OPQ)" AND k$ = CHR$(116) THEN
+                            SCREEN 13
+                            opqpic = _LOADIMAGE("graphic\pq\opq3.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), opqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(OPQ)" AND k$ = CHR$(121) THEN
+                            SCREEN 13
+                            opqpic = _LOADIMAGE("graphic\pq\opq4.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), opqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(OPQ)" AND k$ = CHR$(117) THEN
+                            SCREEN 13
+                            opqpic = _LOADIMAGE("graphic\pq\opq5.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), opqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(GPQ)" AND k$ = CHR$(101) THEN
+                            SCREEN 13
+                            gpqpic = _LOADIMAGE("graphic\pq\gpq1.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), gpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(GPQ)" AND k$ = CHR$(114) THEN
+                            SCREEN 13
+                            gpqpic = _LOADIMAGE("graphic\pq\gpq2.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), gpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(GPQ)" AND k$ = CHR$(116) THEN
+                            SCREEN 13
+                            gpqpic = _LOADIMAGE("graphic\pq\gpq3.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), gpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(GPQ)" AND k$ = CHR$(121) THEN
+                            SCREEN 13
+                            gpqpic = _LOADIMAGE("graphic\pq\gpq4.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), gpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(GPQ)" AND k$ = CHR$(117) THEN
+                            SCREEN 13
+                            gpqpic = _LOADIMAGE("graphic\pq\gpq5.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), gpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        IF abr$ = "(GPQ)" AND k$ = CHR$(106) THEN
+                            SCREEN 13
+                            gpqpic = _LOADIMAGE("graphic\pq\gpq5.png", 32)
+                            SCREEN picscreen
+                            DO
+                                CLS
+                                _PUTIMAGE (x, y), gpqpic, picscreen
+                                GOSUB controls
+                            LOOP UNTIL k$ = CHR$(32)
+                            k$ = CHR$(0)
+                            SCREEN 12
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT pq$(n)
+                            NEXT
+                        END IF
+                        DO WHILE _MOUSEINPUT
+                            row = row + (_MOUSEWHEEL * scrollspeed)
+                            IF prevrow <> row THEN
+                                H1:
+                                IF row < 1 THEN
+                                    row = 1
+                                END IF
+                                IF row > (rows - 27) THEN
+                                    row = (rows - 27)
+                                END IF
+                                OPEN rsave$ FOR OUTPUT AS #1
+                                WRITE #1, row
+                                CLOSE #1
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT pq$(n)
+                                    GOSUB scrollbar
+                                NEXT
+                            END IF
+                            prevrow = row
+                        LOOP
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(50) THEN
+                    row = 1
+                    OPEN rsave$ FOR OUTPUT AS #1
+                    WRITE #1, row
+                    CLOSE #1
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(51) THEN
+                    exitloop = 1
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(52) THEN
+                    GOTO BEGIN
+                END IF
+                _DISPLAY
+            LOOP
+            IF exitloop = 1 THEN EXIT DO
+        LOOP
+    LOOP
+END IF

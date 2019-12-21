@@ -1,0 +1,71 @@
+int16 *_FUNC_CLONETEXTBOX_INTEGER_CLONETEXTBOX=NULL;
+if(_FUNC_CLONETEXTBOX_INTEGER_CLONETEXTBOX==NULL){
+_FUNC_CLONETEXTBOX_INTEGER_CLONETEXTBOX=(int16*)mem_static_malloc(2);
+*_FUNC_CLONETEXTBOX_INTEGER_CLONETEXTBOX=0;
+}
+int8 *_FUNC_CLONETEXTBOX_BYTE_CLONECOLORY=NULL;
+if(_FUNC_CLONETEXTBOX_BYTE_CLONECOLORY==NULL){
+_FUNC_CLONETEXTBOX_BYTE_CLONECOLORY=(int8*)mem_static_malloc(1);
+*_FUNC_CLONETEXTBOX_BYTE_CLONECOLORY=0;
+}
+int8 *_FUNC_CLONETEXTBOX_BYTE_CLONELINKY=NULL;
+if(_FUNC_CLONETEXTBOX_BYTE_CLONELINKY==NULL){
+_FUNC_CLONETEXTBOX_BYTE_CLONELINKY=(int8*)mem_static_malloc(1);
+*_FUNC_CLONETEXTBOX_BYTE_CLONELINKY=0;
+}
+int16 *_FUNC_CLONETEXTBOX_INTEGER_CLONECOLORX=NULL;
+if(_FUNC_CLONETEXTBOX_INTEGER_CLONECOLORX==NULL){
+_FUNC_CLONETEXTBOX_INTEGER_CLONECOLORX=(int16*)mem_static_malloc(2);
+*_FUNC_CLONETEXTBOX_INTEGER_CLONECOLORX=0;
+}
+int16 *_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEX=NULL;
+if(_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEX==NULL){
+_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEX=(int16*)mem_static_malloc(2);
+*_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEX=0;
+}
+int16 *_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEXORIGINAL=NULL;
+if(_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEXORIGINAL==NULL){
+_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEXORIGINAL=(int16*)mem_static_malloc(2);
+*_FUNC_CLONETEXTBOX_INTEGER_CLONEINDEXORIGINAL=0;
+}
+int16 *_FUNC_CLONETEXTBOX_INTEGER_CLONELINKX=NULL;
+if(_FUNC_CLONETEXTBOX_INTEGER_CLONELINKX==NULL){
+_FUNC_CLONETEXTBOX_INTEGER_CLONELINKX=(int16*)mem_static_malloc(2);
+*_FUNC_CLONETEXTBOX_INTEGER_CLONELINKX=0;
+}
+int32 fornext_value9003;
+int32 fornext_finalvalue9003;
+int32 fornext_step9003;
+uint8 fornext_step_negative9003;
+byte_element_struct *byte_element_9004=NULL;
+if (!byte_element_9004){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_9004=(byte_element_struct*)(mem_static_pointer-12); else byte_element_9004=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_9005=NULL;
+if (!byte_element_9005){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_9005=(byte_element_struct*)(mem_static_pointer-12); else byte_element_9005=(byte_element_struct*)mem_static_malloc(12);
+}
+int32 fornext_value9007;
+int32 fornext_finalvalue9007;
+int32 fornext_step9007;
+uint8 fornext_step_negative9007;
+int32 fornext_value9009;
+int32 fornext_finalvalue9009;
+int32 fornext_step9009;
+uint8 fornext_step_negative9009;
+int32 fornext_value9011;
+int32 fornext_finalvalue9011;
+int32 fornext_step9011;
+uint8 fornext_step_negative9011;
+int16 fornext_value9013;
+int16 fornext_finalvalue9013;
+int16 fornext_step9013;
+uint8 fornext_step_negative9013;
+int32 fornext_value9015;
+int32 fornext_finalvalue9015;
+int32 fornext_step9015;
+uint8 fornext_step_negative9015;
+int16 fornext_value9017;
+int16 fornext_finalvalue9017;
+int16 fornext_step9017;
+uint8 fornext_step_negative9017;

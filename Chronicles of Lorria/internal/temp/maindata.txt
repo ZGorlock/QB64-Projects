@@ -1,0 +1,1524 @@
+if (!DLL_kernel32){
+DLL_kernel32=LoadLibrary("kernel32.dll");
+if (!DLL_kernel32) error(259);
+}
+if (!SUB_FILETIMETOSYSTEMTIME){
+SUB_FILETIMETOSYSTEMTIME=(DLLCALL_SUB_FILETIMETOSYSTEMTIME)GetProcAddress(DLL_kernel32,"FileTimeToSystemTime");
+if (!SUB_FILETIMETOSYSTEMTIME) error(260);
+}
+if (!SUB_GETSYSTEMTIME){
+SUB_GETSYSTEMTIME=(DLLCALL_SUB_GETSYSTEMTIME)GetProcAddress(DLL_kernel32,"GetSystemTime");
+if (!SUB_GETSYSTEMTIME) error(260);
+}
+if (!SUB_GETTIMEZONEINFORMATION){
+SUB_GETTIMEZONEINFORMATION=(DLLCALL_SUB_GETTIMEZONEINFORMATION)GetProcAddress(DLL_kernel32,"GetTimeZoneInformation");
+if (!SUB_GETTIMEZONEINFORMATION) error(260);
+}
+if (!SUB_SYSTEMTIMETOFILETIME){
+SUB_SYSTEMTIMETOFILETIME=(DLLCALL_SUB_SYSTEMTIMETOFILETIME)GetProcAddress(DLL_kernel32,"SystemTimeToFileTime");
+if (!SUB_SYSTEMTIMETOFILETIME) error(260);
+}
+if (!FUNC_GETLASTERROR){
+FUNC_GETLASTERROR=(DLLCALL_FUNC_GETLASTERROR)GetProcAddress(DLL_kernel32,"GetLastError");
+if (!FUNC_GETLASTERROR) error(260);
+}
+if (!FUNC_GETTICKCOUNT){
+FUNC_GETTICKCOUNT=(DLLCALL_FUNC_GETTICKCOUNT)GetProcAddress(DLL_kernel32,"GetTickCount");
+if (!FUNC_GETTICKCOUNT) error(260);
+}
+if (!FUNC_GETTIMEZONEINFORMATION){
+FUNC_GETTIMEZONEINFORMATION=(DLLCALL_FUNC_GETTIMEZONEINFORMATION)GetProcAddress(DLL_kernel32,"GetTimeZoneInformation");
+if (!FUNC_GETTIMEZONEINFORMATION) error(260);
+}
+if (!FUNC_GETVERSIONEXA){
+FUNC_GETVERSIONEXA=(DLLCALL_FUNC_GETVERSIONEXA)GetProcAddress(DLL_kernel32,"GetVersionExA");
+if (!FUNC_GETVERSIONEXA) error(260);
+}
+if (!DLL_user32){
+DLL_user32=LoadLibrary("user32.dll");
+if (!DLL_user32) error(259);
+}
+if (!SUB_GETCURSORPOS){
+SUB_GETCURSORPOS=(DLLCALL_SUB_GETCURSORPOS)GetProcAddress(DLL_user32,"GetCursorPos");
+if (!SUB_GETCURSORPOS) error(260);
+}
+if (!SUB_GETLASTINPUTINFO){
+SUB_GETLASTINPUTINFO=(DLLCALL_SUB_GETLASTINPUTINFO)GetProcAddress(DLL_user32,"GetLastInputInfo");
+if (!SUB_GETLASTINPUTINFO) error(260);
+}
+if (!FUNC_ENUMDISPLAYSETTINGSA){
+FUNC_ENUMDISPLAYSETTINGSA=(DLLCALL_FUNC_ENUMDISPLAYSETTINGSA)GetProcAddress(DLL_user32,"EnumDisplaySettingsA");
+if (!FUNC_ENUMDISPLAYSETTINGSA) error(260);
+}
+if (!FUNC_GETDESKTOPWINDOW){
+FUNC_GETDESKTOPWINDOW=(DLLCALL_FUNC_GETDESKTOPWINDOW)GetProcAddress(DLL_user32,"GetDesktopWindow");
+if (!FUNC_GETDESKTOPWINDOW) error(260);
+}
+if (!FUNC_GETFOREGROUNDWINDOW){
+FUNC_GETFOREGROUNDWINDOW=(DLLCALL_FUNC_GETFOREGROUNDWINDOW)GetProcAddress(DLL_user32,"GetForegroundWindow");
+if (!FUNC_GETFOREGROUNDWINDOW) error(260);
+}
+if (!FUNC_GETKEYSTATE){
+FUNC_GETKEYSTATE=(DLLCALL_FUNC_GETKEYSTATE)GetProcAddress(DLL_user32,"GetKeyState");
+if (!FUNC_GETKEYSTATE) error(260);
+}
+if (!FUNC_GETSYSTEMMETRICS){
+FUNC_GETSYSTEMMETRICS=(DLLCALL_FUNC_GETSYSTEMMETRICS)GetProcAddress(DLL_user32,"GetSystemMetrics");
+if (!FUNC_GETSYSTEMMETRICS) error(260);
+}
+if (!FUNC_OPENINPUTDESKTOP){
+FUNC_OPENINPUTDESKTOP=(DLLCALL_FUNC_OPENINPUTDESKTOP)GetProcAddress(DLL_user32,"OpenInputDesktop");
+if (!FUNC_OPENINPUTDESKTOP) error(260);
+}
+if (!FUNC_SETTHREADDESKTOP){
+FUNC_SETTHREADDESKTOP=(DLLCALL_FUNC_SETTHREADDESKTOP)GetProcAddress(DLL_user32,"SetThreadDesktop");
+if (!FUNC_SETTHREADDESKTOP) error(260);
+}
+if (!FUNC_SYSTEMPARAMETERSINFOW){
+FUNC_SYSTEMPARAMETERSINFOW=(DLLCALL_FUNC_SYSTEMPARAMETERSINFOW)GetProcAddress(DLL_user32,"SystemParametersInfoW");
+if (!FUNC_SYSTEMPARAMETERSINFOW) error(260);
+}
+FUNC_FINDWINDOW=(CUSTOMCALL_FUNC_FINDWINDOW*)&FindWindow;
+if(__BYTE_WINOS==NULL){
+__BYTE_WINOS=(int8*)mem_static_malloc(1);
+*__BYTE_WINOS=0;
+}
+if(__LONG_HWND==NULL){
+__LONG_HWND=(int32*)mem_static_malloc(4);
+*__LONG_HWND=0;
+}
+if(__LONG_MONITORX==NULL){
+__LONG_MONITORX=(int32*)mem_static_malloc(4);
+*__LONG_MONITORX=0;
+}
+if(__LONG_MONITORY==NULL){
+__LONG_MONITORY=(int32*)mem_static_malloc(4);
+*__LONG_MONITORY=0;
+}
+if(__LONG_SCRX==NULL){
+__LONG_SCRX=(int32*)mem_static_malloc(4);
+*__LONG_SCRX=0;
+}
+if(__LONG_SCRY==NULL){
+__LONG_SCRY=(int32*)mem_static_malloc(4);
+*__LONG_SCRY=0;
+}
+if(__LONG_SCRZ==NULL){
+__LONG_SCRZ=(int32*)mem_static_malloc(4);
+*__LONG_SCRZ=0;
+}
+if(__LONG_WORKAREAX==NULL){
+__LONG_WORKAREAX=(int32*)mem_static_malloc(4);
+*__LONG_WORKAREAX=0;
+}
+if(__LONG_WORKAREAY==NULL){
+__LONG_WORKAREAY=(int32*)mem_static_malloc(4);
+*__LONG_WORKAREAY=0;
+}
+if(__FLOAT_VERSION==NULL){
+__FLOAT_VERSION=(long double*)mem_static_malloc(32);
+*__FLOAT_VERSION=0;
+}
+if(__OFFSET_DTWIN==NULL){
+__OFFSET_DTWIN=(ptrszint*)mem_static_malloc(4);
+*__OFFSET_DTWIN=0;
+}
+if (!__STRING_CRLF)__STRING_CRLF=qbs_new(0,0);
+if (!__STRING_NULL)__STRING_NULL=qbs_new(0,0);
+if (!__STRING_PROGRAMNAME)__STRING_PROGRAMNAME=qbs_new(0,0);
+if (!__STRING_Q)__STRING_Q=qbs_new(0,0);
+if (!__STRING_SLASH)__STRING_SLASH=qbs_new(0,0);
+if (!__STRING_SSLOC)__STRING_SSLOC=qbs_new(0,0);
+if(__UDT_CONSOLE==NULL){
+__UDT_CONSOLE=(void*)mem_static_malloc(2);
+memset(__UDT_CONSOLE,0,2);
+}
+if (!__ARRAY_LONG_FONTS){
+__ARRAY_LONG_FONTS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_LONG_FONTS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_LONG_FONTS[2]=0;
+__ARRAY_LONG_FONTS[4]=2147483647;
+__ARRAY_LONG_FONTS[5]=0;
+__ARRAY_LONG_FONTS[6]=0;
+__ARRAY_LONG_FONTS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UDT_ERRORS){
+__ARRAY_UDT_ERRORS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_ERRORS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_ERRORS[2]=0;
+__ARRAY_UDT_ERRORS[4]=2147483647;
+__ARRAY_UDT_ERRORS[5]=0;
+__ARRAY_UDT_ERRORS[6]=0;
+__ARRAY_UDT_ERRORS[0]=(ptrszint)nothingvalue;
+}
+if(__UDT_OSINFO==NULL){
+__UDT_OSINFO=(void*)mem_static_malloc(156);
+memset(__UDT_OSINFO,0,156);
+}
+byte_element_struct *byte_element_6123=NULL;
+if (!byte_element_6123){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6123=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6123=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6124=NULL;
+if (!byte_element_6124){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6124=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6124=(byte_element_struct*)mem_static_malloc(12);
+}
+static uint32 sc_6125;
+static uint32 sc_6126;
+static uint32 sc_6127;
+if(__LONG_RESOLUTION==NULL){
+__LONG_RESOLUTION=(int32*)mem_static_malloc(4);
+*__LONG_RESOLUTION=0;
+}
+if(__UDT_REC==NULL){
+__UDT_REC=(void*)mem_static_malloc(16);
+memset(__UDT_REC,0,16);
+}
+byte_element_struct *byte_element_6128=NULL;
+if (!byte_element_6128){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6128=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6128=(byte_element_struct*)mem_static_malloc(12);
+}
+if(__LONG_TITLETAG==NULL){
+__LONG_TITLETAG=(int32*)mem_static_malloc(4);
+*__LONG_TITLETAG=0;
+}
+if(__OFFSET_OIDESK==NULL){
+__OFFSET_OIDESK=(ptrszint*)mem_static_malloc(4);
+*__OFFSET_OIDESK=0;
+}
+if(__OFFSET_STDESK==NULL){
+__OFFSET_STDESK=(ptrszint*)mem_static_malloc(4);
+*__OFFSET_STDESK=0;
+}
+if (!__ARRAY_UDT_ANIMATIONS){
+__ARRAY_UDT_ANIMATIONS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_ANIMATIONS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_ANIMATIONS[2]=0;
+__ARRAY_UDT_ANIMATIONS[4]=2147483647;
+__ARRAY_UDT_ANIMATIONS[5]=0;
+__ARRAY_UDT_ANIMATIONS[6]=0;
+__ARRAY_UDT_ANIMATIONS[0]=(ptrszint)nothingvalue;
+}
+if (!__STRING_BUTTONLOC)__STRING_BUTTONLOC=qbs_new(0,0);
+if (!__ARRAY_UDT_BUTTONS){
+__ARRAY_UDT_BUTTONS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_BUTTONS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_BUTTONS[2]=0;
+__ARRAY_UDT_BUTTONS[4]=2147483647;
+__ARRAY_UDT_BUTTONS[5]=0;
+__ARRAY_UDT_BUTTONS[6]=0;
+__ARRAY_UDT_BUTTONS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UDT_BUTTONTEMPLATES){
+__ARRAY_UDT_BUTTONTEMPLATES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_BUTTONTEMPLATES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_BUTTONTEMPLATES[2]=0;
+__ARRAY_UDT_BUTTONTEMPLATES[4]=2147483647;
+__ARRAY_UDT_BUTTONTEMPLATES[5]=0;
+__ARRAY_UDT_BUTTONTEMPLATES[6]=0;
+__ARRAY_UDT_BUTTONTEMPLATES[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UDT_DOWNLOADS){
+__ARRAY_UDT_DOWNLOADS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_DOWNLOADS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_DOWNLOADS[2]=0;
+__ARRAY_UDT_DOWNLOADS[4]=2147483647;
+__ARRAY_UDT_DOWNLOADS[5]=0;
+__ARRAY_UDT_DOWNLOADS[6]=0;
+__ARRAY_UDT_DOWNLOADS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_STRING_DOWNLOADS_HEADER){
+__ARRAY_STRING_DOWNLOADS_HEADER=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_DOWNLOADS_HEADER)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_DOWNLOADS_HEADER[2]=0;
+__ARRAY_STRING_DOWNLOADS_HEADER[4]=2147483647;
+__ARRAY_STRING_DOWNLOADS_HEADER[5]=0;
+__ARRAY_STRING_DOWNLOADS_HEADER[6]=0;
+__ARRAY_STRING_DOWNLOADS_HEADER[0]=(ptrszint)&nothingstring;
+}
+if (!__STRING_FRAMELOC)__STRING_FRAMELOC=qbs_new(0,0);
+if (!__ARRAY_LONG_FRAMEIMG){
+__ARRAY_LONG_FRAMEIMG=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_LONG_FRAMEIMG)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_LONG_FRAMEIMG[12]= 0 ;
+__ARRAY_LONG_FRAMEIMG[13]=( 2 )-__ARRAY_LONG_FRAMEIMG[12]+1;
+__ARRAY_LONG_FRAMEIMG[14]=1;
+__ARRAY_LONG_FRAMEIMG[8]= 0 ;
+__ARRAY_LONG_FRAMEIMG[9]=( 8 )-__ARRAY_LONG_FRAMEIMG[8]+1;
+__ARRAY_LONG_FRAMEIMG[10]=__ARRAY_LONG_FRAMEIMG[14]*__ARRAY_LONG_FRAMEIMG[13];
+__ARRAY_LONG_FRAMEIMG[4]= 0 ;
+__ARRAY_LONG_FRAMEIMG[5]=( 4 )-__ARRAY_LONG_FRAMEIMG[4]+1;
+__ARRAY_LONG_FRAMEIMG[6]=__ARRAY_LONG_FRAMEIMG[10]*__ARRAY_LONG_FRAMEIMG[9];
+__ARRAY_LONG_FRAMEIMG[0]=(ptrszint)mem_static_malloc(__ARRAY_LONG_FRAMEIMG[5]*__ARRAY_LONG_FRAMEIMG[9]*__ARRAY_LONG_FRAMEIMG[13]*4);
+memset((void*)(__ARRAY_LONG_FRAMEIMG[0]),0,__ARRAY_LONG_FRAMEIMG[5]*__ARRAY_LONG_FRAMEIMG[9]*__ARRAY_LONG_FRAMEIMG[13]*4);
+__ARRAY_LONG_FRAMEIMG[2]=1+2;
+}
+if(__UBYTE_KEYD==NULL){
+__UBYTE_KEYD=(uint8*)mem_static_malloc(1);
+*__UBYTE_KEYD=0;
+}
+if(__BYTE_SCROLLMULTIPLIER==NULL){
+__BYTE_SCROLLMULTIPLIER=(int8*)mem_static_malloc(1);
+*__BYTE_SCROLLMULTIPLIER=0;
+}
+if(__SINGLE_INPUTTIME==NULL){
+__SINGLE_INPUTTIME=(float*)mem_static_malloc(4);
+*__SINGLE_INPUTTIME=0;
+}
+if(__LONG_MOUSESWAP==NULL){
+__LONG_MOUSESWAP=(int32*)mem_static_malloc(4);
+*__LONG_MOUSESWAP=0;
+}
+if (!__STRING_K)__STRING_K=qbs_new(0,0);
+if(__UDT_HOTKEYS==NULL){
+__UDT_HOTKEYS=(void*)mem_static_malloc(33);
+memset(__UDT_HOTKEYS,0,33);
+}
+if(__UDT_MINPUT==NULL){
+__UDT_MINPUT=(void*)mem_static_malloc(42);
+memset(__UDT_MINPUT,0,42);
+}
+if(__UDT_LASTINPUTDATA==NULL){
+__UDT_LASTINPUTDATA=(void*)mem_static_malloc(8);
+memset(__UDT_LASTINPUTDATA,0,8);
+}
+if (!__ARRAY_UDT_KEYBOARDS){
+__ARRAY_UDT_KEYBOARDS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_KEYBOARDS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_KEYBOARDS[2]=0;
+__ARRAY_UDT_KEYBOARDS[4]=2147483647;
+__ARRAY_UDT_KEYBOARDS[5]=0;
+__ARRAY_UDT_KEYBOARDS[6]=0;
+__ARRAY_UDT_KEYBOARDS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_INTEGER_KEYBOARDLAYOUTS){
+__ARRAY_INTEGER_KEYBOARDLAYOUTS=(ptrszint*)mem_static_malloc(21*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_INTEGER_KEYBOARDLAYOUTS)[20]=(ptrszint)mem_lock_tmp;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[2]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[4]=2147483647;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[5]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[6]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[8]=2147483647;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[9]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[10]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[12]=2147483647;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[13]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[14]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[16]=2147483647;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[17]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[18]=0;
+__ARRAY_INTEGER_KEYBOARDLAYOUTS[0]=(ptrszint)nothingvalue;
+}
+byte_element_struct *byte_element_6129=NULL;
+if (!byte_element_6129){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6129=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6129=(byte_element_struct*)mem_static_malloc(12);
+}
+if (!__ARRAY_UDT_LAYERS){
+__ARRAY_UDT_LAYERS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_LAYERS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_LAYERS[2]=0;
+__ARRAY_UDT_LAYERS[4]=2147483647;
+__ARRAY_UDT_LAYERS[5]=0;
+__ARRAY_UDT_LAYERS[6]=0;
+__ARRAY_UDT_LAYERS[0]=(ptrszint)nothingvalue;
+}
+if(__INTEGER_MATH_QUICKRETURN==NULL){
+__INTEGER_MATH_QUICKRETURN=(int16*)mem_static_malloc(2);
+*__INTEGER_MATH_QUICKRETURN=0;
+}
+if (!__STRING_MATH_DIRNAME)__STRING_MATH_DIRNAME=qbs_new(0,0);
+if (!__STRING_MATH_FILENAME)__STRING_MATH_FILENAME=qbs_new(0,0);
+if (!__ARRAY_STRING_MATH_ONAME){
+__ARRAY_STRING_MATH_ONAME=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_MATH_ONAME)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_MATH_ONAME[2]=0;
+__ARRAY_STRING_MATH_ONAME[4]=2147483647;
+__ARRAY_STRING_MATH_ONAME[5]=0;
+__ARRAY_STRING_MATH_ONAME[6]=0;
+__ARRAY_STRING_MATH_ONAME[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_INTEGER_MATH_PL){
+__ARRAY_INTEGER_MATH_PL=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_INTEGER_MATH_PL)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_INTEGER_MATH_PL[2]=0;
+__ARRAY_INTEGER_MATH_PL[4]=2147483647;
+__ARRAY_INTEGER_MATH_PL[5]=0;
+__ARRAY_INTEGER_MATH_PL[6]=0;
+__ARRAY_INTEGER_MATH_PL[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_STRING_MATH_VARS){
+__ARRAY_STRING_MATH_VARS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_MATH_VARS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_MATH_VARS[2]=0;
+__ARRAY_STRING_MATH_VARS[4]=2147483647;
+__ARRAY_STRING_MATH_VARS[5]=0;
+__ARRAY_STRING_MATH_VARS[6]=0;
+__ARRAY_STRING_MATH_VARS[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_UDT_SHEETS){
+__ARRAY_UDT_SHEETS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_SHEETS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_SHEETS[2]=0;
+__ARRAY_UDT_SHEETS[4]=2147483647;
+__ARRAY_UDT_SHEETS[5]=0;
+__ARRAY_UDT_SHEETS[6]=0;
+__ARRAY_UDT_SHEETS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UDT_SPRITES){
+__ARRAY_UDT_SPRITES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_SPRITES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_SPRITES[2]=0;
+__ARRAY_UDT_SPRITES[4]=2147483647;
+__ARRAY_UDT_SPRITES[5]=0;
+__ARRAY_UDT_SPRITES[6]=0;
+__ARRAY_UDT_SPRITES[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_BOOKMARK){
+__ARRAY_ULONG_TEXTBOX_BOOKMARK=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_BOOKMARK)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[2]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[5]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[6]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[9]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[10]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[12]=2147483647;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[13]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[14]=0;
+__ARRAY_ULONG_TEXTBOX_BOOKMARK[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_COLOR){
+__ARRAY_ULONG_TEXTBOX_COLOR=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_COLOR)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_COLOR[2]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_COLOR[5]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[6]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_COLOR[9]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[10]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[12]=2147483647;
+__ARRAY_ULONG_TEXTBOX_COLOR[13]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[14]=0;
+__ARRAY_ULONG_TEXTBOX_COLOR[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_CONTENT){
+__ARRAY_ULONG_TEXTBOX_CONTENT=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_CONTENT)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_CONTENT[2]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_CONTENT[5]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[6]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_CONTENT[9]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[10]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[12]=2147483647;
+__ARRAY_ULONG_TEXTBOX_CONTENT[13]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[14]=0;
+__ARRAY_ULONG_TEXTBOX_CONTENT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_IMAGE){
+__ARRAY_ULONG_TEXTBOX_IMAGE=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_IMAGE)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_IMAGE[2]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_IMAGE[5]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[6]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_IMAGE[9]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[10]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[12]=2147483647;
+__ARRAY_ULONG_TEXTBOX_IMAGE[13]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[14]=0;
+__ARRAY_ULONG_TEXTBOX_IMAGE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_INDEX){
+__ARRAY_ULONG_TEXTBOX_INDEX=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_INDEX)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_INDEX[2]=0;
+__ARRAY_ULONG_TEXTBOX_INDEX[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_INDEX[5]=0;
+__ARRAY_ULONG_TEXTBOX_INDEX[6]=0;
+__ARRAY_ULONG_TEXTBOX_INDEX[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_INDEX[9]=0;
+__ARRAY_ULONG_TEXTBOX_INDEX[10]=0;
+__ARRAY_ULONG_TEXTBOX_INDEX[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_LINK){
+__ARRAY_ULONG_TEXTBOX_LINK=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_LINK)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_LINK[2]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_LINK[5]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[6]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_LINK[9]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[10]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[12]=2147483647;
+__ARRAY_ULONG_TEXTBOX_LINK[13]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[14]=0;
+__ARRAY_ULONG_TEXTBOX_LINK[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEXTBOX_TEXTBOX){
+__ARRAY_ULONG_TEXTBOX_TEXTBOX=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEXTBOX_TEXTBOX)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[2]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[4]=2147483647;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[5]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[6]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[8]=2147483647;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[9]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[10]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[12]=2147483647;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[13]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[14]=0;
+__ARRAY_ULONG_TEXTBOX_TEXTBOX[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_STRING_TEXTBOX_STRINGS){
+__ARRAY_STRING_TEXTBOX_STRINGS=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_TEXTBOX_STRINGS)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_TEXTBOX_STRINGS[2]=0;
+__ARRAY_STRING_TEXTBOX_STRINGS[4]=2147483647;
+__ARRAY_STRING_TEXTBOX_STRINGS[5]=0;
+__ARRAY_STRING_TEXTBOX_STRINGS[6]=0;
+__ARRAY_STRING_TEXTBOX_STRINGS[8]=2147483647;
+__ARRAY_STRING_TEXTBOX_STRINGS[9]=0;
+__ARRAY_STRING_TEXTBOX_STRINGS[10]=0;
+__ARRAY_STRING_TEXTBOX_STRINGS[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_TEXTBOX_TEXT){
+__ARRAY_STRING_TEXTBOX_TEXT=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_TEXTBOX_TEXT)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_TEXTBOX_TEXT[2]=0;
+__ARRAY_STRING_TEXTBOX_TEXT[4]=2147483647;
+__ARRAY_STRING_TEXTBOX_TEXT[5]=0;
+__ARRAY_STRING_TEXTBOX_TEXT[6]=0;
+__ARRAY_STRING_TEXTBOX_TEXT[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_UDT_TEXTBOXES){
+__ARRAY_UDT_TEXTBOXES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_TEXTBOXES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_TEXTBOXES[2]=0;
+__ARRAY_UDT_TEXTBOXES[4]=2147483647;
+__ARRAY_UDT_TEXTBOXES[5]=0;
+__ARRAY_UDT_TEXTBOXES[6]=0;
+__ARRAY_UDT_TEXTBOXES[0]=(ptrszint)nothingvalue;
+}
+if(__BIT1_HOVERING==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_HOVERING=(int32*)(dblock+cmem_sp);
+*__BIT1_HOVERING=0;
+}
+if(__BIT1_LOADING==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_LOADING=(int32*)(dblock+cmem_sp);
+*__BIT1_LOADING=0;
+}
+if(__BIT1_NEWGAMEMENULAST==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_NEWGAMEMENULAST=(int32*)(dblock+cmem_sp);
+*__BIT1_NEWGAMEMENULAST=0;
+}
+if(__BIT1_NEWGAMEMENUOLDCLICK==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_NEWGAMEMENUOLDCLICK=(int32*)(dblock+cmem_sp);
+*__BIT1_NEWGAMEMENUOLDCLICK=0;
+}
+if(__BIT1_NEWGAMEMENUNEXT==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_NEWGAMEMENUNEXT=(int32*)(dblock+cmem_sp);
+*__BIT1_NEWGAMEMENUNEXT=0;
+}
+if(__BIT1_UPDATECURSOR==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_UPDATECURSOR=(int32*)(dblock+cmem_sp);
+*__BIT1_UPDATECURSOR=0;
+}
+if(__BYTE_NUMOFTITLEBUTTON==NULL){
+__BYTE_NUMOFTITLEBUTTON=(int8*)mem_static_malloc(1);
+*__BYTE_NUMOFTITLEBUTTON=0;
+}
+if(__UINTEGER_FRAMESPEED==NULL){
+__UINTEGER_FRAMESPEED=(uint16*)mem_static_malloc(2);
+*__UINTEGER_FRAMESPEED=0;
+}
+if(__UINTEGER_NUMOFCURSOR==NULL){
+__UINTEGER_NUMOFCURSOR=(uint16*)mem_static_malloc(2);
+*__UINTEGER_NUMOFCURSOR=0;
+}
+if(__UINTEGER_NUMOFERRORMESSAGE==NULL){
+__UINTEGER_NUMOFERRORMESSAGE=(uint16*)mem_static_malloc(2);
+*__UINTEGER_NUMOFERRORMESSAGE=0;
+}
+if(__UINTEGER_NUMOFINSTRUCTION==NULL){
+__UINTEGER_NUMOFINSTRUCTION=(uint16*)mem_static_malloc(2);
+*__UINTEGER_NUMOFINSTRUCTION=0;
+}
+if(__LONG_REFRESHRATE==NULL){
+__LONG_REFRESHRATE=(int32*)mem_static_malloc(4);
+*__LONG_REFRESHRATE=0;
+}
+if(__LONG_TCPIP==NULL){
+__LONG_TCPIP=(int32*)mem_static_malloc(4);
+*__LONG_TCPIP=0;
+}
+if(__FLOAT_DISPLAYTIMER==NULL){
+__FLOAT_DISPLAYTIMER=(long double*)mem_static_malloc(32);
+*__FLOAT_DISPLAYTIMER=0;
+}
+if(__FLOAT_OLDDISPLAYTIMER==NULL){
+__FLOAT_OLDDISPLAYTIMER=(long double*)mem_static_malloc(32);
+*__FLOAT_OLDDISPLAYTIMER=0;
+}
+if (!__STRING_INITTIMSTAMP)__STRING_INITTIMSTAMP=qbs_new(0,0);
+if (!__STRING_MODULE)__STRING_MODULE=qbs_new(0,0);
+if(__UDT_LPDEVMODE==NULL){
+__UDT_LPDEVMODE=(void*)mem_static_malloc(156);
+memset(__UDT_LPDEVMODE,0,156);
+}
+if(__UDT_SETTING==NULL){
+__UDT_SETTING=(void*)mem_static_malloc(154);
+memset(__UDT_SETTING,0,154);
+}
+if(__UDT_PROFILE==NULL){
+__UDT_PROFILE=(void*)mem_static_malloc(263);
+memset(__UDT_PROFILE,0,263);
+}
+if(__BIT1_SAVECLICK==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_SAVECLICK=(int32*)(dblock+cmem_sp);
+*__BIT1_SAVECLICK=0;
+}
+if(__UBYTE_ERRORTEXT==NULL){
+__UBYTE_ERRORTEXT=(uint8*)mem_static_malloc(1);
+*__UBYTE_ERRORTEXT=0;
+}
+if(__UBYTE_INSTRUCTIONTEXT==NULL){
+__UBYTE_INSTRUCTIONTEXT=(uint8*)mem_static_malloc(1);
+*__UBYTE_INSTRUCTIONTEXT=0;
+}
+if(__UBYTE_NEWTEXT==NULL){
+__UBYTE_NEWTEXT=(uint8*)mem_static_malloc(1);
+*__UBYTE_NEWTEXT=0;
+}
+if(__INTEGER_ERRORFLAG==NULL){
+__INTEGER_ERRORFLAG=(int16*)mem_static_malloc(2);
+*__INTEGER_ERRORFLAG=0;
+}
+if(__SINGLE_SAVEMOUSEX==NULL){
+__SINGLE_SAVEMOUSEX=(float*)mem_static_malloc(4);
+*__SINGLE_SAVEMOUSEX=0;
+}
+if(__SINGLE_SAVEMOUSEY==NULL){
+__SINGLE_SAVEMOUSEY=(float*)mem_static_malloc(4);
+*__SINGLE_SAVEMOUSEY=0;
+}
+if (!__ARRAY_INTEGER_CURSORDATA){
+__ARRAY_INTEGER_CURSORDATA=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_INTEGER_CURSORDATA)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_INTEGER_CURSORDATA[2]=0;
+__ARRAY_INTEGER_CURSORDATA[4]=2147483647;
+__ARRAY_INTEGER_CURSORDATA[5]=0;
+__ARRAY_INTEGER_CURSORDATA[6]=0;
+__ARRAY_INTEGER_CURSORDATA[8]=2147483647;
+__ARRAY_INTEGER_CURSORDATA[9]=0;
+__ARRAY_INTEGER_CURSORDATA[10]=0;
+__ARRAY_INTEGER_CURSORDATA[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_LONG_SCREENLAYER){
+__ARRAY_LONG_SCREENLAYER=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_LONG_SCREENLAYER)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_LONG_SCREENLAYER[2]=0;
+__ARRAY_LONG_SCREENLAYER[4]=2147483647;
+__ARRAY_LONG_SCREENLAYER[5]=0;
+__ARRAY_LONG_SCREENLAYER[6]=0;
+__ARRAY_LONG_SCREENLAYER[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_STRING_CURSORS){
+__ARRAY_STRING_CURSORS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_CURSORS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_CURSORS[2]=0;
+__ARRAY_STRING_CURSORS[4]=2147483647;
+__ARRAY_STRING_CURSORS[5]=0;
+__ARRAY_STRING_CURSORS[6]=0;
+__ARRAY_STRING_CURSORS[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_ULONG_INDEX_ITEM){
+__ARRAY_ULONG_INDEX_ITEM=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_INDEX_ITEM)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_INDEX_ITEM[2]=0;
+__ARRAY_ULONG_INDEX_ITEM[4]=2147483647;
+__ARRAY_ULONG_INDEX_ITEM[5]=0;
+__ARRAY_ULONG_INDEX_ITEM[6]=0;
+__ARRAY_ULONG_INDEX_ITEM[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_INDEX_MAP){
+__ARRAY_ULONG_INDEX_MAP=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_INDEX_MAP)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_INDEX_MAP[2]=0;
+__ARRAY_ULONG_INDEX_MAP[4]=2147483647;
+__ARRAY_ULONG_INDEX_MAP[5]=0;
+__ARRAY_ULONG_INDEX_MAP[6]=0;
+__ARRAY_ULONG_INDEX_MAP[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_INDEX_MONSTER){
+__ARRAY_ULONG_INDEX_MONSTER=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_INDEX_MONSTER)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_INDEX_MONSTER[2]=0;
+__ARRAY_ULONG_INDEX_MONSTER[4]=2147483647;
+__ARRAY_ULONG_INDEX_MONSTER[5]=0;
+__ARRAY_ULONG_INDEX_MONSTER[6]=0;
+__ARRAY_ULONG_INDEX_MONSTER[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_INDEX_NPC){
+__ARRAY_ULONG_INDEX_NPC=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_INDEX_NPC)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_INDEX_NPC[2]=0;
+__ARRAY_ULONG_INDEX_NPC[4]=2147483647;
+__ARRAY_ULONG_INDEX_NPC[5]=0;
+__ARRAY_ULONG_INDEX_NPC[6]=0;
+__ARRAY_ULONG_INDEX_NPC[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_INDEX_QUEST){
+__ARRAY_ULONG_INDEX_QUEST=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_INDEX_QUEST)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_INDEX_QUEST[2]=0;
+__ARRAY_ULONG_INDEX_QUEST[4]=2147483647;
+__ARRAY_ULONG_INDEX_QUEST[5]=0;
+__ARRAY_ULONG_INDEX_QUEST[6]=0;
+__ARRAY_ULONG_INDEX_QUEST[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_INDEX_SPELL){
+__ARRAY_ULONG_INDEX_SPELL=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_INDEX_SPELL)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_INDEX_SPELL[2]=0;
+__ARRAY_ULONG_INDEX_SPELL[4]=2147483647;
+__ARRAY_ULONG_INDEX_SPELL[5]=0;
+__ARRAY_ULONG_INDEX_SPELL[6]=0;
+__ARRAY_ULONG_INDEX_SPELL[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_PRIMESTAT){
+__ARRAY_BYTE_PRIMESTAT=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_PRIMESTAT)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_PRIMESTAT[2]=0;
+__ARRAY_BYTE_PRIMESTAT[4]=2147483647;
+__ARRAY_BYTE_PRIMESTAT[5]=0;
+__ARRAY_BYTE_PRIMESTAT[6]=0;
+__ARRAY_BYTE_PRIMESTAT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_MONSTERS_SOUNDS){
+__ARRAY_BYTE_MONSTERS_SOUNDS=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_MONSTERS_SOUNDS)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_MONSTERS_SOUNDS[2]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDS[4]=2147483647;
+__ARRAY_BYTE_MONSTERS_SOUNDS[5]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDS[6]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDS[8]=2147483647;
+__ARRAY_BYTE_MONSTERS_SOUNDS[9]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDS[10]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_MONSTERS_SOUNDNAME){
+__ARRAY_BYTE_MONSTERS_SOUNDNAME=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_MONSTERS_SOUNDNAME)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[2]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[4]=2147483647;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[5]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[6]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[8]=2147483647;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[9]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[10]=0;
+__ARRAY_BYTE_MONSTERS_SOUNDNAME[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_MONSTERS_SPRITES){
+__ARRAY_BYTE_MONSTERS_SPRITES=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_MONSTERS_SPRITES)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_MONSTERS_SPRITES[2]=0;
+__ARRAY_BYTE_MONSTERS_SPRITES[4]=2147483647;
+__ARRAY_BYTE_MONSTERS_SPRITES[5]=0;
+__ARRAY_BYTE_MONSTERS_SPRITES[6]=0;
+__ARRAY_BYTE_MONSTERS_SPRITES[8]=2147483647;
+__ARRAY_BYTE_MONSTERS_SPRITES[9]=0;
+__ARRAY_BYTE_MONSTERS_SPRITES[10]=0;
+__ARRAY_BYTE_MONSTERS_SPRITES[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_TEMPMONSTERSOUNDNAME){
+__ARRAY_BYTE_TEMPMONSTERSOUNDNAME=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_TEMPMONSTERSOUNDNAME)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[2]=0;
+__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[4]=2147483647;
+__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[5]=0;
+__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[6]=0;
+__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_TEMPMONSTERSOUNDS){
+__ARRAY_BYTE_TEMPMONSTERSOUNDS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_TEMPMONSTERSOUNDS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_TEMPMONSTERSOUNDS[2]=0;
+__ARRAY_BYTE_TEMPMONSTERSOUNDS[4]=2147483647;
+__ARRAY_BYTE_TEMPMONSTERSOUNDS[5]=0;
+__ARRAY_BYTE_TEMPMONSTERSOUNDS[6]=0;
+__ARRAY_BYTE_TEMPMONSTERSOUNDS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_BYTE_TEMPMONSTERSPRITES){
+__ARRAY_BYTE_TEMPMONSTERSPRITES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_BYTE_TEMPMONSTERSPRITES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_BYTE_TEMPMONSTERSPRITES[2]=0;
+__ARRAY_BYTE_TEMPMONSTERSPRITES[4]=2147483647;
+__ARRAY_BYTE_TEMPMONSTERSPRITES[5]=0;
+__ARRAY_BYTE_TEMPMONSTERSPRITES[6]=0;
+__ARRAY_BYTE_TEMPMONSTERSPRITES[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UBYTE_NEWGAMEPASS){
+__ARRAY_UBYTE_NEWGAMEPASS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UBYTE_NEWGAMEPASS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UBYTE_NEWGAMEPASS[2]=0;
+__ARRAY_UBYTE_NEWGAMEPASS[4]=2147483647;
+__ARRAY_UBYTE_NEWGAMEPASS[5]=0;
+__ARRAY_UBYTE_NEWGAMEPASS[6]=0;
+__ARRAY_UBYTE_NEWGAMEPASS[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_INTEGER_FREEDMONSTERIMAGE){
+__ARRAY_INTEGER_FREEDMONSTERIMAGE=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_INTEGER_FREEDMONSTERIMAGE)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_INTEGER_FREEDMONSTERIMAGE[2]=0;
+__ARRAY_INTEGER_FREEDMONSTERIMAGE[4]=2147483647;
+__ARRAY_INTEGER_FREEDMONSTERIMAGE[5]=0;
+__ARRAY_INTEGER_FREEDMONSTERIMAGE[6]=0;
+__ARRAY_INTEGER_FREEDMONSTERIMAGE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_INTEGER_MONSTERS_IMAGE){
+__ARRAY_INTEGER_MONSTERS_IMAGE=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_INTEGER_MONSTERS_IMAGE)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_INTEGER_MONSTERS_IMAGE[2]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[4]=2147483647;
+__ARRAY_INTEGER_MONSTERS_IMAGE[5]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[6]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[8]=2147483647;
+__ARRAY_INTEGER_MONSTERS_IMAGE[9]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[10]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[12]=2147483647;
+__ARRAY_INTEGER_MONSTERS_IMAGE[13]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[14]=0;
+__ARRAY_INTEGER_MONSTERS_IMAGE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UINTEGER_RACEHAVE){
+__ARRAY_UINTEGER_RACEHAVE=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UINTEGER_RACEHAVE)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UINTEGER_RACEHAVE[2]=0;
+__ARRAY_UINTEGER_RACEHAVE[4]=2147483647;
+__ARRAY_UINTEGER_RACEHAVE[5]=0;
+__ARRAY_UINTEGER_RACEHAVE[6]=0;
+__ARRAY_UINTEGER_RACEHAVE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_LONG_MONSTERS_SOUND){
+__ARRAY_LONG_MONSTERS_SOUND=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_LONG_MONSTERS_SOUND)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_LONG_MONSTERS_SOUND[2]=0;
+__ARRAY_LONG_MONSTERS_SOUND[4]=2147483647;
+__ARRAY_LONG_MONSTERS_SOUND[5]=0;
+__ARRAY_LONG_MONSTERS_SOUND[6]=0;
+__ARRAY_LONG_MONSTERS_SOUND[8]=2147483647;
+__ARRAY_LONG_MONSTERS_SOUND[9]=0;
+__ARRAY_LONG_MONSTERS_SOUND[10]=0;
+__ARRAY_LONG_MONSTERS_SOUND[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEMPMONSTERSPELL){
+__ARRAY_ULONG_TEMPMONSTERSPELL=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEMPMONSTERSPELL)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEMPMONSTERSPELL[2]=0;
+__ARRAY_ULONG_TEMPMONSTERSPELL[4]=2147483647;
+__ARRAY_ULONG_TEMPMONSTERSPELL[5]=0;
+__ARRAY_ULONG_TEMPMONSTERSPELL[6]=0;
+__ARRAY_ULONG_TEMPMONSTERSPELL[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_MONSTERS_SPELL){
+__ARRAY_ULONG_MONSTERS_SPELL=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_MONSTERS_SPELL)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_MONSTERS_SPELL[2]=0;
+__ARRAY_ULONG_MONSTERS_SPELL[4]=2147483647;
+__ARRAY_ULONG_MONSTERS_SPELL[5]=0;
+__ARRAY_ULONG_MONSTERS_SPELL[6]=0;
+__ARRAY_ULONG_MONSTERS_SPELL[8]=2147483647;
+__ARRAY_ULONG_MONSTERS_SPELL[9]=0;
+__ARRAY_ULONG_MONSTERS_SPELL[10]=0;
+__ARRAY_ULONG_MONSTERS_SPELL[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEMPMONSTERINTERACT){
+__ARRAY_ULONG_TEMPMONSTERINTERACT=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEMPMONSTERINTERACT)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[2]=0;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[4]=2147483647;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[5]=0;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[6]=0;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[8]=2147483647;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[9]=0;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[10]=0;
+__ARRAY_ULONG_TEMPMONSTERINTERACT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEMPMONSTERLOOT){
+__ARRAY_ULONG_TEMPMONSTERLOOT=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEMPMONSTERLOOT)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEMPMONSTERLOOT[2]=0;
+__ARRAY_ULONG_TEMPMONSTERLOOT[4]=2147483647;
+__ARRAY_ULONG_TEMPMONSTERLOOT[5]=0;
+__ARRAY_ULONG_TEMPMONSTERLOOT[6]=0;
+__ARRAY_ULONG_TEMPMONSTERLOOT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_MONSTERS_INTERACT){
+__ARRAY_ULONG_MONSTERS_INTERACT=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_MONSTERS_INTERACT)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_MONSTERS_INTERACT[2]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[4]=2147483647;
+__ARRAY_ULONG_MONSTERS_INTERACT[5]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[6]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[8]=2147483647;
+__ARRAY_ULONG_MONSTERS_INTERACT[9]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[10]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[12]=2147483647;
+__ARRAY_ULONG_MONSTERS_INTERACT[13]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[14]=0;
+__ARRAY_ULONG_MONSTERS_INTERACT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_MONSTERS_LOOT){
+__ARRAY_ULONG_MONSTERS_LOOT=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_MONSTERS_LOOT)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_MONSTERS_LOOT[2]=0;
+__ARRAY_ULONG_MONSTERS_LOOT[4]=2147483647;
+__ARRAY_ULONG_MONSTERS_LOOT[5]=0;
+__ARRAY_ULONG_MONSTERS_LOOT[6]=0;
+__ARRAY_ULONG_MONSTERS_LOOT[8]=2147483647;
+__ARRAY_ULONG_MONSTERS_LOOT[9]=0;
+__ARRAY_ULONG_MONSTERS_LOOT[10]=0;
+__ARRAY_ULONG_MONSTERS_LOOT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_TEMPMONSTERARMOUR){
+__ARRAY_ULONG_TEMPMONSTERARMOUR=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_TEMPMONSTERARMOUR)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[2]=0;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[4]=2147483647;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[5]=0;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[6]=0;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[8]=2147483647;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[9]=0;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[10]=0;
+__ARRAY_ULONG_TEMPMONSTERARMOUR[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_ULONG_MONSTERS_ARMOUR){
+__ARRAY_ULONG_MONSTERS_ARMOUR=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_ULONG_MONSTERS_ARMOUR)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_ULONG_MONSTERS_ARMOUR[2]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[4]=2147483647;
+__ARRAY_ULONG_MONSTERS_ARMOUR[5]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[6]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[8]=2147483647;
+__ARRAY_ULONG_MONSTERS_ARMOUR[9]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[10]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[12]=2147483647;
+__ARRAY_ULONG_MONSTERS_ARMOUR[13]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[14]=0;
+__ARRAY_ULONG_MONSTERS_ARMOUR[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE){
+__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[2]=0;
+__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[4]=2147483647;
+__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[5]=0;
+__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[6]=0;
+__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_SINGLE_HEXP){
+__ARRAY_SINGLE_HEXP=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_SINGLE_HEXP)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_SINGLE_HEXP[2]=0;
+__ARRAY_SINGLE_HEXP[4]=2147483647;
+__ARRAY_SINGLE_HEXP[5]=0;
+__ARRAY_SINGLE_HEXP[6]=0;
+__ARRAY_SINGLE_HEXP[8]=2147483647;
+__ARRAY_SINGLE_HEXP[9]=0;
+__ARRAY_SINGLE_HEXP[10]=0;
+__ARRAY_SINGLE_HEXP[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_SINGLE_MONSTERS_LOOTCHANCE){
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_SINGLE_MONSTERS_LOOTCHANCE)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[2]=0;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[4]=2147483647;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[5]=0;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[6]=0;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[8]=2147483647;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[9]=0;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[10]=0;
+__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_SINGLE_SETPRIMESTATPOINT){
+__ARRAY_SINGLE_SETPRIMESTATPOINT=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_SINGLE_SETPRIMESTATPOINT)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[2]=0;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[4]=2147483647;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[5]=0;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[6]=0;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[8]=2147483647;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[9]=0;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[10]=0;
+__ARRAY_SINGLE_SETPRIMESTATPOINT[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE){
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[2]=0;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[4]=2147483647;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[5]=0;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[6]=0;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[8]=2147483647;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[9]=0;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[10]=0;
+__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE){
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE=(ptrszint*)mem_static_malloc(17*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE)[16]=(ptrszint)mem_lock_tmp;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[2]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[4]=2147483647;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[5]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[6]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[8]=2147483647;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[9]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[10]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[12]=2147483647;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[13]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[14]=0;
+__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_STRING_ERRORMESSAGE){
+__ARRAY_STRING_ERRORMESSAGE=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_ERRORMESSAGE)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_ERRORMESSAGE[2]=0;
+__ARRAY_STRING_ERRORMESSAGE[4]=2147483647;
+__ARRAY_STRING_ERRORMESSAGE[5]=0;
+__ARRAY_STRING_ERRORMESSAGE[6]=0;
+__ARRAY_STRING_ERRORMESSAGE[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_INSTRUCTION){
+__ARRAY_STRING_INSTRUCTION=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_INSTRUCTION)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_INSTRUCTION[2]=0;
+__ARRAY_STRING_INSTRUCTION[4]=2147483647;
+__ARRAY_STRING_INSTRUCTION[5]=0;
+__ARRAY_STRING_INSTRUCTION[6]=0;
+__ARRAY_STRING_INSTRUCTION[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_NEWGAMEMENUSLIDES){
+__ARRAY_STRING_NEWGAMEMENUSLIDES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_NEWGAMEMENUSLIDES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_NEWGAMEMENUSLIDES[2]=0;
+__ARRAY_STRING_NEWGAMEMENUSLIDES[4]=2147483647;
+__ARRAY_STRING_NEWGAMEMENUSLIDES[5]=0;
+__ARRAY_STRING_NEWGAMEMENUSLIDES[6]=0;
+__ARRAY_STRING_NEWGAMEMENUSLIDES[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_PRIMESTATDESCRIPTION){
+__ARRAY_STRING_PRIMESTATDESCRIPTION=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_PRIMESTATDESCRIPTION)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_PRIMESTATDESCRIPTION[2]=0;
+__ARRAY_STRING_PRIMESTATDESCRIPTION[4]=2147483647;
+__ARRAY_STRING_PRIMESTATDESCRIPTION[5]=0;
+__ARRAY_STRING_PRIMESTATDESCRIPTION[6]=0;
+__ARRAY_STRING_PRIMESTATDESCRIPTION[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_PRIMESTATNAME){
+__ARRAY_STRING_PRIMESTATNAME=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_PRIMESTATNAME)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_PRIMESTATNAME[2]=0;
+__ARRAY_STRING_PRIMESTATNAME[4]=2147483647;
+__ARRAY_STRING_PRIMESTATNAME[5]=0;
+__ARRAY_STRING_PRIMESTATNAME[6]=0;
+__ARRAY_STRING_PRIMESTATNAME[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_RACEDESCRIPTION){
+__ARRAY_STRING_RACEDESCRIPTION=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_RACEDESCRIPTION)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_RACEDESCRIPTION[2]=0;
+__ARRAY_STRING_RACEDESCRIPTION[4]=2147483647;
+__ARRAY_STRING_RACEDESCRIPTION[5]=0;
+__ARRAY_STRING_RACEDESCRIPTION[6]=0;
+__ARRAY_STRING_RACEDESCRIPTION[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_RACES){
+__ARRAY_STRING_RACES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_RACES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_RACES[2]=0;
+__ARRAY_STRING_RACES[4]=2147483647;
+__ARRAY_STRING_RACES[5]=0;
+__ARRAY_STRING_RACES[6]=0;
+__ARRAY_STRING_RACES[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_TEXTURES){
+__ARRAY_STRING_TEXTURES=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_TEXTURES)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_TEXTURES[2]=0;
+__ARRAY_STRING_TEXTURES[4]=2147483647;
+__ARRAY_STRING_TEXTURES[5]=0;
+__ARRAY_STRING_TEXTURES[6]=0;
+__ARRAY_STRING_TEXTURES[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_STRING_TITLEBUTTONS){
+__ARRAY_STRING_TITLEBUTTONS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_TITLEBUTTONS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_TITLEBUTTONS[2]=0;
+__ARRAY_STRING_TITLEBUTTONS[4]=2147483647;
+__ARRAY_STRING_TITLEBUTTONS[5]=0;
+__ARRAY_STRING_TITLEBUTTONS[6]=0;
+__ARRAY_STRING_TITLEBUTTONS[0]=(ptrszint)&nothingstring;
+}
+if (!__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY){
+__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[2]=0;
+__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[4]=2147483647;
+__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[5]=0;
+__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[6]=0;
+__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UDT_MONSTERS_LOOTQUANTITY){
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY=(ptrszint*)mem_static_malloc(13*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_MONSTERS_LOOTQUANTITY)[12]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[2]=0;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[4]=2147483647;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[5]=0;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[6]=0;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[8]=2147483647;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[9]=0;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[10]=0;
+__ARRAY_UDT_MONSTERS_LOOTQUANTITY[0]=(ptrszint)nothingvalue;
+}
+if (!__ARRAY_UDT_MONSTERS){
+__ARRAY_UDT_MONSTERS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_UDT_MONSTERS)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_UDT_MONSTERS[2]=0;
+__ARRAY_UDT_MONSTERS[4]=2147483647;
+__ARRAY_UDT_MONSTERS[5]=0;
+__ARRAY_UDT_MONSTERS[6]=0;
+__ARRAY_UDT_MONSTERS[0]=(ptrszint)nothingvalue;
+}
+byte_element_struct *byte_element_6130=NULL;
+if (!byte_element_6130){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6130=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6130=(byte_element_struct*)mem_static_malloc(12);
+}
+if(__ULONG_INDEXCOUNT==NULL){
+__ULONG_INDEXCOUNT=(uint32*)mem_static_malloc(4);
+*__ULONG_INDEXCOUNT=0;
+}
+if(__BYTE_GETPRIMESTATDESCRIPTION==NULL){
+__BYTE_GETPRIMESTATDESCRIPTION=(int8*)mem_static_malloc(1);
+*__BYTE_GETPRIMESTATDESCRIPTION=0;
+}
+static int16 fornext_value6163;
+static int16 fornext_finalvalue6163;
+static int16 fornext_step6163;
+static uint8 fornext_step_negative6163;
+if(__BYTE_GETPRIMESTATNAME==NULL){
+__BYTE_GETPRIMESTATNAME=(int8*)mem_static_malloc(1);
+*__BYTE_GETPRIMESTATNAME=0;
+}
+static int16 fornext_value6166;
+static int16 fornext_finalvalue6166;
+static int16 fornext_step6166;
+static uint8 fornext_step_negative6166;
+if(__BYTE_GETRACEDESCRIPTION==NULL){
+__BYTE_GETRACEDESCRIPTION=(int8*)mem_static_malloc(1);
+*__BYTE_GETRACEDESCRIPTION=0;
+}
+static int16 fornext_value6169;
+static int16 fornext_finalvalue6169;
+static int16 fornext_step6169;
+static uint8 fornext_step_negative6169;
+if(__BYTE_GETRACES==NULL){
+__BYTE_GETRACES=(int8*)mem_static_malloc(1);
+*__BYTE_GETRACES=0;
+}
+static int16 fornext_value6172;
+static int16 fornext_finalvalue6172;
+static int16 fornext_step6172;
+static uint8 fornext_step_negative6172;
+if(__UBYTE_GETTEXTURES==NULL){
+__UBYTE_GETTEXTURES=(uint8*)mem_static_malloc(1);
+*__UBYTE_GETTEXTURES=0;
+}
+static int16 fornext_value6175;
+static int16 fornext_finalvalue6175;
+static int16 fornext_step6175;
+static uint8 fornext_step_negative6175;
+if(__INTEGER_CURSORACTION==NULL){
+__INTEGER_CURSORACTION=(int16*)mem_static_malloc(2);
+*__INTEGER_CURSORACTION=0;
+}
+if(__INTEGER_CURSORHIT==NULL){
+__INTEGER_CURSORHIT=(int16*)mem_static_malloc(2);
+*__INTEGER_CURSORHIT=0;
+}
+if(__INTEGER_CURSORHOVER==NULL){
+__INTEGER_CURSORHOVER=(int16*)mem_static_malloc(2);
+*__INTEGER_CURSORHOVER=0;
+}
+if(__INTEGER_CURSORSHEET==NULL){
+__INTEGER_CURSORSHEET=(int16*)mem_static_malloc(2);
+*__INTEGER_CURSORSHEET=0;
+}
+if(__INTEGER_CURSORSTAND==NULL){
+__INTEGER_CURSORSTAND=(int16*)mem_static_malloc(2);
+*__INTEGER_CURSORSTAND=0;
+}
+if(__LONG_GUI_BOX==NULL){
+__LONG_GUI_BOX=(int32*)mem_static_malloc(4);
+*__LONG_GUI_BOX=0;
+}
+if(__LONG_GUI_BOX_TRANS==NULL){
+__LONG_GUI_BOX_TRANS=(int32*)mem_static_malloc(4);
+*__LONG_GUI_BOX_TRANS=0;
+}
+if(__LONG_GUI_BOX_SPECIAL==NULL){
+__LONG_GUI_BOX_SPECIAL=(int32*)mem_static_malloc(4);
+*__LONG_GUI_BOX_SPECIAL=0;
+}
+if(__LONG_GUI_BOX_SPECIAL_TRANS==NULL){
+__LONG_GUI_BOX_SPECIAL_TRANS=(int32*)mem_static_malloc(4);
+*__LONG_GUI_BOX_SPECIAL_TRANS=0;
+}
+if(__LONG_GUI_BOX_SPECIAL_LARGE==NULL){
+__LONG_GUI_BOX_SPECIAL_LARGE=(int32*)mem_static_malloc(4);
+*__LONG_GUI_BOX_SPECIAL_LARGE=0;
+}
+if(__LONG_GUI_BOX_SPECIAL_LARGE_TRANS==NULL){
+__LONG_GUI_BOX_SPECIAL_LARGE_TRANS=(int32*)mem_static_malloc(4);
+*__LONG_GUI_BOX_SPECIAL_LARGE_TRANS=0;
+}
+int8 pass6177;
+if(__SINGLE_GETREFRESHRATE==NULL){
+__SINGLE_GETREFRESHRATE=(float*)mem_static_malloc(4);
+*__SINGLE_GETREFRESHRATE=0;
+}
+if (!__STRING_INITTIMESTAMP)__STRING_INITTIMESTAMP=qbs_new(0,0);
+float pass6179;
+if(__SINGLE_TITLELOGO==NULL){
+__SINGLE_TITLELOGO=(float*)mem_static_malloc(4);
+*__SINGLE_TITLELOGO=0;
+}
+if(__BYTE_ACTIVEMENUBUTTON==NULL){
+__BYTE_ACTIVEMENUBUTTON=(int8*)mem_static_malloc(1);
+*__BYTE_ACTIVEMENUBUTTON=0;
+}
+if(__BYTE_DRAWTITLEBUTTON==NULL){
+__BYTE_DRAWTITLEBUTTON=(int8*)mem_static_malloc(1);
+*__BYTE_DRAWTITLEBUTTON=0;
+}
+if(__INTEGER_FREETITLEANIMATIONS==NULL){
+__INTEGER_FREETITLEANIMATIONS=(int16*)mem_static_malloc(2);
+*__INTEGER_FREETITLEANIMATIONS=0;
+}
+if(__INTEGER_FREETITLELAYERS==NULL){
+__INTEGER_FREETITLELAYERS=(int16*)mem_static_malloc(2);
+*__INTEGER_FREETITLELAYERS=0;
+}
+if(__LONG_TITLEBUTTONY1==NULL){
+__LONG_TITLEBUTTONY1=(int32*)mem_static_malloc(4);
+*__LONG_TITLEBUTTONY1=0;
+}
+if(__LONG_TITLEBUTTONY2==NULL){
+__LONG_TITLEBUTTONY2=(int32*)mem_static_malloc(4);
+*__LONG_TITLEBUTTONY2=0;
+}
+int32 pass6182;
+int32 pass6183;
+int16 pass6184;
+int8 pass6185;
+uint8 pass6186;
+int32 pass6187;
+int32 pass6188;
+int16 pass6189;
+int32 pass6190;
+int32 pass6191;
+int32 pass6192;
+int16 pass6193;
+int8 pass6194;
+uint8 pass6195;
+int32 pass6196;
+int32 pass6197;
+int16 pass6198;
+int32 pass6199;
+int32 pass6200;
+int32 pass6201;
+int32 pass6202;
+int32 pass6203;
+int16 pass6204;
+int8 pass6205;
+if(__SINGLE_SOURCE==NULL){
+__SINGLE_SOURCE=(float*)mem_static_malloc(4);
+*__SINGLE_SOURCE=0;
+}
+if(__SINGLE_TEXTCOLOR==NULL){
+__SINGLE_TEXTCOLOR=(float*)mem_static_malloc(4);
+*__SINGLE_TEXTCOLOR=0;
+}
+int8 pass6206;
+float pass6207;
+int8 pass6208;
+int16 pass6209;
+int32 pass6210;
+if (!__ARRAY_INTEGER_ANIMATIONSEQUENCE){
+__ARRAY_INTEGER_ANIMATIONSEQUENCE=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_INTEGER_ANIMATIONSEQUENCE)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_INTEGER_ANIMATIONSEQUENCE[2]=0;
+__ARRAY_INTEGER_ANIMATIONSEQUENCE[4]=2147483647;
+__ARRAY_INTEGER_ANIMATIONSEQUENCE[5]=0;
+__ARRAY_INTEGER_ANIMATIONSEQUENCE[6]=0;
+__ARRAY_INTEGER_ANIMATIONSEQUENCE[0]=(ptrszint)nothingvalue;
+}
+float pass6211;
+float pass6212;
+float pass6213;
+float pass6214;
+float pass6215;
+int8 pass6216;
+int8 pass6217;
+int8 pass6218;
+int32 pass6220;
+int32 pass6221;
+int16 pass6222;
+int16 pass6223;
+static int16 fornext_value6225;
+static int16 fornext_finalvalue6225;
+static int16 fornext_step6225;
+static uint8 fornext_step_negative6225;
+if(__SINGLE_ACTIVEBUTTON==NULL){
+__SINGLE_ACTIVEBUTTON=(float*)mem_static_malloc(4);
+*__SINGLE_ACTIVEBUTTON=0;
+}
+int8 pass6226;
+static int32 fornext_value6228;
+static int32 fornext_finalvalue6228;
+static int32 fornext_step6228;
+static uint8 fornext_step_negative6228;
+static int32 fornext_value6230;
+static int32 fornext_finalvalue6230;
+static int32 fornext_step6230;
+static uint8 fornext_step_negative6230;
+int16 pass6231;
+int8 pass6235;
+int8 pass6236;
+if(__UBYTE_FREEFONTS==NULL){
+__UBYTE_FREEFONTS=(uint8*)mem_static_malloc(1);
+*__UBYTE_FREEFONTS=0;
+}
+if(__INTEGER_PRINTERRORS==NULL){
+__INTEGER_PRINTERRORS=(int16*)mem_static_malloc(2);
+*__INTEGER_PRINTERRORS=0;
+}
+int16 pass6237;
+int16 pass6238;
+int16 pass6239;
+int16 pass6240;
+int16 pass6241;
+int16 pass6242;
+static int16 fornext_value6244;
+static int16 fornext_finalvalue6244;
+static int16 fornext_step6244;
+static uint8 fornext_step_negative6244;
+static int32 fornext_value6246;
+static int32 fornext_finalvalue6246;
+static int32 fornext_step6246;
+static uint8 fornext_step_negative6246;
+float pass6248;
+float pass6249;
+float pass6250;
+if(__INTEGER_REFRESHRANDOMCOUNT==NULL){
+__INTEGER_REFRESHRANDOMCOUNT=(int16*)mem_static_malloc(2);
+*__INTEGER_REFRESHRANDOMCOUNT=0;
+}
+if(__INTEGER_REFRESHRANDOMWAIT==NULL){
+__INTEGER_REFRESHRANDOMWAIT=(int16*)mem_static_malloc(2);
+*__INTEGER_REFRESHRANDOMWAIT=0;
+}
+int16 pass6255;
+int8 pass6256;
+if(__BIT1_PRINTERROR==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_PRINTERROR=(int32*)(dblock+cmem_sp);
+*__BIT1_PRINTERROR=0;
+}
+if(__INTEGER_CHECKERROR==NULL){
+__INTEGER_CHECKERROR=(int16*)mem_static_malloc(2);
+*__INTEGER_CHECKERROR=0;
+}
+if(__INTEGER_ERRORCOUNT==NULL){
+__INTEGER_ERRORCOUNT=(int16*)mem_static_malloc(2);
+*__INTEGER_ERRORCOUNT=0;
+}
+if(__INTEGER_ERRORNUM==NULL){
+__INTEGER_ERRORNUM=(int16*)mem_static_malloc(2);
+*__INTEGER_ERRORNUM=0;
+}
+static int32 fornext_value6260;
+static int32 fornext_finalvalue6260;
+static int32 fornext_step6260;
+static uint8 fornext_step_negative6260;
+float pass6262;
+float pass6263;

@@ -1,0 +1,74 @@
+int8 *_FUNC_NEWGAMEMENUBUTTONS_BYTE_NEWGAMEMENUBUTTONS=NULL;
+if(_FUNC_NEWGAMEMENUBUTTONS_BYTE_NEWGAMEMENUBUTTONS==NULL){
+_FUNC_NEWGAMEMENUBUTTONS_BYTE_NEWGAMEMENUBUTTONS=(int8*)mem_static_malloc(1);
+*_FUNC_NEWGAMEMENUBUTTONS_BYTE_NEWGAMEMENUBUTTONS=0;
+}
+qbs *_FUNC_NEWGAMEMENUBUTTONS_STRING_LASTSLIDENAME=NULL;
+if (!_FUNC_NEWGAMEMENUBUTTONS_STRING_LASTSLIDENAME)_FUNC_NEWGAMEMENUBUTTONS_STRING_LASTSLIDENAME=qbs_new(0,0);
+qbs *_FUNC_NEWGAMEMENUBUTTONS_STRING_NEXTSLIDENAME=NULL;
+if (!_FUNC_NEWGAMEMENUBUTTONS_STRING_NEXTSLIDENAME)_FUNC_NEWGAMEMENUBUTTONS_STRING_NEXTSLIDENAME=qbs_new(0,0);
+int8 pass6364;
+int8 pass6365;
+byte_element_struct *byte_element_6366=NULL;
+if (!byte_element_6366){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6366=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6366=(byte_element_struct*)mem_static_malloc(12);
+}
+float pass6367;
+float pass6368;
+float pass6369;
+float pass6370;
+int8 pass6371;
+int8 pass6372;
+int8 pass6373;
+byte_element_struct *byte_element_6374=NULL;
+if (!byte_element_6374){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6374=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6374=(byte_element_struct*)mem_static_malloc(12);
+}
+int8 pass6375;
+int8 pass6376;
+byte_element_struct *byte_element_6377=NULL;
+if (!byte_element_6377){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6377=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6377=(byte_element_struct*)mem_static_malloc(12);
+}
+float pass6378;
+float pass6379;
+float pass6380;
+float pass6381;
+float pass6382;
+float pass6383;
+float pass6384;
+float pass6385;
+int8 pass6386;
+int8 pass6388;
+int8 pass6389;
+byte_element_struct *byte_element_6390=NULL;
+if (!byte_element_6390){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6390=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6390=(byte_element_struct*)mem_static_malloc(12);
+}
+float pass6391;
+float pass6392;
+float pass6393;
+float pass6394;
+int8 pass6395;
+int8 pass6396;
+int8 pass6397;
+byte_element_struct *byte_element_6398=NULL;
+if (!byte_element_6398){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6398=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6398=(byte_element_struct*)mem_static_malloc(12);
+}
+int8 pass6399;
+int8 pass6400;
+byte_element_struct *byte_element_6401=NULL;
+if (!byte_element_6401){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6401=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6401=(byte_element_struct*)mem_static_malloc(12);
+}
+float pass6402;
+float pass6403;
+float pass6404;
+float pass6405;
+float pass6406;
+float pass6407;
+float pass6408;
+float pass6409;
+int8 pass6410;
+int8 pass6411;

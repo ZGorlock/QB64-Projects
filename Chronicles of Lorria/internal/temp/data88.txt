@@ -1,0 +1,28 @@
+qbs *_FUNC_URLCASE_STRING_URLCASE=NULL;
+if (!_FUNC_URLCASE_STRING_URLCASE)_FUNC_URLCASE_STRING_URLCASE=qbs_new(0,0);
+qbs*oldstr6663=NULL;
+if(_FUNC_URLCASE_STRING_S->tmp||_FUNC_URLCASE_STRING_S->fixed||_FUNC_URLCASE_STRING_S->readonly){
+oldstr6663=_FUNC_URLCASE_STRING_S;
+if (oldstr6663->cmem_descriptor){
+_FUNC_URLCASE_STRING_S=qbs_new_cmem(oldstr6663->len,0);
+}else{
+_FUNC_URLCASE_STRING_S=qbs_new(oldstr6663->len,0);
+}
+memcpy(_FUNC_URLCASE_STRING_S->chr,oldstr6663->chr,oldstr6663->len);
+}
+int32 *_FUNC_URLCASE_LONG_X=NULL;
+if(_FUNC_URLCASE_LONG_X==NULL){
+_FUNC_URLCASE_LONG_X=(int32*)mem_static_malloc(4);
+*_FUNC_URLCASE_LONG_X=0;
+}
+qbs *_FUNC_URLCASE_STRING_C=NULL;
+if (!_FUNC_URLCASE_STRING_C)_FUNC_URLCASE_STRING_C=qbs_new(0,0);
+int64 fornext_value6665;
+int64 fornext_finalvalue6665;
+int64 fornext_step6665;
+uint8 fornext_step_negative6665;
+byte_element_struct *byte_element_6666=NULL;
+if (!byte_element_6666){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6666=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6666=(byte_element_struct*)mem_static_malloc(12);
+}
+static int32 sc_6667;

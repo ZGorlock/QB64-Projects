@@ -1,0 +1,1457 @@
+IF (k$ = CHR$(97) OR k$ = CHR$(65)) OR (_MOUSEX > 234 AND _MOUSEX < 401 AND _MOUSEY > 269 AND _MOUSEY < 285 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 2
+    DO
+        DO
+            _LIMIT 64
+            IF entrance = 1 THEN
+                k$ = CHR$(49)
+            END IF
+            CLS
+            PRINT "What would you like to do?"
+            PRINT "     1-View Info on your Character"
+            PRINT "     2-Create or Update Info"
+            PRINT "     3-Make Goals"
+            PRINT "     4-Password Backup"
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                filename$ = "user\stat\ign.txt"
+                GOSUB decrypter
+                ign$ = userdata$
+                filename$ = "user\stat\level.txt"
+                GOSUB decrypter
+                level = VAL(userdata$)
+                filename$ = "user\stat\perctnl.txt"
+                GOSUB decrypter
+                perctnl = VAL(userdata$)
+                filename$ = "user\stat\class.txt"
+                GOSUB decrypter
+                class$ = userdata$
+                filename$ = "user\stat\server.txt"
+                GOSUB decrypter
+                server$ = userdata$
+                filename$ = "user\stat\guild.txt"
+                GOSUB decrypter
+                guild$ = userdata$
+                filename$ = "user\stat\mesos.txt"
+                GOSUB decrypter
+                mesos~&& = VAL(userdata$)
+                filename$ = "user\stat\fame.txt"
+                GOSUB decrypter
+                fame = VAL(userdata$)
+                filename$ = "user\stat\str.txt"
+                GOSUB decrypter
+                strength = VAL(userdata$)
+                filename$ = "user\stat\critrate.txt"
+                GOSUB decrypter
+                critrate = VAL(userdata$)
+                filename$ = "user\stat\int.txt"
+                GOSUB decrypter
+                intel = VAL(userdata$)
+                filename$ = "user\stat\luk.txt"
+                GOSUB decrypter
+                luk = VAL(userdata$)
+                filename$ = "user\stat\dex.txt"
+                GOSUB decrypter
+                dex = VAL(userdata$)
+                filename$ = "user\stat\hp.txt"
+                GOSUB decrypter
+                hp = VAL(userdata$)
+                filename$ = "user\stat\mp.txt"
+                GOSUB decrypter
+                mp = VAL(userdata$)
+                filename$ = "user\stat\hands.txt"
+                GOSUB decrypter
+                hands = VAL(userdata$)
+                filename$ = "user\stat\speed.txt"
+                GOSUB decrypter
+                speed = VAL(userdata$)
+                filename$ = "user\stat\jump.txt"
+                GOSUB decrypter
+                jump = VAL(userdata$)
+                filename$ = "user\calc\dmgmin.txt"
+                GOSUB decrypter
+                dmgmin = VAL(userdata$)
+                filename$ = "user\calc\dmgmax.txt"
+                GOSUB decrypter
+                dmgmax = VAL(userdata$)
+                filename$ = "user\calc\def.txt"
+                GOSUB decrypter
+                defense = VAL(userdata$)
+                filename$ = "user\calc\mdef.txt"
+                GOSUB decrypter
+                mdefense = VAL(userdata$)
+                filename$ = "user\calc\pacc.txt"
+                GOSUB decrypter
+                pacc = VAL(userdata$)
+                filename$ = "user\calc\macc.txt"
+                GOSUB decrypter
+                macc = VAL(userdata$)
+                filename$ = "user\calc\pavoid.txt"
+                GOSUB decrypter
+                pavoid = VAL(userdata$)
+                filename$ = "user\calc\mavoid.txt"
+                GOSUB decrypter
+                mavoid = VAL(userdata$)
+                filename$ = "user\calc\minmp.txt"
+                GOSUB decrypter
+                minmp = VAL(userdata$)
+                REDIM charinfoarray$(20)
+                perctnl$ = STR$(perctnl)
+                perctnl$ = LTRIM$(perctnl$)
+                charinfoarray$(1) = " " + ign$
+                charinfoarray$(2) = " LV:" + STR$(level) + "  " + perctnl$ + "%" + "  " + class$
+                charinfoarray$(3) = " " + guild$ + ": " + server$
+                charinfoarray$(4) = ""
+                charinfoarray$(5) = " Mesos:" + STR$(mesos&)
+                charinfoarray$(6) = " Fame:" + STR$(fame)
+                charinfoarray$(7) = ""
+                charinfoarray$(8) = " HP:" + STR$(hp) + SPACE$(10) + "MP:" + STR$(mp)
+                charinfoarray$(9) = ""
+                charinfoarray$(10) = " STR:" + STR$(strength) + SPACE$(5) + "DEX:" + STR$(dex) + SPACE$(5) + "INT:" + STR$(intel) + SPACE$(5) + "LUK:" + STR$(luk) + SPACE$(5)
+                charinfoarray$(11) = ""
+                charinfoarray$(12) = " Critical Rate:" + SPACE$(5) + STR$(critrate) + "%"
+                charinfoarray$(13) = " Hands:" + SPACE$(13) + STR$(hands)
+                charinfoarray$(14) = " Speed:" + STR$(speed) + "%" + SPACE$(12) + "Jump:" + STR$(jump) + "%"
+                charinfoarray$(15) = ""
+                charinfoarray$(16) = " Damage: " + STR$(dmgmin) + "-" + STR$(dmgmax)
+                charinfoarray$(17) = " Physical Defense:" + STR$(defense) + SPACE$(12) + "Magical Defense:" + STR$(mdefense)
+                charinfoarray$(18) = " Physical Accuracy:" + STR$(pacc) + SPACE$(12) + "Magical Accuracy:" + STR$(macc)
+                charinfoarray$(19) = " Physical Avoid:" + STR$(pavoid) + SPACE$(12) + "Magical Avoid:" + STR$(mavoid)
+                charinfoarray$(20) = " Minimum MP:" + STR$(mimmp)
+                row = 1
+                exitloop = 0
+                DO
+                    _LIMIT 64
+                    CLS
+                    FOR n = row TO row + 19
+                        PRINT charinfoarray$(n)
+                    NEXT
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                rmd = 1
+                exitloop = 1
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "What would you like to update?"
+                        PRINT "     1-Name"
+                        PRINT "     2-Level"
+                        PRINT "     3-Percentage"
+                        PRINT "     4-Class"
+                        PRINT "     5-Server"
+                        PRINT "     6-Guild"
+                        PRINT "     7-HP"
+                        PRINT "     8-MP"
+                        PRINT "     9-Mesos"
+                        PRINT "     a-Fame"
+                        PRINT "     b-Hands"
+                        PRINT "     c-Speed"
+                        PRINT "     d-Jump"
+                        PRINT "     e-STR"
+                        PRINT "     f-DEX"
+                        PRINT "     g-INT"
+                        PRINT "     h-LUK"
+                        PRINT "     i-Critical Rate"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            ign$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your in-game name: "; ign$
+                                        GOSUB controls
+                                        IF (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ = CHR$(32)) THEN
+                                            ign$ = ign$ + k$
+                                            inputlength = LEN(ign$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            ign$ = MID$(ign$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    IF inputlength > 12 THEN
+                                        ign$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\ign.txt"
+                                    userdata$ = ign$
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            level$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your level: "; level$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            level$ = level$ + k$
+                                            inputlength = LEN(level$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            level$ = MID$(level$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    level = VAL(level$)
+                                    IF level < 1 OR level > 200 THEN
+                                        level$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\level.txt"
+                                    userdata$ = STR$(level)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            perctnl$ = ""
+                            inputlength = 0
+                            decimal = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your percentage tnl: "; perctnl$
+                                        GOSUB controls
+                                        IF k$ = CHR$(46) AND decimal = 0 THEN
+                                            perctnl$ = perctnl$ + k$
+                                            inputlength = LEN(perctnl$)
+                                            decimal = 1
+                                            decimalloc = inputlength
+                                        END IF
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            perctnl$ = perctnl$ + k$
+                                            inputlength = LEN(perctnl$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            perctnl$ = MID$(perctnl$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                            IF inputlength < decimalloc THEN
+                                                decimal = 0
+                                            END IF
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    perctnl = VAL(perctnl$)
+                                    IF perctnl < 0 OR perctnl > 99.99 THEN
+                                        perctnl$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\perctnl.txt"
+                                    userdata$ = STR$(perctnl)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(52) THEN
+                            class$ = ""
+                            inputlength = 0
+                            row = 1
+                            selected = 1
+                            exitloop = 0
+                            OPEN "source\list\classes.txt" FOR INPUT AS #1
+                            REDIM classes$(128)
+                            REDIM classlistprint$(128)
+                            classamount = 1
+                            DO UNTIL EOF(1)
+                                ON ERROR GOTO endofclassfile
+                                LINE INPUT #1, classes$(classamount)
+                                classamount = classamount + 1
+                            LOOP
+                            endofclassfile:
+                            classamount = classamount - 1
+                            CLOSE #1
+                            classlistamount = classamount
+                            FOR classchange = 1 TO classamount
+                                classlistprint$(classchange) = classes$(classchange)
+                            NEXT classchange
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Select your class"
+                                        PRINT ": "; class$
+                                        PRINT
+                                        IF classlistamount <= 24 THEN
+                                            FOR classprint = 1 TO classlistamount
+                                                IF classprint = selected THEN
+                                                    COLOR backcolor, textcolor
+                                                ELSE
+                                                    COLOR textcolor, backcolor
+                                                END IF
+                                                PRINT classlistprint$(classprint)
+                                            NEXT classprint
+                                        ELSE
+                                            FOR classlisting = row TO (row + 24)
+                                                IF classlisting = selected THEN
+                                                    COLOR backcolor, textcolor
+                                                ELSE
+                                                    COLOR textcolor, backcolor
+                                                END IF
+                                                PRINT classlistprint$(classlisting)
+                                            NEXT classlisting
+                                        END IF
+                                        COLOR textcolor, backcolor
+                                        IF row + 24 < classlistamount AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        GOSUB controls
+                                        IF selected < 1 THEN selected = 1
+                                        IF selected > classlistamount THEN selected = classlistamount
+                                        IF (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ = CHR$(32)) THEN
+                                            class$ = class$ + k$
+                                            inputlength = LEN(class$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            class$ = MID$(class$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> classlistamount THEN selected = selected + 1
+                                        IF oldclass$ <> class$ THEN
+                                            REDIM classlistprint$(128)
+                                            classlistamount = 0
+                                            FOR classnewlist = 1 TO classamount
+                                                IF MID$(classes$(classnewlist), 1, inputlength) = class$ THEN
+                                                    classlistamount = classlistamount + 1
+                                                    classlistprint$(classlistamount) = classes$(classnewlist)
+                                                END IF
+                                            NEXT classnewlist
+                                            row = 1
+                                            selected = 1
+                                            oldclass$ = class$
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    class$ = classlistprint$(selected)
+                                    filename$ = "user\stat\class.txt"
+                                    userdata$ = class$
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(53) THEN
+                            server$ = ""
+                            inputlength = 0
+                            selected = 1
+                            exitloop = 0
+                            OPEN "source\list\servers.txt" FOR INPUT AS #1
+                            REDIM servers$(64)
+                            numofservers = 1
+                            DO UNTIL EOF(1)
+                                ON ERROR GOTO endofserverfile
+                                LINE INPUT #1, servers$(numofservers)
+                                numofservers = numofservers + 1
+                            LOOP
+                            endofserverfile:
+                            numofservers = numofservers - 1
+                            CLOSE #1
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Select your server"
+                                        PRINT
+                                        FOR serverprint = 1 TO numofservers
+                                            IF serverprint = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT servers$(serverprint)
+                                            COLOR textcolor, backcolor
+                                        NEXT serverprint
+                                        GOSUB controls
+                                        IF selected < 1 THEN selected = 1
+                                        IF selected > numofservers THEN selected = numofservers
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> numofservers THEN selected = selected + 1
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    server$ = servers$(serverprint)
+                                    filename$ = "user\stat\server.txt"
+                                    userdata$ = server$
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(54) THEN
+                            guild$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your guild: "; guild$
+                                        GOSUB controls
+                                        IF (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ = CHR$(32)) THEN
+                                            guild$ = guild$ + k$
+                                            inputlength = LEN(guild$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            guild$ = MID$(guild$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    IF inputlength > 12 THEN
+                                        guild$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\guild.txt"
+                                    userdata$ = guild$
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(55) THEN
+                            hp$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your max HP: "; hp$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            hp$ = hp$ + k$
+                                            inputlength = LEN(hp$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            hp$ = MID$(hp$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    hp = VAL(hp$)
+                                    IF hp < 50 OR hp > 99999 THEN
+                                        hp$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\hp.txt"
+                                    userdata$ = STR$(hp)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(56) THEN
+                            mp$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your max MP: "; mp$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            mp$ = mp$ + k$
+                                            inputlength = LEN(mp$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            mp$ = MID$(mp$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    mp = VAL(mp$)
+                                    IF mp < 50 OR mp > 99999 THEN
+                                        mp$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\mp.txt"
+                                    userdata$ = STR$(mp)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(57) THEN
+                            mesos$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your curent meso count: "; mesos$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            mesos$ = mesos$ + k$
+                                            inputlength = LEN(mesos$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            mesos$ = MID$(mesos$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    mesos& = VAL(mesos$)
+                                    IF mesos& > 2147483647 THEN
+                                        mesos$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\mesos.txt"
+                                    userdata$ = STR$(mesos&)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                            fame$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your current fame: "; fame$
+                                        GOSUB controls
+                                        IF k$ = (CHR$(0) + CHR$(59)) AND negative = 0 THEN
+                                            negative = 1
+                                            fame$ = fame$ + k$
+                                            inputlength = LEN(fame$)
+                                            negativeloc = LEN(fame$)
+                                        END IF
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            fame$ = fame$ + k$
+                                            inputlength = LEN(fame$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            fame$ = MID$(fame$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                            IF inputlength < negativeloc THEN
+                                                negative = 0
+                                            END IF
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    fame = VAL(fame$)
+                                    IF fame > 30000 OR fame < -30000 THEN
+                                        fame$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\fame.txt"
+                                    userdata$ = STR$(fame)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(98) THEN
+                            hands$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your Hands (DEX + INT + LUK): "; hands$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            hands$ = hands$ + k$
+                                            inputlength = LEN(hands$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            hands$ = MID$(hands$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    hands = VAL(hands$)
+                                    IF hands < 10 THEN
+                                        hands$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\hands.txt"
+                                    userdata$ = STR$(hands)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN
+                                    EXIT DO
+                                END IF
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(99) THEN
+                            speed$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your Speed: "; speed$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            speed$ = speed$ + k$
+                                            inputlength = LEN(speed$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            speed$ = MID$(speed$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    speed = VAL(speed$)
+                                    IF speed > 150 THEN
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\speed.txt"
+                                    userdata$ = STR$(speed)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(100) THEN
+                            jump$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your Jump: "; jump$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            jump$ = jump$ + k$
+                                            inputlength = LEN(jump$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            jump$ = MID$(jump$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        IF inputlength > 3 THEN
+                                            jump$ = MID$(jump$, 1, 10)
+                                            inputlength = 3
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    jump = VAL(jump$)
+                                    IF jump > 150 THEN
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\jump.txt"
+                                    userdata$ = STR$(jump)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(101) THEN
+                            strength$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your STR: "; strength$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            strength$ = strength$ + k$
+                                            inputlength = LEN(strength$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            strength$ = MID$(strength$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    strength = VAL(strength$)
+                                    IF strength < 4 THEN
+                                        strength$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\str.txt"
+                                    userdata$ = STR$(strength)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(102) THEN
+                            dex$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your DEX: "; dex$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            dex$ = dex$ + k$
+                                            inputlength = LEN(dex$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            dex$ = MID$(dex$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    dex = VAL(dex$)
+                                    IF dex < 4 THEN
+                                        dex$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\dex.txt"
+                                    userdata$ = STR$(dex)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(103) THEN
+                            intel$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your INT: "; intel$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            intel$ = intel$ + k$
+                                            inputlength = LEN(intel$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            intel$ = MID$(intel$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    intel = VAL(intel$)
+                                    IF intel < 4 THEN
+                                        intel$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\int.txt"
+                                    userdata$ = STR$(intel)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(104) THEN
+                            luk$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter your LUK: "; luk$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            luk$ = luk$ + k$
+                                            inputlength = LEN(luk$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            luk$ = MID$(luk$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    luk = VAL(luk$)
+                                    IF luk < 4 THEN
+                                        luk$ = ""
+                                        inputlength = 0
+                                        EXIT DO
+                                    END IF
+                                    filename$ = "user\stat\luk.txt"
+                                    userdata$ = STR$(luk)
+                                    GOSUB encrypter
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(105) THEN
+                            critrate$ = ""
+                            inputlength = 0
+                            exitloop = 0
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Enter your Critical Rate: "; critrate$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        critrate$ = critrate$ + k$
+                                        inputlength = LEN(critrate$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        critrate$ = MID$(critrate$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                critrate = VAL(critrate$)
+                                filename$ = "user\stat\critrate.txt"
+                                userdata$ = STR$(critrate)
+                                GOSUB encrypter
+                                exitloop = 1
+                                EXIT DO
+                            LOOP
+                        END IF
+                        IF exitloop = 1 THEN EXIT DO
+                        _DISPLAY
+                    LOOP
+                    exitloop = 0
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Would you like to update something else?"
+                        PRINT "     y-Yes"
+                        PRINT "     n-No"
+                        GOSUB controls
+                        IF k$ = CHR$(121) THEN
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(110) THEN
+                            rmd = 1
+                            exitloop = 1
+                            EXIT DO
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+            END IF
+            IF k$ = CHR$(51) THEN
+                exitloop = 0
+            END IF
+            IF k$ = CHR$(52) THEN
+                entrance = 0
+                IF entrance2 = 1 THEN
+                    k$ = CHR$(52)
+                END IF
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "What would you like to do?"
+                        PRINT "     1-View Info"
+                        PRINT "     2-Copy Password to Cliboard"
+                        PRINT "     3-Set or Change Info"
+                        PRINT "     4-Set or Change Pin"
+                        PRINT "     5-Erase Data"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            filename$ = "user\acc\pin.txt"
+                            GOSUB decrypter
+                            pin = VAL(userdata$)
+                            pincheck$ = ""
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Enter your Pin to continue: "; pincheck$
+                                GOSUB controls
+                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                    pincheck$ = pincheck$ + k$
+                                    inputlength = LEN(pincheck$)
+                                END IF
+                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                    pincheck$ = MID$(pincheck$, 1, (inputlength - 1))
+                                    inputlength = (inputlength - 1)
+                                END IF
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            pincheck = VAL(pincheck$)
+                            IF pincheck <> pin THEN
+                                rmd = 1
+                                exitloop = 1
+                            END IF
+                            filename$ = "user\acc\user.txt"
+                            GOSUB decrypter
+                            username$ = userdata$
+                            filename$ = "user\acc\pass.txt"
+                            GOSUB decrypter
+                            password$ = userdata$
+                            filename$ = "user\acc\pic.txt"
+                            GOSUB decrypter
+                            pic$ = userdata$
+                            filename$ = "user\acc\name.txt"
+                            GOSUB decrypter
+                            lastname$ = userdata$
+                            filename$ = "user\acc\dob.txt"
+                            GOSUB decrypter
+                            birthday$ = userdata$
+                            filename$ = "user\acc\email.txt"
+                            GOSUB decrypter
+                            email$ = userdata$
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT " Username: "; username$
+                                PRINT " Password: "; password$
+                                PRINT " PIC: "; pic$
+                                PRINT " Last Name: "; lastname$
+                                PRINT " Birthday: "; birthday$
+                                PRINT " Email: "; email$
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                            rmd = 1
+                            exitloop = 1
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            filename$ = "user\acc\pin.txt"
+                            GOSUB decrypter
+                            pin = VAL(userdata$)
+                            pincheck$ = ""
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Enter your Pin: "; pincheck$
+                                GOSUB controls
+                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                    pincheck$ = pincheck$ + k$
+                                    inputlength = LEN(pincheck$)
+                                END IF
+                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                    pincheck$ = MID$(pincheck$, 1, (inputlength - 1))
+                                    inputlength = (inputlength - 1)
+                                END IF
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            pincheck = VAL(pincheck$)
+                            IF pincheck = pin THEN
+                                filename$ = "user\acc\pass.txt"
+                                GOSUB decrypter
+                                password$ = userdata$
+                                _CLIPBOARD$ = password$
+                                GOTO BEGIN
+                            END IF
+                            rmd = 1
+                            exitloop = 1
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "You can enter your account information, if you wish, as a backup. This is optional and your information will only be visible on your computer. You can also set a Pin to view your information. This program is in no way meant to steal your information and I am in no way forcing you to enter your information here, so please don't flame. Please remember this is optional and the program is fully functional without this information."
+                                PRINT "Would you like to continue or quit? (c\q)"
+                                GOSUB controls
+                                IF k$ = CHR$(99) THEN
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What would you like to enter?"
+                                        PRINT "     1-Username"
+                                        PRINT "     2-Password"
+                                        PRINT "     3-Pic"
+                                        PRINT "     4-Last Name"
+                                        PRINT "     5-Birthday"
+                                        PRINT "     6-Email"
+                                        GOSUB controls
+                                        IF k$ = CHR$(49) THEN
+                                            username$ = ""
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your Username: "; username$
+                                                GOSUB controls
+                                                IF k$ > CHR$(0) AND k$ <> (CHR$(0) + CHR$(60)) AND k$ <> CHR$(8) AND k$ <> CHR$(13) THEN
+                                                    username$ = username$ + k$
+                                                    inputlength = LEN(username$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    username$ = MID$(username$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            filename$ = "user\acc\user.txt"
+                                            userdata$ = username$
+                                            GOSUB encrypter
+                                            exitloop = 1
+                                        END IF
+                                        IF k$ = CHR$(50) THEN
+                                            password$ = ""
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your Password: "; password$
+                                                GOSUB controls
+                                                IF k$ > CHR$(0) AND k$ <> (CHR$(0) + CHR$(60)) AND k$ <> CHR$(8) AND k$ <> CHR$(13) THEN
+                                                    password$ = password$ + k$
+                                                    inputlength = LEN(password$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    password$ = MID$(password$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            filename$ = "user\acc\pass.txt"
+                                            userdata$ = password$
+                                            GOSUB encrypter
+                                            exitloop = 1
+                                        END IF
+                                        IF k$ = CHR$(51) THEN
+                                            pic$ = ""
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your PIC: "; pic$
+                                                GOSUB controls
+                                                IF (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ = CHR$(32)) THEN
+                                                    pic$ = pic$ + k$
+                                                    inputlength = LEN(pic$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    pic$ = MID$(pic$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            filename$ = "user\acc\pic.txt"
+                                            userdata$ = pic$
+                                            GOSUB encrypter
+                                            exitloop = 1
+                                        END IF
+                                        IF k$ = CHR$(52) THEN
+                                            lastname$ = ""
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your last name: "; lastname$
+                                                GOSUB controls
+                                                IF k$ >= CHR$(65) AND k$ <= CHR$(122) THEN
+                                                    lastname$ = lastname$ + k$
+                                                    inputlength = LEN(lastname$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    lastname$ = MID$(lastname$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            filename$ = "user\acc\name.txt"
+                                            userdata$ = lastname$
+                                            GOSUB encrypter
+                                            exitloop = 1
+                                        END IF
+                                        IF k$ = CHR$(53) THEN
+                                            birthday$ = ""
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your birthday: "; birthday$
+                                                GOSUB controls
+                                                IF (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ = CHR$(32)) THEN
+                                                    birthday$ = birthday$ + k$
+                                                    inputlength = LEN(birthday$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    birthday$ = MID$(birthday$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            filename$ = "user\acc\dob.txt"
+                                            userdata$ = birthday$
+                                            GOSUB encrypter
+                                            exitloop = 1
+                                        END IF
+                                        IF k$ = CHR$(54) THEN
+                                            email$ = ""
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your email: "; email$
+                                                GOSUB controls
+                                                IF (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ = CHR$(32)) THEN
+                                                    birthday$ = birthday$ + k$
+                                                    inputlength = LEN(birthday$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    birthday$ = MID$(birthday$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            filename$ = "user\acc\email.txt"
+                                            userdata$ = email$
+                                            GOSUB encrypter
+                                            exitloop = 1
+                                        END IF
+                                        rmd = 2
+                                        IF exitloop = 1 THEN EXIT DO
+                                        _DISPLAY
+                                    LOOP
+                                END IF
+                                IF k$ = CHR$(113) THEN
+                                    rmd = 2
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                                IF exitloop = 1 THEN EXIT DO
+                                _DISPLAY
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(52) THEN
+                            entrance2 = 0
+                            exitloop = 0
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What would you like to do?"
+                                PRINT "     1-Set Pin"
+                                PRINT "     2-Change Pin"
+                                PRINT "     3-Recover Pin"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    pin$ = ""
+                                    DO
+                                        DO
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "You will be asked your Pin when trying to access your account info"
+                                                PRINT "Enter a 4 digit number for your Pin"
+                                                PRINT "PIN: "; pin$
+                                                GOSUB controls
+                                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                                    pin$ = pin$ + k$
+                                                    inputlength = LEN(pin$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    pin$ = MID$(pin$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            pin = VAL(pin$)
+                                            IF pin >= 1000 AND pin <= 9999 THEN
+                                                loopexit = 1
+                                                EXIT DO
+                                            ELSE
+                                                EXIT DO
+                                            END IF
+                                        LOOP
+                                        IF loopexit = 1 THEN
+                                            EXIT DO
+                                        END IF
+                                    LOOP
+                                    nul$ = "0"
+                                    filename$ = "user\acc\user.txt"
+                                    userdata$ = nul$
+                                    GOSUB encrypter
+                                    filename$ = "user\acc\pass.txt"
+                                    userdata$ = nul$
+                                    GOSUB encrypter
+                                    filename$ = "user\acc\pic.txt"
+                                    userdata$ = nul$
+                                    GOSUB encrypter
+                                    filename$ = "user\acc\name.txt"
+                                    userdata$ = nul$
+                                    GOSUB encrypter
+                                    filename$ = "user\acc\dob.txt"
+                                    userdata$ = nul$
+                                    GOSUB encrypter
+                                    filename$ = "user\acc\email.txt"
+                                    userdata$ = nul$
+                                    GOSUB encrypter
+                                    filename$ = "user\acc\pin.txt"
+                                    userdata$ = STR$(pin)
+                                    GOSUB encrypter
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "OK, your Pin is: "; pin
+                                        PRINT
+                                        PRINT "If you ever forget it you can go to 'Erase Data' to reset it"
+                                        PRINT "IF you ever want to change it you can go to 'Change Pin'"
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(32)
+                                    rmd = 2
+                                    exitloop = 1
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 0
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Are you sure you want to change your pin?"
+                                        PRINT "     y-Yes"
+                                        PRINT "     n-No"
+                                        GOSUB controls
+                                        IF k$ = CHR$(121) THEN
+                                            oldpincheck$ = ""
+                                            filename$ = "user\acc\pin.txt"
+                                            GOSUB decrypter
+                                            pin = VAL(userdata$)
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT "Enter your old Pin: "; oldpincheck$
+                                                GOSUB controls
+                                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                                    oldpincheck$ = oldpincheck$ + k$
+                                                    inputlength = LEN(oldpincheck$)
+                                                END IF
+                                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                    oldpincheck$ = MID$(oldpincheck$, 1, (inputlength - 1))
+                                                    inputlength = (inputlength - 1)
+                                                END IF
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(13)
+                                            oldpincheck = VAL(oldpincheck$)
+                                            IF oldpincheck = pin THEN
+                                                newpin$ = ""
+                                                DO
+                                                    _LIMIT 64
+                                                    CLS
+                                                    PRINT "Enter your new Pin: "; newpin$
+                                                    GOSUB controls
+                                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                                        newpin$ = newpin$ + k$
+                                                        inputlength = LEN(newpin$)
+                                                    END IF
+                                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                                        newpin$ = MID$(newpin$, 1, (inputlength - 1))
+                                                        inputlength = (inputlength - 1)
+                                                    END IF
+                                                    _DISPLAY
+                                                LOOP UNTIL k$ = CHR$(13)
+                                                newpin = VAL(newpin$)
+                                                IF newpin >= 1000 AND newpin <= 9999 THEN
+                                                    filename$ = "user\acc\pin.txt"
+                                                    userdata$ = STR$(newpin)
+                                                    GOSUB encrypter
+                                                    DO
+                                                        _LIMIT 64
+                                                        CLS
+                                                        PRINT "Your new Pin is: "; newpin
+                                                        GOSUB controls
+                                                        _DISPLAY
+                                                    LOOP UNTIL k$ = CHR$(32)
+                                                END IF
+                                            END IF
+                                            rmd = 3
+                                            exitloop = 1
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(110) THEN
+                                            rmd = 3
+                                            exitloop = 1
+                                            EXIT DO
+                                        END IF
+                                        _DISPLAY
+                                    LOOP
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 0
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "If you have forgoten your Pin, you can recover it here"
+                                        PRINT "This will erase your password, username, PIC, and other account information"
+                                        PRINT "Would you like to be told your Pin?"
+                                        PRINT "     y-Yes"
+                                        PRINT "     n-No"
+                                        GOSUB controls
+                                        IF k$ = CHR$(121) THEN
+                                            filename$ = "user\acc\pin.txt"
+                                            GOSUB decrypter
+                                            pin = VAL(userdata$)
+                                            nul$ = "0"
+                                            filename$ = "user\acc\user.txt"
+                                            userdata$ = nul$
+                                            GOSUB encrypter
+                                            filename$ = "user\acc\pass.txt"
+                                            userdata$ = nul$
+                                            GOSUB encrypter
+                                            filename$ = "user\acc\pic.txt"
+                                            userdata$ = nul$
+                                            GOSUB encrypter
+                                            filename$ = "user\acc\name.txt"
+                                            userdata$ = nul$
+                                            GOSUB encrypter
+                                            filename$ = "user\acc\dob.txt"
+                                            userdata$ = nul$
+                                            GOSUB encrypter
+                                            filename$ = "user\acc\email.txt"
+                                            userdata$ = nul$
+                                            GOSUB encrypter
+                                            DO
+                                                _LIMIT 64
+                                                CLS
+                                                PRINT ": "; pin
+                                                PRINT "You can change this in the 'Set or Change Pin' Section"
+                                                GOSUB controls
+                                                _DISPLAY
+                                            LOOP UNTIL k$ = CHR$(32)
+                                            rmd = 3
+                                            exitloop = 1
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(110) THEN
+                                            rmd = 3
+                                            exitloop = 1
+                                            EXIT DO
+                                        END IF
+                                        _DISPLAY
+                                    LOOP
+                                END IF
+                                IF exitloop = 1 THEN EXIT DO
+                                _DISPLAY
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(53) THEN
+                            nul$ = "0"
+                            filename$ = "user\acc\user.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            filename$ = "user\acc\pass.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            filename$ = "user\acc\pic.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            filename$ = "user\acc\name.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            filename$ = "user\acc\dob.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            filename$ = "user\acc\email.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            filename$ = "user\acc\pin.txt"
+                            userdata$ = nul$
+                            GOSUB encrypter
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "All account related data has been set to '0'"
+                                PRINT "Your pin is now '0'"
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                            exitloop = 1
+                            EXIT DO
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+            END IF
+            IF exitloop = 1 THEN EXIT DO
+            _DISPLAY
+        LOOP
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "Where would you like to go?"
+            PRINT "     1-Character Menu"
+            PRINT "     2-Main Menu"
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                GOTO BEGIN
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

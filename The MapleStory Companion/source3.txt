@@ -1,0 +1,1467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="canonical" href="http://global.hidden-street.net/eq/monster-card-set" />
+<link rel="shortcut icon" href="/sites/all/themes/lithharbor/favicon.ico" type="image/x-icon" />
+  <title>Monster Card Set | MapleStory | HS.MapleGlobal</title>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/global.hidden-street.net/files/css/css_bb477b98db50b14e9d92f8f98382817a.css" />
+  <!--[if lte IE 8]>
+    <style type="text/css">
+      body { behavior: url(/sites/all/themes/lithharbor/csshover3.htc); }
+    </style>
+  <![endif]-->
+  <!--[if lte IE 6]>
+    <style type="text/css">
+      .pngfix { behavior: url(/sites/all/themes/lithharbor/iepngfix.htc); }
+    </style>
+    <script type="text/javascript" src="/sites/all/themes/lithharbor/iepngfix-tilebg.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_b99b64f78cee0f66772c70d5f5464a10.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "dhtmlMenu": { "slide": "slide", "siblings": 0, "relativity": 0, "children": 0, "clone": 0, "doubleclick": 0 }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/global.hidden-street.net/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 1, "disable_zoom": 0, "force_show_nav": 0, "show_caption": true, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 } });
+//--><!]]>
+</script>
+  <script type="text/javascript">window.google_analytics_uacct = "UA-989776-5";</script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-989776-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body class="not-front-page not-logged-in not-admin page-eq sidebar-left-and-right">
+<div id="wrapper">
+  <div id="page">
+    <div class="clear-both"><!-- --></div>
+
+    
+	<div id="header">
+              <div id="logo">
+          <a href="/" title="Home" rel="home">
+            <img src="/sites/all/themes/lithharbor/logo.png" alt="Home" />
+          </a>
+        </div>
+      	  
+	  <div id="user-bar">
+	    	                <form method='post' accept-charset='UTF-8' action='/user/login'>          <div class="form-item" id="edit-name-wrapper">
+
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" tabindex="1" title="Username:" class="form-text required" />
+</div>
+          <div class="form-item" id="edit-pass-wrapper">
+ <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  tabindex="2" title="Password:" class="form-text required" />
+</div>
+          <input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
+<input type="hidden" name="form_build_id" id="form-d703d190f19a909d210b79c2f22d3eac" value="form-d703d190f19a909d210b79c2f22d3eac"  />
+<input type="submit" name="op" id="edit-submit-2" value="Log in"  tabindex="3" class="form-submit" />
+          </form>				<script type="text/javascript">
+          $('#edit-name').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+		  $('#edit-pass').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+        </script>
+	  </div>
+
+	</div>
+
+	<div id="navigation">
+              <div id="primary">
+          <ul class="menu"><li class="leaf first dhtml-menu "><a href="/" title="" id="dhtml_menu-1652">Home</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum/forumdisplay.php?420-Guides" title="" id="dhtml_menu-165">Guides</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum" title="" id="dhtml_menu-166">Forum</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/guild" title="" id="dhtml_menu-167">Guild</a></li>
+<li class="leaf last dhtml-menu "><a href="/contact" title="" id="dhtml_menu-168">Contact Us</a></li>
+
+</ul>        </div>
+      	          <div id="search-box">
+          <div id="block-finder-finder_3" class="block block-finder block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div id="finder-block-3" class="finder-block"><div id="finder-block-3-wrapper" class="finder-view-wrapper"><div class="finder-view-3 finder-view"><form action="/search_finder"  accept-charset="UTF-8" method="post" id="finder-form-3">
+<div><div class="finder-form finder-3"><div class="form-item" id="edit-3-wrapper">
+ <label for="edit-3">Search: </label>
+
+ <input type="text" maxlength="128" name="3" id="edit-3" size="60" value="" class="form-text form-autocomplete" />
+</div>
+<input class="finder-autocomplete" type="hidden" id="edit-3-autocomplete" value="http://global.hidden-street.net/finder_autocomplete/autocomplete/3/3" disabled="disabled" /><input type="submit" name="find" id="edit-submit" value="Submit"  class="form-submit" />
+</div><input type="hidden" name="form_build_id" id="form-9b7b3a2701911f50b7bfd880b493ee01" value="form-9b7b3a2701911f50b7bfd880b493ee01"  />
+<input type="hidden" name="form_id" id="edit-finder-form-3" value="finder_form_3"  />
+
+</div></form>
+</div></div></div>      </div>
+    </div>
+  </div>  
+</div>
+        </div>
+
+		<script type="text/javascript">
+          $('#edit-3').example('Search for...', {className: 'not-focus'});
+        </script>
+      	</div>
+
+    <div id="main-wrapper">
+      <div id="main-wrapper-t">
+        <div id="main-wrapper-b" class="clear-both">
+          <div id="sidebar-left-and-main">
+                          <div id="sidebar-left">
+                <div id="block-menu-menu-database" class="block block-menu block-1 block-first clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+
+        <ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-171">General</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/experience-table" title="" id="dhtml_menu-181">Experience Table</a></li>
+<li class="leaf last dhtml-menu "><a href="/pet-closeness-table" title="" id="dhtml_menu-192">Pet Closeness Table</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-15281">Tools</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character-avoidance-calculator" title="" id="dhtml_menu-15283">Character Avoidance Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/character-damage-calculator" title="" id="dhtml_menu-15285">Character Damage Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster-avoidance-calculator" title="" id="dhtml_menu-15282">Monster Avoidance Calculator</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster-damage-calculator" title="" id="dhtml_menu-15284">Monster Damage Calculator</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-172">Characters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character/class/admin" title="" id="dhtml_menu-193">Admin</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/adventurers" title="" id="dhtml_menu-1653">Adventurers</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/cygnus-knights" title="" id="dhtml_menu-1654">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/class/guild" title="" id="dhtml_menu-16175">Guild</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/legends" title="" id="dhtml_menu-5111">Legends</a></li>
+<li class="leaf last dhtml-menu "><a href="/character/resistance" title="Resistance" id="dhtml_menu-15274">Resistance</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  active-trail"><a href="/database" title="" id="dhtml_menu-174">Equipment</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/eq/accessories" title="" id="dhtml_menu-197">Accessories</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/eq/armours" title="" id="dhtml_menu-196">Armours</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/taming-mob" id="dhtml_menu-15267">Taming Mob</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/weapons" title="" id="dhtml_menu-995">Weapons</a></li>
+<li class="leaf last dhtml-menu  active-trail"><a href="/eq/monster-card-set" id="dhtml_menu-18898" class="active">Monster Card Set</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-173">Items</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/items/useable-items" title="" id="dhtml_menu-199">Useable Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/ores" title="" id="dhtml_menu-200">Ores</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/misc-items" title="" id="dhtml_menu-201">Misc. Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/set-up" title="" id="dhtml_menu-202">Set-up</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/items/maker-items" title="" id="dhtml_menu-3742">Maker Items</a></li>
+<li class="leaf last dhtml-menu "><a href="/items/profession-items" title="" id="dhtml_menu-18796">Profession Items</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-186">Item Synthesis</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-synthesis/common" title="" id="dhtml_menu-203">Common</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/bowman" title="" id="dhtml_menu-205">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/magician" title="" id="dhtml_menu-206">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/pirate" title="" id="dhtml_menu-208">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/thief" title="" id="dhtml_menu-207">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/warrior" title="" id="dhtml_menu-204">Warrior</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/weapon-forging" title="" id="dhtml_menu-209">Weapon Forging</a></li>
+<li class="leaf last dhtml-menu "><a href="/item-synthesis/itcg" title="" id="dhtml_menu-3759">iTCG Forging</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-5091">Item Maker</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-maker/warrior" title="" id="dhtml_menu-5092">Warrior</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/magician" title="" id="dhtml_menu-5093">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/bowman" title="" id="dhtml_menu-5094">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/thief" title="" id="dhtml_menu-5095">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/pirate" title="" id="dhtml_menu-5096">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/etc" title="" id="dhtml_menu-5097">Etc</a></li>
+
+<li class="leaf last dhtml-menu "><a href="/item-maker/useable" title="" id="dhtml_menu-5098">Useable</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-176">Maps</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/map/amoria" title="" id="dhtml_menu-214">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/edelstein" title="" id="dhtml_menu-15537">Edelstein</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ellin" title="" id="dhtml_menu-2287">Ellin</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ereve" title="" id="dhtml_menu-2286">Ereve</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/maple-island" title="" id="dhtml_menu-211">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/masteria" title="" id="dhtml_menu-1413">Masteria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ossyria" title="" id="dhtml_menu-213">Ossyria</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/map/rien" title="Rien" id="dhtml_menu-8255">Rien</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/victoria-island" title="" id="dhtml_menu-212">Victoria Island</a></li>
+<li class="leaf last dhtml-menu "><a href="/map/world-tour" title="" id="dhtml_menu-215">World Tour</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-175">Monsters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/monster/list" id="dhtml_menu-1033">Monster List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/element-weakness-list" id="dhtml_menu-1034">Element Weakness List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/boss-list" title="" id="dhtml_menu-9027">Boss List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/event" id="dhtml_menu-1032">Event Monsters</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/1-10" id="dhtml_menu-990">Level 1-10</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/11-20" id="dhtml_menu-1012">Level 11-20</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/21-30" id="dhtml_menu-1013">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/31-40" id="dhtml_menu-1014">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/41-50" id="dhtml_menu-1015">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/51-60" id="dhtml_menu-1016">Level 51-60</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/61-70" id="dhtml_menu-1017">Level 61-70</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/71-80" id="dhtml_menu-1018">Level 71-80</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/81-90" id="dhtml_menu-1019">Level 81-90</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/91-100" id="dhtml_menu-1020">Level 91-100</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/101-120" id="dhtml_menu-16164">Level 101-120</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/121-140" id="dhtml_menu-16165">Level 121-140</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/141-160" id="dhtml_menu-16166">Level 141-160</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/161-180" id="dhtml_menu-16167">Level 161-180</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster/181-200" id="dhtml_menu-16168">Level 181-200</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-177">NPC &amp; Towns</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/npc/npc-list" title="" id="dhtml_menu-230">NPC List</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/aquaroad" title="" id="dhtml_menu-240">Aquaroad</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ariant" title="" id="dhtml_menu-249">Ariant</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/el-nath" title="" id="dhtml_menu-238">El Nath</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/ellinia" title="" id="dhtml_menu-233">Ellinia</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/henesys" title="" id="dhtml_menu-232">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/herb-town" title="" id="dhtml_menu-248">Herb Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/kerning-city" title="" id="dhtml_menu-235">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/korean-folk-town" title="" id="dhtml_menu-245">Korean Folk Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/leafre" title="" id="dhtml_menu-246">Leafre</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/lith-harbor" title="" id="dhtml_menu-4818">Lith Harbor</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ludibrium" title="" id="dhtml_menu-239">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-kampung-village" title="" id="dhtml_menu-255">Malaysia : Kampung Village</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-trend-zone" title="" id="dhtml_menu-254">Malaysia : Trend Zone</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mu-lung" title="" id="dhtml_menu-247">Mu Lung</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mushroom-shrine" title="" id="dhtml_menu-242">Mushroom Shrine</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/nautilus-port" title="" id="dhtml_menu-250">Nautilus Port</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/new-leaf-city" title="" id="dhtml_menu-256">New Leaf City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/omega-sector" title="" id="dhtml_menu-241">Omega Sector</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/orbis" title="" id="dhtml_menu-237">Orbis</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/perion" title="" id="dhtml_menu-234">Perion</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/showa" title="" id="dhtml_menu-243">Showa</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-boat-quay-town" title="" id="dhtml_menu-251">Singapore : Boat Quay Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-cbd" title="" id="dhtml_menu-252">Singapore : CBD</a></li>
+<li class="leaf last dhtml-menu "><a href="/town/sleepywood" title="" id="dhtml_menu-236">Sleepywood</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/reactor" id="dhtml_menu-18853">Reactor</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-178">Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/quest/list" id="dhtml_menu-5080">Quest List</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/fame" title="" id="dhtml_menu-16162">Quests with Fame</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/repeatable" id="dhtml_menu-17642">Quest with Repeatable</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/events" id="dhtml_menu-1029">Events</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/cygnus-knights" title="" id="dhtml_menu-5078">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/hero-with-lost-memory" title="" id="dhtml_menu-6295">Hero With The Lost Memory</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/new-hero" title="" id="dhtml_menu-15271">New Hero</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/resistance" title="" id="dhtml_menu-16153">Resistance</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/maple-island" id="dhtml_menu-1030">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/1-10" id="dhtml_menu-999">Level 1-10</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/11-20" id="dhtml_menu-1022">Level 11-20</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/21-30" id="dhtml_menu-1023">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/31-40" id="dhtml_menu-1024">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/41-50" id="dhtml_menu-1025">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/51-65" title="" id="dhtml_menu-1027">Level 51-65</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/66-200" id="dhtml_menu-11065">Level 66-200</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-crimsonwood" title="" id="dhtml_menu-6287">Exchange Quest (Crimsonwood)</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-orbis" title="" id="dhtml_menu-266">Exchange Quest (Orbis)</a></li>
+<li class="leaf last dhtml-menu "><a href="/exchange-quest-showa-town" title="" id="dhtml_menu-267">Exchange Quest (Showa)</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-179">Guild Quests</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/guild-quest/sharenian" title="" id="dhtml_menu-268">Sharenian</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-180">Party Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/party-quest/amorian-challenge" title="" id="dhtml_menu-272">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/crimsonwood-keep" title="" id="dhtml_menu-276">Crimsonwood Keep</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ellin-forest" title="" id="dhtml_menu-4848">Ellin Forest</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ghost-ship-in-the-sea-mist" title="" id="dhtml_menu-16158">Ghost Ship in the Sea Mist</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/henesys" title="" id="dhtml_menu-274">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/herb-town" title="" id="dhtml_menu-273">Herb Town</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/party-quest/kerning-city" title="" id="dhtml_menu-269">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ludibrium" title="" id="dhtml_menu-270">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/magatia" title="" id="dhtml_menu-275">Magatia</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival" title="" id="dhtml_menu-277">Monster Carnival</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival-2" title="" id="dhtml_menu-5065">Monster Carnival 2</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/mu-lung-dojo" title="" id="dhtml_menu-5073">Mu Lung Dojo</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/netts-pyramid" title="Nett&#039;s Pyramid Party Quest" id="dhtml_menu-12570">Nett&#039;s Pyramid</a></li>
+<li class="leaf last dhtml-menu "><a href="/party-quest/orbis" title="" id="dhtml_menu-271">Orbis</a></li>
+
+</ul></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-4845">Cash Shop</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/cash-shop/beauty-parlor" title="" id="dhtml_menu-4847">Beauty Parlor</a></li>
+<li class="leaf last dhtml-menu "><a href="/cash-shop/gachapon" title="" id="dhtml_menu-4846">Gachapon</a></li>
+</ul></li>
+</ul>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-1" class="block block-block block-2 clear-both">
+  <div class="block-t">
+
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Affiliates</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <ul>
+
+<li><a href="http://www.sleepywood.net/">Sleepywood.net</a></li>
+<li><a href="http://www.mapletip.com/">MapleTip</a></li>
+<li><a href="http://www.basilmarket.com/">Basil Market</a></li>
+<li><a href="http://aquaroadradio.wordpress.com/">Aqua Road Radio</a></li>
+<li><a href="http://www.perioncorner.com/">Perion Corner</a></li>
+<li><a href="http://www.maple-radio.com/">Maple Radio</a></li>
+<li><a href="http://www.maple-news.com/">Maple News</a></li>
+<li><a href="http://mapledictionary.co.cc/">Maple Dictionary</a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-views-updated-block_1" class="block block-views block-3 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database Updates</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <div class="view view-updated view-id-updated view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+
+                <span class="field-content"><a href="/monster/dark-stump">Dark Stump</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 2.</span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/stump">Stump</a></span>
+
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 1.</span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/green-mushroom">Green Mushroom</a></span>
+  </div>
+
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/shroom">Shroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/orange-mushroom">Orange Mushroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div align="right"><a href="/database-updates">View more</a></div>
+    </div>
+  
+  
+</div>       </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-block-10" class="block block-block block-4 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Donation</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        Have a dollar or two to spare?
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="paypal-donation">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="10638353">
+<input type="image" src="/sites/all/themes/lithharbor/images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<h5><strong>Why should I donate?</strong></h5>
+
+Consider donating to help us with the high server costs of our database!<br />
+<a href="/why-should-i-donate">Read more details &raquo;</a>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-12" class="block block-block block-5 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+
+        <p><a href="http://twitter.com/hiddenstreet"><img src="http://www.hidden-street.net/images/twitter.gif" title="Follow Hidden Street on Twitter!" /></a></p>
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-facebook_fan-0" class="block block-facebook_fan block-6 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("7fee1a8c40ca9e1bbf4f1376d1eddb61");</script><fb:fan profile_id="119198064766791" stream="0" connections="6" logobar="0" width="180" height="260"></fb:fan>      </div>
+
+    </div>
+  </div>  
+</div>
+              </div>
+            
+            <div id="main">
+                              <div id="top-content" class="clear-both">
+                  <div id="block-block-5" class="block block-block block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+
+      
+      <div class="block-content content">
+        <div align="center" style="margin-bottom: 15px;">
+<!--JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918766|0|170|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="300" height="250"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+                </div>
+
+                    
+              <div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a></div></div>              
+              <div id="content">
+                                  <div class="title-t">
+                    <div class="title-b">
+                      <h1 class="title" id="page-title">Monster Card Set</h1>
+                    </div>
+                  </div>
+                                                <div class="clear-both"><!-- --></div>
+
+                                                <div id="content-content" class="clear-both">
+                  <div class="view view-monster-card-set view-id-monster_card_set view-display-id-page_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-18080" class="database node clear-block">
+  <table id="18080">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/victoria-island-friends.png?1312973807" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Victoria Island Friends      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 65</td>
+    <td><strong>Score:</strong> 10</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/snail-card" alt="/tip.php?nid=8864">Snail Card</a></li><li><a href="/items/monster-card/blue-snail-card" alt="/tip.php?nid=8999">Blue Snail Card</a></li><li><a href="/items/monster-card/spore-card" alt="/tip.php?nid=9000">Spore Card</a></li><li><a href="/items/monster-card/red-snail-card" alt="/tip.php?nid=9002">Red Snail Card</a></li></ul>    </td>
+  </tr>
+    </table>
+</div>  </div>
+
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-18081" class="database node clear-block">
+  <table id="18081">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="49" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/rien-friends.png?1312973911" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Rien Friends      </td>
+  </tr>
+
+  <tr>
+    <td><strong>EXP:</strong> 447</td>
+    <td><strong>Score:</strong> 10</td>
+  </tr>
+  <tr>
+    <td colspan="3" class="mouse-hover">
+
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/muru-card" alt="/tip.php?nid=9781">Muru Card</a></li><li><a href="/items/monster-card/murupa-card" alt="/tip.php?nid=9782">Murupa Card</a></li><li><a href="/items/monster-card/murupia-card" alt="/tip.php?nid=9783">Murupia Card</a></li><li><a href="/items/monster-card/murumuru-card" alt="/tip.php?nid=9785">MuruMuru Card</a></li><li><a href="/items/monster-card/murukun-card" alt="/tip.php?nid=9787">Murukun Card</a></li></ul>    </td>
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+
+    <div id="node-18082" class="database node clear-block">
+  <table id="18082">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="47" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/edelstein-friends.png?1312973977" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Edelstein Friends      </td>
+  </tr>
+  <tr>
+
+    <td><strong>EXP:</strong> 328</td>
+    <td><strong>Score:</strong> 10</td>
+  </tr>
+  <tr>
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/potted-sprout-card" alt="/tip.php?nid=17905">Potted Sprout Card</a></li><li><a href="/items/monster-card/potted-morning-glory-card" alt="/tip.php?nid=17906">Potted Morning Glory Card</a></li><li><a href="/items/monster-card/grape-juice-bottle-card" alt="/tip.php?nid=17907">Grape Juice Bottle Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-18083" class="database node clear-block">
+  <table id="18083">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/kerning-city.png?1312974125" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Kerning City      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 1818</td>
+    <td><strong>Score:</strong> 30</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/octopus-card" alt="/tip.php?nid=9008">Octopus Card</a></li><li><a href="/items/monster-card/jr-necki-card" alt="/tip.php?nid=9109">Jr. Necki Card</a></li><li><a href="/items/monster-card/muddy-swamp-monster-card" alt="/tip.php?nid=17908">Muddy Swamp Monster Card</a></li><li><a href="/items/monster-card/stirge-card" alt="/tip.php?nid=9106">Stirge Card</a></li><li><a href="/items/monster-card/ligator-card" alt="/tip.php?nid=9140">Ligator Card</a></li><li><a href="/items/monster-card/jr-wraith-card" alt="/tip.php?nid=9157">Jr. Wraith Card</a></li><li><a href="/items/monster-card/wraith-card" alt="/tip.php?nid=8970">Wraith Card</a></li><li><a href="/items/monster-card/shade-card" alt="/tip.php?nid=17909">Shade Card</a></li><li><a href="/items/monster-card/croco-card" alt="/tip.php?nid=8993">Croco Card</a></li><li><a href="/items/monster-card/dyle-card" alt="/tip.php?nid=9097">Dyle Card</a></li><li><a href="/items/monster-card/king-slime-card" alt="/tip.php?nid=8996">King Slime Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-18084" class="database node clear-block">
+  <table id="18084">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/kerning-square.png?1313031674" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Kerning Square      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 6852</td>
+    <td><strong>Score:</strong> 50</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/cherry-bubble-tea-card" alt="/tip.php?nid=11470">Cherry Bubble Tea Card</a></li><li><a href="/items/monster-card/mango-bubble-tea-card" alt="/tip.php?nid=11472">Mango Bubble Tea Card</a></li><li><a href="/items/monster-card/melon-bubble-tea-card" alt="/tip.php?nid=11471">Melon Bubble Tea Card</a></li><li><a href="/items/monster-card/yeti-doll-claw-game-card" alt="/tip.php?nid=11473">Yeti Doll Claw Game Card</a></li><li><a href="/items/monster-card/pepe-doll-claw-game-card" alt="/tip.php?nid=11474">Pepe Doll Claw Game Card</a></li><li><a href="/items/monster-card/transformed-doll-claw-game-card" alt="/tip.php?nid=11475">Transformed Doll Claw Game Card</a></li><li><a href="/items/monster-card/blue-perfume-card" alt="/tip.php?nid=11476">Blue Perfume Card</a></li><li><a href="/items/monster-card/yellow-perfume-card" alt="/tip.php?nid=11477">Yellow Perfume Card</a></li><li><a href="/items/monster-card/pink-perfume-card" alt="/tip.php?nid=11478">Pink Perfume Card</a></li><li><a href="/items/monster-card/kid-mannequin-card" alt="/tip.php?nid=11479">Kid Mannequin Card</a></li><li><a href="/items/monster-card/female-mannequin-card" alt="/tip.php?nid=11480">Female Mannequin Card</a></li><li><a href="/items/monster-card/male-mannequin-card" alt="/tip.php?nid=11481">Male Mannequin Card</a></li><li><a href="/items/monster-card/latest-hits-compilation-card" alt="/tip.php?nid=11482">Latest Hits Compilation Card</a></li><li><a href="/items/monster-card/greatest-oldies-card" alt="/tip.php?nid=11483">Greatest Oldies Card</a></li><li><a href="/items/monster-card/cheap-amplifier-card" alt="/tip.php?nid=11484">Cheap Amplifier Card</a></li><li><a href="/items/monster-card/fancy-amplifier-card" alt="/tip.php?nid=11485">Fancy Amplifier Card</a></li><li><a href="/items/monster-card/rock-spirit-card" alt="/tip.php?nid=11500">Rock Spirit Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-18085" class="database node clear-block">
+  <table id="18085">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/ellinia.png?1313031960" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Ellinia      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 1893</td>
+    <td><strong>Score:</strong> 40</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/slime-card" alt="/tip.php?nid=9003">Slime Card</a></li><li><a href="/items/monster-card/bubbling-card" alt="/tip.php?nid=9010">Bubbling Card</a></li><li><a href="/items/monster-card/evil-eye-card" alt="/tip.php?nid=9328">Evil Eye Card</a></li><li><a href="/items/monster-card/surgeon-eye-card" alt="/tip.php?nid=17910">Surgeon Eye Card</a></li><li><a href="/items/monster-card/fairy-card" alt="/tip.php?nid=9337">Fairy Card</a></li><li><a href="/items/monster-card/royal-fairy-card" alt="/tip.php?nid=17911">Royal Fairy Card</a></li><li><a href="/items/monster-card/lupin-card" alt="/tip.php?nid=9167">Lupin Card</a></li><li><a href="/items/monster-card/curse-eye-card" alt="/tip.php?nid=9156">Curse Eye Card</a></li><li><a href="/items/monster-card/cold-eye-card" alt="/tip.php?nid=9188">Cold Eye Card</a></li><li><a href="/items/monster-card/zombie-lupin-card" alt="/tip.php?nid=9189">Zombie Lupin Card</a></li><li><a href="/items/monster-card/faust-card" alt="/tip.php?nid=8997">Faust Card</a></li><li><a href="/items/monster-card/malady-card" alt="/tip.php?nid=9020">Malady Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-18087" class="database node clear-block">
+  <table id="18087">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/sleepywood.png?1313033001" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Sleepywood      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 39333</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/copper-drake-card" alt="/tip.php?nid=8909">Copper Drake Card</a></li><li><a href="/items/monster-card/drake-card" alt="/tip.php?nid=8986">Drake Card</a></li><li><a href="/items/monster-card/red-drake-card" alt="/tip.php?nid=9085">Red Drake Card</a></li><li><a href="/items/monster-card/wild-kargo-card" alt="/tip.php?nid=8920">Wild Kargo Card</a></li><li><a href="/items/monster-card/ice-drake-card" alt="/tip.php?nid=8925">Ice Drake Card</a></li><li><a href="/items/monster-card/dark-drake-card" alt="/tip.php?nid=8934">Dark Drake Card</a></li><li><a href="/items/monster-card/tauromacis-card" alt="/tip.php?nid=8939">Tauromacis Card</a></li><li><a href="/items/monster-card/taurospear-card" alt="/tip.php?nid=8955">Taurospear Card</a></li><li><a href="/items/monster-card/jr-balrog-card" alt="/tip.php?nid=9205">Jr. Balrog Card</a></li><li><a href="/items/monster-card/snack-bar-card" alt="/tip.php?nid=18086">Snack Bar Card</a></li><li><a href="/items/monster-card/balrog-card" alt="/tip.php?nid=17912">Balrog Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-18088" class="database node clear-block">
+  <table id="18088">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/perion.png?1313033693" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Perion      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 2481</td>
+    <td><strong>Score:</strong> 40</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/stump-card" alt="/tip.php?nid=9001">Stump Card</a></li><li><a href="/items/monster-card/dark-stump-card" alt="/tip.php?nid=9006">Dark Stump Card</a></li><li><a href="/items/monster-card/axe-stump-card" alt="/tip.php?nid=9103">Axe Stump Card</a></li><li><a href="/items/monster-card/ghost-stump-card" alt="/tip.php?nid=9104">Ghost Stump Card</a></li><li><a href="/items/monster-card/smiling-ghost-stump-card" alt="/tip.php?nid=9789">Smiling Ghost Stump Card</a></li><li><a href="/items/monster-card/dark-axe-stump-card" alt="/tip.php?nid=9111">Dark Axe Stump Card</a></li><li><a href="/items/monster-card/wild-boar-card" alt="/tip.php?nid=9326">Wild Boar Card</a></li><li><a href="/items/monster-card/wooden-mask-card" alt="/tip.php?nid=9173">Wooden Mask Card</a></li><li><a href="/items/monster-card/rocky-mask-card" alt="/tip.php?nid=9177">Rocky Mask Card</a></li><li><a href="/items/monster-card/terrified-wild-boar-card" alt="/tip.php?nid=11469">Terrified Wild Boar Card</a></li><li><a href="/items/monster-card/fire-boar-card" alt="/tip.php?nid=9141">Fire Boar Card</a></li><li><a href="/items/monster-card/stumpy-card" alt="/tip.php?nid=9204">Stumpy Card</a></li><li><a href="/items/monster-card/jr-boogie-1-card" alt="/tip.php?nid=9159">Jr. Boogie 1 Card</a></li><li><a href="/items/monster-card/iron-hog-card" alt="/tip.php?nid=8884">Iron Hog Card</a></li><li><a href="/items/monster-card/skeledog-card" alt="/tip.php?nid=8907">Skeledog Card</a></li><li><a href="/items/monster-card/mummydog-card" alt="/tip.php?nid=8965">Mummydog Card</a></li><li><a href="/items/monster-card/iron-boar-card" alt="/tip.php?nid=8913">Iron Boar Card</a></li><li><a href="/items/monster-card/skeleton-soldier-card" alt="/tip.php?nid=9077">Skeleton Soldier Card</a></li><li><a href="/items/monster-card/officer-skeleton-card" alt="/tip.php?nid=8922">Officer Skeleton Card</a></li><li><a href="/items/monster-card/commander-skeleton-card" alt="/tip.php?nid=8948">Commander Skeleton Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-18089" class="database node clear-block">
+  <table id="18089">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="42" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/henesys.png?1313034129" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Henesys      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 1339</td>
+    <td><strong>Score:</strong> 30</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/green-mushroom-card" alt="/tip.php?nid=9009">Green Mushroom Card</a></li><li><a href="/items/monster-card/orange-mushroom-card" alt="/tip.php?nid=9005">Orange Mushroom Card</a></li><li><a href="/items/monster-card/horny-mushroom-card" alt="/tip.php?nid=9110">Horny Mushroom Card</a></li><li><a href="/items/monster-card/blue-mushroom-card" alt="/tip.php?nid=9105">Blue Mushroom Card</a></li><li><a href="/items/monster-card/crying-blue-mushroom-card" alt="/tip.php?nid=11468">Crying Blue Mushroom Card</a></li><li><a href="/items/monster-card/zombie-mushroom-card" alt="/tip.php?nid=9175">Zombie Mushroom Card</a></li><li><a href="/items/monster-card/annoyed-zombie-mushroom-card" alt="/tip.php?nid=9791">Annoyed Zombie Mushroom Card</a></li><li><a href="/items/monster-card/stone-golem-card" alt="/tip.php?nid=9021">Stone Golem Card</a></li><li><a href="/items/monster-card/dark-stone-golem-card" alt="/tip.php?nid=9080">Dark Stone Golem Card</a></li><li><a href="/items/monster-card/mixed-golem-card" alt="/tip.php?nid=9084">Mixed Golem Card</a></li><li><a href="/items/monster-card/mushmom-card" alt="/tip.php?nid=9095">Mushmom Card</a></li><li><a href="/items/monster-card/zombie-mushmom-card" alt="/tip.php?nid=9098">Zombie Mushmom Card</a></li><li><a href="/items/monster-card/blue-mushmom-card" alt="/tip.php?nid=17870">Blue Mushmom Card</a></li><li><a href="/items/monster-card/cynical-orange-mushroom-card" alt="/tip.php?nid=9011">Cynical Orange Mushroom Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-18090" class="database node clear-block">
+  <table id="18090">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="46" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/mushroom-castle.png?1313034654" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Mushroom Castle      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 3453</td>
+    <td><strong>Score:</strong> 40</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/renegade-spores-card" alt="/tip.php?nid=9792">Renegade Spores Card</a></li><li><a href="/items/monster-card/poison-mushroom-card" alt="/tip.php?nid=9797">Poison Mushroom Card</a></li><li><a href="/items/monster-card/intoxicated-pig-card" alt="/tip.php?nid=9798">Intoxicated Pig Card</a></li><li><a href="/items/monster-card/helmet-pepe-card" alt="/tip.php?nid=9801">Helmet Pepe Card</a></li><li><a href="/items/monster-card/royal-guard-pepe-card" alt="/tip.php?nid=9805">Royal Guard Pepe Card</a></li><li><a href="/items/monster-card/gray-yeti-and-king-pepe-card" alt="/tip.php?nid=9968">Gray Yeti and King Pepe Card</a></li><li><a href="/items/monster-card/white-yeti-and-king-pepe-card" alt="/tip.php?nid=9972">White Yeti and King Pepe Card</a></li><li><a href="/items/monster-card/gold-yeti-and-king-pepe-card" alt="/tip.php?nid=9969">Gold Yeti and King Pepe Card</a></li><li><a href="/items/monster-card/prime-minister-mushroom-card" alt="/tip.php?nid=9974">Prime Minister Mushroom Card</a></li></ul>    </td>
+  </tr>
+
+    </table>
+</div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-18091" class="database node clear-block">
+  <table id="18091">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/overlooked-villages.png?1313034891" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Overlooked Villages      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 4860</td>
+    <td><strong>Score:</strong> 50</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/snail-card" alt="/tip.php?nid=8864">Snail Card</a></li><li><a href="/items/monster-card/blue-snail-card" alt="/tip.php?nid=8999">Blue Snail Card</a></li><li><a href="/items/monster-card/muru-card" alt="/tip.php?nid=9781">Muru Card</a></li><li><a href="/items/monster-card/murupa-card" alt="/tip.php?nid=9782">Murupa Card</a></li><li><a href="/items/monster-card/murupia-card" alt="/tip.php?nid=9783">Murupia Card</a></li><li><a href="/items/monster-card/murumuru-card" alt="/tip.php?nid=9785">MuruMuru Card</a></li><li><a href="/items/monster-card/murukun-card" alt="/tip.php?nid=9787">Murukun Card</a></li><li><a href="/items/monster-card/spore-card" alt="/tip.php?nid=9000">Spore Card</a></li><li><a href="/items/monster-card/red-snail-card" alt="/tip.php?nid=9002">Red Snail Card</a></li><li><a href="/items/monster-card/pig-card" alt="/tip.php?nid=9004">Pig Card</a></li><li><a href="/items/monster-card/ribbon-pig-card" alt="/tip.php?nid=9007">Ribbon Pig Card</a></li><li><a href="/items/monster-card/blue-ribbon-pig-card" alt="/tip.php?nid=17913">Blue Ribbon Pig Card</a></li><li><a href="/items/monster-card/mano-card" alt="/tip.php?nid=8995">Mano Card</a></li><li><a href="/items/monster-card/lorang-card" alt="/tip.php?nid=9168">Lorang Card</a></li><li><a href="/items/monster-card/tortie-card" alt="/tip.php?nid=8960">Tortie Card</a></li><li><a href="/items/monster-card/clang-card" alt="/tip.php?nid=8971">Clang Card</a></li><li><a href="/items/monster-card/king-clang-card" alt="/tip.php?nid=8998">King Clang Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-18092" class="database node clear-block">
+  <table id="18092">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/edelstein.png?1313035089" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Edelstein      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 2136</td>
+    <td><strong>Score:</strong> 50</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/potted-sprout-card" alt="/tip.php?nid=17905">Potted Sprout Card</a></li><li><a href="/items/monster-card/potted-morning-glory-card" alt="/tip.php?nid=17906">Potted Morning Glory Card</a></li><li><a href="/items/monster-card/grape-juice-bottle-card" alt="/tip.php?nid=17907">Grape Juice Bottle Card</a></li><li><a href="/items/monster-card/patrol-robot-card" alt="/tip.php?nid=17914">Patrol Robot Card</a></li><li><a href="/items/monster-card/strange-sign-card" alt="/tip.php?nid=17915">Strange Sign Card</a></li><li><a href="/items/monster-card/serpent-card" alt="/tip.php?nid=17916">Serpent Card</a></li><li><a href="/items/monster-card/water-thief-monster-card" alt="/tip.php?nid=17917">Water Thief Monster Card</a></li><li><a href="/items/monster-card/dust-box-card" alt="/tip.php?nid=17918">Dust Box Card</a></li><li><a href="/items/monster-card/streetlight-card" alt="/tip.php?nid=17919">Streetlight Card</a></li><li><a href="/items/monster-card/patrol-robot-s-card" alt="/tip.php?nid=17920">Patrol Robot S Card</a></li><li><a href="/items/monster-card/safety-first-card" alt="/tip.php?nid=17921">Safety First Card</a></li><li><a href="/items/monster-card/baby-boulder-muncher-card" alt="/tip.php?nid=17922">Baby Boulder Muncher Card</a></li><li><a href="/items/monster-card/big-boulder-muncher-card" alt="/tip.php?nid=17923">Big Boulder Muncher Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div id="node-18093" class="database node clear-block">
+  <table id="18093">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/verne-mine.png?1313035238" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Verne Mine      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 80388</td>
+    <td><strong>Score:</strong> 55</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/guard-robot-card" alt="/tip.php?nid=17924">Guard Robot Card</a></li><li><a href="/items/monster-card/racoco-card" alt="/tip.php?nid=17925">Racoco Card</a></li><li><a href="/items/monster-card/big-spider-card" alt="/tip.php?nid=17926">Big Spider Card</a></li><li><a href="/items/monster-card/cart-bear-card" alt="/tip.php?nid=17927">Cart Bear Card</a></li><li><a href="/items/monster-card/racaroni-card" alt="/tip.php?nid=17929">Racaroni Card</a></li><li><a href="/items/monster-card/guard-robot-l-card" alt="/tip.php?nid=17928">Guard Robot L Card</a></li><li><a href="/items/monster-card/raco-card" alt="/tip.php?nid=17930">Raco Card</a></li><li><a href="/items/monster-card/security-system-card" alt="/tip.php?nid=17931">Security System Card</a></li><li><a href="/items/monster-card/enhanced-security-system-card" alt="/tip.php?nid=17932">Enhanced Security System Card</a></li><li><a href="/items/monster-card/af-android-card" alt="/tip.php?nid=17933">AF Android Card</a></li><li><a href="/items/monster-card/broken-df-android-card" alt="/tip.php?nid=17934">Broken DF Android Card</a></li><li><a href="/items/monster-card/ore-muncher-card" alt="/tip.php?nid=17935">Ore Muncher Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-18094" class="database node clear-block">
+  <table id="18094">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/nihal-desert.png?1313035458" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Nihal Desert      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 44478</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/desert-rabbit-f-card" alt="/tip.php?nid=9107">Desert Rabbit (F) Card</a></li><li><a href="/items/monster-card/desert-rabbit-m-card" alt="/tip.php?nid=9108">Desert Rabbit (M) Card</a></li><li><a href="/items/monster-card/jr-cactus-card" alt="/tip.php?nid=9113">Jr. Cactus Card</a></li><li><a href="/items/monster-card/cactus-card" alt="/tip.php?nid=9327">Cactus Card</a></li><li><a href="/items/monster-card/royal-cactus-card" alt="/tip.php?nid=9332">Royal Cactus Card</a></li><li><a href="/items/monster-card/bellamoa-card" alt="/tip.php?nid=9174">Bellamoa Card</a></li><li><a href="/items/monster-card/ear-plug-plead-card" alt="/tip.php?nid=9178">Ear Plug Plead Card</a></li><li><a href="/items/monster-card/scarf-plead-card" alt="/tip.php?nid=9329">Scarf Plead Card</a></li><li><a href="/items/monster-card/meerkat-card" alt="/tip.php?nid=9334">Meerkat Card</a></li><li><a href="/items/monster-card/sand-rat-card" alt="/tip.php?nid=9179">Sand Rat Card</a></li><li><a href="/items/monster-card/scorpion-card" alt="/tip.php?nid=9335">Scorpion Card</a></li><li><a href="/items/monster-card/sand-dwarf-card" alt="/tip.php?nid=9146">Sand Dwarf Card</a></li><li><a href="/items/monster-card/kiyo-card" alt="/tip.php?nid=9340">Kiyo Card</a></li><li><a href="/items/monster-card/dark-sand-dwarf-card" alt="/tip.php?nid=9148">Dark Sand Dwarf Card</a></li><li><a href="/items/monster-card/deo-card" alt="/tip.php?nid=9210">Deo Card</a></li><li><a href="/items/monster-card/desert-giant-card" alt="/tip.php?nid=9245">Desert Giant Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-18095" class="database node clear-block">
+  <table id="18095">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/magatia.png?1313035674" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Magatia      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 86015</td>
+    <td><strong>Score:</strong> 110</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/cube-slime-card" alt="/tip.php?nid=9147">Cube Slime Card</a></li><li><a href="/items/monster-card/rumo-card" alt="/tip.php?nid=9162">Rumo Card</a></li><li><a href="/items/monster-card/triple-rumo-card" alt="/tip.php?nid=9185">Triple Rumo Card</a></li><li><a href="/items/monster-card/iron-mutae-card" alt="/tip.php?nid=8888">Iron Mutae Card</a></li><li><a href="/items/monster-card/reinforced-iron-mutae-card" alt="/tip.php?nid=8916">Reinforced Iron Mutae Card</a></li><li><a href="/items/monster-card/mithril-mutae-card" alt="/tip.php?nid=8969">Mithril Mutae Card</a></li><li><a href="/items/monster-card/reinforced-mithril-mutae-card" alt="/tip.php?nid=8990">Reinforced Mithril Mutae Card</a></li><li><a href="/items/monster-card/roid-card" alt="/tip.php?nid=9019">Roid Card</a></li><li><a href="/items/monster-card/neo-huroid-card" alt="/tip.php?nid=9083">Neo Huroid Card</a></li><li><a href="/items/monster-card/rurumo-card" alt="/tip.php?nid=8959">Rurumo Card</a></li><li><a href="/items/monster-card/homun-card" alt="/tip.php?nid=8930">Homun Card</a></li><li><a href="/items/monster-card/saitie-card" alt="/tip.php?nid=8937">Saitie Card</a></li><li><a href="/items/monster-card/security-camera-card" alt="/tip.php?nid=8957">Security Camera Card</a></li><li><a href="/items/monster-card/d-roy-card" alt="/tip.php?nid=8953">D. Roy Card</a></li><li><a href="/items/monster-card/homunculus-card" alt="/tip.php?nid=8950">Homunculus Card</a></li><li><a href="/items/monster-card/deet-and-roi-card" alt="/tip.php?nid=9343">Deet and Roi Card</a></li><li><a href="/items/monster-card/homunscullo-card" alt="/tip.php?nid=8978">Homunscullo Card</a></li><li><a href="/items/monster-card/chimera-card" alt="/tip.php?nid=9214">Chimera Card</a></li><li><a href="/items/monster-card/frankenroid-card" alt="/tip.php?nid=9191">Frankenroid Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-16 views-row-even">
+    <div id="node-18096" class="database node clear-block">
+  <table id="18096">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/ludibrium.png?1313036088" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Ludibrium      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 23071</td>
+    <td><strong>Score:</strong> 160</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/trixter-card" alt="/tip.php?nid=9170">Trixter Card</a></li><li><a href="/items/monster-card/green-trixter-card" alt="/tip.php?nid=9331">Green Trixter Card</a></li><li><a href="/items/monster-card/brown-teddy-card" alt="/tip.php?nid=9338">Brown Teddy Card</a></li><li><a href="/items/monster-card/pink-teddy-card" alt="/tip.php?nid=9142">Pink Teddy Card</a></li><li><a href="/items/monster-card/ratz-card" alt="/tip.php?nid=9143">Ratz Card</a></li><li><a href="/items/monster-card/panda-teddy-card" alt="/tip.php?nid=9163">Panda Teddy Card</a></li><li><a href="/items/monster-card/roloduck-card" alt="/tip.php?nid=9153">Roloduck Card</a></li><li><a href="/items/monster-card/black-ratz-card" alt="/tip.php?nid=9154">Black Ratz Card</a></li><li><a href="/items/monster-card/helly-card" alt="/tip.php?nid=9164">Helly Card</a></li><li><a href="/items/monster-card/tick-card" alt="/tip.php?nid=9155">Tick Card</a></li><li><a href="/items/monster-card/retz-card" alt="/tip.php?nid=9166">Retz Card</a></li><li><a href="/items/monster-card/king-bloctopus-card" alt="/tip.php?nid=9182">King Bloctopus Card</a></li><li><a href="/items/monster-card/bloctopus-card" alt="/tip.php?nid=9160">Bloctopus Card</a></li><li><a href="/items/monster-card/propelly-card" alt="/tip.php?nid=9180">Propelly Card</a></li><li><a href="/items/monster-card/planey-card" alt="/tip.php?nid=9183">Planey Card</a></li><li><a href="/items/monster-card/toy-trojan-card" alt="/tip.php?nid=9187">Toy Trojan Card</a></li><li><a href="/items/monster-card/chronos-card" alt="/tip.php?nid=9181">Chronos Card</a></li><li><a href="/items/monster-card/chirppy-card" alt="/tip.php?nid=9138">Chirppy Card</a></li><li><a href="/items/monster-card/tweeter-card" alt="/tip.php?nid=9186">Tweeter Card</a></li><li><a href="/items/monster-card/drumming-bunny-card" alt="/tip.php?nid=9139">Drumming Bunny Card</a></li><li><a href="/items/monster-card/rombot-card" alt="/tip.php?nid=8963">Rombot Card</a></li><li><a href="/items/monster-card/block-golem-card" alt="/tip.php?nid=8885">Block Golem Card</a></li><li><a href="/items/monster-card/king-block-golem-card" alt="/tip.php?nid=8910">King Block Golem Card</a></li><li><a href="/items/monster-card/robo-card" alt="/tip.php?nid=9251">Robo Card</a></li><li><a href="/items/monster-card/master-robo-card" alt="/tip.php?nid=8906">Master Robo Card</a></li><li><a href="/items/monster-card/tick-tock-card" alt="/tip.php?nid=9234">Tick-Tock Card</a></li><li><a href="/items/monster-card/platoon-chronos-card" alt="/tip.php?nid=9253">Platoon Chronos Card</a></li><li><a href="/items/monster-card/master-chronos-card" alt="/tip.php?nid=8961">Master Chronos Card</a></li><li><a href="/items/monster-card/timer-card" alt="/tip.php?nid=9093">Timer Card</a></li><li><a href="/items/monster-card/alishar-card" alt="/tip.php?nid=9091">Alishar Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-17 views-row-odd">
+    <div id="node-18098" class="database node clear-block">
+  <table id="18098">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/clocktower-bottom-floor.png?1313036433" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Clocktower Bottom Floor      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 224666</td>
+    <td><strong>Score:</strong> 130</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/buffy-card" alt="/tip.php?nid=8919">Buffy Card</a></li><li><a href="/items/monster-card/lazy-buffy-card" alt="/tip.php?nid=8931">Lazy Buffy Card</a></li><li><a href="/items/monster-card/soul-teddy-card" alt="/tip.php?nid=8923">Soul Teddy Card</a></li><li><a href="/items/monster-card/master-soul-teddy-card" alt="/tip.php?nid=8933">Master Soul Teddy Card</a></li><li><a href="/items/monster-card/buffoon-card" alt="/tip.php?nid=8951">Buffoon Card</a></li><li><a href="/items/monster-card/deep-buffoon-card" alt="/tip.php?nid=8973">Deep Buffoon Card</a></li><li><a href="/items/monster-card/death-teddy-card" alt="/tip.php?nid=8982">Death Teddy Card</a></li><li><a href="/items/monster-card/master-death-teddy-card" alt="/tip.php?nid=9226">Master Death Teddy Card</a></li><li><a href="/items/monster-card/ghost-pirate-card" alt="/tip.php?nid=18009">Ghost Pirate Card</a></li><li><a href="/items/monster-card/dual-ghost-pirate-card" alt="/tip.php?nid=18008">Dual Ghost Pirate Card</a></li><li><a href="/items/monster-card/klock-card" alt="/tip.php?nid=8938">Klock Card</a></li><li><a href="/items/monster-card/dark-klock-card" alt="/tip.php?nid=8964">Dark Klock Card</a></li><li><a href="/items/monster-card/spirit-viking-card" alt="/tip.php?nid=9356">Spirit Viking Card</a></li><li><a href="/items/monster-card/gigantic-spirit-viking-card" alt="/tip.php?nid=9363">Gigantic Spirit Viking Card</a></li><li><a href="/items/monster-card/phantom-watch-card" alt="/tip.php?nid=9358">Phantom Watch Card</a></li><li><a href="/items/monster-card/grim-phantom-watch-card" alt="/tip.php?nid=9364">Grim Phantom Watch Card</a></li><li><a href="/items/monster-card/gatekeeper-card" alt="/tip.php?nid=18097">Gatekeeper Card</a></li><li><a href="/items/monster-card/thanatos-card" alt="/tip.php?nid=9377">Thanatos Card</a></li><li><a href="/items/monster-card/papulatus-card" alt="/tip.php?nid=9199">Papulatus Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-18 views-row-even">
+    <div id="node-18099" class="database node clear-block">
+  <table id="18099">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/ellin-forest.png?1313036909" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Ellin Forest      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 36759</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/mossy-snail-card" alt="/tip.php?nid=8917">Mossy Snail Card</a></li><li><a href="/items/monster-card/tree-rod-card" alt="/tip.php?nid=9089">Tree Rod Card</a></li><li><a href="/items/monster-card/mossy-mushroom-card" alt="/tip.php?nid=9090">Mossy Mushroom Card</a></li><li><a href="/items/monster-card/stone-bug-card" alt="/tip.php?nid=9094">Stone Bug Card</a></li><li><a href="/items/monster-card/primitive-boar-card" alt="/tip.php?nid=9092">Primitive Boar Card</a></li><li><a href="/items/monster-card/poison-golem-card" alt="/tip.php?nid=9217">Poison Golem Card</a></li></ul>    </td>
+  </tr>
+    </table>
+
+</div>  </div>
+  <div class="views-row views-row-19 views-row-odd">
+    <div id="node-18100" class="database node clear-block">
+  <table id="18100">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/aqua-road.png?1313037367" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Aqua Road      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 114948</td>
+    <td><strong>Score:</strong> 240</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/seacle-card" alt="/tip.php?nid=9172">Seacle Card</a></li><li><a href="/items/monster-card/cico-card" alt="/tip.php?nid=9325">Cico Card</a></li><li><a href="/items/monster-card/krappy-card" alt="/tip.php?nid=9176">Krappy Card</a></li><li><a href="/items/monster-card/pinboom-card" alt="/tip.php?nid=9112">Pinboom Card</a></li><li><a href="/items/monster-card/bubble-fish-card" alt="/tip.php?nid=9330">Bubble Fish Card</a></li><li><a href="/items/monster-card/flower-fish-card" alt="/tip.php?nid=9333">Flower Fish Card</a></li><li><a href="/items/monster-card/krip-card" alt="/tip.php?nid=9339">Krip Card</a></li><li><a href="/items/monster-card/scuba-pepe-card" alt="/tip.php?nid=9165">Scuba Pepe Card</a></li><li><a href="/items/monster-card/mask-fish-card" alt="/tip.php?nid=9145">Mask Fish Card</a></li><li><a href="/items/monster-card/jr-seal-card" alt="/tip.php?nid=9184">Jr. Seal Card</a></li><li><a href="/items/monster-card/seruf-card" alt="/tip.php?nid=9211">Seruf Card</a></li><li><a href="/items/monster-card/sparker-card" alt="/tip.php?nid=8890">Sparker Card</a></li><li><a href="/items/monster-card/freezer-card" alt="/tip.php?nid=8887">Freezer Card</a></li><li><a href="/items/monster-card/poopa-card" alt="/tip.php?nid=9238">Poopa Card</a></li><li><a href="/items/monster-card/poison-poopa-card" alt="/tip.php?nid=9240">Poison Poopa Card</a></li><li><a href="/items/monster-card/goby-card" alt="/tip.php?nid=8983">Goby Card</a></li><li><a href="/items/monster-card/bone-fish-card" alt="/tip.php?nid=9354">Bone Fish Card</a></li><li><a href="/items/monster-card/squid-card" alt="/tip.php?nid=9357">Squid Card</a></li><li><a href="/items/monster-card/risell-squid-card" alt="/tip.php?nid=9361">Risell Squid Card</a></li><li><a href="/items/monster-card/shark-card" alt="/tip.php?nid=9366">Shark Card</a></li><li><a href="/items/monster-card/cold-shark-card" alt="/tip.php?nid=9368">Cold Shark Card</a></li><li><a href="/items/monster-card/pianus-card" alt="/tip.php?nid=9197">Pianus Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-20 views-row-even">
+    <div id="node-18101" class="database node clear-block">
+  <table id="18101">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/orbis.png?1313037553" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Orbis      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 14381</td>
+    <td><strong>Score:</strong> 60</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/jr-cellion-card" alt="/tip.php?nid=9149">Jr. Cellion Card</a></li><li><a href="/items/monster-card/jr-lioner-card" alt="/tip.php?nid=9150">Jr. Lioner Card</a></li><li><a href="/items/monster-card/jr-grupin-card" alt="/tip.php?nid=9151">Jr. Grupin Card</a></li><li><a href="/items/monster-card/star-pixie-card" alt="/tip.php?nid=9158">Star Pixie Card</a></li><li><a href="/items/monster-card/dark-nependeath-card" alt="/tip.php?nid=8962">Dark Nependeath Card</a></li><li><a href="/items/monster-card/nependeath-card" alt="/tip.php?nid=8883">Nependeath Card</a></li><li><a href="/items/monster-card/lunar-pixie-card" alt="/tip.php?nid=8908">Lunar Pixie Card</a></li><li><a href="/items/monster-card/luster-pixie-card" alt="/tip.php?nid=8994">Luster Pixie Card</a></li><li><a href="/items/monster-card/cellion-card" alt="/tip.php?nid=9012">Cellion Card</a></li><li><a href="/items/monster-card/lioner-card" alt="/tip.php?nid=9013">Lioner Card</a></li><li><a href="/items/monster-card/grupin-card" alt="/tip.php?nid=9014">Grupin Card</a></li><li><a href="/items/monster-card/jr-lucida-card" alt="/tip.php?nid=17968">Jr. Lucida Card</a></li><li><a href="/items/monster-card/lucida-card" alt="/tip.php?nid=17969">Lucida Card</a></li><li><a href="/items/monster-card/elliza-card" alt="/tip.php?nid=9192">Elliza Card</a></li><li><a href="/items/monster-card/papa-pixie-card" alt="/tip.php?nid=9102">Papa Pixie Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-21 views-row-odd">
+    <div id="node-18102" class="database node clear-block">
+  <table id="18102">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/el-nath.png?1313041331" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      El Nath      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 12330</td>
+    <td><strong>Score:</strong> 60</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/sentinel-card" alt="/tip.php?nid=9336">Sentinel Card</a></li><li><a href="/items/monster-card/jr-yeti-card" alt="/tip.php?nid=8987">Jr. Yeti Card</a></li><li><a href="/items/monster-card/hector-card" alt="/tip.php?nid=9072">Hector Card</a></li><li><a href="/items/monster-card/dark-jr-yeti-card" alt="/tip.php?nid=9074">Dark Jr. Yeti Card</a></li><li><a href="/items/monster-card/white-fang-card" alt="/tip.php?nid=9081">White Fang Card</a></li><li><a href="/items/monster-card/jr-sentinel-card" alt="/tip.php?nid=9171">Jr. Sentinel Card</a></li><li><a href="/items/monster-card/ice-sentinel-card" alt="/tip.php?nid=9341">Ice Sentinel Card</a></li><li><a href="/items/monster-card/fire-sentinel-card" alt="/tip.php?nid=9342">Fire Sentinel Card</a></li><li><a href="/items/monster-card/leatty-card" alt="/tip.php?nid=9144">Leatty Card</a></li><li><a href="/items/monster-card/dark-leatty-card" alt="/tip.php?nid=9152">Dark Leatty Card</a></li><li><a href="/items/monster-card/jr-pepe-card" alt="/tip.php?nid=9161">Jr. Pepe Card</a></li><li><a href="/items/monster-card/snow-witch-card" alt="/tip.php?nid=8956">Snow Witch Card</a></li><li><a href="/items/monster-card/pepe-card" alt="/tip.php?nid=9086">Pepe Card</a></li><li><a href="/items/monster-card/dark-pepe-card" alt="/tip.php?nid=8926">Dark Pepe Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-22 views-row-even">
+    <div id="node-18103" class="database node clear-block">
+  <table id="18103">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/dead-mine.png?1313041574" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Dead Mine      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 381269</td>
+    <td><strong>Score:</strong> 210</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/flyeye-card" alt="/tip.php?nid=9247">Flyeye Card</a></li><li><a href="/items/monster-card/jr-cerebes-card" alt="/tip.php?nid=8889">Jr. Cerebes Card</a></li><li><a href="/items/monster-card/firebomb-card" alt="/tip.php?nid=8991">Firebomb Card</a></li><li><a href="/items/monster-card/coolie-zombie-card" alt="/tip.php?nid=9078">Coolie Zombie Card</a></li><li><a href="/items/monster-card/miner-zombie-card" alt="/tip.php?nid=9079">Miner Zombie Card</a></li><li><a href="/items/monster-card/riche-card" alt="/tip.php?nid=8929">Riche Card</a></li><li><a href="/items/monster-card/yeti-card" alt="/tip.php?nid=8928">Yeti Card</a></li><li><a href="/items/monster-card/dark-yeti-card" alt="/tip.php?nid=8935">Dark Yeti Card</a></li><li><a href="/items/monster-card/cerebes-card" alt="/tip.php?nid=8945">Cerebes Card</a></li><li><a href="/items/monster-card/yeti-and-pepe-card" alt="/tip.php?nid=8974">Yeti and Pepe Card</a></li><li><a href="/items/monster-card/werewolf-card" alt="/tip.php?nid=8954">Werewolf Card</a></li><li><a href="/items/monster-card/lycanthrope-card" alt="/tip.php?nid=8976">Lycanthrope Card</a></li><li><a href="/items/monster-card/dark-yeti-and-pepe-card" alt="/tip.php?nid=8979">Dark Yeti and Pepe Card</a></li><li><a href="/items/monster-card/snowman-card" alt="/tip.php?nid=9193">Snowman Card</a></li><li><a href="/items/monster-card/zakum-card" alt="/tip.php?nid=9200">Zakum Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-23 views-row-odd">
+    <div id="node-18104" class="database node clear-block">
+  <table id="18104">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/omega-sector-korean-village.png?1313042478" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Omega Sector &amp; Korean Village      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 26378</td>
+    <td><strong>Score:</strong> 80</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/barnard-gray-card" alt="/tip.php?nid=9237">Barnard Gray Card</a></li><li><a href="/items/monster-card/zeta-gray-card" alt="/tip.php?nid=8886">Zeta Gray Card</a></li><li><a href="/items/monster-card/ultra-gray-card" alt="/tip.php?nid=8911">Ultra Gray Card</a></li><li><a href="/items/monster-card/mateon-card" alt="/tip.php?nid=9255">Mateon Card</a></li><li><a href="/items/monster-card/plateon-card" alt="/tip.php?nid=8905">Plateon Card</a></li><li><a href="/items/monster-card/mecateon-card" alt="/tip.php?nid=8918">Mecateon Card</a></li><li><a href="/items/monster-card/moon-bunny-card" alt="/tip.php?nid=8912">Moon Bunny Card</a></li><li><a href="/items/monster-card/chief-gray-card" alt="/tip.php?nid=8985">Chief Gray Card</a></li><li><a href="/items/monster-card/hodori-card" alt="/tip.php?nid=8988">Hodori Card</a></li><li><a href="/items/monster-card/samiho-card" alt="/tip.php?nid=9075">Samiho Card</a></li><li><a href="/items/monster-card/hogul-card" alt="/tip.php?nid=9015">Hogul Card</a></li><li><a href="/items/monster-card/mt-09-card" alt="/tip.php?nid=9017">MT-09 Card</a></li><li><a href="/items/monster-card/scholar-ghost-card" alt="/tip.php?nid=8958">Scholar Ghost Card</a></li><li><a href="/items/monster-card/morphed-blin-card" alt="/tip.php?nid=17904">Morphed Blin Card</a></li><li><a href="/items/monster-card/zeno-card" alt="/tip.php?nid=9213">Zeno Card</a></li><li><a href="/items/monster-card/yellow-king-goblin-card" alt="/tip.php?nid=8940">Yellow King Goblin Card</a></li><li><a href="/items/monster-card/blue-king-goblin-card" alt="/tip.php?nid=8941">Blue King Goblin Card</a></li><li><a href="/items/monster-card/green-king-goblin-card" alt="/tip.php?nid=8942">Green King Goblin Card</a></li><li><a href="/items/monster-card/nine-tailed-fox-card" alt="/tip.php?nid=9099">Nine-Tailed Fox Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-24 views-row-even">
+    <div id="node-18106" class="database node clear-block">
+  <table id="18106">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/mu-lung.png?1313042862" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Mu Lung      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 876608</td>
+    <td><strong>Score:</strong> 320</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/chipmunk-card" alt="/tip.php?nid=9242">Chipmunk Card</a></li><li><a href="/items/monster-card/red-porky-card" alt="/tip.php?nid=8882">Red Porky Card</a></li><li><a href="/items/monster-card/black-porky-card" alt="/tip.php?nid=8891">Black Porky Card</a></li><li><a href="/items/monster-card/blue-flower-serpent-card" alt="/tip.php?nid=8914">Blue Flower Serpent Card</a></li><li><a href="/items/monster-card/red-flower-serpent-card" alt="/tip.php?nid=8915">Red Flower Serpent Card</a></li><li><a href="/items/monster-card/jar-card" alt="/tip.php?nid=8967">Jar Card</a></li><li><a href="/items/monster-card/ginseng-jar-card" alt="/tip.php?nid=8972">Ginseng Jar Card</a></li><li><a href="/items/monster-card/master-dummy-card" alt="/tip.php?nid=17970">Master Dummy Card</a></li><li><a href="/items/monster-card/grizzly-card" alt="/tip.php?nid=9076">Grizzly Card</a></li><li><a href="/items/monster-card/bellflower-root-card" alt="/tip.php?nid=9016">Bellflower Root Card</a></li><li><a href="/items/monster-card/sr-bellflower-root-card" alt="/tip.php?nid=9018">Sr. Bellflower Root Card</a></li><li><a href="/items/monster-card/straw-target-dummy-card" alt="/tip.php?nid=8989">Straw Target Dummy Card</a></li><li><a href="/items/monster-card/wooden-target-dummy-card" alt="/tip.php?nid=8992">Wooden Target Dummy Card</a></li><li><a href="/items/monster-card/reindeer-card" alt="/tip.php?nid=9082">Reindeer Card</a></li><li><a href="/items/monster-card/the-book-ghost-card" alt="/tip.php?nid=9073">The Book Ghost Card</a></li><li><a href="/items/monster-card/panda-card" alt="/tip.php?nid=9088">Panda Card</a></li><li><a href="/items/monster-card/mr-alli-card" alt="/tip.php?nid=8927">Mr. Alli Card</a></li><li><a href="/items/monster-card/peach-monkey-card" alt="/tip.php?nid=8921">Peach Monkey Card</a></li><li><a href="/items/monster-card/kru-card" alt="/tip.php?nid=8936">Kru Card</a></li><li><a href="/items/monster-card/sage-cat-card" alt="/tip.php?nid=8932">Sage Cat Card</a></li><li><a href="/items/monster-card/captain-card" alt="/tip.php?nid=8944">Captain Card</a></li><li><a href="/items/monster-card/tae-roon-card" alt="/tip.php?nid=9100">Tae Roon Card</a></li><li><a href="/items/monster-card/king-sage-cat-card" alt="/tip.php?nid=9190">King Sage Cat Card</a></li><li><a href="/items/monster-card/lord-pirate-card" alt="/tip.php?nid=9101">Lord Pirate Card</a></li><li><a href="/items/monster-card/mu-gong-card" alt="/tip.php?nid=18105">Mu Gong Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-25 views-row-odd">
+    <div id="node-18107" class="database node clear-block">
+  <table id="18107">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="41" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/leafre.png?1313044590" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Leafre      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 1537475</td>
+    <td><strong>Score:</strong> 680</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/beetle-card" alt="/tip.php?nid=8946">Beetle Card</a></li><li><a href="/items/monster-card/dual-beetle-card" alt="/tip.php?nid=8966">Dual Beetle Card</a></li><li><a href="/items/monster-card/hankie-card" alt="/tip.php?nid=8975">Hankie Card</a></li><li><a href="/items/monster-card/rash-card" alt="/tip.php?nid=8943">Rash Card</a></li><li><a href="/items/monster-card/dark-rash-card" alt="/tip.php?nid=8952">Dark Rash Card</a></li><li><a href="/items/monster-card/hobi-card" alt="/tip.php?nid=8947">Hobi Card</a></li><li><a href="/items/monster-card/green-hobi-card" alt="/tip.php?nid=8968">Green Hobi Card</a></li><li><a href="/items/monster-card/harp-card" alt="/tip.php?nid=8977">Harp Card</a></li><li><a href="/items/monster-card/blood-harp-card" alt="/tip.php?nid=8981">Blood Harp Card</a></li><li><a href="/items/monster-card/black-kentaurus-card" alt="/tip.php?nid=9209">Black Kentaurus Card</a></li><li><a href="/items/monster-card/red-kentaurus-card" alt="/tip.php?nid=9215">Red Kentaurus Card</a></li><li><a href="/items/monster-card/blue-kentaurus-card" alt="/tip.php?nid=9220">Blue Kentaurus Card</a></li><li><a href="/items/monster-card/birk-card" alt="/tip.php?nid=9169">Birk Card</a></li><li><a href="/items/monster-card/dual-birk-card" alt="/tip.php?nid=9223">Dual Birk Card</a></li><li><a href="/items/monster-card/blue-dragon-turtle-card" alt="/tip.php?nid=9228">Blue Dragon Turtle Card</a></li><li><a href="/items/monster-card/red-dragon-turtle-card" alt="/tip.php?nid=9355">Red Dragon Turtle Card</a></li><li><a href="/items/monster-card/rexton-card" alt="/tip.php?nid=9359">Rexton Card</a></li><li><a href="/items/monster-card/brexton-card" alt="/tip.php?nid=9360">Brexton Card</a></li><li><a href="/items/monster-card/green-cornian-card" alt="/tip.php?nid=9365">Green Cornian Card</a></li><li><a href="/items/monster-card/dark-cornian-card" alt="/tip.php?nid=9370">Dark Cornian Card</a></li><li><a href="/items/monster-card/red-wyvern-card" alt="/tip.php?nid=9362">Red Wyvern Card</a></li><li><a href="/items/monster-card/blue-wyvern-card" alt="/tip.php?nid=9367">Blue Wyvern Card</a></li><li><a href="/items/monster-card/dark-wyvern-card" alt="/tip.php?nid=9369">Dark Wyvern Card</a></li><li><a href="/items/monster-card/manon-card" alt="/tip.php?nid=9195">Manon Card</a></li><li><a href="/items/monster-card/griffey-card" alt="/tip.php?nid=9196">Griffey Card</a></li><li><a href="/items/monster-card/jr-newtie-card" alt="/tip.php?nid=9371">Jr. Newtie Card</a></li><li><a href="/items/monster-card/nest-golem-card" alt="/tip.php?nid=9380">Nest Golem Card</a></li><li><a href="/items/monster-card/skelegon-card" alt="/tip.php?nid=9378">Skelegon Card</a></li><li><a href="/items/monster-card/skelosaurus-card" alt="/tip.php?nid=9379">Skelosaurus Card</a></li><li><a href="/items/monster-card/leviathan-card" alt="/tip.php?nid=9216">Leviathan Card</a></li><li><a href="/items/monster-card/dragonoir-card" alt="/tip.php?nid=11719">Dragonoir Card</a></li><li><a href="/items/monster-card/dragon-rider-card" alt="/tip.php?nid=11720">Dragon Rider Card</a></li><li><a href="/items/monster-card/horned-tail-card" alt="/tip.php?nid=9202">Horned Tail Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-26 views-row-even">
+    <div id="node-18108" class="database node clear-block">
+  <table id="18108">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="45" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/temple-of-time.png?1313044809" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Temple of Time      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 3835136</td>
+    <td><strong>Score:</strong> 285</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/eye-of-time-card" alt="/tip.php?nid=9344">Eye of Time Card</a></li><li><a href="/items/monster-card/memory-monk-card" alt="/tip.php?nid=9372">Memory Monk Card</a></li><li><a href="/items/monster-card/memory-monk-trainee-card" alt="/tip.php?nid=9373">Memory Monk Trainee Card</a></li><li><a href="/items/monster-card/memory-guardian-card" alt="/tip.php?nid=9374">Memory Guardian Card</a></li><li><a href="/items/monster-card/chief-memory-guardian-card" alt="/tip.php?nid=9375">Chief Memory Guardian Card</a></li><li><a href="/items/monster-card/qualm-monk-card" alt="/tip.php?nid=9381">Qualm Monk Card</a></li><li><a href="/items/monster-card/qualm-monk-trainee-card" alt="/tip.php?nid=9382">Qualm Monk Trainee Card</a></li><li><a href="/items/monster-card/qualm-guardian-card" alt="/tip.php?nid=9383">Qualm Guardian Card</a></li><li><a href="/items/monster-card/chief-qualm-guardian-card" alt="/tip.php?nid=9384">Chief Qualm Guardian Card</a></li><li><a href="/items/monster-card/oblivion-monk-card" alt="/tip.php?nid=9385">Oblivion Monk Card</a></li><li><a href="/items/monster-card/oblivion-monk-trainee-card" alt="/tip.php?nid=9386">Oblivion Monk Trainee Card</a></li><li><a href="/items/monster-card/oblivion-guardian-card" alt="/tip.php?nid=9387">Oblivion Guardian Card</a></li><li><a href="/items/monster-card/chief-oblivion-guardian-card" alt="/tip.php?nid=9388">Chief Oblivion Guardian Card</a></li><li><a href="/items/monster-card/dodo-card" alt="/tip.php?nid=9218">Dodo Card</a></li><li><a href="/items/monster-card/lilynouch-card" alt="/tip.php?nid=9219">Lilynouch Card</a></li><li><a href="/items/monster-card/lyka-card" alt="/tip.php?nid=9221">Lyka Card</a></li><li><a href="/items/monster-card/pink-bean-card" alt="/tip.php?nid=9222">Pink Bean Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-27 views-row-odd">
+    <div id="node-18109" class="database node clear-block">
+  <table id="18109">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/mushroom-shrine.png?1313044992" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Mushroom Shrine      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 161221</td>
+    <td><strong>Score:</strong> 240</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/crow-card" alt="/tip.php?nid=17861">Crow Card</a></li><li><a href="/items/monster-card/fire-raccoon-card" alt="/tip.php?nid=17862">Fire Raccoon Card</a></li><li><a href="/items/monster-card/cloud-fox-card" alt="/tip.php?nid=17863">Cloud Fox Card</a></li><li><a href="/items/monster-card/nightghost-card" alt="/tip.php?nid=17864">Nightghost Card</a></li><li><a href="/items/monster-card/big-cloud-fox-card" alt="/tip.php?nid=17865">Big Cloud Fox Card</a></li><li><a href="/items/monster-card/paper-lantern-ghost-card" alt="/tip.php?nid=17866">Paper Lantern Ghost Card</a></li><li><a href="/items/monster-card/water-goblin-card" alt="/tip.php?nid=17867">Water Goblin Card</a></li><li><a href="/items/monster-card/dreamy-ghost-card" alt="/tip.php?nid=17868">Dreamy Ghost Card</a></li><li><a href="/items/monster-card/black-crow-card" alt="/tip.php?nid=17869">Black Crow Card</a></li><li><a href="/items/monster-card/blue-mushmom-card" alt="/tip.php?nid=17870">Blue Mushmom Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-28 views-row-even">
+    <div id="node-18110" class="database node clear-block">
+  <table id="18110">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/ninja-castle.png?1313045177" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Ninja Castle      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 3835136</td>
+    <td><strong>Score:</strong> 190</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/genin-card" alt="/tip.php?nid=12971">Genin Card</a></li><li><a href="/items/monster-card/chunin-card" alt="/tip.php?nid=12973">Chunin Card</a></li><li><a href="/items/monster-card/jonin-card" alt="/tip.php?nid=12975">Jonin Card</a></li><li><a href="/items/monster-card/head-ninja-card" alt="/tip.php?nid=12978">Head Ninja Card</a></li><li><a href="/items/monster-card/ashigaru-card" alt="/tip.php?nid=12972">Ashigaru Card</a></li><li><a href="/items/monster-card/samurai-armor-card" alt="/tip.php?nid=12981">Samurai Armor Card</a></li><li><a href="/items/monster-card/kunoichi-card" alt="/tip.php?nid=12974">Kunoichi Card</a></li><li><a href="/items/monster-card/castellan-card" alt="/tip.php?nid=12984">Castellan Card</a></li></ul>    </td>
+  </tr>
+
+    </table>
+</div>  </div>
+  <div class="views-row views-row-29 views-row-odd">
+    <div id="node-18111" class="database node clear-block">
+  <table id="18111">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="42" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/showa-village.png?1313045380" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Showa Village      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 3275242</td>
+    <td><strong>Score:</strong> 180</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/bain-card" alt="/tip.php?nid=9227">Bain Card</a></li><li><a href="/items/monster-card/extra-a-card" alt="/tip.php?nid=17871">Extra A Card</a></li><li><a href="/items/monster-card/extra-b-card" alt="/tip.php?nid=17872">Extra B Card</a></li><li><a href="/items/monster-card/extra-c-card" alt="/tip.php?nid=17873">Extra C Card</a></li><li><a href="/items/monster-card/extra-d-card" alt="/tip.php?nid=17874">Extra D Card</a></li><li><a href="/items/monster-card/leader-a-card" alt="/tip.php?nid=17875">Leader A Card</a></li><li><a href="/items/monster-card/leader-b-card" alt="/tip.php?nid=17876">Leader B Card</a></li><li><a href="/items/monster-card/slot-machine-card" alt="/tip.php?nid=17877">Slot Machine Card</a></li><li><a href="/items/monster-card/male-boss-card" alt="/tip.php?nid=17878">Male Boss Card</a></li><li><a href="/items/monster-card/female-boss-card" alt="/tip.php?nid=17879">Female Boss Card</a></li><li><a href="/items/monster-card/the-boss-card" alt="/tip.php?nid=17880">The Boss Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-30 views-row-even">
+    <div id="node-18112" class="database node clear-block">
+  <table id="18112">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="42" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/silent-crusade.png?1313045977" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Silent Crusade      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 3275242</td>
+    <td><strong>Score:</strong> 180</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/mano-card" alt="/tip.php?nid=8995">Mano Card</a></li><li><a href="/items/monster-card/stumpy-card" alt="/tip.php?nid=9204">Stumpy Card</a></li><li><a href="/items/monster-card/dyle-card" alt="/tip.php?nid=9097">Dyle Card</a></li><li><a href="/items/monster-card/faust-card" alt="/tip.php?nid=8997">Faust Card</a></li><li><a href="/items/monster-card/lord-skeleton-card" alt="/tip.php?nid=17889">Lord Skeleton Card</a></li><li><a href="/items/monster-card/king-clang-card" alt="/tip.php?nid=8998">King Clang Card</a></li><li><a href="/items/monster-card/pixiemom-card" alt="/tip.php?nid=17890">Pixiemom Card</a></li><li><a href="/items/monster-card/queen-pepe-card" alt="/tip.php?nid=17891">Queen Pepe Card</a></li><li><a href="/items/monster-card/elliza-card" alt="/tip.php?nid=9192">Elliza Card</a></li><li><a href="/items/monster-card/toy-black-knight-card" alt="/tip.php?nid=17892">Toy Black Knight Card</a></li><li><a href="/items/monster-card/nine-tailed-fox-card" alt="/tip.php?nid=9099">Nine-Tailed Fox Card</a></li><li><a href="/items/monster-card/timer-card" alt="/tip.php?nid=9093">Timer Card</a></li><li><a href="/items/monster-card/zeno-card" alt="/tip.php?nid=9213">Zeno Card</a></li><li><a href="/items/monster-card/deo-card" alt="/tip.php?nid=9210">Deo Card</a></li><li><a href="/items/monster-card/rurumo-card" alt="/tip.php?nid=8959">Rurumo Card</a></li><li><a href="/items/monster-card/d-roy-card" alt="/tip.php?nid=8953">D. Roy Card</a></li><li><a href="/items/monster-card/king-sage-cat-card" alt="/tip.php?nid=9190">King Sage Cat Card</a></li><li><a href="/items/monster-card/king-centipede-card" alt="/tip.php?nid=17893">King Centipede Card</a></li><li><a href="/items/monster-card/master-hoblin-card" alt="/tip.php?nid=17894">Master Hoblin Card</a></li><li><a href="/items/monster-card/master-harp-card" alt="/tip.php?nid=17895">Master Harp Card</a></li><li><a href="/items/monster-card/master-birk-card" alt="/tip.php?nid=17896">Master Birk Card</a></li><li><a href="/items/monster-card/kentaurus-king-card" alt="/tip.php?nid=17897">Kentaurus King Card</a></li><li><a href="/items/monster-card/coco-card" alt="/tip.php?nid=17898">Coco Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-31 views-row-odd">
+    <div id="node-18114" class="database node clear-block">
+  <table id="18114">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="49" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/hoblin-king.png?1313046159" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Hoblin King      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 38848</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/hoblin-hector-card" alt="/tip.php?nid=17899">Hoblin Hector Card</a></li><li><a href="/items/monster-card/elite-hoblin-card" alt="/tip.php?nid=17900">Elite Hoblin Card</a></li><li><a href="/items/monster-card/elite-green-hoblin-card" alt="/tip.php?nid=17901">Elite Green Hoblin Card</a></li><li><a href="/items/monster-card/combat-hoblin-card" alt="/tip.php?nid=17902">Combat Hoblin Card</a></li><li><a href="/items/monster-card/ferocious-hoblin-card" alt="/tip.php?nid=17903">Ferocious Hoblin Card</a></li><li><a href="/items/monster-card/rex-card" alt="/tip.php?nid=18113">Rex Card</a></li></ul>    </td>
+  </tr>
+    </table>
+
+</div>  </div>
+  <div class="views-row views-row-32 views-row-even">
+    <div id="node-18115" class="database node clear-block">
+  <table id="18115">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="49" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/how-to-be-awesome.png?1313046511" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      How to Be Awesome      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 181137</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/spore-card" alt="/tip.php?nid=9000">Spore Card</a></li><li><a href="/items/monster-card/jr-boogie-1-card" alt="/tip.php?nid=9159">Jr. Boogie 1 Card</a></li><li><a href="/items/monster-card/jr-wraith-card" alt="/tip.php?nid=9157">Jr. Wraith Card</a></li><li><a href="/items/monster-card/jr-necki-card" alt="/tip.php?nid=9109">Jr. Necki Card</a></li><li><a href="/items/monster-card/jr-cellion-card" alt="/tip.php?nid=9149">Jr. Cellion Card</a></li><li><a href="/items/monster-card/jr-lioner-card" alt="/tip.php?nid=9150">Jr. Lioner Card</a></li><li><a href="/items/monster-card/jr-grupin-card" alt="/tip.php?nid=9151">Jr. Grupin Card</a></li><li><a href="/items/monster-card/jr-pepe-card" alt="/tip.php?nid=9161">Jr. Pepe Card</a></li><li><a href="/items/monster-card/baby-boulder-muncher-card" alt="/tip.php?nid=17922">Baby Boulder Muncher Card</a></li><li><a href="/items/monster-card/jr-sentinel-card" alt="/tip.php?nid=9171">Jr. Sentinel Card</a></li><li><a href="/items/monster-card/jr-yeti-card" alt="/tip.php?nid=8987">Jr. Yeti Card</a></li><li><a href="/items/monster-card/hodori-card" alt="/tip.php?nid=8988">Hodori Card</a></li><li><a href="/items/monster-card/dark-jr-yeti-card" alt="/tip.php?nid=9074">Dark Jr. Yeti Card</a></li><li><a href="/items/monster-card/jr-lucida-card" alt="/tip.php?nid=17968">Jr. Lucida Card</a></li><li><a href="/items/monster-card/jr-seal-card" alt="/tip.php?nid=9184">Jr. Seal Card</a></li><li><a href="/items/monster-card/jr-cactus-card" alt="/tip.php?nid=9113">Jr. Cactus Card</a></li><li><a href="/items/monster-card/tick-tock-card" alt="/tip.php?nid=9234">Tick-Tock Card</a></li><li><a href="/items/monster-card/jr-cerebes-card" alt="/tip.php?nid=8889">Jr. Cerebes Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-33 views-row-odd">
+    <div id="node-18116" class="database node clear-block">
+  <table id="18116">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/von-leon.png?1313048211" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Von Leon      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 458710</td>
+    <td><strong>Score:</strong> 195</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/crocky-the-gatekeeper-card" alt="/tip.php?nid=17978">Crocky the Gatekeeper Card</a></li><li><a href="/items/monster-card/reindeer-card-0" alt="/tip.php?nid=17979">Reindeer Card</a></li><li><a href="/items/monster-card/blood-reindeer-card" alt="/tip.php?nid=17980">Blood Reindeer Card</a></li><li><a href="/items/monster-card/bearwolf-card" alt="/tip.php?nid=17981">Bearwolf Card</a></li><li><a href="/items/monster-card/grey-vulture-card" alt="/tip.php?nid=17982">Grey Vulture Card</a></li><li><a href="/items/monster-card/castle-golem-card" alt="/tip.php?nid=17983">Castle Golem Card</a></li><li><a href="/items/monster-card/von-leon-card" alt="/tip.php?nid=17971">Von Leon Card</a></li></ul>    </td>
+  </tr>
+    </table>
+
+</div>  </div>
+  <div class="views-row views-row-34 views-row-even">
+    <div id="node-18117" class="database node clear-block">
+  <table id="18117">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/henesys-ruins.png?1313048873" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Henesys Ruins      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 46856390</td>
+    <td><strong>Score:</strong> 600</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/mutant-snail-card" alt="/tip.php?nid=17984">Mutant Snail Card</a></li><li><a href="/items/monster-card/mutant-orange-mushroom-card" alt="/tip.php?nid=17985">Mutant Orange Mushroom Card</a></li><li><a href="/items/monster-card/mutant-slime-card" alt="/tip.php?nid=17986">Mutant Slime Card</a></li><li><a href="/items/monster-card/mutant-ribbon-pig-card" alt="/tip.php?nid=17987">Mutant Ribbon Pig Card</a></li><li><a href="/items/monster-card/mutant-tino-card" alt="/tip.php?nid=17988">Mutant Tino Card</a></li><li><a href="/items/monster-card/mutant-tiru-card" alt="/tip.php?nid=17989">Mutant Tiru Card</a></li><li><a href="/items/monster-card/mutant-tiguru-card" alt="/tip.php?nid=17990">Mutant Tiguru Card</a></li><li><a href="/items/monster-card/dawn-card" alt="/tip.php?nid=17991">Dawn Card</a></li><li><a href="/items/monster-card/blaze-card" alt="/tip.php?nid=17992">Blaze Card</a></li><li><a href="/items/monster-card/wind-card" alt="/tip.php?nid=17993">Wind Card</a></li><li><a href="/items/monster-card/night-card" alt="/tip.php?nid=17994">Night Card</a></li><li><a href="/items/monster-card/thunder-card" alt="/tip.php?nid=17995">Thunder Card</a></li><li><a href="/items/monster-card/official-knight-a-card" alt="/tip.php?nid=17996">Official Knight A Card</a></li><li><a href="/items/monster-card/official-knight-b-card" alt="/tip.php?nid=17997">Official Knight B Card</a></li><li><a href="/items/monster-card/official-knight-c-card" alt="/tip.php?nid=17998">Official Knight C Card</a></li><li><a href="/items/monster-card/official-knight-d-card" alt="/tip.php?nid=17999">Official Knight D Card</a></li><li><a href="/items/monster-card/official-knight-e-card" alt="/tip.php?nid=18000">Official Knight E Card</a></li><li><a href="/items/monster-card/advanced-knight-a-card" alt="/tip.php?nid=18001">Advanced Knight A Card</a></li><li><a href="/items/monster-card/advanced-knight-b-card" alt="/tip.php?nid=18002">Advanced Knight B Card</a></li><li><a href="/items/monster-card/advanced-knight-c-card" alt="/tip.php?nid=18003">Advanced Knight C Card</a></li><li><a href="/items/monster-card/advanced-knight-d-card" alt="/tip.php?nid=18004">Advanced Knight D Card</a></li><li><a href="/items/monster-card/advanced-knight-e-card" alt="/tip.php?nid=18005">Advanced Knight E Card</a></li><li><a href="/items/monster-card/mikhail-card" alt="/tip.php?nid=17972">Mikhail Card</a></li><li><a href="/items/monster-card/oz-card" alt="/tip.php?nid=17973">Oz Card</a></li><li><a href="/items/monster-card/irena-card" alt="/tip.php?nid=17974">Irena Card</a></li><li><a href="/items/monster-card/eckhart-card" alt="/tip.php?nid=17975">Eckhart Card</a></li><li><a href="/items/monster-card/hawkeye-card" alt="/tip.php?nid=17976">Hawkeye Card</a></li><li><a href="/items/monster-card/cygnus-card" alt="/tip.php?nid=17977">Cygnus Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-35 views-row-odd">
+    <div id="node-18118" class="database node clear-block">
+  <table id="18118">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="42" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/harmless-critters.png?1313049113" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Harmless Critters      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 768</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/snail-card" alt="/tip.php?nid=8864">Snail Card</a></li><li><a href="/items/monster-card/blue-snail-card" alt="/tip.php?nid=8999">Blue Snail Card</a></li><li><a href="/items/monster-card/red-snail-card" alt="/tip.php?nid=9002">Red Snail Card</a></li><li><a href="/items/monster-card/pig-card" alt="/tip.php?nid=9004">Pig Card</a></li><li><a href="/items/monster-card/ribbon-pig-card" alt="/tip.php?nid=9007">Ribbon Pig Card</a></li><li><a href="/items/monster-card/octopus-card" alt="/tip.php?nid=9008">Octopus Card</a></li><li><a href="/items/monster-card/muru-card" alt="/tip.php?nid=9781">Muru Card</a></li><li><a href="/items/monster-card/murupa-card" alt="/tip.php?nid=9782">Murupa Card</a></li><li><a href="/items/monster-card/murupia-card" alt="/tip.php?nid=9783">Murupia Card</a></li><li><a href="/items/monster-card/murumuru-card" alt="/tip.php?nid=9785">MuruMuru Card</a></li><li><a href="/items/monster-card/murukun-card" alt="/tip.php?nid=9787">Murukun Card</a></li><li><a href="/items/monster-card/stirge-card" alt="/tip.php?nid=9106">Stirge Card</a></li><li><a href="/items/monster-card/blue-ribbon-pig-card" alt="/tip.php?nid=17913">Blue Ribbon Pig Card</a></li><li><a href="/items/monster-card/wild-boar-card" alt="/tip.php?nid=9326">Wild Boar Card</a></li><li><a href="/items/monster-card/rooster-card" alt="/tip.php?nid=17881">Rooster Card</a></li><li><a href="/items/monster-card/duck-card" alt="/tip.php?nid=17882">Duck Card</a></li><li><a href="/items/monster-card/terrified-wild-boar-card" alt="/tip.php?nid=11469">Terrified Wild Boar Card</a></li><li><a href="/items/monster-card/serpent-card" alt="/tip.php?nid=17916">Serpent Card</a></li><li><a href="/items/monster-card/water-thief-monster-card" alt="/tip.php?nid=17917">Water Thief Monster Card</a></li><li><a href="/items/monster-card/iron-hog-card" alt="/tip.php?nid=8884">Iron Hog Card</a></li><li><a href="/items/monster-card/mano-card" alt="/tip.php?nid=8995">Mano Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-36 views-row-even">
+    <div id="node-18119" class="database node clear-block">
+  <table id="18119">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/tame-creatures.png?1313049721" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Tame Creatures      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 5895</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/crow-card" alt="/tip.php?nid=17861">Crow Card</a></li><li><a href="/items/monster-card/fire-raccoon-card" alt="/tip.php?nid=17862">Fire Raccoon Card</a></li><li><a href="/items/monster-card/cloud-fox-card" alt="/tip.php?nid=17863">Cloud Fox Card</a></li><li><a href="/items/monster-card/sheep-card" alt="/tip.php?nid=17883">Sheep Card</a></li><li><a href="/items/monster-card/goat-card" alt="/tip.php?nid=17884">Goat Card</a></li><li><a href="/items/monster-card/iron-boar-card" alt="/tip.php?nid=8913">Iron Boar Card</a></li><li><a href="/items/monster-card/fire-boar-card" alt="/tip.php?nid=9141">Fire Boar Card</a></li><li><a href="/items/monster-card/lupin-card" alt="/tip.php?nid=9167">Lupin Card</a></li><li><a href="/items/monster-card/jr-cellion-card" alt="/tip.php?nid=9149">Jr. Cellion Card</a></li><li><a href="/items/monster-card/jr-lioner-card" alt="/tip.php?nid=9150">Jr. Lioner Card</a></li><li><a href="/items/monster-card/jr-grupin-card" alt="/tip.php?nid=9151">Jr. Grupin Card</a></li><li><a href="/items/monster-card/jr-pepe-card" alt="/tip.php?nid=9161">Jr. Pepe Card</a></li><li><a href="/items/monster-card/big-cloud-fox-card" alt="/tip.php?nid=17865">Big Cloud Fox Card</a></li><li><a href="/items/monster-card/black-goat-card" alt="/tip.php?nid=17885">Black Goat Card</a></li><li><a href="/items/monster-card/cow-card" alt="/tip.php?nid=17886">Cow Card</a></li><li><a href="/items/monster-card/plow-ox-card" alt="/tip.php?nid=17887">Plow Ox Card</a></li><li><a href="/items/monster-card/black-sheep-card" alt="/tip.php?nid=17888">Black Sheep Card</a></li><li><a href="/items/monster-card/intoxicated-pig-card" alt="/tip.php?nid=9798">Intoxicated Pig Card</a></li><li><a href="/items/monster-card/helmet-pepe-card" alt="/tip.php?nid=9801">Helmet Pepe Card</a></li><li><a href="/items/monster-card/royal-guard-pepe-card" alt="/tip.php?nid=9805">Royal Guard Pepe Card</a></li><li><a href="/items/monster-card/jr-yeti-card" alt="/tip.php?nid=8987">Jr. Yeti Card</a></li><li><a href="/items/monster-card/gray-yeti-and-king-pepe-card" alt="/tip.php?nid=9968">Gray Yeti and King Pepe Card</a></li><li><a href="/items/monster-card/gold-yeti-and-king-pepe-card" alt="/tip.php?nid=9969">Gold Yeti and King Pepe Card</a></li><li><a href="/items/monster-card/white-yeti-and-king-pepe-card" alt="/tip.php?nid=9972">White Yeti and King Pepe Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-37 views-row-odd">
+    <div id="node-18120" class="database node clear-block">
+  <table id="18120">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/wild-animals.png?1313050084" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Wild Animals      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 19017</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/hodori-card" alt="/tip.php?nid=8988">Hodori Card</a></li><li><a href="/items/monster-card/cellion-card" alt="/tip.php?nid=9012">Cellion Card</a></li><li><a href="/items/monster-card/lioner-card" alt="/tip.php?nid=9013">Lioner Card</a></li><li><a href="/items/monster-card/grupin-card" alt="/tip.php?nid=9014">Grupin Card</a></li><li><a href="/items/monster-card/hogul-card" alt="/tip.php?nid=9015">Hogul Card</a></li><li><a href="/items/monster-card/hector-card" alt="/tip.php?nid=9072">Hector Card</a></li><li><a href="/items/monster-card/dark-jr-yeti-card" alt="/tip.php?nid=9074">Dark Jr. Yeti Card</a></li><li><a href="/items/monster-card/white-fang-card" alt="/tip.php?nid=9081">White Fang Card</a></li><li><a href="/items/monster-card/pepe-card" alt="/tip.php?nid=9086">Pepe Card</a></li><li><a href="/items/monster-card/trixter-card" alt="/tip.php?nid=9170">Trixter Card</a></li><li><a href="/items/monster-card/green-trixter-card" alt="/tip.php?nid=9331">Green Trixter Card</a></li><li><a href="/items/monster-card/dark-pepe-card" alt="/tip.php?nid=8926">Dark Pepe Card</a></li><li><a href="/items/monster-card/chirppy-card" alt="/tip.php?nid=9138">Chirppy Card</a></li><li><a href="/items/monster-card/jr-lucida-card" alt="/tip.php?nid=17968">Jr. Lucida Card</a></li><li><a href="/items/monster-card/lucida-card" alt="/tip.php?nid=17969">Lucida Card</a></li><li><a href="/items/monster-card/moon-bunny-card" alt="/tip.php?nid=8912">Moon Bunny Card</a></li><li><a href="/items/monster-card/tweeter-card" alt="/tip.php?nid=9186">Tweeter Card</a></li><li><a href="/items/monster-card/samiho-card" alt="/tip.php?nid=9075">Samiho Card</a></li><li><a href="/items/monster-card/scuba-pepe-card" alt="/tip.php?nid=9165">Scuba Pepe Card</a></li><li><a href="/items/monster-card/desert-rabbit-f-card" alt="/tip.php?nid=9107">Desert Rabbit (F) Card</a></li><li><a href="/items/monster-card/desert-rabbit-m-card" alt="/tip.php?nid=9108">Desert Rabbit (M) Card</a></li><li><a href="/items/monster-card/jr-seal-card" alt="/tip.php?nid=9184">Jr. Seal Card</a></li><li><a href="/items/monster-card/nine-tailed-fox-card" alt="/tip.php?nid=9099">Nine-Tailed Fox Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-38 views-row-even">
+    <div id="node-18121" class="database node clear-block">
+  <table id="18121">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="43" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/vicious-beasts.png?1313050416" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Vicious Beasts      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 68142</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/racoco-card" alt="/tip.php?nid=17925">Racoco Card</a></li><li><a href="/items/monster-card/freezer-card" alt="/tip.php?nid=8887">Freezer Card</a></li><li><a href="/items/monster-card/big-spider-card" alt="/tip.php?nid=17926">Big Spider Card</a></li><li><a href="/items/monster-card/sparker-card" alt="/tip.php?nid=8890">Sparker Card</a></li><li><a href="/items/monster-card/cart-bear-card" alt="/tip.php?nid=17927">Cart Bear Card</a></li><li><a href="/items/monster-card/meerkat-card" alt="/tip.php?nid=9334">Meerkat Card</a></li><li><a href="/items/monster-card/chipmunk-card" alt="/tip.php?nid=9242">Chipmunk Card</a></li><li><a href="/items/monster-card/mossy-snail-card" alt="/tip.php?nid=8917">Mossy Snail Card</a></li><li><a href="/items/monster-card/racaroni-card" alt="/tip.php?nid=17929">Racaroni Card</a></li><li><a href="/items/monster-card/sand-rat-card" alt="/tip.php?nid=9179">Sand Rat Card</a></li><li><a href="/items/monster-card/red-porky-card" alt="/tip.php?nid=8882">Red Porky Card</a></li><li><a href="/items/monster-card/kiyo-card" alt="/tip.php?nid=9340">Kiyo Card</a></li><li><a href="/items/monster-card/black-porky-card" alt="/tip.php?nid=8891">Black Porky Card</a></li><li><a href="/items/monster-card/scorpion-card" alt="/tip.php?nid=9335">Scorpion Card</a></li><li><a href="/items/monster-card/raco-card" alt="/tip.php?nid=17930">Raco Card</a></li><li><a href="/items/monster-card/primitive-boar-card" alt="/tip.php?nid=9092">Primitive Boar Card</a></li><li><a href="/items/monster-card/grizzly-card" alt="/tip.php?nid=9076">Grizzly Card</a></li><li><a href="/items/monster-card/reindeer-card" alt="/tip.php?nid=9082">Reindeer Card</a></li><li><a href="/items/monster-card/panda-card" alt="/tip.php?nid=9088">Panda Card</a></li><li><a href="/items/monster-card/peach-monkey-card" alt="/tip.php?nid=8921">Peach Monkey Card</a></li><li><a href="/items/monster-card/sage-cat-card" alt="/tip.php?nid=8932">Sage Cat Card</a></li><li><a href="/items/monster-card/rash-card" alt="/tip.php?nid=8943">Rash Card</a></li><li><a href="/items/monster-card/tae-roon-card" alt="/tip.php?nid=9100">Tae Roon Card</a></li><li><a href="/items/monster-card/king-sage-cat-card" alt="/tip.php?nid=9190">King Sage Cat Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+  <div class="views-row views-row-39 views-row-odd views-row-last">
+    <div id="node-18122" class="database node clear-block">
+  <table id="18122">
+  <tr>
+    <td width="100" rowspan="2" class="image"><img  class="imagefield imagefield-field_image" width="50" height="44" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/monster-card-set/terrifying-monsters.png?1313050691" /></td>
+    <td colspan="2"><strong>Name:</strong> 
+      Terrifying Monsters      </td>
+
+  </tr>
+  <tr>
+    <td><strong>EXP:</strong> 2886147</td>
+    <td><strong>Score:</strong> 90</td>
+  </tr>
+  <tr>
+
+    <td colspan="3" class="mouse-hover">
+      <strong>Monster cards:</strong> <ul><li><a href="/items/monster-card/beetle-card" alt="/tip.php?nid=8946">Beetle Card</a></li><li><a href="/items/monster-card/ore-muncher-card" alt="/tip.php?nid=17935">Ore Muncher Card</a></li><li><a href="/items/monster-card/dark-rash-card" alt="/tip.php?nid=8952">Dark Rash Card</a></li><li><a href="/items/monster-card/dual-beetle-card" alt="/tip.php?nid=8966">Dual Beetle Card</a></li><li><a href="/items/monster-card/harp-card" alt="/tip.php?nid=8977">Harp Card</a></li><li><a href="/items/monster-card/blood-harp-card" alt="/tip.php?nid=8981">Blood Harp Card</a></li><li><a href="/items/monster-card/birk-card" alt="/tip.php?nid=9169">Birk Card</a></li><li><a href="/items/monster-card/dual-birk-card" alt="/tip.php?nid=9223">Dual Birk Card</a></li><li><a href="/items/monster-card/yeti-card" alt="/tip.php?nid=8928">Yeti Card</a></li><li><a href="/items/monster-card/dark-yeti-card" alt="/tip.php?nid=8935">Dark Yeti Card</a></li><li><a href="/items/monster-card/flyeye-card" alt="/tip.php?nid=9247">Flyeye Card</a></li><li><a href="/items/monster-card/yeti-and-pepe-card" alt="/tip.php?nid=8974">Yeti and Pepe Card</a></li><li><a href="/items/monster-card/jr-cerebes-card" alt="/tip.php?nid=8889">Jr. Cerebes Card</a></li><li><a href="/items/monster-card/dark-yeti-and-pepe-card" alt="/tip.php?nid=8979">Dark Yeti and Pepe Card</a></li><li><a href="/items/monster-card/werewolf-card" alt="/tip.php?nid=8954">Werewolf Card</a></li><li><a href="/items/monster-card/lycanthrope-card" alt="/tip.php?nid=8976">Lycanthrope Card</a></li><li><a href="/items/monster-card/cerebes-card" alt="/tip.php?nid=8945">Cerebes Card</a></li><li><a href="/items/monster-card/bain-card" alt="/tip.php?nid=9227">Bain Card</a></li><li><a href="/items/monster-card/lyka-card" alt="/tip.php?nid=9221">Lyka Card</a></li><li><a href="/items/monster-card/mu-gong-card" alt="/tip.php?nid=18105">Mu Gong Card</a></li><li><a href="/items/monster-card/griffey-card" alt="/tip.php?nid=9196">Griffey Card</a></li><li><a href="/items/monster-card/snowman-card" alt="/tip.php?nid=9193">Snowman Card</a></li></ul>    </td>
+
+  </tr>
+    </table>
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                 </div>
+              </div>
+      
+              
+              <div id="bottom-content">
+                                  <div id="block-block-13" class="block block-block block-1 block-last clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <!--JavaScript Tag // Tag for network 5223: Gamer DNA Media // Website: HiddenStreet // Page: Global.hidden-Street // Placement: Global.hidden-Street-Site Skin-1 x 1 (1825691) // created at: Jan 13, 2011 10:36:22 AM-->
+<script language="javascript"><!--
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn/3.0/5223/1825691/0/16/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp=[group];misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" target="_blank"><img src="http://helios.gamerdna.com/adserv/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" border="0" width="1" height="1"></a></noscript>
+<!-- End of JavaScript Tag -->      </div>
+    </div>
+  </div>  
+
+</div>
+                                <div id="back-to-top"><a href="#top">Top</a></div>
+              </div>
+            </div>
+
+            <div class="clear-both"><!-- --></div>
+          </div>
+
+                      <div id="sidebar-right">
+              <div id="block-block-4" class="block block-block block-1 block-first clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Sponsors</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+
+        <div align="center">
+<!-- JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918762|0|154|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="160" height="600"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-user-3" class="block block-user block-2 clear-both">
+  <div class="block-t">
+
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Who's online</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        There are currently <em>0 users</em> and <em>903 guests</em> online.      </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-views-quote-block_1" class="block block-views block-3 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div class="view view-quote view-id-quote view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+      
+  <div class="views-field-field-quote-value">
+                <div class="field-content">We are not the GameMasters (GM) for MapleStory.</div>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>       </div>
+    </div>
+  </div>  
+
+</div>
+            </div>
+          
+          <div class="clear-both"><!-- --></div>
+        </div>
+      </div>
+    </div>
+
+          <div id="footer">
+        <div id="footer-message">
+          Copyright &copy; 2004-2011 Hidden Street. <a href="/privacy-policy">Privacy Policy</a><br /><br />
+
+MapleStory and any related images and content are copyrighted by Nexon.
+<br /><br />
+Hidden Street is a not-for-profit fansite set up for the sole purpose of providing cohesive and comprehensive information to MapleStory gamers. Advertisements found in this site are to support server and related costs of maintaining this website.        </div>
+      </div>
+      </div>
+</div>
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_41ef61120bf2352553be89269f538c45.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+//--><!]]>
+</script>
+
+<!-- COMSCORE -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+
+</script>
+<script type="text/javascript">
+COMSCORE.beacon({
+	c1:2,
+	c2:"6885237",
+	c3:"",
+	c4:"",
+	c5:"",
+	c6:"",
+	c15:""
+});
+</script>
+<noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=6885237&c3=&c4=&c5=&c6=&c15=&cj=1" /></noscript>
+<!-- /COMSCORE -->
+</body>
+</html>

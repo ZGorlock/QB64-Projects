@@ -1,0 +1,14 @@
+int16 *_SUB_HIDETEXTBOX_INTEGER_HIDESUBTEXTBOX=NULL;
+if(_SUB_HIDETEXTBOX_INTEGER_HIDESUBTEXTBOX==NULL){
+_SUB_HIDETEXTBOX_INTEGER_HIDESUBTEXTBOX=(int16*)mem_static_malloc(2);
+*_SUB_HIDETEXTBOX_INTEGER_HIDESUBTEXTBOX=0;
+}
+int32 fornext_value7316;
+int32 fornext_finalvalue7316;
+int32 fornext_step7316;
+uint8 fornext_step_negative7316;
+int32 fornext_value7318;
+int32 fornext_finalvalue7318;
+int32 fornext_step7318;
+uint8 fornext_step_negative7318;
+int16 pass7319;

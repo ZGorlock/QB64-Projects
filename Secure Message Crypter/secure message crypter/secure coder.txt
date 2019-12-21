@@ -1,0 +1,433 @@
+_TITLE "Secure Message Crypter"
+SCREEN 0
+SCREEN 12
+START:
+CLEAR
+GOSUB resetdata
+DO
+    _LIMIT 128
+    loops&& = loops&& + 1
+    GOSUB setscreen
+    IF crypt = 1 THEN GOSUB alpha
+    IF crypt = 2 THEN GOSUB beta
+    IF crypt = 3 THEN GOSUB gamma
+    GOSUB getinput
+    _DISPLAY
+LOOP
+
+alpha:
+instruction$ = "Type a message to encrypt, Press Enter when done"
+IF k$ = CHR$(13) THEN
+    REDIM mcq$(32768)
+    p = 24
+    REDIM cs(10)
+    REDIM csn(10)
+    mcq$(1) = CHR$(254)
+    gclen = LEN(groupcode$)
+    gclen$ = STR$(gclen)
+    gclen$ = LTRIM$(gclen$)
+    mcq$(2) = gclen$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(3) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(4) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(5) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(6) = num$
+    mlen = LEN(message$)
+    mlen$ = STR$(mlen)
+    mlen$ = LTRIM$(mlen$)
+    mcq$(7) = mlen$
+    sm = 0
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(8) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(9) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(10) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(11) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(12) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(13) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(14) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(15) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(16) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(17) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(18) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(19) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(20) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(21) = num$
+    GOSUB fns
+    nom$ = STR$(nom)
+    nom$ = LTRIM$(nom$)
+    mcq$(22) = nom$
+    num$ = STR$(num)
+    num$ = LTRIM$(num$)
+    mcq$(23) = num$
+    FOR mc = 1 TO mlen
+        w&& = ASC(MID$(message$, mc, 1))
+        FOR ce = 3 TO 10
+            SELECT CASE cs(ce)
+                CASE 0
+                    w&& = w&& + csn(ce)
+                CASE 1
+                    IF w&& - csn(ce) >= 0 THEN
+                        w&& = w&& - csn(ce)
+                    ELSE
+                        IF ce = 3 THEN mcq$(8) = MID$(mcq$(8), 1, (LEN(mcq(3)) - 1)) + "5"
+                        IF ce = 4 THEN mcq$(10) = MID$(mcq$(10), 1, (LEN(mcq(5)) - 1)) + "5"
+                        IF ce = 5 THEN mcq$(12) = MID$(mcq$(12), 1, (LEN(mcq(5)) - 1)) + "5"
+                        IF ce = 6 THEN mcq$(14) = MID$(mcq$(14), 1, (LEN(mcq(5)) - 1)) + "5"
+                        IF ce = 7 THEN mcq$(16) = MID$(mcq$(16), 1, (LEN(mcq(5)) - 1)) + "5"
+                        IF ce = 8 THEN mcq$(18) = MID$(mcq$(18), 1, (LEN(mcq(5)) - 1)) + "5"
+                        IF ce = 9 THEN mcq$(20) = MID$(mcq$(20), 1, (LEN(mcq(5)) - 1)) + "5"
+                        IF ce = 10 THEN mcq$(22) = MID$(mcq$(22), 1, (LEN(mcq(5)) - 1)) + "5"
+                    END IF
+                CASE 2
+                    w&& = w&& * csn(ce)
+            END SELECT
+        NEXT ce
+        w$ = STR$(w&&)
+        w$ = LTRIM$(w$)
+        mcq$(p) = w$
+        p = p + 1
+    NEXT mc
+    FOR gcc = 1 TO gclen
+        w&& = ASC(MID$(groupcode$, gcc, 1))
+        FOR ce = 1 TO 2
+            SELECT CASE cs(ce)
+                CASE 0
+                    w&& = w&& + csn(ce)
+                CASE 1
+                    IF w&& - csn(ce) >= 0 THEN
+                        w&& = w&& - csn(ce)
+                    ELSE
+                        IF ce = 1 THEN mcq$(3) = MID$(mcq$(3), 1, (LEN(mcq(3)) - 1)) + "5"
+                        IF ce = 2 THEN mcq$(5) = MID$(mcq$(5), 1, (LEN(mcq(5)) - 1)) + "5"
+                    END IF
+                CASE 2
+                    w&& = w&& * csn(ce)
+            END SELECT
+        NEXT ce
+        w$ = STR$(w&&)
+        w$ = LTRIM$(w$)
+        mcq$(p) = w$
+        p = p + 1
+    NEXT gcc
+    FOR mcq = 1 TO p
+        mcq$ = mcq$ + mcq$(mcq)
+        mcq$ = mcq$ + CHR$(45)
+    NEXT mcq
+    mcq$ = MID$(mcq$, 1, (LEN(mcq$) - 1))
+    _CLIPBOARD$ = mcq$
+    freeze = 1
+    instruction$ = "Encrypted message copied to Clipboard, Press Space to return"
+    saveloop&& = loops&&
+END IF
+IF freeze = 1 AND saveloop&& <> loops&& THEN
+    DO
+        k$ = INKEY$
+    LOOP UNTIL k$ = CHR$(32)
+    GOTO START
+END IF
+RETURN
+
+beta:
+instruction$ = "Copy the code to your Clipboard"
+IF LEFT$(_CLIPBOARD$, 1) = CHR$(254) THEN
+    IF mcp$ <> _CLIPBOARD$ THEN
+        mcp$ = _CLIPBOARD$
+        REDIM mcp$(32768)
+        REDIM mcpm$(32768)
+        REDIM mcpgc$(32768)
+        p = 1
+        FOR d = 1 TO LEN(_CLIPBOARD$)
+            d$ = MID$(_CLIPBOARD$, d, 1)
+            IF d$ = CHR$(45) THEN
+                d = d + 1
+                DO
+                    e$ = MID$(_CLIPBOARD$, d, 1)
+                    IF e$ = CHR$(45) THEN EXIT DO
+                    r$ = r$ + e$
+                    d = d + 1
+                LOOP
+                IF d <> LEN(_CLIPBOARD$) THEN
+                    d = d - 1
+                END IF
+                mcp$(p) = r$
+                p = p + 1
+                r$ = ""
+            END IF
+        NEXT d
+
+
+we = 1
+FOR rap = 24 TO (p - (VAL(mcp$(2))) - 1)
+    mcpm$(we) = mcp$(rap)
+    we = we + 1
+NEXT rap
+qe = 1
+FOR rep = (p - (VAL(mcp$(2)))) TO p
+    mcpgc$(qe) = mcp$(rep)
+    qe = qe + 1
+NEXT rep
+
+OPEN "am.txt" FOR OUTPUT AS #1
+PRINT #1, mcp$
+FOR r = 1 TO qe
+    PRINT #1, mcpgc$(r)
+NEXT r
+CLOSE #1
+OPEN "aw.txt" FOR OUTPUT AS #1
+PRINT #1, mcp$
+FOR r = 1 TO we
+    PRINT #1, mcpm$(r)
+NEXT r
+CLOSE #1
+
+
+
+
+we = 1
+FOR rap = 24 TO (p-(VAL(mcp$(2)))- 1)
+mcpm$(we) = mcp$(rap)
+we = we + 1
+NEXT rap
+qe = 1
+FOR rep = (p-(VAL(mcp$(2)))) TO p
+mcpgc$(qe) = mcp$(rep)
+qe = qe + 1
+NEXT rep
+
+
+
+    ELSE
+        IF recievecode$ <> groupcode$ THEN
+            instruction$ = "The Group Codes do not match"
+            message$ = ""
+        ELSE
+
+        END IF
+    END IF
+END IF
+RETURN
+
+fns:
+i = i + 1
+DO
+    DO
+        RANDOMIZE TIMER
+        passf = INT(RND * 3)
+        RANDOMIZE TIMER
+        nod = (10 ^ (INT(RND * 5 + 1))) - 1
+        SELECT CASE passf
+            CASE 0
+                RANDOMIZE TIMER
+                nom = INT(RND * nod + 1)
+                nom$ = STR$(nom)
+                nom$ = nom$ + "3"
+                nom = VAL(nom$)
+                RANDOMIZE TIMER
+                numa = (10 ^ (INT(RND * 5 + 1))) - 1
+                num = INT(RND * numa)
+                cs(i) = passf
+                csn(i) = num
+                leave = 1
+            CASE 1
+                RANDOMIZE TIMER
+                nom = INT(RND * nod + 1)
+                nom$ = STR$(nom)
+                nom$ = nom$ + "4"
+                nom = VAL(nom$)
+                RANDOMIZE TIMER
+                numa = (10 ^ (INT(RND * 3 + 1))) - 1
+                num = INT(RND * numa)
+                cs(i) = passf
+                csn(i) = num
+                leave = 1
+            CASE 2
+                IF sm < 3 THEN
+                    RANDOMIZE TIMER
+                    nom = INT(RND * nod + 1)
+                    nom$ = STR$(nom)
+                    nom$ = nom$ + "7"
+                    nom = VAL(nom$)
+                    RANDOMIZE TIMER
+                    numa = (10 ^ (INT(RND * 5 + 1))) - 1
+                    num = INT(RND * numa)
+                    cs(i) = passf
+                    csn(i) = num
+                    leave = 1
+                    sm = sm + 1
+                END IF
+        END SELECT
+        EXIT DO
+    LOOP
+    IF leave = 1 THEN EXIT DO
+LOOP
+leave = 0
+RETURN
+
+gamma:
+instruction$ = "Enter your Group Code, Press ~ to Paste, Press Enter when done"
+IF k$ = CHR$(126) THEN message$ = _CLIPBOARD$
+IF k$ = CHR$(13) AND LEN(message$) <> 0 THEN
+    OPEN "secure message crypter\groupcode.txt" FOR OUTPUT AS #1
+    PRINT #1, message$
+    CLOSE #1
+    instruction$ = "Your Group Code has been changed, Press Space to return"
+    freeze = 1
+    saveloops&& = loops&&
+END IF
+IF freeze = 1 AND loops&& <> saveloops&& THEN
+    DO
+        GOSUB getinput
+    LOOP UNTIL k$ = CHR$(32)
+    GOTO START
+END IF
+RETURN
+
+getcode:
+OPEN "secure message crypter\groupcode.txt" FOR INPUT AS #1
+INPUT #1, groupcode$
+CLOSE #1
+RETURN
+
+getinput:
+k$ = INKEY$
+IF k$ <> "" AND k$ <> CHR$(13) AND k$ <> CHR$(8) THEN message$ = message$ + k$
+IF k$ = CHR$(8) AND LEN(message$) <> 0 THEN message$ = LEFT$(message$, (LEN(message$) - 1))
+IF _MOUSEINPUT THEN GOSUB mouse
+RETURN
+
+mouse:
+IF ((crypt = 2 OR crypt = 3) AND (_MOUSEX > 8 AND _MOUSEX < 64) AND (_MOUSEY > 16 AND _MOUSEY < 30) AND _MOUSEBUTTON(1)) THEN
+    GOSUB resetdata
+    crypt = 1
+END IF
+IF ((crypt = 1 OR crypt = 3) AND (_MOUSEX > 88 AND _MOUSEX < 144) AND (_MOUSEY > 16 AND _MOUSEY < 30) AND _MOUSEBUTTON(1)) THEN
+    GOSUB resetdata
+    crypt = 2
+END IF
+IF ((crypt = 1 OR crypt = 2) AND (_MOUSEX > 184 AND _MOUSEX < 248) AND (_MOUSEY > 16 AND _MOUSEY < 30) AND _MOUSEBUTTON(1)) THEN
+    GOSUB resetdata
+    crypt = 3
+END IF
+RETURN
+
+resetdata:
+loops&& = 0
+freeze = 0
+crypt = 1
+i = 0
+message$ = ""
+instruction$ = ""
+GOSUB getcode
+RETURN
+
+setscreen:
+CLS
+COLOR 12, 0
+LOCATE 1, 19
+PRINT "Secure 8 Pass Message Encrypter/Decrypter"
+PSET (0, 15), 15
+DRAW "R640"
+PSET (0, 32), 15
+DRAW "R640"
+PSET (0, 63), 15
+DRAW "R640"
+PSET (0, 431), 15
+DRAW "R640"
+PSET (0, 400), 15
+DRAW "R640"
+PSET (0, 448), 15
+DRAW "R640"
+PSET (0, 63), 15
+DRAW "D336"
+PSET (639, 63), 15
+DRAW "D336"
+PSET (74, 15), 15
+DRAW "D17"
+PSET (0, 15), 15
+DRAW "D17"
+PSET (639, 15), 15
+DRAW "D17"
+PSET (0, 431), 15
+DRAW "D17"
+PSET (639, 431), 15
+DRAW "D17"
+PSET (639, 15), 15
+DRAW "D17"
+PSET (160, 15), 15
+DRAW "D17"
+PSET (258, 15), 15
+DRAW "D17"
+LOCATE 2, 2
+IF crypt = 1 THEN
+    COLOR 0, 7
+ELSE
+    COLOR 7, 0
+END IF
+PRINT "Encrypt"
+LOCATE 2, 12
+IF crypt = 2 THEN
+    COLOR 0, 7
+ELSE
+    COLOR 7, 0
+END IF
+PRINT "Decrypt"
+COLOR 15, 0
+LOCATE 2, 23
+IF crypt = 3 THEN
+    COLOR 0, 7
+ELSE
+    COLOR 7, 0
+END IF
+PRINT "GroupCode"
+COLOR 15, 0
+LOCATE 2, 73
+PRINT "Gorlock"
+LOCATE 5, 1
+PRINT message$
+LOCATE 28, 2
+PRINT instruction$
+_DISPLAY
+RETURN

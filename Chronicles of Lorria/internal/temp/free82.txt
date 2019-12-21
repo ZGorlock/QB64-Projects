@@ -1,0 +1,4 @@
+if(oldstr6654){
+if(oldstr6654->fixed)qbs_set(oldstr6654,_FUNC_REMFILESUFFIX_STRING_F);
+qbs_free(_FUNC_REMFILESUFFIX_STRING_F);
+}

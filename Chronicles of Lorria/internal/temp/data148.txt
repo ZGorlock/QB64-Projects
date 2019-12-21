@@ -1,0 +1,9 @@
+uint32 *_FUNC_LASTINPUT_ULONG_LASTINPUT=NULL;
+if(_FUNC_LASTINPUT_ULONG_LASTINPUT==NULL){
+_FUNC_LASTINPUT_ULONG_LASTINPUT=(uint32*)mem_static_malloc(4);
+*_FUNC_LASTINPUT_ULONG_LASTINPUT=0;
+}
+byte_element_struct *byte_element_6841=NULL;
+if (!byte_element_6841){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6841=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6841=(byte_element_struct*)mem_static_malloc(12);
+}

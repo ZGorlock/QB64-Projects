@@ -1,0 +1,379 @@
+IF (k$ = CHR$(99) OR k$ = CHR$(67)) OR (_MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 285 AND _MOUSEY < 301 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 1
+    DO
+        source$ = "http://global.hidden-street.net/experience-table"
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "What would you like to do?"
+            PRINT "     1-Veiw Exp of a Lv"
+            PRINT "     2-Determine Your Exp tnl"
+            PRINT "     3-Calculate Total Exp"
+            passtwo = 1
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                passtwo = 0
+                DO
+                    exitloop = 0
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "What would you like to do?"
+                        PRINT "     1-Look at the lv/exp table"
+                        PRINT "     2-Return to the Exp Menu"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            row = 1
+                            inputcount = 0
+                            REDIM expirience$(201)
+                            OPEN "source\list\exptable.txt" FOR INPUT AS #1
+                            DO UNTIL EOF(1)
+                                inputcount = inputcount + 1
+                                LINE INPUT #1, expirience$(inputcount)
+                                IF inputcount = 201 THEN EXIT DO
+                            LOOP
+                            CLOSE #1
+                            listnum = inputcount
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT expirience$(n)
+                            NEXT
+                            _DISPLAY
+                            DO
+                                _LIMIT 64
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT expirience$(n)
+                                NEXT
+                                GOSUB scrollbar
+                                IF k$ = CHR$(113) THEN
+                                    row = row - 1
+                                    GOTO C1
+                                END IF
+                                IF k$ = CHR$(122) THEN
+                                    row = row + 1
+                                    GOTO C1
+                                END IF
+                                IF k$ = CHR$(119) THEN
+                                    row = 1
+                                    GOTO C1
+                                END IF
+                                IF k$ = CHR$(97) THEN
+                                    row = row - 27
+                                    GOTO C1
+                                END IF
+                                IF k$ = CHR$(115) THEN
+                                    row = (rows - 27)
+                                    GOTO C1
+                                END IF
+                                IF k$ = CHR$(100) THEN
+                                    row = row + 27
+                                    GOTO C1
+                                END IF
+                                DO WHILE _MOUSEINPUT
+                                    row = row + (_MOUSEWHEEL * scrollspeed)
+                                    IF prevrow <> row THEN
+                                        C1:
+                                        IF row < 1 THEN
+                                            row = 1
+                                        END IF
+                                        IF row > (listnum - 27) THEN
+                                            row = (listnum - 27)
+                                        END IF
+                                    END IF
+                                    prevrow = row
+                                LOOP
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            exitloop = 1
+                            EXIT DO
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+            END IF
+            IF k$ = CHR$(50) AND passtwo = 1 THEN
+                lv$ = ""
+                exitloop = 0
+                inputcount = 0
+                REDIM expcalc$(201)
+                OPEN "source\list\exptable.txt" FOR INPUT AS #1
+                DO UNTIL EOF(1)
+                    inputcount = inputcount + 1
+                    LINE INPUT #1, expcalc$(inputcount)
+                    IF inputcount = 201 THEN EXIT DO
+                LOOP
+                CLOSE #1
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter your lv"
+                            PRINT ": "; lv$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                lv$ = lv$ + k$
+                                inputlength = LEN(lv$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                lv$ = MID$(lv$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        lv = VAL(lv$)
+                        IF lv < 1 OR lv > 199 THEN
+                            lv$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        experience$ = MID$(expcalc$((lv + 1)), 9, 10)
+                        experience = VAL(experience$)
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\level.txt"
+                            userdata$ = STR$(lv)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                perctnl$ = ""
+                decimal = 0
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter your percentage of completion in the form '00.00'"
+                            PRINT ": "; perctnl$
+                            GOSUB controls
+                            IF k$ = CHR$(46) AND decimal = 0 THEN
+                                decimal = 1
+                                perctnl$ = perctnl$ + k$
+                                inputlength = LEN(perctnl$)
+                                decimalloc = LEN(perctnl$)
+                            END IF
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                perctnl$ = perctnl$ + k$
+                                inputlength = LEN(perctnl$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                perctnl$ = MID$(perctnl$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                                IF inputlength < decimalloc THEN
+                                    decimal = 0
+                                END IF
+                            END IF
+                            IF inputlength > 5 THEN
+                                perctnl$ = MID$(perctnl$, 1, 5)
+                                inputlength = 5
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        perctnl = VAL(perctnl$)
+                        IF decimalloc <> 3 OR inputlength <> 5 THEN
+                            perctnl$ = ""
+                            inputlength = 0
+                            decimal = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\perctnl.txt"
+                            userdata$ = STR$(perctnl)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                percentage = (100 - perctnl) / 100
+                neededexp = (percentage * experience) + .5
+                neededexp = _ROUND(neededexp)
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "You need"; neededexp; "more EXP to level to"; (lv + 1); "!"
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                exitloop = 0
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Where would you like to go?"
+                    PRINT "     1-Experience Menu"
+                    PRINT "     2-Main Menu"
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        GOTO BEGIN
+                    END IF
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            IF k$ = CHR$(51) THEN
+                DO
+                    lv$ = ""
+                    exitloop = 0
+                    inputcount = 0
+                    REDIM totalexparray$(201)
+                    OPEN "source\list\exptable.txt" FOR INPUT AS #1
+                    DO UNTIL EOF(1)
+                        inputcount = inputcount + 1
+                        LINE INPUT #1, totalexparray$(inputcount)
+                        IF inputcount = 201 THEN EXIT DO
+                    LOOP
+                    CLOSE #1
+                    DO
+                        DO
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Enter your lv"
+                                PRINT ": "; lv$
+                                GOSUB controls
+                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                    lv$ = lv$ + k$
+                                    inputlength = LEN(lv$)
+                                END IF
+                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                    lv$ = MID$(lv$, 1, (inputlength - 1))
+                                    inputlength = (inputlength - 1)
+                                END IF
+                                IF inputlength > 3 THEN
+                                    lv$ = MID$(lv$, 1, 3)
+                                    inputlength = 3
+                                END IF
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            lv = VAL(lv$)
+                            IF lv < 1 OR lv > 199 THEN
+                                lv$ = ""
+                                inputlength = 0
+                                EXIT DO
+                            END IF
+                            lvexperience$ = ""
+                            totalexpgained~&& = 0
+                            FOR expadd = 2 TO lv
+                                lvexperience$ = MID$(totalexparray$((expadd)), 9, 19)
+                                lvexperience& = VAL(lvexperience$)
+                                totalexpgained~&& = totalexpgained~&& + lvexperience&
+                            NEXT expadd
+                            IF autocharupdate = 1 THEN
+                                filename$ = "user\stat\level.txt"
+                                userdata$ = STR$(lv)
+                                GOSUB encrypter
+                            END IF
+                            exitloop = 1
+                            EXIT DO
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                    perctnl$ = ""
+                    exitloop = 0
+                    decimal = 0
+                    DO
+                        DO
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Enter your percentage of completion in the form '00.00'"
+                                PRINT ": "; perctnl$
+                                GOSUB controls
+                                IF k$ = CHR$(46) AND decimal = 0 THEN
+                                    decimal = 1
+                                    perctnl$ = perctnl$ + k$
+                                    inputlength = LEN(perctnl$)
+                                    decimalloc = LEN(perctnl$)
+                                END IF
+                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                    perctnl$ = perctnl$ + k$
+                                    inputlength = LEN(perctnl$)
+                                END IF
+                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                    perctnl$ = MID$(perctnl$, 1, (inputlength - 1))
+                                    inputlength = (inputlength - 1)
+                                    IF inputlength < decimalloc THEN
+                                        decimal = 0
+                                    END IF
+                                END IF
+                                IF inputlength > 5 THEN
+                                    perctnl$ = MID$(perctnl$, 1, 5)
+                                    inputlength = 5
+                                END IF
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            perctnl = VAL(perctnl$)
+                            IF decimalloc <> 3 OR inputlength <> 5 THEN
+                                perctnl$ = ""
+                                inputlength = 0
+                                decimal = 0
+                                EXIT DO
+                            END IF
+                            expfromlv$ = MID$(totalexparray$((lv + 1)), 9, 19)
+                            expfromlv~&& = VAL(expfromlv$)
+                            percentage = perctnl / 100
+                            percentaddexp~&& = (percentage * expfromlv~&&) + .5
+                            percentaddexp~&& = _ROUND(percentaddexp~&&)
+                            IF autocharupdate = 1 THEN
+                                filename$ = "user\stat\perctnl.txt"
+                                userdata$ = STR$(perctnl)
+                                GOSUB encrypter
+                            END IF
+                            exitloop = 1
+                            EXIT DO
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                    exitloop = 0
+                    maxexp~&& = 19320686743
+                    totalexpgained~&& = totalexpgained~&& + percentaddexp~&&
+                    almostthere# = totalexpgained~&& / maxexp~&&
+                    almostthere# = almostthere# * 100
+                    almostthere$ = STR$(almostthere#)
+                    almostthere$ = MID$(almostthere$, 1, 10)
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "You have accumulated"; totalexpgained~&&; "EXP on this character"
+                        PRINT "The total amount of EXP from lv 1 to lv 200 is"; maxexp~&&
+                        PRINT "You are"; almostthere$; "% of the way there!"
+                        GOSUB controls
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Where would you like to go?"
+                        PRINT "     1-Experience Menu"
+                        PRINT "     2-Main Menu"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            GOTO BEGIN
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    EXIT DO
+                LOOP
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

@@ -1,0 +1,8 @@
+You must enter a name.
+Your name must be at least 4 characters long.
+Your name can not be more than 32 characters long.
+You must select a race.
+
+You must allocate all of your stats.
+You do not have any more allocatable stats.
+You cannot set a stat to below its minimum base value.

@@ -1,0 +1,7 @@
+int32 *_FUNC_AKEY_BIT1_AKEY=NULL;
+if(_FUNC_AKEY_BIT1_AKEY==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_AKEY_BIT1_AKEY=(int32*)(dblock+cmem_sp);
+*_FUNC_AKEY_BIT1_AKEY=0;
+}

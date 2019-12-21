@@ -1,0 +1,12 @@
+qbs *_FUNC_TRIM_STRING_TRIM=NULL;
+if (!_FUNC_TRIM_STRING_TRIM)_FUNC_TRIM_STRING_TRIM=qbs_new(0,0);
+qbs*oldstr8549=NULL;
+if(_FUNC_TRIM_STRING_S->tmp||_FUNC_TRIM_STRING_S->fixed||_FUNC_TRIM_STRING_S->readonly){
+oldstr8549=_FUNC_TRIM_STRING_S;
+if (oldstr8549->cmem_descriptor){
+_FUNC_TRIM_STRING_S=qbs_new_cmem(oldstr8549->len,0);
+}else{
+_FUNC_TRIM_STRING_S=qbs_new(oldstr8549->len,0);
+}
+memcpy(_FUNC_TRIM_STRING_S->chr,oldstr8549->chr,oldstr8549->len);
+}

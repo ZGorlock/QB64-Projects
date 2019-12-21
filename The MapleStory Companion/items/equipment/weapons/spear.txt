@@ -1,0 +1,3607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="canonical" href="http://global.hidden-street.net/eq/weapons/spear" />
+<link rel="shortcut icon" href="/sites/all/themes/lithharbor/favicon.ico" type="image/x-icon" />
+  <title>Spear | MapleStory | HS.MapleGlobal</title>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/global.hidden-street.net/files/css/css_bb477b98db50b14e9d92f8f98382817a.css" />
+  <!--[if lte IE 8]>
+    <style type="text/css">
+      body { behavior: url(/sites/all/themes/lithharbor/csshover3.htc); }
+    </style>
+  <![endif]-->
+  <!--[if lte IE 6]>
+    <style type="text/css">
+      .pngfix { behavior: url(/sites/all/themes/lithharbor/iepngfix.htc); }
+    </style>
+    <script type="text/javascript" src="/sites/all/themes/lithharbor/iepngfix-tilebg.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_b99b64f78cee0f66772c70d5f5464a10.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "dhtmlMenu": { "slide": "slide", "siblings": 0, "relativity": 0, "children": 0, "clone": 0, "doubleclick": 0 }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/global.hidden-street.net/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 1, "disable_zoom": 0, "force_show_nav": 0, "show_caption": true, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 } });
+//--><!]]>
+</script>
+  <script type="text/javascript">window.google_analytics_uacct = "UA-989776-5";</script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-989776-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body class="not-front-page not-logged-in not-admin page-eq sidebar-left-and-right">
+<div id="wrapper">
+  <div id="page">
+    <div class="clear-both"><!-- --></div>
+
+    
+	<div id="header">
+              <div id="logo">
+          <a href="/" title="Home" rel="home">
+            <img src="/sites/all/themes/lithharbor/logo.png" alt="Home" />
+          </a>
+        </div>
+      	  
+	  <div id="user-bar">
+	    	                <form method='post' accept-charset='UTF-8' action='/user/login'>          <div class="form-item" id="edit-name-wrapper">
+
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" tabindex="1" title="Username:" class="form-text required" />
+</div>
+          <div class="form-item" id="edit-pass-wrapper">
+ <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  tabindex="2" title="Password:" class="form-text required" />
+</div>
+          <input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
+<input type="hidden" name="form_build_id" id="form-45f67558344aa3ef4e8602f713ad3b4d" value="form-45f67558344aa3ef4e8602f713ad3b4d"  />
+<input type="submit" name="op" id="edit-submit-2" value="Log in"  tabindex="3" class="form-submit" />
+          </form>				<script type="text/javascript">
+          $('#edit-name').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+		  $('#edit-pass').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+        </script>
+	  </div>
+
+	</div>
+
+	<div id="navigation">
+              <div id="primary">
+          <ul class="menu"><li class="leaf first dhtml-menu "><a href="/" title="" id="dhtml_menu-1652">Home</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum/forumdisplay.php?420-Guides" title="" id="dhtml_menu-165">Guides</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum" title="" id="dhtml_menu-166">Forum</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/guild" title="" id="dhtml_menu-167">Guild</a></li>
+<li class="leaf last dhtml-menu "><a href="/contact" title="" id="dhtml_menu-168">Contact Us</a></li>
+
+</ul>        </div>
+      	          <div id="search-box">
+          <div id="block-finder-finder_3" class="block block-finder block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div id="finder-block-3" class="finder-block"><div id="finder-block-3-wrapper" class="finder-view-wrapper"><div class="finder-view-3 finder-view"><form action="/search_finder"  accept-charset="UTF-8" method="post" id="finder-form-3">
+<div><div class="finder-form finder-3"><div class="form-item" id="edit-3-wrapper">
+ <label for="edit-3">Search: </label>
+
+ <input type="text" maxlength="128" name="3" id="edit-3" size="60" value="" class="form-text form-autocomplete" />
+</div>
+<input class="finder-autocomplete" type="hidden" id="edit-3-autocomplete" value="http://global.hidden-street.net/finder_autocomplete/autocomplete/3/3" disabled="disabled" /><input type="submit" name="find" id="edit-submit" value="Submit"  class="form-submit" />
+</div><input type="hidden" name="form_build_id" id="form-02a6b81359f8b25326b8f38fd3447969" value="form-02a6b81359f8b25326b8f38fd3447969"  />
+<input type="hidden" name="form_id" id="edit-finder-form-3" value="finder_form_3"  />
+
+</div></form>
+</div></div></div>      </div>
+    </div>
+  </div>  
+</div>
+        </div>
+
+		<script type="text/javascript">
+          $('#edit-3').example('Search for...', {className: 'not-focus'});
+        </script>
+      	</div>
+
+    <div id="main-wrapper">
+      <div id="main-wrapper-t">
+        <div id="main-wrapper-b" class="clear-both">
+          <div id="sidebar-left-and-main">
+                          <div id="sidebar-left">
+                <div id="block-menu-menu-database" class="block block-menu block-1 block-first clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+
+        <ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-171">General</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/experience-table" title="" id="dhtml_menu-181">Experience Table</a></li>
+<li class="leaf last dhtml-menu "><a href="/pet-closeness-table" title="" id="dhtml_menu-192">Pet Closeness Table</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-15281">Tools</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character-avoidance-calculator" title="" id="dhtml_menu-15283">Character Avoidance Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/character-damage-calculator" title="" id="dhtml_menu-15285">Character Damage Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster-avoidance-calculator" title="" id="dhtml_menu-15282">Monster Avoidance Calculator</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster-damage-calculator" title="" id="dhtml_menu-15284">Monster Damage Calculator</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-172">Characters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character/class/admin" title="" id="dhtml_menu-193">Admin</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/adventurers" title="" id="dhtml_menu-1653">Adventurers</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/cygnus-knights" title="" id="dhtml_menu-1654">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/class/guild" title="" id="dhtml_menu-16175">Guild</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/legends" title="" id="dhtml_menu-5111">Legends</a></li>
+<li class="leaf last dhtml-menu "><a href="/character/resistance" title="Resistance" id="dhtml_menu-15274">Resistance</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-174">Equipment</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/eq/accessories" title="" id="dhtml_menu-197">Accessories</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/eq/armours" title="" id="dhtml_menu-196">Armours</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/taming-mob" id="dhtml_menu-15267">Taming Mob</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/weapons" title="" id="dhtml_menu-995">Weapons</a></li>
+<li class="leaf last dhtml-menu "><a href="/eq/monster-card-set" id="dhtml_menu-18898">Monster Card Set</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-173">Items</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/items/useable-items" title="" id="dhtml_menu-199">Useable Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/ores" title="" id="dhtml_menu-200">Ores</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/misc-items" title="" id="dhtml_menu-201">Misc. Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/set-up" title="" id="dhtml_menu-202">Set-up</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/items/maker-items" title="" id="dhtml_menu-3742">Maker Items</a></li>
+<li class="leaf last dhtml-menu "><a href="/items/profession-items" title="" id="dhtml_menu-18796">Profession Items</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-186">Item Synthesis</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-synthesis/common" title="" id="dhtml_menu-203">Common</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/bowman" title="" id="dhtml_menu-205">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/magician" title="" id="dhtml_menu-206">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/pirate" title="" id="dhtml_menu-208">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/thief" title="" id="dhtml_menu-207">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/warrior" title="" id="dhtml_menu-204">Warrior</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/weapon-forging" title="" id="dhtml_menu-209">Weapon Forging</a></li>
+<li class="leaf last dhtml-menu "><a href="/item-synthesis/itcg" title="" id="dhtml_menu-3759">iTCG Forging</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-5091">Item Maker</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-maker/warrior" title="" id="dhtml_menu-5092">Warrior</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/magician" title="" id="dhtml_menu-5093">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/bowman" title="" id="dhtml_menu-5094">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/thief" title="" id="dhtml_menu-5095">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/pirate" title="" id="dhtml_menu-5096">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/etc" title="" id="dhtml_menu-5097">Etc</a></li>
+
+<li class="leaf last dhtml-menu "><a href="/item-maker/useable" title="" id="dhtml_menu-5098">Useable</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-176">Maps</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/map/amoria" title="" id="dhtml_menu-214">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/edelstein" title="" id="dhtml_menu-15537">Edelstein</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ellin" title="" id="dhtml_menu-2287">Ellin</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ereve" title="" id="dhtml_menu-2286">Ereve</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/maple-island" title="" id="dhtml_menu-211">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/masteria" title="" id="dhtml_menu-1413">Masteria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ossyria" title="" id="dhtml_menu-213">Ossyria</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/map/rien" title="Rien" id="dhtml_menu-8255">Rien</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/victoria-island" title="" id="dhtml_menu-212">Victoria Island</a></li>
+<li class="leaf last dhtml-menu "><a href="/map/world-tour" title="" id="dhtml_menu-215">World Tour</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-175">Monsters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/monster/list" id="dhtml_menu-1033">Monster List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/element-weakness-list" id="dhtml_menu-1034">Element Weakness List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/boss-list" title="" id="dhtml_menu-9027">Boss List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/event" id="dhtml_menu-1032">Event Monsters</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/1-10" id="dhtml_menu-990">Level 1-10</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/11-20" id="dhtml_menu-1012">Level 11-20</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/21-30" id="dhtml_menu-1013">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/31-40" id="dhtml_menu-1014">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/41-50" id="dhtml_menu-1015">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/51-60" id="dhtml_menu-1016">Level 51-60</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/61-70" id="dhtml_menu-1017">Level 61-70</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/71-80" id="dhtml_menu-1018">Level 71-80</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/81-90" id="dhtml_menu-1019">Level 81-90</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/91-100" id="dhtml_menu-1020">Level 91-100</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/101-120" id="dhtml_menu-16164">Level 101-120</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/121-140" id="dhtml_menu-16165">Level 121-140</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/141-160" id="dhtml_menu-16166">Level 141-160</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/161-180" id="dhtml_menu-16167">Level 161-180</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster/181-200" id="dhtml_menu-16168">Level 181-200</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-177">NPC &amp; Towns</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/npc/npc-list" title="" id="dhtml_menu-230">NPC List</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/aquaroad" title="" id="dhtml_menu-240">Aquaroad</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ariant" title="" id="dhtml_menu-249">Ariant</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/el-nath" title="" id="dhtml_menu-238">El Nath</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/ellinia" title="" id="dhtml_menu-233">Ellinia</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/henesys" title="" id="dhtml_menu-232">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/herb-town" title="" id="dhtml_menu-248">Herb Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/kerning-city" title="" id="dhtml_menu-235">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/korean-folk-town" title="" id="dhtml_menu-245">Korean Folk Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/leafre" title="" id="dhtml_menu-246">Leafre</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/lith-harbor" title="" id="dhtml_menu-4818">Lith Harbor</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ludibrium" title="" id="dhtml_menu-239">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-kampung-village" title="" id="dhtml_menu-255">Malaysia : Kampung Village</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-trend-zone" title="" id="dhtml_menu-254">Malaysia : Trend Zone</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mu-lung" title="" id="dhtml_menu-247">Mu Lung</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mushroom-shrine" title="" id="dhtml_menu-242">Mushroom Shrine</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/nautilus-port" title="" id="dhtml_menu-250">Nautilus Port</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/new-leaf-city" title="" id="dhtml_menu-256">New Leaf City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/omega-sector" title="" id="dhtml_menu-241">Omega Sector</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/orbis" title="" id="dhtml_menu-237">Orbis</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/perion" title="" id="dhtml_menu-234">Perion</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/showa" title="" id="dhtml_menu-243">Showa</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-boat-quay-town" title="" id="dhtml_menu-251">Singapore : Boat Quay Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-cbd" title="" id="dhtml_menu-252">Singapore : CBD</a></li>
+<li class="leaf last dhtml-menu "><a href="/town/sleepywood" title="" id="dhtml_menu-236">Sleepywood</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/reactor" id="dhtml_menu-18853">Reactor</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-178">Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/quest/list" id="dhtml_menu-5080">Quest List</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/fame" title="" id="dhtml_menu-16162">Quests with Fame</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/repeatable" id="dhtml_menu-17642">Quest with Repeatable</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/events" id="dhtml_menu-1029">Events</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/cygnus-knights" title="" id="dhtml_menu-5078">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/hero-with-lost-memory" title="" id="dhtml_menu-6295">Hero With The Lost Memory</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/new-hero" title="" id="dhtml_menu-15271">New Hero</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/resistance" title="" id="dhtml_menu-16153">Resistance</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/maple-island" id="dhtml_menu-1030">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/1-10" id="dhtml_menu-999">Level 1-10</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/11-20" id="dhtml_menu-1022">Level 11-20</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/21-30" id="dhtml_menu-1023">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/31-40" id="dhtml_menu-1024">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/41-50" id="dhtml_menu-1025">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/51-65" title="" id="dhtml_menu-1027">Level 51-65</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/66-200" id="dhtml_menu-11065">Level 66-200</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-crimsonwood" title="" id="dhtml_menu-6287">Exchange Quest (Crimsonwood)</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-orbis" title="" id="dhtml_menu-266">Exchange Quest (Orbis)</a></li>
+<li class="leaf last dhtml-menu "><a href="/exchange-quest-showa-town" title="" id="dhtml_menu-267">Exchange Quest (Showa)</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-179">Guild Quests</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/guild-quest/sharenian" title="" id="dhtml_menu-268">Sharenian</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-180">Party Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/party-quest/amorian-challenge" title="" id="dhtml_menu-272">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/crimsonwood-keep" title="" id="dhtml_menu-276">Crimsonwood Keep</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ellin-forest" title="" id="dhtml_menu-4848">Ellin Forest</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ghost-ship-in-the-sea-mist" title="" id="dhtml_menu-16158">Ghost Ship in the Sea Mist</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/henesys" title="" id="dhtml_menu-274">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/herb-town" title="" id="dhtml_menu-273">Herb Town</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/party-quest/kerning-city" title="" id="dhtml_menu-269">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ludibrium" title="" id="dhtml_menu-270">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/magatia" title="" id="dhtml_menu-275">Magatia</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival" title="" id="dhtml_menu-277">Monster Carnival</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival-2" title="" id="dhtml_menu-5065">Monster Carnival 2</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/mu-lung-dojo" title="" id="dhtml_menu-5073">Mu Lung Dojo</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/netts-pyramid" title="Nett&#039;s Pyramid Party Quest" id="dhtml_menu-12570">Nett&#039;s Pyramid</a></li>
+<li class="leaf last dhtml-menu "><a href="/party-quest/orbis" title="" id="dhtml_menu-271">Orbis</a></li>
+
+</ul></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-4845">Cash Shop</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/cash-shop/beauty-parlor" title="" id="dhtml_menu-4847">Beauty Parlor</a></li>
+<li class="leaf last dhtml-menu "><a href="/cash-shop/gachapon" title="" id="dhtml_menu-4846">Gachapon</a></li>
+</ul></li>
+</ul>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-1" class="block block-block block-2 clear-both">
+  <div class="block-t">
+
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Affiliates</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <ul>
+
+<li><a href="http://www.sleepywood.net/">Sleepywood.net</a></li>
+<li><a href="http://www.mapletip.com/">MapleTip</a></li>
+<li><a href="http://www.basilmarket.com/">Basil Market</a></li>
+<li><a href="http://aquaroadradio.wordpress.com/">Aqua Road Radio</a></li>
+<li><a href="http://www.perioncorner.com/">Perion Corner</a></li>
+<li><a href="http://www.maple-radio.com/">Maple Radio</a></li>
+<li><a href="http://www.maple-news.com/">Maple News</a></li>
+<li><a href="http://mapledictionary.co.cc/">Maple Dictionary</a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-views-updated-block_1" class="block block-views block-3 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database Updates</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <div class="view view-updated view-id-updated view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+
+                <span class="field-content"><a href="/monster/dark-stump">Dark Stump</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 2.</span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/stump">Stump</a></span>
+
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 1.</span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/green-mushroom">Green Mushroom</a></span>
+  </div>
+
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/shroom">Shroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/orange-mushroom">Orange Mushroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div align="right"><a href="/database-updates">View more</a></div>
+    </div>
+  
+  
+</div>       </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-block-10" class="block block-block block-4 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Donation</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        Have a dollar or two to spare?
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="paypal-donation">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="10638353">
+<input type="image" src="/sites/all/themes/lithharbor/images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<h5><strong>Why should I donate?</strong></h5>
+
+Consider donating to help us with the high server costs of our database!<br />
+<a href="/why-should-i-donate">Read more details &raquo;</a>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-12" class="block block-block block-5 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+
+        <p><a href="http://twitter.com/hiddenstreet"><img src="http://www.hidden-street.net/images/twitter.gif" title="Follow Hidden Street on Twitter!" /></a></p>
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-facebook_fan-0" class="block block-facebook_fan block-6 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("7fee1a8c40ca9e1bbf4f1376d1eddb61");</script><fb:fan profile_id="119198064766791" stream="0" connections="6" logobar="0" width="180" height="260"></fb:fan>      </div>
+
+    </div>
+  </div>  
+</div>
+              </div>
+            
+            <div id="main">
+                              <div id="top-content" class="clear-both">
+                  <div id="block-block-5" class="block block-block block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+
+      
+      <div class="block-content content">
+        <div align="center" style="margin-bottom: 15px;">
+<!--JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918766|0|170|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="300" height="250"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+                </div>
+
+                    
+              <div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a></div></div>              
+              <div id="content">
+                                  <div class="title-t">
+                    <div class="title-b">
+                      <h1 class="title" id="page-title">Spear</h1>
+                    </div>
+                  </div>
+                                                <div class="clear-both"><!-- --></div>
+
+                                                <div id="content-content" class="clear-both">
+                  <div class="view view-weapons view-id-weapons view-display-id-page_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-1245" class="database node clear-block">
+<table id="1245">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear001.gif?1243736310" /></td>
+    <td width="145"><strong>Spear      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 10</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 32 (28-36)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+    <td><strong>Job:</strong>
+    Bowman, Thief, Warrior    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1,500 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/snail" alt="/tip.php?nid=80">Snail</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/lumi" alt="/tip.php?nid=12280">Lumi</a> (3,000 mesos), <a href="/npc/general-mau" alt="/tip.php?nid=11199">General Mau</a> (3,000 mesos), <a href="/npc/cutthroat-manny" alt="/tip.php?nid=5349">Cutthroat Manny</a> (3,000 mesos), <a href="/npc/river" alt="/tip.php?nid=5339">River</a> (3,000 mesos).</li>
+
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+
+    <div id="node-1246" class="database node clear-block">
+<table id="1246">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear012.gif?1243736511" /></td>
+    <td width="145"><strong>Red Ski      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 13</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 35 (32-39)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> HP +50 (46-52)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      5,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-1247" class="database node clear-block">
+
+<table id="1247">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear002.gif?1243736598" /></td>
+    <td width="145"><strong>Fork on a Stick      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 15</td>
+    <td width="186"><strong>Req Stats: </strong> STR 15</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 37 (33-41)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+
+    <td><strong>Job:</strong>
+    Bowman, Thief, Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      3,500 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/zombie-lupin" alt="/tip.php?nid=350">Zombie Lupin</a>, <a href="/monster/pig" alt="/tip.php?nid=161">Pig</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/lumi" alt="/tip.php?nid=12280">Lumi</a> (7,000 mesos), <a href="/npc/general-mau" alt="/tip.php?nid=11199">General Mau</a> (7,000 mesos), <a href="/npc/cutthroat-manny" alt="/tip.php?nid=5349">Cutthroat Manny</a> (7,000 mesos), <a href="/npc/river" alt="/tip.php?nid=5339">River</a> (7,000 mesos).</li>
+
+                    
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-1248" class="database node clear-block">
+<table id="1248">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear008.gif?1243736709" /></td>
+    <td width="145"><strong>Fish Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 20</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 40</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +4, Speed +4</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      32,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/surgeon-eye" alt="/tip.php?nid=13466">Surgeon Eye</a>, <a href="/monster/wild-boar" alt="/tip.php?nid=241">Wild Boar</a>, <a href="/monster/terrified-wild-boar" alt="/tip.php?nid=11397">Terrified Wild Boar</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+
+    <div id="node-1249" class="database node clear-block">
+<table id="1249">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear008_0.gif?1243736815" /></td>
+    <td width="145"><strong>Fish Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 20</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 42 (37-47)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +5 (4-7), Speed +5 (4-6)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      20,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/shade" alt="/tip.php?nid=9392">Shade</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/shinta" alt="/tip.php?nid=5928">Shinta</a> (150,000 mesos).</li>
+                    
+                      <li>This item can be obtained from <a href="/quest/el-nath-mt-aquaroad/kentas-research">Kenta's Research (Level 65 and above)</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-1250" class="database node clear-block">
+<table id="1250">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear015.gif?1243736894" /></td>
+    <td width="145"><strong>Bamboo Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 20</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 43 (37-47)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      24,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-1251" class="database node clear-block">
+<table id="1251">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear019.gif?1243736952" /></td>
+    <td width="145"><strong>Pumpkin Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 25</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 47 (41-53)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +1 (0-2), Accuracy +15 (12-17)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-9124" class="database node clear-block">
+<table id="9124">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="37" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/astaroth-two-handed-sword.png?1258010397" /></td>
+    <td width="145"><strong>Astaroth Spear      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 25</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 52</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +10, Accuracy +5</td>
+    <td><strong>No. of upgrades available:</strong> 10</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>You can feel Astaroth's dark energy.</p>
+
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Only one item per character.</p>
+</li><li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+
+    <div id="node-1252" class="database node clear-block">
+<table id="1252">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear003.gif?1243737036" /></td>
+    <td width="145"><strong>Forked Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> STR 100</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 52 (47-47)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      22,500 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/surgeon-eye" alt="/tip.php?nid=13466">Surgeon Eye</a>, <a href="/monster/rocky-mask" alt="/tip.php?nid=238">Rocky Mask</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/hid" alt="/tip.php?nid=5688">Hid</a> (60,000 mesos), <a href="/npc/mu-tan" alt="/tip.php?nid=6034">Mu Tan</a> (60,000 mesos), <a href="/npc/zaid" alt="/tip.php?nid=5826">Zaid</a> (60,000 mesos), <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (60,000 mesos), <a href="/npc/gong-gong" alt="/tip.php?nid=6033">Gong Gong</a> (60,000 mesos), <a href="/npc/kyle" alt="/tip.php?nid=5996">Kyle</a> (62,500 mesos), <a href="/npc/neri-the-fairy" alt="/tip.php?nid=5859">Neri the Fairy</a> (60,000 mesos), <a href="/npc/chan" alt="/tip.php?nid=6020">Chan</a> (60,000 mesos), <a href="/npc/chiang" alt="/tip.php?nid=8194">Chiang</a> (60,000 mesos).</li>
+
+                    
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by <a href="/npc/rydole">Rydole</a> of <a href="/map/mini-map/ludibrium-toy-factory-aparatus-room">Ludibrium: Toy Factory &lt;Aparatus Room&gt;</a> with 1 <a href="/items/manual/spear-forging-manual">Spear Forging Manual</a>, 1 <a href="/items/stimulator/spear-forging-stimulator">Spear Forging Stimulator</a> (optional), 2 <a href="/items/mineral/bronze-plate">Bronze Plate</a>, 3 <a href="/items/mineral/silver-plate">Silver Plate</a>, 40 <a href="/items/quest/screw">Screw</a> and 22,000 mesos.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-9650" class="database node clear-block">
+<table id="9650">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pink-flower-tube.png?1260856422" /></td>
+    <td width="145"><strong>Pink Flower Tube [Spear]      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 70</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +3, DEX +3, INT +3, LUK +3, Accuracy +5</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/event/2009-pink-flower-floatie">2009 Pink Flower Floatie! (Level 13 and above)</a> quest.</li>
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Attack Speed: Fast (5)</p>
+</li><li><p>One-of-a-kind.</p>
+</li><li><p>This item is limited by time.</p>
+</li>        </ul>
+      </td>
+
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-11761" class="database node clear-block">
+<table id="11761">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/maplemas-tree.png?1275896912" /></td>
+    <td width="145"><strong>Maplemas Tree      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 52 (46-59)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> MaxMP +100 (90-111)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-12011" class="database node clear-block">
+<table id="12011">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Zeco.png?1278524924" /></td>
+    <td width="145"><strong>Explorer&#039;s Zeco      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 62</div>
+
+                                    </td>
+    <td>
+	            <strong>Durability:</strong> 25000<br />
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +5, DEX +4</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      200 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>One-of-a-kind.</p>
+
+</li><li><p>Available from the Return of the Explorers Event from 16 June 2010 to 13 July 2010.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div id="node-1253" class="database node clear-block">
+<table id="1253">
+
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear011.gif?1243737129" /></td>
+    <td width="145"><strong>Orange Ski      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 33</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 55 (50-60)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> MP +50 (48-53)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      5,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-1254" class="database node clear-block">
+<table id="1254">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="29" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear004.gif?1243737253" /></td>
+    <td width="145"><strong>Nakamaki      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 115</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 57 (52-62)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (8)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      70,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/yellow-perfume-2" alt="/tip.php?nid=10702">Yellow Perfume [2]</a>, <a href="/monster/jr-pepe-doll" alt="/tip.php?nid=10684">Jr. Pepe Doll</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/moki" alt="/tip.php?nid=5647">Moki</a> (175,000 mesos), <a href="/npc/hid" alt="/tip.php?nid=5688">Hid</a> (175,000 mesos), <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (175,000 mesos), <a href="/npc/gong-gong" alt="/tip.php?nid=6033">Gong Gong</a> (175,000 mesos), <a href="/npc/scott" alt="/tip.php?nid=5842">Scott</a> (175,000 mesos), <a href="/npc/dr-san" alt="/tip.php?nid=5926">Dr. San</a> (175,000 mesos), <a href="/npc/chan" alt="/tip.php?nid=6020">Chan</a> (175,000 mesos), <a href="/npc/chiang" alt="/tip.php?nid=8194">Chiang</a> (175,000 mesos).</li>
+
+                    
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by <a href="/npc/rydole">Rydole</a> of <a href="/map/mini-map/ludibrium-toy-factory-aparatus-room">Ludibrium: Toy Factory &lt;Aparatus Room&gt;</a> with 1 <a href="/items/manual/spear-forging-manual">Spear Forging Manual</a>, 1 <a href="/items/stimulator/spear-forging-stimulator">Spear Forging Stimulator</a> (optional), 5 <a href="/items/mineral/steel-plate">Steel Plate</a>, 5 <a href="/items/mineral/mithril-plate">Mithril Plate</a>, 3 <a href="/items/jewel/garnet">Garnet</a>, 45 <a href="/items/quest/screw">Screw</a> and 39,000 mesos.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-9520" class="database node clear-block">
+<table id="9520">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/nakamaki.png?1260551327" /></td>
+    <td width="145"><strong>King Pepe Nakamaki      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+    <td width="186"><strong>Req Stats: </strong> STR 115</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 62</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/king-pepe-warrior-box">King Pepe Warrior Box</a> (1.0000000% chance), <a href="/items/treasures/king-pepe-warrior-weapon-box">King Pepe Warrior Weapon Box</a> (2.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-16 views-row-even">
+    <div id="node-15601" class="database node clear-block">
+<table id="15601">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-forked-spear.png?1309766196" /></td>
+    <td width="145"><strong>Chaos Forked Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 60, DEX 20</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (8)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-17 views-row-odd">
+    <div id="node-1255" class="database node clear-block">
+<table id="1255">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear005.gif?1243737387" /></td>
+    <td width="145"><strong>Zeco      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 40</td>
+    <td width="186"><strong>Req Stats: </strong> STR 130</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 62 (57-68)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      90,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/mango-bubble-tea" alt="/tip.php?nid=10679">Mango Bubble Tea</a>, <a href="/monster/spirit-of-rock" alt="/tip.php?nid=10730">Spirit of Rock</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/moki" alt="/tip.php?nid=5647">Moki</a> (225,000 mesos), <a href="/npc/hid" alt="/tip.php?nid=5688">Hid</a> (225,000 mesos), <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (225,000 mesos), <a href="/npc/gong-gong" alt="/tip.php?nid=6033">Gong Gong</a> (225,000 mesos), <a href="/npc/scott" alt="/tip.php?nid=5842">Scott</a> (225,000 mesos), <a href="/npc/dr-san" alt="/tip.php?nid=5926">Dr. San</a> (225,000 mesos), <a href="/npc/chan" alt="/tip.php?nid=6020">Chan</a> (225,000 mesos), <a href="/npc/chiang" alt="/tip.php?nid=8194">Chiang</a> (225,000 mesos).</li>
+
+                    
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by <a href="/npc/rydole">Rydole</a> of <a href="/map/mini-map/ludibrium-toy-factory-aparatus-room">Ludibrium: Toy Factory &lt;Aparatus Room&gt;</a> with 1 <a href="/items/manual/spear-forging-manual">Spear Forging Manual</a>, 1 <a href="/items/stimulator/spear-forging-stimulator">Spear Forging Stimulator</a> (optional), 3 <a href="/items/mineral/silver-plate">Silver Plate</a>, 5 <a href="/items/mineral/steel-plate">Steel Plate</a>, 5 <a href="/items/mineral/bronze-plate">Bronze Plate</a>, 50 <a href="/items/quest/screw">Screw</a> and 74,000 mesos.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-18 views-row-even">
+    <div id="node-1257" class="database node clear-block">
+<table id="1257">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear016.gif?1243737606" /></td>
+    <td width="145"><strong>Maple Impaler      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 43</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 65 (61-70)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +1 (0-2), Accuracy +30 (27-33)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      100,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/mithril-mutae" alt="/tip.php?nid=414">Mithril Mutae</a>, <a href="/monster/dark-nependeath" alt="/tip.php?nid=409">Dark Nependeath</a>, <a href="/monster/lunar-pixie" alt="/tip.php?nid=391">Lunar Pixie</a>, <a href="/monster/zeta-gray" alt="/tip.php?nid=381">Zeta Gray</a>, <a href="/monster/greatest-oldies" alt="/tip.php?nid=10727">Greatest Oldies</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Happy Three Year Anniversary event from 7 May 2008 to 10 June 2008 in MapleGlobal.</p>
+</li><li><p>Happy Four Year Anniversary event from 6 May 2009 to to 23 June 2009 in MapleGlobal.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-19 views-row-odd">
+
+    <div id="node-10321" class="database node clear-block">
+<table id="10321">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/fishing-pole.png?1262913541" /></td>
+    <td width="145"><strong>Fishing Pole      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 45</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 67</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +15</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      120,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/faust" alt="/tip.php?nid=432">Faust</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-20 views-row-even">
+
+    <div id="node-12525" class="database node clear-block">
+<table id="12525">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/1st-unwelcome-guest-spear.png?1282730557" /></td>
+    <td width="145"><strong>1st Unwelcome Guest Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 47</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 70</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +1, Accuracy +30</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      130,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-21 views-row-odd">
+    <div id="node-1256" class="database node clear-block">
+
+<table id="1256">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear006.gif?1243737506" /></td>
+    <td width="145"><strong>Serpent&#039;s Tongue      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 50</td>
+    <td width="186"><strong>Req Stats: </strong> STR 160</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 72 (67-78)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      150,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/iron-hog" alt="/tip.php?nid=378">Iron Hog</a>, <a href="/monster/drumming-bunny" alt="/tip.php?nid=266">Drumming Bunny</a>, <a href="/monster/king-clang-0" alt="/tip.php?nid=1008">King Clang</a>, <a href="/monster/prime-minister" alt="/tip.php?nid=9975">Prime Minister</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/world-tour/umis-ambition">Umi's Ambition (Level 50 and above)</a> quest.</li>
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by <a href="/npc/rydole">Rydole</a> of <a href="/map/mini-map/ludibrium-toy-factory-aparatus-room">Ludibrium: Toy Factory &lt;Aparatus Room&gt;</a> with 1 <a href="/items/manual/spear-forging-manual">Spear Forging Manual</a>, 1 <a href="/items/stimulator/spear-forging-stimulator">Spear Forging Stimulator</a> (optional), 1 <a href="/items/crystal/power-crystal">Power Crystal</a>, 2 <a href="/items/jewel/black-crystal">Black Crystal</a>, 7 <a href="/items/mineral/bronze-plate">Bronze Plate</a>, 5 <a href="/items/jewel/garnet">Garnet</a>, 60 <a href="/items/quest/screw">Screw</a> and 240,000 mesos.</p>
+
+</li><li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 75,000 mesos, forge this item with 1 <a href="/items/mineral/bronze-plate">Bronze Plate</a> and 20 <a href="/items/monster-crystals/basic-monster-crystal-1">Basic Monster Crystal 1</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-22 views-row-even">
+    <div id="node-1258" class="database node clear-block">
+<table id="1258">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear014.gif?1243740024" /></td>
+    <td width="145"><strong>Green Ski      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 55</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 78 (78-83)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +2 (1-4), DEX +2 (1-3)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      20,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-23 views-row-odd">
+    <div id="node-1259" class="database node clear-block">
+<table id="1259">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear007.gif?1243740105" /></td>
+    <td width="145"><strong>Holy Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 60</td>
+    <td width="186"><strong>Req Stats: </strong> STR 180</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82 (77-87)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      190,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/ice-drake" alt="/tip.php?nid=543">Ice Drake</a>, <a href="/monster/strong-stone-goblin-1" alt="/tip.php?nid=11945">Strong Stone Goblin [1]</a>, <a href="/monster/emergency-guard-robot-l" alt="/tip.php?nid=13436">Emergency Guard Robot L</a>, <a href="/monster/guard-robot" alt="/tip.php?nid=13438">Guard Robot</a>, <a href="/monster/robo" alt="/tip.php?nid=372">Robo</a>, <a href="/monster/poison-poopa" alt="/tip.php?nid=355">Poison Poopa</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 95,000 mesos, forge this item with 2 <a href="/items/mineral/steel-plate">Steel Plate</a> and 22 <a href="/items/monster-crystals/basic-monster-crystal-2">Basic Monster Crystal 2</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-24 views-row-even">
+    <div id="node-14595" class="database node clear-block">
+<table id="14595">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/empresss-fine-holy-spear.png?1299478725" /></td>
+    <td width="145"><strong>Empress&#039;s Fine Holy Spear      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 60</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item is part of the <strong>Empress's Fine Set</strong>. The following equipment are part of the set:<br />
+<a href="/eq/bow/empresss-fine-asianic-bow">Empress&#039;s Fine Asianic Bow</a><br />
+<a href="/eq/gun/empresss-fine-burning-hell">Empress&#039;s Fine Burning Hell</a><br />
+
+<a href="/eq/claw/empresss-fine-dark-gigantic">Empress&#039;s Fine Dark Gigantic</a><br />
+<a href="/eq/dagger/empresss-fine-deadly-fin">Empress&#039;s Fine Deadly Fin</a><br />
+<a href="/eq/wand/empresss-fine-evil-tale">Empress&#039;s Fine Evil Tale</a><br />
+<a href="/eq/gloves/empresss-fine-gloves">Empress&#039;s Fine Gloves</a><br />
+<a href="/eq/crossbow/empresss-fine-golden-crow">Empress&#039;s Fine Golden Crow</a><br />
+<a href="/eq/hat/empresss-fine-hat">Empress&#039;s Fine Hat</a><br />
+
+<a href="/eq/spear/empresss-fine-holy-spear">Empress&#039;s Fine Holy Spear</a><br />
+<a href="/eq/overall/empresss-fine-robe">Empress&#039;s Fine Robe</a><br />
+<a href="/eq/knuckle/empresss-fine-seraphims">Empress&#039;s Fine Seraphims</a><br />
+<a href="/eq/shoes/empresss-fine-shoes">Empress&#039;s Fine Shoes</a><br />
+<a href="/eq/two-handed-sword/empresss-fine-sparta">Empress&#039;s Fine Sparta</a></p>
+</li><li><p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+
+Weapon Def.: +50<br />
+Magic Def.: +50<br />
+MaxHP: +100<br />
+MaxMP: +100<br />
+All Stats: +4</p>
+</li><li><p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +5<br />
+Magic Attack: +5<br />
+
+Weapon Def.: +100<br />
+Magic Def.: +100<br />
+MaxHP: +100<br />
+MaxMP: +100<br />
+All Stats: +6<br />
+Speed +20</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-25 views-row-odd">
+    <div id="node-1260" class="database node clear-block">
+<table id="1260">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear026.gif?1243740173" /></td>
+    <td width="145"><strong>Maple Soul Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 64</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 85 (80-90)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +2, Accuracy +35 (32-38)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      240,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/cellion" alt="/tip.php?nid=993">Cellion</a>, <a href="/monster/mt-09" alt="/tip.php?nid=999">MT-09</a>, <a href="/monster/hector" alt="/tip.php?nid=1003">Hector</a>, <a href="/monster/homun" alt="/tip.php?nid=552">Homun</a>, <a href="/monster/sage-cat" alt="/tip.php?nid=559">Sage Cat</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Happy Three Year Anniversary event from 7 May 2008 to 10 June 2008 in MapleGlobal.</p>
+</li><li><p>Happy Four Year Anniversary event from 6 May 2009 to to 23 June 2009 in MapleGlobal.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-26 views-row-even">
+
+    <div id="node-15602" class="database node clear-block">
+<table id="15602">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-holy-spear.png?1309766233" /></td>
+    <td width="145"><strong>Chaos Holy Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 65</td>
+    <td width="186"><strong>Req Stats: </strong> STR 180, DEX 50</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 97</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-27 views-row-odd">
+    <div id="node-12526" class="database node clear-block">
+
+<table id="12526">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/2nd-unwelcome-guest-spear.png?1282730722" /></td>
+    <td width="145"><strong>2nd Unwelcome Guest Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 67</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 86</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2, Accuracy +35</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      245,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-28 views-row-even">
+    <div id="node-1261" class="database node clear-block">
+
+<table id="1261">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear009.gif?1243740288" /></td>
+    <td width="145"><strong>Redemption      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> STR 220</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 87 (81-92)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (8)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +3 (2-5)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      250,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/rodeo" alt="/tip.php?nid=8208">Rodeo</a>, <a href="/monster/racoco" alt="/tip.php?nid=13448">Racoco</a>, <a href="/monster/scarf-plead" alt="/tip.php?nid=249">Scarf Plead</a>, <a href="/monster/nine-tailed-fox" alt="/tip.php?nid=583">Nine-Tailed Fox</a>, <a href="/monster/jr-balrog" alt="/tip.php?nid=628">Jr. Balrog</a>, <a href="/monster/snack-bar" alt="/tip.php?nid=10845">Snack Bar</a>, <a href="/monster/rombot" alt="/tip.php?nid=410">Rombot</a>, <a href="/monster/tae-roon" alt="/tip.php?nid=585">Tae Roon</a>, <a href="/monster/eliza" alt="/tip.php?nid=659">Eliza</a>, <a href="/monster/seruf-0" alt="/tip.php?nid=405">Seruf</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/world-tour/umis-ambition">Umi's Ambition (Level 50 and above)</a> quest.</li>
+          
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 10 <a href="/items/mineral/adamantium-plate">Adamantium Plate</a> and 3 <a href="/items/profession-materials/intermediate-abrasive">Intermediate Abrasive</a>.</p>
+</li>        </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-29 views-row-odd">
+    <div id="node-1262" class="database node clear-block">
+<table id="1262">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear025.gif?1243740380" /></td>
+
+    <td width="145"><strong>Sunspear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> STR 220</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 90</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>One of the Glimmer Man's custom weapons, this spear contains the fiery power of a blazing red sun.</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by <a href="/npc/the-glimmer-man">The Glimmer Man</a> at <a href="/map/mini-map/new-leaf-city-town-street-new-leaf-city-town-center">New Leaf City Town Street: New Leaf City - Town Center</a> with 1 <a href="/items/leftover/white-versal-materia">White Versal Materia</a> and 7 <a href="/items/jewel/black-crystal">Black Crystal</a>s to obtain the <a href="/items/leftover/materia-orb">Materia Orb</a>, which should then be brought to <a href="/npc/spindle">Spindle</a> at <a href="/map/mini-map/omega-sector">Omega Sector</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-30 views-row-even">
+    <div id="node-14598" class="database node clear-block">
+<table id="14598">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/xerxess-redemption.png?1299478979" /></td>
+    <td width="145"><strong>Xerxes&#039;s Redemption      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> STR 220</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 91</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (8)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +3</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/xerxess-warrior-weapon-box">Xerxes's Warrior Weapon Box</a> (2.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-31 views-row-odd">
+    <div id="node-14941" class="database node clear-block">
+<table id="14941">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/maple-pyrope-spear.png?1304788216" /></td>
+    <td width="145"><strong>Maple Pyrope Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 77</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 91</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +3, Accuracy +40</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      33,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/deep-buffoon" alt="/tip.php?nid=623">Deep Buffoon</a>, <a href="/monster/robby" alt="/tip.php?nid=10740">Robby</a>, <a href="/monster/taurospear" alt="/tip.php?nid=607">Taurospear</a>, <a href="/monster/birk" alt="/tip.php?nid=664">Birk</a>, <a href="/monster/dunas" alt="/tip.php?nid=10753">Dunas</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-32 views-row-even">
+
+    <div id="node-1263" class="database node clear-block">
+<table id="1263">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear010.gif?1243740473" /></td>
+    <td width="145"><strong>Omega Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 250</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 92 (88-97)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      310,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/booper-scarlion" alt="/tip.php?nid=8213">Booper Scarlion</a>, <a href="/monster/platoon-chronos" alt="/tip.php?nid=373">Platoon Chronos</a>, <a href="/monster/guard-robot-l" alt="/tip.php?nid=13460">Guard Robot L</a>, <a href="/monster/triple-rumo" alt="/tip.php?nid=344">Triple Rumo</a>, <a href="/monster/bain" alt="/tip.php?nid=677">Bain</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/etc/devils-dice">Devil's Dice</a> (0.3311258% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 10 <a href="/items/crystal/dex-crystal">DEX Crystal</a>, 3 <a href="/items/profession-materials/intermediate-abrasive">Intermediate Abrasive</a>, and 8 <a href="/items/profession-materials/intermediate-item-crystal">Intermediate Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-33 views-row-odd">
+    <div id="node-9047" class="database node clear-block">
+<table id="9047">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-omega-spear.png?1257948286" /></td>
+    <td width="145"><strong>Balrog&#039;s Omega Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 250</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 89</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      310,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-34 views-row-even">
+    <div id="node-14596" class="database node clear-block">
+<table id="14596">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/empresss-brilliant-omega-spear.png?1299478806" /></td>
+    <td width="145"><strong>Empress&#039;s Brilliant Omega Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 250</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 92</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item is part of the <strong>Empress's Brilliant Set</strong>. The following equipment are part of the set:<br />
+
+<a href="/eq/claw/empresss-brilliant-black-mamba">Empress&#039;s Brilliant Black Mamba</a><br />
+<a href="/eq/dagger/empresss-brilliant-dragons-tail">Empress&#039;s Brilliant Dragon&#039;s Tail</a><br />
+<a href="/eq/gloves/empresss-brilliant-gloves">Empress&#039;s Brilliant Gloves</a><br />
+<a href="/eq/hat/empresss-brilliant-hat">Empress&#039;s Brilliant Hat</a><br />
+<a href="/eq/two-handed-sword/empresss-brilliant-heavens-gate">Empress&#039;s Brilliant Heaven&#039;s Gate</a><br />
+
+<a href="/eq/gun/empresss-brilliant-infinitys-wrath">Empress&#039;s Brilliant Infinity&#039;s Wrath</a><br />
+<a href="/eq/bow/empresss-brilliant-marine-arund">Empress&#039;s Brilliant Marine Arund</a><br />
+<a href="/eq/crossbow/empresss-brilliant-marine-raven">Empress&#039;s Brilliant Marine Raven</a><br />
+<a href="/eq/spear/empresss-brilliant-omega-spear">Empress&#039;s Brilliant Omega Spear</a><br />
+<a href="/eq/wand/empresss-brilliant-phoenix-wand">Empress&#039;s Brilliant Phoenix Wand</a><br />
+<a href="/eq/overall/empresss-brilliant-robe">Empress&#039;s Brilliant Robe</a><br />
+
+<a href="/eq/shoes/empresss-brilliant-shoes">Empress&#039;s Brilliant Shoes</a><br />
+<a href="/eq/knuckle/empresss-brilliant-steel-renault">Empress&#039;s Brilliant Steel Renault</a></p>
+</li><li><p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def.: +50<br />
+Magic Def.: +50<br />
+MaxHP: +150<br />
+MaxMP: +150</p>
+
+</li><li><p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +7<br />
+Magic Attack: +7<br />
+Weapon Def.: +150<br />
+Magic Def.: +150<br />
+Speed: +20<br />
+Accuracy +25<br />
+All Stats: +8</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-35 views-row-odd">
+    <div id="node-1264" class="database node clear-block">
+<table id="1264">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear013.gif?1243740536" /></td>
+    <td width="145"><strong>Sky Ski      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 85</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 94 (90-100)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +10 (8-12)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      20,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-36 views-row-even">
+    <div id="node-12527" class="database node clear-block">
+
+<table id="12527">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/3rd-unwelcome-guest-spear.png?1282730862" /></td>
+    <td width="145"><strong>3rd Unwelcome Guest Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 87</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 95</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      340,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-37 views-row-odd">
+    <div id="node-1265" class="database node clear-block">
+
+<table id="1265">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear017.gif?1243740626" /></td>
+    <td width="145"><strong>Fairfrozen      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 90</td>
+    <td width="186"><strong>Req Stats: </strong> STR 280</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 97 (92-102)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      370,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chimera" alt="/tip.php?nid=665">Chimera</a>, <a href="/monster/qualm-monk-trainee" alt="/tip.php?nid=6253">Qualm Monk Trainee</a>, <a href="/monster/imperial-guard" alt="/tip.php?nid=10751">Imperial Guard</a>, <a href="/monster/nibelung-3" alt="/tip.php?nid=10758">Nibelung [3]</a>, <a href="/monster/aufheben" alt="/tip.php?nid=10754">Aufheben</a>, <a href="/monster/homunscullo" alt="/tip.php?nid=648">Homunscullo</a>, <a href="/monster/security-system" alt="/tip.php?nid=13458">Security System</a>, <a href="/monster/dark-sand-dwarf" alt="/tip.php?nid=294">Dark Sand Dwarf</a>, <a href="/monster/bellflower-root" alt="/tip.php?nid=997">Bellflower Root</a>, <a href="/monster/blood-harp" alt="/tip.php?nid=658">Blood Harp</a>, <a href="/monster/crocky-the-gatekeeper" alt="/tip.php?nid=14639">Crocky the Gatekeeper</a>, <a href="/monster/mutant-snail" alt="/tip.php?nid=16571">Mutant Snail</a>, <a href="/monster/female-boss" alt="/tip.php?nid=757">Female Boss</a>, <a href="/monster/coco" alt="/tip.php?nid=17947">Coco</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 10 <a href="/items/jewel/topaz">Topaz</a>, 3 <a href="/items/profession-materials/intermediate-abrasive">Intermediate Abrasive</a>, and 8 <a href="/items/profession-materials/intermediate-item-crystal">Intermediate Item Crystal</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-38 views-row-even">
+    <div id="node-9048" class="database node clear-block">
+<table id="9048">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-fairfrozen.png?1257948417" /></td>
+    <td width="145"><strong>Balrog&#039;s Fairfrozen      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 90</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 280</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 97</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+    <td>
+      <strong>Sold for:</strong> 
+      370,000 mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-39 views-row-odd">
+    <div id="node-15603" class="database node clear-block">
+<table id="15603">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-fairfrozen.png?1309766691" /></td>
+    <td width="145"><strong>Chaos Fairfrozen      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 95</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 270, DEX 80</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 112</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-40 views-row-even">
+    <div id="node-1266" class="database node clear-block">
+<table id="1266">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear023.gif?1243740706" /></td>
+    <td width="145"><strong>Pinaka      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> STR 310</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 102 (97-107)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      490,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chaos-zakum-3" alt="/tip.php?nid=12238">Chaos Zakum [3]</a>, <a href="/monster/lyka" alt="/tip.php?nid=6262">Lyka</a>, <a href="/monster/soaring-griffey" alt="/tip.php?nid=11403">Soaring Griffey</a>, <a href="/monster/zakum3" alt="/tip.php?nid=764">Zakum3</a>, <a href="/monster/mutant-slime" alt="/tip.php?nid=16573">Mutant Slime</a>, <a href="/monster/manon" alt="/tip.php?nid=733">Manon</a>, <a href="/monster/griffey" alt="/tip.php?nid=734">Griffey</a>, <a href="/monster/horntails-head-b" alt="/tip.php?nid=778">Horntail's Head B</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/dragon-riders-warrior-box">Dragon Rider's Warrior Box</a> (1.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/pinaka-recipe">Pinaka Recipe</a>, 10 <a href="/items/jewel/diamond">Diamond</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-41 views-row-odd">
+    <div id="node-1267" class="database node clear-block">
+<table id="1267">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="37" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear028.png?1243740767" /></td>
+    <td width="145"><strong>Stormshear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> STR 310</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 102 (102-104)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +5 (5-6)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      1,100,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-42 views-row-even">
+    <div id="node-1268" class="database node clear-block">
+
+<table id="1268">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear027.png?1243740860" /></td>
+    <td width="145"><strong>Pooh Pooh Shovel      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 105</td>
+    <td width="186"><strong>Req Stats: </strong> STR 325</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 105</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +3</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-43 views-row-odd">
+    <div id="node-11425" class="database node clear-block">
+
+<table id="11425">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bellum.png?1270686607" /></td>
+    <td width="145"><strong>Bellum Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 105</td>
+    <td width="186"><strong>Req Stats: </strong> STR 325</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 105</div>
+                                    </td>
+    <td>
+	            <strong>Durability:</strong> 25000<br />
+
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +1, DEX +1</td>
+
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/dragon-riders-warrior-box">Dragon Rider's Warrior Box</a> (1.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p><strong>Mob:</strong><br />
+Category - Immaterial<br />
+Damage - 20%</p>
+</li><li><p><strong>Critical:</strong><br />
+
+Required Job - Dark Knight<br />
+Probability - 5%<br />
+Damage - 20%</p>
+</li><li><p><strong>Boss:</strong><br />
+Requires 100 Hands<br />
+Probability - 3%<br />
+Damage - 10%</p>
+</li><li><p>Only specifically designated scrolls can be used on it.</p>
+</li>        </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-44 views-row-even">
+    <div id="node-12528" class="database node clear-block">
+<table id="12528">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/last-unwelcome-guest-spear.png?1282731051" /></td>
+
+    <td width="145"><strong>Last Unwelcome Guest Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 107</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 105</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+    <td><strong>Job:</strong>
+
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      515,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-45 views-row-odd">
+    <div id="node-1269" class="database node clear-block">
+
+<table id="1269">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/spear024.gif?1243740943" /></td>
+    <td width="145"><strong>Dragon Faltizan      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> STR 340</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 107 (104-110)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      530,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/horntails-head-b" alt="/tip.php?nid=778">Horntail's Head B</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/dragon-faltizan-recipe">Dragon Faltizan Recipe</a>, 10 <a href="/items/jewel/garnet">Garnet</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-46 views-row-even">
+    <div id="node-8058" class="database node clear-block">
+<table id="8058">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.icon__24.png?1256138140" /></td>
+    <td width="145"><strong>Reverse Alchupiz      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 370</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 112</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      570,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+      <tr>
+      <td colspan="4"><strong>Equipment Level Up Info:</strong> 
+        <ul>
+          <li><p><strong>Level 1</strong> - requires 70 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 2</strong> - requires 75 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 3</strong> - requires 80 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p>When the final level of this item is reached, there's a 10% chance the skill <a href="/character/skill/beholder">Beholder</a> will level up by 1.</p>
+</li>        </ul>
+      </td>
+    </tr>
+    
+      <tr>
+
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/reverse-alchupiz-recipe">Reverse Alchupiz Recipe</a>, 10 <a href="/items/jewel/black-crystal">Black Crystal</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, 36 <a href="/items/jewel/piece-of-time">Piece of Time</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-47 views-row-odd">
+    <div id="node-8059" class="database node clear-block">
+<table id="8059">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.icon__24.png?1256138140" /></td>
+    <td width="145"><strong>Timeless Alchupiz      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> STR 370</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 114</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      570,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+      <tr>
+      <td colspan="4"><strong>Equipment Level Up Info:</strong> 
+        <ul>
+          <li><p><strong>Level 1</strong> - requires 80 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 2</strong> - requires 90 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 3</strong> - requires 100 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 4</strong> - requires 110 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 5</strong> - requires 120 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases STR between a minimum of 1 and a maximum of 2.<br />
+Increases DEX between a minimum of 0 and a maximum of 1.</p>
+</li><li><p>When the final level of this item is reached, there's a 10% chance the skill <a href="/character/skill/beholder">Beholder</a> will level up by 1.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/timeless-alchupiz-recipe">Timeless Alchupiz Recipe</a>, 10 <a href="/items/jewel/black-crystal">Black Crystal</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, 3 <a href="/items/jewel/rock-of-time">Rock of Time</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-48 views-row-even">
+    <div id="node-14597" class="database node clear-block">
+<table id="14597">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="37" height="37" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/marx-von-leon-spear.png?1299478900" /></td>
+    <td width="145"><strong>Marx Von Leon Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> STR 370, DEX 105</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 114</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</p>
+
+</li><li><p>This item is part of the <strong>Marx Von Leon Set</strong>. The following equipment are part of the set:<br />
+<a href="/eq/overall/marx-von-leon-battle-suit">Marx Von Leon Battle Suit</a><br />
+<a href="/eq/cape/marx-von-leon-cape">Marx Von Leon Cape</a><br />
+<a href="/eq/gloves/marx-von-leon-gloves">Marx Von Leon Gloves</a><br />
+<a href="/eq/polearm/marx-von-leon-halberd">Marx Von Leon Halberd</a><br />
+<a href="/eq/hat/marx-von-leon-helmet">Marx Von Leon Helmet</a><br />
+<a href="/eq/one-handed-sword/marx-von-leon-sabre">Marx Von Leon Sabre</a><br />
+<a href="/eq/spear/marx-von-leon-spear">Marx Von Leon Spear</a><br />
+
+<a href="/eq/two-handed-sword/marx-von-leon-sword">Marx Von Leon Sword</a><br />
+<a href="/eq/shoes/marx-von-leon-war-boots">Marx Von Leon War Boots</a></p>
+</li><li><p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def.: +100<br />
+Magic Def.: +100<br />
+Accuracy: +100<br />
+Avoidability: +100<br />
+All Stats: +4</p>
+
+</li><li><p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack +10<br />
+Magic Attack +10<br />
+Weapon Def. +150<br />
+Magic Def. +150<br />
+Speed +10<br />
+Jump +15<br />
+All Stats +6</p>
+
+</li><li><p><strong>6 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def. +200<br />
+Magic Def. +200<br />
+All Stats +10<br />
+STR +4<br />
+DEX +4<br />
+MaxHP +10%<br />
+MaxMP +10%<br />
+
+Ignore enemy's defense by 30%<br />
+5% chance to hit the enemy with a Level 3 Freeze</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-49 views-row-odd">
+    <div id="node-12529" class="database node clear-block">
+
+<table id="12529">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/vip-spear.png?1282731153" /></td>
+    <td width="145"><strong>VIP Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 127</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 122</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +8, DEX +4</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      570,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-50 views-row-even">
+    <div id="node-15600" class="database node clear-block">
+
+<table id="15600">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/agares-bloody-spear.png?1309766125" /></td>
+    <td width="145"><strong>Agares Bloody Spear      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> STR 400, DEX 160</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 119</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +8, DEX +4, Accuracy +50</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +90      </td>
+
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item is part of the <strong>Agares Bloody Set</strong>. The following equipment are part of the set:<br />
+
+<a href="/eq/hat/agares-bloody-gear">Agares Bloody Gear</a><br />
+<a href="/eq/cape/agares-bloody-cape">Agares Bloody Cape</a><br />
+<a href="/eq/gloves/agares-bloody-gauntlets">Agares Bloody Gauntlets</a><br />
+<a href="/eq/overall/agares-bloody-mail">Agares Bloody Mail</a><br />
+<a href="/eq/shoes/agares-bloody-boots">Agares Bloody Boots</a><br />
+<a href="/eq/one-handed-sword/agares-bloody-terror">Agares Bloody Terror</a><br />
+<a href="/eq/one-handed-axe/agares-bloody-hammer">Agares Bloody Hammer</a><br />
+<a href="/eq/two-handed-sword/agares-bloody-zweihander">Agares Bloody Zweihander</a><br />
+<a href="/eq/two-handed-axe/agares-bloody-giant-axe">Agares Bloody Giant Axe</a><br />
+
+<a href="/eq/two-handed-blunt-weapon/agares-bloody-maul">Agares Bloody Maul</a><br />
+<a href="/eq/spear/agares-bloody-spear">Agares Bloody Spear</a><br />
+<a href="/eq/polearm/agares-bloody-pole-arm">Agares Bloody Pole Arm</a></p>
+<p><strong>3 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def.: +350<br />
+Magic Def.: +350</p>
+<p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+
+All Stats: +10<br />
+PVP Damage: +4%</p>
+<p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+PVP Damage: +5%<br />
+MaxHP: +15%<br />
+MaxMP: +15%</p>
+<p><strong>6 equipment</strong> from this set would give the following benefits:<br />
+
+All Stats: +15<br />
+PVP Damage: +6%</p>
+</li><li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/agares-bloody-spear-recipe">Agares Bloody Spear Recipe</a>, 2 <a href="/items/mineral/lidium">Lidium</a>, 1 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, 8 <a href="/items/crystal/wisdom-crystal">Wisdom Crystal</a>, 30 <a href="/items/leftover/gallant-emblem">Gallant Emblem</a>, and 8 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-51 views-row-odd views-row-last">
+    <div id="node-15599" class="database node clear-block">
+<table id="15599">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="40" height="39" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/lionheart-fuscina.png?1309766044" /></td>
+    <td width="145"><strong>Lionheart Fuscina      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 140</td>
+    <td width="186"><strong>Req Stats: </strong> STR 420, DEX 170</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 137</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Slow (7)          </td>
+
+    <td><strong>Job:</strong>
+    Warrior    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +35, DEX +20, Accuracy +100</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +100      </td>
+
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/cygnus" alt="/tip.php?nid=17234">Cygnus</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item is part of the <strong>Lionheart Set</strong>. The following equipment are part of the set:<br />
+
+<a href="/eq/hat/lionheart-battle-helm">Lionheart Battle Helm</a><br />
+<a href="/eq/cape/lionheart-battle-cape">Lionheart Battle Cape</a><br />
+<a href="/eq/gloves/lionheart-battle-bracers">Lionheart Battle Bracers</a><br />
+<a href="/eq/overall/lionheart-battle-mail">Lionheart Battle Mail</a><br />
+<a href="/eq/shoes/lionheart-battle-boots">Lionheart Battle Boots</a><br />
+<a href="/eq/one-handed-sword/lionheart-cutlass">Lionheart Cutlass</a><br />
+<a href="/eq/two-handed-sword/lionheart-battle-scimitar">Lionheart Battle Scimitar</a><br />
+<a href="/eq/spear/lionheart-fuscina">Lionheart Fuscina</a><br />
+<a href="/eq/polearm/lionheart-partisan">Lionheart Partisan</a></p>
+
+<p><strong>2 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def.: +300<br />
+Magic Def.: +300<br />
+Avoidability: +200<br />
+Accuracy: +200</p>
+<p><strong>3 equipment</strong> from this set would give the following benefits:<br />
+MaxHP: +15%<br />
+
+MaxMP: +15%</p>
+<p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +15<br />
+Reduce the duration of all status abnormalities by 2 seconds.</p>
+<p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+All Stats: +20<br />
+All Skills: +2 skill levels</p>
+
+<p><strong>6 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +30<br />
+Increase your damage by 30% against bosses.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                 </div>
+              </div>
+      
+              
+              <div id="bottom-content">
+                                  <div id="block-block-13" class="block block-block block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+
+        <!--JavaScript Tag // Tag for network 5223: Gamer DNA Media // Website: HiddenStreet // Page: Global.hidden-Street // Placement: Global.hidden-Street-Site Skin-1 x 1 (1825691) // created at: Jan 13, 2011 10:36:22 AM-->
+<script language="javascript"><!--
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn/3.0/5223/1825691/0/16/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp=[group];misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" target="_blank"><img src="http://helios.gamerdna.com/adserv/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" border="0" width="1" height="1"></a></noscript>
+<!-- End of JavaScript Tag -->      </div>
+    </div>
+  </div>  
+</div>
+                                <div id="back-to-top"><a href="#top">Top</a></div>
+              </div>
+
+            </div>
+
+            <div class="clear-both"><!-- --></div>
+          </div>
+
+                      <div id="sidebar-right">
+              <div id="block-block-4" class="block block-block block-1 block-first clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+
+          <div class="block-subject-b">
+            <h2 class="block-subject">Sponsors</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <div align="center">
+<!-- JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918762|0|154|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="160" height="600"></a></noscript>
+
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-user-3" class="block block-user block-2 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+
+            <h2 class="block-subject">Who's online</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        There are currently <em>0 users</em> and <em>769 guests</em> online.      </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-views-quote-block_1" class="block block-views block-3 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div class="view view-quote view-id-quote view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+      
+  <div class="views-field-field-quote-value">
+                <div class="field-content">We are not the GameMasters (GM) for MapleStory.</div>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>       </div>
+    </div>
+  </div>  
+
+</div>
+            </div>
+          
+          <div class="clear-both"><!-- --></div>
+        </div>
+      </div>
+    </div>
+
+          <div id="footer">
+        <div id="footer-message">
+          Copyright &copy; 2004-2011 Hidden Street. <a href="/privacy-policy">Privacy Policy</a><br /><br />
+
+MapleStory and any related images and content are copyrighted by Nexon.
+<br /><br />
+Hidden Street is a not-for-profit fansite set up for the sole purpose of providing cohesive and comprehensive information to MapleStory gamers. Advertisements found in this site are to support server and related costs of maintaining this website.        </div>
+      </div>
+      </div>
+</div>
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_41ef61120bf2352553be89269f538c45.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+//--><!]]>
+</script>
+
+<!-- COMSCORE -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+
+</script>
+<script type="text/javascript">
+COMSCORE.beacon({
+	c1:2,
+	c2:"6885237",
+	c3:"",
+	c4:"",
+	c5:"",
+	c6:"",
+	c15:""
+});
+</script>
+<noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=6885237&c3=&c4=&c5=&c6=&c15=&cj=1" /></noscript>
+<!-- /COMSCORE -->
+</body>
+</html>

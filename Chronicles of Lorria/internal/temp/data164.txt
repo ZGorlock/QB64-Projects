@@ -1,0 +1,10 @@
+int32 *_FUNC_OSC_BIT1_OSC=NULL;
+if(_FUNC_OSC_BIT1_OSC==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_OSC_BIT1_OSC=(int32*)(dblock+cmem_sp);
+*_FUNC_OSC_BIT1_OSC=0;
+}
+uint8 pass6845;
+uint8 pass6846;
+uint8 pass6847;

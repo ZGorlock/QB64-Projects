@@ -1,0 +1,70 @@
+int8 *_SUB_PRINTTEXTBOX_BYTE_THICKENBOX=NULL;
+if(_SUB_PRINTTEXTBOX_BYTE_THICKENBOX==NULL){
+_SUB_PRINTTEXTBOX_BYTE_THICKENBOX=(int8*)mem_static_malloc(1);
+*_SUB_PRINTTEXTBOX_BYTE_THICKENBOX=0;
+}
+int16 *_SUB_PRINTTEXTBOX_INTEGER_CHECKCOLORS=NULL;
+if(_SUB_PRINTTEXTBOX_INTEGER_CHECKCOLORS==NULL){
+_SUB_PRINTTEXTBOX_INTEGER_CHECKCOLORS=(int16*)mem_static_malloc(2);
+*_SUB_PRINTTEXTBOX_INTEGER_CHECKCOLORS=0;
+}
+int16 *_SUB_PRINTTEXTBOX_INTEGER_CHECKLINKS=NULL;
+if(_SUB_PRINTTEXTBOX_INTEGER_CHECKLINKS==NULL){
+_SUB_PRINTTEXTBOX_INTEGER_CHECKLINKS=(int16*)mem_static_malloc(2);
+*_SUB_PRINTTEXTBOX_INTEGER_CHECKLINKS=0;
+}
+int16 *_SUB_PRINTTEXTBOX_INTEGER_PRINTLINES=NULL;
+if(_SUB_PRINTTEXTBOX_INTEGER_PRINTLINES==NULL){
+_SUB_PRINTTEXTBOX_INTEGER_PRINTLINES=(int16*)mem_static_malloc(2);
+*_SUB_PRINTTEXTBOX_INTEGER_PRINTLINES=0;
+}
+uint32 *_SUB_PRINTTEXTBOX_ULONG_ENDLINE=NULL;
+if(_SUB_PRINTTEXTBOX_ULONG_ENDLINE==NULL){
+_SUB_PRINTTEXTBOX_ULONG_ENDLINE=(uint32*)mem_static_malloc(4);
+*_SUB_PRINTTEXTBOX_ULONG_ENDLINE=0;
+}
+float *_SUB_PRINTTEXTBOX_SINGLE_QUEUE=NULL;
+if(_SUB_PRINTTEXTBOX_SINGLE_QUEUE==NULL){
+_SUB_PRINTTEXTBOX_SINGLE_QUEUE=(float*)mem_static_malloc(4);
+*_SUB_PRINTTEXTBOX_SINGLE_QUEUE=0;
+}
+double fornext_value8855;
+double fornext_finalvalue8855;
+double fornext_step8855;
+uint8 fornext_step_negative8855;
+int32 fornext_value8857;
+int32 fornext_finalvalue8857;
+int32 fornext_step8857;
+uint8 fornext_step_negative8857;
+static int32 sc_8858;
+int32 fornext_value8860;
+int32 fornext_finalvalue8860;
+int32 fornext_step8860;
+uint8 fornext_step_negative8860;
+int32 fornext_value8862;
+int32 fornext_finalvalue8862;
+int32 fornext_step8862;
+uint8 fornext_step_negative8862;
+int32 fornext_value8864;
+int32 fornext_finalvalue8864;
+int32 fornext_step8864;
+uint8 fornext_step_negative8864;
+static int32 sc_8865;
+float *_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARSIZE=NULL;
+if(_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARSIZE==NULL){
+_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARSIZE=(float*)mem_static_malloc(4);
+*_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARSIZE=0;
+}
+float *_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARLOC=NULL;
+if(_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARLOC==NULL){
+_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARLOC=(float*)mem_static_malloc(4);
+*_SUB_PRINTTEXTBOX_SINGLE_SCROLLBARLOC=0;
+}
+int16 fornext_value8867;
+int16 fornext_finalvalue8867;
+int16 fornext_step8867;
+uint8 fornext_step_negative8867;
+int16 fornext_value8869;
+int16 fornext_finalvalue8869;
+int16 fornext_step8869;
+uint8 fornext_step_negative8869;

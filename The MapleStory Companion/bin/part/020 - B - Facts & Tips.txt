@@ -1,0 +1,128 @@
+IF (k$ = CHR$(98) OR k$ = CHR$(66)) OR (_MOUSEX > 234 AND _MOUSEX < 349 AND _MOUSEY > 365 AND _MOUSEY < 381 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 2
+    DO
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "Press Enter to see a Fact or Tip!"
+            PRINT "Press Space to see a different Fact or Tip!"
+            PRINT "When you are done, press Enter again to go to the Main Menu!"
+            GOSUB controls
+        LOOP UNTIL k$ = CHR$(13)
+        DO
+            DO
+                RANDOMIZE TIMER
+                factortip = INT(RND * 35 + 1)
+                SELECT CASE factortip
+                    CASE 1
+                        factip$ = "Did you know that the maximum amout of mesos that can be held at any time is 2147483647. This is because Maplstory stores its information as a 32-bit signed binary integer. Binary means they store numbers as 1s or 0s, a 1 meaning it is turned on, a 0 meaning it is turned off. Each digit up on the string is the next factor of two. For example, '10110' means ((0 * 2^0) + (1 * 2^1) + (1 * 2^2) + (0 * 2^3) + (1 * 2^4)) = (0 + 2 + 4 + 0 + 16) = 22. They store information in a 32-bit system. This means that there can not be data string longer than 32 0s or 1s. 2^31-1 = 2147483647. It is signed meaning it needs a space to tell if it is positive or negative. And we need one bit as a 0 so that leaves us with 2^31-1. But why the -1? The actual range of a 32 bit integer is -2147483648=<X<=2147483647. 32bit is really 2^32 which equals 2147483648 which means we have 2147483648 possible values, excluding the signed part. However you are able to hold 0 mesos. So instead of being able to hold from 1 to 2147483648 mesos, you are able to hold from 0 to 2147483647 mesos."
+                    CASE 2
+                        factip$ = "Trying to make mesos? Don't spend hundreds of dollars in the MTS just for mesos that you really didn't earn, rather try merching. There is a comprehensive guide in the 'Guides' section. It is a free alternative to buying in MTS."
+                    CASE 3
+                        factip$ = "Most armors and weapons after lv50 cannot be bought in stores. Learn the Maker Skill from Magatia to make your own equips."
+                    CASE 4
+                        factip$ = "You can get walkthroughs for PQ's in the 'Party Quest' Section."
+                    CASE 5
+                        factip$ = "Have you forgotten the birthday you entered for your account creation? Are you unable to edit your account info? Well there is a simple way to find your birthday and to begin editing your info. First log on on the website and go to the Cash Shop tab. Go to 'Earn Free NX'. Three hosts will come up. Select the one on the right labeled 'Peanut Labs'. It will come to a mostly blue page. Locate the area between where it says 'Earn Free NX Through Surveys' and the first offer (it should be like 'Free: _______ Survey'), and right click. Select the option that says 'View Page Source', and it will open a text box filled with code. Search 'dob' using Ctrl+F and it should tell you your birthday. Now you are ready to change your password, buy a name change, change a PIC or whatever."
+                    CASE 6
+                        factip$ = "Need some NX but low on cash? Try using the 'Earn Free NX' page on the Maplestory website. By completing surveys, you can earn NX, just be sure to follow the guidlines."
+                    CASE 7
+                        factip$ = "Change your password every 3 weeks in order to protect from hackers."
+                    CASE 8
+                        factip$ = "The main stats for each class"
+                        factip2$ = " Warrior - Strength"
+                        factip3$ = " Magician - Intelligence"
+                        factip4$ = " Thief - Luck"
+                        factip5$ = " Bowman - Dexterity"
+                        factip6$ = " Pirate (Gunslinger) - Dexterity"
+                        factip7$ = " Pirate (Brawler) - Strength"
+                    CASE 9
+                        factip$ = "The secondary stats for each class"
+                        factip2$ = " Warrior - Dexterity"
+                        factip3$ = " Magician - Luck"
+                        factip4$ = " Thief - Dexterity + Strength"
+                        factip5$ = " Bowman - Strength"
+                        factip6$ = " Pirate (Gunslinger) - Strength"
+                        factip7$ = " Pirate (Brawler) - Dexterity"
+                    CASE 10
+                        factip$ = "As you use the program, your information and stats will be updated accordingly. Of course, you can always change them manually. You can turn this feature off using the Options Section."
+                    CASE 11
+                        factip$ = "The throwing stars are named after the days of the week in Japan?"
+                        factip2$ = "     Sunday    - Nichi-Youbi - Ilbi"
+                        factip3$ = "     Monsay    - Getsu-Youbi - Wolbi"
+                        factip4$ = "     Tuesday   - Ka-Youbi    - Kumbi"
+                        factip5$ = "     Wednesday - Sui-Youbi   - Subi"
+                        factip6$ = "     Thursday  - Moku-Youbi  - Mokbi"
+                        factip7$ = "     Friday    - Kin-Youbi   - Hwabi"
+                        factip8$ = "     Saturday  - Do-Youbi    - Tobi"
+                    CASE 12
+                        factip$ = "Like if you make a new Adventurer, there has to be something wrong with the character randomization, because like fricken 4 out of 5 are black or deep tanned! Seriously try it."
+                    CASE 13
+                        factip$ = "Sometimes the place with the best EXP per Monster isn't the best place to train. You also have to take into account how fast you can kill them. Set a timer for, say, 5min in each area and then find which place is best for you."
+                    CASE 14
+                        factip$ = "Characters in Maple don't have hands."
+                    CASE 15
+                        factip$ = "If you are holding something and you switch directions, you switch the object to the other hand."
+                    CASE 16
+                        factip$ = "We have some great guides by the users of Basilmarket in our Guide Section. Check them out!"
+                    CASE 17
+                        factip$ = "Never give your password to ANYONE! I wouldn't share my password with my own mother, and she's a Saint."
+                    CASE 18
+                        factip$ = "You can start MapleStory directly from your Companion. Check out the Start MapleStory Section."
+                    CASE 19
+                        factip$ = "You can store your account information in the Character Section. It has some great features like Copy Password To Clipboard."
+                    CASE 20
+                        factip$ = "There are many different calculators in the Calculator section."
+                    CASE 21
+                        factip$ = "You can do many things in the Experience Section. You can view a chart of all the EXP/LV for each LV, determine your Exp till next level, and find how close you are to reaching 200. Check it out!"
+                    CASE 22
+                        factip$ = "In the Monster Section you can Browse each monster and learn all about it. You can also Identify a monster if you don't know what it is. Check it out!"
+                    CASE 23
+                        factip$ = "You can see the Class Chart for each class group, learn about a single class, and take a quiz to find out which class is best for you in the Class Section. Check it out!"
+                    CASE 24
+                        factip$ = "In the Pet Section you can see a chart for Pet EXP/LV and you can learn about each pet. Check it out!"
+                    CASE 25
+                        factip$ = "The Companion has extensive knowledge of each Gachapon, find it in the Gachapon Section."
+                    CASE 26
+                        factip$ = "In the Fashion Section, you can search and see pictures of each hairstyle and face. Check it out!"
+                    CASE 27
+                        factip$ = "There is a guide with pictures for each party quest in the Party Quest Section. Check it out!"
+                    CASE 28
+                        factip$ = "You can use the Jukebox Section to listen to your favorite Maple BGM, make it your theme, or mix 2 BGMs together. There are lots of features, Check it out!"
+                    CASE 29
+                        factip$ = "There are some BGMs that I can't locate, these are the BGMs in the Unkown Songs section. So if you know where that BGM is from please contact me."
+                    CASE 30
+                        factip$ = "You can use the Gallery Section to see or hear a random thing from the Companion. Check it out!"
+                    CASE 31
+                        factip$ = "There are many ways to customize your Companion. Check out the Options Section!"
+                    CASE 32
+                        factip$ = "There are a few Easter Eggs strewn across the Companion. Try to find them all! You can check your progress in the Credits Section."
+                    CASE 33
+                        factip$ = "The lv35 Female Thief Avenger Set are the only equips that show cleavage."
+                    CASE 34
+                        factip$ = "Characters in Maple don't have noses."
+                    CASE 35
+                        factip$ = "If you have a fact or tip you want to share, just email me... Seriously... I like getting emails."
+                END SELECT
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT factip$
+                    PRINT factip2$
+                    PRINT factip3$
+                    PRINT factip4$
+                    PRINT factip5$
+                    PRINT factip6$
+                    PRINT factip7$
+                    PRINT factip8$
+                    GOSUB controls
+                    IF k$ = CHR$(13) THEN
+                        GOTO BEGIN
+                    END IF
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            LOOP
+        LOOP
+    LOOP
+END IF

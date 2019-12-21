@@ -1,0 +1,27 @@
+int8 *_SUB_FREEFRAME_BYTE_THICKNESS=NULL;
+if(_SUB_FREEFRAME_BYTE_THICKNESS==NULL){
+_SUB_FREEFRAME_BYTE_THICKNESS=(int8*)mem_static_malloc(1);
+*_SUB_FREEFRAME_BYTE_THICKNESS=0;
+}
+int8 *_SUB_FREEFRAME_BYTE_ORIENTATION=NULL;
+if(_SUB_FREEFRAME_BYTE_ORIENTATION==NULL){
+_SUB_FREEFRAME_BYTE_ORIENTATION=(int8*)mem_static_malloc(1);
+*_SUB_FREEFRAME_BYTE_ORIENTATION=0;
+}
+int8 *_SUB_FREEFRAME_BYTE_UNIT=NULL;
+if(_SUB_FREEFRAME_BYTE_UNIT==NULL){
+_SUB_FREEFRAME_BYTE_UNIT=(int8*)mem_static_malloc(1);
+*_SUB_FREEFRAME_BYTE_UNIT=0;
+}
+int16 fornext_value6758;
+int16 fornext_finalvalue6758;
+int16 fornext_step6758;
+uint8 fornext_step_negative6758;
+int16 fornext_value6760;
+int16 fornext_finalvalue6760;
+int16 fornext_step6760;
+uint8 fornext_step_negative6760;
+int16 fornext_value6762;
+int16 fornext_finalvalue6762;
+int16 fornext_step6762;
+uint8 fornext_step_negative6762;

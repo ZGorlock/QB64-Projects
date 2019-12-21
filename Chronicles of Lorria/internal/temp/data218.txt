@@ -1,0 +1,43 @@
+float *_SUB_SET_ORDEROFOPERATIONS_SINGLE_I=NULL;
+if(_SUB_SET_ORDEROFOPERATIONS_SINGLE_I==NULL){
+_SUB_SET_ORDEROFOPERATIONS_SINGLE_I=(float*)mem_static_malloc(4);
+*_SUB_SET_ORDEROFOPERATIONS_SINGLE_I=0;
+}
+float *_SUB_SET_ORDEROFOPERATIONS_SINGLE_F=NULL;
+if(_SUB_SET_ORDEROFOPERATIONS_SINGLE_F==NULL){
+_SUB_SET_ORDEROFOPERATIONS_SINGLE_F=(float*)mem_static_malloc(4);
+*_SUB_SET_ORDEROFOPERATIONS_SINGLE_F=0;
+}
+float *_SUB_SET_ORDEROFOPERATIONS_SINGLE_C=NULL;
+if(_SUB_SET_ORDEROFOPERATIONS_SINGLE_C==NULL){
+_SUB_SET_ORDEROFOPERATIONS_SINGLE_C=(float*)mem_static_malloc(4);
+*_SUB_SET_ORDEROFOPERATIONS_SINGLE_C=0;
+}
+double fornext_value6949;
+double fornext_finalvalue6949;
+double fornext_step6949;
+uint8 fornext_step_negative6949;
+double fornext_value6951;
+double fornext_finalvalue6951;
+double fornext_step6951;
+uint8 fornext_step_negative6951;
+float *_SUB_SET_ORDEROFOPERATIONS_SINGLE_COUNTER=NULL;
+if(_SUB_SET_ORDEROFOPERATIONS_SINGLE_COUNTER==NULL){
+_SUB_SET_ORDEROFOPERATIONS_SINGLE_COUNTER=(float*)mem_static_malloc(4);
+*_SUB_SET_ORDEROFOPERATIONS_SINGLE_COUNTER=0;
+}
+double fornext_value6953;
+double fornext_finalvalue6953;
+double fornext_step6953;
+uint8 fornext_step_negative6953;
+int32 *_SUB_SET_ORDEROFOPERATIONS_LONG_LENGTH=NULL;
+if(_SUB_SET_ORDEROFOPERATIONS_LONG_LENGTH==NULL){
+_SUB_SET_ORDEROFOPERATIONS_LONG_LENGTH=(int32*)mem_static_malloc(4);
+*_SUB_SET_ORDEROFOPERATIONS_LONG_LENGTH=0;
+}
+byte_element_struct *byte_element_6954=NULL;
+if (!byte_element_6954){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6954=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6954=(byte_element_struct*)mem_static_malloc(12);
+}
+qbs *_SUB_SET_ORDEROFOPERATIONS_STRING_T=NULL;
+if (!_SUB_SET_ORDEROFOPERATIONS_STRING_T)_SUB_SET_ORDEROFOPERATIONS_STRING_T=qbs_new(0,0);

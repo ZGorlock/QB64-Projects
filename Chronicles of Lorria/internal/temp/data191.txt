@@ -1,0 +1,46 @@
+uint8 *_SUB_GENERATETRANSLAYER_UBYTE_A=NULL;
+if(_SUB_GENERATETRANSLAYER_UBYTE_A==NULL){
+_SUB_GENERATETRANSLAYER_UBYTE_A=(uint8*)mem_static_malloc(1);
+*_SUB_GENERATETRANSLAYER_UBYTE_A=0;
+}
+int32 *_SUB_GENERATETRANSLAYER_LONG_O=NULL;
+if(_SUB_GENERATETRANSLAYER_LONG_O==NULL){
+_SUB_GENERATETRANSLAYER_LONG_O=(int32*)mem_static_malloc(4);
+*_SUB_GENERATETRANSLAYER_LONG_O=0;
+}
+void *_SUB_GENERATETRANSLAYER_UDT_M=NULL;
+if(_SUB_GENERATETRANSLAYER_UDT_M==NULL){
+_SUB_GENERATETRANSLAYER_UDT_M=(void*)mem_static_malloc(28);
+memset(_SUB_GENERATETRANSLAYER_UDT_M,0,28);
+}
+void *_SUB_GENERATETRANSLAYER_UDT_M1=NULL;
+if(_SUB_GENERATETRANSLAYER_UDT_M1==NULL){
+_SUB_GENERATETRANSLAYER_UDT_M1=(void*)mem_static_malloc(28);
+memset(_SUB_GENERATETRANSLAYER_UDT_M1,0,28);
+}
+mem_block func6874;
+mem_block func6875;
+byte_element_struct *byte_element_6877=NULL;
+if (!byte_element_6877){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6877=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6877=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6878=NULL;
+if (!byte_element_6878){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6878=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6878=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6879=NULL;
+if (!byte_element_6879){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6879=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6879=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6880=NULL;
+if (!byte_element_6880){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6880=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6880=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6881=NULL;
+if (!byte_element_6881){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6881=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6881=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6882=NULL;
+if (!byte_element_6882){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6882=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6882=(byte_element_struct*)mem_static_malloc(12);
+}

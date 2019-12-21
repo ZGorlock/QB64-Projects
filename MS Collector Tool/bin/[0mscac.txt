@@ -1,0 +1,29 @@
+GorlockMA001 - Vacancies
+	GorlockM001 - Full
+	GorlockM002 - Full
+	GorlockM003 - Vacancies
+		Equip - Vacancies (11)
+		Use - Full
+		Etc - Full
+GorlockMA002 - Vacancies
+	GorlockM004 - Vacancies
+		Equip - Vacancies (13)
+		Use - Vacancies (7)
+		Etc - Full
+	GorlockM005 - Vacancies
+		Equip - Vacancies (22)
+		Use - Vacancies (10, 19)
+		Etc - Full
+	GorlockM006 - Vacancies
+		Equip - Vacancies (16)
+		Use - Vacancies (*17*)
+		Etc - Vacancies (18)
+GorlockMA003 - Log
+	GorlockM007 - Vacancies
+		Equip - Vacancies (11, 14)
+		Use - Empty
+		Etc - Vacancies (*11*)
+	GorlockM008 - Log
+	GorlockM009 - Log
+GorlockMA004 - Empty
+GorlockMA005 - Empty

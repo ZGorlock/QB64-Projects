@@ -1,0 +1,122 @@
+int8 *_SUB_UPDATETEXTBOX_BYTE_LINKVALUE=NULL;
+if(_SUB_UPDATETEXTBOX_BYTE_LINKVALUE==NULL){
+_SUB_UPDATETEXTBOX_BYTE_LINKVALUE=(int8*)mem_static_malloc(1);
+*_SUB_UPDATETEXTBOX_BYTE_LINKVALUE=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_CHECKBOOKMARKS=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_CHECKBOOKMARKS==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_CHECKBOOKMARKS=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_CHECKBOOKMARKS=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_CHECKSUBTEXTBOX=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_CHECKSUBTEXTBOX==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_CHECKSUBTEXTBOX=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_CHECKSUBTEXTBOX=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_ENDLINE=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_ENDLINE==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_ENDLINE=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_ENDLINE=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_UPDATESUBTEXTBOX=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_UPDATESUBTEXTBOX==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_UPDATESUBTEXTBOX=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_UPDATESUBTEXTBOX=0;
+}
+int32 fornext_value7628;
+int32 fornext_finalvalue7628;
+int32 fornext_step7628;
+uint8 fornext_step_negative7628;
+static int32 sc_7630;
+float pass7631;
+float pass7632;
+float pass7633;
+float pass7634;
+float pass7635;
+float pass7636;
+float pass7637;
+float pass7638;
+float pass7639;
+float pass7640;
+float pass7641;
+float pass7642;
+int32 fornext_value7644;
+int32 fornext_finalvalue7644;
+int32 fornext_step7644;
+uint8 fornext_step_negative7644;
+float pass7645;
+float pass7646;
+float pass7647;
+float pass7648;
+float pass7649;
+float pass7650;
+int8 pass7651;
+int8 pass7652;
+float pass7654;
+float pass7655;
+float pass7656;
+float pass7657;
+float pass7658;
+float pass7659;
+int32 fornext_value7661;
+int32 fornext_finalvalue7661;
+int32 fornext_step7661;
+uint8 fornext_step_negative7661;
+int32 fornext_value7663;
+int32 fornext_finalvalue7663;
+int32 fornext_step7663;
+uint8 fornext_step_negative7663;
+float pass7664;
+float pass7665;
+float pass7666;
+float pass7667;
+float pass7668;
+float pass7669;
+ptrszint *_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA=NULL;
+if (!_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA){
+_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA)[8]=(ptrszint)mem_lock_tmp;
+_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA[2]=0;
+_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA[4]=2147483647;
+_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA[5]=0;
+_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA[6]=0;
+_SUB_UPDATETEXTBOX_ARRAY_SINGLE_MOUSEDATA[0]=(ptrszint)nothingvalue;
+}
+float pass7670;
+float pass7671;
+float pass7672;
+float pass7673;
+float pass7674;
+float pass7675;
+float pass7676;
+float pass7677;
+float pass7678;
+float pass7679;
+float pass7680;
+float pass7681;
+float pass7682;
+float pass7683;
+float pass7684;
+float pass7685;
+int32 fornext_value7688;
+int32 fornext_finalvalue7688;
+int32 fornext_step7688;
+uint8 fornext_step_negative7688;
+int16 pass7689;
+int32 fornext_value7691;
+int32 fornext_finalvalue7691;
+int32 fornext_step7691;
+uint8 fornext_step_negative7691;
+int16 pass7692;

@@ -1,0 +1,5 @@
+int8 *_FUNC_DAY_BYTE_DAY=NULL;
+if(_FUNC_DAY_BYTE_DAY==NULL){
+_FUNC_DAY_BYTE_DAY=(int8*)mem_static_malloc(1);
+*_FUNC_DAY_BYTE_DAY=0;
+}

@@ -1,0 +1,4 @@
+if(oldstr6649){
+if(oldstr6649->fixed)qbs_set(oldstr6649,_FUNC_FILETYPE_STRING_F);
+qbs_free(_FUNC_FILETYPE_STRING_F);
+}

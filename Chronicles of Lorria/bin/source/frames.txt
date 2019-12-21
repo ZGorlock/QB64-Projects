@@ -1,0 +1,454 @@
+TYPE RECT
+    left AS LONG
+    top AS LONG
+    right AS LONG
+    bottom AS LONG
+END TYPE
+
+CONST FALSE = 0
+CONST TRUE = NOT FALSE
+
+CONST FRAME_BORDER = 2
+CONST FRAME_DOUBLE = 2
+CONST FRAME_SINGLE = 1
+CONST FRAME_THICKNESS_DOUBLE = 9
+CONST FRAME_THICKNESS_SINGLE = 4
+
+SCREEN _NEWIMAGE(640, 480, 32)
+
+REDIM GUI_frame(2, 8, 4) AS LONG
+CALL loadframe(2)
+
+
+
+PAINT (1, 1), 4294769916
+a$ = "50 50 C2 R75 T2 R275 C1 D75 D275 C4 L275 T4 L75 C3 U275 T1 U75 R75 D75 T3"
+CALL frame(a$, FRAME_SINGLE, 0)
+SLEEP
+CLS
+PAINT (1, 1), 4294769916
+a$ = "75 75 C2 R100 T2 R100 T2 R100 C1 D100 T3 D100 T3 D100 C4 L100 T4 L100 T4 L100 C3 U100 T1 U100 T1 R100 X1 R100 X1 D100 X1 L100 X1"
+CALL frame(a$, FRAME_SINGLE, 0)
+SLEEP
+CLS
+PAINT (1, 1), 4294769916
+a$ = "75 75 C2 R100 T2 R100 T2 R100 C1 D100 T3 D100 T3 D100 C4 L100 T4 L100 T4 L100 C3 U100 T1 U100 T1 R100 X1 R100 X1 D100 X1 L100 X1"
+CALL frame(a$, FRAME_DOUBLE, 0)
+SLEEP
+CLS
+PAINT (1, 1), 4294769916
+a$ = "150 150 N1 R100 X1 R70 N3 L70 D100 T4 L50 C2 D50 N4 U50 R150 T3 D70 N4 U130 N2 P250 Q150 U50 C2 R200 N3"
+CALL frame(a$, FRAME_SINGLE, 0)
+SLEEP
+
+
+SUB frame (instruction AS STRING, thickness AS _BYTE, dest AS LONG)
+DIM foundterminator AS _BIT
+DIM horizontalsector AS _BYTE
+DIM verticalsector AS _BYTE
+DIM drawframe AS _UNSIGNED _BYTE
+DIM checkunits AS INTEGER
+DIM drawsides AS INTEGER
+DIM findright AS INTEGER
+DIM findtop AS INTEGER
+DIM instructionpos AS INTEGER
+DIM instructions AS INTEGER
+DIM scaninstructions AS INTEGER
+DIM units AS INTEGER
+DIM placesides AS LONG
+DIM sidemiddle AS LONG
+DIM tracex AS LONG
+DIM tracey AS LONG
+DIM instructiontype AS STRING * 1
+DIM side AS RECT
+SHARED GUI_frame() AS LONG
+IF instruction = "" THEN EXIT SUB
+IF thickness < FRAME_SINGLE THEN thickness = FRAME_SINGLE
+IF thickness > FRAME_DOUBLE THEN thickness = FRAME_DOUBLE
+REDIM instructions(1024) AS STRING
+REDIM units(1024) AS _BYTE
+REDIM unitloc(1024) AS RECT
+REDIM sockets(1024, 4) AS _BIT
+instructionpos = 1
+DO
+    instructions = instructions + 1
+    instructions(instructions) = MID$(instruction, instructionpos, INSTR(instructionpos, instruction, CHR$(32)) - instructionpos)
+    IF instructions(instructions) = "" THEN instructions(instructions) = MID$(instruction, instructionpos)
+    instructionpos = instructionpos + LEN(instructions(instructions)) + 1
+LOOP UNTIL instructionpos >= LEN(instruction)
+IF dest THEN _DEST dest
+tracex = VAL(instructions(1))
+tracey = VAL(instructions(2))
+FOR scaninstructions = 3 TO instructions
+    instructiontype$ = LEFT$(instructions(scaninstructions), 1)
+    SELECT CASE instructiontype$
+        CASE "C"
+            SELECT CASE INT(VAL(MID$(instructions(scaninstructions), 2)))
+                CASE 1
+                    units = units + 1
+                    units(units) = 31
+                    unitloc(units).left = tracex - _WIDTH(GUI_frame(thickness, 3, 1)) + FRAME_BORDER + 2 * thickness - (thickness = FRAME_DOUBLE)
+                    unitloc(units).top = tracey - FRAME_BORDER - 2 * thickness + (thickness = FRAME_DOUBLE)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 3, 1))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 3, 1))
+                    sockets(units, 1) = TRUE
+                    sockets(units, 2) = TRUE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 3, 1)
+                CASE 2
+                    units = units + 1
+                    units(units) = 32
+                    unitloc(units).left = tracex - FRAME_BORDER - 2 * thickness - 1
+                    unitloc(units).top = tracey - FRAME_BORDER - 2 * thickness + (thickness = FRAME_DOUBLE)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 3, 2))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 3, 2))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = TRUE
+                    sockets(units, 3) = TRUE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 3, 2)
+                CASE 3
+                    units = units + 1
+                    units(units) = 33
+                    unitloc(units).left = tracex - FRAME_BORDER - 2 * thickness + (thickness = FRAME_DOUBLE)
+                    unitloc(units).top = tracey - _HEIGHT(GUI_frame(thickness, 3, 3)) + FRAME_BORDER + 2 * thickness - (thickness = FRAME_DOUBLE)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 3, 3))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 3, 3))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = TRUE
+                    sockets(units, 4) = TRUE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 3, 3)
+                CASE 4
+                    units = units + 1
+                    units(units) = 34
+                    unitloc(units).left = tracex - _WIDTH(GUI_frame(thickness, 3, 4)) + FRAME_BORDER + 2 * thickness - (thickness = FRAME_DOUBLE)
+                    unitloc(units).top = tracey - _HEIGHT(GUI_frame(thickness, 3, 4)) + FRAME_BORDER + 2 * thickness - (thickness = FRAME_DOUBLE)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 3, 4))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 3, 4))
+                    sockets(units, 1) = TRUE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = TURE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 3, 4)
+            END SELECT
+        CASE "D"
+            tracey = tracey + INT(VAL(MID$(instructions(scaninstructions), 2)))
+        CASE "L"
+            tracex = tracex - INT(VAL(MID$(instructions(scaninstructions), 2)))
+        CASE "N"
+            SELECT CASE INT(VAL(MID$(instructions(scaninstructions), 2)))
+                CASE 1
+                    units = units + 1
+                    units(units) = 61
+                    unitloc(units).left = tracex - FRAME_BORDER
+                    unitloc(units).top = tracey - INT(_HEIGHT(GUI_frame(thickness, 6, 1)) / 2)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 6, 1))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 6, 1))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = TRUE
+                    sockets(units, 3) = TRUE
+                    sockets(units, 4) = TRUE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 6, 1)
+                CASE 2
+                    units = units + 1
+                    units(units) = 62
+                    unitloc(units).left = tracex - INT(_WIDTH(GUI_frame(thickness, 6, 2)) / 2)
+                    unitloc(units).top = tracey - FRAME_BORDER
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 6, 2))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 6, 2))
+                    sockets(units, 1) = TRUE
+                    sockets(units, 2) = TRUE
+                    sockets(units, 3) = TRUE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 6, 2)
+                CASE 3
+                    units = units + 1
+                    units(units) = 63
+                    unitloc(units).left = tracex - _WIDTH(GUI_frame(thickness, 6, 3)) + FRAME_BORDER
+                    unitloc(units).top = tracey - INT(_HEIGHT(GUI_frame(thickness, 6, 3)) / 2)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 6, 3))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 6, 3))
+                    sockets(units, 1) = TRUE
+                    sockets(units, 2) = TRUE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = TRUE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 6, 3)
+                CASE 4
+                    units = units + 1
+                    units(units) = 64
+                    unitloc(units).left = tracex - INT(_WIDTH(GUI_frame(thickness, 6, 4)) / 2)
+                    unitloc(units).top = tracey - _HEIGHT(GUI_frame(thickness, 6, 4)) / 2 + FRAME_BORDER
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 6, 4))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 6, 4))
+                    sockets(units, 1) = TRUE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = TRUE
+                    sockets(units, 4) = TRUE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 6, 4)
+            END SELECT
+        CASE "P"
+            tracex = INT(VAL(MID$(instructions(scaninstructions), 2)))
+        CASE "Q"
+            tracey = INT(VAL(MID$(instructions(scaninstructions), 2)))
+        CASE "R"
+            tracex = tracex + INT(VAL(MID$(instructions(scaninstructions), 2)))
+        CASE "T"
+            SELECT CASE INT(VAL(MID$(instructions(scaninstructions), 2)))
+                CASE 1
+                    units = units + 1
+                    units(units) = 51
+                    unitloc(units).left = tracex - FRAME_BORDER - 2 * thickness + (thickness = FRAME_DOUBLE)
+                    unitloc(units).top = tracey - INT(_HEIGHT(GUI_frame(thickness, 5, 1)) / 2)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 5, 1))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 5, 1))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = TRUE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 5, 1)
+                CASE 2
+                    units = units + 1
+                    units(units) = 52
+                    unitloc(units).left = tracex - INT(_WIDTH(GUI_frame(thickness, 5, 2)) / 2)
+                    unitloc(units).top = tracey - FRAME_BORDER - 2 * thickness + (thickness = FRAME_DOUBLE)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 5, 2))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 5, 2))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = TRUE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 5, 2)
+                CASE 3
+                    units = units + 1
+                    units(units) = 53
+                    unitloc(units).left = tracex - _WIDTH(GUI_frame(thickness, 5, 3)) + FRAME_BORDER + 2 * thickness - (thickness = FRAME_DOUBLE)
+                    unitloc(units).top = tracey - INT(_HEIGHT(GUI_frame(thickness, 5, 3)) / 2)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 5, 3))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 5, 3))
+                    sockets(units, 1) = TRUE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 5, 3)
+                CASE 4
+                    units = units + 1
+                    units(units) = 54
+                    unitloc(units).left = tracex - INT(_WIDTH(GUI_frame(thickness, 5, 4)) / 2)
+                    unitloc(units).top = tracey - _HEIGHT(GUI_frame(thickness, 5, 4)) + FRAME_BORDER + 2 * thickness - (thickness = FRAME_DOUBLE)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 5, 4))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 5, 4))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = TRUE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 5, 4)
+            END SELECT
+        CASE "U"
+            tracey = tracey - INT(VAL(MID$(instructions(scaninstructions), 2)))
+        CASE "X"
+            SELECT CASE INT(VAL(MID$(instructions(scaninstructions), 2)))
+                CASE 1
+                    units = units + 1
+                    units(units) = 41
+                    unitloc(units).left = tracex - INT(_WIDTH(GUI_frame(thickness, 4, 1)) / 2)
+                    unitloc(units).top = tracey - INT(_HEIGHT(GUI_frame(thickness, 4, 1)) / 2)
+                    unitloc(units).right = unitloc(units).left + _WIDTH(GUI_frame(thickness, 4, 1))
+                    unitloc(units).bottom = unitloc(units).top + _HEIGHT(GUI_frame(thickness, 4, 1))
+                    sockets(units, 1) = FALSE
+                    sockets(units, 2) = FALSE
+                    sockets(units, 3) = FALSE
+                    sockets(units, 4) = FALSE
+                    _PUTIMAGE (unitloc(units).left, unitloc(units).top), GUI_frame(thickness, 4, 1)
+            END SELECT
+    END SELECT
+NEXT scaninstructions
+FOR drawsides = 1 TO units
+    IF sockets(drawsides, 1) = FALSE THEN
+        side.left = unitloc(drawsides).right
+        side.bottom = unitloc(drawsides).bottom
+        SELECT CASE units(drawsides)
+            CASE 31, 32, 52
+                side.bottom = unitloc(drawsides).top + _HEIGHT(GUI_frame(thickness, 2, 2))
+            CASE 41, 51, 53
+                side.bottom = side.bottom - 9
+        END SELECT
+        side.top = side.bottom - _HEIGHT(GUI_frame(thickness, 2, 2))
+        side.right = 0
+        foundterminator = 0
+        FOR findright = side.left TO _WIDTH STEP 10
+            sidemiddle = ((side.bottom - side.top) / 2) + side.top
+            FOR checkunits = 1 TO units
+                IF checkunits <> drawsides THEN
+                    IF isonbox(findright, sidemiddle, unitloc(checkunits).left, unitloc(checkunits).top, unitloc(checkunits).right, unitloc(checkunits).bottom) AND sockets(checkunits, 3) = FALSE THEN
+                        side.right = unitloc(checkunits).left
+                        sockets(checkunits, 3) = TRUE
+                        foundterminator = -1
+                        EXIT FOR
+                    END IF
+                END IF
+            NEXT checkunits
+            IF side.right THEN EXIT FOR
+        NEXT findright
+        IF foundterminator THEN
+            sockets(drawsides, 1) = TRUE
+            horizontalsector = 4
+            FOR checkunits = 1 TO units
+                IF unitloc(checkunits).bottom > unitloc(drawsides).bottom THEN
+                    horizontalsector = 2
+                    EXIT FOR
+                END IF
+            NEXT checkunits
+            IF side.right - side.left > _WIDTH(GUI_frame(thickness, 2, horizontalsector)) THEN
+                FOR placesides = side.left TO side.right STEP _WIDTH(GUI_frame(thickness, 2, horizontalsector))
+                    IF placesides + _WIDTH(GUI_frame(thickness, 2, horizontalsector)) <= side.right THEN _PUTIMAGE (placesides, side.top), GUI_frame(thickness, 2, horizontalsector)
+                NEXT placesides
+                IF placesides > side.right THEN CALL MAPRECT(GUI_frame(thickness, 2, horizontalsector), 0, 0, side.right - (placesides - _WIDTH(GUI_frame(thickness, 2, horizontalsector))), _HEIGHT(GUI_frame(thickness, 2, horizontalsector)), dest, placesides - _WIDTH(GUI_frame(thickness, 2, horizontalsector)), side.top, side.right, side.bottom)
+            ELSE
+                CALL MAPRECT(GUI_frame(thickness, 2, horizontalsector), 0, 0, side.right, _HEIGHT(GUI_frame(thickness, 2, horizontalsector)), dest, side.left, side.top, side.right, side.bottom)
+            END IF
+        END IF
+    END IF
+    IF sockets(drawsides, 2) = FALSE THEN
+        side.bottom = unitloc(drawsides).top
+        side.right = unitloc(drawsides).right
+        SELECT CASE units(drawsides)
+            CASE 33, 51
+                side.right = unitloc(drawsides).left + _WIDTH(GUI_frame(thickness, 2, 1))
+            CASE 41, 54
+                side.right = side.right - 9
+        END SELECT
+        side.left = side.right - _WIDTH(GUI_frame(thickness, 2, 1))
+        side.top = 0
+        foundterminator = 0
+        FOR findtop = side.bottom TO 0 STEP -10
+            sidemiddle = ((side.right - side.left) / 2) + side.left
+            FOR checkunits = 1 TO units
+                IF checkunits <> drawsides THEN
+                    IF isonbox(sidemiddle, findtop, unitloc(checkunits).left, unitloc(checkunits).top, unitloc(checkunits).right, unitloc(checkunits).bottom) AND sockets(checkunits, 4) = FALSE THEN
+                        side.top = unitloc(checkunits).bottom
+                        sockets(checkunits, 4) = TRUE
+                        foundterminator = -1
+                        EXIT FOR
+                    END IF
+                END IF
+            NEXT checkunits
+            IF side.top THEN EXIT FOR
+        NEXT findtop
+        IF foundterminator THEN
+            sockets(drawsides, 2) = TRUE
+            verticalsector = 3
+            FOR checkunits = 1 TO units
+                IF unitloc(checkunits).right > unitloc(drawsides).right THEN
+                    verticalsector = 1
+                    EXIT FOR
+                END IF
+            NEXT checkunits
+            IF side.bottom - side.top > _HEIGHT(GUI_frame(thickness, 2, verticalsector)) THEN
+                FOR placesides = side.top TO side.bottom STEP _HEIGHT(GUI_frame(thickness, 2, verticalsector))
+                    IF placesides + _HEIGHT(GUI_frame(thickness, 2, verticalsector)) <= side.bottom THEN _PUTIMAGE (side.left, placesides), GUI_frame(thickness, 2, verticalsector)
+                NEXT placesides
+                IF placesides > side.bottom THEN CALL MAPRECT(GUI_frame(thickness, 2, verticalsector), 0, 0, _WIDTH(GUI_frame(thickness, 2, verticalsector)), side.bottom - (placesides - _HEIGHT(GUI_frame(thickness, 2, verticalsector))), dest, side.left, placesides - _HEIGHT(GUI_frame(thickness, 2, verticalsector)), side.right, side.bottom)
+            ELSE
+                CALL MAPRECT(GUI_frame(thickness, 2, verticalsector), 0, 0, _WIDTH(GUI_frame(thickness, 2, verticalsector)), side.bottom - side.top, dest, side.left, side.top, side.right, side.bottom)
+            END IF
+        END IF
+    END IF
+NEXT drawsides
+IF dest THEN _DEST 0
+END SUB
+
+SUB MAPRECT (source AS LONG, sourceleft AS LONG, sourcetop AS LONG, sourceright AS LONG, sourcebottom AS LONG, dest AS LONG, destleft AS LONG, desttop AS LONG, destright AS LONG, destbottom AS LONG)
+_MAPTRIANGLE _SEAMLESS(sourceleft, sourcetop)-(sourceleft, sourcebottom)-(sourceright, sourcebottom), source TO(destleft, desttop)-(destleft, destbottom)-(destright, destbottom), dest
+_MAPTRIANGLE _SEAMLESS(sourceleft, sourcetop)-(sourceright, sourcetop)-(sourceright, sourcebottom), source TO(destleft, desttop)-(destright, desttop)-(destright, destbottom), dest
+END SUB
+
+
+SUB loadframe (set AS _BYTE)
+DIM setname AS STRING
+SHARED GUI_frame() AS LONG
+SELECT CASE set
+    CASE 1
+        setname = "silver"
+    CASE 2
+        setname$ = "gold"
+    CASE 3
+        setname$ = "bronze"
+    CASE 4
+        setname$ = "copper"
+    CASE 5
+        setname$ = "lava"
+    CASE 6
+        setname$ = "wood"
+    CASE 7
+        setname$ = "mahogany"
+    CASE 8
+        setname$ = "rust"
+    CASE ELSE
+        setname$ = "gold"
+END SELECT
+CALL freeframe
+GUI_frame(1, 1, 1) = _LOADIMAGE("frame\frame_bar_" + setname + ".png")
+GUI_frame(1, 2, 1) = _LOADIMAGE("frame\frame_side_left_" + setname + ".png")
+GUI_frame(1, 2, 2) = _LOADIMAGE("frame\frame_side_top_" + setname + ".png")
+GUI_frame(1, 2, 3) = _LOADIMAGE("frame\frame_side_right_" + setname + ".png")
+GUI_frame(1, 2, 4) = _LOADIMAGE("frame\frame_side_bottom_" + setname + ".png")
+GUI_frame(1, 3, 1) = _LOADIMAGE("frame\frame_corner_1_" + setname + ".png")
+GUI_frame(1, 3, 2) = _LOADIMAGE("frame\frame_corner_2_" + setname + ".png")
+GUI_frame(1, 3, 3) = _LOADIMAGE("frame\frame_corner_3_" + setname + ".png")
+GUI_frame(1, 3, 4) = _LOADIMAGE("frame\frame_corner_4_" + setname + ".png")
+GUI_frame(1, 4, 1) = _LOADIMAGE("frame\frame_cross_" + setname + ".png")
+GUI_frame(1, 5, 1) = _LOADIMAGE("frame\frame_t_left_" + setname + ".png")
+GUI_frame(1, 5, 2) = _LOADIMAGE("frame\frame_t_top_" + setname + ".png")
+GUI_frame(1, 5, 3) = _LOADIMAGE("frame\frame_t_right_" + setname + ".png")
+GUI_frame(1, 5, 4) = _LOADIMAGE("frame\frame_t_bottom_" + setname + ".png")
+GUI_frame(1, 6, 1) = _LOADIMAGE("frame\frame_cap_left_" + setname + ".png")
+GUI_frame(1, 6, 2) = _LOADIMAGE("frame\frame_cap_top_" + setname + ".png")
+GUI_frame(1, 6, 3) = _LOADIMAGE("frame\frame_cap_right_" + setname + ".png")
+GUI_frame(1, 6, 4) = _LOADIMAGE("frame\frame_cap_bottom_" + setname + ".png")
+GUI_frame(1, 7, 1) = _LOADIMAGE("frame\frame_box_large_left_" + setname + ".png")
+GUI_frame(1, 7, 2) = _LOADIMAGE("frame\frame_box_large_top_" + setname + ".png")
+GUI_frame(1, 7, 3) = _LOADIMAGE("frame\frame_box_large_right_" + setname + ".png")
+GUI_frame(1, 7, 4) = _LOADIMAGE("frame\frame_box_large_bottom_" + setname + ".png")
+GUI_frame(1, 8, 1) = _LOADIMAGE("frame\frame_box_small_left_" + setname + ".png")
+GUI_frame(1, 8, 2) = _LOADIMAGE("frame\frame_box_small_top_" + setname + ".png")
+GUI_frame(1, 8, 3) = _LOADIMAGE("frame\frame_box_small_right_" + setname + ".png")
+GUI_frame(1, 8, 4) = _LOADIMAGE("frame\frame_box_small_bottom_" + setname + ".png")
+GUI_frame(2, 1, 1) = _LOADIMAGE("frame\frame_bar_double_" + setname + ".png")
+GUI_frame(2, 2, 1) = _LOADIMAGE("frame\frame_side_left_double_" + setname + ".png")
+GUI_frame(2, 2, 2) = _LOADIMAGE("frame\frame_side_top_double_" + setname + ".png")
+GUI_frame(2, 2, 3) = _LOADIMAGE("frame\frame_side_right_double_" + setname + ".png")
+GUI_frame(2, 2, 4) = _LOADIMAGE("frame\frame_side_bottom_double_" + setname + ".png")
+GUI_frame(2, 3, 1) = _LOADIMAGE("frame\frame_corner_1_double_" + setname + ".png")
+GUI_frame(2, 3, 2) = _LOADIMAGE("frame\frame_corner_2_double_" + setname + ".png")
+GUI_frame(2, 3, 3) = _LOADIMAGE("frame\frame_corner_3_double_" + setname + ".png")
+GUI_frame(2, 3, 4) = _LOADIMAGE("frame\frame_corner_4_double_" + setname + ".png")
+GUI_frame(2, 4, 1) = _LOADIMAGE("frame\frame_cross_double_" + setname + ".png")
+GUI_frame(2, 5, 1) = _LOADIMAGE("frame\frame_t_left_double_" + setname + ".png")
+GUI_frame(2, 5, 2) = _LOADIMAGE("frame\frame_t_top_double_" + setname + ".png")
+GUI_frame(2, 5, 3) = _LOADIMAGE("frame\frame_t_right_double_" + setname + ".png")
+GUI_frame(2, 5, 4) = _LOADIMAGE("frame\frame_t_bottom_double_" + setname + ".png")
+GUI_frame(2, 6, 1) = _LOADIMAGE("frame\frame_cap_left_double_" + setname + ".png")
+GUI_frame(2, 6, 2) = _LOADIMAGE("frame\frame_cap_top_double_" + setname + ".png")
+GUI_frame(2, 6, 3) = _LOADIMAGE("frame\frame_cap_right_double_" + setname + ".png")
+GUI_frame(2, 6, 4) = _LOADIMAGE("frame\frame_cap_bottom_double_" + setname + ".png")
+END SUB
+
+SUB freeframe
+DIM thickness AS _BYTE
+DIM orientation AS _BYTE
+DIM unit AS _BYTE
+SHARED GUI_frame() AS LONG
+FOR thickness = FRAME_SINGLE TO FRAME_DOUBLE
+    FOR unit = 1 TO 8
+        FOR orientation = 1 TO 4
+            IF GUI_frame(thickness, unit, orientation) THEN _FREEIMAGE GUI_frame(thickness, unit, orientation)
+NEXT orientation, unit, thickness
+END SUB
+
+FUNCTION isonbox` (x AS LONG, y AS LONG, x1 AS LONG, y1 AS LONG, x2 AS LONG, y2 AS LONG)
+isonbox = -1
+IF x < x1 OR x > x2 THEN isonbox = 0
+IF y < y1 OR y > y2 THEN isonbox = 0
+END FUNCTION

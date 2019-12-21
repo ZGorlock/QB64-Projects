@@ -1,0 +1,12 @@
+qbs *_FUNC_TIMESTAMP_X_STRING_TIMESTAMP_X=NULL;
+if (!_FUNC_TIMESTAMP_X_STRING_TIMESTAMP_X)_FUNC_TIMESTAMP_X_STRING_TIMESTAMP_X=qbs_new(0,0);
+float pass7934;
+int8 pass7935;
+float pass7936;
+int8 pass7937;
+float pass7938;
+int8 pass7939;
+float pass7940;
+int8 pass7941;
+float pass7942;
+int8 pass7943;

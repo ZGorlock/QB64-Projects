@@ -1,0 +1,14 @@
+int32 *_SUB_DOWNLOADFREE_LONG_CLIENT=NULL;
+if(_SUB_DOWNLOADFREE_LONG_CLIENT==NULL){
+_SUB_DOWNLOADFREE_LONG_CLIENT=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADFREE_LONG_CLIENT=0;
+}
+int32 *_SUB_DOWNLOADFREE_LONG_FH=NULL;
+if(_SUB_DOWNLOADFREE_LONG_FH==NULL){
+_SUB_DOWNLOADFREE_LONG_FH=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADFREE_LONG_FH=0;
+}
+int32 fornext_value6671;
+int32 fornext_finalvalue6671;
+int32 fornext_step6671;
+uint8 fornext_step_negative6671;

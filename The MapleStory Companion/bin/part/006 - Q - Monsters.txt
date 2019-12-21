@@ -1,0 +1,310 @@
+IF (k$ = CHR$(113) OR k$ = CHR$(81)) OR (_MOUSEX > 401 AND _MOUSEX < 565 AND _MOUSEY > 285 AND _MOUSEY < 301 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 1
+source$ = "http://global.hidden-street.net/monster/list"
+    DO
+        _LIMIT 64
+        CLS
+        PRINT "What would you like to do?"
+        PRINT "     1-Browse Monsters"
+        GOSUB controls
+        IF k$ = CHR$(49) THEN
+            monster$ = ""
+            DO
+                DO
+                    REDIM monsterlist$(32768)
+                    REDIM monsterlistprint$(32768)
+                    monster$ = ""
+                    selected = 1
+                    row = 1
+                    OPEN "source\list\monsters.txt" FOR INPUT AS #1
+                    monsteramount = 1
+                    firstbreak = 1
+                    DO UNTIL EOF(1)
+                        ON ERROR GOTO endofmonsterfile
+                        LINE INPUT #1, monsterlist$(monsteramount)
+                        monsteramount = monsteramount + 1
+                    LOOP
+                    endofmonsterfile:
+                    CLOSE #1
+                    monsterlistamount = monsteramount
+                    FOR monsterchange = 1 TO monsteramount
+                        monsterlistprint$(monsterchange) = monsterlist$(monsterchange)
+                    NEXT monsterchange
+                    DO
+                        _LIMIT 64
+                        CLS
+                        COLOR textcolor, backcolor
+                        PRINT "Enter the name of the monster you want to learn about"
+                        PRINT ": "; monster$
+                        PRINT
+                        IF monsterlistamount <= 24 THEN
+                            FOR monsterprint = 1 TO monsterlistamount
+                                IF monsterprint = selected THEN
+                                    COLOR backcolor, textcolor
+                                ELSE
+                                    COLOR textcolor, backcolor
+                                END IF
+                                PRINT monsterlistprint$(monsterprint)
+                            NEXT monsterprint
+                        ELSE
+                            FOR monsterlisting = row TO (row + 24)
+                                IF monsterlisting = selected THEN
+                                    COLOR backcolor, textcolor
+                                ELSE
+                                    COLOR textcolor, backcolor
+                                END IF
+                                PRINT monsterlistprint$(monsterlisting)
+                            NEXT monsterlisting
+                        END IF
+                        COLOR textcolor, backcolor
+                        IF row + 24 < monsterlistamount AND selected > row + 12 THEN
+                            row = row + 1
+                        END IF
+                        IF row <> 1 AND selected < row + 12 THEN
+                            row = row - 1
+                        END IF
+                        GOSUB controls
+                        IF k$ >= CHR$(32) AND k$ <= CHR$(126) THEN
+                            monster$ = monster$ + k$
+                            inputlength = LEN(monster$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            monster$ = MID$(monster$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> monsterlistamount THEN selected = selected + 1
+                        IF oldmonster$ <> monster$ THEN
+                            REDIM monserlistprint$(32768)
+                            monsterlistamount = 0
+                            FOR monsternewlist = 1 TO monsteramount
+                                IF MID$(monsterlist$(monsternewlist), 1, inputlength) = monster$ THEN
+                                    monsterlistamount = monsterlistamount + 1
+                                    monsterlistprint$(monsterlistamount) = monsterlist$(monsternewlist)
+                                END IF
+                            NEXT monsternewlist
+                            row = 1
+                            selected = 1
+                            oldmonster$ = monster$
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    monster$ = monsterlistprint$(selected)
+                    exitloop = 0
+                    SELECT CASE monster$
+                    '$include:'bin\part\006 - Q - Monsters[2].txt'
+                    END SELECT
+                    IF exitloop = 1 THEN EXIT DO
+                    namelength = LEN(monster$) + 6
+                    centerlocation = ((80 - namelength) / 2)
+                    REDIM monsterscroll$(96)
+                    monsterscroll$(1) = "--------------------------------------------------------------------------------"
+                    monsterscroll$(2) = SPACE$(centerlocation) + "---" + monster$ + "---"
+                    monsterscroll$(3) = ""
+                    monsterscroll$(4) = "Press 'p' to see a picture of this monster"
+                    monsterscroll$(4) = ""
+                    monsterscroll$(5) = ""
+                    monsterscroll$(6) = " LV:                 " + lv$
+                    monsterscroll$(7) = ""
+                    monsterscroll$(8) = " HP:                 " + hp$
+                    monsterscroll$(9) = " MP:                 " + mp$
+                    monsterscroll$(10) = ""
+                    monsterscroll$(11) = ""
+                    monsterscroll$(12) = " EXP:                " + exp$
+                    monsterscroll$(13) = " Mesos:              " + mesos$
+                    monsterscroll$(14) = ""
+                    monsterscroll$(15) = " KnockBack:          " + kb$
+                    monsterscroll$(16) = ""
+                    monsterscroll$(17) = ""
+                    monsterscroll$(18) = " WeaponAtt:          " + wepatt$
+                    monsterscroll$(19) = " MagicAtt:           " + magatt$
+                    monsterscroll$(20) = ""
+                    monsterscroll$(21) = " WeaponDef:          " + wepdef$
+                    monsterscroll$(22) = " MagicDef:           " + magdef$
+                    monsterscroll$(23) = " PassiveDefRate:     " + pdrate$
+                    monsterscroll$(24) = " MagicDefRate:       " + mdrate$
+                    monsterscroll$(25) = ""
+                    monsterscroll$(26) = ""
+                    monsterscroll$(27) = " Speed:              " + speed$
+                    monsterscroll$(28) = " Accuracy:           " + acc$
+                    monsterscroll$(29) = " Avoid:              " + avoid$
+                    monsterscroll$(30) = ""
+                    monsterscroll$(31) = ""
+                    monsterscroll$(32) = ""
+                    monsterscroll$(34) = ""
+                    monsterscroll$(35) = " EtcDrops:           " + etcdrop$
+                    monsterscroll$(36) = ""
+                    monsterscroll$(37) = " OreDrops:           " + oredrop$
+                    monsterscroll$(38) = ""
+                    monsterscroll$(39) = " MakerDrops:         " + makdrop$
+                    monsterscroll$(40) = ""
+                    monsterscroll$(41) = " UseDrop:            " + usedrop$
+                    monsterscroll$(42) = ""
+                    monsterscroll$(43) = ""
+                    monsterscroll$(44) = " CommonEquips:       " + comequip$
+                    monsterscroll$(45) = ""
+                    monsterscroll$(46) = " WarriorEquips:      " + warequip$
+                    monsterscroll$(47) = ""
+                    monsterscroll$(48) = " MagicianEquips:     " + magequip$
+                    monsterscroll$(49) = ""
+                    monsterscroll$(50) = " BowmanEquips:       " + bowequip$
+                    monsterscroll$(51) = ""
+                    monsterscroll$(52) = " ThiefEquips:        " + thiequip$
+                    monsterscroll$(53) = ""
+                    monsterscroll$(54) = " PirateEquips:       " + pirequip$
+                    monsterscroll$(55) = ""
+                    monsterscroll$(56) = ""
+                    monsterscroll$(57) = ""
+                    monsterscroll$(58) = ""
+                    monsterscroll$(59) = " Weakness(Magic):    " + weakm$
+                    monsterscroll$(60) = ""
+                    monsterscroll$(61) = " Normal(Magic):      " + normm$
+                    monsterscroll$(62) = ""
+                    monsterscroll$(63) = " Strong(Magic):      " + stngm$
+                    monsterscroll$(64) = ""
+                    monsterscroll$(65) = " Immune(Magic):      " + immum$
+                    monsterscroll$(66) = ""
+                    monsterscroll$(67) = ""
+                    monsterscroll$(68) = " Normal(Status):     " + norms$
+                    monsterscroll$(69) = ""
+                    monsterscroll$(70) = " Immune(Status):     " + immus$
+                    monsterscroll$(71) = ""
+                    monsterscroll$(72) = " Inflict Status:     " + infls$
+                    monsterscroll$(73) = ""
+                    monsterscroll$(74) = ""
+                    monsterscroll$(75) = ""
+                    monsterscroll$(76) = ""
+                    monsterscroll$(77) = " HP Recovery:        " + hprec$
+                    monsterscroll$(78) = " MP Recovery:        " + mprec$
+                    monsterscroll$(79) = ""
+                    monsterscroll$(80) = ""
+                    monsterscroll$(81) = " Unique Attacks:     " + uniqueatt$
+                    monsterscroll$(82) = ""
+                    monsterscroll$(83) = ""
+                    monsterscroll$(84) = ""
+                    monsterscroll$(85) = ""
+                    monsterscroll$(86) = " Common Locations:   " + comloc$
+                    monsterscroll$(87) = ""
+                    monsterscroll$(88) = ""
+                    monsterscroll$(89) = ""
+                    monsterscroll$(90) = ""
+                    monsterscroll$(91) = " Boss:               " + boss$
+                    monsterscroll$(92) = ""
+                    monsterscroll$(93) = " Remarks:            " + remark$
+                    monsterscroll$(94) = ""
+                    monsterscroll$(95) = " Notes:              " + notes$
+                    monsterscroll$(96) = "--------------------------------------------------------------------------------"
+                    row = 1
+                    CLS
+                    FOR n = row TO row + 27
+                        PRINT monsterscroll$(n)
+                        GOSUB scrollbar
+                    NEXT
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            row = row - 1
+                            GOTO Q1
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            row = row + 1
+                            GOTO Q1
+                        END IF
+                        IF k$ = CHR$(119) THEN
+                            row = 1
+                            GOTO Q1
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                            row = row - 27
+                            GOTO Q1
+                        END IF
+                        IF k$ = CHR$(115) THEN
+                            row = 69
+                            GOTO Q1
+                        END IF
+                        IF k$ = CHR$(100) THEN
+                            row = row + 27
+                            GOTO Q1
+                        END IF
+                        IF k$ = CHR$(112) THEN
+                            CLS
+                            IF monsterpic$ = "404" THEN
+                                DO
+                                    _LIMIT 64
+                                    PRINT "404>Image not available."
+                                    PRINT "   >Press Space to exit."
+                                    GOSUB controls
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(32)
+                            ELSE
+                                SCREEN 13
+                                monsterimage = _LOADIMAGE(monsterpic$)
+                                picscreen = _NEWIMAGE(640, 480, 32)
+                                SCREEN picscreen
+                                DO
+                                    _LIMIT 64
+                                    _PUTIMAGE (x, y), monsterimage, picscreen
+                                    GOSUB controls
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(32)
+                                SCREEN 12
+                                k$ = CHR$(0)
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT monsterscroll$(n)
+                                NEXT
+                                _DISPLAY
+                            END IF
+                        END IF
+                        DO WHILE _MOUSEINPUT
+                            row = row + (_MOUSEWHEEL * scrollspeed)
+                            IF prevrow <> row THEN
+                                Q1:
+                                IF row < 1 THEN
+                                    row = 1
+                                END IF
+                                IF row > 69 THEN
+                                    row = 69
+                                END IF
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT monsterscroll$(n)
+                                    GOSUB scrollbar
+                                NEXT
+                            END IF
+                            prevrow = row
+                        LOOP
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Where would you like to go?"
+                        PRINT "     1-Look at another Monster"
+                        PRINT "     2-Monster Menu"
+                        PRINT "     3-Main Menu"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            monster$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            exitloop = 1
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            GOTO bEGIN
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            LOOP
+        END IF
+        _DISPLAY
+    LOOP
+END IF

@@ -1,0 +1,19 @@
+int16 *_FUNC_NEWLAYER_INTEGER_NEWLAYER=NULL;
+if(_FUNC_NEWLAYER_INTEGER_NEWLAYER==NULL){
+_FUNC_NEWLAYER_INTEGER_NEWLAYER=(int16*)mem_static_malloc(2);
+*_FUNC_NEWLAYER_INTEGER_NEWLAYER=0;
+}
+qbs*oldstr8661=NULL;
+if(_FUNC_NEWLAYER_STRING_DESCRIPTION->tmp||_FUNC_NEWLAYER_STRING_DESCRIPTION->fixed||_FUNC_NEWLAYER_STRING_DESCRIPTION->readonly){
+oldstr8661=_FUNC_NEWLAYER_STRING_DESCRIPTION;
+if (oldstr8661->cmem_descriptor){
+_FUNC_NEWLAYER_STRING_DESCRIPTION=qbs_new_cmem(oldstr8661->len,0);
+}else{
+_FUNC_NEWLAYER_STRING_DESCRIPTION=qbs_new(oldstr8661->len,0);
+}
+memcpy(_FUNC_NEWLAYER_STRING_DESCRIPTION->chr,oldstr8661->chr,oldstr8661->len);
+}
+int32 fornext_value8664;
+int32 fornext_finalvalue8664;
+int32 fornext_step8664;
+uint8 fornext_step_negative8664;

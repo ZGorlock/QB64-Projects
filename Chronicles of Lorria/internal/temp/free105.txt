@@ -1,0 +1,35 @@
+if(oldstr6697){
+if(oldstr6697->fixed)qbs_set(oldstr6697,_SUB_FRAME_STRING_INSTRUCTION);
+qbs_free(_SUB_FRAME_STRING_INSTRUCTION);
+}
+qbs_free(_SUB_FRAME_STRING1_INSTRUCTIONTYPE);
+if (_SUB_FRAME_ARRAY_BIT1_SOCKETS[2]&1){
+if (_SUB_FRAME_ARRAY_BIT1_SOCKETS[2]&4){
+cmem_dynamic_free((uint8*)(_SUB_FRAME_ARRAY_BIT1_SOCKETS[0]));
+}else{
+free((void*)(_SUB_FRAME_ARRAY_BIT1_SOCKETS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_FRAME_ARRAY_BIT1_SOCKETS)[12] );
+if (_SUB_FRAME_ARRAY_BYTE_UNITS[2]&1){
+if (_SUB_FRAME_ARRAY_BYTE_UNITS[2]&4){
+cmem_dynamic_free((uint8*)(_SUB_FRAME_ARRAY_BYTE_UNITS[0]));
+}else{
+free((void*)(_SUB_FRAME_ARRAY_BYTE_UNITS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_FRAME_ARRAY_BYTE_UNITS)[8] );
+if (_SUB_FRAME_ARRAY_STRING_INSTRUCTIONS[2]&1){
+tmp_long=_SUB_FRAME_ARRAY_STRING_INSTRUCTIONS[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(_SUB_FRAME_ARRAY_STRING_INSTRUCTIONS[0]))[tmp_long]);
+free((void*)(_SUB_FRAME_ARRAY_STRING_INSTRUCTIONS[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_FRAME_ARRAY_STRING_INSTRUCTIONS)[8] );
+if (_SUB_FRAME_ARRAY_UDT_UNITLOC[2]&1){
+if (_SUB_FRAME_ARRAY_UDT_UNITLOC[2]&4){
+cmem_dynamic_free((uint8*)(_SUB_FRAME_ARRAY_UDT_UNITLOC[0]));
+}else{
+free((void*)(_SUB_FRAME_ARRAY_UDT_UNITLOC[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_FRAME_ARRAY_UDT_UNITLOC)[8] );

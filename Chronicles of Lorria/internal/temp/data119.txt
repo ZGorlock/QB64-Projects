@@ -1,0 +1,8 @@
+int32 *_FUNC_APK_BIT1_APK=NULL;
+if(_FUNC_APK_BIT1_APK==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_APK_BIT1_APK=(int32*)(dblock+cmem_sp);
+*_FUNC_APK_BIT1_APK=0;
+}
+uint8 pass6810;

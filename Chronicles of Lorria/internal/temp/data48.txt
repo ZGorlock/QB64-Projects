@@ -1,0 +1,20 @@
+int8 *_SUB_UPDATEBUTTON_BYTE_SAVECLICK=NULL;
+if(_SUB_UPDATEBUTTON_BYTE_SAVECLICK==NULL){
+_SUB_UPDATEBUTTON_BYTE_SAVECLICK=(int8*)mem_static_malloc(1);
+*_SUB_UPDATEBUTTON_BYTE_SAVECLICK=0;
+}
+int8 *_SUB_UPDATEBUTTON_BYTE_SAVESTATUS=NULL;
+if(_SUB_UPDATEBUTTON_BYTE_SAVESTATUS==NULL){
+_SUB_UPDATEBUTTON_BYTE_SAVESTATUS=(int8*)mem_static_malloc(1);
+*_SUB_UPDATEBUTTON_BYTE_SAVESTATUS=0;
+}
+int32 fornext_value6512;
+int32 fornext_finalvalue6512;
+int32 fornext_step6512;
+uint8 fornext_step_negative6512;
+float pass6513;
+float pass6514;
+float pass6515;
+float pass6516;
+float pass6517;
+float pass6518;

@@ -1,0 +1,14 @@
+qbs *_FUNC_TIMESTAMP_SHORTYEAR_STRING_TIMESTAMP_SHORTYEAR=NULL;
+if (!_FUNC_TIMESTAMP_SHORTYEAR_STRING_TIMESTAMP_SHORTYEAR)_FUNC_TIMESTAMP_SHORTYEAR_STRING_TIMESTAMP_SHORTYEAR=qbs_new(0,0);
+float pass7910;
+int8 pass7911;
+float pass7912;
+int8 pass7913;
+float pass7914;
+int8 pass7915;
+float pass7916;
+int8 pass7917;
+float pass7918;
+int8 pass7919;
+float pass7920;
+int8 pass7921;

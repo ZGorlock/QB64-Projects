@@ -1,0 +1,46 @@
+OPTION BASE 1
+REDIM SHARED GUI_frame(2, 8, 4) AS LONG
+GUI_frame(1, 1, 1) = _LOADIMAGE("resource\image\gui\frame\frame_bar_gold.png")
+
+GUI_frame(1, 2, 1) = _LOADIMAGE("resource\image\gui\frame\frame_side_bottom_gold.png")
+GUI_frame(1, 2, 2) = _LOADIMAGE("resource\image\gui\frame\frame_side_left_gold.png")
+GUI_frame(1, 2, 3) = _LOADIMAGE("resource\image\gui\frame\frame_side_right_gold.png")
+GUI_frame(1, 2, 4) = _LOADIMAGE("resource\image\gui\frame\frame_side_top_gold.png")
+
+GUI_frame(1, 3, 1) = _LOADIMAGE("resource\image\gui\frame\frame_corner_1_gold.png")
+GUI_frame(1, 3, 2) = _LOADIMAGE("resource\image\gui\frame\frame_corner_2_gold.png")
+GUI_frame(1, 3, 3) = _LOADIMAGE("resource\image\gui\frame\frame_corner_3_gold.png")
+GUI_frame(1, 3, 4) = _LOADIMAGE("resource\image\gui\frame\frame_corner_4_gold.png")
+
+GUI_frame(1, 4, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cross_gold.png")
+
+GUI_frame(1, 5, 1) = _LOADIMAGE("resource\image\gui\frame\frame_t_bottom_gold.png")
+GUI_frame(1, 5, 2) = _LOADIMAGE("resource\image\gui\frame\frame_t_left_gold.png")
+GUI_frame(1, 5, 3) = _LOADIMAGE("resource\image\gui\frame\frame_t_right_gold.png")
+GUI_frame(1, 5, 4) = _LOADIMAGE("resource\image\gui\frame\frame_t_top_gold.png")
+
+GUI_frame(1, 6, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cap_bottom_gold.png")
+GUI_frame(1, 6, 2) = _LOADIMAGE("resource\image\gui\frame\frame_cap_left_gold.png")
+GUI_frame(1, 6, 3) = _LOADIMAGE("resource\image\gui\frame\frame_cap_right_gold.png")
+GUI_frame(1, 6, 4) = _LOADIMAGE("resource\image\gui\frame\frame_cap_top_gold.png")
+
+
+GUI_frame(1, 7, 1) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_bottom_gold.png")
+GUI_frame(1, 7, 2) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_left_gold.png")
+GUI_frame(1, 7, 3) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_right_gold.png")
+GUI_frame(1, 7, 4) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_top_gold.png")
+
+GUI_frame(1, 8, 1) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_bottom_gold.png")
+GUI_frame(1, 8, 2) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_left_gold.png")
+GUI_frame(1, 8, 3) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_right_gold.png")
+GUI_frame(1, 8, 4) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_top_gold.png")
+
+
+
+
+
+FUNCTION makeframe% (framecolor AS _BYTE, frametype AS _BYTE, left AS LONG, top AS LONG, right AS LONG, bottom AS LONG, gridx AS INTEGER, gridy AS INTEGER)
+
+_PUTIMAGE()
+
+END SUB

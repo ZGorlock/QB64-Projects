@@ -1,0 +1,60 @@
+mpics = 3
+mpic$(1) = "o5.com/wp-content/uploads/2011/02/fat+cat.jpg"
+mpicput$(1) = "cat.jpg"
+mpic$(2) = "qb64.net/qb64.png"
+mpicput$(2) = "qb64.png"
+mpic$(3) = "global.hidden-street.net/sites/global.hidden-street.net/files/monsters/monsters001.gif"
+mpicput$(3) = "snail.gif"
+FOR mpic = 1 TO mpics
+    DO
+        IF Download(mpic$(mpic), mpicput$(mpic), 10) = -1 THEN
+            EXIT DO
+        ELSE
+            EXIT DO
+        END IF
+    LOOP
+NEXT mpic
+SYSTEM
+
+FUNCTION Download (url$, file$, timelimit)
+url2$ = url$
+x = INSTR(url2$, "/")
+IF x THEN url2$ = LEFT$(url$, x - 1)
+client = _OPENCLIENT("TCP/IP:80:" + url2$)
+IF client = 0 THEN EXIT FUNCTION
+e$ = CHR$(13) + CHR$(10)
+url3$ = RIGHT$(url$, LEN(url$) - x + 1)
+x$ = "GET " + url3$ + " HTTP/1.1" + e$
+x$ = x$ + "Host: " + url2$ + e$ + e$
+PUT #client, , x$
+t! = TIMER
+DO
+    _DELAY 0.05
+    GET #client, , a2$
+    a$ = a$ + a2$
+    i = INSTR(a$, "Content-Length:")
+    IF i THEN
+        i2 = INSTR(i, a$, e$)
+        IF i2 THEN
+            l = VAL(MID$(a$, i + 15, i2 - i - 14))
+            i3 = INSTR(i2, a$, e$ + e$)
+            IF i3 THEN
+                i3 = i3 + 4
+                IF (LEN(a$) - i3 + 1) = l THEN
+                    CLOSE client
+                    d$ = MID$(a$, i3, l)
+                    fh = FREEFILE
+                    OPEN file$ FOR OUTPUT AS #fh
+                    CLOSE #fh
+                    OPEN file$ FOR BINARY AS #fh
+                    PUT #fh, , d$
+                    CLOSE #fh
+                    Download = -1
+                    EXIT FUNCTION
+                END IF
+            END IF
+        END IF
+    END IF
+LOOP UNTIL TIMER > t! + timelimit
+CLOSE client
+END FUNCTION

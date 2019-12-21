@@ -1,0 +1,41 @@
+int8 *_FUNC_TIMECOMPARE_BYTE_TIMECOMPARE=NULL;
+if(_FUNC_TIMECOMPARE_BYTE_TIMECOMPARE==NULL){
+_FUNC_TIMECOMPARE_BYTE_TIMECOMPARE=(int8*)mem_static_malloc(1);
+*_FUNC_TIMECOMPARE_BYTE_TIMECOMPARE=0;
+}
+void *_FUNC_TIMECOMPARE_UDT_FT1=NULL;
+if(_FUNC_TIMECOMPARE_UDT_FT1==NULL){
+_FUNC_TIMECOMPARE_UDT_FT1=(void*)mem_static_malloc(8);
+memset(_FUNC_TIMECOMPARE_UDT_FT1,0,8);
+}
+void *_FUNC_TIMECOMPARE_UDT_FT2=NULL;
+if(_FUNC_TIMECOMPARE_UDT_FT2==NULL){
+_FUNC_TIMECOMPARE_UDT_FT2=(void*)mem_static_malloc(8);
+memset(_FUNC_TIMECOMPARE_UDT_FT2,0,8);
+}
+int64 *_FUNC_TIMECOMPARE_INTEGER64_CFT1=NULL;
+if(_FUNC_TIMECOMPARE_INTEGER64_CFT1==NULL){
+_FUNC_TIMECOMPARE_INTEGER64_CFT1=(int64*)mem_static_malloc(8);
+*_FUNC_TIMECOMPARE_INTEGER64_CFT1=0;
+}
+int64 *_FUNC_TIMECOMPARE_INTEGER64_CFT2=NULL;
+if(_FUNC_TIMECOMPARE_INTEGER64_CFT2==NULL){
+_FUNC_TIMECOMPARE_INTEGER64_CFT2=(int64*)mem_static_malloc(8);
+*_FUNC_TIMECOMPARE_INTEGER64_CFT2=0;
+}
+byte_element_struct *byte_element_7894=NULL;
+if (!byte_element_7894){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7894=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7894=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7895=NULL;
+if (!byte_element_7895){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7895=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7895=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7896=NULL;
+if (!byte_element_7896){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7896=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7896=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7897=NULL;
+if (!byte_element_7897){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7897=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7897=(byte_element_struct*)mem_static_malloc(12);
+}

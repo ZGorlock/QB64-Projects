@@ -1,0 +1,138 @@
+_TITLE "tmchost"
+WIDTH 10, 3
+CLS
+PRINT "inactive"
+host = _OPENHOST("TCP/IP:319")
+REDIM Users(1 TO 10000)
+numclients = 0
+newtmchostip$ = _CONNECTIONADDRESS(host)
+_DELAY 1
+tmchostip$ = newtmchostip$
+OPEN "C://Documents and Settings/Blue Haven Pools/My Documents/Dropbox/Public/tmchostip.txt" FOR OUTPUT AS #1
+PRINT #1, tmchostip$
+CLOSE #1
+_DELAY 5
+tmchostipfile$ = "/u/30616191/tmchostip.txt"
+webclient = _OPENCLIENT("TCP/IP:80:" + "dl.dropbox.com")
+CR$ = CHR$(13) + CHR$(10)
+IF webclient THEN
+    Request$ = "GET " + tmchostipfile$ + " HTTP/1.1" + CR$ + "Host: dl.dropbox.com" + CR$ + CR$
+    PUT #webclient, , Request$
+    _DELAY 1
+    GET #webclient, , Response$
+    c = INSTR(Response$, "content-length:") + 15
+    lengthstr$ = MID$(Response$, c, ((LEN(Response$) - c) + 2))
+    length = VAL(lengthstr$)
+    hostip$ = RIGHT$(Response$, length)
+END IF
+CLOSE webclient
+client = _OPENCLIENT(hostip$)
+OPEN "ticket/ticketpages.txt" FOR INPUT AS #1
+INPUT #1, ticketpages
+CLOSE #1
+ticketpages = ticketpages + 1
+OPEN "ticket/ticketpages.txt" FOR OUTPUT AS #1
+WRITE #1, ticketpages
+CLOSE #1
+ticketpage$ = STR$(ticketpages)
+ticketpage$ = LTRIM$(ticketpage$)
+ticketfile$ = "ticket/ticket" + ticketpage$ + ".txt"
+OPEN ticketfile$ FOR OUTPUT AS #1
+CLS
+PRINT "active"
+loops = 0
+DO
+    _LIMIT 1000
+    loops = loops + 1
+    newclient = _OPENCONNECTION(host)
+    IF newclient THEN
+        numclients = numclients + 1
+        Users(numclients) = newclient
+        INPUT #Users(numclients), chatting$
+        IF chatting$ = "1" THEN
+            PRINT #Users(numclients), "Welcome to the chat room!"
+        END IF
+    END IF
+    FOR i = 1 TO numclients
+        INPUT #Users(i), message$
+        IF message$ <> "" THEN
+            area$ = LEFT$(message$, 1)
+            area = VAL(area$)
+            SELECT CASE area
+                CASE 0
+                    IF Users(i) THEN
+                        chat$ = MID$(message$, 2, LEN(message$))
+                        FOR p = 1 TO numclients
+                            PRINT #Users(p), chat$
+                        NEXT p
+                    END IF
+                CASE 1
+                    ip$ = _CONNECTIONADDRESS(Users(i))
+                    ticket$ = MID$(message$, 2, LEN(message$))
+                    emptyspace$ = ""
+                    WRITE #1, ip$
+                    WRITE #1, ticket$
+                    WRITE #1, emptyspace$
+            END SELECT
+        END IF
+        IF _CONNECTED(Users(i)) THEN
+            n = n + 1
+            Users(n) = Users(i)
+        ELSE
+            CLOSE #(User(i))
+            Users(i) = 0
+        END IF
+    NEXT i
+    IF loops = 60000 THEN
+        newtmchostip$ = _CONNECTIONADDRESS(host)
+        IF newtmchostip$ <> tmchostip$ THEN
+            CLOSE #1
+            CLOSE host
+            CLOSE client
+            CLS
+            PRINT "inactive"
+            host = _OPENHOST("TCP/IP:319")
+            REDIM Users$(10000)
+            numclients = 0
+            newtmchostip$ = _CONNECTIONADDRESS(host)
+_DELAY 1
+            tmchostip$ = newtmchostip$
+            OPEN "C://Documents and Settings/Blue Haven Pools/My Documents/Dropbox/Public/tmchostip.txt" FOR OUTPUT AS #1
+            PRINT #1, tmchostip$
+            CLOSE #1
+            _DELAY 5
+            tmchostip$ = "/u/30616191/tmchostip.txt"
+            webclient = _OPENCLIENT("TCP/IP:80:" + "dl.dropbox.com")
+            CR$ = CHR$(13) + CHR$(10)
+            IF webclient THEN
+                Request$ = "GET " + tmchostip$ + " HTTP/1.1" + CR$ + "Host: dl.dropbox.com" + CR$ + CR$
+                PUT #webclient, , Request$
+                _DELAY 1
+                GET #webclient, , Response$
+    c = INSTR(Response$, "content-length:") + 15
+    lengthstr$ = MID$(Response$, c, ((LEN(Response$) - c) + 2))
+    length = VAL(lengthstr$)
+    hostip$ = RIGHT$(Response$, length)
+            END IF
+            CLOSE webclient
+            client = _OPENCLIENT(hostip$)
+            OPEN "ticket/ticketpages.txt" FOR INPUT AS #1
+            INPUT #1, ticketpages
+            CLOSE #1
+            ticketpages = ticketpages + 1
+            OPEN "ticket/ticketpages.txt" FOR OUTPUT AS #1
+            WRITE #1, ticketpages
+            CLOSE #1
+            ticketpage$ = STR$(ticketpages)
+            ticketpage$ = LTRIM$(ticketpage$)
+            ticketfile$ = "ticket/ticket" + ticketpage$ + ".txt"
+            OPEN ticketfile$ FOR OUTPUT AS #1
+            CLS
+            PRINT "active"
+        END IF
+        loops = 0
+    END IF
+    tmchostip$ = newtmchostip$
+    numclients = n
+    n = 0
+LOOP

@@ -1,0 +1,37 @@
+if (int32val==2){
+sub_get(FF,NULL,byte_element((uint64)&int32val,4,byte_element_183),0);
+if (int32val==3){
+sub_get(FF,NULL,byte_element((uint64)&int64val,8,byte_element_184),0);
+sub_get(FF,NULL,byte_element((uint64)&int32val,4,byte_element_185),0);
+sub_get(FF,NULL,byte_element((uint64)&int64val,8,byte_element_186),0);
+*__INTEGER64____RESERVED_COMMON_LBOUND1=int64val;
+sub_get(FF,NULL,byte_element((uint64)&int64val2,8,byte_element_187),0);
+*__INTEGER64____RESERVED_COMMON_UBOUND1=int64val2;
+
+if (__ARRAY_UDT_HISTORY[2]&2){
+error(10);
+}else{
+((mem_lock*)((ptrszint*)__ARRAY_UDT_HISTORY)[8])->id=(++mem_lock_id);
+if (__ARRAY_UDT_HISTORY[2]&1){
+if (__ARRAY_UDT_HISTORY[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_HISTORY[0]));
+}else{
+free((void*)(__ARRAY_UDT_HISTORY[0]));
+}
+}
+__ARRAY_UDT_HISTORY[4]=*__INTEGER64____RESERVED_COMMON_LBOUND1;
+__ARRAY_UDT_HISTORY[5]=(*__INTEGER64____RESERVED_COMMON_UBOUND1)-__ARRAY_UDT_HISTORY[4]+1;
+__ARRAY_UDT_HISTORY[6]=1;
+if (__ARRAY_UDT_HISTORY[2]&4){
+__ARRAY_UDT_HISTORY[0]=(ptrszint)cmem_dynamic_malloc(__ARRAY_UDT_HISTORY[5]*672/8+1);
+memset((void*)(__ARRAY_UDT_HISTORY[0]),0,__ARRAY_UDT_HISTORY[5]*672/8+1);
+}else{
+__ARRAY_UDT_HISTORY[0]=(ptrszint)calloc(__ARRAY_UDT_HISTORY[5]*672/8+1,1);
+if (!__ARRAY_UDT_HISTORY[0]) error(257);
+}
+__ARRAY_UDT_HISTORY[2]|=1;
+}
+sub_get(FF,NULL,byte_element((uint64)(((char*)__ARRAY_UDT_HISTORY[0])+((0)*84)),(84*(__ARRAY_UDT_HISTORY[2]&1)*__ARRAY_UDT_HISTORY[5])-((0)*84),byte_element_188),0);
+sub_get(FF,NULL,byte_element((uint64)&int32val,4,byte_element_189),0);
+}
+}

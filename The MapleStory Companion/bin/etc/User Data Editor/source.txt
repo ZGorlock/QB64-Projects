@@ -1,0 +1,111 @@
+_TITLE "User Data Editor"
+SCREEN 12
+DO
+    OPEN "user\program\randomization.txt" FOR INPUT AS #1
+    INPUT #1, randomization
+    CLOSE #1
+    DO
+        DO
+            CLS
+            PRINT "Enter the file you would like to edit: "; file$
+            PRINT "Enter '*' to see a list of acceptable file names"
+            SLEEP
+            k$ = INKEY$
+            IF k$ >= CHR$(32) AND k$ <= CHR$(126) THEN
+                file$ = file$ + k$
+                inputlength = inputlength + 1
+            END IF
+            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                inputlength = inputlength - 1
+                file$ = MID$(file$, 1, inputlength)
+            END IF
+        LOOP UNTIL k$ = CHR$(13)
+        IF file$ = "*" THEN
+            REDIM loaf$(116)
+            inputcount = 0
+            row = 1
+            OPEN "loaf.txt" FOR INPUT AS #1
+            DO UNTIL EOF(1)
+                inputcount = inputcount + 1
+                LINE INPUT #1, loaf$(inputcount)
+                IF inputcount = 116 THEN EXIT DO
+            LOOP
+            CLOSE #1
+            FOR n = row TO row + 27
+                PRINT loaf$(n)
+            NEXT
+            DO
+                k$ = INKEY$
+                DO WHILE _MOUSEINPUT
+                    k$ = INKEY$
+                    IF k$ = CHR$(32) THEN EXIT DO
+                    row = row + _MOUSEWHEEL
+                    IF row < 1 THEN
+                        row = 1
+                    END IF
+                    IF row > 89 THEN
+                        row = 89
+                    END IF
+                    FOR n = row TO row + 27
+                        PRINT loaf$(n)
+                    NEXT
+                LOOP
+                IF k$ = CHR$(32) THEN EXIT DO
+            LOOP
+        END IF
+        EXIT DO
+    LOOP
+    OPEN file$ FOR INPUT AS #1
+    INPUT #1, currentdata$
+    CLOSE #1
+    FOR c = 1 TO LEN(currentdata$)
+        Character$ = MID$(currentdata$, c, 1)
+        Code = ASC(Character$)
+        IF Code >= (32 + randomization) AND Code <= (126 + randomization) THEN
+            Character$ = CHR$(Code - randomization)
+        END IF
+        printdata$ = printdata$ + Character$
+    NEXT c
+    DO
+        CLS
+        PRINT "Enter what would you like to set this file's information as: "; newdata$
+        PRINT "Current data: "; printdata$
+        SLEEP
+        k$ = INKEY$
+        IF k$ >= CHR$(32) AND k$ <= CHR$(126) THEN
+            newdata$ = newdata$ + k$
+            inputlength = inputlength + 1
+        END IF
+        IF k$ = CHR$(8) AND inputlength > 0 THEN
+            inputlength = inputlength - 1
+            file$ = MID$(newdata$, 1, inputlength)
+        END IF
+    LOOP UNTIL k$ = CHR$(13)
+    FOR c = 1 TO LEN(newdata$)
+        Character$ = MID$(newdata$, c, 1)
+        Code = ASC(Character$)
+        IF Code >= 32 AND Code <= 126 THEN
+            Character$ = CHR$(Code + randomization)
+        END IF
+        writedata$ = writedata$ + Character$
+    NEXT c
+    OPEN file$ FOR OUTPUT AS #1
+    WRITE #1, writedata$
+    CLOSE #1
+    DO
+        CLS
+        PRINT "Data has been succesfully saved!"
+        PRINT "Edit something else?"
+        PRINT "     0-No"
+        PRINT "     1-Yes"
+        SLEEP
+        k$ = INKEY$
+        IF k$ = CHR$(48) THEN
+            SYSTEM
+        END IF
+        IF k$ = CHR$(49) THEN
+            EXIT DO
+        END IF
+    LOOP
+    CLEAR
+LOOP

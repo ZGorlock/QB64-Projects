@@ -1,0 +1,4 @@
+if(oldstr6547){
+if(oldstr6547->fixed)qbs_set(oldstr6547,_SUB_RESETFILE_STRING_FILENAME);
+qbs_free(_SUB_RESETFILE_STRING_FILENAME);
+}

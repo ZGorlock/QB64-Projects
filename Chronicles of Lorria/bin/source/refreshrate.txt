@@ -1,0 +1,53 @@
+DECLARE DYNAMIC LIBRARY "user32"
+    FUNCTION EnumDisplaySettingsA& (BYVAL lpszDeviceName~%&, BYVAL iModeNum~&, BYVAL lpDevMode~%&)
+END DECLARE
+
+TYPE POINTL
+    x AS LONG
+    y AS LONG
+END TYPE
+
+TYPE DEVMODE
+    dmDeviceName AS STRING * 32
+    dmSpecVersion AS _UNSIGNED INTEGER
+    dmDriverVersion AS _UNSIGNED INTEGER
+    dmSize AS _UNSIGNED INTEGER
+    dmDriverExtra AS _UNSIGNED INTEGER
+    dmFields AS _UNSIGNED LONG
+    dmPosition AS POINTL
+    dmDisplayOrientation AS _UNSIGNED LONG
+    dmDisplayFixedOutput AS _UNSIGNED LONG
+    dmColor AS INTEGER
+    dmDuples AS INTEGER
+    dmYResoluction AS INTEGER
+    dmTTOption AS INTEGER
+    dmCollate AS INTEGER
+    dmFormName AS STRING * 32
+    dmLogPixels AS _UNSIGNED INTEGER
+    dmBitsPerPixel AS _UNSIGNED LONG
+    dmPelsWidth AS _UNSIGNED LONG
+    dmPelsHeight AS _UNSIGNED LONG
+    dmDisplayFlags AS _UNSIGNED LONG
+    dmDisplayFrequency AS _UNSIGNED LONG
+    dmICMMethod AS _UNSIGNED LONG
+    dmICMIntent AS _UNSIGNED LONG
+    dmMediaType AS _UNSIGNED LONG
+    dmDitherType AS _UNSIGNED LONG
+    dmReserved1 AS _UNSIGNED LONG
+    dmReserved2 AS _UNSIGNED LONG
+    dmPlanningWidth AS _UNSIGNED LONG
+    dmPlanningHeight AS _UNSIGNED LONG
+END TYPE
+
+DIM lpDevMode AS DEVMODE
+lpDevMode.dmSize = 156
+lpDevMode.dmDriverExtra = 64
+
+DIM eds AS LONG
+eds = EnumDisplaySettingsA&(0, 0, _OFFSET(lpDevMode))
+
+PRINT eds
+PRINT lpDevMode.dmDisplayFrequency
+
+SLEEP
+SYSTEM

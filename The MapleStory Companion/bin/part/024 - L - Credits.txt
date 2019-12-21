@@ -1,0 +1,317 @@
+IF (k$ = CHR$(108) OR k$ = CHR$(76)) OR (_MOUSEX > 401 AND _MOUSEX < 565 AND _MOUSEY > 381 AND _MOUSEY < 397 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 2
+    DO
+        DO
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "What would you like to see?"
+                PRINT "     1-Credits"
+                PRINT "     2-Information"
+                PRINT "     3-Contact Info"
+                PRINT "     4-Update Notes"
+                PRINT "     5-Helpful Users"
+                PRINT "     6-Known Errors"
+                PRINT "     7-Copyright"
+                GOSUB controls
+                IF k$ = CHR$(49) THEN
+                        endcredits$ = "audio\program\IslandSong.ogg"
+                        creditsong = 1
+                    themeplaying = _SNDPLAYING(theme)
+                    IF themeplaying = -1 THEN _SNDPAUSE theme
+                    thememixplaying = _SNDPLAYING(thememix)
+                    IF thememixplaying = -1 THEN _SNDPAUSE thememix
+                    jukeboxplaying = _SNDPLAYING(jukebox)
+                    IF jukeboxplaying = -1 THEN _SNDPAUSE jukebox
+                    randomjukeboxplaying = _SNDPLAYING(randomjukebox)
+                    IF randomjukeboxplaying = -1 THEN _SNDPAUSE randomjukebox
+                    shufflejukeboxplaying = _SNDPLAYING(shufflejukebox)
+                    IF shufflejukeboxplaying = -1 THEN _SNDPAUSE shufflejukebox
+                    jukeboxmixer1playing = _SNDPLAYING(jukeboxmixer1)
+                    IF jukeboxmixer1playing = -1 THEN _SNDPAUSE jukeboxmixer1
+                    jukeboxmixer2playing = _SNDPLAYING(jukeboxmixer2)
+                    IF jukeboxmixer2playing = -1 THEN _SNDPAUSE jukeboxmixer2
+                    jukeboxunknownplaying = _SNDPLAYING(jukeboxunknown)
+                    IF jukeboxunknownplaying = -1 THEN _SNDPAUSE jukeboxunknown
+                    galleryaudioplaying = _SNDPLAYING(galleryaudio)
+                    IF galleryaudioplaying = -1 THEN _SNDPAUSE galleryaudio
+                    thememuteplaying = _SNDPLAYING(thememute)
+                    IF thememuteplaying = -1 THEN _SNDPAUSE thememute
+                    creditsplaying = _SNDPLAYING(credits)
+                    IF creditsplaying = -1 THEN _SNDPAUSE credits
+                    credits = _SNDOPEN(endcredits$, "SYNC, PAUSE")
+                    _SNDPLAY credits
+                    row = 1
+                    inputcount = 0
+                    REDIM credits$(287)
+                    OPEN "source\program\endcredits.txt" FOR INPUT AS #1
+                    DO UNTIL EOF(1)
+                        inputcount = inputcount + 1
+                        LINE INPUT #1, credits$(inputcount)
+                        IF inputcount = 287 THEN EXIT DO
+                    LOOP
+                    CLOSE #1
+                    IF creditsong = 1 THEN
+                        credits$(193) = "        - Island Song"
+                        credits$(195) = "        - Ashley Eriksson"
+                    END IF
+                    DO
+                        pre = 1
+                        GOSUB controls
+                        row = row + 1
+                        IF prevrow <> row THEN
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT credits$(n)
+                                GOSUB scrollbar
+                            NEXT
+                            IF row = 260 THEN
+                                _DELAY 3
+                                _SNDPAUSE credits
+                                GOTO PREBEGIN
+                            END IF
+                        END IF
+                        prevrow = row
+                        _DELAY .33333
+                        _DISPLAY
+                    LOOP
+                END IF
+                IF k$ = CHR$(50) THEN
+                    DO
+                        _LIMIT 64
+                        filename$ = "user\program\time.txt"
+                        GOSUB decrypter
+                        time# = VAL(userdata$)
+                        hours~&& = INT(time# / 3600)
+                        mins = INT((((time# / 3600) - hours~&&) * 3600) / 60)
+                        secs = INT((((((time# / 3600) - hours~&&) * 3600) / 60) - mins) * 60)
+                        hours$ = STR$(hours~&&)
+                        hours$ = RTRIM$(hours$)
+                        mins$ = STR$(mins)
+                        mins$ = RTRIM$(mins$)
+                        secs$ = STR$(secs)
+                        secs$ = RTRIM$(secs$)
+                        CLS
+                        PRINT "Current Version:"; SPC(8); "0.5"
+                        PRINT "Release Date:"; SPC(11); "06-07-2011"
+                        PRINT "Coder:"; SPC(18); "Gorlock897"
+                        PRINT
+                        PRINT "You have used this program"; uses~&&; "times"
+                        PRINT "You have ran the program for:"; hours$; "h"; mins$; "m"; secs$; "s"
+                        PRINT "Your id is: "; id$
+                        GOSUB controls
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(51) THEN
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT " Contact me in-game ~ Gorlock897 of the Scania Server"
+                        PRINT " Or text me at 1-419-558-0382"
+                        PRINT " Or email me at ZGorlock@gmail.com"
+                        GOSUB controls
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(52) THEN
+                    row = 1
+                    inputcount = 0
+                    REDIM updatenotes$(116)
+                    OPEN "source\program\updatenotes.txt" FOR INPUT AS #1
+                    DO UNTIL EOF(1)
+                        inputcount = inputcount + 1
+                        LINE INPUT #1, updatenotes$(inputcount)
+                        IF inputcount = 116 THEN EXIT DO
+                    LOOP
+                    CLOSE #1
+                    CLS
+                    FOR n = row TO row + 27
+                        PRINT updatenotes$(n)
+                        GOSUB scrollbar
+                    NEXT
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            row = row - 1
+                            GOTO L1
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            row = row + 1
+                            GOTO L1
+                        END IF
+                        IF k$ = CHR$(119) THEN
+                            row = 1
+                            GOTO L1
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                            row = row - 27
+                            GOTO L1
+                        END IF
+                        IF k$ = CHR$(115) THEN
+                            row = 88
+                            GOTO L1
+                        END IF
+                        IF k$ = CHR$(100) THEN
+                            row = row + 27
+                            GOTO L1
+                        END IF
+                        DO WHILE _MOUSEINPUT
+                            row = row + (_MOUSEWHEEL * scrollspeed)
+                            IF prevrow <> row THEN
+                                L1:
+                                IF row < 1 THEN
+                                    row = 1
+                                END IF
+                                IF row > 88 THEN
+                                    row = 88
+                                END IF
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT updatenotes$(n)
+                                    GOSUB scrollbar
+                                NEXT
+                            END IF
+                            prevrow = row
+                        LOOP
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(53) THEN
+                    row = 1
+                    inputcount = 0
+                    REDIM helpers$(1)
+                    OPEN "source\program\helpers.txt" FOR INPUT AS #1
+                    DO UNTIL EOF(1)
+                        inputcount = inputcount + 1
+                        LINE INPUT #1, credits$(inputcount)
+                        IF inputcount = 1 THEN EXIT DO
+                    LOOP
+                    CLOSE #1
+                    DO
+                        IF inputcount < 24 THEN
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Send a helpful email in response to a bug or idea and get your name here"
+                                VIEW PRINT 3 TO 28
+                                FOR n = 1 TO inputcount
+                                    PRINT "   ~ "; helpers$(n)
+                                NEXT
+                                GOSUB controls
+                                VIEW PRINT
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                        ELSE
+                            CLS
+                            PRINT "Send a helpful email in response to a bug or idea and get your name here"
+                            VIEW PRINT 3 TO 28
+                            FOR n = row TO row + 24
+                                PRINT helpers$(n)
+                                GOSUB scrollbar
+                            NEXT
+                            VIEW PRINT
+                            _DISPLAY
+                            DO
+                                _LIMIT 64
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    row = row - 1
+                                    GOTO L2
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    row = row + 1
+                                    GOTO L2
+                                END IF
+                                IF k$ = CHR$(119) THEN
+                                    row = 1
+                                    GOTO L2
+                                END IF
+                                IF k$ = CHR$(97) THEN
+                                    row = row - 27
+                                    GOTO L2
+                                END IF
+                                IF k$ = CHR$(115) THEN
+                                    row = 88
+                                    GOTO L2
+                                END IF
+                                IF k$ = CHR$(100) THEN
+                                    row = row + 27
+                                    GOTO L2
+                                END IF
+                                DO WHILE _MOUSEINPUT
+                                    row = row + (_MOUSEWHEEL * scrollspeed)
+                                    IF prevrow <> row THEN
+                                        L2:
+                                        IF row < 1 THEN
+                                            row = 1
+                                        END IF
+                                        IF row > 88 THEN
+                                            row = 88
+                                        END IF
+                                        CLS
+                                        PRINT "Send a helpful email in response to a bug or idea and get your name here"
+                                        VIEW PRINT 3 TO 28
+                                        FOR n = row TO row + 24
+                                            PRINT "   ~ "; helpers$(n)
+                                            GOSUB scrollbar
+                                        NEXT
+                                        VIEW PRINT
+                                    END IF
+                                    prevrow = row
+                                LOOP
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                        END IF
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(54) THEN
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "     -The first time you scroll when looking at the pet info scroll, it will move 2x your prefered scrolling speed"
+                        PRINT "     -If you find any errors, please contact me"
+                        GOSUB controls
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(55) THEN
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "This program was created for the sole purpose of helping people who play MapleStory. It was designed as a MapleStory companion that will easily and efficiently provide various forms of help and information. The information in this program was obtained through hiddenstreet.com, basilmarket.com, mapletip.com, sleepywood.net, and the MapleStory client. Nexon, Wizet, MapleStory, and all other logos are property of Nexon, logos associated with other sites are property of the said site, and I do not claim ownership of any of the information in this program or the files ssociated with it. None of the information contained in this program was obtained by means of hacking, and hacking websites are prohibited from using or benefiting from this program. I am not responsible, in any way, for the use or effect of this program. Illegal use of this program is prohibited, and will be enforced by law. Please do not redistribute this program as your own, in full or in part, and do not post this program, in full or in part, anywhere on any forum or website without giving me credit. Use at your own risk. By running this program, you agree to the terms and conditions addressed in this copyright. If you find any bugs, errors, or glitches, or find something missing or not working, or have a suggestion for future updates then feel free to contact me. I hope you enjoy the program and look forward to future updates. Happy Mapling!"
+                        PRINT "                             ~Gorlock897"
+                        GOSUB controls
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                _DISPLAY
+            LOOP
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "Where would you like to go?"
+                PRINT "     1-Credits Menu"
+                PRINT "     2-Main Menu"
+                GOSUB controls
+                IF k$ = CHR$(49) THEN
+                    exitloop = 1
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(50) THEN
+                    GOTO BEGIN
+                END IF
+                _DISPLAY
+            LOOP
+            IF exitloop = 1 THEN EXIT DO
+        LOOP
+    LOOP
+END IF

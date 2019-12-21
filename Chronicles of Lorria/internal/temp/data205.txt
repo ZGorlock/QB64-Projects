@@ -1,0 +1,13 @@
+int16 *_SUB_PRINTLAYER_INTEGER_QUEUE=NULL;
+if(_SUB_PRINTLAYER_INTEGER_QUEUE==NULL){
+_SUB_PRINTLAYER_INTEGER_QUEUE=(int16*)mem_static_malloc(2);
+*_SUB_PRINTLAYER_INTEGER_QUEUE=0;
+}
+int32 fornext_value6910;
+int32 fornext_finalvalue6910;
+int32 fornext_step6910;
+uint8 fornext_step_negative6910;
+int32 fornext_value6912;
+int32 fornext_finalvalue6912;
+int32 fornext_step6912;
+uint8 fornext_step_negative6912;

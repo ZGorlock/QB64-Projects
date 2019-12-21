@@ -1,0 +1,10 @@
+qbs*oldstr8381=NULL;
+if(_SUB_RESETFILE_STRING_FILENAME->tmp||_SUB_RESETFILE_STRING_FILENAME->fixed||_SUB_RESETFILE_STRING_FILENAME->readonly){
+oldstr8381=_SUB_RESETFILE_STRING_FILENAME;
+if (oldstr8381->cmem_descriptor){
+_SUB_RESETFILE_STRING_FILENAME=qbs_new_cmem(oldstr8381->len,0);
+}else{
+_SUB_RESETFILE_STRING_FILENAME=qbs_new(oldstr8381->len,0);
+}
+memcpy(_SUB_RESETFILE_STRING_FILENAME->chr,oldstr8381->chr,oldstr8381->len);
+}

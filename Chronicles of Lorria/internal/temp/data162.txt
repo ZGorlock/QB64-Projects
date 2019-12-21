@@ -1,0 +1,5 @@
+int8 *_FUNC_NUM_BYTE_NUM=NULL;
+if(_FUNC_NUM_BYTE_NUM==NULL){
+_FUNC_NUM_BYTE_NUM=(int8*)mem_static_malloc(1);
+*_FUNC_NUM_BYTE_NUM=0;
+}

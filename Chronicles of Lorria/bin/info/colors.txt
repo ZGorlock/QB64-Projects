@@ -1,0 +1,16 @@
+00 - Black
+01 - Dark Blue
+02 - Dark Green
+03 - Dark Cyan
+04 - Dark Red
+05 - Dark Magenta
+06 - Golden Rod
+07 - Light Gray
+08 - Gray
+09 - Blue
+10 - Green
+11 - Cyan
+12 - Red
+13 - Magenta
+14 - Yellow
+15 - White

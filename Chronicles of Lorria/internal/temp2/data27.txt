@@ -1,0 +1,5 @@
+int32 *_FUNC_DICE_LONG_DICE=NULL;
+if(_FUNC_DICE_LONG_DICE==NULL){
+_FUNC_DICE_LONG_DICE=(int32*)mem_static_malloc(4);
+*_FUNC_DICE_LONG_DICE=0;
+}

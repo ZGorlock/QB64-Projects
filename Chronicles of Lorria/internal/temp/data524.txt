@@ -1,0 +1,18 @@
+int32 *_FUNC_UNIXTIME_X_LONG_UNIXTIME_X=NULL;
+if(_FUNC_UNIXTIME_X_LONG_UNIXTIME_X==NULL){
+_FUNC_UNIXTIME_X_LONG_UNIXTIME_X=(int32*)mem_static_malloc(4);
+*_FUNC_UNIXTIME_X_LONG_UNIXTIME_X=0;
+}
+void *_FUNC_UNIXTIME_X_UDT_FT=NULL;
+if(_FUNC_UNIXTIME_X_UDT_FT==NULL){
+_FUNC_UNIXTIME_X_UDT_FT=(void*)mem_static_malloc(8);
+memset(_FUNC_UNIXTIME_X_UDT_FT,0,8);
+}
+byte_element_struct *byte_element_7965=NULL;
+if (!byte_element_7965){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7965=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7965=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7966=NULL;
+if (!byte_element_7966){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7966=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7966=(byte_element_struct*)mem_static_malloc(12);
+}

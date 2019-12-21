@@ -1,0 +1,13 @@
+int8 *_SUB_LAYERFREE_BYTE_CHECKFONTS=NULL;
+if(_SUB_LAYERFREE_BYTE_CHECKFONTS==NULL){
+_SUB_LAYERFREE_BYTE_CHECKFONTS=(int8*)mem_static_malloc(1);
+*_SUB_LAYERFREE_BYTE_CHECKFONTS=0;
+}
+int32 fornext_value8652;
+int32 fornext_finalvalue8652;
+int32 fornext_step8652;
+uint8 fornext_step_negative8652;
+int16 fornext_value8654;
+int16 fornext_finalvalue8654;
+int16 fornext_step8654;
+uint8 fornext_step_negative8654;

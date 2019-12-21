@@ -1,0 +1,90 @@
+0	0	0	0	0000
+
+0				N/A
+
+1				MAP
+	0			Reserved
+	1			Town
+	2			Building
+	3			Map
+	4			Dungeon
+	5			Encounter
+	E			Special
+	F			Other
+
+2				MONSTER
+	0			Reserved
+	1			Peacefull
+	2			Monster
+	3			Human
+	4			Boss
+	E			Special
+	F			Other
+
+3				ITEM
+	0			Reserved
+	1			Equipment
+		0		Reserved
+		1		Helm
+		2		Body
+		3		Leg
+		4		Boot
+		5		Glove
+		6		Shield
+		7		Weapon
+		8		Shoulder
+		9		Mantle
+		A		Pendant
+		B		Ring
+		C		Earring
+		D		Bracelet
+		E		Tatoo
+		F		Other
+	2			Useable Item
+		0		Reserved
+		1		Potion
+		2		Food
+		3		Other Consumable
+		4		Healing Item
+		5		Magic Item
+		6		Usable Item
+		7		Scroll
+		F		Other
+	3			Quest Item
+	4			Item
+		0		Reserved
+		1		Material
+		2		Monster Drop
+		3		Book
+		4		Gem
+		5		Magic Items
+		F		Other
+	E			Special
+	F			Other
+
+4				NPC
+	0			Reserved
+	1			Merchant
+	2			Average Person
+	3			Important Person
+	4			Quest
+	E			Special
+	F			Other
+
+5				SPELL
+	0			Reserved
+	1			Heal
+	2			Attack
+	3			Defend
+	4			Effect
+	5			Summon
+	6			Magic Item
+	7			Monster
+	F			Other
+
+6				QUEST
+	0			Reserved
+	1			Storyline
+	2			Side
+	E			Special
+	F			Other

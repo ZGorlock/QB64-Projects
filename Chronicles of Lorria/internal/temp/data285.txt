@@ -1,0 +1,13 @@
+int16 *_SUB_LINKSHOW_INTEGER_SHOWLINKS=NULL;
+if(_SUB_LINKSHOW_INTEGER_SHOWLINKS==NULL){
+_SUB_LINKSHOW_INTEGER_SHOWLINKS=(int16*)mem_static_malloc(2);
+*_SUB_LINKSHOW_INTEGER_SHOWLINKS=0;
+}
+int32 fornext_value7330;
+int32 fornext_finalvalue7330;
+int32 fornext_step7330;
+uint8 fornext_step_negative7330;
+int32 fornext_value7332;
+int32 fornext_finalvalue7332;
+int32 fornext_step7332;
+uint8 fornext_step_negative7332;

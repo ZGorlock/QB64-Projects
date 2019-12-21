@@ -1,0 +1,27 @@
+int16 *_FUNC_GETDEFAULTFPS_INTEGER_GETDEFAULTFPS=NULL;
+if(_FUNC_GETDEFAULTFPS_INTEGER_GETDEFAULTFPS==NULL){
+_FUNC_GETDEFAULTFPS_INTEGER_GETDEFAULTFPS=(int16*)mem_static_malloc(2);
+*_FUNC_GETDEFAULTFPS_INTEGER_GETDEFAULTFPS=0;
+}
+int32 *_FUNC_GETDEFAULTFPS_LONG_EDS=NULL;
+if(_FUNC_GETDEFAULTFPS_LONG_EDS==NULL){
+_FUNC_GETDEFAULTFPS_LONG_EDS=(int32*)mem_static_malloc(4);
+*_FUNC_GETDEFAULTFPS_LONG_EDS=0;
+}
+ptrszint *_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS=NULL;
+if (!_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS){
+_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS)[8]=(ptrszint)mem_lock_tmp;
+_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS[2]=0;
+_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS[4]=2147483647;
+_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS[5]=0;
+_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS[6]=0;
+_FUNC_GETDEFAULTFPS_ARRAY_LONG_FPSS[0]=(ptrszint)nothingvalue;
+}
+byte_element_struct *byte_element_6355=NULL;
+if (!byte_element_6355){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6355=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6355=(byte_element_struct*)mem_static_malloc(12);
+}
+int32 pass6356;

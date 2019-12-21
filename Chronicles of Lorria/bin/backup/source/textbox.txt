@@ -1,0 +1,208 @@
+SCREEN _NEWIMAGE(640, 480, 32)
+
+TYPE RECT
+    left AS LONG
+    top AS LONG
+    right AS LONG
+    bottom AS LONG
+END TYPE
+
+TYPE textbox
+    inuse AS _BYTE
+    status AS _BYTE
+    behaviour AS _BYTE
+    area AS RECT
+    dest AS LONG
+    font AS LONG
+    background AS LONG
+    scrollbar AS _BYTE
+    frame AS _BYTE
+    textstrings AS INTEGER
+    textlines AS INTEGER
+    screenline AS INTEGER
+    rows AS INTEGER
+    cols AS INTEGER
+    textstart AS _BYTE
+END TYPE
+
+CONST FALSE = 0
+CONST TRUE = NOT FALSE
+CONST FONT_DEFAULT = 2
+fonts(2) = 16
+
+
+
+CONST TEXTBOX_DEFAULTFONT = 16
+CONST TEXTBOX_HIDE = FALSE
+CONST TEXTBOX_NOBACKGROUND = FALSE
+CONST TEXTBOX_NOFRAME = FALSE
+CONST TEXTBOX_SCROLLBAR_OFF = FALSE
+CONST TEXTBOX_SCROLLBAR_ON = TRUE
+CONST TEXTBOX_SHOW = TRUE
+CONST TEXTBOX_TEXT = 0
+CONST TEXTBOX_TITLE = 1
+
+REDIM textboxes(0) AS textbox
+REDIM textbox_text(0) AS STRING
+REDIM textbox_index(0, 0) AS _UNSIGNED LONG
+REDIM textbox_index_original(0, 0) AS _UNSIGNED LONG
+
+DIM a AS INTEGER
+a = NEWTEXTBOX(50, 50, 550, 321, TEXTBOX_SHOW, TEXTBOX_TEXT, 0, TEXTBOX_DEFAULTFONT, _RGBA32(128, 64, 64, 150), _RGBA32(255, 255, 255, 255), TEXTBOX_SCROLLBAR_OFF)
+TEXTBOXADDTEXT a, "Type variables use DOT variable names to read or write specific values. They do not use type suffixes as they can hold ANY variable type values! The name before the dot is the one you defined after the type definition and the name after is the variable name used inside of the TYPE. The name of the dimensioned type variable alone can be used to PUT # or GET # all of the data at once!"
+CLS
+PRINTTEXTBOX a
+SLEEP
+FREETEXTBOX a
+SYSTEM
+
+SUB FREETEXTBOX (handle AS INTEGER)
+SHARED textboxes() AS textbox
+IF NOT VALIDTEXTBOX(handle) THEN EXIT SUB
+TEXTBOXCLEARTEXT handle
+IF textboxes(handle).background THEN _FREEIMAGE (textboxes(handle).background)
+IF handle = UBOUND(textboxes) THEN
+    REDIM _PRESERVE textboxes(UBOUND(textboxes) - 1) AS textbox
+ELSE
+    textboxes(handle).inuse = 0
+END IF
+END SUB
+
+SUB PRINTTEXTBOX (handle AS INTEGER)
+DIM printlines AS INTEGER
+SHARED textbox_index() AS _UNSIGNED LONG
+SHARED textbox_text() AS STRING
+SHARED textboxes() AS textbox
+IF NOT VALIDTEXTBOX(handle) THEN EXIT FUNCTION
+IF textboxes(handle).dest THEN _DEST textboxes(handle).dest
+IF textboxes(handle).background THEN _PUTIMAGE (textboxes(handle).area.left, textboxes(handle).area.top), textboxes(handle).background
+IF textboxes(handle).frame THEN LINE (textboxes(handle).area.left, textboxes(handle).area.top)-(textboxes(handle).area.right, textboxes(handle).area.bottom), textboxes(handle).frame, B
+IF textboxes(handle).font THEN _FONT textboxes(handle).font
+FOR printlines = textboxes(handle).screenline TO textboxes(handle).screenline + textboxes(handle).rows
+    _PRINTSTRING (textboxes(handle).area.left + 8, textboxes(handle).area.top + textboxes(handle).textstart + _FONTHEIGHT * (printlines - textboxes(handle).screenline)), MID$(textbox_text(handle), textbox_index(handle, printlines), textbox_index(handle, printlines + 1) - textbox_index(handle, printlines))
+NEXT printlines
+IF textboxes(handle).font THEN _FONT fonts(FONT_DEFAULT)
+IF textboxes(handle).dest THEN _DEST 0
+END SUB
+
+SUB TEXTBOXADDTEXT (handle AS INTEGER, text AS STRING)
+SHARED textbox_index() AS _UNSIGNED LONG
+SHARED textbox_index_original() AS _UNSIGNED LONG
+SHARED textbox_text() AS STRING
+SHARED textboxes() AS textbox
+IF NOT VALIDTEXTBOX(handle) THEN EXIT SUB
+PRINT handle
+PRINT UBOUND(textboxes)
+PRINT UBOUND(textbox_text)
+PRINT UBOUND(textbox_index_original)
+textboxes(handle).textstrings = textboxes(handle).textstrings + 1
+textbox_text(handle) = textbox_text(handle) + text
+textbox_index_original(handle, textboxes(handle).textstrings + 1) = LEN(textbox_text(handle))
+TEXTBOXFORMATTEXT handle, textboxes(handle).textstrings
+END SUB
+
+SUB TEXTBOXCLEARTEXT (handle)
+DIM cleartextboxindex AS INTEGER
+DIM cleartextboxindexoriginal AS INTEGER
+SHARED textbox_index() AS _UNSIGNED LONG
+SHARED textbox_index_original() AS _UNSIGNED LONG
+SHARED textbox_text() AS STRING
+SHARED textboxes() AS textbox
+IF NOT VALIDTEXTBOX(handle) THEN EXIT SUB
+FOR cleartextboxindex = 1 TO textboxes(handle).textlines
+    textbox_index(handle, cleartextboxindex) = 0
+NEXT cleartextboxindex
+FOR cleartextboxindexoriginal = 1 TO textboxes(handle).textstrings
+    textbox_index_original(handle, cleartextboxindexoriginal) = 0
+NEXT cleartextboxindexoriginal
+textbox_text(handle) = ""
+textboxes(handle).textstrings = 0
+textboxes(handle).textlines = 0
+textboxes(handle).screenline = 0
+END SUB
+
+SUB TEXTBOXFORMATTEXT (handle AS INTEGER, textstring AS INTEGER)
+DIM formattext AS INTEGER
+DIM restoreline AS INTEGER
+DIM saveline AS INTEGER
+SHARED textbox_index() AS _UNSIGNED LONG
+SHARED textbox_index_original() AS _UNSIGNED LONG
+SHARED textbox_text() AS STRING
+SHARED textboxes() AS textbox
+IF NOT VALIDTEXTBOX(handle) THEN EXIT SUB
+saveline = textbox_index(handle, textboxes(handle).screenline)
+DO
+    textboxes(handle).textlines = textboxes(handle).textlines + 1
+    textbox_index(handle, textboxes(handle).textlines + 1) = textbox_index(handle, textboxes(handle).textlines) + textboxes(handle).cols
+    IF textbox_index(handle, textboxes(handle).textlines + 1) > LEN(textbox_text(handle)) THEN
+        textbox_index(handle, textboxes(handle).textlines + 1) = LEN(textbox_text(handle))
+        EXIT DO
+    ELSE
+        FOR formattext = textbox_index(handle, textboxes(handle).textlines + 1) TO textbox_index(handle, textboxes(handle).textlines) STEP -1
+            IF MID$(textbox_text(handle), formattext, 1) = CHR$(32) THEN
+                textbox_index(handle, textboxes(handle).textlines + 1) = formattext
+                EXIT FOR
+            END IF
+        NEXT formattext
+        IF formattext = textbox_index(handle, textboxes(handle).textlines) THEN textbox_index(handle, textboxes(handle).textlines + 1) = textbox_index(handle, textboxes(handle).textlines) + textboxes(handle).cols - 1
+    END IF
+LOOP
+FOR restoreline = textboxes(handle).textlines TO 1 STEP -1
+    IF textbox_index(handle, restoreline + 1) > saveline AND textbox_index(handle, restoreline) < saveline THEN textboxes(handle).screenline = restoreline
+NEXT restoreline
+END SUB
+
+FUNCTION NEWTEXTBOX% (left AS LONG, top AS LONG, right AS LONG, bottom AS LONG, status AS _BYTE, behaviour AS _BYTE, dest AS LONG, font AS LONG, backgroundcolor AS _UNSIGNED LONG, frame AS _UNSIGNED LONG, scrollbar AS _BYTE)
+SHARED textboxes() AS textbox
+IF status < TEXTBOX_SHOW THEN status = TEXTBOX_SHOW
+IF status > TEXTBOX_HIDE THEN status = TEXTBOX_HIDE
+IF behaviour < TEXTBOX_TEXT THEN behaviour = TEXTBOX_TEXT
+IF behaviour > TEXTBOX_TITLE THEN behaviour = TEXTBOX_TITLE
+IF scrollbar < TEXTBOX_SCROLLBAR_ON THEN scrollbar = TEXTBOX_SCROLLBAR_ON
+IF scrollbar > TEXTBOX_SCROLLBAR_OFF THEN scrollbar = TEXTBOX_SCROLLBAR_OFF
+DO
+    FOR NEWTEXTBOX = 1 TO UBOUND(textboxes)
+        IF textboxes(NEWTEXTBOX).inuse = 0 THEN EXIT DO
+    NEXT NEWTEXTBOX
+    NEWTEXTBOX = NEWTEXTBOX + 1
+    REDIM _PRESERVE textbox_index(NEWTEXTBOX, 32767) AS _UNSIGNED LONG
+    REDIM _PRESERVE textbox_index_original(NEWTEXTBOX, 32767) AS _UNSIGNED LONG
+    REDIM _PRESERVE textbox_text(NEWTEXTBOX) AS STRING
+    REDIM _PRESERVE textboxes(NEWTEXTBOX) AS textbox
+    EXIT DO
+LOOP
+textboxes(NEWTEXTBOX).inuse = -1
+textboxes(NEWTEXTBOX).status = status
+textboxes(NEWTEXTBOX).behaviour = behaviour
+textboxes(NEWTEXTBOX).area.left = left
+textboxes(NEWTEXTBOX).area.top = top
+textboxes(NEWTEXTBOX).area.right = right
+textboxes(NEWTEXTBOX).area.bottom = bottom
+textboxes(NEWTEXTBOX).dest = dest
+textboxes(NEWTEXTBOX).font = font
+textboxes(NEWTEXTBOX).background = TEXTBOXBACKGROUND(NEWTEXTBOX, backgroundcolor)
+textboxes(NEWTEXTBOX).scrollbar = scrollbar
+textboxes(NEWTEXTBOX).frame = frame
+textboxes(NEWTEXTBOX).textstrings = 0
+textboxes(NEWTEXTBOX).textlines = 0
+textboxes(NEWTEXTBOX).screenline = 0
+textboxes(NEWTEXTBOX).rows = INT((area.bottom - area.top) / _FONTHEIGHT(font))
+textboxes(NEWTEXTBOX).cols = INT((area.right - area.left) / _FONTWIDTH(font)) + 2 * (scrollbar = TEXTBOX_SCROLLBAR_ON)
+textboxes(NEWTEXTBOX).textstart = _ROUND(((area.bottom - area.top) - (textboxes(NEWTEXTBOX).rows * _FONTHEIGHT(font)) / 2) + .5)
+END FUNCTION
+
+FUNCTION TEXTBOXBACKGROUND& (handle AS INTEGER, backgroundcolor AS _UNSIGNED LONG)
+SHARED textboxes() AS textbox
+IF NOT VALIDTEXTBOX(handle) THEN EXIT FUNCTION
+TEXTBOXBACKGROUND& = _NEWIMAGE(textboxes(handle).area.right - textboxes(handle).area.left, textboxes(handle).area.bottom - textboxes(handle).area.top, 32)
+_DEST TEXTBOXBACKGROUND&
+PAINT (1, 1), backgroundcolor
+_DEST 0
+END FUNCTION
+
+FUNCTION VALIDTEXTBOX` (handle AS INTEGER)
+SHARED textboxes() AS textbox
+IF handle > UBOUND(textboxes) OR handle = 0 THEN EXIT FUNCTION
+IF textboxes(handle).inuse = 0 THEN EXIT FUNCTION
+VALIDTEXTBOX = -1
+END FUNCTION

@@ -1,0 +1,13 @@
+if(oldstr7022){
+if(oldstr7022->fixed)qbs_set(oldstr7022,_SUB_VERIFYSTRING_STRING_T);
+qbs_free(_SUB_VERIFYSTRING_STRING_T);
+}
+qbs_free(_SUB_VERIFYSTRING_STRING_COMP);
+if (_SUB_VERIFYSTRING_ARRAY_SINGLE_ONAME[2]&1){
+if (_SUB_VERIFYSTRING_ARRAY_SINGLE_ONAME[2]&4){
+cmem_dynamic_free((uint8*)(_SUB_VERIFYSTRING_ARRAY_SINGLE_ONAME[0]));
+}else{
+free((void*)(_SUB_VERIFYSTRING_ARRAY_SINGLE_ONAME[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_VERIFYSTRING_ARRAY_SINGLE_ONAME)[8] );

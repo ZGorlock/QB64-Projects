@@ -1,0 +1,8 @@
+int32 *_FUNC_VMK_BIT1_VMK=NULL;
+if(_FUNC_VMK_BIT1_VMK==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_VMK_BIT1_VMK=(int32*)(dblock+cmem_sp);
+*_FUNC_VMK_BIT1_VMK=0;
+}
+uint8 pass6865;

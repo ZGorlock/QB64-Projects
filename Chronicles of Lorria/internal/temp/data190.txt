@@ -1,0 +1,10 @@
+float *_SUB_CLEARLAYER_SINGLE_HANDLE1=NULL;
+if(_SUB_CLEARLAYER_SINGLE_HANDLE1==NULL){
+_SUB_CLEARLAYER_SINGLE_HANDLE1=(float*)mem_static_malloc(4);
+*_SUB_CLEARLAYER_SINGLE_HANDLE1=0;
+}
+int16 pass6870;
+int32 fornext_value6873;
+int32 fornext_finalvalue6873;
+int32 fornext_step6873;
+uint8 fornext_step_negative6873;

@@ -1,0 +1,12 @@
+qbs *_FUNC_TIMEBETWEEN_STR_LONG_STRING_TIMEBETWEEN_STR_LONG=NULL;
+if (!_FUNC_TIMEBETWEEN_STR_LONG_STRING_TIMEBETWEEN_STR_LONG)_FUNC_TIMEBETWEEN_STR_LONG_STRING_TIMEBETWEEN_STR_LONG=qbs_new(0,0);
+byte_element_struct *byte_element_7890=NULL;
+if (!byte_element_7890){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7890=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7890=(byte_element_struct*)mem_static_malloc(12);
+}
+float pass7891;
+float pass7892;
+byte_element_struct *byte_element_7893=NULL;
+if (!byte_element_7893){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7893=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7893=(byte_element_struct*)mem_static_malloc(12);
+}

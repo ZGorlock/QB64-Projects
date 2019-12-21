@@ -1,0 +1,11 @@
+qbs *_FUNC_TIMEZONE_STRING_TIMEZONE=NULL;
+if (!_FUNC_TIMEZONE_STRING_TIMEZONE)_FUNC_TIMEZONE_STRING_TIMEZONE=qbs_new(0,0);
+void *_FUNC_TIMEZONE_UDT_TZ=NULL;
+if(_FUNC_TIMEZONE_UDT_TZ==NULL){
+_FUNC_TIMEZONE_UDT_TZ=(void*)mem_static_malloc(108);
+memset(_FUNC_TIMEZONE_UDT_TZ,0,108);
+}
+byte_element_struct *byte_element_7944=NULL;
+if (!byte_element_7944){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7944=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7944=(byte_element_struct*)mem_static_malloc(12);
+}

@@ -1,0 +1,89 @@
+CONST FRAME_BORDER = 2
+CONST FRAME_DOUBLE = 2
+CONST FRAME_SINGLE = 1
+CONST FRAME_THICKNESS_DOUBLE = 9
+CONST FRAME_THICKNESS_SINGLE = 4
+
+SCREEN _NEWIMAGE(640, 480, 32)
+
+
+REDIM SHARED GUI_frame(2, 8, 4) AS LONG
+GUI_frame(1, 1, 1) = _LOADIMAGE("resource\image\gui\frame\frame_bar_gold.png")
+GUI_frame(1, 2, 1) = _LOADIMAGE("resource\image\gui\frame\frame_side_bottom_gold.png")
+GUI_frame(1, 2, 2) = _LOADIMAGE("resource\image\gui\frame\frame_side_left_gold.png")
+GUI_frame(1, 2, 3) = _LOADIMAGE("resource\image\gui\frame\frame_side_right_gold.png")
+GUI_frame(1, 2, 4) = _LOADIMAGE("resource\image\gui\frame\frame_side_top_gold.png")
+GUI_frame(1, 3, 1) = _LOADIMAGE("resource\image\gui\frame\frame_corner_1_gold.png")
+GUI_frame(1, 3, 2) = _LOADIMAGE("resource\image\gui\frame\frame_corner_2_gold.png")
+GUI_frame(1, 3, 3) = _LOADIMAGE("resource\image\gui\frame\frame_corner_3_gold.png")
+GUI_frame(1, 3, 4) = _LOADIMAGE("resource\image\gui\frame\frame_corner_4_gold.png")
+GUI_frame(1, 4, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cross_gold.png")
+GUI_frame(1, 5, 1) = _LOADIMAGE("resource\image\gui\frame\frame_t_bottom_gold.png")
+GUI_frame(1, 5, 2) = _LOADIMAGE("resource\image\gui\frame\frame_t_left_gold.png")
+GUI_frame(1, 5, 3) = _LOADIMAGE("resource\image\gui\frame\frame_t_right_gold.png")
+GUI_frame(1, 5, 4) = _LOADIMAGE("resource\image\gui\frame\frame_t_top_gold.png")
+GUI_frame(1, 6, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cap_bottom_gold.png")
+GUI_frame(1, 6, 2) = _LOADIMAGE("resource\image\gui\frame\frame_cap_left_gold.png")
+GUI_frame(1, 6, 3) = _LOADIMAGE("resource\image\gui\frame\frame_cap_right_gold.png")
+GUI_frame(1, 6, 4) = _LOADIMAGE("resource\image\gui\frame\frame_cap_top_gold.png")
+GUI_frame(1, 7, 1) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_bottom_gold.png")
+GUI_frame(1, 7, 2) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_left_gold.png")
+GUI_frame(1, 7, 3) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_right_gold.png")
+GUI_frame(1, 7, 4) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_top_gold.png")
+GUI_frame(1, 8, 1) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_bottom_gold.png")
+GUI_frame(1, 8, 2) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_left_gold.png")
+GUI_frame(1, 8, 3) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_right_gold.png")
+GUI_frame(1, 8, 4) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_top_gold.png")
+GUI_frame(2, 1, 1) = _LOADIMAGE("resource\image\gui\frame\frame_bar_double_gold.png")
+GUI_frame(2, 2, 1) = _LOADIMAGE("resource\image\gui\frame\frame_side_bottom_double_gold.png")
+GUI_frame(2, 2, 2) = _LOADIMAGE("resource\image\gui\frame\frame_side_left_double_gold.png")
+GUI_frame(2, 2, 3) = _LOADIMAGE("resource\image\gui\frame\frame_side_right_double_gold.png")
+GUI_frame(2, 2, 4) = _LOADIMAGE("resource\image\gui\frame\frame_side_top_double_gold.png")
+GUI_frame(2, 3, 1) = _LOADIMAGE("resource\image\gui\frame\frame_corner_1_double_gold.png")
+GUI_frame(2, 3, 2) = _LOADIMAGE("resource\image\gui\frame\frame_corner_2_double_gold.png")
+GUI_frame(2, 3, 3) = _LOADIMAGE("resource\image\gui\frame\frame_corner_3_double_gold.png")
+GUI_frame(2, 3, 4) = _LOADIMAGE("resource\image\gui\frame\frame_corner_4_double_gold.png")
+GUI_frame(2, 4, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cross_double_gold.png")
+GUI_frame(2, 5, 1) = _LOADIMAGE("resource\image\gui\frame\frame_t_bottom_double_gold.png")
+GUI_frame(2, 5, 2) = _LOADIMAGE("resource\image\gui\frame\frame_t_left_double_gold.png")
+GUI_frame(2, 5, 3) = _LOADIMAGE("resource\image\gui\frame\frame_t_right_double_gold.png")
+GUI_frame(2, 5, 4) = _LOADIMAGE("resource\image\gui\frame\frame_t_top_double_gold.png")
+GUI_frame(2, 6, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cap_bottom_double_gold.png")
+GUI_frame(2, 6, 2) = _LOADIMAGE("resource\image\gui\frame\frame_cap_left_double_gold.png")
+GUI_frame(2, 6, 3) = _LOADIMAGE("resource\image\gui\frame\frame_cap_right_double_gold.png")
+GUI_frame(2, 6, 4) = _LOADIMAGE("resource\image\gui\frame\frame_cap_top_double_gold.png")
+
+
+PAINT (1, 1), 4294769916
+
+
+a$ = "50 50 C2 R150 C1 D150 C4 L150 C3 U150 BL75 BD75 C5"
+CALL frame(a$, FRAME_SINGLE, 0)
+
+
+
+SUB frame (instruction AS STRING, thickness AS _BYTE, dest AS LONG)
+DIM instructionpos AS INTEGER
+DIM instructions AS INTEGER
+DIM tracex AS LONG
+DIM tracey AS LONG
+
+IF instruction = "" THEN EXIT SUB
+IF thickness < FRAME_SINGLE THEN thickness = FRAME_SINGLE
+IF thickness > FRAME_DOUBLE THEN thickness = FRAME_DOUBLE
+
+REDIM instructions(1024) AS STRING
+instructionpos = 1
+DO
+    instructions = instructions + 1
+    instructions(instructions) = MID$(instruction, instructionpos, INSTR(instructionpos, instruction, CHR$(32)) - instructionpos)
+    IF instructions(instructions) = "" THEN instructions(instructions) = MID$(instruction, instructionpos)
+    instructionpos = instructionpos + LEN(instructions(instructions)) + 1
+LOOP UNTIL instructionpos >= LEN(instruction)
+
+tracex = VAL(instructions(1))
+tracey = VAL(instructions(2))
+
+
+
+END SUB

@@ -1,0 +1,9 @@
+int32 fornext_value8936;
+int32 fornext_finalvalue8936;
+int32 fornext_step8936;
+uint8 fornext_step_negative8936;
+float *_SUB_SCROLLBARSET_SINGLE_SCROLLBARCOLOR=NULL;
+if(_SUB_SCROLLBARSET_SINGLE_SCROLLBARCOLOR==NULL){
+_SUB_SCROLLBARSET_SINGLE_SCROLLBARCOLOR=(float*)mem_static_malloc(4);
+*_SUB_SCROLLBARSET_SINGLE_SCROLLBARCOLOR=0;
+}

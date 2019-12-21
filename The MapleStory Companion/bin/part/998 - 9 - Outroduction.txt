@@ -1,0 +1,21 @@
+    IF timepref = 1 THEN
+        LOCATE 28, 29
+        PRINT DATE$; " -- "; TIME$
+    END IF
+    IF timepref = 0 THEN
+        hour$ = LEFT$(TIME$, 2)
+        othertime$ = RIGHT$(TIME$, 6)
+        hour = VAL(hour$)
+        IF hour >= 13 THEN
+            hour = hour - 12
+            IF hour <= 9 THEN
+                hour$ = STR$(hour)
+                hour$ = LTRIM$(hour$)
+                hour$ = "0" + hour$
+            END IF
+        END IF
+        LOCATE 28, 29
+        PRINT DATE$; " -- "; hour$; othertime$
+    END IF
+    _DISPLAY
+LOOP

@@ -1,0 +1,22 @@
+int16 *_FUNC_NEWTEXTBOX_INTEGER_NEWTEXTBOX=NULL;
+if(_FUNC_NEWTEXTBOX_INTEGER_NEWTEXTBOX==NULL){
+_FUNC_NEWTEXTBOX_INTEGER_NEWTEXTBOX=(int16*)mem_static_malloc(2);
+*_FUNC_NEWTEXTBOX_INTEGER_NEWTEXTBOX=0;
+}
+float *_FUNC_NEWTEXTBOX_SINGLE_BEHAVIOUR=NULL;
+if(_FUNC_NEWTEXTBOX_SINGLE_BEHAVIOUR==NULL){
+_FUNC_NEWTEXTBOX_SINGLE_BEHAVIOUR=(float*)mem_static_malloc(4);
+*_FUNC_NEWTEXTBOX_SINGLE_BEHAVIOUR=0;
+}
+int32 fornext_value7727;
+int32 fornext_finalvalue7727;
+int32 fornext_step7727;
+uint8 fornext_step_negative7727;
+uint32 pass7728;
+int8 pass7729;
+int8 pass7730;
+int8 pass7731;
+uint32 pass7732;
+uint32 pass7733;
+uint32 pass7734;
+int8 pass7735;

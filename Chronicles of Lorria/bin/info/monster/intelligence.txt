@@ -1,0 +1,6 @@
+00-19 - Beast
+20-39 - Sightly Intelligent
+40-59 - Intelligent
+60-79 - Very Intelligent
+81-89 - Genius
+90-99 - Astral

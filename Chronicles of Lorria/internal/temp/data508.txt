@@ -1,0 +1,14 @@
+int8 *_FUNC_TIMEZONE_DST_BYTE_TIMEZONE_DST=NULL;
+if(_FUNC_TIMEZONE_DST_BYTE_TIMEZONE_DST==NULL){
+_FUNC_TIMEZONE_DST_BYTE_TIMEZONE_DST=(int8*)mem_static_malloc(1);
+*_FUNC_TIMEZONE_DST_BYTE_TIMEZONE_DST=0;
+}
+void *_FUNC_TIMEZONE_DST_UDT_TZ=NULL;
+if(_FUNC_TIMEZONE_DST_UDT_TZ==NULL){
+_FUNC_TIMEZONE_DST_UDT_TZ=(void*)mem_static_malloc(108);
+memset(_FUNC_TIMEZONE_DST_UDT_TZ,0,108);
+}
+byte_element_struct *byte_element_7945=NULL;
+if (!byte_element_7945){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7945=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7945=(byte_element_struct*)mem_static_malloc(12);
+}

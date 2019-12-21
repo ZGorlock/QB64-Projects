@@ -1,0 +1,7 @@
+int32 *_FUNC_ISFG_BIT1_ISFG=NULL;
+if(_FUNC_ISFG_BIT1_ISFG==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_ISFG_BIT1_ISFG=(int32*)(dblock+cmem_sp);
+*_FUNC_ISFG_BIT1_ISFG=0;
+}

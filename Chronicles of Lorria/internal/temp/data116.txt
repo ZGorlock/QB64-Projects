@@ -1,0 +1,5 @@
+int8 pass6804;
+int8 pass6805;
+int8 pass6806;
+int8 pass6807;
+int8 pass6808;

@@ -1,0 +1,1146 @@
+IF (k$ = CHR$(107) OR k$ = CHR$(75)) OR (_MOUSEX > 234 AND _MOUSEX < 401 AND _MOUSEY > 381 AND _MOUSEY < 397 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 2
+    DO
+        IF autocharupdate = 1 THEN
+            charupdatetoggle$ = "ON"
+        ELSE
+            IF autocharupdate = 0 THEN
+                charupdatetoggle$ = "OFF"
+            END IF
+        END IF
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "What would you like to do?"
+            PRINT "     1-Change Colors"
+            PRINT "     2-Change Time Preference"
+            PRINT "     3-Change Scroll Speed"
+            PRINT "     4-Toggle AutoCharUpdate: "; charupdatetoggle$
+            PRINT "     5-Theme Options"
+            PRINT "     6-Change Startup Name"
+            PRINT "     7-Reset All User Data"
+            PRINT "     8-Uninstall"
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Which would you like to change?"
+                    PRINT "     1-Text Color"
+                    PRINT "     2-Background Color"
+                    PRINT "     3-Cursor Color"
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        textcolor$ = ""
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    COLOR 15, 0
+                                    LOCATE 2, 13
+                                    PRINT "0-"
+                                    LOCATE 3, 13
+                                    PRINT "1-"
+                                    LOCATE 4, 13
+                                    PRINT "2-"
+                                    LOCATE 5, 13
+                                    PRINT "3-"
+                                    LOCATE 6, 13
+                                    PRINT "4-"
+                                    LOCATE 7, 13
+                                    PRINT "5-"
+                                    LOCATE 8, 13
+                                    PRINT "6-"
+                                    LOCATE 9, 13
+                                    PRINT "7-"
+                                    LOCATE 2, 50
+                                    PRINT "8-"
+                                    LOCATE 3, 50
+                                    PRINT "9-"
+                                    LOCATE 4, 49
+                                    PRINT "10-"
+                                    LOCATE 5, 49
+                                    PRINT "11-"
+                                    LOCATE 6, 49
+                                    PRINT "12-"
+                                    LOCATE 7, 49
+                                    PRINT "13-"
+                                    LOCATE 8, 49
+                                    PRINT "14-"
+                                    LOCATE 9, 49
+                                    PRINT "15-"
+                                    COLOR 0, 0
+                                    LOCATE 2, 15
+                                    PRINT "BLACK"
+                                    COLOR 1, 0
+                                    LOCATE 3, 15
+                                    PRINT "BLUE"
+                                    COLOR 2, 0
+                                    LOCATE 4, 15
+                                    PRINT "GREEN"
+                                    COLOR 3, 0
+                                    LOCATE 5, 15
+                                    PRINT "AQUA"
+                                    COLOR 4, 0
+                                    LOCATE 6, 15
+                                    PRINT "RED"
+                                    COLOR 5, 0
+                                    LOCATE 7, 15
+                                    PRINT "VIOLET"
+                                    COLOR 6, 0
+                                    LOCATE 8, 15
+                                    PRINT "ORANGE"
+                                    COLOR 7, 0
+                                    LOCATE 9, 15
+                                    PRINT "WHITE"
+                                    COLOR 8, 0
+                                    LOCATE 2, 53
+                                    PRINT "BRT BLACK"
+                                    COLOR 9, 0
+                                    LOCATE 3, 53
+                                    PRINT "BRT BLUE"
+                                    COLOR 10, 0
+                                    LOCATE 4, 53
+                                    PRINT "BRT GREEN"
+                                    COLOR 11, 0
+                                    LOCATE 5, 53
+                                    PRINT "BRT AQUA"
+                                    COLOR 12, 0
+                                    LOCATE 6, 53
+                                    PRINT "BRT RED"
+                                    COLOR 13, 0
+                                    LOCATE 7, 53
+                                    PRINT "BRT VIOLET"
+                                    COLOR 14, 0
+                                    LOCATE 8, 53
+                                    PRINT "BRT ORANGE"
+                                    COLOR 15, 0
+                                    LOCATE 9, 53
+                                    PRINT "BRT WHITE"
+                                    COLOR textcolor, backcolor
+                                    LOCATE 28, 1
+                                    PRINT "Enter the code of the color you wish to use: "; textcolor$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        textcolor$ = textcolor$ + k$
+                                        inputlength = LEN(textcolor$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        textcolor$ = MID$(textcolor$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    IF inputlength > 2 THEN
+                                        textcolor$ = LEFT$(textcolor$, 2)
+                                        inputlength = 2
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                textcolor = VAL(textcolor$)
+                                IF textcolor > 15 THEN
+                                    textcolor$ = ""
+                                    inputlengthh = 0
+                                    EXIT DO
+                                END IF
+                                filename$ = "user\pref\textcolor.txt"
+                                userdata$ = STR$(textcolor)
+                                GOSUB encrypter
+                                COLOR textcolor, backcolor
+                                GOTO BEGIN
+                            LOOP
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        backcolor$ = ""
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    COLOR 15, 0
+                                    LOCATE 2, 13
+                                    PRINT "0-"
+                                    LOCATE 3, 13
+                                    PRINT "1-"
+                                    LOCATE 4, 13
+                                    PRINT "2-"
+                                    LOCATE 5, 13
+                                    PRINT "3-"
+                                    LOCATE 6, 13
+                                    PRINT "4-"
+                                    LOCATE 7, 13
+                                    PRINT "5-"
+                                    LOCATE 8, 13
+                                    PRINT "6-"
+                                    LOCATE 9, 13
+                                    PRINT "7-"
+                                    LOCATE 2, 50
+                                    PRINT "8-"
+                                    LOCATE 3, 50
+                                    PRINT "9-"
+                                    LOCATE 4, 49
+                                    PRINT "10-"
+                                    LOCATE 5, 49
+                                    PRINT "11-"
+                                    LOCATE 6, 49
+                                    PRINT "12-"
+                                    LOCATE 7, 49
+                                    PRINT "13-"
+                                    LOCATE 8, 49
+                                    PRINT "14-"
+                                    LOCATE 9, 49
+                                    PRINT "15-"
+                                    COLOR 0, 0
+                                    LOCATE 2, 15
+                                    PRINT "BLACK"
+                                    COLOR 0, 1
+                                    LOCATE 3, 15
+                                    PRINT "BLUE"
+                                    COLOR 0, 2
+                                    LOCATE 4, 15
+                                    PRINT "GREEN"
+                                    COLOR 0, 3
+                                    LOCATE 5, 15
+                                    PRINT "AQUA"
+                                    COLOR 0, 4
+                                    LOCATE 6, 15
+                                    PRINT "RED"
+                                    COLOR 0, 5
+                                    LOCATE 7, 15
+                                    PRINT "VIOLET"
+                                    COLOR 0, 6
+                                    LOCATE 8, 15
+                                    PRINT "ORANGE"
+                                    COLOR 0, 7
+                                    LOCATE 9, 15
+                                    PRINT "WHITE"
+                                    COLOR 0, 8
+                                    LOCATE 2, 53
+                                    PRINT "BRT BLACK"
+                                    COLOR 0, 9
+                                    LOCATE 3, 53
+                                    PRINT "BRT BLUE"
+                                    COLOR 0, 10
+                                    LOCATE 4, 53
+                                    PRINT "BRT GREEN"
+                                    COLOR 0, 11
+                                    LOCATE 5, 53
+                                    PRINT "BRT AQUA"
+                                    COLOR 0, 12
+                                    LOCATE 6, 53
+                                    PRINT "BRT RED"
+                                    COLOR 0, 13
+                                    LOCATE 7, 53
+                                    PRINT "BRT VIOLET"
+                                    COLOR 0, 14
+                                    LOCATE 8, 53
+                                    PRINT "BRT ORANGE"
+                                    COLOR 0, 15
+                                    LOCATE 9, 53
+                                    PRINT "BRT WHITE"
+                                    COLOR textcolor, backcolor
+                                    LOCATE 28, 1
+                                    PRINT "Enter the code of the color you wish to use: "; backcolor$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        backcolor$ = backcolor$ + k$
+                                        inputlength = LEN(backcolor$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        backcolor$ = MID$(backcolor$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    IF inputlength > 2 THEN
+                                        backcolor$ = LEFT$(backcolor$, 2)
+                                        inputlength = 2
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                backcolor = VAL(backcolor$)
+                                IF backcolor > 30 THEN
+                                    backcolor$ = ""
+                                    inputlength = 0
+                                    EXIT DO
+                                END IF
+                                filename$ = "user\pref\backcolor.txt"
+                                userdata$ = STR$(backcolor)
+                                GOSUB encrypter
+                                COLOR textcolor, backcolor
+                                GOTO BEGIN
+                            LOOP
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(51) THEN
+                        cursorcolor$ = ""
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    COLOR 15, 0
+                                    LOCATE 2, 13
+                                    PRINT "1-"
+                                    LOCATE 3, 13
+                                    PRINT "2-"
+                                    LOCATE 4, 13
+                                    PRINT "3-"
+                                    LOCATE 5, 13
+                                    PRINT "4-"
+                                    LOCATE 6, 13
+                                    PRINT "5-"
+                                    LOCATE 7, 13
+                                    PRINT "6-"
+                                    LOCATE 8, 13
+                                    PRINT "7-"
+                                    LOCATE 9, 13
+                                    PRINT "8-"
+                                    LOCATE 2, 50
+                                    PRINT "9-"
+                                    LOCATE 3, 49
+                                    PRINT "10-"
+                                    LOCATE 4, 49
+                                    PRINT "11-"
+                                    LOCATE 5, 49
+                                    PRINT "12-"
+                                    LOCATE 6, 49
+                                    PRINT "13-"
+                                    LOCATE 7, 49
+                                    PRINT "14-"
+                                    LOCATE 8, 49
+                                    PRINT "15-"
+                                    LOCATE 9, 49
+                                    PRINT "16-"
+                                    CIRCLE (130, 23), 5, 1
+                                    CIRCLE (130, 39), 5, 2
+                                    CIRCLE (130, 55), 5, 3
+                                    CIRCLE (130, 71), 5, 4
+                                    CIRCLE (130, 87), 5, 5
+                                    CIRCLE (130, 103), 5, 6
+                                    CIRCLE (130, 119), 5, 7
+                                    CIRCLE (130, 135), 5, 8
+                                    CIRCLE (425, 23), 5, 9
+                                    CIRCLE (425, 39), 5, 10
+                                    CIRCLE (425, 55), 5, 11
+                                    CIRCLE (425, 71), 5, 12
+                                    CIRCLE (425, 87), 5, 13
+                                    CIRCLE (425, 103), 5, 14
+                                    CIRCLE (425, 119), 5, 15
+                                    CIRCLE (425, 135), 5, 16
+                                    COLOR textcolor, backcolor
+                                    LOCATE 28, 1
+                                    PRINT "Enter the code of the color you wish to use: "; cursorcolor$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        cursorcolor$ = cursorcolor$ + k$
+                                        inputlength = LEN(cursorcolor$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        cursorcolor$ = MID$(cursorcolor$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    IF inputlength > 2 THEN
+                                        cursorcolor$ = LEFT$(cursorcolor$, 2)
+                                        inputlength = 2
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                cursorcolor = VAL(cursorcolor$)
+                                IF cursorcolor > 16 OR cursorcolor < 1 THEN
+                                    cursorcolor$ = ""
+                                    inputlength = 0
+                                    EXIT DO
+                                END IF
+                                filename$ = "user\pref\cursorcolor.txt"
+                                userdata$ = STR$(cursorcolor)
+                                GOSUB encrypter
+                                GOTO BEGIN
+                            LOOP
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(51) THEN
+                        cursorcolor$ = ""
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    COLOR 15, 0
+                                    LOCATE 2, 13
+                                    PRINT "1-"
+                                    LOCATE 3, 13
+                                    PRINT "2-"
+                                    LOCATE 4, 13
+                                    PRINT "3-"
+                                    LOCATE 5, 13
+                                    PRINT "4-"
+                                    LOCATE 6, 13
+                                    PRINT "5-"
+                                    LOCATE 7, 13
+                                    PRINT "6-"
+                                    LOCATE 8, 13
+                                    PRINT "7-"
+                                    LOCATE 9, 13
+                                    PRINT "8-"
+                                    LOCATE 2, 50
+                                    PRINT "9-"
+                                    LOCATE 3, 49
+                                    PRINT "10-"
+                                    LOCATE 4, 49
+                                    PRINT "11-"
+                                    LOCATE 5, 49
+                                    PRINT "12-"
+                                    LOCATE 6, 49
+                                    PRINT "13-"
+                                    LOCATE 7, 49
+                                    PRINT "14-"
+                                    LOCATE 8, 49
+                                    PRINT "15-"
+                                    LOCATE 9, 49
+                                    PRINT "16-"
+                                    PSET (130, 23), 1
+                                    PSET (130, 39), 2
+                                    PSET (130, 55), 3
+                                    PSET (130, 71), 4
+                                    PSET (130, 87), 5
+                                    PSET (130, 103), 6
+                                    PSET (130, 119), 7
+                                    PSET (130, 135), 8
+                                    PSET (425, 23), 9
+                                    PSET (425, 39), 10
+                                    PSET (425, 55), 11
+                                    PSET (425, 71), 12
+                                    PSET (425, 87), 13
+                                    PSET (425, 103), 14
+                                    PSET (425, 119), 15
+                                    PSET (425, 135), 16
+                                    COLOR textcolor, backcolor
+                                    LOCATE 28, 1
+                                    PRINT "Enter the code of the color you wish to use: "; scrollcolor$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        scrollcolor$ = scrollcolor$ + k$
+                                        inputlength = LEN(scrollcolor$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        scrollcolor$ = MID$(scrollcolor$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    IF inputlength > 2 THEN
+                                        scrollcolor$ = LEFT$(scrollcolor$, 2)
+                                        inputlength = 2
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                scrollcolor = VAL(scrollcolor$)
+                                IF scrollcolor > 16 OR scrollcolor < 1 THEN
+                                    scrollcolor$ = ""
+                                    inputlength = 0
+                                    EXIT DO
+                                END IF
+                                filename$ = "user\pref\scrollcolor.txt"
+                                userdata$ = STR$(scrollcolor)
+                                GOSUB encrypter
+                                GOTO BEGIN
+                            LOOP
+                        LOOP
+                    END IF
+                    _DISPLAY
+                LOOP
+            END IF
+            IF k$ = CHR$(50) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "What type of clock do you prefer?"
+                    PRINT "     1-12 hour clock"
+                    PRINT "     2-24 hour clock"
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        timepref = 0
+                        filename$ = "user\pref\timepref.txt"
+                        userdata$ = STR$(timepref)
+                        GOSUB encrypter
+                        GOTO BEGIN
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        timepref = 1
+                        filename$ = "user\pref\timepref.txt"
+                        userdata$ = STR$(timepref)
+                        GOSUB encrypter
+                        GOTO BEGIN
+                    END IF
+                    _DISPLAY
+                LOOP
+            END IF
+            IF k$ = CHR$(51) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your scroll speed is the number of rows you scroll per click of the mouse wheel"
+                    PRINT "Enter a number between 1 and 5 to be set as your scroll speed"
+                    PRINT ": "; scrollspeed$
+                    GOSUB controls
+                    IF k$ >= CHR$(49) AND k$ <= CHR$(53) THEN
+                        scrollspeed$ = scrollspeed$ + k$
+                        inputlength = LEN(scrollspeed$)
+                    END IF
+                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                        scrollspeed$ = MID$(scrollspeed$, 1, (inputlength - 1))
+                        inputlength = (inputlength - 1)
+                    END IF
+                    IF inputlength > 1 THEN
+                        scrollspeed$ = LEFT$(scrollspeed$, 1)
+                        inputlength = 1
+                    END IF
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(13)
+                filename$ = "user\pref\scrollspeed.txt"
+                userdata$ = scrollspeed$
+                GOSUB encrypter
+                GOTO BEGIN
+            END IF
+            IF k$ = CHR$(52) THEN
+                IF autocharupdate = 1 THEN
+                    autocharupdate = 0
+                ELSE
+                    IF autocharupdate = 0 THEN
+                        autocharupdate = 1
+                    END IF
+                END IF
+                filename$ = "user\pref\autocharupdate.txt"
+                userdata$ = STR$(autocharupdate)
+                GOSUB encrypter
+                EXIT DO
+            END IF
+            IF k$ = CHR$(53) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "What would you like to do?"
+                    PRINT "     1-Have No Theme"
+                    PRINT "     2-Mute Theme"
+                    PRINT "     3-Reset Theme"
+                    SLEEP
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        themeplaying = _SNDPLAYING(theme)
+                        IF themeplaying = -1 THEN _SNDPAUSE theme
+                        thememixplaying = _SNDPLAYING(thememix)
+                        IF thememixplaying = -1 THEN _SNDPAUSE thememix
+                        jukeboxplaying = _SNDPLAYING(jukebox)
+                        IF jukeboxplaying = -1 THEN _SNDPAUSE jukebox
+                        randomjukeboxplaying = _SNDPLAYING(randomjukebox)
+                        IF randomjukeboxplaying = -1 THEN _SNDPAUSE randomjukebox
+                        shufflejukeboxplaying = _SNDPLAYING(shufflejukebox)
+                        IF shufflejukeboxplaying = -1 THEN _SNDPAUSE shufflejukebox
+                        jukeboxmixer1playing = _SNDPLAYING(jukeboxmixer1)
+                        IF jukeboxmixer1playing = -1 THEN _SNDPAUSE jukeboxmixer1
+                        jukeboxmixer2playing = _SNDPLAYING(jukeboxmixer2)
+                        IF jukeboxmixer2playing = -1 THEN _SNDPAUSE jukeboxmixer2
+                        jukeboxunknownplaying = _SNDPLAYING(jukeboxunknown)
+                        IF jukeboxunknownplaying = -1 THEN _SNDPAUSE jukeboxunknown
+                        galleryaudioplaying = _SNDPLAYING(galleryaudio)
+                        IF galleryaudioplaying = -1 THEN _SNDPAUSE galleryaudio
+                        thememuteplaying = _SNDPLAYING(thememute)
+                        IF thememuteplaying = -1 THEN _SNDPAUSE thememute
+                        creditsplaying = _SNDPLAYING(credits)
+                        IF creditsplaying = -1 THEN _SNDPAUSE credits
+                        theme$ = "notheme.ogg"
+                        filename$ = "user\pref\theme.txt"
+                        userdata$ = theme$
+                        GOSUB encrypter
+                        duotheme$ = "0"
+                        filename$ = ""
+                        userdata$ = duotheme$
+                        GOSUB encrypter
+                        GOTO PREBEGIN
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        themeplaying = _SNDPLAYING(theme)
+                        IF themeplaying = -1 THEN _SNDPAUSE theme
+                        thememixplaying = _SNDPLAYING(thememix)
+                        IF thememixplaying = -1 THEN _SNDPAUSE thememix
+                        jukeboxplaying = _SNDPLAYING(jukebox)
+                        IF jukeboxplaying = -1 THEN _SNDPAUSE jukebox
+                        randomjukeboxplaying = _SNDPLAYING(randomjukebox)
+                        IF randomjukeboxplaying = -1 THEN _SNDPAUSE randomjukebox
+                        shufflejukeboxplaying = _SNDPLAYING(shufflejukebox)
+                        IF shufflejukeboxplaying = -1 THEN _SNDPAUSE shufflejukebox
+                        jukeboxmixer1playing = _SNDPLAYING(jukeboxmixer1)
+                        IF jukeboxmixer1playing = -1 THEN _SNDPAUSE jukeboxmixer1
+                        jukeboxmixer2playing = _SNDPLAYING(jukeboxmixer2)
+                        IF jukeboxmixer2playing = -1 THEN _SNDPAUSE jukeboxmixer2
+                        jukeboxunknownplaying = _SNDPLAYING(jukeboxunknown)
+                        IF jukeboxunknownplaying = -1 THEN _SNDPAUSE jukeboxunknown
+                        galleryaudioplaying = _SNDPLAYING(galleryaudio)
+                        IF galleryaudioplaying = -1 THEN _SNDPAUSE galleryaudio
+                        thememuteplaying = _SNDPLAYING(thememute)
+                        IF thememuteplaying = -1 THEN _SNDPAUSE thememute
+                        creditsplaying = _SNDPLAYING(credits)
+                        IF creditsplaying = -1 THEN _SNDPAUSE credits
+                        thememute = _SNDOPEN("notheme.ogg", "SYNC, PAUSE")
+                        _SNDLOOP thememute
+                        _SNDPAUSE thememute
+                        GOTO BEGIN
+                    END IF
+                    IF k$ = CHR$(51) THEN
+                        GOTO PREBEGIN
+                    END IF
+                    _DISPLAY
+                LOOP
+            END IF
+            IF k$ = CHR$(54) THEN
+                exitloop = 0
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Are you sure you would like to change this?"
+                    PRINT "     y-Yes"
+                    PRINT "     n-No"
+                    GOSUB controls
+                    IF k$ = CHR$(121) THEN
+                        GOSUB welcomename
+                    END IF
+                    IF k$ = CHR$(110) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Where would you like to go?"
+                            PRINT "     1-Options Menu"
+                            PRINT "     2-Main Menu"
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                                exitloop = 1
+                                EXIT DO
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                GOTO BEGIN
+                            END IF
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF exitloop = 1 THEN EXIT DO
+                    _DISPLAY
+                LOOP
+            END IF
+            IF k$ = CHR$(55) THEN
+                exitloop = 0
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Are you sure you want to erase ALL your user data?"
+                    PRINT "     y-Yes"
+                    PRINT "     n-No"
+                    GOSUB controls
+                    IF k$ = CHR$(121) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Are you positive, you will not be able to recover erased data"
+                            PRINT "     y-Yes, erase my user data"
+                            PRINT "     n-No, don't erase my user data"
+                            GOSUB controls
+                            IF k$ = CHR$(121) THEN
+                                CLS
+                                PRINT "Ok, deleting all user data"
+                                PRINT "This could take a few seconds"
+                                _DISPLAY
+                                zero$ = CHR$(48 + randomization)
+                                onenum$ = CHR$(49 + randomization)
+                                nstr$ = CHR$(78 + randomization)
+                                astr$ = CHR$(65 + randomization)
+                                color15$ = (CHR$(49 + randomization) + CHR$(53 + randomization))
+                                welcomenameold$ = "User"
+                                FOR c = 1 TO LEN(welcomenameold$)
+                                    currentc$ = MID$(welcomenameold$, c, 1)
+                                    Code = ASC(currentc$)
+                                    currentc$ = CHR$(Code + randomization)
+                                    welcomename$ = welcomename$ + currentc$
+                                NEXT c
+                                scrollspeed$ = CHR$(51 + randomization)
+                                themeold$ = "audio\Event\DrBing.ogg"
+                                FOR c = 1 TO LEN(themeold$)
+                                    currentc$ = MID$(themeold$, c, 1)
+                                    Code = ASC(currentc$)
+                                    currentc$ = CHR$(Code + randomization)
+                                    theme$ = theme$ + currentc$
+                                NEXT c
+                                OPEN "source\program\fileloc.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\program\titlename.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\program\welcomename.txt" FOR OUTPUT AS #1
+                                WRITE #1, welcomename$
+                                CLOSE #1
+                                OPEN "user\program\uses.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\program\time.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\program\timeuse.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\program\shortcutprompt.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\pref\textcolor.txt" FOR OUTPUT AS #1
+                                WRITE #1, color15$
+                                CLOSE #1
+                                OPEN "user\pref\backcolor.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\pref\cursorcolor.txt" FOR OUTPUT AS #1
+                                WRITE #1, color15$
+                                CLOSE #1
+                                OPEN "user\pref\scrollcolor.txt" FOR OUTPUT AS #1
+                                WRITE #1, color15$
+                                CLOSE #1
+                                OPEN "user\pref\timepref.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\pref\autocharupdate.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\pref\scrollspeed.txt" FOR OUTPUT AS #1
+                                WRITE #1, scrollspeed$
+                                CLOSE #1
+                                OPEN "user\pref\duotheme.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\pref\theme.txt" FOR OUTPUT AS #1
+                                WRITE #1, theme$
+                                CLOSE #1
+                                OPEN "user\pref\thememix.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\pref\themevol.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\pref\thememixvol.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\ign.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\stat\level.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\perctnl.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\class.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\stat\guild.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\stat\server.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\stat\atk.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\matk.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\str.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\dex.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\int.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\luk.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\hp.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\mp.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\speed.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\jump.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\hands.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\critrate.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\mesos.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\stat\fame.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\dmgmax.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\dmgmin.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\def.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\mdef.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\macc.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\pacc.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\pavoid.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\mavoid.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\calc\minmp.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\acc\pin.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\acc\user.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\acc\pass.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\acc\pic.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\acc\name.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\acc\dob.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\acc\email.txt" FOR OUTPUT AS #1
+                                WRITE #1, zerstr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav1song1.txt" FOR OUTPUT AS #1
+                                WRITE #1, nstr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav1song2.txt" FOR OUTPUT AS #1
+                                WRITE #1, astr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav1location1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav1location2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav1vol1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav1vol2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav2song1.txt" FOR OUTPUT AS #1
+                                WRITE #1, nstr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav2song2.txt" FOR OUTPUT AS #1
+                                WRITE #1, astr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav2location1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav2location2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav2vol1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav2vol2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav3song1.txt" FOR OUTPUT AS #1
+                                WRITE #1, nstr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav3song2.txt" FOR OUTPUT AS #1
+                                WRITE #1, astr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav3location1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav3location2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav3vol1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav3vol2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav4song1.txt" FOR OUTPUT AS #1
+                                WRITE #1, nstr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav4song2.txt" FOR OUTPUT AS #1
+                                WRITE #1, astr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav4location1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav4location2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav4vol1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav4vol2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav5song1.txt" FOR OUTPUT AS #1
+                                WRITE #1, nstr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav5song2.txt" FOR OUTPUT AS #1
+                                WRITE #1, astr$
+                                CLOSE #1
+                                OPEN "user\mixer\fav5location1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav5location2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav5vol1.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\mixer\fav5vol2.txt" FOR OUTPUT AS #1
+                                WRITE #1, zero$
+                                CLOSE #1
+                                OPEN "user\row\guide\abguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\abrguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\bgtmsguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\chairsguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\cmssguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\csgarguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\ethicsguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\faqguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\gpguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\hntguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\htpmsoaguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\leechguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\macrosguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\makerguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\merchguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\mfbguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\mtsguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\pmhguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\potguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\potionguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\qaasoeguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\qycdtmmguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\remguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\suamagguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\twicpqguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\guide\wcwigmsguiders.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\apqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\cwkpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\dojo.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\efpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\gpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\gspqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\hpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\kpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\lpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\mcrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\mc2rs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\mpqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\nettspyramid.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\opqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\pq\ppqrs.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                OPEN "user\row\egg\sfrow.txt" FOR OUTPUT AS #1
+                                WRITE #1, onenum$
+                                CLOSE #1
+                                themeplaying = _SNDPLAYING(theme)
+                                IF themeplaying = -1 THEN _SNDPAUSE theme
+                                thememixplaying = _SNDPLAYING(thememix)
+                                IF thememixplaying = -1 THEN _SNDPAUSE thememix
+                                jukeboxplaying = _SNDPLAYING(jukebox)
+                                IF jukeboxplaying = -1 THEN _SNDPAUSE jukebox
+                                randomjukeboxplaying = _SNDPLAYING(randomjukebox)
+                                IF randomjukeboxplaying = -1 THEN _SNDPAUSE randomjukebox
+                                shufflejukeboxplaying = _SNDPLAYING(shufflejukebox)
+                                IF shufflejukeboxplaying = -1 THEN _SNDPAUSE shufflejukebox
+                                jukeboxmixer1playing = _SNDPLAYING(jukeboxmixer1)
+                                IF jukeboxmixer1playing = -1 THEN _SNDPAUSE jukeboxmixer1
+                                jukeboxmixer2playing = _SNDPLAYING(jukeboxmixer2)
+                                IF jukeboxmixer2playing = -1 THEN _SNDPAUSE jukeboxmixer2
+                                jukeboxunknownplaying = _SNDPLAYING(jukeboxunknown)
+                                IF jukeboxunknownplaying = -1 THEN _SNDPAUSE jukeboxunknown
+                                galleryaudioplaying = _SNDPLAYING(galleryaudio)
+                                IF galleryaudioplaying = -1 THEN _SNDPAUSE galleryaudio
+                                thememuteplaying = _SNDPLAYING(thememute)
+                                IF thememuteplaying = -1 THEN _SNDPAUSE thememute
+                                creditsplaying = _SNDPLAYING(credits)
+                                IF creditsplaying = -1 THEN _SNDPAUSE credits
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Restart the Program for the Effect to Take Place"
+                                    PRINT "Press Space to Close The Companion"
+                                    SLEEP
+                                    k$ = INKEY$
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(32)
+                                CLEAR
+                                SYSTEM
+                            END IF
+                            IF k$ = CHR$(110) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Where would you like to go?"
+                                    PRINT "     1-Options Menu"
+                                    PRINT "     2-Main Menu"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                        exitloop = 1
+                                        EXIT DO
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                        GOTO BEGIN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF exitloop = 1 THEN EXIT DO
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(110) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Where would you like to go?"
+                            PRINT "     1-Options Menu"
+                            PRINT "     2-Main Menu"
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                                exitloop = 1
+                                EXIT DO
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                GOTO BEGIN
+                            END IF
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF exitloop = 1 THEN EXIT DO
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            IF k$ = CHR$(56) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "We are sorry, our uninstall function is currently unavailable"
+                    PRINT "To uninstall navigate to your install location:"
+                    PRINT "     "; fileloc$
+                    PRINT "Right click the folder named 'The MapleStory Companion'"
+                    PRINT "And Select delete"
+                    PRINT "Close this program before executing"
+                    SLEEP
+                    GOSUB controls
+                    _DISPLAY
+                LOOP
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

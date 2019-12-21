@@ -1,0 +1,10 @@
+if(oldstr6827){
+if(oldstr6827->fixed)qbs_set(oldstr6827,_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE);
+qbs_free(_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE);
+}
+if (_FUNC_KEYBOARDNEW_ARRAY_STRING_A[2]&1){
+tmp_long=_FUNC_KEYBOARDNEW_ARRAY_STRING_A[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(_FUNC_KEYBOARDNEW_ARRAY_STRING_A[0]))[tmp_long]);
+free((void*)(_FUNC_KEYBOARDNEW_ARRAY_STRING_A[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_FUNC_KEYBOARDNEW_ARRAY_STRING_A)[8] );

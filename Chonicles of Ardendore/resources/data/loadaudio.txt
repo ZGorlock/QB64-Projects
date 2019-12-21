@@ -1,0 +1,2 @@
+resources\audio\mouseover_1.mp3
+resources\audio\click_1.mp3

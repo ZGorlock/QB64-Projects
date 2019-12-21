@@ -1,0 +1,240 @@
+IF (k$ = CHR$(114) OR k$ = CHR$(82)) OR (_MOUSEX > 401 AND _MOUSEX < 565 AND _MOUSEY > 301 AND _MOUSEY < 317 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 3
+    DO
+        _LIMIT 64
+        CLS
+        PRINT "What would you like to do?"
+        PRINT "    1-Main Map"
+        PRINT "    2-Search a Map"
+        GOSUB controls
+        IF k$ = CHR$(49) THEN
+            SCREEN 13
+            msound = _SNDOPEN("audio\program\msound.ogg", "SYNC")
+            CLS
+            PRINT ">loading graphics"
+            PRINT ">stand by..."
+            _DISPLAY
+            mainmap = _LOADIMAGE("graphic\map\main\mainmap.png")
+            mapleisland = _LOADIMAGE("graphic\map\main\mapleisland.png")
+            victoriaisland = _LOADIMAGE("graphic\map\main\victoriaisland.png")
+            sleepywood = _LOADIMAGE("graphic\map\main\sleepywood.png")
+            kerningcityshoppingcenter = _LOADIMAGE("graphic\map\main\kerningcityshoppingcenter.png")
+            elnathmts = _LOADIMAGE("graphic\map\main\elnathmts.png")
+            deadmine = _LOADIMAGE("graphic\map\main\deadmine.png")
+            aquaroad = _LOADIMAGE("graphic\map\main\aquaroad.png")
+            ludaslake = _LOADIMAGE("graphic\map\main\ludaslake.png")
+            clocktower = _LOADIMAGE("graphic\map\main\clocktower.png")
+            nihaldesert = _LOADIMAGE("graphic\map\main\nihaldesert.png")
+            mulunggarden = _LOADIMAGE("graphic\map\main\mulunggarden.png")
+            minarforest = _LOADIMAGE("graphic\map\main\minarforest.png")
+            neocity = _LOADIMAGE("graphic\map\main\neocity.png")
+            templeoftime = _LOADIMAGE("graphic\map\main\templeoftime.png")
+            edelstein = _LOADIMAGE("graphic\map\main\edelstein.png")
+            ereve = _LOADIMAGE("graphic\map\main\ereve.png")
+            rien = _LOADIMAGE("graphic\map\main\rien.png")
+            cml = 1
+            p = 1
+            q = 0
+            SCREEN 12
+            DO
+                _LIMIT 64
+                GOSUB controls
+                DO WHILE _MOUSEINPUT
+                    DO
+                        IF _MOUSEBUTTON(1) = -1 THEN
+                            IF cml = 1 THEN
+                                dis2 = SQR(((_MOUSEX - 142) ^ 2) + ((_MOUSEY - 81) ^ 2))
+                                IF dis2 < 18 AND cml = 1 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 2
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis3 = SQR(((_MOUSEX - 75) ^ 2) + ((_MOUSEY - 150) ^ 2))
+                                IF dis3 < 67 AND cml = 1 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 3
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                IF (((x > 350 AND x < 428) AND (y > 148 AND y < 314)) OR ((x > 428 AND x < 473) AND (y > 170 AND y < 314)) OR ((x > 238 AND x < 347) AND (y > 142 AND y < 350))) THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 6
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis8 = SQR(((_MOUSEX - 191) ^ 2) + ((_MOUSEY - 191) ^ 2))
+                                IF dis8 < 28 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 8
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis9 = SQR(((_MOUSEX - 265) ^ 2) + ((_MOUSEY - 282) ^ 2))
+                                IF dis9 < 40 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 9
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                IF (((x > 281 AND x < 482) AND (y > 380 AND y < 451)) OR ((x > 337 AND x < 463) AND (y > 348 AND y < 380)) OR ((x > 375 AND x < 463) AND (y > 325 AND y < 348))) THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 11
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                IF (((x > 485 AND x < 600) AND (y > 277 AND y < 410)) OR ((x > 487 AND x < 598) AND (y > 217 AND y < 277))) THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 12
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                IF (((x > 105 AND x < 281) AND (y > 350 AND y < 460)) OR ((x > 110 AND x < 180) AND (y > 234 AND y < 350))) THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 13
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis15 = SQR(((_MOUSEX - 27) ^ 2) + ((_MOUSEY - 378) ^ 2))
+                                IF dis15 < 52 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 15
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis16 = SQR(((_MOUSEX - 540) ^ 2) + ((_MOUSEY - 82) ^ 2))
+                                IF dis16 < 108 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 16
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis17 = SQR(((_MOUSEX - 184) ^ 2) + ((_MOUSEY - 120) ^ 2))
+                                IF dis17 < 25 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 17
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                                dis18 = SQR(((_MOUSEX - 47) ^ 2) + ((_MOUSEY - 259) ^ 2))
+                                IF dis18 < 35 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 18
+                                    cmlr = 1
+                                    EXIT DO
+                                END IF
+                            END IF
+                            IF cml = 3 THEN
+                                dis4 = SQR(((_MOUSEX - 285) ^ 2) + ((_MOUSEY - 230) ^ 2))
+                                IF dis4 < 21 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 4
+                                    cmlr = 3
+                                    EXIT DO
+                                END IF
+                                dis5 = SQR(((_MOUSEX - 105) ^ 2) + ((_MOUSEY - 223) ^ 2))
+                                IF dis5 < 23 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 5
+                                    cmlr = 3
+                                    EXIT DO
+                                END IF
+                            END IF
+                            IF cml = 6 THEN
+                                dis7 = SQR(((_MOUSEX - 564) ^ 2) + ((_MOUSEY - 302) ^ 2))
+                                IF dis7 < 35 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 7
+                                    cmlr = 6
+                                    EXIT DO
+                                END IF
+                            END IF
+                            IF cml = 9 THEN
+                                IF ((x > 276 AND x < 360) AND (y > 302 AND y < 336)) THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 10
+                                    cmlr = 9
+                                    EXIT DO
+                                END IF
+                            END IF
+                            IF cml = 13 THEN
+                                dis14 = SQR(((_MOUSEX - 601) ^ 2) + ((_MOUSEY - 77) ^ 2))
+                                IF dis14 < 32 THEN
+                                    p = 1
+                                    q = 1
+                                    cml = 14
+                                    cmlr = 13
+                                END IF
+                            END IF
+                        END IF
+                        EXIT DO
+                    LOOP
+                    IF _MOUSEBUTTON(2) = -1 AND cml <> 1 THEN
+                        p = 1
+                        cml = cmlr
+                        IF cmlr = 3 THEN cmlr = 1
+                        IF cmlr = 6 THEN cmlr = 1
+                        IF cmlr = 9 THEN cmlr = 1
+                        IF cmlr = 13 THEN cmlr = 1
+                        DO WHILE _MOUSEINPUT
+                        LOOP
+                    END IF
+                LOOP
+                IF k$ = CHR$(8) AND cml <> 1 THEN
+                    p = 1
+                    cml = cmlr
+                    IF cmlr = 3 THEN cmlr = 1
+                    IF cmlr = 6 THEN cmlr = 1
+                    IF cmlr = 9 THEN cmlr = 1
+                    IF cmlr = 13 THEN cmlr = 1
+                    DO
+                        k$ = INKEY$
+                    LOOP UNTIL k$ = ""
+                END IF
+                IF p = 1 THEN
+                    IF q = 1 THEN _SNDPLAY msound
+                    CLS
+                    IF cml = 1 THEN _PUTIMAGE (1, 1), mainmap
+                    IF cml = 2 THEN _PUTIMAGE (1, 1), mapleisland
+                    IF cml = 3 THEN _PUTIMAGE (1, 1), victoriaisland
+                    IF cml = 4 THEN _PUTIMAGE (1, 1), sleepywood
+                    IF cml = 5 THEN _PUTIMAGE (1, 1), kerningcityshoppingcenter
+                    IF cml = 6 THEN _PUTIMAGE (1, 1), elnathmts
+                    IF cml = 7 THEN _PUTIMAGE (1, 1), deadmine
+                    IF cml = 8 THEN _PUTIMAGE (1, 1), aquaroad
+                    IF cml = 9 THEN _PUTIMAGE (1, 1), ludaslake
+                    IF cml = 10 THEN _PUTIMAGE (1, 1), clocktower
+                    IF cml = 11 THEN _PUTIMAGE (1, 1), nihaldesert
+                    IF cml = 12 THEN _PUTIMAGE (1, 1), mulunggarden
+                    IF cml = 13 THEN _PUTIMAGE (1, 1), minarforest
+                    IF cml = 14 THEN _PUTIMAGE (1, 1), neocity
+                    IF cml = 15 THEN _PUTIMAGE (1, 1), templeoftime
+                    IF cml = 16 THEN _PUTIMAGE (1, 1), edelstein
+                    IF cml = 17 THEN _PUTIMAGE (1, 1), ereve
+                    IF cml = 18 THEN _PUTIMAGE (1, 1), rien
+                    p = 0
+                END IF
+                _DISPLAY
+            LOOP
+        END IF
+        IF k$ = CHR$(50) THEN
+        END IF
+        _DISPLAY
+    LOOP
+END IF

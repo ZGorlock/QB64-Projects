@@ -1,0 +1,10 @@
+int8 *_SUB_LUNAR_LAST_FULL_X_BYTE_X=NULL;
+if(_SUB_LUNAR_LAST_FULL_X_BYTE_X==NULL){
+_SUB_LUNAR_LAST_FULL_X_BYTE_X=(int8*)mem_static_malloc(1);
+*_SUB_LUNAR_LAST_FULL_X_BYTE_X=0;
+}
+int16 fornext_value7756;
+int16 fornext_finalvalue7756;
+int16 fornext_step7756;
+uint8 fornext_step_negative7756;
+int8 pass7757;

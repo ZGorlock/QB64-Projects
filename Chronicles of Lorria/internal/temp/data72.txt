@@ -1,0 +1,29 @@
+qbs *_FUNC_FILETITLE_STRING_FILETITLE=NULL;
+if (!_FUNC_FILETITLE_STRING_FILETITLE)_FUNC_FILETITLE_STRING_FILETITLE=qbs_new(0,0);
+qbs*oldstr6644=NULL;
+if(_FUNC_FILETITLE_STRING_F->tmp||_FUNC_FILETITLE_STRING_F->fixed||_FUNC_FILETITLE_STRING_F->readonly){
+oldstr6644=_FUNC_FILETITLE_STRING_F;
+if (oldstr6644->cmem_descriptor){
+_FUNC_FILETITLE_STRING_F=qbs_new_cmem(oldstr6644->len,0);
+}else{
+_FUNC_FILETITLE_STRING_F=qbs_new(oldstr6644->len,0);
+}
+memcpy(_FUNC_FILETITLE_STRING_F->chr,oldstr6644->chr,oldstr6644->len);
+}
+int32 *_FUNC_FILETITLE_LONG_X=NULL;
+if(_FUNC_FILETITLE_LONG_X==NULL){
+_FUNC_FILETITLE_LONG_X=(int32*)mem_static_malloc(4);
+*_FUNC_FILETITLE_LONG_X=0;
+}
+int64 fornext_value6646;
+int64 fornext_finalvalue6646;
+int64 fornext_step6646;
+uint8 fornext_step_negative6646;
+byte_element_struct *byte_element_6647=NULL;
+if (!byte_element_6647){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6647=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6647=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6648=NULL;
+if (!byte_element_6648){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6648=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6648=(byte_element_struct*)mem_static_malloc(12);
+}

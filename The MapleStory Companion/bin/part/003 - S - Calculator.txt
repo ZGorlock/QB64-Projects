@@ -1,0 +1,2101 @@
+IF (k$ = CHR$(115) OR k$ = CHR$(83)) OR (_MOUSEX > 401 AND _MOUSEX < 565 AND _MOUSEY > 269 AND _MOUSEY < 285 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 1
+    DO
+        source$ = "http://ayumilovemaple.wordpress.com/maplestory_calculator_formula/"
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "What would you like to calculate?"
+            PRINT "     0-Damage Calculator"
+            PRINT "     1-Defense Calculator"
+            PRINT "     2-Accuracy Calculator"
+            PRINT "     3-Hit Rate Calculator"
+            PRINT "     4-Avoid Calculator"
+            PRINT "     5-Monster Damage Calculator"
+            PRINT "     6-Party EXP Calculator"
+            PRINT "     7-Scroll Chance Calculator"
+            PRINT "     8-Minimum MP Calculator"
+            PRINT "     9-Trade Tax Calculator"
+            PRINT "     a-FM Shop Tax Calculator"
+            PRINT "     b-MTS Tax Calculator"
+            GOSUB controls
+            IF k$ = CHR$(48) THEN
+                attacker$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What type of attacker are you?"
+                            PRINT "     1-Ranged"
+                            PRINT "     2-Close Range"
+                            PRINT "     3-Magician"
+                            PRINT ": "; attacker$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                attacker$ = attacker$ + k$
+                                inputlength = LEN(attacker$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                attacker$ = MID$(attacker$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 1 THEN
+                                attacker$ = MID$(attacker$, 1, 1)
+                                inputlength = 1
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        attacker = VAL(attacker$)
+                        SELECT CASE attacker
+                            CASE 1
+                                range = .15
+                            CASE 2
+                                range = .2
+                            CASE 3
+                                range = .25
+                            CASE ELSE
+                                attacker$ = ""
+                                inputlength = 0
+                                EXIT DO
+                        END SELECT
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                weapontype$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What type of weapon are you using?"
+                            PRINT "     1-1H Sword"
+                            PRINT "     2-1H Axe"
+                            PRINT "     3-1H BW"
+                            PRINT "     4-Dagger"
+                            PRINT "     5-Wand"
+                            PRINT "     6-Staff"
+                            PRINT "     7-2H Sword"
+                            PRINT "     8-2H Axe"
+                            PRINT "     9-2H BW"
+                            PRINT "     10-Spear"
+                            PRINT "     11-Polearm"
+                            PRINT "     12-Bow"
+                            PRINT "     13-Crossbow"
+                            PRINT "     14-Claw"
+                            PRINT "     15-Knuckler"
+                            PRINT "     16-Gun"
+                            PRINT ": "; weapontype$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                weapontype$ = weapontype$ + k$
+                                inputlength = LEN(weapontype$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                weapontype$ = MID$(weapontype$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 2 THEN
+                                weapontype$ = MID$(weapontype$, 1, 2)
+                                inputlength = 2
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        weapontype = VAL(weapontype$)
+                        SELECT CASE weapontype
+                            CASE 1
+                                weapon = 1.2
+                            CASE 2
+                                weapon = 1.2
+                            CASE 3
+                                weapon = 1.2
+                            CASE 4
+                                weapon = 1.3
+                            CASE 5
+                                weapon = 1
+                            CASE 6
+                                weapon = 1
+                            CASE 7
+                                weapon = 1.32
+                            CASE 8
+                                weapon = 1.32
+                            CASE 9
+                                weapon = 1.32
+                            CASE 10
+                                weapon = 1.49
+                            CASE 11
+                                weapon = 1.49
+                            CASE 12
+                                weapon = 1.2
+                            CASE 13
+                                weapon = 1.35
+                            CASE 14
+                                weapon = 1.75
+                            CASE 15
+                                weapon = 1.7
+                            CASE 16
+                                weapon = 1.5
+                            CASE ELSE
+                                weapontype$ = ""
+                                inputlength = 0
+                                EXIT DO
+                        END SELECT
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                mainstat$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Value of Main Stat: "; mainstat$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                mainstat$ = mainstat$ + k$
+                                inputlength = LEN(mainstat$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                mainstat$ = MID$(mainstat$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                mainstat$ = MID$(mainstat$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        mainstat = VAL(mainstat$)
+                        IF mainstat < 4 OR mainstat > 999 THEN
+                            mainstat$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\class.txt"
+                            GOSUB decrypter
+                            class$ = userdata$
+                            IF class$ = "Warrior" OR class$ = "Swordsman" OR class$ = "Fighter" OR class$ = "Crusader" OR class$ = "Hero" OR class$ = "Page" OR class$ = "White Knight" OR class$ = "Paladin" OR class$ = "Spearman" OR class$ = "Dragon Knight" OR class$ = "Dark Knight" OR class$ = "Brawler" OR class$ = "Marauder" OR class$ = "Buccaneer" OR class$ = "Aran" OR class$ = "Aran (Beginner)" OR class$ = "Aran (1st Job)" OR class$ = "Aran (2nd Job)" OR class$ = "Aran (3rd Job)" OR class$ = "Aran (4th Job)" OR class$ = "Dawn Warrior" OR class$ = "Dawn Warrior (1st Job)" OR class$ = "Dawn Warrior (2nd Job)" OR class$ = "Dawn Warrior (3rd Job)" OR class$ = "Thunder Breaker" OR class$ = "Thunder Breaker (1st Job)" OR class$ = "Thunder Breaker (2nd Job)" OR class$ = "Thunder Breaker (3rd Job)" THEN
+                                filename$ = "user\stat\str.txt"
+                            END IF
+                            IF class$ = "Bowman" OR class$ = "Archer" OR class$ = "Hunter" OR class$ = "Ranger" OR class$ = "Bow Master" OR class$ = "Crossbowman" OR class$ = "Sniper" OR class$ = "Marksman" OR class$ = "Wind Archer" OR class$ = "Wind Archer (1st Job)" OR class$ = "Wind Archer (2nd Job)" OR class$ = "Wind Archer (3rd Job)" OR class$ = "Gunslinger" OR class$ = "Outlaw" OR class$ = "Corsair" THEN
+                                filename$ = "user\stat\dex.txt"
+                            END IF
+                            IF class$ = "Magician" OR class$ = "Wizard (Fire/Poison)" OR class$ = "Mage (Fire/Poison)" OR class$ = "Arch Mage (Fire/Poison)" OR class$ = "Wizard (Ice/Lightning)" OR class$ = "Mage (Ice/Lightning)" OR class$ = "Arch Mage (Ice Lightning)" OR class$ = "Cleric" OR class$ = "Priest" OR class$ = "Bishop" OR class$ = "Evan" OR class$ = "Beginner Master (Evan)" OR class$ = "Evan (First Master)" OR class$ = "Evan (Second Master)" OR class$ = "Evan (Third Master)" OR class$ = "Evan (Fourth Master)" OR class$ = "Evan (Fifth Master)" OR class$ = "Evan (Sixth Master)" OR class$ = "Evan (Seventh Master)" OR class$ = "Evan (Eighth Master)" OR class$ = "Evan (Ninth Master)" OR class$ = "Evan (Tenth Master)" OR class$ = "Blaze Wizard" OR class$ = "Blaze Wizard (1st Job)" OR class$ = "Blaze Wizard (2nd Job)" OR class$ = "Blaze Wizard (3rd Job)" THEN
+                                filename$ = "user\stat\int.txt"
+                            END IF
+                            IF class$ = "Thief" OR class$ = "Assassin" OR class$ = "Hermit" OR class$ = "Night Lord" OR class$ = "Bandit" OR class$ = "Chief Bandits" OR class$ = "Shadower" OR class$ = "Dual Blader" OR class$ = "Blade Recruit" OR class$ = "Blade Acolyte" OR class$ = "Blade Specialist" OR class$ = "Blade Lord" OR class$ = "Blade Master" OR class$ = "Night Walker" OR class$ = "Night Walker (1st Job)" OR class$ = "Night Walker (2nd Job)" OR class$ = "Night Walker (3rd Job)" THEN
+                                filename$ = "user\stat\luk.txt"
+                            END IF
+                            userdata$ = STR$(mainstat)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                secondarystat$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Value of Secondary Stat: "; secondarystat$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                secondarystat$ = secondarystat$ + k$
+                                inputlength = LEN(secondarystat$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                secondarystat$ = MID$(secondarystat$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                secondarystat$ = MID$(secondarystat$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        secondarystat = VAL(secondarystat$)
+                        IF secondarystat < 4 OR secondarystat > 999 THEN
+                            secondarystat$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\class.txt"
+                            GOSUB decrypter
+                            class$ = userdata$
+                            IF class$ = "Warrior" OR class$ = "Swordsman" OR class$ = "Fighter" OR class$ = "Crusader" OR class$ = "Hero" OR class$ = "Page" OR class$ = "White Knight" OR class$ = "Paladin" OR class$ = "Spearman" OR class$ = "Dragon Knight" OR class$ = "Dark Knight" OR class$ = "Brawler" OR class$ = "Marauder" OR class$ = "Buccaneer" OR class$ = "Aran" OR class$ = "Aran (Beginner)" OR class$ = "Aran (1st Job)" OR class$ = "Aran (2nd Job)" OR class$ = "Aran (3rd Job)" OR class$ = "Aran (4th Job)" OR class$ = "Dawn Warrior" OR class$ = "Dawn Warrior (1st Job)" OR class$ = "Dawn Warrior (2nd Job)" OR class$ = "Dawn Warrior (3rd Job)" OR class$ = "Thunder Breaker" OR class$ = "Thunder Breaker (1st Job)" OR class$ = "Thunder Breaker (2nd Job)" OR class$ = "Thunder Breaker (3rd Job)" THEN
+                                filename$ = "user\stat\dex.txt"
+                            END IF
+                            IF class$ = "Magician" OR class$ = "Wizard (Fire/Poison)" OR class$ = "Mage (Fire/Poison)" OR class$ = "Arch Mage (Fire/Poison)" OR class$ = "Wizard (Ice/Lightning)" OR class$ = "Mage (Ice/Lightning)" OR class$ = "Arch Mage (Ice Lightning)" OR class$ = "Cleric" OR class$ = "Priest" OR class$ = "Bishop" OR class$ = "Evan" OR class$ = "Beginner Master (Evan)" OR class$ = "Evan (First Master)" OR class$ = "Evan (Second Master)" OR class$ = "Evan (Third Master)" OR class$ = "Evan (Fourth Master)" OR class$ = "Evan (Fifth Master)" OR class$ = "Evan (Sixth Master)" OR class$ = "Evan (Seventh Master)" OR class$ = "Evan (Eighth Master)" OR class$ = "Evan (Ninth Master)" OR class$ = "Evan (Tenth Master)" OR class$ = "Blaze Wizard" OR class$ = "Blaze Wizard (1st Job)" OR class$ = "Blaze Wizard (2nd Job)" OR class$ = "Blaze Wizard (3rd Job)" THEN
+                                filename$ = "user\stat\luk.txt"
+                            END IF
+                            IF class$ = "Bowman" OR class$ = "Archer" OR class$ = "Hunter" OR class$ = "Ranger" OR class$ = "Bow Master" OR class$ = "Crossbowman" OR class$ = "Sniper" OR class$ = "Marksman" OR class$ = "Wind Archer" OR class$ = "Wind Archer (1st Job)" OR class$ = "Wind Archer (2nd Job)" OR class$ = "Wind Archer (3rd Job)" OR class$ = "Gunslinger" OR class$ = "Outlaw" OR class$ = "Corsair" THEN
+                                filename$ = "user\stat\str.txt"
+                            END IF
+                            userdata$ = STR$(secondarystat)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                attack$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        IF attacker = 1 OR attacker = 2 THEN
+                            PRINT "Add your attack from weapon, pots, skills, etc"
+                            PRINT "Attack: "; attack$
+                        END IF
+                        IF attacker = 3 THEN
+                            PRINT "Add your magic attak from weapon, pots, skills, etc"
+                            PRINT "Magic Attack: "; attack$
+                        END IF
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            attack$ = attack$ + k$
+                            inputlength = LEN(attack$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            attack$ = MID$(attack$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    attack = VAL(attack$)
+                    IF attacker = 1 OR attacker = 2 THEN
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\atk.txt"
+                            userdata$ = STR$(attack)
+                            GOSUB encrypter
+                        END IF
+                    END IF
+                    IF attacker = 3 THEN
+                        filename$ = "user\stat\matk.txt"
+                        userdata$ = STR$(attack)
+                        GOSUB encrypter
+                    END IF
+                    EXIT DO
+                LOOP
+                mastery$ = ""
+                decimalloc = 0
+                decimal = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter the Mastery given from your 2nd Job skill"
+                            PRINT "     example:'.25' or '.5'"
+                            PRINT ": "; mastery$
+                            GOSUB controls
+                            IF k$ = CHR$(46) AND decimal = 0 THEN
+                                decimal = 1
+                                mastery$ = mastery$ + k$
+                                inputlength = LEN(mastery$)
+                                decimalloc = LEN(mastery$)
+                            END IF
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                mastery$ = mastery$ + k$
+                                inputlength = LEN(mastery$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                mastery$ = MID$(mastery$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                                IF inputlength < decimalloc THEN
+                                    decimal = 0
+                                END IF
+                            END IF
+                            IF inputlength > 3 THEN
+                                mastery$ = MID$(mastery$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        mastery = VAL(mastery$)
+                        IF mastery < 0 OR mastery > .5 THEN
+                            mastery$ = ""
+                            inputlength = 0
+                            decimal = 0
+                            decimalloc = 0
+                            EXIT DO
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                dmgmax = (weapon * ((mainstat * 4) + secondarystat) * (attack / 100)) + .5
+                dmgmin = ((range + mastery) * dmgmax) - 1
+                dmgmax = _ROUND(dmgmax)
+                dmgmin = _ROUND(dmgmin)
+                filename$ = "user\calc\dmgmin.txt"
+                userdata$ = STR$(dmgmin)
+                GOSUB encrypter
+                filename$ = "user\calc\dmgmax.txt"
+                userdata$ = STR$(dmgmax)
+                GOSUB encrypter
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your damage range is"; dmgmin; "-"; dmgmax; "!"
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(49) THEN
+                strength$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "STR: "; strength$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                strength$ = strength$ + k$
+                                inputlength = LEN(strength$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                strength$ = MID$(strength$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                strength$ = MID$(strength$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        strength = VAL(strength$)
+                        IF strength < 4 OR strength > 999 THEN
+                            strength$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\str.txt"
+                            userdata$ = STR$(strength)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                dexterity$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "DEX: "; dexterity$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                dexterity$ = dexterity$ + k$
+                                inputlength = LEN(dexterity$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                dexterity$ = MID$(dexterity$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                dexterity$ = MID$(dexterity$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        dexterity = VAL(dexterity$)
+                        IF dexterity < 4 OR dexterity > 999 THEN
+                            dexterity$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\dex.txt"
+                            userdata$ = STR$(dexterity)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                intelligence$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "INT: "; intelligence$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                intelligence$ = intelligence$ + k$
+                                inputlength = LEN(intelligence$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                intelligence$ = MID$(intelligence$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                intelligence$ = MID$(intelligence$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        intelligence = VAL(intelligence$)
+                        IF intelligence < 4 OR intelligence > 999 THEN
+                            intelligence$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\int.txt"
+                            userdata$ = STR$(intelligence)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                luck$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "LUK: "; luck$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                luck$ = luck$ + k$
+                                inputlength = LEN(luck$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                luck$ = MID$(luck$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                luck$ = MID$(luck$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        luck = VAL(luck$)
+                        IF luck < 4 OR luck > 999 THEN
+                            luck$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\luk.txt"
+                            userdata$ = STR$(luck)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                defense$ = ""
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Now enter your Defense from equips, buffs, pots, etc"
+                        PRINT ": "; defense$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            defense$ = defense$ + k$
+                            inputlength = LEN(defense$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            defense$ = MID$(defense$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    defense = VAL(defense$)
+                    EXIT DO
+                LOOP
+                physicaldefense = ((.4 * inteligence) + (.5 * dexterity) + (.5 * luck) + (1.2 * strength) + defense)
+                magicaldefense = ((.4 * strength) + (.5 * dexterity) + (.5 * luck) + (1.2 * inteligence) + defense)
+                physicaldefense = _ROUND(physicaldefense)
+                magicaldefense = _ROUND(magicaldefense)
+                filename$ = "user\calc\def.txt"
+                userdata$ = STR$(physicaldefense)
+                GOSUB encrypter
+                filename$ = "user\calc\mdef.txt"
+                userdata$ = STR$(magicaldefense)
+                GOSUB encrypter
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your Physical Defense is"; physicaldefense
+                    PRINT "Your Magical Defense is"; magicaldefense
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                luck$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "LUK: "; luck$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                luck$ = luck$ + k$
+                                inputlength = LEN(luck$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                luck$ = MID$(luck$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                luck$ = MID$(luck$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        luck = VAL(luck$)
+                        IF luck < 4 OR luck > 999 THEN
+                            luck$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\luk.txt"
+                            userdata$ = STR$(luck)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                intelligence$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "INT: "; intelligence$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                intelligence$ = intelligence$ + k$
+                                inputlength = LEN(intelligence$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                intelligence$ = MID$(intelligence$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                intelligence$ = MID$(intelligence$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        intelligence = VAL(intelligence$)
+                        IF intelligence < 4 OR intelligence > 999 THEN
+                            intelligence$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\int.txt"
+                            userdata$ = STR$(intelligence)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                dexterity$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "DEX: "; dexterity$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                dexterity$ = dexterity$ + k$
+                                inputlength = LEN(dexterity$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                dexterity$ = MID$(dexterity$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                dexterity$ = MID$(dexterity$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        dexterity = VAL(dexterity$)
+                        IF dexterity < 4 OR dexterity > 999 THEN
+                            dexterity$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\dex.txt"
+                            userdata$ = STR$(dexterity)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                accuracy$ = ""
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Enter your Accuracy from equips, buffs, pots, etc"
+                        PRINT ": "; accuracy$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            accuracy$ = accuracy$ + k$
+                            inputlength = LEN(accuracy$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            accuracy$ = MID$(accuracy$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        IF inputlength > 3 THEN
+                            accuracy$ = MID$(accuracy$, 1, 3)
+                            inputlength = 3
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    accuracy = VAL(accuracy$)
+                    EXIT DO
+                LOOP
+                magicalaccuracy = ((1.2 * luck) + inteligence + accuracy)
+                magicalaccuracy = _ROUND(magicalaccuracy)
+                physicalaccuracy = ((1.2 * dexterity) + luck + accuracy)
+                physicalaccuracy = _ROUND(physicalaccuracy)
+                filename$ = "user\calc\pacc.txt"
+                userdata$ = STR$(physicalaccuracy)
+                GOSUB encrypter
+                filename$ = "user\calc\macc.txt"
+                userdata$ = STR$(magicalaccuracy)
+                GOSUB encrypter
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your Physical Accuracy is"; physicalaccuracy
+                    PRINT "Your Magical Accuracy is "; magicalaccuracy
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(51) THEN
+                lv$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter your level: "; lv$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                lv$ = lv$ + k$
+                                inputlength = LEN(lv$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                lv$ = MID$(lv$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                lv$ = MID$(lv$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        lv = VAL(lv$)
+                        IF lv < 1 OR lv > 200 THEN
+                            lv$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\level.txt"
+                            userdata$ = STR$(lv)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                monsterlv$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter the level of the monster you are fighting: "; monsterlv$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                monsterlv$ = monsterlv$ + k$
+                                inputlength = LEN(monsterlv$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                monsterlv$ = MID$(monsterlv$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                monsterlv$ = MID$(monsterlv$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        monsterlv = VAL(monsterlv$)
+                        IF monsterlv < 1 OR monsterlv > 180 THEN
+                            monsterlv$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                attackertype$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Are you using Physical Attack or Magic Attack?"
+                            PRINT "     1-Physical"
+                            PRINT "     2-Magical"
+                            PRINT ": "; attacktype$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                attacktype$ = attacktype$ + k$
+                                inputlength = LEN(attacktype$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                attacktype$ = MID$(attacktype$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 1 THEN
+                                attacktype$ = MID$(attacktype$, 1, 1)
+                                inputlength = 1
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        attacktype = VAL(attacktype$)
+                        SELECT CASE attacktype
+                            CLS
+                            CASE 1
+                                attacktype$ = "Physical"
+                            CASE 2
+                                attacktype$ = "Magical"
+                            CASE ELSE
+                                EXIT DO
+                        END SELECT
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                accuracy$ = ""
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Enter your "; attacktype$; " Accuracy: "; accuracy$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            accuracy$ = accuracy$ + k$
+                            inputlength = LEN(accuracy$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            accuracy$ = MID$(accuracy$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    accuracy = VAL(accuracy$)
+                    EXIT DO
+                LOOP
+                monsteravoid$ = ""
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Enter the monster's Avoid: "; monsteravoid$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            monsteravoid$ = monsteravoid$ + k$
+                            inputlength = LEN(monsteravoid$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            monsteravoid$ = MID$(monsteravoid$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    monsteravoid = VAL(monsteravoid$)
+                    EXIT DO
+                LOOP
+                lvdifference = (monsterlv - lv)
+                IF lvdifference < 0 THEN
+                    lvdifference = 0
+                END IF
+                hitrate = (((SQR(accuracy)) - (SQR(monsteravoid)) + 100) - (lvdifference * 2))
+                hitrate = _ROUND(hitrate)
+                IF hitrate > 100 THEN
+                    hitrate = 100
+                END IF
+                IF hitrate < 0 THEN
+                    hitrate = 0
+                END IF
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your Hit Rate for this monster is"; hitrate; "%"
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(52) THEN
+                dexterity$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "DEX: "; dexterity$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                dexterity$ = dexterity$ + k$
+                                inputlength = LEN(dexterity$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                dexterity$ = MID$(dexterity$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                dexterity$ = MID$(dexterity$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        dexterity = VAL(dexterity$)
+                        IF dexterity < 4 OR dexterity > 999 THEN
+                            dexterity$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\dex.txt"
+                            userdata$ = STR$(dexterity)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                luck$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "LUK: "; luck$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                luck$ = luck$ + k$
+                                inputlength = LEN(luck$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                luck$ = MID$(luck$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                luck$ = MID$(luck$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        luck = VAL(luck$)
+                        IF luck < 4 OR luck > 999 THEN
+                            luck$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\luk.txt"
+                            userdata$ = STR$(luck)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                intelligence$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "INT: "; intelligence$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                intelligence$ = intelligence$ + k$
+                                inputlength = LEN(intelligence$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                intelligence$ = MID$(intelligence$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 3 THEN
+                                intelligence$ = MID$(intelligence$, 1, 3)
+                                inputlength = 3
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        intelligence = VAL(intelligence$)
+                        IF intelligence < 4 OR intelligence > 999 THEN
+                            intelligence$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\int.txt"
+                            userdata$ = STR$(intelligence)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                avoid$ = ""
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Enter your Avoid from equips, buffs, pots, etc"
+                        PRINT ": "; avoid$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            avoid$ = avoid$ + k$
+                            inputlength = LEN(avoid$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            avoid$ = MID$(avoid$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    avoid = VAL(avoid$)
+                    EXIT DO
+                LOOP
+                physicalavoid = (dexterity + (2 * luck) + avoid)
+                physicalavoid = _ROUND(physicalavoid)
+                magicalavoid = (inteligence + (2 * luck) + avoid)
+                magicalavoid = _ROUND(magicalavoid)
+                filename$ = "user\calc\pavoid.txt"
+                userdata$ = STR$(physicalavoid)
+                GOSUB encrypter
+                filename$ = "user\calc\mavoid.txt"
+                userdata$ = STR$(magicalavoid)
+                GOSUB encrypter
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your Physical Avoid is"; physicalavoid
+                    PRINT "Your Magical Avoid is"; magicalavoid
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(53) THEN
+                defense$ = ""
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Enter your Defense: "; defense$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            defense$ = defense$ + k$
+                            inputlength = LEN(defense$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            defense$ = MID$(defense$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    defense = VAL(defense$)
+                    IF autocharupdate = 1 THEN
+                        filename$ = "user\stat\def.txt"
+                        userdata$ = STR$(defense)
+                        GOSUB encrypter
+                    END IF
+                    EXIT DO
+                LOOP
+                mobweaponattack$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter the mob's Weapon Attack: "; mobweaponattack$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                mobweaponattack$ = mobweaponattack$ + k$
+                                inputlength = LEN(mobweaponattack$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                mobweaponattack$ = MID$(mobweaponattack$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        mobweaponattack = VAL(mobweaponattack$)
+                        IF mobweaponattack < 1 OR mobweaponattack > 29999 THEN
+                            mobweaponattack$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                mobmindmg = mobweaponattack * .85
+                defensenumber = defense * .25
+                defensepercentage = (SQR(defense) - .5)
+                defensepercentage = _ROUND(defensepercentage)
+                defensepercentage = (.5 * defensepercentage) / 100
+                mobdmgone = mobweaponattack - defensenumber
+                mobdmgtwo = mobweaponattack * (1 - defensepercentage)
+                IF mobdmgone > mobdmgtwo THEN
+                    dmgdealt = mobdmgone
+                END IF
+                IF mobdmgtwo > mobdmgone THEN
+                    dmgdealt = mobdmgtwo
+                END IF
+                dmgdealt = INT(dmgdealt)
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "The maximum this monster can hit on you is"; dmgdealt
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(54) THEN
+                numberinparty$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter the number of people in the party: "; numberinparty$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                numberinparty$ = numberinparty$ + k$
+                                inputlength = LEN(numberinparty$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                numberinparty$ = MID$(numberinparty$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        numberinparty = VAL(numberinparty$)
+                        IF numberinparty < 2 OR numberinparty > 6 THEN
+                            numberinparty$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                lv$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter your level: "; lv$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                lv$ = lv$ + k$
+                                inputlength = LEN(lv$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                lv$ = MID$(lv$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        lv = VAL(lv$)
+                        IF lv < 1 OR lv > 200 THEN
+                            lv$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\level.txt"
+                            userdata$ = STR$(lv)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                member2lv = 0
+                member3lv = 0
+                member4lv = 0
+                member5lv = 0
+                member6lv = 0
+                FOR l = 2 TO numberinparty
+                    memberlv$ = ""
+                    exitloop = 0
+                    partymultiplier = (.5 * l)
+                    SELECT CASE l
+                        CASE 2
+                            number$ = "second"
+                        CASE 3
+                            number$ = "third"
+                        CASE 4
+                            number$ = "fourth"
+                        CASE 5
+                            number$ = "fifth"
+                        CASE 6
+                            number$ = "sixth"
+                    END SELECT
+                    DO
+                        DO
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Enter the lv of the "; number$; " person in your party: "; memberlv$
+                                GOSUB controls
+                                IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                    memberlv$ = memberlv$ + k$
+                                    inputlength = LEN(memberlv$)
+                                END IF
+                                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                    memberlv$ = MID$(memberlv$, 1, (inputlength - 1))
+                                    inputlength = (inputlength - 1)
+                                END IF
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            memberlv = VAL(memberlv$)
+                            IF memberlv < 1 OR memberlv > 200 THEN
+                                lv$ = ""
+                                inputlength = 0
+                                EXIT DO
+                            END IF
+                            SELECT CASE l
+                                CASE 2
+                                    member2lv = memberlv
+                                CASE 3
+                                    member3lv = memberlv
+                                CASE 4
+                                    member4lv = memberlv
+                                CASE 5
+                                    member5lv = memberlv
+                                CASE 6
+                                    member6lv = memberlv
+                            END SELECT
+                            exitloop = 1
+                            EXIT DO
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                NEXT l
+                DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Enter the amount of EXP given by the monster you are killing: "; monsterexp$
+                        GOSUB controls
+                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                            monsterexp$ = monsterexp$ + k$
+                            inputlength = LEN(monsterexp$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            monsterexp$ = MID$(monsterexp$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    monsterexp = VAL(monsterexp$)
+                    EXIT DO
+                LOOP
+                partylv = (lv + member2lv + member3lv + member4lv + member5lv + member6lv)
+                youkillexp = (monsterexp * (((.4 * lv) / partylv) + .6) * partymultiplier)
+                youkillexp = _ROUND(youkillexp)
+                theykillexp = (monsterexp * ((.4 * lv) / partylv) * partymultiplier)
+                theykillexp = _ROUND(theykillexp)
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "If you kill a monster, you will recieve"; youkillexp; "experience"
+                    PRINT "If someone else kills a monster, you will receive"; theykillexp; "expierience"
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(55) THEN
+                DO
+                    DO
+                        DO
+                            FOR s = 1 TO 12
+                                quantity$ = ""
+                                inputlength = 0
+                                DO
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Enter how many of each type of scroll you will use"
+                                        PRINT " 1%  : "
+                                        PRINT " 3%  : "
+                                        PRINT " 5%  : "
+                                        PRINT " 10% : "
+                                        PRINT " 15% : "
+                                        PRINT " 20% : "
+                                        PRINT " 30% : "
+                                        PRINT " 50% : "
+                                        PRINT " 60% : "
+                                        PRINT " 65% : "
+                                        PRINT " 70% : "
+                                        PRINT " 100%: "
+                                        SELECT CASE s
+                                            CASE 1
+                                                LOCATE 2, 8
+                                            CASE 2
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                            CASE 3
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                            CASE 4
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                            CASE 5
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                            CASE 6
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                            CASE 7
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                                PRINT twenty$
+                                                LOCATE 8, 8
+                                            CASE 8
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                                PRINT twenty$
+                                                LOCATE 8, 8
+                                                PRINT thirty$
+                                                LOCATE 9, 8
+                                            CASE 9
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                                PRINT twenty$
+                                                LOCATE 8, 8
+                                                PRINT thirty$
+                                                LOCATE 9, 8
+                                                PRINT fifty$
+                                                LOCATE 10, 8
+                                            CASE 10
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                                PRINT twenty$
+                                                LOCATE 8, 8
+                                                PRINT thirty$
+                                                LOCATE 9, 8
+                                                PRINT fifty$
+                                                LOCATE 10, 8
+                                                PRINT sixty$
+                                                LOCATE 11, 8
+                                            CASE 11
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                                PRINT twenty$
+                                                LOCATE 8, 8
+                                                PRINT thirty$
+                                                LOCATE 9, 8
+                                                PRINT fifty$
+                                                LOCATE 10, 8
+                                                PRINT sixty$
+                                                LOCATE 11, 8
+                                                PRINT sixtyfive$
+                                                LOCATE 12, 8
+                                            CASE 12
+                                                LOCATE 2, 8
+                                                PRINT one$
+                                                LOCATE 3, 8
+                                                PRINT three$
+                                                LOCATE 4, 8
+                                                PRINT five$
+                                                LOCATE 5, 8
+                                                PRINT ten$
+                                                LOCATE 6, 8
+                                                PRINT fifteen$
+                                                LOCATE 7, 8
+                                                PRINT twenty$
+                                                LOCATE 8, 8
+                                                PRINT thirty$
+                                                LOCATE 9, 8
+                                                PRINT fifty$
+                                                LOCATE 10, 8
+                                                PRINT sixty$
+                                                LOCATE 11, 8
+                                                PRINT sixtyfive$
+                                                LOCATE 12, 8
+                                                PRINT seventy$
+                                                LOCATE 13, 8
+                                        END SELECT
+                                        PRINT quantity$
+                                        GOSUB controls
+                                        IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                            quantity$ = quantity$ + k$
+                                            inputlength = LEN(quantity$)
+                                        END IF
+                                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                            quantity$ = MID$(quantity$, 1, (inputlength - 1))
+                                            inputlength = (inputlength - 1)
+                                        END IF
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13) AND inputlength > 0
+                                    SELECT CASE s
+                                        CASE 1
+                                            one$ = quantity$
+                                        CASE 2
+                                            three$ = quantity$
+                                        CASE 3
+                                            five$ = quantity$
+                                        CASE 4
+                                            ten$ = quantity$
+                                        CASE 5
+                                            fifteen$ = quantity$
+                                        CASE 6
+                                            twenty$ = quantity$
+                                        CASE 7
+                                            thirty$ = quantity$
+                                        CASE 8
+                                            fifty$ = quantity$
+                                        CASE 9
+                                            sixty$ = quantity$
+                                        CASE 10
+                                            sixtyfive$ = quantity$
+                                        CASE 11
+                                            seventy$ = quantity$
+                                        CASE 12
+                                            onehundred$ = quantity$
+                                    END SELECT
+                                    EXIT DO
+                                LOOP
+                            NEXT s
+                            one = VAL(one$)
+                            three = VAL(three$)
+                            five = VAL(five$)
+                            ten = VAL(ten$)
+                            fifteen = VAL(fifteen$)
+                            twenty = VAL(twenty$)
+                            thirty = VAL(thirty$)
+                            fifty = VAL(fifty$)
+                            sixty = VAL(sixty$)
+                            sixtyfive = VAL(sixtyfive$)
+                            seventy = VAL(seventy$)
+                            chance = ((.01 ^ one) * (.03 ^ three) * (.05 ^ five) * (.1 ^ ten) * (.15 ^ fifteen) * (.2 ^ twenty) * (.3 ^ thirty) * (.5 ^ fifty) * (.6 ^ sixty) * (.65 ^ sixtyfive) * (.7 ^ seventy))
+                            percentchance# = chance * 100
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "The chance of all scrolls landing is:"; percentchance#; "%"
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Would you like to calculate another scenario?"
+                                PRINT "     y-Yes"
+                                PRINT "     n-No"
+                                GOSUB controls
+                                IF k$ = CHR$(121) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(110) THEN
+                                    exitloop = 2
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            IF extloop = 1 OR exitloop = 2 THEN
+                                EXIT DO
+                            END IF
+                        LOOP
+                        IF extloop = 1 OR exitloop = 2 THEN
+                            EXIT DO
+                        END IF
+                    LOOP
+                    IF exitloop = 2 THEN
+                        EXIT DO
+                    END IF
+                LOOP
+                EXIT DO
+            END IF
+            IF k$ = CHR$(56) THEN
+                lv$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter your Lv: "; lv$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                lv$ = lv$ + k$
+                                inputlength = LEN(lv$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                lv$ = MID$(lv$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        lv = VAL(lv$)
+                        IF lv < 1 OR lv > 200 THEN
+                            lv$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        IF autocharupdate = 1 THEN
+                            filename$ = "user\stat\level.txt"
+                            userdata$ = STR$(lv)
+                            GOSUB encrypter
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                classgroup$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Select your class group"
+                            PRINT "     1-Beginners"
+                            PRINT "     2-Warrior First Job"
+                            PRINT "     3-Fighter/Crusader/Hero/Dawn Warrior"
+                            PRINT "     4-Page/WK/Paladin/Spearman/DK/DrK"
+                            PRINT "     5-Mage First Job"
+                            PRINT "     6-Adventurer Mages/Blaze Wizard"
+                            PRINT "     7-Bowman First Job"
+                            PRINT "     8-Adventurer Bowman/Wind Archer"
+                            PRINT "     9-Thief First Job"
+                            PRINT "     10-Assassin/Hermit/NL/Bandit/CB/Shadower/Night Walker"
+                            PRINT "     11-Dual Bladers (all jobs)"
+                            PRINT "     12-Pirate First Job"
+                            PRINT "     13-Adventurer Pirates/Thunder Breaker"
+                            PRINT "     14-Aran"
+                            PRINT "     15-Evan (1st Growth)"
+                            PRINT "     16-Evan (all other growths)"
+                            PRINT "     17-Battle Mages First Job"
+                            PRINT "     18-Wild Hunters First Job"
+                            PRINT "     19-Mechanics First Job"
+                            PRINT "     20-Battle Mages (2nd - 4th Job)"
+                            PRINT "     21-Wild Hunters (2nd - 4th Job)"
+                            PRINT "     22-Mechanics (2nd - 4th Job)"
+                            PRINT ": "; classgroup$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                classgroup$ = classgroup$ + k$
+                                inputlength = LEN(classgroup$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                classgroup$ = MID$(classgroup$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF inputlength > 2 THEN
+                                classgroup$ = MID$(classgroup$, 1, 2)
+                                inputlength = 2
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        classgroup = VAL(classgroup$)
+                        SELECT CASE classgroup
+                            CASE 1
+                                minmp = ((10 * lv) - 5)
+                            CASE 2
+                                minmp = ((4 * lv) + 55)
+                            CASE 3
+                                minmp = ((4 * lv) + 55)
+                            CASE 4
+                                minmp = ((4 * lv) + 155)
+                            CASE 5
+                                minmp = ((22 * lv) - 1)
+                            CASE 6
+                                minmp = ((22 * lv) + 449)
+                            CASE 7
+                                minmp = ((14 * lv) - 15)
+                            CASE 8
+                                minmp = ((14 * lv) + 135)
+                            CASE 9
+                                minmp = ((14 * lv) - 15)
+                            CASE 10
+                                minmp = ((14 * lv) + 135)
+                            CASE 11
+                                minmp = ((14 * lv) + 335)
+                            CASE 12
+                                minmp = ((18 * lv) - 55)
+                            CASE 13
+                                minmp = ((18 * lv) + 95)
+                            CASE 14
+                                minmp = ((4 * lv) + 55)
+                            CASE 15
+                                minmp = ((35 * lv) - 125)
+                            CASE 16
+                                minmp = ((35 * lv) - 25)
+                            CASE 17
+                                minmp = ((22 * lv) + 43)
+                            CASE 18
+                                minmp = ((14 * lv) + 23)
+                            CASE 19
+                                minmp = ((18 * lv) - 55)
+                            CASE 20
+                                minmp = ((22 * lv) + 143)
+                            CASE 21
+                                minmp = ((14 * lv) + 123)
+                            CASE 22
+                                minmp = ((18 * lv) + 95)
+                            CASE ELSE
+                                classgroup$ = ""
+                                inputlength = 0
+                                EXIT DO
+                        END SELECT
+                        filename$ = "user\calc\minmp.txt"
+                        userdata$ = STR$(minmp)
+                        GOSUB encrypter
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Your minimum MP is"; minmp
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                EXIT DO
+            END IF
+            IF k$ = CHR$(57) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "What would you like to calculate?"
+                    PRINT "     1-Mesos Other Side Recieves When Trading an Amount"
+                    PRINT "     2-Mesos Needed to Give an Amount"
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        trade$ = ""
+                        exitloop = 0
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Enter the amount you are going to trade: "; trade$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        trade$ = trade$ + k$
+                                        inputlength = LEN(trade$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        trade$ = MID$(trade$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                trade& = VAL(trade$)
+                                IF trade& >= 1 AND trade& <= 99999 THEN
+                                    recieve& = trade&
+                                ELSE
+                                    IF trade& >= 100000 AND trade& <= 999999 THEN
+                                        recieve& = (trade& - (trade& * .008))
+                                    ELSE
+                                        IF trade& >= 1000000 AND trade& <= 4999999 THEN
+                                            recieve& = (trade& - (trade& * .018))
+                                        ELSE
+                                            IF trade& >= 5000000 AND trade& <= 9999999 THEN
+                                                recieve& = (trade& - (trade& * .03))
+                                            ELSE
+                                                IF trade& >= 10000000 AND trade& <= 24999999 THEN
+                                                    recieve& = (trade& - (trade& * .04))
+                                                ELSE
+                                                    IF trade& >= 25000000 AND trade& <= 99999999 THEN
+                                                        recieve& = (trade& - (trade& * .05))
+                                                    ELSE
+                                                        IF trade& >= 100000000 AND trade& <= 2147483647 THEN
+                                                            recieve& = (trade& - (trade& * .06))
+                                                        ELSE
+                                                            trade$ = ""
+                                                            inputlength = 0
+                                                            EXIT DO
+                                                        END IF
+                                                    END IF
+                                                END IF
+                                            END IF
+                                        END IF
+                                    END IF
+                                END IF
+                                exitloop = 1
+                                EXIT DO
+                            LOOP
+                            IF exitloop = 1 THEN EXIT DO
+                        LOOP
+                        exitloop = 0
+                        recieve& = _ROUND(recieve&)
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "They will recieve"; recieve&; "mesos"
+                            GOSUB controls
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(32)
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        recieve$ = ""
+                        exitloop = 0
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Enter the amount of mesos that you want them to recieve: "; recieve$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        recieve$ = recieve$ + k$
+                                        inputlength = LEN(recieve$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        recieve$ = MID$(recieve$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(32)
+                                recieve& = VAL(recieve$)
+                                IF recieve& >= 1 AND recieve& <= 99999 THEN
+                                    trade& = recieve&
+                                ELSE
+                                    IF recieve& >= 100000 AND recieve& <= 999999 THEN
+                                        trade& = (recieve& / .992)
+                                    ELSE
+                                        IF recieve& >= 1000000 AND recieve& <= 4999999 THEN
+                                            trade& = (recieve& / .982)
+                                        ELSE
+                                            IF recieve& >= 5000000 AND recieve& <= 9999999 THEN
+                                                trade& = (recieve& / .97)
+                                            ELSE
+                                                IF recieve& >= 10000000 AND recieve& <= 24999999 THEN
+                                                    trade& = (recieve& / .96)
+                                                ELSE
+                                                    IF recieve& >= 25000000 AND recieve& <= 99999999 THEN
+                                                        trade& = (recieve& / .95)
+                                                    ELSE
+                                                        IF recieve& >= 100000000 <= 2018634628 THEN
+                                                            trade& = (recieve& / .94)
+                                                        ELSE
+                                                            recieve$ = ""
+                                                            inputlength = 0
+                                                            EXIT DO
+                                                        END IF
+                                                    END IF
+                                                END IF
+                                            END IF
+                                        END IF
+                                    END IF
+                                END IF
+                                exitloop = 1
+                                EXIT DO
+                            LOOP
+                            IF exitloop = 1 THEN EXIT DO
+                        LOOP
+                        exitloop = 0
+                        trade& = _ROUND(trade&)
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "You need to trade"; trade&; "mesos for them to recieve"; recieve&; "mesos"
+                            GOSUB controls
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(32)
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            IF k$ = CHR$(97) THEN
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "What would you like to calculate?"
+                    PRINT "     1-Mesos Recieved When an Item is Bought"
+                    PRINT "     2-Price to List to Recieve Amount"
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        price$ = ""
+                        exitloop = 0
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Enter the price of the item that you are trying to sell: "; price$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        price$ = price$ + k$
+                                        inputlength = LEN(price$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        price$ = MID$(price$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                price& = VAL(price$)
+                                IF price& >= 1 AND price& <= 99999 THEN
+                                    recieve& = price&
+                                ELSE
+                                    IF price& >= 100000 AND price& <= 999999 THEN
+                                        recieve& = (price& - (price& * .004))
+                                    ELSE
+                                        IF price& >= 1000000 AND price& <= 4999999 THEN
+                                            recieve& = (price& - (price& * .009))
+                                        ELSE
+                                            IF price& >= 5000000 AND price& <= 9999999 THEN
+                                                recieve& = (price& - (price& * .015))
+                                            ELSE
+                                                IF price& >= 10000000 AND price& <= 24999999 THEN
+                                                    recieve& = (price& - (price& * .02))
+                                                ELSE
+                                                    IF price& >= 25000000 AND price& <= 99999999 THEN
+                                                        recieve& = (price& - (price& * .025))
+                                                    ELSE
+                                                        IF price& >= 100000000 AND price& <= 2147483647 THEN
+                                                            recieve& = (price& - (price& * .03))
+                                                        ELSE
+                                                            price$ = ""
+                                                            inputlength = 0
+                                                            EXIT DO
+                                                        END IF
+                                                    END IF
+                                                END IF
+                                            END IF
+                                        END IF
+                                    END IF
+                                END IF
+                                exitloop = 1
+                                EXIT DO
+                            LOOP
+                            IF exitloop = 1 THEN EXIT DO
+                        LOOP
+                        recieve& = _ROUND(recieve&)
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "If your item sells, you will recieve"; recieve&; "mesos"
+                            GOSUB controls
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(32)
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        recieve$ = ""
+                        exitloop = 0
+                        DO
+                            DO
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "Enter the amount of mesos that you want to recieve for the item: "; recieve$
+                                    GOSUB controls
+                                    IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                        recieve$ = recieve$ + k$
+                                        inputlength = LEN(recieve$)
+                                    END IF
+                                    IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                        recieve$ = MID$(recieve$, 1, (inputlength - 1))
+                                        inputlength = (inputlength - 1)
+                                    END IF
+                                    _DISPLAY
+                                LOOP UNTIL k$ = CHR$(13)
+                                recieve& = VAL(recieve$)
+                                IF recieve& >= 1 AND recieve& <= 99999 THEN
+                                    price& = recieve&
+                                ELSE
+                                    IF recieve& >= 100000 AND recieve& <= 999999 THEN
+                                        price& = (recieve& / .996)
+                                    ELSE
+                                        IF recieve& >= 1000000 AND recieve& <= 4999999 THEN
+                                            price& = (recieve& / .991)
+                                        ELSE
+                                            IF recieve& >= 5000000 AND recieve& <= 9999999 THEN
+                                                price& = (recieve& / .985)
+                                            ELSE
+                                                IF recieve& >= 10000000 AND recieve& <= 24999999 THEN
+                                                    price& = (recieve& / .98)
+                                                ELSE
+                                                    IF recieve& >= 25000000 AND recieve& <= 99999999 THEN
+                                                        price& = (recieve& / .975)
+                                                    ELSE
+                                                        IF recieve& >= 100000000 AND recieve& <= 2083059137 THEN
+                                                            price& = (recieve& / .97)
+                                                        ELSE
+                                                            recieve$ = ""
+                                                            inputlength = 0
+                                                            EXIT DO
+                                                        END IF
+                                                    END IF
+                                                END IF
+                                            END IF
+                                        END IF
+                                    END IF
+                                END IF
+                                exitloop = 1
+                                EXIT DO
+                            LOOP
+                            IF exitloop = 1 THEN EXIT DO
+                        LOOP
+                        price& = price& + .5
+                        price& = _ROUND(price&)
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "You need to list for"; price&; "mesos to recieve"; recieve&; "mesos"
+                            GOSUB controls
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(32)
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            IF k$ = CHR$(98) THEN
+                profit$ = ""
+                exitloop = 0
+                DO
+                    DO
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Enter the amount you wish to gain from your item"
+                            PRINT "It will calculate the total buyer price"
+                            PRINT ": "; profit$
+                            GOSUB controls
+                            IF k$ >= CHR$(48) AND k$ <= CHR$(57) THEN
+                                profit$ = profit$ + k$
+                                inputlength = LEN(profit$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                profit$ = MID$(profit$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        profit = VAL(profit$)
+                        IF profit < 110 OR profit > 9999999 THEN
+                            profit$ = ""
+                            inputlength = 0
+                            EXIT DO
+                        END IF
+                        exitloop = 1
+                        EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                price = (profit + (profit * .07) + 500) - .5
+                price = _ROUND(price)
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "The buyer price is:"; price
+                    GOSUB controls
+                    _DISPLAY
+                LOOP UNTIL k$ = CHR$(32)
+                exitloop = 0
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Would you like to calculate another amount?"
+                    PRINT "     y-Yes"
+                    PRINT "     n-No"
+                    GOSUB controls
+                    IF k$ = CHR$(121) THEN
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(110) THEN
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            _DISPLAY
+        LOOP
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "Where would you like to go?"
+            PRINT "     1-Calculator Menu"
+            PRINT "     2-Main Menu"
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                GOTO BEGIN
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

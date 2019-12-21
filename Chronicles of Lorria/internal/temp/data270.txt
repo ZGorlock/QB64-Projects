@@ -1,0 +1,6 @@
+int32 fornext_value7261;
+int32 fornext_finalvalue7261;
+int32 fornext_step7261;
+uint8 fornext_step_negative7261;
+int16 pass7262;
+int16 pass7263;

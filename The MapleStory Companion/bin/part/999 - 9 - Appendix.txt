@@ -1,0 +1,198 @@
+controls:
+k$ = INKEY$
+IF k$ = CHR$(27) THEN
+    VIEW PRINT
+    IF connection = 1 THEN CLOSE client
+    IF pre = 1 THEN
+        themeplaying = _SNDPLAYING(theme)
+        IF themeplaying = -1 THEN _SNDPAUSE theme
+        thememixplaying = _SNDPLAYING(thememix)
+        IF thememixplaying = -1 THEN _SNDPAUSE thememix
+        jukeboxplaying = _SNDPLAYING(jukebox)
+        IF jukeboxplaying = -1 THEN _SNDPAUSE jukebox
+        randomjukeboxplaying = _SNDPLAYING(randomjukebox)
+        IF randomjukeboxplaying = -1 THEN _SNDPAUSE randomjukebox
+        shufflejukeboxplaying = _SNDPLAYING(shufflejukebox)
+        IF shufflejukeboxplaying = -1 THEN _SNDPAUSE shufflejukebox
+        jukeboxmixer1playing = _SNDPLAYING(jukeboxmixer1)
+        IF jukeboxmixer1playing = -1 THEN _SNDPAUSE jukeboxmixer1
+        jukeboxmixer2playing = _SNDPLAYING(jukeboxmixer2)
+        IF jukeboxmixer2playing = -1 THEN _SNDPAUSE jukeboxmixer2
+        jukeboxunknownplaying = _SNDPLAYING(jukeboxunknown)
+        IF jukeboxunknownplaying = -1 THEN _SNDPAUSE jukeboxunknown
+        galleryaudioplaying = _SNDPLAYING(galleryaudio)
+        IF galleryaudioplaying = -1 THEN _SNDPAUSE galleryaudio
+        thememuteplaying = _SNDPLAYING(thememute)
+        IF thememuteplaying = -1 THEN _SNDPAUSE thememute
+        creditsplaying = _SNDPLAYING(credits)
+        IF creditsplaying = -1 THEN _SNDPAUSE credits
+        GOTO PREBEGIN
+    ELSE
+        GOTO BEGIN
+    END IF
+END IF
+IF k$ = (CHR$(0) + CHR$(59)) THEN
+    GOSUB help
+END IF
+IF k$ = (CHR$(0) + CHR$(60)) THEN
+    IF bibliography = 1 THEN
+        _CLIPBOARD$ = source$
+        BEEP
+    END IF
+    IF bibliography = 2 THEN
+        BEEP
+        BEEP
+    END IF
+    IF bibliography = 3 THEN
+        BEEP
+        BEEP
+        BEEP
+    END IF
+END IF
+IF k$ = (CHR$(0) + CHR$(61)) THEN
+END IF
+IF k$ = (CHR$(0) + CHR$(62)) THEN
+    CLEAR
+    SYSTEM
+END IF
+GOSUB mouse
+DO WHILE _MOUSEINPUT
+LOOP
+pre = 0
+connection = 0
+RETURN
+
+decrypter:
+OPEN filename$ FOR INPUT AS #1
+Text$ = INPUT$(LOF(1), 1)
+CLOSE #1
+userdata$ = ""
+FOR d = 1 TO LEN(Text$)
+    Character$ = MID$(Text$, d, 1)
+    Code = ASC(Character$)
+    IF Code >= (32 + randomization) AND Code <= (126 + randomization) THEN
+        Character$ = CHR$(Code - randomization)
+    END IF
+    userdata$ = userdata$ + Character$
+NEXT d
+OPEN "encrypttmp.txt" FOR OUTPUT AS #1
+PRINT #1, userdata$
+CLOSE #1
+OPEN "encrypttmp.txt" FOR INPUT AS #1
+INPUT #1, userdata$
+CLOSE #1
+KILL "encrypttmp.txt"
+RETURN
+
+encrypter:
+OPEN "encrypttmp.txt" FOR OUTPUT AS #1
+PRINT #1, userdata$
+CLOSE #1
+OPEN "encrypttmp.txt" FOR INPUT AS #1
+Text$ = INPUT$(LOF(1), 1)
+CLOSE #1
+userdata$ = ""
+FOR e = 1 TO LEN(Text$)
+    Character$ = MID$(Text$, e, 1)
+    Code = ASC(Character$)
+    IF Code >= 32 AND Code <= 126 THEN
+        Character$ = CHR$(Code + randomization)
+    END IF
+    userdata$ = userdata$ + Character$
+NEXT e
+OPEN filename$ FOR OUTPUT AS #1
+WRITE #1, userdata$
+CLOSE #1
+KILL "encrypttmp.txt"
+RETURN
+
+help:
+RETURN
+
+mouse:
+x = _MOUSEX
+y = _MOUSEY
+IF x < 6 THEN x = 6
+IF x > 634 THEN x = 634
+IF y < 6 THEN y = 6
+IF y > 474 THEN y = 474
+IF nomouse = 0 THEN CIRCLE (x, y), 5, cursorcolor
+nomouse = 0
+RETURN
+
+picrypter:
+FOR i& = 1 TO LEN(datastring$) STEP 4
+    B$ = MID$(datastring$, i&, 4)
+    IF INSTR(1, B$, "%") THEN
+        FOR C% = 1 TO LEN(B$)
+            F$ = MID$(B$, C%, 1)
+            IF F$ <> "%" THEN C$ = C$ + F$
+        NEXT
+        B$ = C$
+    END IF
+    FOR t% = LEN(B$) TO 1 STEP -1
+        B& = B& * 64 + ASC(MID$(B$, t%)) - 48
+    NEXT
+    X$ = ""
+    FOR t% = 1 TO LEN(B$) - 1
+        X$ = X$ + CHR$(B& AND 255)
+        B& = B& \ 256
+    NEXT
+    dataout$ = dataout$ + X$
+NEXT
+IF datatype = 1 THEN OPEN outpic$ FOR OUTPUT AS #256
+IF datatype = 2 THEN OPEN outogg$ FOR OUTPUT AS #256
+PRINT #256, dataout$;
+CLOSE #256
+IF datatype = 1 THEN
+outpic = _LOADIMAGE(outpic$)
+KILL outpic$
+END IF
+IF datatype = 2 THEN
+outogg = _SNDOPEN(outogg$, "LEN, PAUSE, SYNC, VOL")
+KILL outogg$
+END IF
+RETURN
+
+welcomename:
+welcomename$ = ""
+inputlength = 0
+bibliography = 2
+DO
+    _LIMIT 64
+    CLS
+    PRINT "Enter your name: "; welcomename$
+    GOSUB controls
+    IF (k$ >= CHR$(48) AND k$ <= CHR$(58)) OR (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ = CHR$(32)) THEN
+        welcomename$ = welcomename$ + k$
+        inputlength = LEN(welcomename$)
+    END IF
+    IF k$ = CHR$(8) AND inputlength > 0 THEN
+        welcomename$ = MID$(welcomename$, 1, (inputlength - 1))
+        inputlength = (inputlength - 1)
+    END IF
+    IF inputlength > 15 THEN
+        welcomename$ = MID$(welcomename$, 1, 15)
+        inputlength = 15
+    END IF
+    _DISPLAY
+LOOP UNTIL k$ = CHR$(13)
+filename$ = "user\program\welcomename.txt"
+userdata$ = welcomename$
+GOSUB encrypter
+titlename = 1
+filename$ = "user\program\titlename.txt"
+userdata$ = titlename$
+GOSUB encrypter
+GOTO BEGIN
+RETURN
+
+scrollbar:
+position = row / listnum
+position = position + ((scrollgap / listnum) * position)
+PSET (120, 460)
+DRAW "R400 D17 L400 U17"
+dotpos = (121 + (400 * position))
+PSET (dotpos, 469)
+DRAW "U1 L1 D2 R2 U2"
+RETURN

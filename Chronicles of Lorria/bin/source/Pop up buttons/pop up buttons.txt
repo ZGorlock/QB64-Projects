@@ -1,0 +1,21 @@
+    'IF activemenubutton = 0 THEN
+    '    FOR drawmenubutton = 0 TO 5
+    '        _PUTIMAGE (20 + (drawmenubutton * 100), 380)-(20 + ((drawmenubutton + 1) * 100), 480), titlebutton(drawmenubutton + 1)
+    '        IF isonbox(Mousedata(1), Mousedata(2), 20 + (drawmenubutton * 100), 380, 20 + ((drawmenubutton + 1) * 100), 480) THEN activemenubutton = drawmenubutton + 1
+    '    NEXT drawmenubutton
+    'ELSE
+    '    newactivemenubutton = 0
+    '    FOR drawmenubutton = 0 TO activemenubutton - 2
+    '        _PUTIMAGE (20 + (drawmenubutton * 80), 400)-(20 + ((drawmenubutton + 1) * 80), 480), titlebutton(drawmenubutton + 1)
+    '        IF isonbox(Mousedata(1), Mousedata(2), 20 + (drawmenubutton * 80), 400, 20 + ((drawmenubutton + 1) * 80), 480) THEN newactivemenubutton = drawmenubutton + 1
+    '    NEXT drawmenubutton
+    '    _PUTIMAGE (20 + ((activemenubutton - 1) * 80), 280)-(220 + ((activemenubutton - 1) * 80), 480), titlebutton(activemenubutton)
+    '    IF isonbox(Mousedata(1), Mousedata(2), 20 + ((activemenubutton - 1) * 80), 280, 220 + ((activemenubutton - 1) * 80), 480) THEN newactivemenubutton = activemenubutton
+    '    IF activemenubutton < 6 THEN
+    '        FOR drawmenubutton = activemenubutton + 1 TO 6
+    '            _PUTIMAGE (220 + ((drawmenubutton - 2) * 80), 400)-(220 + ((drawmenubutton - 1) * 80), 480), titlebutton(drawmenubutton)
+    '            IF isonbox(Mousedata(1), Mousedata(2), 220 + ((drawmenubutton - 2) * 80), 400, 220 + ((drawmenubutton - 1) * 80), 480) THEN newactivemenubutton = drawmenubutton
+    '        NEXT drawmenubutton
+    '    END IF
+    '    activemenubutton = newactivemenubutton
+    'END IF

@@ -1,0 +1,5 @@
+int8 *_FUNC_LKEY_BYTE_LKEY=NULL;
+if(_FUNC_LKEY_BYTE_LKEY==NULL){
+_FUNC_LKEY_BYTE_LKEY=(int8*)mem_static_malloc(1);
+*_FUNC_LKEY_BYTE_LKEY=0;
+}

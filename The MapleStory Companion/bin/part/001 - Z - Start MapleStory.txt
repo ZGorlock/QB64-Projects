@@ -1,0 +1,63 @@
+IF (k$ = CHR$(122) OR k$ = CHR$(90)) OR (_MOUSEINPUT AND _MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 269 AND _MOUSEY < 285 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 2
+    filename$ = "user\program\shortcutprompt.txt"
+    GOSUB decrypter
+    shortcutprompt = VAL(userdata$)
+    IF shortcutprompt = 0 THEN
+        exitloop = 0
+        DO
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "This is your first time using this function."
+                PRINT "In order to use this function you must place a copy of your MapleStory shortcut into your WINDOWS folder."
+                PRINT "Your WINDOWS folder can be found at C:\WINDOWS\"
+                PRINT "Make sure to name your shortcut 'MapleStory'."
+                PRINT "Press Space when you are finished."
+                GOSUB controls
+                _DISPLAY
+            LOOP UNTIL k$ = CHR$(32)
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "Is there a file called 'MapleStory', a shortcut to your MapleStory.exe, located at 'C:\WINDOWS\'?"
+                PRINT "     y-Yes"
+                PRINT "     n-No"
+                GOSUB controls
+                IF k$ = CHR$(121) THEN
+                    exitloop = 1
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(110) THEN
+                    EXIT DO
+                END IF
+                _DISPLAY
+            LOOP
+            IF exitloop = 1 THEN EXIT DO
+        LOOP
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "If you ever delete that shortcut file then you will recieve an error when trying     to use this funtion"
+            PRINT "To fix that error, all you have to do is replace the file"
+            PRINT "For more detailed information see the Help Menu"
+            PRINT "Press Space to exit"
+            GOSUB controls
+            _DISPLAY
+        LOOP UNTIL k$ = CHR$(32)
+        shortcutprompt = 1
+        filename$ = "user\program\shortcutprompt.txt"
+        userdata$ = STR$(shortcutprompt)
+        GOSUB encrypter
+    END IF
+    SHELL _HIDE "cmd /c start MapleStory gamelaunching"
+    DO
+        _LIMIT 64
+        CLS
+        PRINT "Press Escape to return to the Main Menu"
+        PRINT "MapleStory will begin momentarily"
+        PRINT "If you recieved an error then you can find help in the Help Menu"
+        GOSUB controls
+        _DISPLAY
+    LOOP
+END IF

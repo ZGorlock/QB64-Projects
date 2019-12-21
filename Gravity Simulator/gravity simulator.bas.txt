@@ -1,0 +1,740 @@
+'fix collission equations
+
+SCREEN 12
+SCREEN _NEWIMAGE(1920, 1080, 256)
+_TITLE "Gravity Simulator"
+
+DIM SHARED PI AS _FLOAT
+PI = 4 * ATN(1)
+
+scrx = 1920
+scry = 1080
+
+lps = 32
+gravity = 1
+collision = 0
+walleffect = 1
+
+refraction = 1
+wallrefraction = .75
+etherresistance = 0
+gravamp = 1
+
+trigsides = 1
+trigangles = 1
+
+colorbymass = 0
+colorbyvelocity = 0
+
+DIM SHARED objects, staticobjects, maxobjects, selected, selected2, watch
+maxobjects = 1024
+
+REDIM SHARED p(maxobjects, 6)
+REDIM SHARED staticp(maxobjects)
+
+CALL addobject(100000, 0, 0, 250, 300, 10)
+CALL addobject(100000, 0, 0, 50, 50, 12)
+'CALL addobject(1, 0, 40, 20, 20, 13)
+'CALL addobject(40000, 0, 0, 500, 100, 9)
+'CALL addobject(18500, 0, 50, 300, 150, 14)
+
+'CALL addstaticobject(1)
+'CALL moveobject(1, 320, 240)
+
+oldgrabx = 1
+oldgraby = 1
+
+GOTO help
+
+start:
+oldTIMER = TIMER(.001)
+DO
+    _LIMIT lps
+    IF TIMER(.001) < oldTIMER THEN oldTIMER = TIMER(.001)
+    t = TIMER(.001) - oldTIMER
+    oldTIMER = TIMER(.001)
+
+    IF pause = 0 THEN
+        FOR pupdate = 1 TO objects
+            DO
+                IF isstatic(pupdate) THEN
+                    pupdate = pupdate + 1
+                    IF pupdate > objects THEN EXIT FOR
+                ELSE
+                    EXIT DO
+                END IF
+            LOOP
+            p(pupdate, 4) = p(pupdate, 4) + (p(pupdate, 2) * t)
+            p(pupdate, 5) = p(pupdate, 5) + (p(pupdate, 3) * t)
+            p(pupdate, 2) = p(pupdate, 2) - ((p(pupdate, 2) * etherresistance) * t)
+            p(pupdate, 3) = p(pupdate, 3) - ((p(pupdate, 3) * etherresistance) * t)
+            SELECT CASE walleffect
+                CASE 0
+                    IF p(pupdate, 4) < 0 THEN p(pupdate, 4) = scrx
+                    IF p(pupdate, 5) < 0 THEN p(pupdate, 5) = scry
+                    IF p(pupdate, 4) > scrx THEN p(pupdate, 4) = 0
+                    IF p(pupdate, 5) > scry THEN p(pupdate, 5) = 0
+                CASE 1
+                    IF p(pupdate, 4) <= SQR(SQR(p(pupdate, 1))) THEN
+                        p(pupdate, 4) = SQR(SQR(p(pupdate, 1)))
+                        p(pupdate, 2) = -p(pupdate, 2) * wallrefraction
+                    END IF
+                    IF p(pupdate, 5) <= SQR(SQR(p(pupdate, 1))) THEN
+                        p(pupdate, 5) = SQR(SQR(p(pupdate, 1)))
+                        p(pupdate, 3) = -p(pupdate, 3) * wallrefraction
+                    END IF
+                    IF p(pupdate, 4) >= scrx - SQR(SQR(p(pupdate, 1))) THEN
+                        p(pupdate, 4) = scrx - SQR(SQR(p(pupdate, 1)))
+                        p(pupdate, 2) = -p(pupdate, 2) * wallrefraction
+                    END IF
+                    IF p(pupdate, 5) >= scry - SQR(SQR(p(pupdate, 1))) THEN
+                        p(pupdate, 5) = scry - SQR(SQR(p(pupdate, 1)))
+                        p(pupdate, 3) = -p(pupdate, 3) * wallrefraction
+                    END IF
+            END SELECT
+        NEXT pupdate
+        FOR p = 1 TO objects
+            DO
+                IF isstatic(p) THEN
+                    p = p + 1
+                    IF p > objects THEN EXIT FOR
+                ELSE
+                    EXIT DO
+                END IF
+            LOOP
+            IF p <> grabbed THEN
+                IF gravity = 1 THEN
+                    xgrav = 0
+                    ygrav = 0
+                    FOR findgrav = 1 TO objects
+                        IF p <> findgrav THEN
+                            dis = distance(p(findgrav, 4), p(findgrav, 5), p(p, 4), p(p, 5))
+                            IF dis < (findradius(p(p, 1)) + findradius(p(findgrav, 1))) THEN dis = (findradius(p(p, 1)) + findradius(p(findgrav, 1)))
+                            deltax = p(findgrav, 4) - p(p, 4)
+                            deltay = p(findgrav, 5) - p(p, 5)
+                            angle = ATN((deltay / deltax))
+                            forcex = calcgravity(p(p, 1), p(findgrav, 1), dis)
+                            forcey = forcex
+                            IF deltax < 0 THEN forcex = -forcex
+                            IF deltay < 0 THEN forcey = -forcey
+                            IF deltay < 0 AND deltax > 0 THEN forcey = -forcey
+                            IF deltay > 0 AND deltax < 0 THEN forcey = -forcey
+                            xgrav = xgrav + (forcex * COS(angle)) * gravamp
+                            ygrav = ygrav + (forcey * SIN(angle)) * gravamp
+                        END IF
+                    NEXT findgrav
+                    p(p, 2) = p(p, 2) + (xgrav / p(p, 1))
+                    p(p, 3) = p(p, 3) + (ygrav / p(p, 1))
+                END IF
+                IF collision = 1 THEN
+                    FOR findcol = 1 TO objects
+                        IF findcol <> p THEN
+                            dis = distance(p(findcol, 4), p(findcol, 5), p(p, 4), p(p, 5))
+                            IF dis <= findradius(p(findcol, 1)) + findradius(p(p, 1)) THEN
+                                v2f = (-(-(2 * ((p(p, 1) * SQR((p(p, 2) ^ 2) + (p(p, 3) ^ 2))) + (p(findcol, 1) * SQR((p(findcol, 2) ^ 2) + (p(findcol, 3) ^ 2)))) * p(p, 1)) / p(findcol, 1)) - SQR(((-(2 * ((p(p, 1) * SQR((p(p, 2) ^ 2) + (p(p, 3) ^ 2))) + (p(findcol, 1) * SQR((p(findcol, 2) ^ 2) + (p(findcol, 3) ^ 2)))) * p(p, 1)) / p(findcol, 1)) ^ 2) - (4 * (((p(p, 1) ^ 2) / p(findcol, 1)) + p(p, 1)) * (((((p(p, 1) * SQR((p(p, 2) ^ 2) + (p(p, 3) ^ 2))) + (p(findcol, 1) * SQR((p(findcol, 2) ^ 2) + (p(findcol, 3) ^ 2)))) ^ 2) / p(findcol, 1)) - ((p(p, 1) * (SQR((p(p, 2) ^ 2) + (p(p, 3) ^ 2)) ^ 2)) + (p(findcol, 1) * (SQR((p(findcol, 2) ^ 2) + (p(findcol, 3) ^ 2)) ^ 2))))))) / (2 * (((p(p, 1) ^ 2) / p(findcol, 1)) + p(p, 1)))
+                                v1f = (((p(p, 1) * SQR((p(p, 2) ^ 2) + (p(p, 3) ^ 2))) + (p(findcol, 1) * SQR((p(findcol, 2) ^ 2) + (p(findcol, 3) ^ 2)))) - (p(findcol, 1) * v2f)) / p(p, 1)
+                                deltax1 = p(findcol, 4) - p(p, 4)
+                                deltay1 = p(findcol, 5) - p(p, 5)
+                                deltax2 = p(p, 4) - p(findcol, 4)
+                                deltay2 = p(p, 5) - p(findcol, 5)
+                                angle1 = ATN(deltay1 / deltax1)
+                                angle2 = ATN(deltay2 / deltax2)
+                                p(p, 2) = v2f * COS(angle2)
+                                p(p, 3) = v2f * SIN(angle2)
+                                p(findcol, 2) = -v1f * COS(angle)
+                                p(findcol, 3) = -v1f * SIN(angle)
+                            END IF
+                        END IF
+                    NEXT findcol
+                END IF
+            END IF
+        NEXT p
+    END IF
+
+    CLS
+    FOR putobj = 1 TO objects
+        IF findradius(p(putobj, 1)) > 1 THEN
+            CIRCLE (p(putobj, 4), p(putobj, 5)), findradius(p(putobj, 1)), p(putobj, 6)
+            PAINT (p(putobj, 4), p(putobj, 5)), p(putobj, 6)
+        ELSE
+            PSET (p(putobj, 4), p(putobj, 5)), p(putobj, 6)
+        END IF
+        IF putobj = look AND timetolook = 1 THEN CIRCLE (p(putobj, 4), p(putobj, 5)), findradius(p(putobj, 1)) + 2, p(putobj, 6)
+        IF putobj = selected AND readytoselect = 1 THEN
+            IF selected2 > 0 THEN
+                CALL drawtrig(selected, selected2, trigsides, trigangles)
+            ELSE
+                CIRCLE (p(putobj, 4), p(putobj, 5)), findradius(p(putobj, 1)) + 2, p(putobj, 6)
+            END IF
+        END IF
+    NEXT putobj
+    IF fullscreen = 1 THEN
+        PSET (x, y), 15
+        DRAW "U5D10U5L5R10"
+        CIRCLE (x, y), 5, 15
+    END IF
+
+    DO
+        x = _MOUSEX
+        y = _MOUSEY
+        lclick = _MOUSEBUTTON(1)
+        rclick = _MOUSEBUTTON(2)
+        mclick = _MOUSEBUTTON(3)
+    LOOP WHILE _MOUSEINPUT = -1
+    IF lclick = -1 AND oldlclick = 0 THEN
+        onobject = isonobject(x, y)
+        IF onobject THEN
+            IF selected > 0 THEN
+                IF selected2 > 0 THEN
+                    IF onobject = selected THEN
+                        selected = 0
+                        selected2 = 0
+                        readytoselect = 0
+                    ELSE
+                        IF onobject = selected2 THEN
+                            selected2 = 0
+                        ELSE
+                            selected2 = onobject
+                        END IF
+                    END IF
+                ELSE
+                    IF onobject = selected THEN
+                        selected = 0
+                        readytoselect = 0
+                    ELSE
+                        selected2 = onobject
+                    END IF
+                END IF
+            ELSE
+                selected = onobject
+            END IF
+        END IF
+    END IF
+    IF lclick = -1 AND oldlclick = -1 THEN
+    END IF
+    IF lclick = 0 AND oldlclick = -1 THEN
+        IF selected > 0 AND (isonobject(x, y) = selected OR isonobject(x, y) = selected2) THEN readytoselect = 1
+    END IF
+    IF rclick = -1 AND oldrclick = 0 THEN
+        grabbed = isonobject(x, y)
+    END IF
+    IF rclick = -1 AND oldrclick = -1 THEN
+        IF grabbed > 0 THEN
+            CALL moveobject(grabbed, x, y)
+            p(grabbed, 2) = (x - oldgrabx) / .1
+            p(grabbed, 3) = (y - oldgraby) / .1
+            IF (TIMER(.01) / .1) = INT(TIMER(.01) / .1) THEN
+                oldgrabx = x
+                oldgraby = y
+            END IF
+        END IF
+    END IF
+    IF rclick = 0 AND oldrclick = -1 THEN
+        grabbed = 0
+    END IF
+    IF mclick = -1 AND oldmclick = 0 THEN
+        IF watch > 0 THEN
+            watch = 0
+            timetolook = 0
+        ELSE
+            watch = isonobject(x, y)
+        END IF
+    END IF
+    IF mclick = -1 AND oldmclick = -1 THEN
+    END IF
+    IF mclick = 0 AND oldmclick = -1 THEN
+        IF watch > 0 THEN
+            IF isonobject(x, y) = watch THEN
+                timetolook = 1
+            ELSE
+                watch = 0
+            END IF
+        END IF
+    END IF
+    oldlclick = lclick
+    oldrclick = rclick
+    oldmclick = mclick
+
+    IF watch > 0 THEN
+        look = watch
+    ELSE
+        look = isonobject(x, y)
+    END IF
+    IF look > 0 THEN
+        _PRINTMODE _KEEPBACKGROUND
+        COLOR 15
+        PRINT "ID: " + TRIMnum$(look)
+        PRINT "Mass: " + TRIMnum$(p(look, 1))
+        PRINT "Vx: " + TRIMnum$(trimdec(p(look, 2), 2))
+        PRINT "Vy: " + TRIMnum$(trimdec(p(look, 3), 2))
+        PRINT "X: " + TRIMnum$(INT(p(look, 4)))
+        PRINT "Y: " + TRIMnum$(INT(-p(look, 5)))
+        PRINT "Color: " + TRIMnum$(p(look, 6))
+    END IF
+    IF watch = 0 THEN look = 0
+    IF selected2 > 0 THEN
+        _PRINTMODE _KEEPBACKGROUND
+        COLOR 15
+        PRINT "Fg: " + TRIMnum$(trimdec(calcgravity(p(selected, 1), p(selected2, 1), distance(p(selected, 4), p(selected, 5), p(selected2, 4), p(selected2, 5))), 4))
+    END IF
+
+    k$ = INKEY$
+    IF k$ > "" THEN
+        IF k$ = CHR$(27) THEN SYSTEM
+        IF k$ = CHR$(32) THEN
+            SELECT CASE pause
+                CASE 0
+                    pause = 1
+                CASE 1
+                    pause = 0
+            END SELECT
+        END IF
+        IF UCASE$(k$) = CHR$(65) THEN
+            IF objects < maxobjects THEN
+                GOSUB drawbasicmap
+                REDIM instruction$(5)
+                instruction$(1) = "Click to select the initial location of the new object."
+                instruction$(2) = "Enter the mass of the new object or use the scroll wheel."
+                instruction$(3) = "Enter the initial x velocity of the new object."
+                instruction$(4) = "Enter the initial y velocity of the new object."
+                instruction$(5) = "Enter the color of the new object."
+                instruction = 1
+                x = 0
+                y = 0
+                m$ = ""
+                vx$ = ""
+                vy$ = ""
+                c$ = "15"
+                DO
+                    _LIMIT lps
+                    CLS
+                    PCOPY 1, 0
+                    _PRINTMODE _KEEPBACKGROUND
+                    COLOR 15
+                    PRINT instruction$(instruction)
+                    k$ = INKEY$
+                    IF k$ = CHR$(27) THEN EXIT DO
+                    SELECT CASE instruction
+                        CASE 1
+                            DO WHILE _MOUSEINPUT = -1
+                                IF _MOUSEBUTTON(1) = -1 THEN
+                                    x = _MOUSEX
+                                    y = _MOUSEY
+                                    IF isonobject(x, y) = 0 THEN instruction = 2
+                                END IF
+                            LOOP
+                        CASE 2
+                            PRINT ": "; m$
+                            IF k$ = CHR$(8) AND LEN(m$) > 0 THEN m$ = LEFT$(m$, (LEN(m$) - 1))
+                            IF k$ = CHR$(13) AND VAL(m$) > 0 THEN
+                                IF VAL(m$) THEN instruction = 3
+                            END IF
+                            IF k$ > CHR$(47) AND k$ < CHR$(58) THEN m$ = m$ + k$
+                            DO WHILE _MOUSEINPUT = -1
+                                m$ = TRIMnum$(VAL(m$) - _MOUSEWHEEL)
+                            LOOP
+                            IF VAL(m$) < 0 THEN m$ = "0"
+                            IF VAL(m$) > 0 AND LEFT$(m$, 1) = "0" THEN m$ = MID$(m$, 2)
+                        CASE 3
+                            PRINT ": "; vx$
+                            IF k$ = CHR$(8) AND LEN(vx$) > 0 THEN vx$ = LEFT$(vx$, (LEN(vx$) - 1))
+                            IF k$ = CHR$(13) THEN
+                                IF vx$ = "" THEN vx$ = "0"
+                                instruction = 4
+                            END IF
+                            IF k$ > CHR$(47) AND k$ < CHR$(58) THEN vx$ = vx$ + k$
+                            IF k$ = CHR$(45) THEN vx$ = TRIMnum$(VAL(vx$) * -1)
+                        CASE 4
+                            PRINT ": "; vy$
+                            IF k$ = CHR$(8) AND LEN(vy$) > 0 THEN vy$ = LEFT$(vy$, (LEN(vy$) - 1))
+                            IF k$ = CHR$(13) THEN
+                                IF vy$ = "" THEN vy$ = "0"
+                                instruction = 5
+                            END IF
+                            IF k$ > CHR$(47) AND k$ < CHR$(58) THEN vy$ = vy$ + k$
+                            IF k$ = CHR$(45) THEN vy$ = TRIMnum$(VAL(vy$) * -1)
+                        CASE 5
+                            PRINT ": "; c$
+                            IF k$ = CHR$(8) AND LEN(c$) > 0 THEN c$ = LEFT$(c$, (LEN(c$) - 1))
+                            IF c$ = "" THEN c$ = "0"
+                            IF k$ = CHR$(13) THEN EXIT DO
+                            IF k$ > CHR$(47) AND k$ < CHR$(58) THEN c$ = c$ + k$
+                            IF VAL(c$) < 0 THEN c$ = "0"
+                            IF VAL(c$) > 0 AND LEFT$(c$, 1) = "0" THEN c$ = MID$(c$, 2)
+                    END SELECT
+                    IF instruction > 1 THEN
+                        IF findradius(VAL(m$)) > 1 THEN
+                            CIRCLE (x, y), findradius(VAL(m$)), VAL(c$)
+                            PAINT (x, y), VAL(c$)
+                        ELSE
+                            PSET (x, y), VAL(c$)
+                        END IF
+                    END IF
+                    _DISPLAY
+                LOOP
+                CALL addobject(VAL(m$), VAL(vx$), VAL(vy$), x, y, VAL(c$))
+                GOTO start
+            END IF
+        END IF
+        IF UCASE$(k$) = CHR$(67) AND selected > 0 AND selected2 = 0 THEN
+            GOSUB drawbasicmap
+            c$ = TRIMnum$(p(selected, 6))
+            DO
+                _LIMIT lps
+                CLS
+                PCOPY 1, 0
+                _PRINTMODE _KEEPBACKGROUND
+                COLOR 15
+                PRINT "Enter the color of the object."
+                k$ = INKEY$
+                IF k$ = CHR$(27) THEN EXIT DO
+                IF k$ = CHR$(8) AND LEN(c$) > 0 THEN c$ = LEFT$(c$, (LEN(c$) - 1))
+                IF c$ = "" THEN c$ = "0"
+                IF k$ = CHR$(13) THEN EXIT DO
+                IF k$ > CHR$(47) AND k$ < CHR$(58) THEN c$ = c$ + k$
+                IF VAL(c$) < 0 THEN c$ = "0"
+                IF VAL(c$) > 0 AND LEFT$(c$, 1) = "0" THEN c$ = MID$(c$, 2)
+                IF findradius(p(selected, 1)) > 1 THEN
+                    CIRCLE (x, y), findradius(p(selected, 1)), VAL(c$)
+                    PAINT (x, y), VAL(c$)
+                ELSE
+                    PSET (x, y), VAL(c$)
+                END IF
+                _DISPLAY
+            LOOP
+            p(selected, 6) = VAL(c$)
+            GOTO start
+        END IF
+        IF UCASE$(k$) = CHR$(68) AND selected > 0 AND selected2 = 0 THEN
+            CALL removeobject(selected)
+            IF watch = selected THEN
+                watch = 0
+                timetowatch = 0
+            END IF
+        END IF
+        IF UCASE$(k$) = CHR$(77) AND selected > 0 THEN
+            m$ = TRIMnum$(p(selected, 1))
+            DO
+                _LIMIT lps
+                CLS
+                _PRINTMODE _KEEPBACKGROUND
+                COLOR 15
+                PRINT "Enter the new mass of the object or use the scroll wheel."
+                PRINT ": "; m$
+                FOR putobj = 1 TO objects
+                    IF putobj = selected THEN
+                        mass = VAL(m$)
+                    ELSE
+                        mass = p(putobj, 1)
+                    END IF
+                    IF findradius(mass) > 1 THEN
+                        CIRCLE (p(putobj, 4), p(putobj, 5)), findradius(mass), p(putobj, 6)
+                        PAINT (p(putobj, 4), p(putobj, 5)), p(putobj, 6)
+                    ELSE
+                        PSET (p(putobj, 4), p(putobj, 5)), p(putobj, 6)
+                    END IF
+                NEXT putobj
+                k$ = INKEY$
+                IF k$ = CHR$(27) THEN EXIT DO
+                IF k$ = CHR$(8) AND LEN(m$) > 0 THEN m$ = LEFT$(m$, (LEN(m$) - 1))
+                IF k$ = CHR$(13) THEN
+                    IF VAL(m$) THEN
+                        p(selected, 1) = VAL(m$)
+                        EXIT DO
+                    END IF
+                END IF
+                IF k$ > CHR$(47) AND k$ < CHR$(58) THEN m$ = m$ + k$
+                DO WHILE _MOUSEINPUT = -1
+                    m$ = TRIMnum$(VAL(m$) - _MOUSEWHEEL)
+                LOOP
+                IF VAL(m$) < 0 THEN m$ = "0"
+                _DISPLAY
+            LOOP
+        END IF
+        IF UCASE$(k$) = CHR$(83) AND selected > 0 AND selected2 = 0 THEN
+            SELECT CASE isstatic(selected)
+                CASE 0
+                    CALL addstaticobject(selected)
+                CASE ELSE
+                    CALL removestaticobject(selected)
+            END SELECT
+        END IF
+        IF UCASE$(k$) = CHR$(88) AND selected > 0 AND selected2 = 0 THEN
+            GOSUB drawbasicmap
+            foundloc = 0
+            DO
+                _LIMIT lps
+                CLS
+                PCOPY 1, 0
+                _PRINTMODE _KEEPBACKGROUND
+                COLOR 15
+                PRINT "Click to select the initial location of the new object."
+                k$ = INKEY$
+                IF k$ = CHR$(27) THEN EXIT DO
+                DO WHILE _MOUSEINPUT = -1
+                    x = _MOUSEX
+                    y = _MOUSEY
+                    IF isonobject(x, y) = 0 AND _MOUSEBUTTON(1) = -1 THEN foundloc = 1
+                LOOP
+                IF isonobject(x, y) = 0 THEN
+                    IF findradius(p(selected, 1)) > 1 THEN
+                        CIRCLE (x, y), findradius(p(selected, 1)), p(selected, 6)
+                        PAINT (x, y), p(selected, 6)
+                    ELSE
+                        PSET (x, y), p(selected, 6)
+                    END IF
+                END IF
+                _DISPLAY
+            LOOP UNTIL foundloc = 1
+            CALL addobject(p(selected, 1), p(selected, 2), p(selected, 3), x, y, p(selected, 6))
+            GOTO start
+        END IF
+        IF k$ = (CHR$(0) + CHR$(59)) THEN
+            GOSUB help
+        END IF
+        IF k$ = (CHR$(0) + CHR$(75)) THEN
+            IF selected2 > 0 THEN
+                DO
+                    selected2 = selected2 - 1
+                    IF selected2 = 0 THEN selected2 = objects
+                LOOP UNTIL selected2 <> selected
+            ELSE
+                IF selected > 0 THEN
+                    selected = selected - 1
+                    IF selected = 0 THEN selected = objects
+                ELSE
+                    selected = objects
+                END IF
+            END IF
+        END IF
+        IF k$ = (CHR$(0) + CHR$(77)) THEN
+            IF selected2 > 0 THEN
+                DO
+                    selected2 = selected2 + 1
+                    IF selected2 > objects THEN selected2 = 1
+                LOOP UNTIL selected2 <> selected
+            ELSE
+                IF selected > 0 THEN
+                    selected = selected + 1
+                    IF selected > objects THEN selected = 1
+                ELSE
+                    selected = 1
+                END IF
+            END IF
+        END IF
+        IF k$ = (CHR$(0) + CHR$(133)) THEN
+            SELECT CASE fullscreen
+                CASE 0
+                    fullscreen = 1
+                    _FULLSCREEN
+                CASE 1
+                    fullscreen = 0
+                    _FULLSCREEN _OFF
+            END SELECT
+        END IF
+    END IF
+
+    _DISPLAY
+LOOP
+
+help:
+DO
+    _LIMIT lps
+    CLS
+    _PRINTMODE _KEEPBACKGROUND
+    COLOR 15
+    PRINT "-GRAVITY SIMULATOR-"
+    PRINT
+    PRINT "Press any key to exit the help menu."
+    PRINT
+    PRINT "At any time:"
+    PRINT "-Press 'Esc' to exit the program at any time or to return to the map if editing."
+    PRINT "-Press 'Space' to pause/unpause movement."
+    PRINT "-Press 'F1' to go to the help menu."
+    PRINT "-Press 'F11' to toggle fullscreen."
+    PRINT "-Press 'A' to add a new object."
+    PRINT "-Press '<-' or '->' to shuffle the selected or selected2 object."
+    PRINT "-Position your mouse over an object to see information about it. You can only look at one object at a time."
+    PRINT "-Left click an object to select it. If another object is selected, you must first click it again to deselect it before selecting another object. You can select two objects at once."
+    PRINT "-Right click an object to grab an object. It will be tethered to your mouse until you let it go. It's velocity will be determined upon release."
+    PRINT "-Middle click an object to watch it; this overrides positioning your mouse over an object."
+    PRINT
+    PRINT "While one object is selected:"
+    PRINT "-Press 'C' to change the color of the selected object."
+    PRINT "-Press 'D' to remove the selected object."
+    PRINT "-Press 'M' to change the mass of the selected object."
+    PRINT "-Press 'S' to make an object static, or remove an object from being static."
+    PRINT "-Press 'X' to copy the selected object.";
+    LOCATE 29, 1
+    PRINT "When two objects are selected, a triangle will be drawn about them and the gravi";
+    LOCATE 30, 1
+    PRINT "tational force bewtween then will be printed.";
+    k$ = INKEY$
+    IF k$ = CHR$(27) THEN SYSTEM
+    _DISPLAY
+LOOP UNTIL k$ > ""
+DO
+    k$ = INKEY$
+LOOP WHILE k$ > ""
+DO
+LOOP WHILE _MOUSEINPUT = -1
+GOTO start
+
+drawbasicmap:
+CLS
+FOR putobj = 1 TO objects
+    IF findradius(p(putobj, 1)) > 1 THEN
+        CIRCLE (p(putobj, 4), p(putobj, 5)), findradius(p(putobj, 1)), p(putobj, 6)
+        PAINT (p(putobj, 4), p(putobj, 5)), p(putobj, 6)
+    ELSE
+        PSET (p(putobj, 4), p(putobj, 5)), p(putobj, 6)
+    END IF
+NEXT putobj
+PCOPY 0, 1
+RETURN
+
+SUB addobject (m, vx, vy, x, y, c)
+IF objects = maxobjects THEN EXIT SUB
+objects = objects + 1
+p(objects, 1) = m
+p(objects, 2) = vx
+p(objects, 3) = vy
+p(objects, 4) = x
+p(objects, 5) = y
+p(objects, 6) = c
+END SUB
+
+SUB addstaticobject (p)
+IF isstatic(p) THEN EXIT SUB
+staticobjects = staticobjects + 1
+staticp(staticobjects) = p
+END SUB
+
+SUB drawtrig (p1, p2, printsides, printangles)
+tdeltax = p(p2, 4) - p(p1, 4)
+tdeltay = p(p1, 5) - p(p2, 5)
+LINE (p(p1, 4), p(p1, 5))-(p(p1, 4) + tdeltax, p(p1, 5)), p(p1, 6)
+LINE (p(p1, 4) + tdeltax, p(p1, 5))-(p(p2, 4), p(p2, 5)), p(p1, 6)
+LINE (p(p2, 4), p(p2, 5))-(p(p1, 4), p(p1, 5)), p(p1, 6)
+IF printsides = 1 THEN
+    _PRINTMODE _KEEPBACKGROUND
+    COLOR p(p1, 6)
+    xside$ = TRIMnum$(trimdec(tdeltax, 2))
+    _PRINTSTRING (midpoint(p(p1, 4), (p(p2, 4) - widthofword(xside$) + 8)), p(p1, 5) + (16 * (p(p1, 5) < p(p2, 5)))), xside$
+    yside$ = TRIMnum$(trimdec(tdeltay, 2))
+    _PRINTSTRING (p(p2, 4) + 2 + ((widthofword(yside$) + 4) * (p(p1, 4) > p(p2, 4))), midpoint(p(p1, 5), p(p2, 5)) - 8), yside$
+    hside$ = TRIMnum$(trimdec(SQR((tdeltax ^ 2) + (tdeltay ^ 2)), 2))
+    _PRINTSTRING (midpoint(p(p1, 4), p(p2, 4) - (.5 * widthofword(hside$)) - (widthofword(hside$) * (p(p1, 4) > p(p2, 4)) - ((widthofword(hside$) + 32) * (p(p1, 4) < p(p2, 4))))), midpoint(p(p1, 5), p(p2, 5)) - 8), hside$
+END IF
+IF printangles = 1 THEN
+    _PRINTMODE _KEEPBACKGROUND
+    COLOR p(p1, 6)
+    a1$ = "90"
+    _PRINTSTRING (p(p2, 4) + 2 + ((widthofword(a1$) + 4) * (p(p1, 4) < p(p2, 4))), (p(p1, 5) - tdelatay) - 16 - (16 * (p(p1, 5) < p(p2, 5)))), a1$
+    a2$ = TRIMnum$(trimdec(radtodeg(ABS(ATN(tdeltay / tdeltax))), 1))
+    _PRINTSTRING (midpoint(p(p1, 4), midpoint(p(p1, 4), p(p2, 4) - widthofword(a2$))), p(p1, 5) + (16 * (p(p1, 5) > p(p2, 5)))), a2$
+    a3$ = TRIMnum$(90 - VAL(a2$))
+    _PRINTSTRING (p(p2, 4) + 2 + ((widthofword(a3$) + 4) * (p(p1, 4) < p(p2, 4))), midpoint(p(p2, 5), midpoint(p(p2, 5), p(p1, 5)))), a3$
+END IF
+END SUB
+
+SUB moveobject (p, x, y)
+p(p, 4) = x
+p(p, 5) = y
+END SUB
+
+SUB removeobject (p)
+IF p > objects OR p < 1 THEN EXIT SUB
+IF isstatic(p) THEN removestaticobject (p)
+objects = objects - 1
+FOR moveback = p TO objects
+    IF isstatic(moveback + 1) THEN
+        removestaticobject (moveback + 1)
+        addstaticobject (moveback)
+    END IF
+    FOR dataframe = 1 TO 6
+        p(moveback, dataframe) = p(moveback + 1, dataframe)
+    NEXT dataframe
+NEXT moveback
+IF selected = p THEN
+    selected = 0
+    selected2 = 0
+END IF
+IF selected2 = p THEN selected2 = 0
+IF selected > p THEN selected = selected - 1
+IF selected2 > p THEN selected2 = selected2 - 1
+IF watch = p THEN watch = 0
+END SUB
+
+SUB removestaticobject (p)
+staticloc = isstatic(p)
+IF staticloc = 0 THEN EXIT SUB
+staticobjects = staticobjects - 1
+FOR moveback = staticloc TO staticobjects
+    staticp(moveback) = staticp(moveback + 1)
+NEXT moveback
+staticp(staticobjects + 1) = 0
+END SUB
+
+FUNCTION calcgravity (m1, m2, d)
+calcgravity = (m1 * m2) / (d ^ 2)
+END FUNCTION
+
+FUNCTION degtorad (d)
+degtorad = d * PI / 180
+END FUNCTION
+
+FUNCTION distance (x1, y1, x2, y2)
+distance = SQR(((x1 - x2) ^ 2) + ((y1 - y2) ^ 2))
+END FUNCTION
+
+FUNCTION dot (vx1, vy1, vx2, vy2)
+dot = (vx1 * vx2) + (vy1 * vy2)
+END FUNCTION
+
+FUNCTION findradius (m)
+findradius = SQR(SQR(m))
+END FUNCTION
+
+FUNCTION isonobject (x, y)
+FOR findon = 1 TO objects
+    dis = distance(x, y, p(findon, 4), p(findon, 5))
+    IF dis < findradius(p(findon, 1)) THEN
+        isonobject = findon
+        EXIT FOR
+    END IF
+NEXT findon
+END FUNCTION
+
+FUNCTION isstatic (p)
+FOR checkexist = 1 TO staticobjects
+    IF staticp(checkexist) = p THEN
+        isstatic = checkexist
+        EXIT FUNCTION
+    END IF
+NEXT checkexist
+END FUNCTION
+
+FUNCTION midpoint (p1, p2)
+midpoint = (p1 + p2) / 2
+END FUNCTION
+
+FUNCTION radtodeg (r)
+radtodeg = r * 180 / PI
+END FUNCTION
+
+FUNCTION trimdec (num, dec)
+trimdec = INT(num * (dec * 10)) / (dec * 10)
+END FUNCTION
+
+FUNCTION widthofword (word$)
+widthofword = LEN(word$) * 8
+END FUNCTION
+
+FUNCTION TRIM$ (s$)
+TRIM$ = LTRIM$(RTRIM$(s$))
+END FUNCTION
+
+FUNCTION TRIMnum$ (n)
+TRIMnum$ = LTRIM$(RTRIM$(STR$(n)))
+END FUNCTION

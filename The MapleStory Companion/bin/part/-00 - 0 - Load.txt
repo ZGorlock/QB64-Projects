@@ -1,0 +1,116 @@
+'Search List
+' -Text
+'    -Guide
+'       -'guidemenu1$'
+' -Graphic
+'    -Intro
+'       -'icon$'
+'    -Map
+'       -'aquaroadmainmap$'
+'    -Fashion
+'       -'angelicabrwfhair$'
+' -Audio
+
+DIM guidemenu1$(13)
+DIM guidemenu2$(3)
+DIM guidemenu3$(10)
+DIM guidemenu4$(5)
+DIM guidemenu5$(13)
+DIM guidemenu6$(6)
+DIM guidemenu7$(15)
+DIM guidemenu8$(12)
+DIM guidemenu9$(3)
+DIM guidemenu10$(1)
+DIM guidemenu11$(7)
+DIM guidemenu12$(2)
+guidemenu1$(1) = "Area Bosses"
+guidemenu1$(2) = "Common Maplestory Scams and How to Prevent Them
+guidemenu1$(3) = "Complete Scrolling Guide and Reference
+guidemenu1$(4) = "Macros
+guidemenu1$(5) = "Maker Skill
+guidemenu1$(6) = "Potential Items
+guidemenu1$(7) = "Maple Ethics
+guidemenu1$(8) = "Maple Trading System MTS
+guidemenu1$(9) = "MapleStory Abbreviations
+guidemenu1$(10) = "MapleStory FAQ
+guidemenu1$(11) = "Merchanting
+guidemenu1$(12) = "Merchanting for Begginers
+guidemenu1$(13) = "Setting Up and Maintaining a Guild
+guidemenu2$(1) = "Quests as a source of EXP
+guidemenu2$(2) = "Quests You Can Do To Make Money
+guidemenu2$(3) = "Tactical Winning In CPQ
+guidemenu3$(1) = "Beginner's Guide to Maplestory
+guidemenu3$(2) = "Leeching
+guidemenu3$(3) = "Playing Maple Healthily
+guidemenu3$(4) = "Potions
+guidemenu3$(5) = "What came when in GMS
+guidemenu3$(6) = "Region Explorer Medals
+guidemenu3$(7) = "A Guide to Chairs & How to get them
+guidemenu3$(8) = "General Problems FAQ
+guidemenu3$(9) = "How to not get hacked
+guidemenu3$(10) = "How To Play MapleStory On A Mac
+guidemenu4$(1) = "A Beginner's Guide to Jobless Classes
+guidemenu4$(2) = "A Beginner's Guide to Jobless Training
+guidemenu4$(3) = "A Beginner's Guide to Tutorial Classes
+guidemenu4$(4) = "General list of Experimental Classes
+guidemenu4$(5) = "Permanent Beginner Guide
+guidemenu5$(1) = "How To Choose Your Warrior Weapon"
+guidemenu5$(2) = "Low and No Dex Warrior"
+guidemenu5$(3) = "Recommended Warrior Equips"
+guidemenu5$(4) = "Warrior"
+guidemenu5$(5) = "Warrior Comparison"
+guidemenu5$(6) = "Warrior Training"
+guidemenu5$(7) = "Fighter, Crusader, Hero"
+guidemenu5$(8) = "HP Warrior"
+guidemenu5$(9) = "Page, White Knight, Paladin"
+guidemenu5$(10) = "Path of The Page, Pilgrimage of The Paladin"
+guidemenu5$(11) = "Post-Big-Bang Guide for Paladins"
+guidemenu5$(12) = "Official Spearman, DK, and DrK Guide"
+guidemenu5$(13) = "Spearman"
+guidemenu6$(1) = "Archer %/Hour Thread"
+guidemenu6$(2) = "Archer Skill Build"
+guidemenu6$(3) = "Archer Training Reference"
+guidemenu6$(4) = "Bow or Crossbow"
+guidemenu6$(5) = "Bowman Bossing"
+guidemenu6$(6) = "Bowman Frequently Asked Questions"
+guidemenu7$(1) = "General Information about Magicians and Recommend Equips"
+guidemenu7$(2) = "Mage FAQ"
+guidemenu7$(3) = "Mage Training Areas"
+guidemenu7$(4) = "F/P mage SP distribution"
+guidemenu7$(5) = "Fire/Poison F/P Wizard"
+guidemenu7$(6) = "Poison Wizard"
+guidemenu7$(7) = "Compy's I/L Guide"
+guidemenu7$(8) = "Ice / Lightning I/L Mage"
+guidemenu7$(9) = "Ice/Lightning Arch Mage Grind Guide"
+guidemenu7$(10) = "Aider's Magician to Bishop Guide"
+guidemenu7$(11) = "Cleric, Priest and Bishop Training"
+guidemenu7$(12) = "Clerics"
+guidemenu7$(13) = "Genesis Quest"
+guidemenu7$(14) = "Solo and Party Priest Hime Training"
+guidemenu7$(15) = "Solo Cleric"
+guidemenu8$(1) = "Basic Thief Guide"
+guidemenu8$(2) = "Assassin Training Guide"
+guidemenu8$(3) = "Assassin, Hermit and Night Lord Guide"
+guidemenu8$(4) = "The Assassin, Hermit, NL Bossing Guide"
+guidemenu8$(5) = "Bandit FAQ"
+guidemenu8$(6) = "Bandit Guide"
+guidemenu8$(7) = "Bandit Training Guide"
+guidemenu8$(8) = "Chief Bandit and Shadower vs Bosses"
+guidemenu8$(9) = "Chief Bandit Techniques and Strategies"
+guidemenu8$(10) = "Chief Bandits"
+guidemenu8$(11) = "Shadower FAQ"
+guidemenu8$(12) = "STR Bandit"
+guidemenu9$(1) = "Big Bang Gunslinger Guide"
+guidemenu9$(2) = "Gunslingers"
+guidemenu9$(3) = "Buccaneer"
+guidemenu10$(1) = "Ultimate Dual Blade guide"
+guidemenu11$(1) = "Blaze Wizard"
+guidemenu11$(2) = "Cygnus Knight Quests"
+guidemenu11$(3) = "Dawn Warrior Guide"
+guidemenu11$(4) = "Night Walker"
+guidemenu11$(5) = "Night Walker Poison Bomb Training"
+guidemenu11$(6) = "Thunder Breaker"
+guidemenu11$(7) = "Wind Archer"
+guidemenu12$(1) = "Evan - Where To Train"
+guidemenu12$(2) = "Evan: Taming The Dragon"
+icon$ = "92UC7eP2JX0000@39Q4AB100001000048800000TARV=000068fB7A40o3`o0l?XmNjT0000907BI=700h0a00P347@U[h`600P0QV4A1A5NLfRTKQ45QaAa?OGViKWMGg\db43:Hfe59j245\dVDDI9Ed=bN`XX72ZXX2BjQjQ2RP09\jYTPX;6MQ8YR:R:j13;j2R8MaFS<Aj:^SK>[>k>cgoN@oml?>LPcQIKW00Ibd;6WRi`Oj36n0JH43AZ26a800T8NL0`\]C<Q=E4ni@QQ_nfgL9jQiAd^ASe@;g46C3lX4Ca0\]]I4ACT]o@`[_k_[]F^SSb`a[2:ESegic78eA^0D9QX\a]hP0d5AQL`kG?HOKJM[XV9CISYYDeG=:dOZJWN7WL7`K@Dd1jR0P3XQ_;LnjCgm6FkBB0f_IQ@8;<`Mk5D4@3VNIEfe9f96ik8`50<b;;neW_gQgbDm7`D232:6B^Udo^m>::AEKK^Oi1M7b[\Oj?[5fb]PidHdOjnZ7XQ:<oDM[JN`Uegcjb^fIQYD:X@omQ_R20380<7EUO@?c=Nf;9Q_?9T;]nE3aoNoCO9dh]_kK<>[4^UbHB:SX<=_0g=i:GMg?nSSGYQQNX[]g=DUb?R@DM=cY@h`JYdRa5@<F1RY9:H\ncj]P3N:8:UAD0LM0615c=Hk]YeJOUeIJiL7k`7245`UkIo7]iV?AR=g8DE0AD6A48O4hQPlmLW;;m7AXeAER`DPPd1`H<QbA49ijK0bHP[h00<9TAl6EOlcgjXb`TQR:joXKLKEN_Njle226QS2^1HlagQ9PKJiZ=bS@54Q<=RTo73mVWlR`V:=34A88041`WhJ@4albGgRW_E@nB4n=gDCCITlV<fX:FF3c\Va>m5K[efJ?DYUa\]]cT930Pf][kN5iH>VVV28D2C6Y3l7E6>BFbLf;O=`ZlhEG370aS770P83bcRkK:if;JQcHEeGEjd^<^F:3GB<84eHK3PoCe7_Rm8KUQP10000@B5i4A^:4H%%22"

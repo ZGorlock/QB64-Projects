@@ -1,0 +1,32 @@
+qbs*oldstr6606=NULL;
+if(_SUB_SCREENSHOT_STRING_FILELOC->tmp||_SUB_SCREENSHOT_STRING_FILELOC->fixed||_SUB_SCREENSHOT_STRING_FILELOC->readonly){
+oldstr6606=_SUB_SCREENSHOT_STRING_FILELOC;
+if (oldstr6606->cmem_descriptor){
+_SUB_SCREENSHOT_STRING_FILELOC=qbs_new_cmem(oldstr6606->len,0);
+}else{
+_SUB_SCREENSHOT_STRING_FILELOC=qbs_new(oldstr6606->len,0);
+}
+memcpy(_SUB_SCREENSHOT_STRING_FILELOC->chr,oldstr6606->chr,oldstr6606->len);
+}
+qbs*oldstr6607=NULL;
+if(_SUB_SCREENSHOT_STRING_FILENAME->tmp||_SUB_SCREENSHOT_STRING_FILENAME->fixed||_SUB_SCREENSHOT_STRING_FILENAME->readonly){
+oldstr6607=_SUB_SCREENSHOT_STRING_FILENAME;
+if (oldstr6607->cmem_descriptor){
+_SUB_SCREENSHOT_STRING_FILENAME=qbs_new_cmem(oldstr6607->len,0);
+}else{
+_SUB_SCREENSHOT_STRING_FILENAME=qbs_new(oldstr6607->len,0);
+}
+memcpy(_SUB_SCREENSHOT_STRING_FILENAME->chr,oldstr6607->chr,oldstr6607->len);
+}
+qbs *_SUB_SCREENSHOT_STRING_SSFILE=NULL;
+if (!_SUB_SCREENSHOT_STRING_SSFILE)_SUB_SCREENSHOT_STRING_SSFILE=qbs_new(0,0);
+int16 pass6609;
+int16 pass6610;
+int16 pass6611;
+int16 pass6612;
+int32 pass6613;
+int16 pass6614;
+int16 pass6615;
+int16 pass6616;
+int16 pass6617;
+int32 pass6618;

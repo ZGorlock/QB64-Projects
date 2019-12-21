@@ -1,0 +1,14 @@
+int16 *_FUNC_YEAR_CYCLE_X_INTEGER_YEAR_CYCLE_X=NULL;
+if(_FUNC_YEAR_CYCLE_X_INTEGER_YEAR_CYCLE_X==NULL){
+_FUNC_YEAR_CYCLE_X_INTEGER_YEAR_CYCLE_X=(int16*)mem_static_malloc(2);
+*_FUNC_YEAR_CYCLE_X_INTEGER_YEAR_CYCLE_X=0;
+}
+int8 *_FUNC_YEAR_CYCLE_X_BYTE_X=NULL;
+if(_FUNC_YEAR_CYCLE_X_BYTE_X==NULL){
+_FUNC_YEAR_CYCLE_X_BYTE_X=(int8*)mem_static_malloc(1);
+*_FUNC_YEAR_CYCLE_X_BYTE_X=0;
+}
+int16 fornext_value6618;
+int16 fornext_finalvalue6618;
+int16 fornext_step6618;
+uint8 fornext_step_negative6618;

@@ -1,0 +1,1078 @@
+IF (k$ = CHR$(119) OR k$ = CHR$(87)) OR (_MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 301 AND _MOUSEY < 317 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 1
+    DO
+        DO
+            exitloop = 0
+            _LIMIT 64
+            CLS
+            PRINT "What would you like to do?"
+            PRINT "     1-Search an Item"
+            PRINT "     2-Item Synthesis"
+            PRINT "     3-Item Maker"
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+DO
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Enter an Item you like to see?"
+PRINT ": "; item$
+
+
+
+
+                    _DISPLAY
+                LOOP
+item$ = itemprintlist$(selected)
+SELECT CASE item$
+'$include:'bin\part\007 - W - Items[2].txt' 
+END SELECT
+LOOP
+            END IF
+            IF k$ = CHR$(50) THEN
+                DO
+                    DO
+                        source$ = "http://global.hidden-street.net/item-synthesis/common"
+                        _LIMIT 64
+                        CLS
+                        PRINT "What class of Item Synthesis would you like to see?"
+                        PRINT "     1-Common"
+                        PRINT "     2-Bowman"
+                        PRINT "     3-Magician"
+                        PRINT "     4-Pirate"
+                        PRINT "     5-Thief"
+                        PRINT "     6-Warrior"
+                        PRINT "     7-Weapon Forging"
+                        PRINT "     8-iTCG Forging"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/common"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Common Item Synthesis list would you like to see?"
+                                PRINT "     1-Gloves"
+                                PRINT "     2-Hats"
+                                PRINT "     3-Wand"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\comgloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\comhats.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\comwand.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/bowman"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Bowman Item Synthesis list would you like to see?"
+                                PRINT "     1-Bow"
+                                PRINT "     2-Crossbow"
+                                PRINT "     3-Gloves"
+                                PRINT "     4-Shoes"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\bowbow.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\bowcrossbow.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\bowgloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\bowshoes.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/magician"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Magician Item Synthesis list would you like to see?"
+                                PRINT "     1-Gloves"
+                                PRINT "     2-Hats"
+                                PRINT "     3-Shoes"
+                                PRINT "     4-Staff"
+                                PRINT "     5-Wand"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\maggloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\maghats.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\magshoes.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\magstaff.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\magwand.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(52) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/pirate"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Pirate Item Synthesis list would you like to see?"
+                                PRINT "     1-Gloves"
+                                PRINT "     2-Gun"
+                                PRINT "     3-Knuckle"
+                                PRINT "     4-Shoes"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\pirgloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\pirgun.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\pirknuckle.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\pirshoes.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(53) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/thief"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Thief Item Synthesis list would you like to see?"
+                                PRINT "     1-Claws"
+                                PRINT "     2-Gloves"
+                                PRINT "     3-Shoes"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\thiclaws.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\thigloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\thishoes.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(54) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/warrior"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Warrior Item Synthesis list would you like to see?"
+                                PRINT "     1-Gloves"
+                                PRINT "     2-Hats"
+                                PRINT "     3-Shield"
+                                PRINT "     4-Shoes"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\wargloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\warhats.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\warshield.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\warshoes.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(55) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/weapon-forging"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Weapon Synthesis list would you like to see?"
+                                PRINT "      1-One Handed Weapon"
+                                PRINT "      2-Two Handed Weapon"
+                                PRINT "      3-Claws (No Stimulator)"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What One Handed Weapon type would you like to see the list for?"
+                                        PRINT "     1-Sword"
+                                        PRINT "     2-Axe"
+                                        PRINT "     3-Blunt Weapon"
+                                        PRINT "     4-Dagger"
+                                        PRINT "     5-Wand"
+                                        PRINT "     6-Staff"
+                                        GOSUB controls
+                                        IF k$ = CHR$(49) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\ohsword.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(50) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\ohaxe.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(51) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\ohbw.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(52) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\dagger.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(53) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\wand.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(54) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\staff.txt"
+                                            EXIT DO
+                                        END IF
+                                        _DISPLAY
+                                    LOOP
+                                    DO
+                                        GOSUB controls
+                                    LOOP UNTIL k$ = ""
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What Two Handed Weapon type would you like to see the list for?"
+                                        PRINT "     1-Sword"
+                                        PRINT "     2-Axe"
+                                        PRINT "     3-Blunt Weapon"
+                                        PRINT "     4-Spear"
+                                        PRINT "     5-Polearm"
+                                        PRINT "     6-Bow"
+                                        PRINT "     7-Crossbow"
+                                        PRINT "     8-Claw"
+                                        GOSUB controls
+                                        IF k$ = CHR$(49) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\thsword.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(50) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\thaxe.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(51) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\thbw.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(52) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\spear.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(53) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\polearm.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(54) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\bow.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(55) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\crossbow.txt"
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(56) THEN
+                                            exitloop = 1
+                                            synthesisfile$ = "source\item\synthesis\claw.txt"
+                                            EXIT DO
+                                        END IF
+                                        _DISPLAY
+                                    LOOP
+                                    DO
+                                        GOSUB controls
+                                    LOOP UNTIL k$ = ""
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\nostimclaw.txt"
+                                END IF
+                                IF exitloop = 1 THEN EXIT DO
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(56) THEN
+                            source$ = "http://global.hidden-street.net/item-synthesis/itcg"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What Set would you like to see the Synthesis list for?"
+                                PRINT "     1-iTCG?"
+                                PRINT "     2-Set 1 : Base Premiere"
+                                PRINT "     3-Set 2 : OMG Bosses!"
+                                PRINT "     4-Set 3 : P3TZ"
+                                PRINT "     5-Set 4 : NPC Heroes"
+                                PRINT "     6-Set 5 : Behold Zakum"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "MapleStory iTCG is a trading card game, which will contain a certain amount of"
+                                        PRINT "codes redeemable in MapleStory for various items. Some of these items, in turn,"
+                                        PRINT "may be used to forge powerful equipment which cannot be obtained by any other"
+                                        PRINT "means."
+                                        PRINT ""
+                                        PRINT "Some equipments requires a specific manual (created using iTCG items at certain"
+                                        PRINT "NPCs), and in order to synthesize an equipment, other normal MapleStory items"
+                                        PRINT "(usually ores) are required along with the manual."
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(32)
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "Where would you like to go?"
+                                        PRINT "     1-iTCG Menu"
+                                        PRINT "     2-Item Synthesis Menu"
+                                        PRINT "     3-Item Menu"
+                                        PRINT "     4-Main Menu"
+                                        GOSUB controls
+                                        IF k$ = CHR$(52) THEN
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(50) THEN
+                                            exitloop = 3
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(51) THEN
+                                            exitloop = 2
+                                            EXIT DO
+                                        END IF
+                                        IF k$ = CHR$(52) THEN
+                                            GOTO BEGIN
+                                        END IF
+                                        _DISPLAY
+                                    LOOP
+                                    DO
+                                        GOSUB controls
+                                    LOOP UNTIL k$ = ""
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\itcg1.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\itcg2.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\itcg3.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\itcg4.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(54) THEN
+                                    exitloop = 1
+                                    synthesisfile$ = "source\item\synthesis\itcg5.txt"
+                                    EXIT DO
+                                END IF
+                                IF exitloop > 0 THEN EXIT DO
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF exitloop > 0 AND exitloop <> 3 THEN EXIT DO
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 2 THEN EXIT DO
+                    exitloop = 0
+                    row = 1
+                    OPEN synthesisfile$ FOR INPUT AS #1
+                    REDIM synthesisprint$(32768)
+                    synthesiscount = 0
+                    DO UNTIL EOF(1)
+                        ON ERROR GOTO endofsynthesisfile
+                        LINE INPUT #1, synthesisprint$(synthesiscount)
+                        synthesiscount = synthesiscount + 1
+                    LOOP
+                    endofsynthesisfile:
+                    CLOSE #1
+                    scrollgap = 27
+                    listnum = synthesiscount
+                    IF synthesiscount > 27 THEN
+                        CLS
+                        FOR n = row TO row + 27
+                            PRINT synthesisprint$(n)
+                        NEXT
+                    END IF
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        GOSUB controls
+                        IF synthesiscount <= 27 THEN
+                            CLS
+                            FOR n = 1 TO synthesiscount
+                                PRINT synthesisprint$(n)
+                            NEXT
+                        ELSE
+                            IF k$ = CHR$(113) THEN
+                                row = row - 1
+                                GOTO W2
+                            END IF
+                            IF k$ = CHR$(122) THEN
+                                row = row + 1
+                                GOTO W2
+                            END IF
+                            IF k$ = CHR$(119) THEN
+                                row = 1
+                                GOTO W2
+                            END IF
+                            IF k$ = CHR$(97) THEN
+                                row = row - 27
+                                GOTO W2
+                            END IF
+                            IF k$ = CHR$(115) THEN
+                                row = (synthesiscount - 27)
+                                GOTO W2
+                            END IF
+                            IF k$ = CHR$(100) THEN
+                                row = row + 27
+                                GOTO W2
+                            END IF
+                            DO WHILE _MOUSEINPUT
+                                row = row + (_MOUSEWHEEL * scrollspeed)
+                                IF prevrow <> row THEN
+                                    W2:
+                                    IF row < 1 THEN
+                                        row = 1
+                                    END IF
+                                    IF row > (synthesiscount - 27) THEN
+                                        row = (synthesiscount - 27)
+                                    END IF
+                                    CLS
+                                    FOR n = row TO row + 27
+                                        PRINT synthesisprint$(n)
+                                    NEXT
+                                    GOSUB scrollbar
+                                END IF
+                                prevrow = row
+                            LOOP
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Where would you like to go?"
+                        PRINT "     1-Item Synthesis Menu"
+                        PRINT "     2-Item Menu"
+                        PRINT "     3-Main Menu"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            exitloop = 2
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            GOTO BEGIN
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 2 THEN EXIT DO
+                LOOP
+            END IF
+            IF k$ = CHR$(51) THEN
+                DO
+                    DO
+                        source$ = "http://global.hidden-street.net/item-maker/warrior"
+                        _LIMIT 64
+                        CLS
+                        PRINT "What class of Item Maker would you like to see?"
+                        PRINT "     1-Item Maker?"
+                        PRINT "     2-Warrior"
+                        PRINT "     3-Magician"
+                        PRINT "     4-Bowman"
+                        PRINT "     5-Thief"
+                        PRINT "     6-Pirate"
+                        PRINT "     7-Etc"
+                        PRINT "     8-Useable"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "The Item Maker skill can be obtained by any character (except for Beginners)"
+                                PRINT "starting from Level 45. The following quests have to be completed to obtain the"
+                                PRINT "Maker skill at its respective level:"
+                                PRINT
+                                PRINT "- Moren's New Discovery (Level 45, Maker skill Level 1)"
+                                PRINT "- Moren's Second Round of Teaching (Level 75, Maker skill Level 2)"
+                                PRINT "- Moren's Third Round of Teaching! (Level 105, Maker skill Level 3)"
+                                PRINT
+                                PRINT "Depending on the items you'd like to forge through the Maker skill, most armours"
+                                PRINT "and some weapons require Magic Powders. Monster Crystals, on the other hand, are"
+                                PRINT "forged from 100 leftover items of a monster of a specified level; for instance,"
+                                PRINT "to forge Basic Monster Crystal 1, you'd need to have 100 leftover items from the"
+                                PRINT "same Level 31-50 monster."
+                                PRINT
+                                PRINT "Optionally, you may also improve your equipments' stats by Strengthening gems"
+                                PRINT "and crystals via your Maker menu. Each time you Strengthen a gem or a crystal,"
+                                PRINT "this will cost you 110,000 mesos, and you may end up with either a Basic,"
+                                PRINT "Intermediate, or an Advanced Gem/Crystal."
+                                PRINT
+                                PRINT "Also, you may only create items that are for your own class only. (For example,"
+                                PRINT "a Warrior cannot forge equipments from the Magician class.)"
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(32)
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Where would you like to go?"
+                                PRINT "     1-Item Maker Menu"
+                                PRINT "     2-Item Menu"
+                                PRINT "     3-Main Menu"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 2
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    GOTO BEGIN
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/warrior"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Which equip list would you like to see?"
+                                PRINT "     1-Bottom"
+                                PRINT "     2-Gloves"
+                                PRINT "     3-Hat"
+                                PRINT "     4-One Handed Axe"
+                                PRINT "     5-One Handed Blunt Weapon"
+                                PRINT "     6-One Handed Sword"
+                                PRINT "     7-Overall"
+                                PRINT "     8-Polearm"
+                                PRINT "     9-Shield"
+                                PRINT "     0-Shoes"
+                                PRINT "     a-Spear"
+                                PRINT "     b-Two Handed Axe"
+                                PRINT "     c-Two Handed Blunt Weapon"
+                                PRINT "     d-Two Handed Sword"
+                                PRINT "     e-Top"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warbottom.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\wargloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warhat.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warohaxe.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warohbw.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(54) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warohsword.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(55) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\waroverall.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(56) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warpolarm.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(57) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warshield.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(48) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warshoes.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(97) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warspear.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(98) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warthaxe.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(99) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warthbw.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(100) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\warthsword.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(101) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\wartop.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/magician"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Which equip list would you like to see?"
+                                PRINT "     1-Gloves"
+                                PRINT "     2-Hat"
+                                PRINT "     3-Overall"
+                                PRINT "     4-Shield"
+                                PRINT "     5-Shoes"
+                                PRINT "     6-Staff"
+                                PRINT "     7-Wand"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\maggloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\maghat.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\magoverall.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\magshield.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\magshoes.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(54) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\magstaff.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(55) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\magwand.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(52) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/bowman"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Which equip list would you like to see?"
+                                PRINT "     1-Bow"
+                                PRINT "     2-Crossbow"
+                                PRINT "     3-Gloves"
+                                PRINT "     4-Hat"
+                                PRINT "     5-Overall"
+                                PRINT "     6-Shoes"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\bowbow.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\bowcrossbow.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\bowgloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\bowhat.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\bowoverall.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(54) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\bowshoes.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(53) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/claw"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Which equip list would you like to see?"
+                                PRINT "     1-Bottom"
+                                PRINT "     2-Claw"
+                                PRINT "     3-Dagger"
+                                PRINT "     4-Gloves"
+                                PRINT "     5-Hat"
+                                PRINT "     6-Overall"
+                                PRINT "     7-Shoes"
+                                PRINT "     8-Top"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thibottom.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thiclaw.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thidagger.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thigloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thihat.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(54) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thioverall.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(55) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thishoes.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(56) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\thitop.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(54) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/pirate"
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "Which equip list would you like to see?"
+                                PRINT "     1-Gloves"
+                                PRINT "     2-Gun"
+                                PRINT "     3-Knuckle"
+                                PRINT "     4-Overall"
+                                PRINT "     5-Shoes"
+                                GOSUB controls
+                                IF k$ = CHR$(49) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\pirgloves.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(50) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\pirgun.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(51) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\pirknuckle.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(52) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\piroverall.txt"
+                                    EXIT DO
+                                END IF
+                                IF k$ = CHR$(53) THEN
+                                    exitloop = 1
+                                    makerfile$ = "source\item\maker\pirshoes.txt"
+                                    EXIT DO
+                                END IF
+                                _DISPLAY
+                            LOOP
+                            DO
+                                GOSUB controls
+                            LOOP UNTIL k$ = ""
+                        END IF
+                        IF k$ = CHR$(55) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/etc"
+                            exitloop = 1
+                            makerfile$ = "source\item\maker\etc.txt"
+                        END IF
+                        IF k$ = CHR$(56) THEN
+                            source$ = "http://global.hidden-street.net/item-maker/useable"
+                            exitloop = 1
+                            makerfile$ = "source\item\maker\useable.txt"
+                        END IF
+                        IF exitloop > 0 THEN EXIT DO
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 2 THEN EXIT DO
+                    exitloop = 0
+                    row = 1
+                    OPEN makerfile$ FOR INPUT AS #1
+                    REDIM makerprint$(32768)
+                    makercount = 0
+                    DO UNTIL EOF(1)
+                        ON ERROR GOTO endofmakerfile
+                        LINE INPUT #1, makerprint$(makercount)
+                        makercount = makercount + 1
+                    LOOP
+                    endofmakerfile:
+                    CLOSE #1
+                    scrollgap = 27
+                    listnum = makercount
+                    IF makercount > 27 THEN
+                        CLS
+                        FOR n = row TO row + 27
+                            PRINT makerprint$(n)
+                        NEXT
+                    END IF
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        GOSUB controls
+                        IF makercount <= 27 THEN
+                            CLS
+                            FOR n = 1 TO makercount
+                                PRINT makerprint$(n)
+                            NEXT
+                        ELSE
+                            IF k$ = CHR$(113) THEN
+                                row = row - 1
+                                GOTO W3
+                            END IF
+                            IF k$ = CHR$(122) THEN
+                                row = row + 1
+                                GOTO W3
+                            END IF
+                            IF k$ = CHR$(119) THEN
+                                row = 1
+                                GOTO W3
+                            END IF
+                            IF k$ = CHR$(97) THEN
+                                row = row - 27
+                                GOTO W3
+                            END IF
+                            IF k$ = CHR$(115) THEN
+                                row = (makercount - 27)
+                                GOTO W3
+                            END IF
+                            IF k$ = CHR$(100) THEN
+                                row = row + 27
+                                GOTO W3
+                            END IF
+                            DO WHILE _MOUSEINPUT
+                                row = row + (_MOUSEWHEEL * scrollspeed)
+                                IF prevrow <> row THEN
+                                    W3:
+                                    IF row < 1 THEN
+                                        row = 1
+                                    END IF
+                                    IF row > (makercount - 27) THEN
+                                        row = (makercount - 27)
+                                    END IF
+                                    CLS
+                                    FOR n = row TO row + 27
+                                        PRINT makerprint$(n)
+                                    NEXT
+                                    GOSUB scrollbar
+                                END IF
+                                prevrow = row
+                            LOOP
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Where would you like to go?"
+                        PRINT "     1-Item Maker Menu"
+                        PRINT "     2-Item Menu"
+                        PRINT "     3-Main Menu"
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            exitloop = 2
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            GOTO BEGIN
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 2 THEN EXIT DO
+                LOOP
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

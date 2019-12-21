@@ -1,0 +1,8 @@
+int32 *_FUNC_PRK_BIT1_PRK=NULL;
+if(_FUNC_PRK_BIT1_PRK==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_PRK_BIT1_PRK=(int32*)(dblock+cmem_sp);
+*_FUNC_PRK_BIT1_PRK=0;
+}
+uint8 pass6851;

@@ -1,0 +1,25 @@
+int16 *_FUNC_DOWNLOAD_INTEGER_DOWNLOAD=NULL;
+if(_FUNC_DOWNLOAD_INTEGER_DOWNLOAD==NULL){
+_FUNC_DOWNLOAD_INTEGER_DOWNLOAD=(int16*)mem_static_malloc(2);
+*_FUNC_DOWNLOAD_INTEGER_DOWNLOAD=0;
+}
+qbs*oldstr6686=NULL;
+if(_FUNC_DOWNLOAD_STRING_URL->tmp||_FUNC_DOWNLOAD_STRING_URL->fixed||_FUNC_DOWNLOAD_STRING_URL->readonly){
+oldstr6686=_FUNC_DOWNLOAD_STRING_URL;
+if (oldstr6686->cmem_descriptor){
+_FUNC_DOWNLOAD_STRING_URL=qbs_new_cmem(oldstr6686->len,0);
+}else{
+_FUNC_DOWNLOAD_STRING_URL=qbs_new(oldstr6686->len,0);
+}
+memcpy(_FUNC_DOWNLOAD_STRING_URL->chr,oldstr6686->chr,oldstr6686->len);
+}
+qbs*oldstr6687=NULL;
+if(_FUNC_DOWNLOAD_STRING_FILE->tmp||_FUNC_DOWNLOAD_STRING_FILE->fixed||_FUNC_DOWNLOAD_STRING_FILE->readonly){
+oldstr6687=_FUNC_DOWNLOAD_STRING_FILE;
+if (oldstr6687->cmem_descriptor){
+_FUNC_DOWNLOAD_STRING_FILE=qbs_new_cmem(oldstr6687->len,0);
+}else{
+_FUNC_DOWNLOAD_STRING_FILE=qbs_new(oldstr6687->len,0);
+}
+memcpy(_FUNC_DOWNLOAD_STRING_FILE->chr,oldstr6687->chr,oldstr6687->len);
+}

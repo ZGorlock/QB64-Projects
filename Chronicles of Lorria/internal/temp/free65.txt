@@ -1,0 +1,9 @@
+if(oldstr6606){
+if(oldstr6606->fixed)qbs_set(oldstr6606,_SUB_SCREENSHOT_STRING_FILELOC);
+qbs_free(_SUB_SCREENSHOT_STRING_FILELOC);
+}
+if(oldstr6607){
+if(oldstr6607->fixed)qbs_set(oldstr6607,_SUB_SCREENSHOT_STRING_FILENAME);
+qbs_free(_SUB_SCREENSHOT_STRING_FILENAME);
+}
+qbs_free(_SUB_SCREENSHOT_STRING_SSFILE);

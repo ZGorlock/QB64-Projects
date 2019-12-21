@@ -1,0 +1,67 @@
+int8 *_SUB_UPDATETEXTBOX_BYTE_LINKVALUE=NULL;
+if(_SUB_UPDATETEXTBOX_BYTE_LINKVALUE==NULL){
+_SUB_UPDATETEXTBOX_BYTE_LINKVALUE=(int8*)mem_static_malloc(1);
+*_SUB_UPDATETEXTBOX_BYTE_LINKVALUE=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_CHECKLINES=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_ENDLINE=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_ENDLINE==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_ENDLINE=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_ENDLINE=0;
+}
+int16 *_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS=NULL;
+if(_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS==NULL){
+_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS=(int16*)mem_static_malloc(2);
+*_SUB_UPDATETEXTBOX_INTEGER_UPDATELINKS=0;
+}
+int32 fornext_value8958;
+int32 fornext_finalvalue8958;
+int32 fornext_step8958;
+uint8 fornext_step_negative8958;
+static int32 sc_8960;
+int32 pass8961;
+int32 pass8962;
+int32 pass8963;
+int32 pass8964;
+int32 pass8966;
+int32 pass8967;
+int32 pass8968;
+int32 pass8969;
+int32 pass8970;
+int32 pass8971;
+int32 fornext_value8973;
+int32 fornext_finalvalue8973;
+int32 fornext_step8973;
+uint8 fornext_step_negative8973;
+int32 fornext_value8975;
+int32 fornext_finalvalue8975;
+int32 fornext_step8975;
+uint8 fornext_step_negative8975;
+int32 pass8976;
+int32 pass8977;
+int32 pass8978;
+int32 pass8979;
+int32 pass8980;
+int32 pass8981;
+int32 pass8982;
+int32 pass8983;
+int32 pass8984;
+int32 pass8985;
+int32 pass8986;
+int32 pass8987;
+int32 pass8988;
+int32 pass8989;
+int32 pass8990;
+int32 pass8991;
+int32 pass8992;
+int32 pass8993;
+int32 pass8994;
+int32 pass8995;
+int32 pass8996;
+int32 pass8997;
+int32 pass8998;
+int32 pass8999;

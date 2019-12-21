@@ -1,0 +1,35 @@
+NOW
+
+
+festival-
+	- change libdir
+	- change default voice
+	- remove nonworking voices
+
+
+
+
+LATER
+
+-Main screen animation
+
+-add effects to layer_fx library
+-combine layer_fx with layer library
+-write documentation for layer_fx sublibrary
+
+-Hovering set to -1 when cursor is hovering over an item (set some sprites as "buttons")
+-Loading set to -1 when the system is loading something
+
+-Change display method
+
+-database editor
+
+-Update newgame with new display system and textbox libraries, and button libraries, and sprites
+
+
+
+
+EVENTUALLY
+
+-fix download libraries lag
+-write documentation for download library

@@ -1,0 +1,9 @@
+uint8 *_SUB_HEXAGON_UBYTE_SIDE=NULL;
+if(_SUB_HEXAGON_UBYTE_SIDE==NULL){
+_SUB_HEXAGON_UBYTE_SIDE=(uint8*)mem_static_malloc(1);
+*_SUB_HEXAGON_UBYTE_SIDE=0;
+}
+int16 fornext_value8337;
+int16 fornext_finalvalue8337;
+int16 fornext_step8337;
+uint8 fornext_step_negative8337;

@@ -1,0 +1,31 @@
+'$include:'resource\include\lib\commoninit.bi'
+'$include:'resource\include\lib\animationinit.bi'
+'$include:'resource\include\lib\layerinit.bi'
+
+SCREEN _NEWIMAGE(640, 480, 32)
+
+a = NEWLAYER(640, 480, "", 0, LAYER_SHOW)
+b = _LOADIMAGE("resource\image\texture\parchment.png")
+_PUTIMAGE (0, 0)-(640, 480), b, layers(a).layer
+c = NEWLAYER(640, 480, "", 0, LAYER_SHOW)
+_DEST layers(c).layer
+COLOR _RGB(0, 0, 0)
+_PRINTMODE _KEEPBACKGROUND
+_PRINTSTRING (20, 60), "testing fading"
+_DEST 0
+LAYERBRINGTOFRONT c
+LAYERFADE c, 0, 5
+
+DO
+    _LIMIT 16
+    CLS
+    PRINTLAYER LAYER_ALLLAYERS
+    PRINT ANIMATIONX(layers(c).fade)
+    _DISPLAY
+LOOP UNTIL INKEY$ > ""
+
+
+
+'$include:'lib\common.bi'
+'$include:'lib\animation.bi'
+'$include:'lib\layer.bi'

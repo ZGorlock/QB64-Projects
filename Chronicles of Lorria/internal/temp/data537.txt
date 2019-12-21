@@ -1,0 +1,27 @@
+int64 *_FUNC_UNIXTIME_LONG_INTEGER64_UNIXTIME_LONG=NULL;
+if(_FUNC_UNIXTIME_LONG_INTEGER64_UNIXTIME_LONG==NULL){
+_FUNC_UNIXTIME_LONG_INTEGER64_UNIXTIME_LONG=(int64*)mem_static_malloc(8);
+*_FUNC_UNIXTIME_LONG_INTEGER64_UNIXTIME_LONG=0;
+}
+void *_FUNC_UNIXTIME_LONG_UDT_ST=NULL;
+if(_FUNC_UNIXTIME_LONG_UDT_ST==NULL){
+_FUNC_UNIXTIME_LONG_UDT_ST=(void*)mem_static_malloc(16);
+memset(_FUNC_UNIXTIME_LONG_UDT_ST,0,16);
+}
+void *_FUNC_UNIXTIME_LONG_UDT_FT=NULL;
+if(_FUNC_UNIXTIME_LONG_UDT_FT==NULL){
+_FUNC_UNIXTIME_LONG_UDT_FT=(void*)mem_static_malloc(8);
+memset(_FUNC_UNIXTIME_LONG_UDT_FT,0,8);
+}
+byte_element_struct *byte_element_6608=NULL;
+if (!byte_element_6608){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6608=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6608=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6609=NULL;
+if (!byte_element_6609){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6609=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6609=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6610=NULL;
+if (!byte_element_6610){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6610=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6610=(byte_element_struct*)mem_static_malloc(12);
+}

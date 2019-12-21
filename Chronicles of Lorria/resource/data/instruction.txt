@@ -1,0 +1,7 @@
+Choose a name.
+Select a race.
+Choose your gender.
+Select a profession to pursue.
+Set your primary stats.
+Select an alignment.
+Select a faction.

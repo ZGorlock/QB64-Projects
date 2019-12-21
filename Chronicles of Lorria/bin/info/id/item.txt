@@ -1,0 +1,13 @@
+3 0 0 0 0000
+
+3 0 0 0 369E - Leather Helmet
+3 0 0 0 60E6 - Iron Helmet
+3 0 0 0 38DE - Rusty Dagger
+3 0 0 0 FF5A - Shoddy Bow
+3 0 0 0 6C3B - Iron Short Sword
+3 0 0 0 2D9B - Gold Ring
+
+3 0 0 0 331B - Map
+3 0 0 0 927B - Arrow
+3 0 0 0 C286 - Rock
+3 0 0 0 BEC6 - Small Ruby

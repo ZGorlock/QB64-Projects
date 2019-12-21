@@ -1,0 +1,7 @@
+qbs *_FUNC_DATE_X_STRING_DATE_X=NULL;
+if (!_FUNC_DATE_X_STRING_DATE_X)_FUNC_DATE_X_STRING_DATE_X=qbs_new(0,0);
+float pass7791;
+int8 pass7792;
+float pass7793;
+int8 pass7794;
+float pass7795;

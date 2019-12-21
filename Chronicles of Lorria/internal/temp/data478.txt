@@ -1,0 +1,31 @@
+int64 *_FUNC_TIMEBETWEEN_INTEGER64_TIMEBETWEEN=NULL;
+if(_FUNC_TIMEBETWEEN_INTEGER64_TIMEBETWEEN==NULL){
+_FUNC_TIMEBETWEEN_INTEGER64_TIMEBETWEEN=(int64*)mem_static_malloc(8);
+*_FUNC_TIMEBETWEEN_INTEGER64_TIMEBETWEEN=0;
+}
+void *_FUNC_TIMEBETWEEN_UDT_FT1=NULL;
+if(_FUNC_TIMEBETWEEN_UDT_FT1==NULL){
+_FUNC_TIMEBETWEEN_UDT_FT1=(void*)mem_static_malloc(8);
+memset(_FUNC_TIMEBETWEEN_UDT_FT1,0,8);
+}
+void *_FUNC_TIMEBETWEEN_UDT_FT2=NULL;
+if(_FUNC_TIMEBETWEEN_UDT_FT2==NULL){
+_FUNC_TIMEBETWEEN_UDT_FT2=(void*)mem_static_malloc(8);
+memset(_FUNC_TIMEBETWEEN_UDT_FT2,0,8);
+}
+byte_element_struct *byte_element_7879=NULL;
+if (!byte_element_7879){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7879=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7879=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7880=NULL;
+if (!byte_element_7880){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7880=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7880=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7881=NULL;
+if (!byte_element_7881){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7881=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7881=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7882=NULL;
+if (!byte_element_7882){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7882=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7882=(byte_element_struct*)mem_static_malloc(12);
+}

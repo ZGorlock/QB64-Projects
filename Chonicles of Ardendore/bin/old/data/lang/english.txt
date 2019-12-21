@@ -1,0 +1,97 @@
+What would you like to do?
+1-View Information
+2-Change Language
+3-Change Volume
+4-Change Character Name
+5-Remove Your Character
+7-Return
+Your current volume is:
+Enter a new value (0 to 1), or move the swipe to adjust your volume level
+Press Enter when you are done
+You have used this program
+times
+You have used this program for a total of
+h
+m
+s
+Your selected language is: 
+Your set volume is:
+Use the arrow keys to select your language and press Enter to select
+6-Credits
+Your current name is: 
+Enter a new name and then press Enter
+: 
+Your name has been changed to: 
+Press Space to Return
+Are you sure you want to delete your save?
+y-Yes
+n-No
+You will not be able to recover this information
+Press 'q' to continue or 'w' to abort
+All data sucessfully cleared
+You need to resart the program
+Press Space to Close
+--CREDITS--
+Design:
+Zachary Gill
+Production:
+Coder: Zachary Gill
+Artist: Connor Martin
+Musician: Tennison Watts
+Written In: QB64
+Pictures Drawn In: Photoshop
+Audio Synthesized Using: Finale
+Testing:
+-Kyle Berry
+-Adi Hendlin
+-Marshall Hendlin
+-Nathan Hoekman
+-John Loomis
+-Kevin Waldman
+-Nicholas Yang
+Marketing:
+-
+fake (C) 2011
+http://qb64.net/
+http://www.photoshop.com/
+http://www.finalemusic.com/default.aspx
+Set your base stats
+You have
+free stat points
+-----------STRENGTH------------
+----------DEXTERITY------------
+-------------LUCK--------------
+---------INTELLIGENCE----------
+------------WISDOM-------------
+-----------CHARSIMA------------
+-------------------------------
+Current STR:
+Current DEX:
+Current LUK:
+Current INT:
+Current WIS:
+Current CHR:
+Are you satisfied with these stats?
+y-Yes
+n-No
+STR:
+DEX:
+LUK:
+INT:
+WIS:
+CHR:
+These stats will give you the following attributes:
+This is the land of Ardendore
+Or at least it used to be...
+Many years ago, the Lord of Darkness, Ganirelix, rose to power
+He has slowly consumed the entire planet
+Well, all but the Kingdom of Arx, we have held back his hoardes here
+Yes... I am in the Resistance
+My parents were at one point too... They were both killed in a raid
+I was raised in the Resistance, they are my family
+The Resistance grows weaker everyday... We are hunted
+We wont be able to hold them back much longer
+...
+I have been training, I will avenge my parents and the Resistance
+I will make sure that it is by my hand that he falls
+Ganirelix, I'm coming for you, so get ready!

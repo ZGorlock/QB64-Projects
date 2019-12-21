@@ -1,0 +1,3044 @@
+_TITLE "TMC Updater"
+SCREEN 12
+CLEAR
+rock = TIMER
+DO
+    _LIMIT 64
+    CLS
+    PRINT "Which actions would you like to preform?"
+    PRINT "Press all that apply once and then Press Enter"
+    PRINT "    1-Monsters"
+    PRINT "    2-Items"
+    PRINT "    3-Compile Source"
+    PRINT "    4-Clear User Data"
+    IF k$ = CHR$(49) THEN ty1 = 1
+    IF k$ = CHR$(50) THEN ty2 = 1
+    IF k$ = CHR$(51) THEN ty3 = 1
+    IF k$ = CHR$(52) THEN ty4 = 1
+    k$ = INKEY$
+LOOP UNTIL k$ = CHR$(13)
+CLS
+status$ = status$ + ">initilizing"
+PRINT status$
+_DELAY 1
+CLS
+tempstatus$ = status$ + CHR$(13) + ">make sure you have finalized everything else" + CHR$(13) + "    >press space when done"
+PRINT tempstatus$
+DO
+    DO
+        k$ = INKEY$
+    LOOP UNTIL LEN(k$)
+LOOP UNTIL k$ = CHR$(32)
+CLS
+status$ = status$ + CHR$(13) + ">other junk finalized: complete"
+tempstatus$ = status$ + CHR$(13) + ">copy the source from hiddenstreet" + CHR$(13) + "    >press space to see list/when done"
+PRINT tempstatus$
+DO
+    DO
+        k$ = INKEY$
+    LOOP UNTIL LEN(k$)
+LOOP UNTIL k$ = CHR$(32)
+DO
+    k$ = INKEY$
+LOOP UNTIL k$ = ""
+REDIM sourceaddshow$(121)
+sourceaddshow$(1) = "Create sources as needed then press Space"
+sourceaddshow$(2) = "source1.txt< *Monsters"
+sourceaddshow$(3) = "   >Monsters"
+sourceaddshow$(4) = "       >Level 1 - 10"
+sourceaddshow$(5) = "       >Level 11 - 20"
+sourceaddshow$(6) = "       >Level 21 - 30"
+sourceaddshow$(7) = "       >Level 41 - 50"
+sourceaddshow$(8) = "       >Level 51 - 60"
+sourceaddshow$(9) = "       >Level 61 - 70"
+sourceaddshow$(10) = "       >Level 71 - 80"
+sourceaddshow$(11) = "       >Level 81 - 90"
+sourceaddshow$(12) = "       >Level 91 - 100"
+sourceaddshow$(13) = "       >Level 101 - 120"
+sourceaddshow$(14) = "       >Level 121 - 140"
+sourceaddshow$(15) = "       >Level 141 - 160"
+sourceaddshow$(16) = "       >Level 161 - 180"
+sourceaddshow$(17) = "       >Level 181 - 200"
+sourceaddshow$(18) = "source2.txt< *Items"
+sourceaddshow$(19) = "  >Armours"
+sourceaddshow$(20) = "      >Hat"
+sourceaddshow$(21) = "      >Top"
+sourceaddshow$(22) = "      >Overall"
+sourceaddshow$(23) = "      >Bottom"
+sourceaddshow$(24) = "      >Shoes"
+sourceaddshow$(25) = "      >Gloves"
+sourceaddshow$(26) = "      >Cape"
+sourceaddshow$(27) = "      >Shield"
+sourceaddshow$(28) = "      >Dragon"
+sourceaddshow$(29) = "      >Mechanic"
+sourceaddshow$(30) = "  >Weapon"
+sourceaddshow$(31) = "      >One Handed Sword"
+sourceaddshow$(32) = "      >Two Handed Sword"
+sourceaddshow$(33) = "      >One Handed Axe"
+sourceaddshow$(34) = "      >Two Handed Axe"
+sourceaddshow$(35) = "      >One Handed Blunt Weapon"
+sourceaddshow$(36) = "      >Two Handed Blunt Weapon"
+sourceaddshow$(37) = "      >Bow"
+sourceaddshow$(38) = "      >Crossbow"
+sourceaddshow$(39) = "      >Claw"
+sourceaddshow$(40) = "      >Dagger"
+sourceaddshow$(41) = "      >Spear"
+sourceaddshow$(42) = "      >Polearm"
+sourceaddshow$(43) = "      >Wand"
+sourceaddshow$(44) = "      >Staff"
+sourceaddshow$(45) = "      >Knuckle"
+sourceaddshow$(46) = "      >Gun"
+sourceaddshow$(47) = "      >Katara"
+sourceaddshow$(48) = "      >Pickaxe"
+sourceaddshow$(49) = "      >Shovel"
+sourceaddshow$(50) = "  >Accesory"
+sourceaddshow$(51) = "      >Earring"
+sourceaddshow$(52) = "      >Eye Accessory"
+sourceaddshow$(53) = "      >Face Accessory"
+sourceaddshow$(54) = "      >Pendant"
+sourceaddshow$(55) = "      >Belt"
+sourceaddshow$(56) = "      >Ring"
+sourceaddshow$(57) = "      >Shoulderpad"
+sourceaddshow$(58) = "      >Medal"
+sourceaddshow$(59) = "      >Pocket"
+sourceaddshow$(60) = "  >Taming Mob"
+sourceaddshow$(61) = "source3.txt *Items"
+sourceaddshow$(62) = "  >Monster Card Set"
+sourceaddshow$(63) = "source4.txt< *Items"
+sourceaddshow$(64) = "  >Misc"
+sourceaddshow$(65) = "    >Leftover"
+sourceaddshow$(66) = "    >Minigame"
+sourceaddshow$(67) = "    >Ticket"
+sourceaddshow$(68) = "    >Gachapon Box"
+sourceaddshow$(69) = "    >Stimulator"
+sourceaddshow$(70) = "    >Manual"
+sourceaddshow$(71) = "    >Bags"
+sourceaddshow$(72) = "  >Ores"
+sourceaddshow$(73) = "    >Mineral"
+sourceaddshow$(74) = "    >Jewel"
+sourceaddshow$(75) = "    >Crystal"
+sourceaddshow$(76) = "  >Useable"
+sourceaddshow$(77) = "    >Useable"
+sourceaddshow$(78) = "      >Potions"
+sourceaddshow$(79) = "      >Food"
+sourceaddshow$(80) = "      >Skill Book"
+sourceaddshow$(81) = "      >Etc"
+sourceaddshow$(82) = "      >Pet Food"
+sourceaddshow$(83) = "      >Monster Card"
+sourceaddshow$(84) = "      >Buffs"
+sourceaddshow$(85) = "      >Item Pot"
+sourceaddshow$(86) = "    >Weapon"
+sourceaddshow$(87) = "      >Arrow"
+sourceaddshow$(88) = "      >Bullet"
+sourceaddshow$(89) = "      >Capsule"
+sourceaddshow$(90) = "      >Throwing Star"
+sourceaddshow$(91) = "    >Scroll"
+sourceaddshow$(92) = "      >Return Scroll"
+sourceaddshow$(93) = "      >Scroll for Armour"
+sourceaddshow$(94) = "      >Scroll for Weapon"
+sourceaddshow$(95) = "      >Scroll for Accessory"
+sourceaddshow$(96) = "      >Scroll for Pet Equipment"
+sourceaddshow$(97) = "      >Misc Scrolls"
+sourceaddshow$(98) = "  >Set-up"
+sourceaddshow$(99) = "    >Equipment"
+sourceaddshow$(100) = "    >Asscessory"
+sourceaddshow$(101) = "  >Profession"
+sourceaddshow$(102) = "    >Profession Materials"
+sourceaddshow$(103) = "    >Recipe for Armour"
+sourceaddshow$(104) = "    >Recipe for Weapon"
+sourceaddshow$(105) = "    >Recipe for Accessory"
+sourceaddshow$(106) = "    >Recipe for Consumable"
+sourceaddshow$(107) = "    >Recipe for Android"
+sourceaddshow$(108) = "  >Maker"
+sourceaddshow$(109) = "    >Ores"
+sourceaddshow$(110) = "    >Magic Powder"
+sourceaddshow$(111) = "    >Monster Crystal"
+sourceaddshow$(112) = "source5.txt< *Items"
+sourceaddshow$(113) = "  >Misc"
+sourceaddshow$(114) = "    >Quest"
+sourceaddshow$(115) = "source6.txt< *Items"
+sourceaddshow$(116) = "  >Useable"
+sourceaddshow$(117) = "    >Useable"
+sourceaddshow$(118) = "      >Treasures"
+sourceaddshow$(119) = "source7.txt< *Items"
+sourceaddshow$(120) = "  >Misc"
+sourceaddshow$(121) = "      >Growable"
+CLS
+FOR sourceaddshow = 1 TO 27
+    PRINT sourceaddshow$(sourceaddshow)
+NEXT sourceaddshow
+DO
+    _LIMIT 64
+    DO WHILE _MOUSEINPUT
+        rowsas = rowsas + (_MOUSEWHEEL * 3)
+        IF rowsas < 1 THEN rowsas = 1
+        IF rowsas > 94 THEN rowsas = 94
+        CLS
+        FOR sourceaddshow = rowsas TO rowsas + 27
+            PRINT sourceaddshow$(sourceaddshow)
+        NEXT sourceaddshow
+        k$ = INKEY$
+        IF k$ = CHR$(32) THEN EXIT DO
+    LOOP
+    k$ = INKEY$
+LOOP UNTIL k$ = CHR$(32)
+DO
+    k$ = INKEY$
+LOOP WHILE LEN(k$)
+CLS
+status$ = status$ + CHR$(13) + ">source copied: complete"
+PRINT status$
+IF ty1 = 1 THEN
+    monsterlength = 2
+    qwerty = 8
+    DIM monsternames$(32768)
+    lomsa = 1048576
+    tempstatus$ = status$ + CHR$(13) + ">loading monster source: ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\006 - Q - Monsters[2].txt" FOR OUTPUT AS #1
+    OPEN "source1.txt" FOR INPUT AS #2
+    DIM monster$(lomsa)
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofms
+        LINE INPUT #2, monster$(loms)
+        loms = loms + 1
+    LOOP
+    eofms:
+    CLOSE #2
+    inputcount = 0
+    hpnextloop = 0
+    mpnextloop = 0
+    timeloops = 1
+    status$ = status$ + CHR$(13) + ">loading monster source: complete"
+    FOR a = 1 TO loms
+        percent = INT(100 * (a / loms))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from monster source:" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            namera$ = MID$(monster$(a), 1, 14)
+            IF namera$ = "      <strong>" AND RIGHT$(MID$(monster$(a), 1, 20), 6) <> "Level:" THEN
+                IF enddone = 0 AND qwerty <> 8 THEN
+                    x40$ = "                            remarks$ = " + CHR$(34) + "-" + CHR$(34)
+                    PRINT #1, x40$
+                    x41$ = "                            notes$ = " + CHR$(34) + "-" + CHR$(34)
+                    PRINT #1, x41$
+                ELSE
+                    enddone = 0
+                END IF
+                namepic$ = ""
+                name$ = MID$(monster$(a), 15, (LEN(monster$(a)) - 35))
+                newname = 1
+                ss = (INSTR(name$, "&#039;") - 1)
+                IF ss <> -1 THEN
+                    frontname$ = LEFT$(name$, ss)
+                    backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                    name$ = frontname$ + "'" + backname$
+                END IF
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                monsternames$(monsternames) = name$
+                monsternames = monsternames + 1
+                x1$ = "                        CASE " + CHR$(34) + name$ + CHR$(34)
+                PRINT #1, x1$
+                qwerty = 0
+                namepic$ = "graphic\monster\" + namepic$ + ".png"
+                x2$ = "                            monsterpic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                PRINT #1, x2$
+                EXIT DO
+            END IF
+            namerb$ = MID$(monster$(a), 1, 30)
+            IF namerb$ = "      <strong>Level: </strong>" THEN
+                lv$ = MID$(monster$(a), 31, (LEN(monster$(a)) - 45))
+                IF RIGHT$(lv$, 1) = CHR$(98) THEN
+                    boss$ = "Yes"
+                    lv$ = MID$(lv$, 1, (LEN(lv$) - 37))
+                ELSE
+                    boss$ = "No"
+                END IF
+                lv = VAL(lv$)
+                x3$ = "                            lv$ = " + CHR$(34) + lv$ + CHR$(34)
+                PRINT #1, x3$
+                x4$ = "                            boss$ = " + CHR$(34) + boss$ + CHR$(34)
+                PRINT #1, x4$
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td width=" + CHR$(34) + "50%" + CHR$(34) + " height=" + CHR$(34) + "23" + CHR$(34) + " colspan=" + CHR$(34) + "2" + CHR$(34) + "><strong>HP:</strong>" THEN
+                hpnextloop = 1
+                EXIT DO
+            END IF
+            IF hpnextloop = 1 THEN
+                hp$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 15))
+                IF hp$ = "" THEN EXIT DO
+                x5$ = "                            hp$ = " + CHR$(34) + hp$ + CHR$(34)
+                PRINT #1, x5$
+                hpnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td width=" + CHR$(34) + "50%" + CHR$(34) + " colspan=" + CHR$(34) + "2" + CHR$(34) + "><strong>MP:</strong>" THEN
+                mpnextloop = 1
+                EXIT DO
+            END IF
+            IF mpnextloop = 1 THEN
+                mp$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 15))
+                IF mp$ = "" THEN EXIT DO
+                x6$ = "                            mp$ = " + CHR$(34) + mp$ + CHR$(34)
+                PRINT #1, x6$
+                mpnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + "><strong>EXP:</strong>" THEN
+                expnextloop = 1
+                EXIT DO
+            END IF
+            IF expnextloop = 1 THEN
+                exp$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 15))
+                IF exp$ = "" THEN EXIT DO
+                x7$ = "                            exp$ = " + CHR$(34) + exp$ + CHR$(34)
+                PRINT #1, x7$
+                expnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td><strong>Mesos:</strong>" THEN
+                mesosnextloop = 1
+                EXIT DO
+            END IF
+            IF mesosnextloop = 1 THEN
+                mesos$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 15))
+                IF mesos$ = "" THEN EXIT DO
+                x8$ = "                            mesos$ = " + CHR$(34) + mesos$ + CHR$(34)
+                PRINT #1, x8$
+                mesosnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td><strong>KB:</strong>" THEN
+                kbnextloop = 1
+                EXIT DO
+            END IF
+            IF kbnextloop = 1 THEN
+                kb$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 15))
+                IF kb$ = "" THEN EXIT DO
+                x9$ = "                            kb$ = " + CHR$(34) + kb$ + CHR$(34)
+                PRINT #1, x9$
+                kbnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + " class=" + CHR$(34) + "mouse-hover" + CHR$(34) + "><strong>Etc. drop:</strong> " THEN
+                etcdropnextloop = 1
+                EXIT DO
+            END IF
+            IF etcdropnextloop = 1 THEN
+                x10$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x10$ = x10$ + add$
+                            IF add$ <> "" THEN x10$ = x10$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x10$ = MID$(x10$, 1, ((LEN(x10$)) - 8))
+                IF x10$ = "" THEN x10$ = "-"
+                DO
+                    commafind = INSTR(g, x10$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x10x1$ = MID$(x10$, 1, (commafind + 1))
+                    x10x2$ = MID$(x10$, (commafind + 6), LEN(x10$))
+                    x10$ = x10x1$ + x10x2$
+                LOOP
+                x10$ = "                            etcdrop$ = " + CHR$(34) + x10$ + CHR$(34)
+                PRINT #1, x10$
+                exitloop = 0
+                etcdropnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Common equipment:</strong> " THEN
+                cequipnextloop = 1
+                EXIT DO
+            END IF
+            IF cequipnextloop = 1 THEN
+                x11$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x11$ = x11$ + add$
+                            IF add$ <> "" THEN x11$ = x11$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x11$ = MID$(x11$, 1, ((LEN(x11$)) - 10))
+                IF x11$ = "" THEN x11$ = "-"
+                DO
+                    commafind = INSTR(g, x11$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x11x1$ = MID$(x11$, 1, (commafind + 1))
+                    x11x2$ = MID$(x11$, (commafind + 6), LEN(x11$))
+                    x11$ = x11x1$ + x11x2$
+                LOOP
+                x11$ = "                            comequip$ = " + CHR$(34) + x11$ + CHR$(34)
+                PRINT #1, x11$
+                exitloop = 0
+                cequipnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Warrior equipment:</strong> " THEN
+                wequipnextloop = 1
+                EXIT DO
+            END IF
+            IF wequipnextloop = 1 THEN
+                x12$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x12$ = x12$ + add$
+                            IF add$ <> "" THEN x12$ = x12$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x12$ = MID$(x12$, 1, ((LEN(x12$)) - 10))
+                IF x12$ = "" THEN x12$ = "-"
+                DO
+                    commafind = INSTR(g, x12$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x12x1$ = MID$(x12$, 1, (commafind + 1))
+                    x12x2$ = MID$(x12$, (commafind + 6), LEN(x12$))
+                    x12$ = x12x1$ + x12x2$
+                LOOP
+                x12$ = "                            warequip$ = " + CHR$(34) + x12$ + CHR$(34)
+                PRINT #1, x12$
+                exitloop = 0
+                wequipnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Magician equipment:</strong> " THEN
+                mequipnextloop = 1
+                EXIT DO
+            END IF
+            IF mequipnextloop = 1 THEN
+                x13$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x13$ = x13$ + add$
+                            IF add$ <> "" THEN x13$ = x13$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x13$ = MID$(x13$, 1, ((LEN(x13$)) - 10))
+                IF x13$ = "" THEN x13$ = "-"
+                DO
+                    commafind = INSTR(g, x13$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x13x1$ = MID$(x13$, 1, (commafind + 1))
+                    x13x2$ = MID$(x13$, (commafind + 6), LEN(x13$))
+                    x13$ = x13x1$ + x13x2$
+                LOOP
+                x13$ = "                            magequip$ = " + CHR$(34) + x13$ + CHR$(34)
+                PRINT #1, x13$
+                exitloop = 0
+                mequipnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Bowman equipment:</strong> " THEN
+                bequipnextloop = 1
+                EXIT DO
+            END IF
+            IF bequipnextloop = 1 THEN
+                x14$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x14$ = x14$ + add$
+                            IF add$ <> "" THEN x14$ = x14$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x14$ = MID$(x14$, 1, ((LEN(x14$)) - 10))
+                IF x14$ = "" THEN x14$ = "-"
+                DO
+                    commafind = INSTR(g, x14$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x14x1$ = MID$(x14$, 1, (commafind + 1))
+                    x14x2$ = MID$(x14$, (commafind + 6), LEN(x14$))
+                    x14$ = x14x1$ + x14x2$
+                LOOP
+                x14$ = "                            bowequip$ = " + CHR$(34) + x14$ + CHR$(34)
+                PRINT #1, x14$
+                exitloop = 0
+                bequipnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Thief equipment:</strong> " THEN
+                tequipnextloop = 1
+                EXIT DO
+            END IF
+            IF tequipnextloop = 1 THEN
+                x15$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x15$ = x15$ + add$
+                            IF add$ <> "" THEN x15$ = x15$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x15$ = MID$(x15$, 1, ((LEN(x15$)) - 10))
+                IF x15$ = "" THEN x15$ = "-"
+                DO
+                    commafind = INSTR(g, x15$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x15x1$ = MID$(x15$, 1, (commafind + 1))
+                    x15x2$ = MID$(x15$, (commafind + 6), LEN(x15$))
+                    x15$ = x15x1$ + x15x2$
+                LOOP
+                x15$ = "                            thiequip$ = " + CHR$(34) + x15$ + CHR$(34)
+                PRINT #1, x15$
+                exitloop = 0
+                tequipnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Pirate equipment:</strong> " THEN
+                pequipnextloop = 1
+                EXIT DO
+            END IF
+            IF pequipnextloop = 1 THEN
+                x16$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x16$ = x16$ + add$
+                            IF add$ <> "" THEN x16$ = x16$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x16$ = MID$(x16$, 1, ((LEN(x16$)) - 10))
+                IF x16$ = "" THEN x16$ = "-"
+                DO
+                    commafind = INSTR(g, x16$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x16x1$ = MID$(x16$, 1, (commafind + 1))
+                    x16x2$ = MID$(x16$, (commafind + 6), LEN(x16$))
+                    x16$ = x16x1$ + x16x2$
+                LOOP
+                x16$ = "                            pirequip$ = " + CHR$(34) + x16$ + CHR$(34)
+                PRINT #1, x16$
+                exitloop = 0
+                pequipnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + " class=" + CHR$(34) + "mouse-hover" + CHR$(34) + "><strong>Ore drop:</strong> " THEN
+                oredropnextloop = 1
+                EXIT DO
+            END IF
+            IF oredropnextloop = 1 THEN
+                x17$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x17$ = x17$ + add$
+                            IF add$ <> "" THEN x17$ = x17$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x17$ = MID$(x17$, 1, ((LEN(x17$)) - 8))
+                IF x17$ = "" THEN x17$ = "-"
+                DO
+                    commafind = INSTR(g, x17$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x17x1$ = MID$(x17$, 1, (commafind + 1))
+                    x17x2$ = MID$(x17$, (commafind + 6), LEN(x17$))
+                    x17$ = x17x1$ + x17x2$
+                LOOP
+                x17$ = "                            oredrop$ = " + CHR$(34) + x17$ + CHR$(34)
+                PRINT #1, x17$
+                exitloop = 0
+                oredropnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + " class=" + CHR$(34) + "mouse-hover" + CHR$(34) + "><strong>Maker item:</strong> " THEN
+                makerdropnextloop = 1
+                EXIT DO
+            END IF
+            IF makerdropnextloop = 1 THEN
+                x18$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x18$ = x18$ + add$
+                            IF add$ <> "" THEN x18$ = x18$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x18$ = MID$(x18$, 1, ((LEN(x18$)) - 8))
+                IF x18$ = "" THEN x18$ = "-"
+                DO
+                    commafind = INSTR(g, x18$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x18x1$ = MID$(x18$, 1, (commafind + 1))
+                    x18x2$ = MID$(x18$, (commafind + 6), LEN(x18$))
+                    x18$ = x18x1$ + x18x2$
+                LOOP
+                x18$ = "                            makdrop$ = " + CHR$(34) + x18$ + CHR$(34)
+                PRINT #1, x18$
+                exitloop = 0
+                makerdropnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + " class=" + CHR$(34) + "mouse-hover" + CHR$(34) + "><strong>Useable drop:</strong> " THEN
+                usedropnextloop = 1
+                EXIT DO
+            END IF
+            IF usedropnextloop = 1 THEN
+                x19$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x19$ = x19$ + add$
+                            IF add$ <> "" THEN x19$ = x19$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x19$ = MID$(x19$, 1, ((LEN(x19$)) - 8))
+                IF x19$ = "" THEN x19$ = "-"
+                DO
+                    commafind = INSTR(g, x19$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x19x1$ = MID$(x19$, 1, (commafind + 1))
+                    x19x2$ = MID$(x19$, (commafind + 6), LEN(x19$))
+                    x19$ = x19x1$ + x19x2$
+                LOOP
+                x19$ = "                            usedrop$ = " + CHR$(34) + x19$ + CHR$(34)
+                PRINT #1, x19$
+                exitloop = 0
+                usedropnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 40) = "      <div><strong>Weapon Att.:</strong>" THEN
+                watt$ = MID$(monster$(a), 41, (LEN(monster$(a))))
+                watt$ = MID$(watt$, 1, (LEN(watt$) - 6))
+                x20$ = "                            wepatt$ = " + CHR$(34) + watt$ + CHR$(34)
+                PRINT #1, x20$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 40) = "      <div><strong>Magic Att.:</strong> " THEN
+                matt$ = MID$(monster$(a), 41, (LEN(monster$(a))))
+                matt$ = MID$(matt$, 1, (LEN(matt$) - 6))
+                x21$ = "                            magatt$ = " + CHR$(34) + matt$ + CHR$(34)
+                PRINT #1, x21$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 41) = "      <div><strong>Weapon Def.:</strong> " THEN
+                wdef$ = MID$(monster$(a), 42, (LEN(monster$(a))))
+                wdef$ = MID$(wdef$, 1, (LEN(wdef$) - 6))
+                x22$ = "                            wepdef$ = " + CHR$(34) + wdef$ + CHR$(34)
+                PRINT #1, x22$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 40) = "      <div><strong>Magic Def.:</strong> " THEN
+                mdef$ = MID$(monster$(a), 41, (LEN(monster$(a))))
+                mdef$ = MID$(mdef$, 1, (LEN(mdef$) - 6))
+                x23$ = "                            magdef$ = " + CHR$(34) + mdef$ + CHR$(34)
+                PRINT #1, x23$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 36) = "      <div><strong>PDRate:</strong> " THEN
+                pdrate$ = MID$(monster$(a), 37, (LEN(monster$(a))))
+                pdrate$ = MID$(pdrate$, 1, (LEN(pdrate$) - 6))
+                x24$ = "                            pdrate$ = " + CHR$(34) + pdrate$ + CHR$(34)
+                PRINT #1, x24$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 36) = "      <div><strong>MDRate:</strong> " THEN
+                mdrate$ = MID$(monster$(a), 37, (LEN(monster$(a))))
+                mdrate$ = MID$(mdrate$, 1, (LEN(mdrate$) - 6))
+                x25$ = "                            mdrate$ = " + CHR$(34) + mdrate$ + CHR$(34)
+                PRINT #1, x25$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 35) = "      <div><strong>Speed:</strong> " THEN
+                speed$ = MID$(monster$(a), 36, (LEN(monster$(a))))
+                speed$ = MID$(speed$, 1, (LEN(speed$) - 6))
+                x26$ = "                            speed$ = " + CHR$(34) + speed$ + CHR$(34)
+                PRINT #1, x26$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 38) = "      <div><strong>Accuracy:</strong> " THEN
+                acc$ = MID$(monster$(a), 39, (LEN(monster$(a))))
+                acc$ = MID$(acc$, 1, (LEN(acc$) - 6))
+                x27$ = "                            acc$ = " + CHR$(34) + acc$ + CHR$(34)
+                PRINT #1, x27$
+                EXIT DO
+            END IF
+            IF MID$(monster$(a), 1, 42) = "      <div><strong>Avoidability:</strong> " THEN
+                avoid$ = MID$(monster$(a), 43, (LEN(monster$(a))))
+                avoid$ = MID$(avoid$, 1, (LEN(avoid$) - 6))
+                x28$ = "                            avoid$ = " + CHR$(34) + avoid$ + CHR$(34)
+                PRINT #1, x28$
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Weak against (Magic):</strong> " THEN
+                weakmagicnextloop = 1
+                EXIT DO
+            END IF
+            IF weakmagicnextloop = 1 THEN
+                weakm$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                weakm$ = MID$(weakm$, 1, (LEN(weakm$) - 6))
+                x29$ = "                            weakm$ = " + CHR$(34) + weakm$ + CHR$(34)
+                PRINT #1, x29$
+                weakmagicnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Normal against (Magic):</strong> " THEN
+                normalmagicnextloop = 1
+                EXIT DO
+            END IF
+            IF normalmagicnextloop = 1 THEN
+                normm$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                normm$ = MID$(normm$, 1, (LEN(normm$) - 6))
+                x30$ = "                            normm$ = " + CHR$(34) + normm$ + CHR$(34)
+                PRINT #1, x30$
+                normalmagicnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Strong against (Magic):</strong> " THEN
+                strongmagicnextloop = 1
+                EXIT DO
+            END IF
+            IF strongmagicnextloop = 1 THEN
+                stngm$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                stngm$ = MID$(stngm$, 1, (LEN(stngm$) - 6))
+                x31$ = "                            stngm$ = " + CHR$(34) + stngm$ + CHR$(34)
+                PRINT #1, x31$
+                strongmagicnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Immune to (Magic):</strong> " THEN
+                immunemagicnextloop = 1
+                EXIT DO
+            END IF
+            IF immunemagicnextloop = 1 THEN
+                immum$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                immum$ = MID$(immum$, 1, (LEN(immum$) - 6))
+                x32$ = "                            immum$ = " + CHR$(34) + immum$ + CHR$(34)
+                PRINT #1, x32$
+                immunemagicnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Unique attack:</strong> " THEN
+                uniqueattacknextloop = 1
+                EXIT DO
+            END IF
+            IF uniqueattacknextloop = 1 THEN
+                uniqueatt$ = MID$(monster$(a), 9, (LEN(monster$(a)) - 12))
+                uniqueatt$ = MID$(uniqueatt$, 1, (LEN(uniqueatt$) - 8))
+                x33$ = "                            uniqueatt$ = " + CHR$(34) + uniqueatt$ + CHR$(34)
+                PRINT #1, x33$
+                uniqueattacknextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>HP Recovery/10 secs:</strong> " THEN
+                hprecnextloop = 1
+                EXIT DO
+            END IF
+            IF hprecnextloop = 1 THEN
+                hprec$ = MID$(monster$(a), 9, (LEN(monster$(a)) - 12))
+                hprec$ = MID$(hprec$, 1, (LEN(hprec$) - 8))
+                IF hprec$ <> "-" THEN
+                    hprec$ = hprec$ + "HP/10sec"
+                END IF
+                x34$ = "                            hprec$ = " + CHR$(34) + hprec$ + CHR$(34)
+                PRINT #1, x34$
+                hprecnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>MP Recovery/10 secs:</strong> " THEN
+                mprecnextloop = 1
+                EXIT DO
+            END IF
+            IF mprecnextloop = 1 THEN
+                mprec$ = MID$(monster$(a), 9, (LEN(monster$(a)) - 12))
+                mprec$ = MID$(mprec$, 1, (LEN(mprec$) - 8))
+                IF mprec$ <> "-" THEN
+                    mprec$ = mprec$ + "MP/10sec"
+                END IF
+                x35$ = "                            mprec$ = " + CHR$(34) + mprec$ + CHR$(34)
+                PRINT #1, x35$
+                mprecnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Normal against (Status):</strong> " THEN
+                normalstatusnextloop = 1
+                EXIT DO
+            END IF
+            IF normalstatusnextloop = 1 THEN
+                norms$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                norms$ = MID$(norms$, 1, (LEN(norms$) - 6))
+                x36$ = "                            norms$ = " + CHR$(34) + norms$ + CHR$(34)
+                PRINT #1, x36$
+                normalstatusnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Immune against (Status):</strong>" THEN
+                immunestatusnextloop = 1
+                EXIT DO
+            END IF
+            IF immunestatusnextloop = 1 THEN
+                immus$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                immus$ = MID$(immus$, 1, (LEN(immus$) - 6))
+                x37$ = "                            immus$ = " + CHR$(34) + immus$ + CHR$(34)
+                PRINT #1, x37$
+                immunestatusnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <div><strong>Inflict status:</strong> " THEN
+                inflnestatusnextloop = 1
+                EXIT DO
+            END IF
+            IF inflnestatusnextloop = 1 THEN
+                infls$ = MID$(monster$(a), 7, (LEN(monster$(a)) - 12))
+                infls$ = MID$(infls$, 1, (LEN(infls$) - 12))
+                x38$ = "                            infls$ = " + CHR$(34) + infls$ + CHR$(34)
+                PRINT #1, x38$
+                inflnestatusnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "    <td colspan=" + CHR$(34) + "4" + CHR$(34) + "><strong>Common Location:</strong> " THEN
+                comlocnextloop = 1
+                EXIT DO
+            END IF
+            IF comlocnextloop = 1 THEN
+                x39$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x39$ = x39$ + add$
+                            IF add$ <> "" THEN x39$ = x39$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x39$ = MID$(x39$, 1, ((LEN(x39$)) - 8))
+                IF x39$ = "" THEN x39$ = "?"
+                DO
+                    commafind = INSTR(g, x39$, ", , , ")
+                    IF commafind = 0 THEN EXIT DO
+                    x39x1$ = MID$(x39$, 1, (commafind + 1))
+                    x39x2$ = MID$(x39$, (commafind + 6), LEN(x39$))
+                    x39$ = x39x1$ + x39x2$
+                LOOP
+                ss = (INSTR(name$, "&#039;") - 1)
+                IF ss <> -1 THEN
+                    frontname$ = LEFT$(name$, ss)
+                    backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                    name$ = frontname$ + "'" + backname$
+                END IF
+                x39$ = "                            comloc$ = " + CHR$(34) + x39$ + CHR$(34)
+                PRINT #1, x39$
+                exitloop = 0
+                comlocnextloop = 0
+                EXIT DO
+            END IF
+            IF monster$(a) = "      <td colspan=" + CHR$(34) + "4" + CHR$(34) + "><strong>Remarks:</strong> " THEN
+                remarknextloop = 1
+                a = a + 1
+                EXIT DO
+            END IF
+            IF remarknextloop = 1 THEN
+                IF monster$(a) = "" THEN a = a + 1
+                x40$ = ""
+                DO
+                    FOR j = 1 TO LEN(monster$(a))
+                        IF MID$(monster$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(monster$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(monster$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x40$ = x40$ + add$
+                            IF add$ <> "" THEN x40$ = x40$ + ", "
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x40$ = MID$(x40$, 1, (LEN(x40$) - 2))
+                x40$ = "                            remarks$ = " + CHR$(34) + x40$ + CHR$(34)
+                PRINT #1, x40$
+                x41$ = "                            notes$ = " + CHR$(34) + "-" + CHR$(34)
+                PRINT #1, x41$
+                exitloop = 0
+                remarknextloop = 0
+                doneend = 1
+                EXIT DO
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    status$ = status$ + CHR$(13) + ">pulling data from monster source: complete"
+    CLOSE #1
+    OPEN "source\list\monsters.txt" FOR OUTPUT AS #4
+    FOR count = 1 TO monsternames
+        percent = INT((count / monsternames) * 100)
+        percent$ = STR$(INT(percent)) + "%"
+        aostatus$ = status$ + CHR$(13) + ">alphabetizing monster names:" + percent$
+        IF percent <> oldpercent THEN
+            CLS
+            PRINT aostatus$
+            oldpercent = percent
+        END IF
+        FOR counter = 1 TO monsternames
+            IF monsternames$(counter) > monsternames$(count) THEN SWAP monsternames$(count), monsternames$(counter)
+        NEXT counter
+    NEXT count
+    FOR count = 1 TO monsternames
+        IF monsternames$(count) <> "" THEN PRINT #4, monsternames$(count)
+    NEXT count
+    CLOSE #4
+    status$ = status$ + CHR$(13) + ">alphabetizing monster names: complete"
+END IF
+IF ty2 = 1 THEN
+    inputcount = 0
+    itemnames = 1
+    DIM itemnames$(32768)
+    lomsa = 522788
+    DIM item$(lomsa)
+    lomsab = 522788
+    DIM itemb$(lomsab)
+    lomsac = 522788
+    DIM itemc$(lomsac)
+    lomsad = 522788
+    DIM itemd$(lomsad)
+    lomsae = 522788
+    DIM iteme$(lomsae)
+    lomsaf = 522788
+    DIM itemf$(lomsaf)
+loms = 1
+lomsb = 1
+lomsc = 1
+lomsd = 1
+lomse = 1
+lomsf = 1
+    tempstatus$ = status$ + CHR$(13) + ">loading item source(1): ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "source2.txt" FOR INPUT AS #2
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofis1
+        LINE INPUT #2, itemb$(lomsb)
+        lomsb = lomsb + 1
+    LOOP
+    eofis1:
+    CLOSE #2
+    status$ = status$ + CHR$(13) + ">loading item source(1): complete"
+    tempstatus$ = status$ + CHR$(13) + ">loading item source(2): ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "source3.txt" FOR INPUT AS #2
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofis2
+        LINE INPUT #2, itemc$(lomsc)
+        lomsc = lomsc + 1
+    LOOP
+    eofis2:
+    CLOSE #2
+    status$ = status$ + CHR$(13) + ">loading item source(2): complete"
+    tempstatus$ = status$ + CHR$(13) + ">loading item source(3): ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "source4.txt" FOR INPUT AS #2
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofis3
+        LINE INPUT #2, item$(loms)
+        loms = loms + 1
+    LOOP
+    eofis3:
+    CLOSE #2
+    status$ = status$ + CHR$(13) + ">loading item source(3): complete"
+    tempstatus$ = status$ + CHR$(13) + ">loading item source(4): ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "source5.txt" FOR INPUT AS #2
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofis4
+        LINE INPUT #2, itemd$(lomsd)
+        lomsd = lomsd + 1
+    LOOP
+    eofis4:
+    CLOSE #2
+    status$ = status$ + CHR$(13) + ">loading item source(4): complete"
+    tempstatus$ = status$ + CHR$(13) + ">loading item source(5): ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "source6.txt" FOR INPUT AS #2
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofis5
+        LINE INPUT #2, iteme$(lomse)
+        lomse = lomse + 1
+    LOOP
+    eofis5:
+    CLOSE #2
+    status$ = status$ + CHR$(13) + ">loading item source(5): complete"
+    tempstatus$ = status$ + CHR$(13) + ">loading item source(6): ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "source7.txt" FOR INPUT AS #2
+    DO UNTIL EOF(2)
+        ON ERROR GOTO eofis6
+        LINE INPUT #2, itemf$(lomsf)
+        lomsf = lomsf + 1
+    LOOP
+    eofis6:
+    CLOSE #2
+    status$ = status$ + CHR$(13) + ">loading item source(6): complete"
+    OPEN "bin\part\007 - W - Items[2].txt" FOR OUTPUT AS #1
+    attspeed = 0
+    FOR a = 1 TO lomsb
+        percent = INT(100 * (a / lomsb))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(1):" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            IF itemb$(a) = "" THEN EXIT DO
+            IF MID$(itemb$(a), 1, 28) = "    <td width=" + CHR$(34) + "145" + CHR$(34) + "><strong>" THEN
+                name$ = MID$(itemb$(a), 29, (LEN(itemb$(a)) - 46))
+                DO
+                    ss = (INSTR(name$, "&amp;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 5)))
+                        name$ = frontname$ + "&" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                DO
+                    ss = (INSTR(name$, "&#039;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + "'" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                name$ = LEFT$(name$, (LEN(name$) - 2))
+                x1$ = "                    CASE " + CHR$(34) + name$ + CHR$(34)
+                picname$ = ""
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                namepic$ = namepic$ + ".png"
+                itemnames$(itemnames) = name$
+                itemnames = itemnames + 1
+                PRINT #1, x1$
+                PRINT #1, "                        itemtype = 1"
+                PRINT #1, "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 48) = "    <td width=" + CHR$(34) + "165" + CHR$(34) + "><strong>Req Level:</strong> " THEN
+                reqlv$ = MID$(itemb$(a), 49, (LEN(itemb$(a)) - 54))
+                PRINT #1, "                        reqlevel$ = " + CHR$(34) + reqlv$ + CHR$(34)
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 49) = "    <td width=" + CHR$(34) + "186" + CHR$(34) + "><strong>Req Stats: </strong> " THEN
+                reqstats$ = MID$(itemb$(a), 50, (LEN(itemb$(a)) - 55))
+                PRINT #1, "                        reqstats$ = " + CHR$(34) + reqstats$ + CHR$(34)
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 46) = "                   <div><strong>Weapon Att.:</strong> " THEN
+                wepatt$ = MID$(item$(b), 47, (LEN(itemb$(a)) - 52))
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 54) = "                    <div><strong>Magic Att.:</strong> " THEN
+                magatt$ = MID$(itemb$(a), 55, (LEN(itemb$(a)) - 60))
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 71) = "                                    <div><strong>Weapon Def.:</strong> " THEN
+                wepdef$ = MID$(itemb$(a), 71, (LEN(itemb$(a)) - 76))
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 47) = "                       <strong>Magic Def.:</strong> " THEN
+                magdef$ = MID$(itemb$(a), 48, (LEN(itemb$(a)) - 63))
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 47) = "                       <strong>Att. Speed:</strong> " THEN
+                attspeed$ = MID$(itemb$(a), 48, (LEN(itemb$(a)) - 63))
+                attspeed = 1
+                EXIT DO
+            END IF
+            IF itemb$(a) = "    <td><strong>Job:</strong>" THEN
+                jobnextloop = 1
+                EXIT DO
+            END IF
+            IF jobnextloop = 1 THEN
+                IF itemb$(a) = "" THEN EXIT DO
+                IF attspeed = 0 THEN attspeed$ = "-"
+                attspeed = 0
+                job$ = MID$(itemb$(a), 5, (LEN(itemb$(a)) - 13))
+                PRINT #1, "                        job$ = " + CHR$(34) + job$ + CHR$(34)
+                jobnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemb$(a), 1, 46) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + "><strong>Effects:</strong> " THEN
+                effects$ = MID$(itemb$(a), 47, (LEN(itemb$(a)) - 51))
+                IF wepatt$ <> "" THEN effects$ = "WATT:" + wepatt$ + ", " + effects$
+                IF magatt$ <> "" THEN effects$ = "MATT:" + magatt$ + ", " + effects$
+                IF wepdef$ <> "" THEN effects$ = "WDEF:" + wepdef$ + ", " + effects$
+                IF magdef$ <> "" THEN effects$ = "MDEF:" + magdef$ + ", " + effects$
+                PRINT #1, "                        effects$ = " + CHR$(34) + effects$ + CHR$(34)
+                PRINT #1, "                        attspeed$ = " + CHR$(34) + attspeed$ + CHR$(34)
+                wepatt$ = ""
+                magatt$ = ""
+                wepdef$ = ""
+                magdef$ = ""
+                EXIT DO
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    status$ = status$ + CHR$(13) + ">pulling data from item source(1): complete"
+    FOR a = 1 TO lomsc
+        percent = INT(100 * (a / lomsc))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(2):" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            IF itemc$(a) = "" THEN EXIT DO
+            IF itemc$(a) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + "><strong>Name:</strong> " THEN
+                namenextloop = 1
+                EXIT DO
+            END IF
+            IF namenextloop = 1 THEN
+                x1$ = MID$(itemc$(a), 7, (LEN(itemc$(a)) - 17))
+                DO
+                    ss = (INSTR(x1$, "&amp;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(x1$, ss)
+                        backname$ = RIGHT$(x1$, (LEN(x1$) - ((LEN(frontname$)) + 5)))
+                        x1$ = frontname$ + "&" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                name$ = x1$
+                x1$ = "                    CASE " + CHR$(34) + x1$ + CHR$(34)
+                namepic$ = ""
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                namepic$ = namepic$ + ".png"
+                itemnames$(itemnames) = name$
+                itemnames = itemnames + 1
+                PRINT #1, x1$
+                PRINT #1, "                        itemtype = 2"
+                PRINT #1, "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                namenextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemc$(a), 1, 30) = "    <td><strong>EXP:</strong> " THEN
+                x2$ = MID$(itemc$(a), 31, (LEN(itemc$(a)) - 35))
+                x2$ = "                        exp$ = " + CHR$(34) + x2$ + CHR$(34)
+                PRINT #1, x2$
+                EXIT DO
+            END IF
+            IF MID$(itemc$(a), 1, 32) = "    <td><strong>Score:</strong> " THEN
+                x3$ = MID$(itemc$(a), 33, (LEN(itemc$(a)) - 37))
+                x3$ = "                        score$ = " + CHR$(34) + x3$ + CHR$(34)
+                PRINT #1, x3$
+                EXIT DO
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    status$ = status$ + CHR$(13) + ">pulling data from item source(2): complete"
+    remarkcompleted = 1
+    ufcompleted = 1
+    FOR a = 1 TO loms
+        percent = INT(100 * (a / loms))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(3):" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            IF item$(a) = "" THEN EXIT DO
+            IF item$(a) = "    <td width=" + CHR$(34) + "260" + CHR$(34) + ">" THEN
+                namenextloop = 1
+                EXIT DO
+            END IF
+            IF namenextloop = 1 THEN
+                IF ufcompleted = 0 THEN
+                    PRINT #1, "                        usedfor$ = " + CHR$(34) + "-" + CHR$(34)
+                    ufcompleted = 1
+                END IF
+                IF remarkcompleted = 0 THEN
+                    remarks$ = "-"
+                    notes$ = "-"
+                    PRINT #1, "                        remarks$ = " + CHR$(34) + remarks$ + CHR$(34)
+                    PRINT #1, "                        notes$ = " + CHR$(34) + notes$ + CHR$(34)
+                END IF
+                namepic$ = ""
+                name$ = MID$(item$(a), 15, (LEN(item$(a)) - 29))
+                IF MID$(name$, 1, 1) = CHR$(32) THEN name$ = MID$(name$, 2, LEN(name$))
+                newname = 1
+                DO
+                    ss = (INSTR(name$, "&#039;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + "'" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                IF MID$(name$, 1, 6) = "&quot;" THEN name$ = CHR$(34) + MID$(name$, 7)
+                DO
+                    ss = (INSTR(name$, "&quot;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + CHR$(34) + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                itemnames$(itemnames) = name$
+                itemnames = itemnames + 1
+                x1$ = "                    CASE " + CHR$(34) + name$ + CHR$(34)
+                PRINT #1, x1$
+                PRINT #1, "                        itemtype = 3"
+                namepic$ = "graphic\item\" + namepic$ + ".png"
+                x2$ = "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                PRINT #1, x2$
+                namenextloop = 0
+                remarkcompleted = 0
+                ufcompleted = 0
+                EXIT DO
+            END IF
+            IF item$(a) = "            <div><strong>Sold for:</strong> " THEN
+                soldfornextloop = 1
+                EXIT DO
+            END IF
+            IF soldfornextloop = 1 THEN
+                soldfor$ = MID$(item$(a), 9, (LEN(item$(a)) - 20))
+                x3$ = "                        soldfor$ = " + CHR$(34) + soldfor$ + CHR$(34)
+                PRINT #1, x3$
+                soldfornextloop = 0
+                EXIT DO
+            END IF
+            IF item$(a) = "      <strong>Effects:</strong>" THEN
+                effectsnextloop = 1
+                EXIT DO
+            END IF
+            IF effectsnextloop = 1 THEN
+                effects$ = MID$(item$(a), 7, (LEN(item$(a)) - 15))
+                x4$ = "                        effects$ = " + CHR$(34) + effects$ + CHR$(34)
+                PRINT #1, x4$
+                effectsnextloop = 0
+            END IF
+            IF item$(a) = "      <strong>Max per slot:</strong> " THEN
+                maxperslotnextloop = 1
+                EXIT DO
+            END IF
+            IF maxperslotnextloop = 1 THEN
+                maxperslot$ = MID$(item$(a), 7, (LEN(item$(a)) - 15))
+                x5$ = "                        maxperslot$ = " + CHR$(34) + maxperslot$ + CHR$(34)
+                PRINT #1, x5$
+                maxperslotnextloop = 0
+                EXIT DO
+            END IF
+            IF item$(a) = "      <div><strong>Dropped by:</strong> " THEN
+                droppedbynextloop = 1
+                EXIT DO
+            END IF
+            IF droppedbynextloop = 1 THEN
+                x6$ = ""
+                DO
+                    FOR j = 1 TO LEN(item$(a))
+                        IF MID$(item$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(item$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(item$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x6$ = x6$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x6$ = "" THEN x6$ = "-"
+                IF RIGHT$(x6$, 6) = "      " THEN x6$ = MID$(x6$, 1, (LEN(x6$) - 6))
+                x6$ = "                        droppedby$ = " + CHR$(34) + x6$ + CHR$(34)
+                PRINT #1, x6$
+                droppedbynextloop = 0
+                EXIT DO
+            END IF
+            IF item$(a) = "      <strong>Description:</strong> " THEN
+                descriptionnextloop = 1
+                EXIT DO
+            END IF
+            IF descriptionnextloop = 1 THEN
+                description$ = MID$(item$(a), 10, (LEN(item$(a)) - 4))
+                IF RIGHT$(item$(a), 6) = "<br />" THEN
+                    a = a + 1
+                    description$ = description$ + MID$(item$(a), 1, (LEN(item$(a)) - 3))
+                END IF
+                x7$ = "                        description$ = " + CHR$(34) + description$ + CHR$(34)
+                x7$ = MID$(x7$, 1, (LEN(x7$) - 5)) + CHR$(34)
+                PRINT #1, x7$
+                descriptionnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(item$(a), 20, 33) = "><strong>Available from:</strong>" THEN
+                availablefromnextloop = 1
+                EXIT DO
+            END IF
+            IF availablefromnextloop = 1 AND item$(a) <> "               <ul>" THEN
+                rethy = 0
+                exitloop = 0
+                add$ = ""
+                x8$ = ""
+                itemaf$ = ""
+                DO
+                    IF MID$(item$(a), 6, 1) = "-" THEN EXIT DO
+                    erds = a
+                    DO
+                        IF name$ = "Intermediate Monster Crystal 3" THEN EXIT DO
+                        itemaf$ = itemaf$ + MID$(item$(erds), 19, (LEN(item$(erds)) - 19))
+                        erds = erds + 1
+                        IF item$(erds) = "              <ul>" OR item$(erds) = "  </tr>" THEN EXIT DO
+                        a = erds
+                    LOOP
+                    DO
+                        FOR j = 1 TO LEN(itemaf$)
+                            IF MID$(itemaf$, j, 1) = ">" THEN
+                                j = j + 1
+                                DO
+                                    added$ = MID$(itemaf$, j, 1)
+                                    IF added$ = "<" THEN
+                                        IF oldadd$ = "." THEN add$ = add$ + " "
+                                        EXIT DO
+                                    END IF
+                                    add$ = add$ + added$
+                                    j = j + 1
+                                    IF j >= LEN(itemaf$) THEN
+                                        exitloop = 1
+                                        EXIT DO
+                                    END IF
+                                    oldadd$ = added$
+                                LOOP
+                                x8$ = x8$ + add$
+                                add$ = ""
+                                IF exitloop = 1 THEN EXIT DO
+                            END IF
+                        NEXT j
+                        EXIT DO
+                    LOOP
+                    EXIT DO
+                LOOP
+                DO
+                    FOR reth = 1 TO LEN(x8$)
+                        IF MID$(x8$, reth, 1) <> " " THEN
+                            rethy = 1
+                            EXIT DO
+                        END IF
+                    NEXT reth
+                    EXIT DO
+                LOOP
+                x8$ = MID$(x8$, 1, (LEN(x8$) - 1))
+                IF rethy = 0 THEN x8$ = "-"
+                IF x8$ = "" THEN x8$ = "-"
+                x8$ = "                        availablefrom$ = " + CHR$(34) + x8$ + CHR$(34)
+                PRINT #1, x8$
+                availablefromnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(item$(a), 22, 27) = "><strong>Used for:</strong>" THEN
+                x11$ = ""
+                itemaf$ = item$(a) + item$(a + 1)
+                DO
+                    FOR j = 1 TO LEN(itemaf$)
+                        IF MID$(itemaf$, j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemaf$, j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemaf$) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x11$ = x11$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x11$ = MID$(x11$, 1, (LEN(x11$) - 6))
+                IF LEFT$(x11$, 10) = "Used for: " THEN x11$ = MID$(x11$, 11, (LEN(x11$)))
+                IF x11$ = "" THEN x11$ = "-"
+                x11$ = "                        usedfor$ = " + CHR$(34) + x11$ + CHR$(34)
+                PRINT #1, x11$
+                ufcompleted = 1
+                EXIT DO
+            END IF
+            IF item$(a) = "      <td colspan=" + CHR$(34) + "3" + CHR$(34) + " class=" + CHR$(34) + "remarks" + CHR$(34) + "><strong>Remarks:</strong>" THEN
+                remarksnextloop = 1
+                EXIT DO
+            END IF
+            IF remarksnextloop = 1 AND MID$(item$(a), 1, 22) = "                  <li>" THEN
+                x9$ = ""
+                exitloop = 0
+                DO
+                    FOR j = 1 TO LEN(item$(a))
+                        IF MID$(item$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(item$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(item$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x9$ = x9$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x9$ = "" THEN x9$ = "-"
+                x9$ = "                        remarks$ = " + CHR$(34) + x9$ + CHR$(34)
+                x10$ = "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+                PRINT #1, x9$
+                PRINT #1, x10$
+                remarkcompleted = 1
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    PRINT #1, "                        remarks$ = " + CHR$(34) + "-" + CHR$(34)
+    PRINT #1, "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+    status$ = status$ + CHR$(13) + ">pulling data from item source(3): complete"
+    remarkcompleted = 1
+    ufcompleted = 1
+    providedcompleted = 0
+    FOR a = 1 TO lomsd
+        percent = INT(100 * (a / lomsd))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(4):" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            IF itemd$(a) = "" THEN EXIT DO
+            IF itemd$(a) = "    <td width=" + CHR$(34) + "260" + CHR$(34) + ">" THEN
+                namenextloop = 1
+                EXIT DO
+            END IF
+            IF namenextloop = 1 THEN
+                IF ufcompleted = 0 THEN
+                    PRINT #1, "                        usedfor$ = " + CHR$(34) + "-" + CHR$(34)
+                    ufcompleted = 1
+                END IF
+                IF remarkcompleted = 0 THEN
+                    remarks$ = "-"
+                    notes$ = "-"
+                    PRINT #1, "                        remarks$ = " + CHR$(34) + remarks$ + CHR$(34)
+                    PRINT #1, "                        notes$ = " + CHR$(34) + notes$ + CHR$(34)
+                END IF
+                namepic$ = ""
+                name$ = MID$(itemd$(a), 15, (LEN(itemd$(a)) - 29))
+                IF MID$(name$, 1, 1) = CHR$(32) THEN name$ = MID$(name$, 2, LEN(name$))
+                newname = 1
+                DO
+                    ss = (INSTR(name$, "&#039;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + "'" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                IF MID$(name$, 1, 6) = "&quot;" THEN name$ = CHR$(34) + MID$(name$, 7)
+                DO
+                    ss = (INSTR(name$, "&quot;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + CHR$(34) + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                itemnames$(itemnames) = name$
+                itemnames = itemnames + 1
+                x1$ = "                    CASE " + CHR$(34) + name$ + CHR$(34)
+                PRINT #1, x1$
+                PRINT #1, "                        itemtype = 4"
+                namepic$ = "graphic\item\" + namepic$ + ".png"
+                x2$ = "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                PRINT #1, x2$
+                namenextloop = 0
+                remarkcompleted = 0
+                ufcompleted = 0
+                EXIT DO
+            END IF
+            IF itemd$(a) = "            <div><strong>Sold for:</strong> " THEN
+                soldfornextloop = 1
+                EXIT DO
+            END IF
+            IF soldfornextloop = 1 THEN
+                soldfor$ = MID$(itemd$(a), 9, (LEN(itemd$(a)) - 20))
+                x3$ = "                        soldfor$ = " + CHR$(34) + soldfor$ + CHR$(34)
+                PRINT #1, x3$
+                soldfornextloop = 0
+                EXIT DO
+            END IF
+            IF itemd$(a) = "      <strong>Effects:</strong>" THEN
+                effectsnextloop = 1
+                EXIT DO
+            END IF
+            IF effectsnextloop = 1 THEN
+                effects$ = MID$(itemd$(a), 7, (LEN(itemd$(a)) - 15))
+                x4$ = "                        effects$ = " + CHR$(34) + effects$ + CHR$(34)
+                PRINT #1, x4$
+                effectsnextloop = 0
+            END IF
+            IF itemd$(a) = "      <strong>Max per slot:</strong> " THEN
+                maxperslotnextloop = 1
+                EXIT DO
+            END IF
+            IF maxperslotnextloop = 1 THEN
+                maxperslot$ = MID$(itemd$(a), 7, (LEN(itemd$(a)) - 15))
+                x5$ = "                        maxperslot$ = " + CHR$(34) + maxperslot$ + CHR$(34)
+                PRINT #1, x5$
+                maxperslotnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemd$(a), 1, 40) = "      <div><strong>Provided by:</strong>" THEN
+                x444$ = ""
+                DO
+                    FOR j = 1 TO LEN(itemd$(a))
+                        IF MID$(itemd$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemd$(a), j, 1)
+                                IF added$ = "<" THEN
+                                    IF oldadd$ = "." THEN add$ = add$ + " "
+                                    EXIT DO
+                                END IF
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemd$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                                oldadd$ = added$
+                            LOOP
+                            x444$ = x444$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                    EXIT DO
+                LOOP
+                x444$ = MID$(x444$, 14, LEN(x444$))
+                x444$ = "                        providedby$ = " + CHR$(34) + x444$ + CHR$(34)
+                PRINT #1, x444$
+                providedcompleted = 1
+                EXIT DO
+            END IF
+            IF itemd$(a) = "      <div><strong>Dropped by:</strong> " THEN
+                droppedbynextloop = 1
+                EXIT DO
+            END IF
+            IF droppedbynextloop = 1 THEN
+                IF providedcompleted = 0 THEN
+                    PRINT #1, "                        providedby$ = " + CHR$(34) + "-" + CHR$(34)
+                END IF
+                providedcompleted = 0
+                x6$ = ""
+                DO
+                    FOR j = 1 TO LEN(itemd$(a))
+                        IF MID$(itemd$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemd$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemd$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x6$ = x6$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x6$ = "" THEN x6$ = "-"
+                IF RIGHT$(x6$, 6) = "      " THEN x6$ = MID$(x6$, 1, (LEN(x6$) - 6))
+                x6$ = "                        droppedby$ = " + CHR$(34) + x6$ + CHR$(34)
+                PRINT #1, x6$
+                droppedbynextloop = 0
+                EXIT DO
+            END IF
+            IF itemd$(a) = "      <strong>Description:</strong> " THEN
+                descriptionnextloop = 1
+                EXIT DO
+            END IF
+            IF descriptionnextloop = 1 THEN
+                description$ = MID$(itemd$(a), 10, (LEN(itemd$(a)) - 4))
+                IF RIGHT$(itemd$(a), 6) = "<br />" THEN
+                    a = a + 1
+                    description$ = description$ + MID$(itemd$(a), 1, (LEN(itemd$(a)) - 3))
+                END IF
+                x7$ = "                        description$ = " + CHR$(34) + description$ + CHR$(34)
+                x7$ = MID$(x7$, 1, (LEN(x7$) - 5)) + CHR$(34)
+                PRINT #1, x7$
+                descriptionnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemd$(a), 20, 33) = "><strong>Available from:</strong>" THEN
+                availablefromnextloop = 1
+                EXIT DO
+            END IF
+            IF availablefromnextloop = 1 AND itemd$(a) <> "               <ul>" THEN
+                rethy = 0
+                exitloop = 0
+                add$ = ""
+                x8$ = ""
+                itemaf$ = ""
+                DO
+                    IF MID$(itemd$(a), 6, 1) = "-" THEN EXIT DO
+                    erds = a
+                    DO
+                        itemaf$ = itemaf$ + MID$(itemd$(erds), 19, (LEN(itemd$(erds)) - 19))
+                        erds = erds + 1
+                        IF itemd$(erds) = "              <ul>" OR itemd$(erds) = "  </tr>" THEN EXIT DO
+                        a = erds
+                    LOOP
+                    DO
+                        FOR j = 1 TO LEN(itemaf$)
+                            IF MID$(itemaf$, j, 1) = ">" THEN
+                                j = j + 1
+                                DO
+                                    added$ = MID$(itemaf$, j, 1)
+                                    IF added$ = "<" THEN
+                                        IF oldadd$ = "." THEN add$ = add$ + " "
+                                        EXIT DO
+                                    END IF
+                                    add$ = add$ + added$
+                                    j = j + 1
+                                    IF j >= LEN(itemaf$) THEN
+                                        exitloop = 1
+                                        EXIT DO
+                                    END IF
+                                    oldadd$ = added$
+                                LOOP
+                                x8$ = x8$ + add$
+                                add$ = ""
+                                IF exitloop = 1 THEN EXIT DO
+                            END IF
+                        NEXT j
+                        EXIT DO
+                    LOOP
+                    EXIT DO
+                LOOP
+                DO
+                    FOR reth = 1 TO LEN(x8$)
+                        IF MID$(x8$, reth, 1) <> " " THEN
+                            rethy = 1
+                            EXIT DO
+                        END IF
+                    NEXT reth
+                    EXIT DO
+                LOOP
+                x8$ = MID$(x8$, 1, (LEN(x8$) - 1))
+                IF rethy = 0 THEN x8$ = "-"
+                IF x8$ = "" THEN x8$ = "-"
+                x8$ = "                        availablefrom$ = " + CHR$(34) + x8$ + CHR$(34)
+                PRINT #1, x8$
+                availablefromnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemd$(a), 22, 27) = "><strong>Used for:</strong>" THEN
+                x11$ = ""
+                itemaf$ = itemd$(a) + itemd$(a + 1)
+                DO
+                    FOR j = 1 TO LEN(itemaf$)
+                        IF MID$(itemaf$, j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemaf$, j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemaf$) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x11$ = x11$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x11$ = MID$(x11$, 1, (LEN(x11$) - 6))
+                IF LEFT$(x11$, 10) = "Used for: " THEN x11$ = MID$(x11$, 11, (LEN(x11$)))
+                IF x11$ = "" THEN x11$ = "-"
+                x11$ = "                        usedfor$ = " + CHR$(34) + x11$ + CHR$(34)
+                PRINT #1, x11$
+                ufcompleted = 1
+                EXIT DO
+            END IF
+            IF itemd$(a) = "      <td colspan=" + CHR$(34) + "3" + CHR$(34) + " class=" + CHR$(34) + "remarks" + CHR$(34) + "><strong>Remarks:</strong>" THEN
+                remarksnextloop = 1
+                EXIT DO
+            END IF
+            IF remarksnextloop = 1 AND MID$(itemd$(a), 1, 22) = "                  <li>" THEN
+                x9$ = ""
+                exitloop = 0
+                DO
+                    FOR j = 1 TO LEN(itemd$(a))
+                        IF MID$(itemd$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemd$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemd$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x9$ = x9$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x9$ = "" THEN x9$ = "-"
+                x9$ = "                        remarks$ = " + CHR$(34) + x9$ + CHR$(34)
+                x10$ = "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+                PRINT #1, x9$
+                PRINT #1, x10$
+                remarkcompleted = 1
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    PRINT #1, "                        remarks$ = " + CHR$(34) + "-" + CHR$(34)
+    PRINT #1, "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+    status$ = status$ + CHR$(13) + ">pulling data from item source(4): complete"
+    remarkcompleted = 1
+    ufcompleted = 1
+    rewarddone = 1
+    FOR a = 1 TO lomse
+        percent = INT(100 * (a / lomse))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(5):" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            IF iteme$(a) = "" THEN EXIT DO
+            IF iteme$(a) = "    <td width=" + CHR$(34) + "260" + CHR$(34) + ">" THEN
+                namenextloop = 1
+                EXIT DO
+            END IF
+            IF namenextloop = 1 THEN
+                IF ufcompleted = 0 THEN
+                    PRINT #1, "                        usedfor$ = " + CHR$(34) + "-" + CHR$(34)
+                    ufcompleted = 1
+                END IF
+                IF rewarddone = 0 THEN PRINT #1, "                        rewards$ = " + CHR$(34) + "-" + CHR$(34)
+                IF remarkcompleted = 0 THEN
+                    remarks$ = "-"
+                    notes$ = "-"
+                    PRINT #1, "                        remarks$ = " + CHR$(34) + remarks$ + CHR$(34)
+                    PRINT #1, "                        notes$ = " + CHR$(34) + notes$ + CHR$(34)
+                END IF
+                namepic$ = ""
+                name$ = MID$(iteme$(a), 15, (LEN(iteme$(a)) - 29))
+                IF MID$(name$, 1, 1) = CHR$(32) THEN name$ = MID$(name$, 2, LEN(name$))
+                newname = 1
+                DO
+                    ss = (INSTR(name$, "&#039;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + "'" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                IF MID$(name$, 1, 6) = "&quot;" THEN name$ = CHR$(34) + MID$(name$, 7)
+                DO
+                    ss = (INSTR(name$, "&quot;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + CHR$(34) + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                itemnames$(itemnames) = name$
+                itemnames = itemnames + 1
+                x1$ = "                    CASE " + CHR$(34) + name$ + CHR$(34)
+                PRINT #1, x1$
+                PRINT #1, "                        itemtype = 4"
+                namepic$ = "graphic\item\" + namepic$ + ".png"
+                x2$ = "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                PRINT #1, x2$
+                namenextloop = 0
+                remarkcompleted = 0
+                ufcompleted = 0
+                rewarddone = 0
+                EXIT DO
+            END IF
+            IF iteme$(a) = "            <div><strong>Sold for:</strong> " THEN
+                soldfornextloop = 1
+                EXIT DO
+            END IF
+            IF soldfornextloop = 1 THEN
+                soldfor$ = MID$(iteme$(a), 9, (LEN(iteme$(a)) - 20))
+                x3$ = "                        soldfor$ = " + CHR$(34) + soldfor$ + CHR$(34)
+                PRINT #1, x3$
+                soldfornextloop = 0
+                EXIT DO
+            END IF
+            IF iteme$(a) = "      <strong>Effects:</strong>" THEN
+                effectsnextloop = 1
+                EXIT DO
+            END IF
+            IF effectsnextloop = 1 THEN
+                effects$ = MID$(iteme$(a), 7, (LEN(iteme$(a)) - 15))
+                x4$ = "                        effects$ = " + CHR$(34) + effects$ + CHR$(34)
+                PRINT #1, x4$
+                effectsnextloop = 0
+            END IF
+            IF iteme$(a) = "      <strong>Max per slot:</strong> " THEN
+                maxperslotnextloop = 1
+                EXIT DO
+            END IF
+            IF maxperslotnextloop = 1 THEN
+                maxperslot$ = MID$(iteme$(a), 7, (LEN(iteme$(a)) - 15))
+                x5$ = "                        maxperslot$ = " + CHR$(34) + maxperslot$ + CHR$(34)
+                PRINT #1, x5$
+                maxperslotnextloop = 0
+                EXIT DO
+            END IF
+            IF iteme$(a) = "      <div><strong>Dropped by:</strong> " THEN
+                droppedbynextloop = 1
+                EXIT DO
+            END IF
+            IF droppedbynextloop = 1 THEN
+                x6$ = ""
+                DO
+                    FOR j = 1 TO LEN(iteme$(a))
+                        IF MID$(iteme$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(iteme$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(iteme$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x6$ = x6$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x6$ = "" THEN x6$ = "-"
+                IF RIGHT$(x6$, 6) = "      " THEN x6$ = MID$(x6$, 1, (LEN(x6$) - 6))
+                x6$ = "                        droppedby$ = " + CHR$(34) + x6$ + CHR$(34)
+                PRINT #1, x6$
+                droppedbynextloop = 0
+                EXIT DO
+            END IF
+            IF iteme$(a) = "      <strong>Description:</strong> " THEN
+                descriptionnextloop = 1
+                EXIT DO
+            END IF
+            IF descriptionnextloop = 1 THEN
+                description$ = MID$(iteme$(a), 10, (LEN(iteme$(a)) - 4))
+                IF RIGHT$(iteme$(a), 6) = "<br />" THEN
+                    a = a + 1
+                    description$ = description$ + MID$(iteme$(a), 1, (LEN(iteme$(a)) - 3))
+                END IF
+                x7$ = "                        description$ = " + CHR$(34) + description$ + CHR$(34)
+                x7$ = MID$(x7$, 1, (LEN(x7$) - 5)) + CHR$(34)
+                PRINT #1, x7$
+                descriptionnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(iteme$(a), 20, 33) = "><strong>Available from:</strong>" THEN
+                availablefromnextloop = 1
+                EXIT DO
+            END IF
+            IF availablefromnextloop = 1 AND iteme$(a) <> "               <ul>" THEN
+                rethy = 0
+                exitloop = 0
+                add$ = ""
+                x8$ = ""
+                itemaf$ = ""
+                DO
+                    IF MID$(iteme$(a), 6, 1) = "-" THEN EXIT DO
+                    erds = a
+                    DO
+                        itemaf$ = itemaf$ + MID$(iteme$(erds), 19, (LEN(iteme$(erds)) - 19))
+                        erds = erds + 1
+                        IF iteme$(erds) = "              <ul>" OR iteme$(erds) = "  </tr>" THEN EXIT DO
+                        a = erds
+                    LOOP
+                    DO
+                        FOR j = 1 TO LEN(itemaf$)
+                            IF MID$(itemaf$, j, 1) = ">" THEN
+                                j = j + 1
+                                DO
+                                    added$ = MID$(itemaf$, j, 1)
+                                    IF added$ = "<" THEN
+                                        IF oldadd$ = "." THEN add$ = add$ + " "
+                                        EXIT DO
+                                    END IF
+                                    add$ = add$ + added$
+                                    j = j + 1
+                                    IF j >= LEN(itemaf$) THEN
+                                        exitloop = 1
+                                        EXIT DO
+                                    END IF
+                                    oldadd$ = added$
+                                LOOP
+                                x8$ = x8$ + add$
+                                add$ = ""
+                                IF exitloop = 1 THEN EXIT DO
+                            END IF
+                        NEXT j
+                        EXIT DO
+                    LOOP
+                    EXIT DO
+                LOOP
+                DO
+                    FOR reth = 1 TO LEN(x8$)
+                        IF MID$(x8$, reth, 1) <> " " THEN
+                            rethy = 1
+                            EXIT DO
+                        END IF
+                    NEXT reth
+                    EXIT DO
+                LOOP
+                x8$ = MID$(x8$, 1, (LEN(x8$) - 1))
+                IF rethy = 0 THEN x8$ = "-"
+                IF x8$ = "" THEN x8$ = "-"
+                x8$ = "                        availablefrom$ = " + CHR$(34) + x8$ + CHR$(34)
+                PRINT #1, x8$
+                availablefromnextloop = 0
+                EXIT DO
+            END IF
+            IF iteme$(a) = "      <td colspan=" + CHR$(34) + "3" + CHR$(34) + "><strong>Rewards:</strong>" THEN
+                x256$ = ""
+                exitloop = 0
+                rewardsnextloop = 1
+                EXIT DO
+            END IF
+            IF rewardsnextloop = 1 THEN
+                IF MID$(iteme$(a), 1, 14) = "          <li>" THEN
+
+                    DO
+                        FOR j = 1 TO LEN(iteme$(a))
+                            IF MID$(iteme$(a), j, 1) = ">" THEN
+                                j = j + 1
+                                DO
+                                    added$ = MID$(iteme$(a), j, 1)
+                                    IF added$ = "<" THEN EXIT DO
+                                    add$ = add$ + added$
+                                    j = j + 1
+                                    IF j >= LEN(iteme$(a)) THEN
+                                        exitloop = 1
+                                        EXIT DO
+                                    END IF
+                                LOOP
+                                DO
+                                    ss = (INSTR(add$, "&#039;") - 1)
+                                    IF ss <> -1 THEN
+                                        frontadd$ = LEFT$(add$, ss)
+                                        backadd$ = RIGHT$(add$, (LEN(add$) - ((LEN(frontadd$)) + 6)))
+                                        add$ = frontadd$ + "'" + backadd$
+                                    END IF
+                                LOOP UNTIL ss = -1
+                                x256$ = x256$ + add$
+                                IF RIGHT$(add$, 1) = ")" THEN x256$ = x256$ + ","
+                                add$ = ""
+                                IF exitloop = 1 THEN EXIT DO
+                            END IF
+                        NEXT j
+                    LOOP
+                ELSE
+                    EXIT DO
+                END IF
+                x256$ = LTRIM$(x256$)
+                x256$ = MID$(x256$, 1, (LEN(x256$) - 9))
+                x256$ = "                        rewards$ = " + CHR$(34) + x256$ + CHR$(34)
+                PRINT #1, x256$
+                rewardsnextloop = 0
+                rewarddone = 1
+                EXIT DO
+            END IF
+            IF iteme$(a) = "      <td colspan=" + CHR$(34) + "3" + CHR$(34) + " class=" + CHR$(34) + "remarks" + CHR$(34) + "><strong>Remarks:</strong>" THEN
+                remarksnextloop = 1
+                EXIT DO
+            END IF
+            IF remarksnextloop = 1 AND MID$(iteme$(a), 1, 22) = "                  <li>" THEN
+                x9$ = ""
+                exitloop = 0
+                DO
+                    FOR j = 1 TO LEN(iteme$(a))
+                        IF MID$(iteme$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(iteme$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(iteme$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x9$ = x9$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x9$ = "" THEN x9$ = "-"
+                x9$ = "                        remarks$ = " + CHR$(34) + x9$ + CHR$(34)
+                x10$ = "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+                PRINT #1, x9$
+                PRINT #1, x10$
+                remarkcompleted = 1
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    status$ = status$ + CHR$(13) + ">pulling data from item source(5): complete"
+    remarkcompleted = 1
+    ufcompleted = 1
+    providedcompleted = 0
+    FOR a = 1 TO lomse
+        percent = INT(100 * (a / lomse))
+        percent$ = STR$(percent) + "%"
+        pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(6):" + percent$
+        IF VAL(percent$) <> oldpercent THEN
+            CLS
+            PRINT pullstatus$
+            oldpercent = VAL(percent$)
+            percent$ = ""
+            pullstatus$ = ""
+        END IF
+        DO
+            IF itemf$(a) = "" THEN EXIT DO
+            IF itemf$(a) = "    <td width=" + CHR$(34) + "260" + CHR$(34) + ">" THEN
+                namenextloop = 1
+                EXIT DO
+            END IF
+            IF namenextloop = 1 THEN
+                IF ufcompleted = 0 THEN
+                    PRINT #1, "                        usedfor$ = " + CHR$(34) + "-" + CHR$(34)
+                    ufcompleted = 1
+                END IF
+                IF remarkcompleted = 0 THEN
+                    remarks$ = "-"
+                    notes$ = "-"
+                    PRINT #1, "                        remarks$ = " + CHR$(34) + remarks$ + CHR$(34)
+                    PRINT #1, "                        notes$ = " + CHR$(34) + notes$ + CHR$(34)
+                END IF
+                namepic$ = ""
+                name$ = MID$(itemf$(a), 15, (LEN(itemf$(a)) - 29))
+                IF MID$(name$, 1, 1) = CHR$(32) THEN name$ = MID$(name$, 2, LEN(name$))
+                newname = 1
+                DO
+                    ss = (INSTR(name$, "&#039;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + "'" + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                IF MID$(name$, 1, 6) = "&quot;" THEN name$ = CHR$(34) + MID$(name$, 7)
+                DO
+                    ss = (INSTR(name$, "&quot;") - 1)
+                    IF ss <> -1 THEN
+                        frontname$ = LEFT$(name$, ss)
+                        backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                        name$ = frontname$ + CHR$(34) + backname$
+                    END IF
+                LOOP UNTIL ss = -1
+                FOR p = 1 TO LEN(name$)
+                    m$ = MID$(name$, p, 1)
+                    l = ASC(m$)
+                    IF l >= 65 AND l <= 90 THEN
+                        l = l + 32
+                    END IF
+                    l$ = CHR$(l)
+                    IF l <> 32 AND l <> 39 THEN
+                        namepic$ = namepic$ + l$
+                    END IF
+                NEXT p
+                itemnames$(itemnames) = name$
+                itemnames = itemnames + 1
+                x1$ = "                    CASE " + CHR$(34) + name$ + CHR$(34)
+                PRINT #1, x1$
+                PRINT #1, "                        itemtype = 4"
+                namepic$ = "graphic\item\" + namepic$ + ".png"
+                x2$ = "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+                PRINT #1, x2$
+                namenextloop = 0
+                remarkcompleted = 0
+                ufcompleted = 0
+                EXIT DO
+            END IF
+            IF itemf$(a) = "            <div><strong>Sold for:</strong> " THEN
+                soldfornextloop = 1
+                EXIT DO
+            END IF
+            IF soldfornextloop = 1 THEN
+                soldfor$ = MID$(itemf$(a), 9, (LEN(itemf$(a)) - 20))
+                x3$ = "                        soldfor$ = " + CHR$(34) + soldfor$ + CHR$(34)
+                PRINT #1, x3$
+                soldfornextloop = 0
+                EXIT DO
+            END IF
+            IF itemf$(a) = "      <strong>Effects:</strong>" THEN
+                effectsnextloop = 1
+                EXIT DO
+            END IF
+            IF effectsnextloop = 1 THEN
+                effects$ = MID$(itemf$(a), 7, (LEN(itemf$(a)) - 15))
+                x4$ = "                        effects$ = " + CHR$(34) + effects$ + CHR$(34)
+                PRINT #1, x4$
+                effectsnextloop = 0
+            END IF
+            IF itemf$(a) = "      <strong>Max per slot:</strong> " THEN
+                maxperslotnextloop = 1
+                EXIT DO
+            END IF
+            IF maxperslotnextloop = 1 THEN
+                maxperslot$ = MID$(itemf$(a), 7, (LEN(itemf$(a)) - 15))
+                x5$ = "                        maxperslot$ = " + CHR$(34) + maxperslot$ + CHR$(34)
+                PRINT #1, x5$
+                maxperslotnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemf$(a), 1, 40) = "      <div><strong>Provided by:</strong>" THEN
+                x444$ = ""
+                DO
+                    FOR j = 1 TO LEN(itemf$(a))
+                        IF MID$(itemf$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemf$(a), j, 1)
+                                IF added$ = "<" THEN
+                                    IF oldadd$ = "." THEN add$ = add$ + " "
+                                    EXIT DO
+                                END IF
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemf$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                                oldadd$ = added$
+                            LOOP
+                            x444$ = x444$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                    EXIT DO
+                LOOP
+                x444$ = MID$(x444$, 14, LEN(x444$))
+                IF x444$ = "" THEN x444$ = "-"
+                x444$ = "                        providedby$ = " + CHR$(34) + x444$ + CHR$(34)
+                PRINT #1, x444$
+                providedcompleted = 1
+                EXIT DO
+            END IF
+            IF itemf$(a) = "      <div><strong>Dropped by:</strong> " THEN
+                droppedbynextloop = 1
+                EXIT DO
+            END IF
+            IF droppedbynextloop = 1 THEN
+                IF providedcompleted = 0 THEN
+                    PRINT #1, "                        providedby$ = " + CHR$(34) + "-" + CHR$(34)
+                END IF
+                providedcompleted = 0
+                x6$ = ""
+                DO
+                    FOR j = 1 TO LEN(itemf$(a))
+                        IF MID$(itemf$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemf$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemf$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x6$ = x6$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x6$ = "" THEN x6$ = "-"
+                IF RIGHT$(x6$, 6) = "      " THEN x6$ = MID$(x6$, 1, (LEN(x6$) - 6))
+                x6$ = "                        droppedby$ = " + CHR$(34) + x6$ + CHR$(34)
+                PRINT #1, x6$
+                droppedbynextloop = 0
+                EXIT DO
+            END IF
+            IF itemf$(a) = "      <strong>Description:</strong> " THEN
+                descriptionnextloop = 1
+                EXIT DO
+            END IF
+            IF descriptionnextloop = 1 THEN
+                description$ = MID$(itemf$(a), 10, (LEN(itemf$(a)) - 4))
+                IF RIGHT$(itemf$(a), 6) = "<br />" THEN
+                    a = a + 1
+                    description$ = description$ + MID$(itemf$(a), 1, (LEN(itemf$(a)) - 3))
+                END IF
+                x7$ = "                        description$ = " + CHR$(34) + description$ + CHR$(34)
+                x7$ = MID$(x7$, 1, (LEN(x7$) - 5)) + CHR$(34)
+                PRINT #1, x7$
+                descriptionnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemf$(a), 20, 33) = "><strong>Available from:</strong>" THEN
+                availablefromnextloop = 1
+                EXIT DO
+            END IF
+            IF availablefromnextloop = 1 AND itemf$(a) <> "               <ul>" THEN
+                rethy = 0
+                exitloop = 0
+                add$ = ""
+                x8$ = ""
+                itemaf$ = ""
+                DO
+                    IF MID$(itemf$(a), 6, 1) = "-" THEN EXIT DO
+                    erds = a
+                    DO
+                        itemaf$ = itemaf$ + MID$(itemf$(erds), 19, (LEN(itemf$(erds)) - 19))
+                        erds = erds + 1
+                        IF itemf$(erds) = "              <ul>" OR itemf$(erds) = "  </tr>" THEN EXIT DO
+                        a = erds
+                    LOOP
+                    DO
+                        FOR j = 1 TO LEN(itemaf$)
+                            IF MID$(itemaf$, j, 1) = ">" THEN
+                                j = j + 1
+                                DO
+                                    added$ = MID$(itemaf$, j, 1)
+                                    IF added$ = "<" THEN
+                                        IF oldadd$ = "." THEN add$ = add$ + " "
+                                        EXIT DO
+                                    END IF
+                                    add$ = add$ + added$
+                                    j = j + 1
+                                    IF j >= LEN(itemaf$) THEN
+                                        exitloop = 1
+                                        EXIT DO
+                                    END IF
+                                    oldadd$ = added$
+                                LOOP
+                                x8$ = x8$ + add$
+                                add$ = ""
+                                IF exitloop = 1 THEN EXIT DO
+                            END IF
+                        NEXT j
+                        EXIT DO
+                    LOOP
+                    EXIT DO
+                LOOP
+                DO
+                    FOR reth = 1 TO LEN(x8$)
+                        IF MID$(x8$, reth, 1) <> " " THEN
+                            rethy = 1
+                            EXIT DO
+                        END IF
+                    NEXT reth
+                    EXIT DO
+                LOOP
+                x8$ = MID$(x8$, 1, (LEN(x8$) - 1))
+                IF rethy = 0 THEN x8$ = "-"
+                IF x8$ = "" THEN x8$ = "-"
+                x8$ = "                        availablefrom$ = " + CHR$(34) + x8$ + CHR$(34)
+                PRINT #1, x8$
+                availablefromnextloop = 0
+                EXIT DO
+            END IF
+            IF MID$(itemf$(a), 22, 27) = "><strong>Used for:</strong>" THEN
+                x11$ = ""
+                itemaf$ = itemf$(a) + itemf$(a + 1)
+                DO
+                    FOR j = 1 TO LEN(itemaf$)
+                        IF MID$(itemaf$, j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemaf$, j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemaf$) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x11$ = x11$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                x11$ = MID$(x11$, 1, (LEN(x11$) - 6))
+                IF LEFT$(x11$, 10) = "Used for: " THEN x11$ = MID$(x11$, 11, (LEN(x11$)))
+                IF x11$ = "" THEN x11$ = "-"
+                x11$ = "                        usedfor$ = " + CHR$(34) + x11$ + CHR$(34)
+                PRINT #1, x11$
+                ufcompleted = 1
+                EXIT DO
+            END IF
+            IF itemf$(a) = "      <td colspan=" + CHR$(34) + "3" + CHR$(34) + " class=" + CHR$(34) + "remarks" + CHR$(34) + "><strong>Remarks:</strong>" THEN
+                remarksnextloop = 1
+                EXIT DO
+            END IF
+            IF remarksnextloop = 1 AND MID$(itemf$(a), 1, 22) = "                  <li>" THEN
+                x9$ = ""
+                exitloop = 0
+                DO
+                    FOR j = 1 TO LEN(itemf$(a))
+                        IF MID$(itemf$(a), j, 1) = ">" THEN
+                            j = j + 1
+                            DO
+                                added$ = MID$(itemf$(a), j, 1)
+                                IF added$ = "<" THEN EXIT DO
+                                add$ = add$ + added$
+                                j = j + 1
+                                IF j >= LEN(itemf$(a)) THEN
+                                    exitloop = 1
+                                    EXIT DO
+                                END IF
+                            LOOP
+                            x9$ = x9$ + add$
+                            add$ = ""
+                            IF exitloop = 1 THEN EXIT DO
+                        END IF
+                    NEXT j
+                LOOP
+                IF x9$ = "" THEN x9$ = "-"
+                x9$ = "                        remarks$ = " + CHR$(34) + x9$ + CHR$(34)
+                x10$ = "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+                PRINT #1, x9$
+                PRINT #1, x10$
+                remarkcompleted = 1
+            END IF
+            EXIT DO
+        LOOP
+    NEXT a
+    PRINT #1, "                        remarks$ = " + CHR$(34) + "-" + CHR$(34)
+    PRINT #1, "                        notes$ = " + CHR$(34) + "-" + CHR$(34)
+    status$ = status$ + CHR$(13) + ">pulling data from item source(6): complete"
+    CLOSE #1
+    OPEN "source\list\items.txt" FOR OUTPUT AS #4
+    FOR count = 1 TO itemnames
+        percent = INT((count / itemnames) * 100)
+        percent$ = STR$(INT(percent)) + "%"
+        aostatus$ = status$ + CHR$(13) + ">alphabetizing item names:" + percent$
+        IF percent <> oldpercent THEN
+            CLS
+            PRINT aostatus$
+            oldpercent = percent
+        END IF
+        FOR counter = 1 TO itemnames
+            IF itemnames$(counter) > itemnames$(count) THEN SWAP itemnames$(count), itemnames$(counter)
+        NEXT counter
+    NEXT count
+    FOR count = 1 TO itemnames
+        IF itemnames$(count) <> "" THEN PRINT #4, itemnames$(count)
+    NEXT count
+    CLOSE #4
+    status$ = status$ + CHR$(13) + ">alphabetizing item names: complete"
+END IF
+IF ty3 = 1 THEN
+    DIM fullsource$(4194304)
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 1 / 32"
+    CLS
+    PRINT tempstatus$
+    inputends = 1
+    OPEN "bin\part\-00 - 0 - Load.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe1
+        LINE INPUT #1, fullsource$(inputends)
+        inputends = inputends + 1
+    LOOP
+    eosfe1:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 2 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\000 - 0 - Introduction.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe2
+        LINE INPUT #1, fullsource$(inputends)
+        inputends = inputends + 1
+    LOOP
+    eosfe2:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 3 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\001 - Z - Start MapleStory.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe3
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe3:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 4 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\002 - A - Character.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe4
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe4:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 5 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\003 - S - Calculator.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe5
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe5:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 6 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\004 - C - Experience.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe6
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe6:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 7 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\005 - D - Guild.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe7
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe7:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 8 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\006 - Q - Monsters.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe8
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe8:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 9 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\006 - Q - Monsters[2].txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe9
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe9:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 10 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\006 - Q - Monsters[3].txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe10
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe10:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 11 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\007 - W - Items.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe11
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe11:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 12 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\007 - W - Items[2].txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe12
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe12:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 13 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\007 - W - Items[3].txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe13
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe13:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 14 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\008 - E - Quests.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe14
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe14:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 15 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\009 - R - Maps.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe15
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe15:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 16 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\010 - T - Classes.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe16
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe16:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 17 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\011 - Y - Skills.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe17
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe17:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 18 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\012 - U - NPCs.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe18
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe18:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 19 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\013 - I - Pets.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe19
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe19:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 20 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\014 - O - Gachapon.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe20
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe20:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 21 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\015 - P - Fashion.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe21
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe21:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 22 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\016 - F - Reactor.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe22
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe22:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 23 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\017 - J - Cash Shop.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe23
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe23:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 24 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\018 - G - Guides.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe24
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe24:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 25 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\019 - H - Party Quests.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe25
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe25:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 26 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\020 - B - Facts & Tips.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe26
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe26:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 27 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\021 - N - Jukebox.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe27
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe27:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 28 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\022 - M - Gallery.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe28
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe28:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 29 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\023 - K - Options.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe29
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe29:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 30 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\024 - L - Credits.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe30
+        LINE INPUT #1, getys$
+        fullsource$(inputends) = SPACE$(4) + getys$
+        inputends = inputends + 1
+    LOOP
+    eosfe30:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 31 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\998 - 9 - Outroduction.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe31
+        LINE INPUT #1, fullsource$(inputends)
+        inputends = inputends + 1
+    LOOP
+    eosfe31:
+    CLOSE #1
+    tempstatus$ = status$ + CHR$(13) + ">loading individual sources: 32 / 32"
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\part\999 - 9 - Appendix.txt" FOR INPUT AS #1
+    DO UNTIL EOF(1)
+        ON ERROR GOTO eosfe32
+        LINE INPUT #1, fullsource$(inputends)
+        inputends = inputends + 1
+    LOOP
+    eosfe32:
+    CLOSE #1
+    status$ = status$ + CHR$(13) + ">loading individual sources: complete"
+    tempstatus$ = status$ + CHR$(13) + ">writing full source: ..."
+    CLS
+    PRINT tempstatus$
+    OPEN "bin\source.bas" FOR OUTPUT AS #1
+    FOR rtu = 1 TO inputends
+        IF fullsource$(rtu) <> "" THEN PRINT #1, fullsource$(rtu)
+    NEXT rtu
+    CLOSE #1
+    status$ = status$ + CHR$(13) + ">writing full source: complete"
+END IF
+IF ty4 = 1 THEN
+END IF
+CLS
+tempstatus$ = status$ + CHR$(13) + ">update the update notes" + CHR$(13) + "     >press Space when you are done"
+PRINT tempstatus$
+DO
+    k$ = INKEY$
+LOOP UNTIL k$ = CHR$(32)
+status$ = status$ + CHR$(13) + ">update the update notes: complete"
+CLS
+inputends$ = STR$(inputends)
+inputends$ = LTRIM$(inputends$)
+IF ty3 = 1 THEN
+    tempstatus$ = status$ + CHR$(13) + ">update the end credits (" + inputends$ + " lines)" + CHR$(13) + "     >press Space when you are done"
+ELSE
+    tempstatus$ = status$ + CHR$(13) + ">update the end credits" + CHR$(13) + "     >press Space when you are done"
+END IF
+PRINT tempstatus$
+DO
+    k$ = INKEY$
+LOOP UNTIL k$ = CHR$(32)
+status$ = status$ + CHR$(13) + ">update the end credits: complete"
+CLS
+roak = TIMER
+roca = roak - rock
+roca$ = STR$(roca)
+roca$ = " (in" + roca$ + "sec)"
+status$ = status$ + CHR$(13) + ">completed" + roca$ + CHR$(13) + "     >press any key to close"
+PRINT status$
+DO
+    k$ = INKEY$
+LOOP UNTIL LEN(k$)
+SYSTEM

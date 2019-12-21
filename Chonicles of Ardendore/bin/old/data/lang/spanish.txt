@@ -1,0 +1,33 @@
+?Que te gustaria hacer?
+1-Ver informacion
+2-Cambiar idioma
+3-Cambiar el volumen
+4-Cambiar Nombre del personaje
+5-Eliminar su caracter
+7-Volver
+Su volumen actual es la siguiente:
+Introduzca un nuevo valor (de 0 a 1), o mover el pase para ajustar el nivel de volumen
+Pulse Intro cuando haya terminado
+Usted ha usado este programa
+veces
+Usted ha usado este programa por un total de
+h
+m
+s
+El idioma seleccionado es el siguiente:
+El volumen de su conjunto es la siguiente:
+Use las teclas de flechas para seleccionar el idioma y pulse Enter para seleccionar
+6 creditos
+Su nombre actual es la siguiente:
+Introduzca un nuevo nombre y pulse Intro
+:
+Su nombre ha sido cambiado a:
+Prensa Espacial para regresar
+?Esta seguro que desea eliminar de su ahorro?
+-Si y
+n-No
+Usted no sera capaz de recuperar esta informacion
+Presione 'q' para continuar o "w" para abortar
+Todos los datos que desapareciera
+Es necesario resart el programa
+Pulsa Espacio para cerrar

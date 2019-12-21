@@ -1,0 +1,4675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="canonical" href="http://global.hidden-street.net/eq/weapons/bow" />
+<link rel="shortcut icon" href="/sites/all/themes/lithharbor/favicon.ico" type="image/x-icon" />
+  <title>Bow | MapleStory | HS.MapleGlobal</title>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/global.hidden-street.net/files/css/css_bb477b98db50b14e9d92f8f98382817a.css" />
+  <!--[if lte IE 8]>
+    <style type="text/css">
+      body { behavior: url(/sites/all/themes/lithharbor/csshover3.htc); }
+    </style>
+  <![endif]-->
+  <!--[if lte IE 6]>
+    <style type="text/css">
+      .pngfix { behavior: url(/sites/all/themes/lithharbor/iepngfix.htc); }
+    </style>
+    <script type="text/javascript" src="/sites/all/themes/lithharbor/iepngfix-tilebg.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_b99b64f78cee0f66772c70d5f5464a10.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "dhtmlMenu": { "slide": "slide", "siblings": 0, "relativity": 0, "children": 0, "clone": 0, "doubleclick": 0 }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/global.hidden-street.net/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 1, "disable_zoom": 0, "force_show_nav": 0, "show_caption": true, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 } });
+//--><!]]>
+</script>
+  <script type="text/javascript">window.google_analytics_uacct = "UA-989776-5";</script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-989776-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body class="not-front-page not-logged-in not-admin page-eq sidebar-left-and-right">
+<div id="wrapper">
+  <div id="page">
+    <div class="clear-both"><!-- --></div>
+
+    
+	<div id="header">
+              <div id="logo">
+          <a href="/" title="Home" rel="home">
+            <img src="/sites/all/themes/lithharbor/logo.png" alt="Home" />
+          </a>
+        </div>
+      	  
+	  <div id="user-bar">
+	    	                <form method='post' accept-charset='UTF-8' action='/user/login'>          <div class="form-item" id="edit-name-wrapper">
+
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" tabindex="1" title="Username:" class="form-text required" />
+</div>
+          <div class="form-item" id="edit-pass-wrapper">
+ <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  tabindex="2" title="Password:" class="form-text required" />
+</div>
+          <input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
+<input type="hidden" name="form_build_id" id="form-83b1bea79ea2b29864a1fbc28834c7c2" value="form-83b1bea79ea2b29864a1fbc28834c7c2"  />
+<input type="submit" name="op" id="edit-submit-2" value="Log in"  tabindex="3" class="form-submit" />
+          </form>				<script type="text/javascript">
+          $('#edit-name').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+		  $('#edit-pass').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+        </script>
+	  </div>
+
+	</div>
+
+	<div id="navigation">
+              <div id="primary">
+          <ul class="menu"><li class="leaf first dhtml-menu "><a href="/" title="" id="dhtml_menu-1652">Home</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum/forumdisplay.php?420-Guides" title="" id="dhtml_menu-165">Guides</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum" title="" id="dhtml_menu-166">Forum</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/guild" title="" id="dhtml_menu-167">Guild</a></li>
+<li class="leaf last dhtml-menu "><a href="/contact" title="" id="dhtml_menu-168">Contact Us</a></li>
+
+</ul>        </div>
+      	          <div id="search-box">
+          <div id="block-finder-finder_3" class="block block-finder block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div id="finder-block-3" class="finder-block"><div id="finder-block-3-wrapper" class="finder-view-wrapper"><div class="finder-view-3 finder-view"><form action="/search_finder"  accept-charset="UTF-8" method="post" id="finder-form-3">
+<div><div class="finder-form finder-3"><div class="form-item" id="edit-3-wrapper">
+ <label for="edit-3">Search: </label>
+
+ <input type="text" maxlength="128" name="3" id="edit-3" size="60" value="" class="form-text form-autocomplete" />
+</div>
+<input class="finder-autocomplete" type="hidden" id="edit-3-autocomplete" value="http://global.hidden-street.net/finder_autocomplete/autocomplete/3/3" disabled="disabled" /><input type="submit" name="find" id="edit-submit" value="Submit"  class="form-submit" />
+</div><input type="hidden" name="form_build_id" id="form-9de667afc01a757b84ab42e6fdc8cf8b" value="form-9de667afc01a757b84ab42e6fdc8cf8b"  />
+<input type="hidden" name="form_id" id="edit-finder-form-3" value="finder_form_3"  />
+
+</div></form>
+</div></div></div>      </div>
+    </div>
+  </div>  
+</div>
+        </div>
+
+		<script type="text/javascript">
+          $('#edit-3').example('Search for...', {className: 'not-focus'});
+        </script>
+      	</div>
+
+    <div id="main-wrapper">
+      <div id="main-wrapper-t">
+        <div id="main-wrapper-b" class="clear-both">
+          <div id="sidebar-left-and-main">
+                          <div id="sidebar-left">
+                <div id="block-menu-menu-database" class="block block-menu block-1 block-first clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+
+        <ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-171">General</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/experience-table" title="" id="dhtml_menu-181">Experience Table</a></li>
+<li class="leaf last dhtml-menu "><a href="/pet-closeness-table" title="" id="dhtml_menu-192">Pet Closeness Table</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-15281">Tools</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character-avoidance-calculator" title="" id="dhtml_menu-15283">Character Avoidance Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/character-damage-calculator" title="" id="dhtml_menu-15285">Character Damage Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster-avoidance-calculator" title="" id="dhtml_menu-15282">Monster Avoidance Calculator</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster-damage-calculator" title="" id="dhtml_menu-15284">Monster Damage Calculator</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-172">Characters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character/class/admin" title="" id="dhtml_menu-193">Admin</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/adventurers" title="" id="dhtml_menu-1653">Adventurers</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/cygnus-knights" title="" id="dhtml_menu-1654">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/class/guild" title="" id="dhtml_menu-16175">Guild</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/legends" title="" id="dhtml_menu-5111">Legends</a></li>
+<li class="leaf last dhtml-menu "><a href="/character/resistance" title="Resistance" id="dhtml_menu-15274">Resistance</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-174">Equipment</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/eq/accessories" title="" id="dhtml_menu-197">Accessories</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/eq/armours" title="" id="dhtml_menu-196">Armours</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/taming-mob" id="dhtml_menu-15267">Taming Mob</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/weapons" title="" id="dhtml_menu-995">Weapons</a></li>
+<li class="leaf last dhtml-menu "><a href="/eq/monster-card-set" id="dhtml_menu-18898">Monster Card Set</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-173">Items</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/items/useable-items" title="" id="dhtml_menu-199">Useable Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/ores" title="" id="dhtml_menu-200">Ores</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/misc-items" title="" id="dhtml_menu-201">Misc. Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/set-up" title="" id="dhtml_menu-202">Set-up</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/items/maker-items" title="" id="dhtml_menu-3742">Maker Items</a></li>
+<li class="leaf last dhtml-menu "><a href="/items/profession-items" title="" id="dhtml_menu-18796">Profession Items</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-186">Item Synthesis</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-synthesis/common" title="" id="dhtml_menu-203">Common</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/bowman" title="" id="dhtml_menu-205">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/magician" title="" id="dhtml_menu-206">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/pirate" title="" id="dhtml_menu-208">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/thief" title="" id="dhtml_menu-207">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/warrior" title="" id="dhtml_menu-204">Warrior</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/weapon-forging" title="" id="dhtml_menu-209">Weapon Forging</a></li>
+<li class="leaf last dhtml-menu "><a href="/item-synthesis/itcg" title="" id="dhtml_menu-3759">iTCG Forging</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-5091">Item Maker</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-maker/warrior" title="" id="dhtml_menu-5092">Warrior</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/magician" title="" id="dhtml_menu-5093">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/bowman" title="" id="dhtml_menu-5094">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/thief" title="" id="dhtml_menu-5095">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/pirate" title="" id="dhtml_menu-5096">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/etc" title="" id="dhtml_menu-5097">Etc</a></li>
+
+<li class="leaf last dhtml-menu "><a href="/item-maker/useable" title="" id="dhtml_menu-5098">Useable</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-176">Maps</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/map/amoria" title="" id="dhtml_menu-214">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/edelstein" title="" id="dhtml_menu-15537">Edelstein</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ellin" title="" id="dhtml_menu-2287">Ellin</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ereve" title="" id="dhtml_menu-2286">Ereve</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/maple-island" title="" id="dhtml_menu-211">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/masteria" title="" id="dhtml_menu-1413">Masteria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ossyria" title="" id="dhtml_menu-213">Ossyria</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/map/rien" title="Rien" id="dhtml_menu-8255">Rien</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/victoria-island" title="" id="dhtml_menu-212">Victoria Island</a></li>
+<li class="leaf last dhtml-menu "><a href="/map/world-tour" title="" id="dhtml_menu-215">World Tour</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-175">Monsters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/monster/list" id="dhtml_menu-1033">Monster List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/element-weakness-list" id="dhtml_menu-1034">Element Weakness List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/boss-list" title="" id="dhtml_menu-9027">Boss List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/event" id="dhtml_menu-1032">Event Monsters</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/1-10" id="dhtml_menu-990">Level 1-10</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/11-20" id="dhtml_menu-1012">Level 11-20</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/21-30" id="dhtml_menu-1013">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/31-40" id="dhtml_menu-1014">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/41-50" id="dhtml_menu-1015">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/51-60" id="dhtml_menu-1016">Level 51-60</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/61-70" id="dhtml_menu-1017">Level 61-70</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/71-80" id="dhtml_menu-1018">Level 71-80</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/81-90" id="dhtml_menu-1019">Level 81-90</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/91-100" id="dhtml_menu-1020">Level 91-100</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/101-120" id="dhtml_menu-16164">Level 101-120</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/121-140" id="dhtml_menu-16165">Level 121-140</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/141-160" id="dhtml_menu-16166">Level 141-160</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/161-180" id="dhtml_menu-16167">Level 161-180</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster/181-200" id="dhtml_menu-16168">Level 181-200</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-177">NPC &amp; Towns</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/npc/npc-list" title="" id="dhtml_menu-230">NPC List</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/aquaroad" title="" id="dhtml_menu-240">Aquaroad</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ariant" title="" id="dhtml_menu-249">Ariant</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/el-nath" title="" id="dhtml_menu-238">El Nath</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/ellinia" title="" id="dhtml_menu-233">Ellinia</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/henesys" title="" id="dhtml_menu-232">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/herb-town" title="" id="dhtml_menu-248">Herb Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/kerning-city" title="" id="dhtml_menu-235">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/korean-folk-town" title="" id="dhtml_menu-245">Korean Folk Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/leafre" title="" id="dhtml_menu-246">Leafre</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/lith-harbor" title="" id="dhtml_menu-4818">Lith Harbor</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ludibrium" title="" id="dhtml_menu-239">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-kampung-village" title="" id="dhtml_menu-255">Malaysia : Kampung Village</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-trend-zone" title="" id="dhtml_menu-254">Malaysia : Trend Zone</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mu-lung" title="" id="dhtml_menu-247">Mu Lung</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mushroom-shrine" title="" id="dhtml_menu-242">Mushroom Shrine</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/nautilus-port" title="" id="dhtml_menu-250">Nautilus Port</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/new-leaf-city" title="" id="dhtml_menu-256">New Leaf City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/omega-sector" title="" id="dhtml_menu-241">Omega Sector</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/orbis" title="" id="dhtml_menu-237">Orbis</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/perion" title="" id="dhtml_menu-234">Perion</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/showa" title="" id="dhtml_menu-243">Showa</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-boat-quay-town" title="" id="dhtml_menu-251">Singapore : Boat Quay Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-cbd" title="" id="dhtml_menu-252">Singapore : CBD</a></li>
+<li class="leaf last dhtml-menu "><a href="/town/sleepywood" title="" id="dhtml_menu-236">Sleepywood</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/reactor" id="dhtml_menu-18853">Reactor</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-178">Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/quest/list" id="dhtml_menu-5080">Quest List</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/fame" title="" id="dhtml_menu-16162">Quests with Fame</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/repeatable" id="dhtml_menu-17642">Quest with Repeatable</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/events" id="dhtml_menu-1029">Events</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/cygnus-knights" title="" id="dhtml_menu-5078">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/hero-with-lost-memory" title="" id="dhtml_menu-6295">Hero With The Lost Memory</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/new-hero" title="" id="dhtml_menu-15271">New Hero</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/resistance" title="" id="dhtml_menu-16153">Resistance</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/maple-island" id="dhtml_menu-1030">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/1-10" id="dhtml_menu-999">Level 1-10</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/11-20" id="dhtml_menu-1022">Level 11-20</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/21-30" id="dhtml_menu-1023">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/31-40" id="dhtml_menu-1024">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/41-50" id="dhtml_menu-1025">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/51-65" title="" id="dhtml_menu-1027">Level 51-65</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/66-200" id="dhtml_menu-11065">Level 66-200</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-crimsonwood" title="" id="dhtml_menu-6287">Exchange Quest (Crimsonwood)</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-orbis" title="" id="dhtml_menu-266">Exchange Quest (Orbis)</a></li>
+<li class="leaf last dhtml-menu "><a href="/exchange-quest-showa-town" title="" id="dhtml_menu-267">Exchange Quest (Showa)</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-179">Guild Quests</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/guild-quest/sharenian" title="" id="dhtml_menu-268">Sharenian</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-180">Party Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/party-quest/amorian-challenge" title="" id="dhtml_menu-272">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/crimsonwood-keep" title="" id="dhtml_menu-276">Crimsonwood Keep</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ellin-forest" title="" id="dhtml_menu-4848">Ellin Forest</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ghost-ship-in-the-sea-mist" title="" id="dhtml_menu-16158">Ghost Ship in the Sea Mist</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/henesys" title="" id="dhtml_menu-274">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/herb-town" title="" id="dhtml_menu-273">Herb Town</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/party-quest/kerning-city" title="" id="dhtml_menu-269">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ludibrium" title="" id="dhtml_menu-270">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/magatia" title="" id="dhtml_menu-275">Magatia</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival" title="" id="dhtml_menu-277">Monster Carnival</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival-2" title="" id="dhtml_menu-5065">Monster Carnival 2</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/mu-lung-dojo" title="" id="dhtml_menu-5073">Mu Lung Dojo</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/netts-pyramid" title="Nett&#039;s Pyramid Party Quest" id="dhtml_menu-12570">Nett&#039;s Pyramid</a></li>
+<li class="leaf last dhtml-menu "><a href="/party-quest/orbis" title="" id="dhtml_menu-271">Orbis</a></li>
+
+</ul></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-4845">Cash Shop</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/cash-shop/beauty-parlor" title="" id="dhtml_menu-4847">Beauty Parlor</a></li>
+<li class="leaf last dhtml-menu "><a href="/cash-shop/gachapon" title="" id="dhtml_menu-4846">Gachapon</a></li>
+</ul></li>
+</ul>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-1" class="block block-block block-2 clear-both">
+  <div class="block-t">
+
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Affiliates</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <ul>
+
+<li><a href="http://www.sleepywood.net/">Sleepywood.net</a></li>
+<li><a href="http://www.mapletip.com/">MapleTip</a></li>
+<li><a href="http://www.basilmarket.com/">Basil Market</a></li>
+<li><a href="http://aquaroadradio.wordpress.com/">Aqua Road Radio</a></li>
+<li><a href="http://www.perioncorner.com/">Perion Corner</a></li>
+<li><a href="http://www.maple-radio.com/">Maple Radio</a></li>
+<li><a href="http://www.maple-news.com/">Maple News</a></li>
+<li><a href="http://mapledictionary.co.cc/">Maple Dictionary</a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-views-updated-block_1" class="block block-views block-3 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database Updates</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <div class="view view-updated view-id-updated view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+
+                <span class="field-content"><a href="/monster/dark-stump">Dark Stump</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 2.</span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/stump">Stump</a></span>
+
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 1.</span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/green-mushroom">Green Mushroom</a></span>
+  </div>
+
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/shroom">Shroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/orange-mushroom">Orange Mushroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div align="right"><a href="/database-updates">View more</a></div>
+    </div>
+  
+  
+</div>       </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-block-10" class="block block-block block-4 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Donation</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        Have a dollar or two to spare?
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="paypal-donation">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="10638353">
+<input type="image" src="/sites/all/themes/lithharbor/images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<h5><strong>Why should I donate?</strong></h5>
+
+Consider donating to help us with the high server costs of our database!<br />
+<a href="/why-should-i-donate">Read more details &raquo;</a>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-12" class="block block-block block-5 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+
+        <p><a href="http://twitter.com/hiddenstreet"><img src="http://www.hidden-street.net/images/twitter.gif" title="Follow Hidden Street on Twitter!" /></a></p>
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-facebook_fan-0" class="block block-facebook_fan block-6 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("7fee1a8c40ca9e1bbf4f1376d1eddb61");</script><fb:fan profile_id="119198064766791" stream="0" connections="6" logobar="0" width="180" height="260"></fb:fan>      </div>
+
+    </div>
+  </div>  
+</div>
+              </div>
+            
+            <div id="main">
+                              <div id="top-content" class="clear-both">
+                  <div id="block-block-5" class="block block-block block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+
+      
+      <div class="block-content content">
+        <div align="center" style="margin-bottom: 15px;">
+<!--JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918766|0|170|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="300" height="250"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+                </div>
+
+                    
+              <div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a></div></div>              
+              <div id="content">
+                                  <div class="title-t">
+                    <div class="title-b">
+                      <h1 class="title" id="page-title">Bow</h1>
+                    </div>
+                  </div>
+                                                <div class="clear-both"><!-- --></div>
+
+                                                <div id="content-content" class="clear-both">
+                  <div class="view view-weapons view-id-weapons view-display-id-page_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-2337" class="database node clear-block">
+<table id="2337">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow001.gif?1244308449" /></td>
+    <td width="145"><strong>War Bow      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 10</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 25 (23-25)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +20 (20-26)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1,500 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/potted-morning-glory" alt="/tip.php?nid=13381">Potted Morning Glory</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/karl" alt="/tip.php?nid=5141">Karl</a> (3,000 mesos), <a href="/npc/general-mau" alt="/tip.php?nid=11199">General Mau</a> (3,000 mesos).</li>
+
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Synthesized by Vicious of Henesys with 5 Processed Woods, 30 Blue Snail Shells, and 800 mesos</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-2338" class="database node clear-block">
+
+<table id="2338">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/akha.gif?1282633816" /></td>
+    <td width="145"><strong>Akha      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 10</td>
+    <td width="186"><strong>Req Stats: </strong> STR 10, DEX 40</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 30</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +15, Avoidability +2, Speed +1</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Redeemed from MapleStory iTCG online code cards (Set 3: P3TZ).</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-11999" class="database node clear-block">
+<table id="11999">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Bow.png?1278523447" /></td>
+    <td width="145"><strong>Archer&#039;s Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 10</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 35</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +3, Knock-back rate +32</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      100 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>One-of-a-kind.</p>
+
+</li><li><p>Available from the Return of the Explorers Event from 16 June 2010 to 13 July 2010.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-2339" class="database node clear-block">
+<table id="2339">
+
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow002.gif?1244308650" /></td>
+    <td width="145"><strong>Composite Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 15</td>
+    <td width="186"><strong>Req Stats: </strong> STR 20, DEX 40</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 30 (26-34)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +20</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      3,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/lupin" alt="/tip.php?nid=332">Lupin</a>, <a href="/monster/malady" alt="/tip.php?nid=1004">Malady</a>, <a href="/monster/muru" alt="/tip.php?nid=9529">Muru</a>, <a href="/monster/potted-morning-glory" alt="/tip.php?nid=13381">Potted Morning Glory</a>, <a href="/monster/jr-necki" alt="/tip.php?nid=215">Jr. Necki</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/karl" alt="/tip.php?nid=5141">Karl</a> (6,000 mesos), <a href="/npc/general-mau" alt="/tip.php?nid=11199">General Mau</a> (6,000 mesos).</li>
+                    
+          
+                    
+                  </ul>
+
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Synthesized by Vicious of Henesys with 1 Steel, 3 Screws, and 2,000 mesos.</p>
+</li>        </ul>
+      </td>
+
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-9125" class="database node clear-block">
+<table id="9125">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/solomons-unstable-bow.png?1258011600" /></td>
+    <td width="145"><strong>Solomon&#039;s Unstable Bow      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 15</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 20</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +45</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/job/solomons-bow">Solomon's Bow</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>One-of-a-kind.</p>
+</li>        </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-9126" class="database node clear-block">
+<table id="9126">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/solomons-unstable-bow.png?1258011600" /></td>
+
+    <td width="145"><strong>Solomon&#039;s Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 15</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 35</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +45, Accuracy +5</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>Completed Solomon's Bow</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/job/solomons-bow">Solomon's Bow</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>One-of-a-kind.</p>
+</li>        </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-2340" class="database node clear-block">
+<table id="2340">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow003.gif?1244308928" /></td>
+
+    <td width="145"><strong>Hunter&#039;s Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 20</td>
+    <td width="186"><strong>Req Stats: </strong> STR 25, DEX 65</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 35 (33-39)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +25, DEX +1 (1-3)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      5,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/croco" alt="/tip.php?nid=991">Croco</a>, <a href="/monster/zombie-mushmom" alt="/tip.php?nid=548">Zombie Mushmom</a>, <a href="/monster/jr-wraith" alt="/tip.php?nid=312">Jr. Wraith</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/karl" alt="/tip.php?nid=5141">Karl</a> (10,000 mesos), <a href="/npc/general-mau" alt="/tip.php?nid=11199">General Mau</a> (10,000 mesos).</li>
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Synthesized by Vicious of Henesys with 30 Processed Woods, 50 Red Snail Shells, and 3,000 mesos.</p>
+</li>        </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-2341" class="database node clear-block">
+<table id="2341">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow004.gif?1244309071" /></td>
+
+    <td width="145"><strong>Battle Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 25</td>
+    <td width="186"><strong>Req Stats: </strong> STR 30, DEX 80</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 40 (40-44)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+    <td><strong>Job:</strong>
+
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +36</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      10,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/iron-boar" alt="/tip.php?nid=394">Iron Boar</a>, <a href="/monster/streetlight" alt="/tip.php?nid=13467">Streetlight</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (20,000 mesos), <a href="/npc/karl" alt="/tip.php?nid=5141">Karl</a> (20,000 mesos), <a href="/npc/general-mau" alt="/tip.php?nid=11199">General Mau</a> (20,000 mesos).</li>
+
+                    
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Buy for 20,000 mesos at Aqua Road Weapon Store.</p>
+</li><li><p>Synthesized by Vicious of Henesys with 2 Steels, 2 Topazs, 8 Screws, and 5,000 mesos.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-9127" class="database node clear-block">
+<table id="9127">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="37" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/astaroth-bow.png?1258012071" /></td>
+    <td width="145"><strong>Astaroth Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 25</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 50</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +40, DEX +10, Accuracy +5</td>
+    <td><strong>No. of upgrades available:</strong> 10</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>You can feel Astaroth's dark energy.</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Only one item per character.</p>
+</li><li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-2342" class="database node clear-block">
+<table id="2342">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow005.gif?1244309228" /></td>
+    <td width="145"><strong>Ryden      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 35, DEX 95</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 45 (40-50)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +36, DEX +2 (1-4)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      60,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/fire-boar" alt="/tip.php?nid=285">Fire Boar</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/hid" alt="/tip.php?nid=5688">Hid</a> (150,000 mesos), <a href="/npc/mu-tan" alt="/tip.php?nid=6034">Mu Tan</a> (150,000 mesos), <a href="/npc/zaid" alt="/tip.php?nid=5826">Zaid</a> (150,000 mesos), <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (150,000 mesos), <a href="/npc/gong-gong" alt="/tip.php?nid=6033">Gong Gong</a> (150,000 mesos), <a href="/npc/kyle" alt="/tip.php?nid=5996">Kyle</a> (152,500 mesos), <a href="/npc/neri-the-fairy" alt="/tip.php?nid=5859">Neri the Fairy</a> (150,000 mesos), <a href="/npc/chan" alt="/tip.php?nid=6020">Chan</a> (150,000 mesos), <a href="/npc/chiang" alt="/tip.php?nid=8194">Chiang</a> (150,000 mesos).</li>
+
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Buy for 150,000 mesos at Aqua Road Weapon Store.</p>
+</li><li><p>Synthesized by Vicious of Henesys with 5 Steels, 5 Golds, 3 Emeralds, 2 Topazs, 30 Screws, and 30,000 mesos.</p>
+</li><li><p>Forged by Rydole of Toy Factory  with 1 Bow Production Manual, 1 Bow Production Stimulator (optional), 5 Steel Plates, 5 Gold Plates, 3 Emeralds, 3 Topazs, 30 Screws and 15,000 mesos.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-9637" class="database node clear-block">
+<table id="9637">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pink-flower-tube.png?1260856422" /></td>
+    <td width="145"><strong>Pink Flower Tube [Bow]      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 65</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +36, STR +3, DEX +3, INT +3, LUK +3, Speed +5</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/event/2009-pink-flower-floatie">2009 Pink Flower Floatie! (Level 13 and above)</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Attack Speed: Fast (5)</p>
+</li><li><p>One-of-a-kind.</p>
+
+</li><li><p>This item is limited by time.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-12000" class="database node clear-block">
+<table id="12000">
+
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Vaulter.png?1278523513" /></td>
+    <td width="145"><strong>Explorer&#039;s Vaulter 2000      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 55</div>
+                                    </td>
+    <td>
+	            <strong>Durability:</strong> 45000<br />
+
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +5</td>
+
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      200 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>One-of-a-kind.</p>
+</li><li><p>Available from the Return of the Explorers Event from 16 June 2010 to 13 July 2010.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+
+    <div id="node-15614" class="database node clear-block">
+<table id="15614">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/swift-raven-bow.png?1309769036" /></td>
+    <td width="145"><strong>Swift Raven Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> STR 35, DEX 95</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 55</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +30</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/quest/shiny-diamond">Shiny Diamond</a> (6.7000000% chance), <a href="/items/treasures/very-shiny-diamond">Very Shiny Diamond</a> (6.7000000% chance), <a href="/items/treasures/shiniest-diamond">Shiniest Diamond</a> (6.7000000% chance) rewards this item.</li>
+
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-2343" class="database node clear-block">
+<table id="2343">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow006.gif?1244309366" /></td>
+    <td width="145"><strong>Red Viper      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+    <td width="186"><strong>Req Stats: </strong> STR 40, DEX 110</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 50 (45-56)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +30 (30-36)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      100,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/yeti-doll" alt="/tip.php?nid=10682">Yeti Doll</a>, <a href="/monster/baby-boulder-muncher" alt="/tip.php?nid=13454">Baby Boulder Muncher</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/moki" alt="/tip.php?nid=5647">Moki</a> (250,000 mesos), <a href="/npc/hid" alt="/tip.php?nid=5688">Hid</a> (250,000 mesos), <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (250,000 mesos), <a href="/npc/gong-gong" alt="/tip.php?nid=6033">Gong Gong</a> (250,000 mesos), <a href="/npc/scott" alt="/tip.php?nid=5842">Scott</a> (250,000 mesos), <a href="/npc/dr-san" alt="/tip.php?nid=5926">Dr. San</a> (250,000 mesos), <a href="/npc/chan" alt="/tip.php?nid=6020">Chan</a> (250,000 mesos), <a href="/npc/chiang" alt="/tip.php?nid=8194">Chiang</a> (250,000 mesos).</li>
+
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>, <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Buy for 250,000 mesos at El Nath Weapon Store or Aqua Road Weapon Store.</p>
+</li><li><p>Synthesized by Vicious of Henesys with 7 Silvers, 6 Garnets, 3 Opals, 35 Screws, and 40,000 mesos.</p>
+</li><li><p>Forged by Rydole of Toy Factory  with 1 Bow Production Manual, 1 Bow Production Stimulator (optional), 7 Silver Plates, 6 Garnets, 3 Opals, 35 Screws and 20,000 mesos.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-2344" class="database node clear-block">
+<table id="2344">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow007.gif?1244309471" /></td>
+    <td width="145"><strong>Maple Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 48 (44-53)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +30, Speed +7 (6-8)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      50,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/wild-boar" alt="/tip.php?nid=241">Wild Boar</a>, <a href="/monster/pink-teddy" alt="/tip.php?nid=287">Pink Teddy</a>, <a href="/monster/star-pixie" alt="/tip.php?nid=313">Star Pixie</a>, <a href="/monster/chirppy" alt="/tip.php?nid=214">Chirppy</a>, <a href="/monster/royal-guard-pepe" alt="/tip.php?nid=9804">Royal Guard Pepe</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-16 views-row-even">
+
+    <div id="node-9524" class="database node clear-block">
+<table id="9524">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/red%20viper.png?1260551732" /></td>
+    <td width="145"><strong>King Pepe Red Viper      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+    <td width="186"><strong>Req Stats: </strong> STR 40, DEX 110</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 55</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/king-pepe-bowman-box">King Pepe Bowman Box</a> (4.0000000% chance), <a href="/items/treasures/king-pepe-bowman-weapon-box">King Pepe Bowman Weapon Box</a> (10.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-17 views-row-odd">
+    <div id="node-15617" class="database node clear-block">
+<table id="15617">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-ryden.png?1309769210" /></td>
+    <td width="145"><strong>Chaos Ryden      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 35</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 20, DEX 60</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 75</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +45</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-18 views-row-even">
+    <div id="node-2345" class="database node clear-block">
+<table id="2345">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow008.gif?1244309705" /></td>
+    <td width="145"><strong>Vaulter 2000      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 40</td>
+    <td width="186"><strong>Req Stats: </strong> STR 45, DEX 125</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 55 (50-60)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +35</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      150,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/sentinel" alt="/tip.php?nid=263">Sentinel</a>, <a href="/monster/spirit-of-rock" alt="/tip.php?nid=10730">Spirit of Rock</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                      <li class="mouse-hover">Buy this item from <a href="/npc/moki" alt="/tip.php?nid=5647">Moki</a> (375,000 mesos), <a href="/npc/hid" alt="/tip.php?nid=5688">Hid</a> (375,000 mesos), <a href="/npc/calypso" alt="/tip.php?nid=5628">Calypso</a> (375,000 mesos), <a href="/npc/gong-gong" alt="/tip.php?nid=6033">Gong Gong</a> (375,000 mesos), <a href="/npc/scott" alt="/tip.php?nid=5842">Scott</a> (375,000 mesos), <a href="/npc/dr-san" alt="/tip.php?nid=5926">Dr. San</a> (375,000 mesos), <a href="/npc/chan" alt="/tip.php?nid=6020">Chan</a> (375,000 mesos), <a href="/npc/chiang" alt="/tip.php?nid=8194">Chiang</a> (375,000 mesos).</li>
+
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Buy for 375,000 mesos at El Nath Weapon Store or Aqua Road Weapon Store.</p>
+</li><li><p>Synthesized by Vicious of Henesys with 10 Steels, 3 Golds, 1 Black Crystal, 50 Drake's Skulls, 40 Screws, and 80,000 mesos.</p>
+</li><li><p>Forged by Rydole of Toy Factory  with 1 Bow Production Manual, 1 Bow Production Stimulator (optional), 1 Black Crystal, 10 Steel Plates, 3 Gold Plates, 40 Screws, 100 Mechanical Hearts and 40,000 mesos.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+
+  <div class="views-row views-row-19 views-row-odd">
+    <div id="node-2346" class="database node clear-block">
+<table id="2346">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow033.png?1244309791" /></td>
+    <td width="145"><strong>Akhasuma      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 40</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 40, DEX 130</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 60</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +35, Avoidability +6, Speed +3</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Upgraded by Corine at New Leaf City - Town Center by fulfilling the following requirements: 1 Akha, 1 Taru Feather, 5 Wisdom Crystals, 10 Jungle Lilies, and a Level 15+ Pet.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-20 views-row-even">
+    <div id="node-2347" class="database node clear-block">
+<table id="2347">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow019.gif?1244309996" /></td>
+    <td width="145"><strong>Maple Soul Searcher      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 43</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 58 (53-63)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +40, Speed +7 (6-8)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      50,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/tortie" alt="/tip.php?nid=406">Tortie</a>, <a href="/monster/plateon" alt="/tip.php?nid=388">Plateon</a>, <a href="/monster/tree-rod" alt="/tip.php?nid=6271">Tree Rod</a>, <a href="/monster/pink-perfume-2" alt="/tip.php?nid=10708">Pink Perfume [2]</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-21 views-row-odd">
+
+    <div id="node-12480" class="database node clear-block">
+<table id="12480">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="37" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/1st-unwelcome-guest-bow.png?1282715542" /></td>
+    <td width="145"><strong>1st Unwelcome Guest Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 47</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 62</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +40, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      180,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-22 views-row-even">
+    <div id="node-2348" class="database node clear-block">
+
+<table id="2348">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow009.gif?1244310110" /></td>
+    <td width="145"><strong>Olympus      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 50</td>
+    <td width="186"><strong>Req Stats: </strong> STR 55, DEX 160</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 65 (60-71)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +40</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      200,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/dark-fission" alt="/tip.php?nid=8205">Dark Fission</a>, <a href="/monster/bubble-fish" alt="/tip.php?nid=252">Bubble Fish</a>, <a href="/monster/greatest-oldies" alt="/tip.php?nid=10727">Greatest Oldies</a>, <a href="/monster/prime-minister" alt="/tip.php?nid=9975">Prime Minister</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/world-tour/umis-ambition">Umi's Ambition (Level 50 and above)</a> quest.</li>
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-ellinia">Gachapon (Ellinia)</a>, <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>, <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by Rydole of Toy Factory  with 1 Bow Production Manual, 1 Bow Production Stimulator (optional), 1 DEX Crystal, 2 Black Crystals, 10 Steel Plates, 6 Sapphires, 50 Screws and 100,000 mesos.</p>
+</li><li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 100,000 mesos, forge this item with 1 <a href="/items/mineral/bronze-plate">Bronze Plate</a> and 20 <a href="/items/monster-crystals/basic-monster-crystal-1">Basic Monster Crystal 1</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-23 views-row-odd">
+    <div id="node-2349" class="database node clear-block">
+<table id="2349">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="37" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow021.gif?1244310292" /></td>
+    <td width="145"><strong>Cao Cao Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 54</td>
+    <td width="186"><strong>Req Stats: </strong> STR 58, DEX 165</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 72 (67-75)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +2 (1-2), Avoidability +1 (0-2), Speed +5 (5-7), Knock-back rate +40</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      250,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>, <a href="/cash-shop/gachapon/gachapon-new-leaf-city">Gachapon (New Leaf City)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-24 views-row-even">
+    <div id="node-2350" class="database node clear-block">
+<table id="2350">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="38" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow029.gif?1244310409" /></td>
+    <td width="145"><strong>Winkel      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 55</td>
+
+    <td width="186"><strong>Req Stats: </strong> DEX 175</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 65</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> DEX +2, Knock-back rate +70</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by John Barricade (at Lobby) by using Winkel Forging Manual, Bow Production Manual, 50 Screws, 6 DEX Crystals, and 6 Black Crystals</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-25 views-row-odd">
+    <div id="node-9058" class="database node clear-block">
+<table id="9058">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bain-long-bow.png?1257949678" /></td>
+    <td width="145"><strong>Bain Long Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 58</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 77</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +50, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      250,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Once this item is equipped, it cannot be traded.</p>
+</li><li><p>This is an Epic item.</p>
+</li><li><p>Has to 10% chance to create a stun effect for 10 seconds.</p>
+</li>        </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-26 views-row-even">
+    <div id="node-2351" class="database node clear-block">
+<table id="2351">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow010.gif?1244310614" /></td>
+
+    <td width="145"><strong>Asianic Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 60</td>
+    <td width="186"><strong>Req Stats: </strong> STR 65, DEX 185</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 75 (70-80)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +45</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      250,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/scaredy-scarlion" alt="/tip.php?nid=8206">Scaredy Scarlion</a>, <a href="/monster/hodori" alt="/tip.php?nid=423">Hodori</a>, <a href="/monster/wild-kargo" alt="/tip.php?nid=434">Wild Kargo</a>, <a href="/monster/krip" alt="/tip.php?nid=267">Krip</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 125,000 mesos, forge this item with 2 <a href="/items/mineral/steel-plate">Steel Plate</a> and 22 <a href="/items/monster-crystals/basic-monster-crystal-2">Basic Monster Crystal 2</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-27 views-row-odd">
+    <div id="node-14603" class="database node clear-block">
+<table id="14603">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/empresss-fine-asianic-bow.png?1299479732" /></td>
+    <td width="145"><strong>Empress&#039;s Fine Asianic Bow      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 60</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 75</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item is part of the <strong>Empress's Fine Set</strong>. The following equipment are part of the set:<br />
+<a href="/eq/bow/empresss-fine-asianic-bow">Empress&#039;s Fine Asianic Bow</a><br />
+<a href="/eq/gun/empresss-fine-burning-hell">Empress&#039;s Fine Burning Hell</a><br />
+
+<a href="/eq/claw/empresss-fine-dark-gigantic">Empress&#039;s Fine Dark Gigantic</a><br />
+<a href="/eq/dagger/empresss-fine-deadly-fin">Empress&#039;s Fine Deadly Fin</a><br />
+<a href="/eq/wand/empresss-fine-evil-tale">Empress&#039;s Fine Evil Tale</a><br />
+<a href="/eq/gloves/empresss-fine-gloves">Empress&#039;s Fine Gloves</a><br />
+<a href="/eq/crossbow/empresss-fine-golden-crow">Empress&#039;s Fine Golden Crow</a><br />
+<a href="/eq/hat/empresss-fine-hat">Empress&#039;s Fine Hat</a><br />
+
+<a href="/eq/spear/empresss-fine-holy-spear">Empress&#039;s Fine Holy Spear</a><br />
+<a href="/eq/overall/empresss-fine-robe">Empress&#039;s Fine Robe</a><br />
+<a href="/eq/knuckle/empresss-fine-seraphims">Empress&#039;s Fine Seraphims</a><br />
+<a href="/eq/shoes/empresss-fine-shoes">Empress&#039;s Fine Shoes</a><br />
+<a href="/eq/two-handed-sword/empresss-fine-sparta">Empress&#039;s Fine Sparta</a></p>
+</li><li><p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+
+Weapon Def.: +50<br />
+Magic Def.: +50<br />
+MaxHP: +100<br />
+MaxMP: +100<br />
+All Stats: +4</p>
+</li><li><p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +5<br />
+Magic Attack: +5<br />
+
+Weapon Def.: +100<br />
+Magic Def.: +100<br />
+MaxHP: +100<br />
+MaxMP: +100<br />
+All Stats: +6<br />
+Speed +20</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-28 views-row-even">
+    <div id="node-15615" class="database node clear-block">
+<table id="15615">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/swift-raven-bow.png?1309769036" /></td>
+    <td width="145"><strong>Frantic Raven Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 60</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 65, DEX 185</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 80</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +51</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/quest/shiny-diamond">Shiny Diamond</a> (0.4000000% chance), <a href="/items/treasures/very-shiny-diamond">Very Shiny Diamond</a> (0.4000000% chance), <a href="/items/treasures/shiniest-diamond">Shiniest Diamond</a> (0.4000000% chance), <a href="/items/treasures/fancy-diamond">Fancy Diamond</a> (6.7000000% chance), <a href="/items/treasures/very-fancy-diamond">Very Fancy Diamond</a> (6.7000000% chance), <a href="/items/treasures/fanciest-diamond">Fanciest Diamond</a> (6.7000000% chance) rewards this item.</li>
+
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-29 views-row-odd">
+    <div id="node-2352" class="database node clear-block">
+<table id="2352">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow030.gif?1244310814" /></td>
+    <td width="145"><strong>Maple Kandiva Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 64</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 78 (73-82)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +48, Speed +10 (10-12), MaxHP +100 (100-103)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      270,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/miner-zombie" alt="/tip.php?nid=1015">Miner Zombie</a>, <a href="/monster/sage-cat" alt="/tip.php?nid=559">Sage Cat</a>, <a href="/monster/wild-kargo" alt="/tip.php?nid=434">Wild Kargo</a>, <a href="/monster/officer-skeleton" alt="/tip.php?nid=440">Officer Skeleton</a>, <a href="/monster/transformed-yeti" alt="/tip.php?nid=547">Transformed Yeti</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-30 views-row-even">
+
+    <div id="node-2353" class="database node clear-block">
+<table id="2353">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow020.gif?1244310893" /></td>
+    <td width="145"><strong>Bow of Magical Destruction      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 65</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 78 (74-84)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Avoidability +1 (1-2), Knock-back rate +47</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      250,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-31 views-row-odd">
+    <div id="node-15618" class="database node clear-block">
+
+<table id="15618">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-asianic-bow.png?1309769303" /></td>
+    <td width="145"><strong>Chaos Asianic Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 65</td>
+    <td width="186"><strong>Req Stats: </strong> STR 50, DEX 180</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 90</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +11, Knock-back rate +60</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-32 views-row-even">
+    <div id="node-12481" class="database node clear-block">
+
+<table id="12481">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="37" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/2nd-unwelcome-guest-bow.png?1282715791" /></td>
+    <td width="145"><strong>2nd Unwelcome Guest Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 67</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 79</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +49, MaxHP +120, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      285,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-33 views-row-odd">
+    <div id="node-2354" class="database node clear-block">
+
+<table id="2354">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="38" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow011.gif?1244311023" /></td>
+    <td width="145"><strong>Red Hinkel      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> STR 75, DEX 205</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 80 (75-85)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +50, Accuracy +1</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/big-spider" alt="/tip.php?nid=13450">Big Spider</a>, <a href="/monster/cart-bear" alt="/tip.php?nid=13451">Cart Bear</a>, <a href="/monster/cube-slime" alt="/tip.php?nid=293">Cube Slime</a>, <a href="/monster/nine-tailed-fox" alt="/tip.php?nid=583">Nine-Tailed Fox</a>, <a href="/monster/jr-balrog" alt="/tip.php?nid=628">Jr. Balrog</a>, <a href="/monster/snack-bar" alt="/tip.php?nid=10845">Snack Bar</a>, <a href="/monster/rombot" alt="/tip.php?nid=410">Rombot</a>, <a href="/monster/zeno" alt="/tip.php?nid=554">Zeno</a>, <a href="/monster/eliza" alt="/tip.php?nid=659">Eliza</a>, <a href="/monster/seruf-0" alt="/tip.php?nid=405">Seruf</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 150,000 mesos, forge this item with 7 <a href="/items/magic-powders/magic-powder-red">Magic Powder (Red)</a>, 3 <a href="/items/mineral/steel-plate">Steel Plate</a>, and 24 <a href="/items/monster-crystals/basic-monster-crystal-3">Basic Monster Crystal 3</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-34 views-row-even">
+    <div id="node-2355" class="database node clear-block">
+<table id="2355">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="38" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow012.gif?1244311160" /></td>
+    <td width="145"><strong>Blue Hinkel      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 75, DEX 205</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 80 (76-85)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +50, Avoidability +1 (1-2)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/charmer" alt="/tip.php?nid=8209">Charmer</a>, <a href="/monster/blue-king-goblin" alt="/tip.php?nid=575">Blue King Goblin</a>, <a href="/monster/cart-bear" alt="/tip.php?nid=13451">Cart Bear</a>, <a href="/monster/tree-rod" alt="/tip.php?nid=6271">Tree Rod</a>, <a href="/monster/nine-tailed-fox" alt="/tip.php?nid=583">Nine-Tailed Fox</a>, <a href="/monster/rombot" alt="/tip.php?nid=410">Rombot</a>, <a href="/monster/seruf-0" alt="/tip.php?nid=405">Seruf</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 150,000 mesos, forge this item with 7 <a href="/items/magic-powders/magic-powder-blue">Magic Powder (Blue)</a>, 3 <a href="/items/mineral/steel-plate">Steel Plate</a>, and 24 <a href="/items/monster-crystals/basic-monster-crystal-3">Basic Monster Crystal 3</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-35 views-row-odd">
+    <div id="node-2356" class="database node clear-block">
+<table id="2356">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="38" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow013.gif?1244311277" /></td>
+    <td width="145"><strong>Golden Hinkel      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 75, DEX 205</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 80 (76-85)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +50, Speed +10 (8-12)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      300,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/emergency-guard-robot-l" alt="/tip.php?nid=13436">Emergency Guard Robot L</a>, <a href="/monster/froscola" alt="/tip.php?nid=8211">Froscola</a>, <a href="/monster/guard-robot" alt="/tip.php?nid=13438">Guard Robot</a>, <a href="/monster/zeta-gray" alt="/tip.php?nid=381">Zeta Gray</a>, <a href="/monster/racaroni" alt="/tip.php?nid=13457">Racaroni</a>, <a href="/monster/raco" alt="/tip.php?nid=13453">Raco</a>, <a href="/monster/red-porky" alt="/tip.php?nid=376">Red Porky</a>, <a href="/monster/tae-roon" alt="/tip.php?nid=585">Tae Roon</a>, <a href="/monster/tauromacis" alt="/tip.php?nid=571">Tauromacis</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 1 and 150,000 mesos, forge this item with 7 <a href="/items/magic-powders/magic-powder-yellow">Magic Powder (Yellow)</a>, 3 <a href="/items/mineral/steel-plate">Steel Plate</a>, and 24 <a href="/items/monster-crystals/basic-monster-crystal-3">Basic Monster Crystal 3</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-36 views-row-even">
+    <div id="node-2357" class="database node clear-block">
+<table id="2357">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow028.gif?1244311395" /></td>
+    <td width="145"><strong>Andromeda Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 75, DEX 205</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 83</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, DEX +2</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>One of the Glimmer Man's custom weapons, this hybrid bow is powered by an extradimensional essence for high-impact attacks.</p>
+
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>Forged by <a href="/npc/the-glimmer-man">The Glimmer Man</a> at <a href="/map/mini-map/new-leaf-city-town-street-new-leaf-city-town-center">New Leaf City Town Street: New Leaf City - Town Center</a> with 1 <a href="/items/leftover/white-versal-materia">White Versal Materia</a> and 7 <a href="/items/jewel/black-crystal">Black Crystal</a>s to obtain the <a href="/items/leftover/materia-orb">Materia Orb</a>, which should then be brought to <a href="/npc/spindle">Spindle</a> at <a href="/map/mini-map/omega-sector">Omega Sector</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-37 views-row-odd">
+    <div id="node-14610" class="database node clear-block">
+<table id="14610">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="38" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/xerxess-golden-hinkel.png?1299479961" /></td>
+    <td width="145"><strong>Xerxes&#039;s Golden Hinkel      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> STR 75, DEX 205</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 84</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/xerxess-bowman-weapon-box">Xerxes's Bowman Weapon Box</a> (10.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-38 views-row-even">
+    <div id="node-14939" class="database node clear-block">
+<table id="14939">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/maple-pyrope-bow.png?1304573924" /></td>
+    <td width="145"><strong>Maple Pyrope Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 77</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 84</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +56, Speed +13, MaxHP +150</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      37,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/dual-beetle" alt="/tip.php?nid=617">Dual Beetle</a>, <a href="/monster/tae-roon" alt="/tip.php?nid=585">Tae Roon</a>, <a href="/monster/nest-golem" alt="/tip.php?nid=741">Nest Golem</a>, <a href="/monster/oblivion-monk-trainee" alt="/tip.php?nid=6257">Oblivion Monk Trainee</a>, <a href="/monster/nibelung-3" alt="/tip.php?nid=10758">Nibelung [3]</a>, <a href="/monster/6th-anniversary-balloon" alt="/tip.php?nid=14956">6th Anniversary Balloon</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-39 views-row-odd">
+
+    <div id="node-2358" class="database node clear-block">
+<table id="2358">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow014.gif?1244311484" /></td>
+    <td width="145"><strong>Marine Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 85 (81-92)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Accuracy +1 (1-3)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/bellamoa" alt="/tip.php?nid=234">Bellamoa</a>, <a href="/monster/kiyo" alt="/tip.php?nid=275">Kiyo</a>, <a href="/monster/reinforced-mithril-mutae" alt="/tip.php?nid=431">Reinforced Mithril Mutae</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 2 and 245,000 mesos, forge this item with 8 <a href="/items/magic-powders/magic-powder-blue">Magic Powder (Blue)</a>, 3 <a href="/items/mineral/mithril-plate">Mithril Plate</a>, and 26 <a href="/items/monster-crystals/intermediate-monster-crystal-1">Intermediate Monster Crystal 1</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-40 views-row-even">
+    <div id="node-2359" class="database node clear-block">
+<table id="2359">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow015.gif?1244311717" /></td>
+    <td width="145"><strong>Dark Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 85 (81-90)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/freezer" alt="/tip.php?nid=380">Freezer</a>, <a href="/monster/primitive-boar" alt="/tip.php?nid=6274">Primitive Boar</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 10 <a href="/items/crystal/dex-crystal">DEX Crystal</a>, 3 <a href="/items/profession-materials/intermediate-abrasive">Intermediate Abrasive</a>, and 8 <a href="/items/profession-materials/intermediate-item-crystal">Intermediate Item Crystal</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-41 views-row-odd">
+    <div id="node-2360" class="database node clear-block">
+<table id="2360">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow016.gif?1244311804" /></td>
+    <td width="145"><strong>Fire Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 85 (80-90)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Avoidability +1 (0-2)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chief-gray" alt="/tip.php?nid=419">Chief Gray</a>, <a href="/monster/rumo" alt="/tip.php?nid=325">Rumo</a>, <a href="/monster/neo-huroid" alt="/tip.php?nid=1021">Neo Huroid</a>, <a href="/monster/stone-bug" alt="/tip.php?nid=6273">Stone Bug</a>, <a href="/monster/timer" alt="/tip.php?nid=1025">Timer</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 2 and 245,000 mesos, forge this item with 8 <a href="/items/magic-powders/magic-powder-red">Magic Powder (Red)</a>, 3 <a href="/items/mineral/mithril-plate">Mithril Plate</a>, and 26 <a href="/items/monster-crystals/intermediate-monster-crystal-1">Intermediate Monster Crystal 1</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-42 views-row-even">
+    <div id="node-2361" class="database node clear-block">
+<table id="2361">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow017.gif?1244311902" /></td>
+    <td width="145"><strong>Golden Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 85 (81-92)</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Jump +3 (2-4)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chronos" alt="/tip.php?nid=334">Chronos</a>, <a href="/monster/kiyo" alt="/tip.php?nid=275">Kiyo</a>, <a href="/monster/the-book-ghost" alt="/tip.php?nid=1006">The Book Ghost</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/etc/devils-dice">Devil's Dice</a> (0.3311258% chance) rewards this item.</li>
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 2 and 245,000 mesos, forge this item with 8 <a href="/items/magic-powders/magic-powder-yellow">Magic Powder (Yellow)</a>, 3 <a href="/items/mineral/mithril-plate">Mithril Plate</a>, and 26 <a href="/items/monster-crystals/intermediate-monster-crystal-1">Intermediate Monster Crystal 1</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-43 views-row-odd">
+    <div id="node-2362" class="database node clear-block">
+<table id="2362">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow034.png?1244312038" /></td>
+    <td width="145"><strong>Akhamagna      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 70, DEX 240</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 90</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Avoidability +15, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Upgraded by Corine at New Leaf City - Town Center by fulfilling the following requirements: 1 Akhasuma, 2 Taru Feathers, 15 Wisdom Crystals, 50 Jungle Lilies, and a Level 30 Pet.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-44 views-row-even">
+    <div id="node-9053" class="database node clear-block">
+<table id="9053">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-marine-arund.png?1257949201" /></td>
+    <td width="145"><strong>Balrog&#039;s Marine Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Accuracy +1</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-45 views-row-odd">
+    <div id="node-9054" class="database node clear-block">
+<table id="9054">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-fire-arund.png?1257949264" /></td>
+    <td width="145"><strong>Balrog&#039;s Fire Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Avoidability +1</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-46 views-row-even">
+    <div id="node-9055" class="database node clear-block">
+<table id="9055">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-golden-arund.png?1257949324" /></td>
+    <td width="145"><strong>Balrog&#039;s Golden Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Jump +3</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-47 views-row-odd">
+    <div id="node-9056" class="database node clear-block">
+<table id="9056">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-dark-arund.png?1257949388" /></td>
+    <td width="145"><strong>Balrog&#039;s Dark Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 82</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +55, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      350,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-48 views-row-even">
+    <div id="node-14606" class="database node clear-block">
+<table id="14606">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/empresss-brilliant-marine-arund.png?1299479822" /></td>
+    <td width="145"><strong>Empress&#039;s Brilliant Marine Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 80</td>
+    <td width="186"><strong>Req Stats: </strong> STR 85, DEX 225</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 85</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Accuracy +1</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item is part of the <strong>Empress's Brilliant Set</strong>. The following equipment are part of the set:<br />
+
+<a href="/eq/claw/empresss-brilliant-black-mamba">Empress&#039;s Brilliant Black Mamba</a><br />
+<a href="/eq/dagger/empresss-brilliant-dragons-tail">Empress&#039;s Brilliant Dragon&#039;s Tail</a><br />
+<a href="/eq/gloves/empresss-brilliant-gloves">Empress&#039;s Brilliant Gloves</a><br />
+<a href="/eq/hat/empresss-brilliant-hat">Empress&#039;s Brilliant Hat</a><br />
+<a href="/eq/two-handed-sword/empresss-brilliant-heavens-gate">Empress&#039;s Brilliant Heaven&#039;s Gate</a><br />
+
+<a href="/eq/gun/empresss-brilliant-infinitys-wrath">Empress&#039;s Brilliant Infinity&#039;s Wrath</a><br />
+<a href="/eq/bow/empresss-brilliant-marine-arund">Empress&#039;s Brilliant Marine Arund</a><br />
+<a href="/eq/crossbow/empresss-brilliant-marine-raven">Empress&#039;s Brilliant Marine Raven</a><br />
+<a href="/eq/spear/empresss-brilliant-omega-spear">Empress&#039;s Brilliant Omega Spear</a><br />
+<a href="/eq/wand/empresss-brilliant-phoenix-wand">Empress&#039;s Brilliant Phoenix Wand</a><br />
+<a href="/eq/overall/empresss-brilliant-robe">Empress&#039;s Brilliant Robe</a><br />
+
+<a href="/eq/shoes/empresss-brilliant-shoes">Empress&#039;s Brilliant Shoes</a><br />
+<a href="/eq/knuckle/empresss-brilliant-steel-renault">Empress&#039;s Brilliant Steel Renault</a></p>
+</li><li><p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def.: +50<br />
+Magic Def.: +50<br />
+MaxHP: +150<br />
+MaxMP: +150</p>
+
+</li><li><p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +7<br />
+Magic Attack: +7<br />
+Weapon Def.: +150<br />
+Magic Def.: +150<br />
+Speed: +20<br />
+Accuracy +25<br />
+All Stats: +8</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-49 views-row-odd">
+    <div id="node-11417" class="database node clear-block">
+<table id="11417">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Neodark.png?1270685060" /></td>
+    <td width="145"><strong>Neo Dark Arund      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 85</td>
+    <td width="186"><strong>Req Stats: </strong> STR 90, DEX 235</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 88 (86-88)</div>
+                                    </td>
+    <td>
+	            <strong>Durability:</strong> 20000<br />
+
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +10 (8-10)</td>
+
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p><strong>Critical:</strong><br />
+Level 95<br />
+Probability - 10%<br />
+Damage - 10%</p>
+</li><li><p>Only specifically designated scrolls can be used on it.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-50 views-row-even">
+    <div id="node-12482" class="database node clear-block">
+<table id="12482">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="37" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/3rd-unwelcome-guest-bow.png?1282715962" /></td>
+    <td width="145"><strong>3rd Unwelcome Guest Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 87</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 89</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +59, Speed +10</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      390,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-51 views-row-odd">
+    <div id="node-2363" class="database node clear-block">
+<table id="2363">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow022.gif?1244312146" /></td>
+    <td width="145"><strong>Black Metus      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 90</td>
+    <td width="186"><strong>Req Stats: </strong> STR 95, DEX 245</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 90 (89-95)</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Avoidability +5 (4-6), Speed +8, Knock-back rate +60</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      100 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/world-tour/umis-ambition">Umi's Ambition (Level 50 and above)</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-52 views-row-even">
+    <div id="node-2364" class="database node clear-block">
+<table id="2364">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow023.gif?1244312209" /></td>
+    <td width="145"><strong>Blue Metus      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 90</td>
+    <td width="186"><strong>Req Stats: </strong> STR 95, DEX 245</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 90</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Fast (5)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +2</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      100 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-53 views-row-odd">
+    <div id="node-2365" class="database node clear-block">
+
+<table id="2365">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow018.gif?1244312520" /></td>
+    <td width="145"><strong>Metus      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 90</td>
+    <td width="186"><strong>Req Stats: </strong> STR 95, DEX 245</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 90 (85-95)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +60, Speed +11 (10-12)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      400,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/white-mama-monkey-2" alt="/tip.php?nid=11885">White Mama Monkey [2]</a>, <a href="/monster/chimera" alt="/tip.php?nid=665">Chimera</a>, <a href="/monster/enhanced-security-system" alt="/tip.php?nid=13459">Enhanced Security System</a>, <a href="/monster/grizzly" alt="/tip.php?nid=1013">Grizzly</a>, <a href="/monster/dark-rash" alt="/tip.php?nid=605">Dark Rash</a>, <a href="/monster/lycanthrope" alt="/tip.php?nid=631">Lycanthrope</a>, <a href="/monster/hankie" alt="/tip.php?nid=627">Hankie</a>, <a href="/monster/memory-monk-trainee" alt="/tip.php?nid=6249">Memory Monk Trainee</a>, <a href="/monster/castle-golem" alt="/tip.php?nid=14644">Castle Golem </a>, <a href="/monster/crocky-the-gatekeeper" alt="/tip.php?nid=14639">Crocky the Gatekeeper</a>, <a href="/monster/jar" alt="/tip.php?nid=413">Jar</a>, <a href="/monster/gallopera" alt="/tip.php?nid=8215">Gallopera</a>, <a href="/monster/coco" alt="/tip.php?nid=17947">Coco</a>, <a href="/monster/kacchuu-musha" alt="/tip.php?nid=13122">Kacchuu Musha</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 10 <a href="/items/jewel/topaz">Topaz</a>, 3 <a href="/items/profession-materials/intermediate-abrasive">Intermediate Abrasive</a>, and 8 <a href="/items/profession-materials/intermediate-item-crystal">Intermediate Item Crystal</a>.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-54 views-row-even">
+    <div id="node-9057" class="database node clear-block">
+<table id="9057">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/balrogs-metus.png?1257949467" /></td>
+    <td width="145"><strong>Balrog&#039;s Metus      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 90</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 95, DEX 245</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 77</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +60, Speed +12</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+    <td>
+      <strong>Sold for:</strong> 
+      400,000 mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-55 views-row-odd">
+    <div id="node-15616" class="database node clear-block">
+<table id="15616">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/enraged-raven-bow.png?1309769166" /></td>
+    <td width="145"><strong>Enraged Raven Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 90</td>
+
+    <td width="186"><strong>Req Stats: </strong> STR 95, DEX 245</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 95</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +65</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/quest/shiny-diamond">Shiny Diamond</a> (0.4000000% chance), <a href="/items/treasures/very-shiny-diamond">Very Shiny Diamond</a> (0.4000000% chance), <a href="/items/treasures/shiniest-diamond">Shiniest Diamond</a> (0.4000000% chance), <a href="/items/treasures/fancy-diamond">Fancy Diamond</a> (0.7000000% chance), <a href="/items/treasures/very-fancy-diamond">Very Fancy Diamond</a> (0.7000000% chance), <a href="/items/treasures/fanciest-diamond">Fanciest Diamond</a> (0.7000000% chance), <a href="/items/treasures/bright-diamond">Bright Diamond</a> (7.5000000% chance), <a href="/items/treasures/very-bright-diamond">Very Bright Diamond</a> (7.5000000% chance), <a href="/items/treasures/brightest-diamond">Brightest Diamond</a> (7.5000000% chance) rewards this item.</li>
+
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-56 views-row-even">
+    <div id="node-15619" class="database node clear-block">
+<table id="15619">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-metus.png?1309769352" /></td>
+    <td width="145"><strong>Chaos Metus      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 95</td>
+    <td width="186"><strong>Req Stats: </strong> STR 80, DEX 270</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 105</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +12, Knock-back rate +75</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-57 views-row-odd">
+    <div id="node-2366" class="database node clear-block">
+
+<table id="2366">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow024.gif?1244312607" /></td>
+    <td width="145"><strong>Dark Nisrock      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> STR 105, DEX 265</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 95 (91-99)</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +11 (9-12)</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      450,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chief-oblivion-guardian" alt="/tip.php?nid=6259">Chief Oblivion Guardian</a>, <a href="/monster/nibelung-3" alt="/tip.php?nid=10758">Nibelung [3]</a>, <a href="/monster/werewolf" alt="/tip.php?nid=608">Werewolf</a>, <a href="/monster/dual-birk" alt="/tip.php?nid=668">Dual Birk</a>, <a href="/monster/eye-of-time" alt="/tip.php?nid=6247">Eye of Time</a>, <a href="/monster/memory-monk" alt="/tip.php?nid=6248">Memory Monk</a>, <a href="/monster/horntails-head-b" alt="/tip.php?nid=778">Horntail's Head B</a>, <a href="/monster/red-slime-2" alt="/tip.php?nid=10735">Red Slime [2]</a>, <a href="/monster/coco" alt="/tip.php?nid=17947">Coco</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/dragon-riders-bowman-box">Dragon Rider's Bowman Box</a> (1.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/dark-nisrock-recipe">Dark Nisrock Recipe</a>, 10 <a href="/items/jewel/diamond">Diamond</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-58 views-row-even">
+    <div id="node-2367" class="database node clear-block">
+<table id="2367">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow025.gif?1244312880" /></td>
+    <td width="145"><strong>Golden Nisrock      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> STR 105, DEX 165</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 95</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Jump +3</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      450,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chaos-zakum-3" alt="/tip.php?nid=12238">Chaos Zakum [3]</a>, <a href="/monster/giant-centipede" alt="/tip.php?nid=13244">Giant Centipede</a>, <a href="/monster/aufheben" alt="/tip.php?nid=10754">Aufheben</a>, <a href="/monster/zakum3" alt="/tip.php?nid=764">Zakum3</a>, <a href="/monster/lycanthrope" alt="/tip.php?nid=631">Lycanthrope</a>, <a href="/monster/memory-guardian" alt="/tip.php?nid=6250">Memory Guardian</a>, <a href="/monster/mutant-ribbon-pig" alt="/tip.php?nid=16574">Mutant Ribbon Pig</a>, <a href="/monster/snowman" alt="/tip.php?nid=685">Snowman</a>, <a href="/monster/horntails-head-b" alt="/tip.php?nid=778">Horntail's Head B</a>, <a href="/monster/coco" alt="/tip.php?nid=17947">Coco</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/dragon-riders-bowman-box">Dragon Rider's Bowman Box</a> (1.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 2 and 315,000 mesos, forge this item with 10 <a href="/items/magic-powders/magic-powder-yellow">Magic Powder (Yellow)</a>, 4 <a href="/items/mineral/adamantium-plate">Adamantium Plate</a>, and 30 <a href="/items/monster-crystals/intermediate-monster-crystal-3">Intermediate Monster Crystal 3</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-59 views-row-odd">
+    <div id="node-2368" class="database node clear-block">
+<table id="2368">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow026.gif?1244312947" /></td>
+    <td width="145"><strong>White Nisrock      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> STR 105, DEX 265</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 95</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Avoidability +1</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      450,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/chaos-zakum-3" alt="/tip.php?nid=12238">Chaos Zakum [3]</a>, <a href="/monster/nibelung-3" alt="/tip.php?nid=10758">Nibelung [3]</a>, <a href="/monster/soaring-griffey" alt="/tip.php?nid=11403">Soaring Griffey</a>, <a href="/monster/zakum3" alt="/tip.php?nid=764">Zakum3</a>, <a href="/monster/manon" alt="/tip.php?nid=733">Manon</a>, <a href="/monster/griffey" alt="/tip.php?nid=734">Griffey</a>, <a href="/monster/horntails-head-b" alt="/tip.php?nid=778">Horntail's Head B</a>    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/dragon-riders-bowman-box">Dragon Rider's Bowman Box</a> (1.0000000% chance) rewards this item.</li>
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>With the skill <a href="/character/skill/maker">Maker</a> Level 2 and 315,000 mesos, forge this item with 10 <a href="/items/magic-powders/magic-powder-white">Magic Powder (White)</a>, 4 <a href="/items/mineral/adamantium-plate">Adamantium Plate</a>, and 30 <a href="/items/monster-crystals/intermediate-monster-crystal-3">Intermediate Monster Crystal 3</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-60 views-row-even">
+    <div id="node-2369" class="database node clear-block">
+<table id="2369">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="35" height="35" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow031.png?1244313013" /></td>
+    <td width="145"><strong>Crimson Arclancer      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> STR 115, DEX 255</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 95</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> -          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +2, Speed +5</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      1,100,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Forged by <a href="/npc/fiona">Fiona</a> of <a href="/map/mini-map/phantom-forest-dead-mans-gorge">Phantom Forest: Dead Man&#039;s Gorge</a> with 300 <a href="/items/leftover/crimson-wood">Crimson Wood</a>, 75 <a href="/items/leftover/typhon-feather">Typhon Feather</a>, 10 <a href="/items/leftover/crimson-heart">Crimson Heart</a>, 4 <a href="/items/crystal/dex-crystal">DEX Crystal</a>, 1 <a href="/items/leftover/tao-of-shadows">Tao of Shadows</a>, and 1 <a href="/items/leftover/tao-of-sight">Tao of Sight</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-61 views-row-odd">
+    <div id="node-11437" class="database node clear-block">
+<table id="11437">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/barisetter.png?1270708721" /></td>
+    <td width="145"><strong>Barisetter      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 105</td>
+    <td width="186"><strong>Req Stats: </strong> STR 110, DEX 275</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 98</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +68</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      475,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>Only specifically designated scrolls can be used on it.</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                      <li>The treasure <a href="/items/treasures/dragon-riders-bowman-box">Dragon Rider's Bowman Box</a> (2.0000000% chance) rewards this item.</li>
+
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-62 views-row-even">
+    <div id="node-12483" class="database node clear-block">
+<table id="12483">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="37" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/last-unwelcome-guest-bow.png?1282716059" /></td>
+    <td width="145"><strong>Last Unwelcome Guest Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 107</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 99</div>
+                                    </td>
+
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +69, DEX +1, Speed +11</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      480,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-63 views-row-odd">
+    <div id="node-2370" class="database node clear-block">
+<table id="2370">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="36" height="36" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/bow027.gif?1244313087" /></td>
+    <td width="145"><strong>Dragon Shiner Bow      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> STR 115, DEX 285</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 100</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +11, Knock-back rate +70</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      500,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/horntails-head-b" alt="/tip.php?nid=778">Horntail's Head B</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/dragon-shiner-bow-recipe">Dragon Shiner Bow Recipe</a>, 10 <a href="/items/jewel/garnet">Garnet</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-64 views-row-even">
+    <div id="node-8076" class="database node clear-block">
+<table id="8076">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.icon__28.png?1256307714" /></td>
+    <td width="145"><strong>Reverse Engaw      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> STR 125, DEX 305</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 105</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +12, Knock-back rate +75</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      550,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+      <tr>
+      <td colspan="4"><strong>Equipment Level Up Info:</strong> 
+        <ul>
+          <li><p><strong>Level 1</strong> - requires 70 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 2</strong> - requires 75 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 3</strong> - requires 80 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p>When the final level of this item is reached, there's a 10% chance the skill <a href="/character/skill/hurricane">Hurricane</a> will level up by 1.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/reverse-engaw-recipe">Reverse Engaw Recipe</a>, 10 <a href="/items/jewel/black-crystal">Black Crystal</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, 36 <a href="/items/jewel/piece-of-time">Piece of Time</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-65 views-row-odd">
+    <div id="node-8077" class="database node clear-block">
+<table id="8077">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.icon__28.png?1256307714" /></td>
+    <td width="145"><strong>Timeless Engaw      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> STR 125, DEX 305</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 107</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +12, Knock-back rate +75</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      550,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+      <tr>
+      <td colspan="4"><strong>Equipment Level Up Info:</strong> 
+        <ul>
+          <li><p><strong>Level 1</strong> - requires 80 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 2</strong> - requires 90 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 3</strong> - requires 100 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 4</strong> - requires 110 item exp<br />
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p><strong>Level 5</strong> - requires 120 item exp<br />
+
+Increase Weapon Att. between a minimum of 0 and a maximum of 2.<br />
+Increases DEX between a minimum of 1 and a maximum of 2.<br />
+Increases STR between a minimum of 0 and a maximum of 1.</p>
+</li><li><p>When the final level of this item is reached, there's a 10% chance the skill <a href="/character/skill/hurricane">Hurricane</a> will level up by 1.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/timeless-engaw-recipe">Timeless Engaw Recipe</a>, 10 <a href="/items/jewel/black-crystal">Black Crystal</a>, 3 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, 3 <a href="/items/jewel/rock-of-time">Rock of Time</a>, and 8 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-66 views-row-even">
+    <div id="node-14602" class="database node clear-block">
+<table id="14602">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="40" height="40" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/fox-von-leon-bow.png?1299479641" /></td>
+    <td width="145"><strong>Fox Von Leon Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> STR 125, DEX 305</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 109</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</p>
+
+</li><li><p>This item is part of the Fox Von Leon Set. The following equipment are part of the set:<br />
+<a href="/eq/overall/fox-von-leon-battle-suit">Fox Von Leon Battle Suit</a><br />
+<a href="/eq/bow/fox-von-leon-bow">Fox Von Leon Bow</a><br />
+<a href="/eq/cape/fox-von-leon-cape">Fox Von Leon Cape</a><br />
+<a href="/eq/crossbow/fox-von-leon-crossbow">Fox Von Leon Crossbow</a><br />
+<a href="/eq/gloves/fox-von-leon-gloves">Fox Von Leon Gloves</a><br />
+<a href="/eq/hat/fox-von-leon-helmet">Fox Von Leon Helmet</a><br />
+<a href="/eq/shoes/fox-von-leon-war-boots">Fox Von Leon War Boots</a></p>
+</li><li><p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+
+Weapon Def.: +100<br />
+Magic Def.: +100<br />
+Accuracy: +100<br />
+Avoidability: +100<br />
+All Stats: +4</p>
+</li><li><p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack +10<br />
+Magic Attack +10<br />
+
+Weapon Def. +150<br />
+Magic Def. +150<br />
+Speed +10<br />
+Jump +15<br />
+All Stats +6</p>
+</li><li><p><strong>6 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def. +200<br />
+Magic Def. +200<br />
+
+All Stats +10<br />
+STR +4<br />
+DEX +4<br />
+MaxHP +10%<br />
+MaxMP +10%<br />
+Ignore enemy's defense by 30%<br />
+5% chance to hit the enemy with a Level 3 Freeze</p>
+</li>        </ul>
+      </td>
+
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-67 views-row-odd">
+    <div id="node-12484" class="database node clear-block">
+<table id="12484">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="37" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/vip-bow.png?1282716136" /></td>
+    <td width="145"><strong>VIP Bow      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 127</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 115</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Knock-back rate +76, STR +4, DEX +8, Speed +14</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      550,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-68 views-row-even">
+    <div id="node-15613" class="database node clear-block">
+<table id="15613">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="34" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/ipos-bloody-longbow.png?1309768481" /></td>
+    <td width="145"><strong>Ipos Bloody Longbow      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> STR 160, DEX 400</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 111</div>
+
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +4, DEX +8, Accuracy +50, Knock-back rate +75</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +90      </td>
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item is part of the <strong>Ipos Bloody Set</strong>. The following equipment are part of the set:<br />
+<a href="/eq/hat/ipos-bloody-gear">Ipos Bloody Gear</a><br />
+<a href="/eq/cape/ipos-bloody-cape">Ipos Bloody Cape</a><br />
+<a href="/eq/gloves/ipos-bloody-gauntlets">Ipos Bloody Gauntlets</a><br />
+<a href="/eq/overall/ipos-bloody-mail">Ipos Bloody Mail</a><br />
+
+<a href="/eq/shoes/ipos-bloody-boots">Ipos Bloody Boots</a><br />
+<a href="/eq/bow/ipos-bloody-longbow">Ipos Bloody Longbow</a><br />
+<a href="/eq/crossbow/ipos-bloody-crossbow">Ipos Bloody Crossbow</a></p>
+<p><strong>3 equipment</strong> from this set would give the following benefits:<br />
+Weapon Def.: +350<br />
+Magic Def.: +350</p>
+<p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+
+All Stats: +10<br />
+PVP Damage: +4%</p>
+<p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+PVP Damage: +5%<br />
+MaxHP: +15%<br />
+MaxMP: +15%</p>
+<p><strong>6 equipment</strong> from this set would give the following benefits:<br />
+
+All Stats: +15<br />
+PVP Damage: +6%</p>
+</li><li><p>This item can be crafted by a Blacksmith with 1 <a href="/items/recipes-for-weapons/ipos-bloody-long-bow-recipe">Ipos Bloody Long Bow Recipe</a>, 2 <a href="/items/mineral/lidium">Lidium</a>, 1 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, 8 <a href="/items/crystal/luk-crystal">LUK Crystal</a>, 30 <a href="/items/leftover/gallant-emblem">Gallant Emblem</a>, and 8 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-69 views-row-odd views-row-last">
+    <div id="node-15612" class="database node clear-block">
+<table id="15612">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="38" height="38" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/falcon-wing-composite-bow.png?1309768407" /></td>
+    <td width="145"><strong>Falcon Wing Composite Bow      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 140</td>
+    <td width="186"><strong>Req Stats: </strong> STR 170, DEX 420</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 128</div>
+                                    </td>
+    <td>
+	        	        <strong>Att. Speed:</strong> Normal (6)          </td>
+
+    <td><strong>Job:</strong>
+    Bowman    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +20, DEX +35, Accuracy +100, Knock-back rate +75</td>
+    <td><strong>No. of upgrades available:</strong> 8</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +100      </td>
+
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/cygnus" alt="/tip.php?nid=17234">Cygnus</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item is part of the <strong>Falcon Wing Set</strong>. The following equipment are part of the set:<br />
+
+<a href="/eq/hat/falcon-wing-sentinel-cap">Falcon Wing Sentinel Cap</a><br />
+<a href="/eq/cape/falcon-wing-sentinel-cape">Falcon Wing Sentinel Cape</a><br />
+<a href="/eq/gloves/falcon-wing-sentinel-gloves">Falcon Wing Sentinel Gloves</a><br />
+<a href="/eq/overall/falcon-wing-sentinel-suit">Falcon Wing Sentinel Suit</a><br />
+<a href="/eq/shoes/falcon-wing-sentinel-boots">Falcon Wing Sentinel Boots</a><br />
+<a href="/eq/bow/falcon-wing-composite-bow">Falcon Wing Composite Bow</a><br />
+<a href="/eq/crossbow/falcon-wing-heavy-crossbow">Falcon Wing Heavy Crossbow</a></p>
+<p><strong>2 equipment</strong> from this set would give the following benefits:<br />
+
+Weapon Def.: +300<br />
+Magic Def.: +300<br />
+Avoidability: +200<br />
+Accuracy: +200</p>
+<p><strong>3 equipment</strong> from this set would give the following benefits:<br />
+MaxHP: +15%<br />
+MaxMP: +15%</p>
+<p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+
+Weapon Attack: +15<br />
+Reduce the duration of all status abnormalities by 2 seconds.</p>
+<p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+All Stats: +20<br />
+All Skills: +2 skill levels</p>
+<p><strong>6 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +30<br />
+
+Increase your damage by 30% against bosses.</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                 </div>
+
+              </div>
+      
+              
+              <div id="bottom-content">
+                                  <div id="block-block-13" class="block block-block block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <!--JavaScript Tag // Tag for network 5223: Gamer DNA Media // Website: HiddenStreet // Page: Global.hidden-Street // Placement: Global.hidden-Street-Site Skin-1 x 1 (1825691) // created at: Jan 13, 2011 10:36:22 AM-->
+<script language="javascript"><!--
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn/3.0/5223/1825691/0/16/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp=[group];misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" target="_blank"><img src="http://helios.gamerdna.com/adserv/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" border="0" width="1" height="1"></a></noscript>
+
+<!-- End of JavaScript Tag -->      </div>
+    </div>
+  </div>  
+</div>
+                                <div id="back-to-top"><a href="#top">Top</a></div>
+              </div>
+            </div>
+
+            <div class="clear-both"><!-- --></div>
+
+          </div>
+
+                      <div id="sidebar-right">
+              <div id="block-block-4" class="block block-block block-1 block-first clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Sponsors</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <div align="center">
+<!-- JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918762|0|154|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="160" height="600"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+
+  </div>  
+</div>
+<div id="block-user-3" class="block block-user block-2 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Who's online</h2>
+          </div>
+
+        </div>
+      
+      <div class="block-content content">
+        There are currently <em>0 users</em> and <em>772 guests</em> online.      </div>
+    </div>
+  </div>  
+
+</div>
+<div id="block-views-quote-block_1" class="block block-views block-3 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div class="view view-quote view-id-quote view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field-field-quote-value">
+                <div class="field-content">We are not the GameMasters (GM) for MapleStory.</div>
+
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>       </div>
+    </div>
+  </div>  
+</div>
+            </div>
+          
+          <div class="clear-both"><!-- --></div>
+
+        </div>
+      </div>
+    </div>
+
+          <div id="footer">
+        <div id="footer-message">
+          Copyright &copy; 2004-2011 Hidden Street. <a href="/privacy-policy">Privacy Policy</a><br /><br />
+
+MapleStory and any related images and content are copyrighted by Nexon.
+<br /><br />
+Hidden Street is a not-for-profit fansite set up for the sole purpose of providing cohesive and comprehensive information to MapleStory gamers. Advertisements found in this site are to support server and related costs of maintaining this website.        </div>
+      </div>
+      </div>
+</div>
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_41ef61120bf2352553be89269f538c45.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+//--><!]]>
+</script>
+
+<!-- COMSCORE -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+
+</script>
+<script type="text/javascript">
+COMSCORE.beacon({
+	c1:2,
+	c2:"6885237",
+	c3:"",
+	c4:"",
+	c5:"",
+	c6:"",
+	c15:""
+});
+</script>
+<noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=6885237&c3=&c4=&c5=&c6=&c15=&cj=1" /></noscript>
+<!-- /COMSCORE -->
+</body>
+</html>

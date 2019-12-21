@@ -1,0 +1,18 @@
+int32 *_SUB_SORT_INSERTION_STR_LONG_SORTX=NULL;
+if(_SUB_SORT_INSERTION_STR_LONG_SORTX==NULL){
+_SUB_SORT_INSERTION_STR_LONG_SORTX=(int32*)mem_static_malloc(4);
+*_SUB_SORT_INSERTION_STR_LONG_SORTX=0;
+}
+int32 *_SUB_SORT_INSERTION_STR_LONG_SORTY=NULL;
+if(_SUB_SORT_INSERTION_STR_LONG_SORTY==NULL){
+_SUB_SORT_INSERTION_STR_LONG_SORTY=(int32*)mem_static_malloc(4);
+*_SUB_SORT_INSERTION_STR_LONG_SORTY=0;
+}
+int64 fornext_value8396;
+int64 fornext_finalvalue8396;
+int64 fornext_step8396;
+uint8 fornext_step_negative8396;
+int64 fornext_value8398;
+int64 fornext_finalvalue8398;
+int64 fornext_step8398;
+uint8 fornext_step_negative8398;

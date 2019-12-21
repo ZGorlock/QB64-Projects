@@ -1,0 +1,4 @@
+if(oldstr7282){
+if(oldstr7282->fixed)qbs_set(oldstr7282,_FUNC_SPRITESHEETLOAD_STRING_FILENAME);
+qbs_free(_FUNC_SPRITESHEETLOAD_STRING_FILENAME);
+}

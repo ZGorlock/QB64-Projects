@@ -1,0 +1,5 @@
+int8 *_FUNC_WEEK_BYTE_WEEK=NULL;
+if(_FUNC_WEEK_BYTE_WEEK==NULL){
+_FUNC_WEEK_BYTE_WEEK=(int8*)mem_static_malloc(1);
+*_FUNC_WEEK_BYTE_WEEK=0;
+}

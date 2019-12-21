@@ -1,0 +1,4 @@
+if(oldstr7112){
+if(oldstr7112->fixed)qbs_set(oldstr7112,_FUNC_CHECK_STRING_INSTRING);
+qbs_free(_FUNC_CHECK_STRING_INSTRING);
+}

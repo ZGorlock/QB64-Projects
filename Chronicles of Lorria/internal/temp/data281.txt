@@ -1,0 +1,15 @@
+int32 fornext_value7309;
+int32 fornext_finalvalue7309;
+int32 fornext_step7309;
+uint8 fornext_step_negative7309;
+int16 pass7310;
+int16 pass7311;
+int16 *_SUB_SHEETFREE_INTEGER_CHECKSPRITES=NULL;
+if(_SUB_SHEETFREE_INTEGER_CHECKSPRITES==NULL){
+_SUB_SHEETFREE_INTEGER_CHECKSPRITES=(int16*)mem_static_malloc(2);
+*_SUB_SHEETFREE_INTEGER_CHECKSPRITES=0;
+}
+int32 fornext_value7313;
+int32 fornext_finalvalue7313;
+int32 fornext_step7313;
+uint8 fornext_step_negative7313;

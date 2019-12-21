@@ -1,0 +1,527 @@
+DIM getnewgamemenuframe AS _BYTE
+DIM newprofile AS character
+newprofile.file = ""
+newprofile.name = ""
+newprofile.race = ""
+newprofile.gender = ""
+newprofile.class = ""
+newprofile.str = 0
+newprofile.dex = 0
+newprofile.int = 0
+newprofile.wis = 0
+newprofile.con = 0
+newprofile.chr = 0
+newprofile.alignment = ""
+newprofile.faction = ""
+REDIM newgamepass(8) AS _UNSIGNED _BYTE
+REDIM newgamemenuslides(8) AS STRING
+OPEN "resource\data\newgamemenuslide.txt" FOR INPUT AS #1
+FOR getnewgamemenuframe = 1 TO 8
+    LINE INPUT #1, newgamemenuslides$(getnewgamemenuframe)
+NEXT getnewgamemenuframe
+CLOSE #1
+
+newgamenameinit:
+newprofile.name = ""
+newgamepass(1) = 1
+newgamename:
+REDIM racehave(0) AS _UNSIGNED INTEGER
+CALL resetkeyboard
+CALL cleartextbox(text$(), 1)
+instructiontext = addtotextbox(text$(), 1, instruction$(1), maxchars(0))
+CALL cleartextbox(text$(), 15)
+oldClick = 0
+Errorflag = 0
+DO
+    _LIMIT setting.lps
+    GOSUB resetscreen
+    CALL cleartextbox(text$(), 2)
+    newtext = addtotextbox(text$(), 2, CHR$(255) + RTRIM$(newprofile.name), maxchars((NAME_MAXLEN + 2) * _FONTWIDTH) + 2)
+    CALL textbox(2, 183, 128, ((NAME_MAXLEN + 2) * _FONTWIDTH) + 2, 0, 0, 1, 0, newtext, 0, 0, ctorgb(15), ctorgb(0), ctorgb(15), text$(), 2)
+    CALL textbox(1, 0, 0, 0, 0, 0, -1, 0, instructiontext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 1)
+    IF Errorflag <> 0 THEN
+        errortext = addtotextbox(text$(), 15, errormessage$(ABS(Errorflag)), maxchars(0))
+        CALL textbox(0, 0, 0, 0, 1, 0, -1, 0, errortext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 15)
+    END IF
+    SELECT CASE newgamemenubuttons(1, -1, newgamepass(2))
+        CASE 1
+            IF LEN(RTRIM$(newprofile.name)) >= NAME_MINLEN AND LEN(RTRIM$(newprofile.name)) <= NAME_MAXLEN THEN GOTO newgamerace
+    END SELECT
+    Escact = 1
+    GOSUB getinput
+    CALL keyboard(96, 160, keybd())
+    IF Isfg THEN
+        IF Edk AND newgamepass(8) = 1 THEN GOTO newgamereview
+        IF Dlk THEN GOTO newgamenameinit
+        IF K$ > "" THEN
+errorflag = 0
+            SELECT CASE ASC(K$)
+                CASE 8
+                    IF LEN(RTRIM$(newprofile.name)) THEN newprofile.name = LEFT$(newprofile.name, LEN(RTRIM$(newprofile.name)) - 1)
+                CASE 13
+                    IF LEN(RTRIM$(newprofile.name)) >= NAME_MINLEN AND LEN(RTRIM$(newprofile.name)) <= NAME_MAXLEN THEN EXIT DO
+                    IF LEN(RTRIM$(newprofile.name)) = 0 THEN
+                        Errorflag = -1
+                    ELSE IF LEN(RTRIM$(newprofile.name)) < NAME_MINLEN THEN
+                            Errorflag = -2
+                        END IF
+                    END IF
+                CASE ELSE
+                    IF K$ = CHR$(32) THEN K$ = CHR$(255)
+                    IF LEN(RTRIM$(newprofile.name)) < NAME_MAXLEN THEN
+                        newprofile.name = RTRIM$(newprofile.name) + K$
+                    ELSE
+                        Errorflag = -3
+                    END IF
+            END SELECT
+        END IF
+        IF Khit THEN
+errorflag = 0
+            SELECT CASE Khit
+                CASE 8
+                    IF LEN(RTRIM$(newprofile.name)) THEN newprofile.name = LEFT$(newprofile.name, LEN(RTRIM$(newprofile.name)) - 1)
+                CASE 13
+                    IF LEN(RTRIM$(newprofile.name)) >= NAME_MINLEN AND LEN(RTRIM$(newprofile.name)) <= NAME_MAXLEN THEN EXIT DO
+                    IF LEN(RTRIM$(newprofile.name)) = 0 THEN
+                        Errorflag = -1
+                    ELSE IF LEN(RTRIM$(newprofile.name)) < NAME_MINLEN THEN
+                            Errorflag = -2
+                        END IF
+                    END IF
+                CASE ELSE
+                    IF Khit = 32 THEN Khit = 255
+                    IF LEN(RTRIM$(newprofile.name)) < NAME_MAXLEN THEN
+                        newprofile.name = RTRIM$(newprofile.name) + CHR$(Khit)
+                    ELSE
+                        Errorflag = -3
+                    END IF
+            END SELECT
+        END IF
+    END IF
+    GOSUB printframe
+LOOP
+
+
+'change newgamepass from 5 to 3, make sure saverace$ works
+
+newgameraceinit:
+DIM getracelines AS _UNSIGNED _BYTE
+DIM racelines AS _UNSIGNED _BYTE
+newprofile.race = ""
+racelines = 0
+FOR getracelines = 1 TO RACES_NUM
+    IF INSTR(setting.races, CHR$(96 + getracelines)) AND addtotextbox(text$(), 14, racedescription$(getracelines), maxchars(0)) > racelines THEN racelines = addtotextbox(text$(), 14, racedescription$(getracelines), maxchars(0))
+NEXT getracelines
+CALL cleartextbox(text$(), 14)
+newgamepass(2) = 1
+newgamerace:
+DIM saveactiverace AS _BIT
+DIM selecting AS _BIT
+DIM activerace AS _UNSIGNED _BYTE
+DIM findactive AS _UNSIGNED _BYTE
+DIM haverace AS _UNSIGNED _BYTE
+DIM putboxes AS _UNSIGNED _BYTE
+DIM races AS _UNSIGNED _BYTE
+DIM boxroom AS _UNSIGNED INTEGER
+DIM boxwidth AS SINGLE
+DIM activeracestr AS STRING
+DIM saverace AS STRING
+REDIM hexp(0, 0) AS SINGLE
+REDIM racehave(RACES_NUM) AS _UNSIGNED INTEGER
+races = 0
+FOR haverace = 1 TO RACES_NUM
+    IF INSTR(setting.races, CHR$(96 + haverace)) THEN
+        races = races + 1
+        racehave(races) = haverace
+    END IF
+NEXT haverace
+REDIM _PRESERVE racehave(races) AS _UNSIGNED INTEGER
+boxwidth = (SCRX - (20 * (races + 1))) / races
+CALL cleartextbox(text$(), 1)
+instructiontext = addtotextbox(text$(), 1, instruction$(2), maxchars(0))
+CALL cleartextbox(text$(), 15)
+oldClick = 0
+savemousex = 0
+sacemousey = 0
+Errorflag = 0
+DO
+    _LIMIT setting.lps
+    GOSUB resetscreen
+    CALL textbox(1, 0, 0, 0, 0, 0, -1, 0, instructiontext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 1)
+    newtext = 0
+    IF activeracestr$ > "" THEN
+        activerace = raceloc(activeracestr$, races$())
+        newtext = addtotextbox(text$(), 2, racedescription$(activerace), maxchars(0))
+    END IF
+    CALL textbox(0, 0, 0, 0, 1, 0, racelines, 0, newtext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 2)
+    IF Errorflag <> 0 THEN
+        errortext = addtotextbox(text$(), 15, errormessage$(ABS(Errorflag)), maxchars(0))
+        CALL textbox(0, 0, 0, 0, 1, 0, -1, 0, errortext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 15)
+    END IF
+    IF NOT saveactiverace THEN activerace = 0
+    FOR findactive = 1 TO races
+        IF (NOT saveactiverace) OR (Mousedata(1) <> savemousex OR Mousedata(2) <> savemousey) THEN
+            IF isonbox(Mousedata(1), Mousedata(2), (findactive * 20) + ((findactive - 1) * boxwidth), 140, (findactive * 20) + ((findactive - 1) * boxwidth) + boxwidth, 340) THEN
+                activerace = findactive
+                saveactiverace = 0
+            END IF
+            savemousex = Mousedata(1)
+            savemousey = Mousedata(2)
+        END IF
+    NEXT findactive
+    activeracestr$ = races$(racehave(activerace))
+    FOR putboxes = 1 TO races
+        LINE ((putboxes * 20) + ((putboxes - 1) * boxwidth), 140)-STEP(boxwidth, 200), ctorgb(15), B
+        boxroom = boxwidth - 16
+        IF boxroom > 152 THEN boxroom = 152
+        LINE ((putboxes * 20) + ((putboxes - 1) * boxwidth) + ((boxwidth - boxroom) / 2), 140 + ((168 - boxroom) / 2))-STEP(boxroom, boxroom), ctorgb(15), B
+        LINE ((putboxes * 20) + ((putboxes - 1) * boxwidth) + ((boxwidth - (LEN(races$(racehave(putboxes))) * _FONTWIDTH)) / 2) - 3, 307)-STEP((LEN(races$(racehave(putboxes))) * _FONTWIDTH) + 4, 16), ctorgb(15), B
+        IF activerace = putboxes THEN PAINT ((putboxes * 20) + ((putboxes - 1) * boxwidth) + 1, 141), ctorgb(8), ctorgb(15)
+        IF RTRIM$(newprofile.race) = races$(racehave(putboxes)) THEN PAINT ((putboxes * 20) + ((putboxes - 1) * boxwidth) + 1, 141), ctorgb(7), ctorgb(15)
+        _PRINTSTRING ((putboxes * 20) + ((putboxes - 1) * boxwidth) + ((boxwidth - (LEN(races$(racehave(putboxes))) * _FONTWIDTH)) / 2), 308), races$(racehave(putboxes))
+    NEXT putboxes
+    SELECT CASE newgamemenubuttons(2, newgamepass(1), newgamepass(5)) ''''''''''''''''''''''''''
+        CASE -1
+            GOTO newgamename
+        CASE 1
+            IF newprofile.race > "" THEN
+                IF RTRIM$(newprofile.race) = saverace$ THEN
+                    GOTO newgamestats '''''''''''''''''''''''
+                ELSE
+                    GOTO newgamestatsinit ''''''''''''''''''''''''''''
+                END IF
+            ELSE
+                Errorflag = -4
+            END IF
+    END SELECT
+    Escact = 1
+    GOSUB getinput
+    IF Isfg THEN
+        IF Edk AND newgamepass(8) = 1 THEN GOTO newgamereview
+        IF Dlk THEN GOTO newgameraceinit
+        IF Rtn THEN
+            IF activeracestr$ > "" THEN
+                newprofile.race = activeracestr$
+                IF newgamepass(5) THEN '''''''''''''''''''
+                    IF RTRIM$(newprofile.race) = saverace$ THEN
+                        GOTO newgamestats ''''''''''''''''''''''''''''
+                    ELSE
+                        GOTO newgamestatsinit ''''''''''''''''''''''''''''
+                    END IF
+                ELSE
+                    EXIT DO
+                END IF
+            ELSE
+                Errorflag = -4
+            END IF
+        END IF
+        IF Akey(2) THEN
+            saveactiverace = -1
+            IF activerace THEN
+                activerace = activerace - 1
+                IF activerace < 1 THEN activerace = races
+            ELSE
+                IF newprofile.race > "" THEN
+                    activerace = raceloc(RTRIM$(newprofile.race), races$()) - 1
+                    IF activerace < 1 THEN activerace = races
+                ELSE
+                    activerace = races
+                END IF
+            END IF
+        END IF
+        IF Akey(3) THEN
+            saveactiverace = -1
+            IF activerace THEN
+                activerace = activerace + 1
+                IF activerace > races THEN activerace = 1
+            ELSE
+                IF newprofile.race > "" THEN
+                    activerace = raceloc(RTRIM$(newprofile.race), races$()) + 1
+                    IF activerace > races THEN activerace = 1
+                ELSE
+                    activerace = 1
+                END IF
+            END IF
+        END IF
+        IF Click AND activeracestr$ > "" THEN
+            newprofile.race = activeracestr$
+            selecting = -1
+        END IF
+        IF Click AND oldClick AND selecting = -1 THEN
+            IF activeracestr$ <> RTRIM$(newprofile.race) THEN
+                newprofile.race = ""
+                selecting = 0
+            END IF
+        END IF
+        IF (NOT Click) AND oldClick AND selecting = -1 THEN
+            selecting = 0
+            IF newgamepass(5) THEN ''''''''''''''''''''''''''''
+                IF RTRIM$(newprofile.race) = saverace$ THEN
+                    GOTO newgamestats ''''''''''''''''''''''''''''
+                ELSE
+                    GOTO newgamestatsinit ''''''''''''''''''''''''''''
+                END IF
+            ELSE
+                EXIT DO
+            END IF
+        END IF
+        oldClick = Click
+    END IF
+    GOSUB printframe
+LOOP
+
+
+
+
+
+'gender
+
+
+'profession
+
+
+
+
+
+'change newgamepass from 3 to 4
+'add errors
+
+newgamestatsinit:
+DIM allocatestats AS _BYTE
+DIM gethexp AS _UNSIGNED _BYTE
+DIM getstatlines AS _UNSIGNED _BYTE
+DIM statlines AS _UNSIGNED _BYTE
+REDIM primestat(PRIMESTATS_NUM) AS _BYTE
+CALL getminprimebasestats(RTRIM$(newprofile.race), primestat())
+allocatestats = PRIMESTATS_ALLOCATABLE
+saverace$ = RTRIM$(newprofile.race)
+statlines = 0
+FOR getstatlines = 1 TO PRIMESTATS_NUM
+    IF addtotextbox(text$(), 14, primestatdescription$(getstatlines), maxchars(0)) > statlines THEN statlines = addtotextbox(text$(), 14, primestatdescription$(getstatlines), maxchars(0))
+NEXT getstatlines
+CALL cleartextbox(text$(), 14)
+newgamepass(5) = 1
+newgamestats:
+DIM activeprimestat AS _BYTE
+DIM astatbutton AS _BYTE
+DIM pstatbutton AS _BYTE
+DIM primestatloc AS _BYTE
+DIM primestatpoint AS _BYTE
+DIM savestatbutton AS _BYTE
+DIM statbutton AS _BYTE
+DIM checkactivestat AS _UNSIGNED _BYTE
+DIM checkprimestatrange AS _UNSIGNED _BYTE
+DIM checkstatbutton AS _UNSIGNED _BYTE
+DIM connectsetpoints AS _UNSIGNED _BYTE
+DIM crosshex AS _UNSIGNED _BYTE
+DIM drawsetpoints AS _UNSIGNED _BYTE
+DIM getsetpoints AS _UNSIGNED _BYTE
+DIM hexlabels AS _UNSIGNED _BYTE
+DIM linechart AS _UNSIGNED _BYTE
+DIM primestattable AS _UNSIGNED _BYTE
+DIM statprintx AS SINGLE
+DIM statprinty AS SINGLE
+DIM symbolprintx AS SINGLE
+DIM allocatestatsprint AS STRING
+DIM primestatprint AS STRING
+DIM symbolprint AS STRING
+REDIM racehave(0) AS _UNSIGNED INTEGER
+REDIM hexp(6, 2) AS SINGLE
+REDIM setprimestatpoint(6, 2) AS SINGLE
+FOR gethexp = 1 TO 6
+    hexp(gethexp, 1) = pointoncirclex(180, 240, 150, degtorad(gethexp * 60 + 30))
+    hexp(gethexp, 2) = pointoncircley(180, 240, 150, degtorad(gethexp * 60 + 30))
+NEXT gethexp
+CALL cleartextbox(text$(), 1)
+instructiontext = addtotextbox(text$(), 1, instruction$(5), maxchars(0))
+oldClick = 0
+Errorflag = 0
+DO
+    _LIMIT setting.lps
+    GOSUB resetscreen
+    CALL HEXAGON(180, 240, 150, ctorgb(15))
+    FOR crosshex = 1 TO 3
+        LINE (hexp(crosshex, 1), hexp(crosshex, 2))-(hexp(crosshex + 3, 1), hexp(crosshex + 3, 2)), ctorgb(8)
+    NEXT crosshex
+    FOR hexlabels = 1 TO 6
+        SELECT CASE hexlabels
+            CASE 1
+                statprintx = hexp(hexlabels, 1) - 12
+                statprinty = hexp(hexlabels, 2) + 2
+            CASE 2
+                statprintx = hexp(hexlabels, 1) - 26
+                statprinty = hexp(hexlabels, 2) - 8
+            CASE 3
+                statprintx = hexp(hexlabels, 1) - 26
+                statprinty = hexp(hexlabels, 2) - 8
+            CASE 4
+                statprintx = hexp(hexlabels, 1) - 12
+                statprinty = hexp(hexlabels, 2) - 13
+            CASE 5
+                statprintx = hexp(hexlabels, 1) + 3
+                statprinty = hexp(hexlabels, 2) - 8
+            CASE 6
+                statprintx = hexp(hexlabels, 1) + 3
+                statprinty = hexp(hexlabels, 2) - 8
+        END SELECT
+        primestatloc = primestathextoloc(hexlabels)
+        _PRINTSTRING (statprintx, statprinty), primestatname$(primestatloc)
+    NEXT hexlabels
+    FOR getsetpoints = 1 TO 6
+        primestatpoint = primestathextoloc(getsetpoints)
+        setprimestatpoint(getsetpoints, 1) = pointoncirclex(180, 240, (150 * (primestat(primestatpoint) / PRIMESTATS_MAX)), degtorad(getsetpoints * 60 + 30))
+        setprimestatpoint(getsetpoints, 2) = pointoncircley(180, 240, (150 * (primestat(primestatpoint) / PRIMESTATS_MAX)), degtorad(getsetpoints * 60 + 30))
+    NEXT getsetpoints
+    FOR drawsetpoints = 1 TO 6
+        connectsetpoints = drawsetpoints + 1
+        IF connectsetpoints = 7 THEN connectsetpoints = 1
+        LINE (setprimestatpoint(drawsetpoints, 1), setprimestatpoint(drawsetpoints, 2))-(setprimestatpoint(connectsetpoints, 1), setprimestatpoint(connectsetpoints, 2)), ctorgb(15)
+    NEXT drawsetpoints
+    allocatestatsprint$ = ""
+    IF allocatestats < 10 THEN allocatestatsprint$ = allocatestatsprint$ + "0"
+    allocatestatsprint$ = allocatestatsprint$ + TRIMnum$(allocatestats)
+    _PRINTSTRING (476, 171), allocatestatsprint$
+    FOR primestattable = 1 TO PRIMESTATS_NUM
+        primestatprint$ = ""
+        IF primestat(primestattable) < 10 THEN primestatprint$ = "0"
+        primestatprint$ = primestatprint$ + TRIMnum$(primestat(primestattable))
+        _PRINTSTRING (436, 174 + (primestattable * 16)), primestatname$(primestattable) + ": - " + primestatprint$ + " +"
+    NEXT primestattable
+    LINE (474, 169)-STEP(18, 17), ctorgb(15), B
+    LINE (434, 189)-STEP(34, 97), ctorgb(15), B
+    LINE (468, 189)-STEP(63, 97), ctorgb(15), B
+    FOR linechart = 2 TO PRIMESTATS_NUM
+        LINE (435, 174 + (linechart * 16))-STEP(97, 0), ctorgb(15)
+    NEXT linechart
+    LINE (490, 189)-STEP(0, 96), ctorgb(15)
+    LINE (508, 189)-STEP(0, 96), ctorgb(15)
+    statbutton = 0
+    FOR checkstatbutton = 1 TO PRIMESTATS_NUM
+        IF isonbox(Mousedata(1), Mousedata(2), 468, (174 + (checkstatbutton * 16)), 490, (174 + ((checkstatbutton + 1) * 16))) THEN
+            statbutton = checkstatbutton
+            IF Click = 0 THEN
+                PAINT (469, (174 + (checkstatbutton * 16)) + 1), ctorgb(7), ctorgb(15)
+                COLOR ctorgb(15)
+                _PRINTSTRING (476, 174 + (checkstatbutton * 16)), "-"
+            END IF
+        ELSE IF isonbox(Mousedata(1), Mousedata(2), 508, (174 + (checkstatbutton * 16)), 531, (174 + ((checkstatbutton + 1) * 16))) THEN
+                statbutton = checkstatbutton + PRIMESTATS_NUM
+                IF Click = 0 THEN
+                    PAINT (509, (174 + (checkstatbutton * 16)) + 1), ctorgb(7), ctorgb(15)
+                    COLOR ctorgb(15)
+                    _PRINTSTRING (516, 174 + (checkstatbutton * 16)), "+"
+                END IF
+            END IF
+        END IF
+    NEXT checkstatbutton
+    activeprimestat = 0
+    FOR checkactivestat = 1 TO PRIMESTATS_NUM
+        IF isonbox(Mousedata(1), Mousedata(2), 434, 174 + (checkactivestat * 16), 531, 174 + ((checkactivestat + 1) * 16)) THEN activeprimestat = checkactivestat
+        IF distance(Mousedata(1), Mousedata(2), hexp(checkactivestat, 1), hexp(checkactivestat, 2)) <= 36 THEN activeprimestat = primestathextoloc(checkactivestat)
+        IF activeprimestat THEN EXIT FOR
+    NEXT checkactivestat
+    IF activeprimestat > 0 AND Mousedata(8) THEN
+        SELECT CASE Mousedata(8)
+            CASE IS < 0
+                IF allocatestats + Mousedata(8) + 1 > 0 AND primestat(activeprimestat) - Mousedata(8) - 1 < PRIMESTATS_MAX THEN
+                    primestat(activeprimestat) = primestat(activeprimestat) - Mousedata(8)
+                    allocatestats = allocatestats + Mousedata(8)
+                END IF
+            CASE ELSE
+                IF primestat(activeprimestat) - Mousedata(8) + 1 > minprimebasestat(RTRIM$(newprofile.race), activeprimestat) THEN
+                    primestat(activeprimestat) = primestat(activeprimestat) - Mousedata(8)
+                    allocatestats = allocatestats + Mousedata(8)
+                END IF
+        END SELECT
+    END IF
+    IF sumprimebasestats(primestat(), allocatestats) > summinprimebasestats(RTRIM$(newprofile.race)) + PRIMESTATS_ALLOCATABLE THEN GOTO newgamestatsinit
+    FOR checkprimestatrange = 1 TO PRIMESTATS_NUM
+        IF primestat(checkprimestatrange) < minprimebasestat(RTRIM$(newprofile.race), checkprimestatrange) THEN
+            allocatestats = allocatestats - (minprimebasestat(RTRIM$(newprofile.race), checkprimestatrange) - primestat(checkprimestatrange))
+            primestat(checkprimestatrange) = minprimebasestat(RTRIM$(newprofile.race), checkprimestatrange)
+        END IF
+        IF primestat(checkprimestatrange) > PRIMESTATS_MAX THEN
+            allocatestats = allocatestats + (primestat(checkprimestatrange) - PRIMESTATS_MAX)
+            primestat(checkprimestatrange) = PRIMESTATS_MAX
+        END IF
+    NEXT checkprimestatrange
+    IF allocatestats > PRIMESTATS_ALLOCATABLE THEN GOTO newgamestatsinit
+    CALL textbox(1, 0, 0, 0, 0, 0, -1, 0, instructiontext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 1)
+    newtext = 0
+    IF activeprimestat THEN newtext = addtotextbox(text$(), 2, primestatname$(activeprimestat) + ": " + primestatdescription$(activeprimestat), maxchars(0))
+    CALL textbox(0, 0, 0, 0, 1, 0, statlines, 0, newtext, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), text$(), 2)
+    SELECT CASE newgamemenubuttons(5, newgamepass(2), newgamepass(6)) '''''''''''''''''''''''''''''''''''''''''''
+        CASE -1
+            GOTO newgamerace ''''''''''''''''''''''''''''''''''''''''''
+        CASE 1
+            IF allocatestats = 0 THEN
+                ''''''''''''''''''''''''''''''''''''''''''''''
+            ELSE
+                Errorflag = -1
+            END IF
+    END SELECT
+    Escact = 1
+    GOSUB getinput
+    IF Isfg THEN
+        IF Edk AND newgamepass(8) = 1 THEN GOTO newgamereview
+        IF Keys(67) OR Keys(99) OR Dlk THEN GOTO newgamestatsinit
+        IF Rtn THEN
+            IF allocatestats = 0 THEN
+                EXIT DO
+            ELSE
+                Errorflag = -1 ''''''''''''''''''''''''''''''''''''''''''''''''
+            END IF
+        END IF
+        IF Click AND statbutton THEN
+            IF oldClick = 0 THEN savestatbutton = statbutton
+            IF statbutton > PRIMESTATS_NUM THEN
+                pstatbutton = statbutton - PRIMESTATS_NUM
+                symbolprint$ = "+"
+                symbolprintx = 516
+            ELSE
+                pstatbutton = statbutton
+                symbolprint$ = "-"
+                symbolprintx = 476
+            END IF
+            PAINT (symbolprintx, (174 + (pstatbutton * 16)) + 1), ctorgb(7), ctorgb(15)
+            COLOR ctorgb(0)
+            _PRINTSTRING (symbolprintx, 174 + (pstatbutton * 16)), symbolprint$
+        END IF
+        IF (NOT Click) AND oldClick THEN
+            IF statbutton = savestatbutton AND statbutton THEN
+                IF statbutton > PRIMESTATS_NUM THEN
+                    astatbutton = statbutton - PRIMESTATS_NUM
+                    IF allocatestats AND primestat(astatbutton) < PRIMESTATS_MAX THEN
+                        primestat(astatbutton) = primestat(astatbutton) + 1
+                        allocatestats = allocatestats - 1
+                    END IF
+                ELSE
+                    IF primestat(statbutton) > minprimebasestat(RTRIM$(newprofile.race), statbutton) THEN
+                        primestat(statbutton) = primestat(statbutton) - 1
+                        allocatestats = allocatestats + 1
+                    END IF
+                END IF
+            END IF
+        END IF
+        oldClick = Click
+    END IF
+    GOSUB printframe
+LOOP
+
+
+
+
+
+'alignment
+
+REDIM hexp(0, 0) AS SINGLE
+
+
+'faction
+
+
+
+
+newgamereview:
+'do checks and returns
+GOSUB emptynewgamearrays

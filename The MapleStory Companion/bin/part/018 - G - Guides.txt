@@ -1,0 +1,954 @@
+IF (k$ = CHR$(103) OR k$ = CHR$(71)) OR (_MOUSEX > 401 AND _MOUSEX < 565 AND _MOUSEY > 349 AND _MOUSEY < 365 AND _MOUSEBUTTON(1)) THEN
+    DO ''''''''''''''''''''''''''''''''''
+        DO
+            source$ = "http://www.basilmarket.com/MapleStory-Guides.html"
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "These guides are property of their respective owners and were obtained through Basil Market. None of these guides belong to me and I take credit in no way for the information within them."
+                PRINT "What type of guide would you like to look at?"
+                PRINT "     1-General"
+                PRINT "     2-Class"
+                PRINT "     3-Quest"
+                PRINT "     4-Other"
+                bibliography = 1
+                GOSUB controls
+                IF k$ = CHR$(49) THEN
+                    generalguide$ = ""
+                    exitloop = 0
+                    DO
+                        DO
+                            selected = 1
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What guide would you like to look at?"
+                                FOR guidemenu1 = 1 TO UBOUND(guidemenu1$)
+                                    PRINT "-        ";
+                                    IF guidemenu1 = selected THEN
+                                        COLOR backcolor, textcolor
+                                    ELSE
+                                        COLOR textcolor, backcolor
+                                    END IF
+                                    PRINT guidemenu1$(guidemenu1)
+                                    COLOR textcolor, backcolor
+                                NEXT guidemenu1
+                                IF row + 24 < UBOUND(guidemenu1$) AND selected > row + 12 THEN
+                                    row = row + 1
+                                END IF
+                                IF row <> 1 AND selected < row + 12 THEN
+                                    row = row - 1
+                                END IF
+                                IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu1$) THEN selected = selected + 1
+                                bibliopgraphy = 2
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            generalguide$ = guidemenu1$(selected)
+                            SELECT CASE generalguide$
+                                CASE "Area Bosses"
+                                    titleloc = 34.5
+                                    title$ = "AREA BOSSES"
+                                    authorloc = 66
+                                    author$ = "by: Kazoothebat"
+                                    rows = 378
+                                    file$ = "source\guide\abguide.txt"
+                                    rsave$ = "user\row\guide\abguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Area-Bosses-211.html"
+                                CASE "Common Scams Prevention"
+                                    titleloc = 26.5
+                                    title$ = "COMMON SCAMS AND PREVENTION"
+                                    authorloc = 67
+                                    author$ = "by: smartguy11"
+                                    rows = 700
+                                    file$ = "source\guide\cmssguide.txt"
+                                    rsave$ = "user\row\guide\cmssguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Common-Scams-and-Prevention-178.html"
+                                CASE "Complete Scrolling Guide and Reference"
+                                    titleloc = 21
+                                    title$ = "COMPLETE SCROLLING GUIDE AND REFERENCE"
+                                    authorloc = 66
+                                    author$ = "by: charismatic"
+                                    rows = 1085
+                                    file$ = "source\guide\csgarguide.txt"
+                                    rsave$ = "user\row\guide\csgarguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Complete-Scrolling-Reference-200.html"
+                                CASE "Macros"
+                                    titleloc = 37
+                                    title$ = "MACROS"
+                                    authorloc = 67
+                                    author$ = "by: jetpilot55"
+                                    rows = 279
+                                    file$ = "source\guide\macrosguide.txt"
+                                    rsave$ = "user\row\guide\macrosguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Macros-168.html"
+                                CASE "Maker Skill"
+                                    titleloc = 34.5
+                                    title$ = "MAKER SKILL"
+                                    authorloc = 71
+                                    author$ = "by: Alalme"
+                                    rows = 385
+                                    file$ = "source\guide\makerguide.txt"
+                                    rsave$ = "user\row\guide\makerguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Maker-Skill-275.html"
+                                CASE "Potential Items"
+                                    titleloc = 32.5
+                                    title$ = "POTENTIAL ITEMS"
+                                    authorloc = 69
+                                    author$ = "by: niksterg"
+                                    rows = 519
+                                    file$ = "source\guide\potguide.txt"
+                                    rsave$ = "user\row\guide\potguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Potential-Items-345.html"
+                                CASE "Maple Ethics"
+                                    titleloc = 34
+                                    title$ = "MAPLE ETHICS"
+                                    authorloc = 69
+                                    author$ = "by: varun619"
+                                    rows = 160
+                                    file$ = "source\guide\ethicsguide.txt"
+                                    rsave$ = "user\row\guide\ethicsguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Maple-Ethics-186.html"
+                                CASE "Maple Trading System MTS"
+                                    titleloc = 28
+                                    title$ = "MAPLE TRADING SYSTEM MTS"
+                                    authorloc = 67
+                                    author$ = "by: HolyMythos"
+                                    rows = 465
+                                    file$ = "source\guide\mtsguide.txt"
+                                    rsave$ = "user\row\guide\mtsguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Maple-Trading-System-MTS-216.html"
+                                CASE "MapleStory Abbreviations"
+                                    titleloc = 22
+                                    title$ = "MAPLESTORY ABBREVIATIONS"
+                                    authorloc = 68
+                                    author$ = "by: DinoSnack"
+                                    rows = 212
+                                    file$ = "source\guide\abrguide.txt"
+                                    rsave$ = "user\row\guide\abrguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-MapleStory-Abbreviations-226.html"
+                                CASE "MapleStory FAQ"
+                                    titleloc = 33
+                                    title$ = "MAPLESTORY FAQ"
+                                    authorloc = 69
+                                    author$ = "by: nigiyaka"
+                                    rows = 380
+                                    file$ = "source\guide\faqguide.txt"
+                                    rsave$ = "user\row\guide\faqguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-MapleStory-FAQ-205.html"
+                                CASE "Merchanting"
+                                    titleloc = 34.5
+                                    title$ = "MERCHANTING"
+                                    authorloc = 71
+                                    author$ = "by: Bunnie"
+                                    rows = 467
+                                    file$ = "source\guide\merchguide.txt"
+                                    rsave$ = "user\row\guide\merchguiders.txt"
+                                    source$ = "http://www.basilmarket.com/forum/879665/0/Merchanting_Guide.html"
+                                CASE "Merchanting for Begginers"
+                                    titleloc = 27.5
+                                    title$ = "MERCHANTING FOR BEGINNERS"
+                                    authorloc = 67
+                                    author$ = "by: smartguy11"
+                                    rows = 253
+                                    file$ = "source\guide\mfbguide.txt"
+                                    rsave$ = "user\row\guide\mfbguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Beginning-Merchanting-302.html"
+                                CASE "Setting Up and Maintaining a Guild"
+                                    titleloc = 23
+                                    title$ = "SETTING UP AND MAINTAINING A GUILD"
+                                    authorloc = 70
+                                    author$ = "by: rodoner"
+                                    rows = 1099
+                                    file$ = "source\guide\suamagguide.txt"
+                                    rsave$ = "user\row\guide\suamagguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Setting-Up-and-Maintaining-a-Guild-194.html"
+                            END SELECT
+                            exitloop = 1
+                            EXIT DO
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                END IF
+                IF k$ = CHR$(50) THEN
+                    methodnotimplemented = 1
+                    EXIT DO
+                    DO
+                        _LIMIT 64
+                        CLS
+                        k = 0
+                        PRINT "What class guide section would you like to look at?"
+                        PRINT "     0-Beginner"
+                        PRINT "     1-Warrior"
+                        PRINT "     2-Bowman"
+                        PRINT "     3-Mage"
+                        PRINT "     4-Thief"
+                        PRINT "     5-Pirate"
+                        PRINT "     6-Dual Blader"
+                        PRINT "     7-Cygnus Knight"
+                        PRINT "     8-Aran"
+                        PRINT "     9-Evan"
+                        PRINT "     a-Resistance"
+                        bibliopgraphy = 1
+                        GOSUB controls
+                        IF k$ = CHR$(48) THEN
+                            classbeginnerguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu4 = 1 TO UBOUND(guidemenu4$)
+                                            PRINT "-        ";
+                                            IF guidemenu4 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu4$(guidemenu4)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu4
+                                        IF row + 24 < UBOUND(guidemenu4$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu4$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classbeginnerguide$ = guidemenu4$(selected)
+                                    SELECT CASE classbeginnerguide$
+                                        CASE "A Beginner's Guide to Jobless Classes"
+                                        CASE "A Beginner's Guide to Jobless Training"
+                                        CASE "A Beginner's Guide to Tutorial Classes"
+                                        CASE "General list of Experimental Classes"
+                                        CASE "Permanent Beginner Guide"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(49) THEN
+                            classwarriorguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu5 = 1 TO UBOUND(guidemenu5$)
+                                            PRINT "-        ";
+                                            IF guidemenu5 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu5$(guidemenu5)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu5
+                                        IF row + 24 < UBOUND(guidemenu5$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu5$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classwarriorguide$ = guidemenu5$(selected)
+                                    SELECT CASE classwarriorguide$
+                                        CASE "How To Choose Your Warrior Weapon"
+                                        CASE "Low and No Dex Warrior"
+                                        CASE "Recommended Warrior Equips"
+                                        CASE "Warrior"
+                                        CASE "Warrior Comparison"
+                                        CASE "Warrior Training"
+                                        CASE "Fighter, Crusader, Hero"
+                                        CASE "HP Warrior"
+                                        CASE "Page, White Knight, Paladin"
+                                        CASE "Path of The Page, Pilgrimage of The Paladin"
+                                        CASE "Post-Big-Bang Guide for Paladins"
+                                        CASE "Official Spearman, DK, and DrK Guide"
+                                        CASE "Spearman"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            classbowmanguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu6 = 1 TO UBOUND(guidemenu6$)
+                                            PRINT "-        ";
+                                            IF guidemenu6 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu6$(guidemenu6)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu6
+                                        IF row + 24 < UBOUND(guidemenu6$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu6$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classbowmanguide$ = guidemenu6$(selected)
+                                    SELECT CASE classbowmanguide$
+                                        CASE "Archer %/Hour Thread"
+                                        CASE "Archer Skill Build"
+                                        CASE "Archer Training Reference"
+                                        CASE "Bow or Crossbow"
+                                        CASE "Bowman Bossing"
+                                        CASE "Bowman Frequently Asked Questions"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(51) THEN
+                            classmageguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu7 = 1 TO UBOUND(guidemenu7$)
+                                            PRINT "-        ";
+                                            IF guidemenu7 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu7$(guidemenu7)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu7
+                                        IF row + 24 < UBOUND(guidemenu7$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu7$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classmageguide$ = guidemenu7$(selected)
+                                    SELECT CASE classmageguide$
+                                        CASE "General Information about Magicians and Recommend Equips"
+                                        CASE "Mage FAQ"
+                                        CASE "Mage Training Areas"
+                                        CASE "F/P mage SP distribution"
+                                        CASE "Fire/Poison F/P Wizard"
+                                        CASE "Poison Wizard"
+                                        CASE "Compy's I/L Guide"
+                                        CASE "Ice / Lightning I/L Mage"
+                                        CASE "Ice/Lightning Arch Mage Grind Guide"
+                                        CASE "Aider's Magician to Bishop Guide"
+                                        CASE "Cleric, Priest and Bishop Training"
+                                        CASE "Clerics"
+                                        CASE "Genesis Quest"
+                                        CASE "Solo and Party Priest Hime Training"
+                                        CASE "Solo Cleric"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(52) THEN
+                            classthiefguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu8 = 1 TO UBOUND(guidemenu8$)
+                                            PRINT "-        ";
+                                            IF guidemenu8 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu8$(guidemenu8)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu8
+                                        IF row + 24 < UBOUND(guidemenu8$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu8$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classthiefguide$ = guidemenu8$(selected)
+                                    SELECT CASE classthiefguide$
+                                        CASE "Basic Thief Guide"
+                                        CASE "Assassin Training Guide"
+                                        CASE "Assassin, Hermit and Night Lord Guide"
+                                        CASE "The Assassin, Hermit, NL Bossing Guide"
+                                        CASE "Bandit FAQ"
+                                        CASE "Bandit Guide"
+                                        CASE "Bandit Training Guide"
+                                        CASE "Chief Bandit and Shadower vs Bosses"
+                                        CASE "Chief Bandit Techniques and Strategies"
+                                        CASE "Chief Bandits"
+                                        CASE "Shadower FAQ"
+                                        CASE "STR Bandit"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(53) THEN
+                            classpirateguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu9 = 1 TO UBOUND(guidemenu9$)
+                                            PRINT "-        ";
+                                            IF guidemenu9 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu9$(guidemenu9)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu9
+                                        IF row + 24 < UBOUND(guidemenu9$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu9$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classpirateguide$ = guidemenu9$(selected)
+                                    SELECT CASE classpirateguide$
+                                        CASE "Big Bang Gunslinger Guide"
+                                        CASE "Gunslingers"
+                                        CASE "Buccaneer"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(54) THEN
+                            classdualbladerguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu10 = 1 TO UBOUND(guidemenu10$)
+                                            PRINT "-        ";
+                                            IF guidemenu10 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu10$(guidemenu10)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu10
+                                        IF row + 24 < UBOUND(guidemenu10$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu10$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classdualbladerguide$ = guidemenu10$(selected)
+                                    SELECT CASE classdualbladerguide$
+                                        CASE "Ultimate Dual Blade guide"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(55) THEN
+                            classcygnusknightguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu11 = 1 TO UBOUND(guidemenu11$)
+                                            PRINT "-        ";
+                                            IF guidemenu11 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu11$(guidemenu11)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu11
+                                        IF row + 24 < UBOUND(guidemenu11$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu11$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classcygnusknightguide$ = guidemenu11$(selected)
+                                    SELECT CASE classcygnusknightguide$
+                                        CASE "Blaze Wizard"
+                                        CASE "Cygnus Knight Quests"
+                                        CASE "Dawn Warrior Guide"
+                                        CASE "Night Walker"
+                                        CASE "Night Walker Poison Bomb Training"
+                                        CASE "Thunder Breaker"
+                                        CASE "Wind Archer"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(56) THEN
+                        END IF
+                        IF k$ = CHR$(57) THEN
+                            classevanguide$ = ""
+                            exitloop = 0
+                            DO
+                                DO
+                                    selected = 1
+                                    DO
+                                        _LIMIT 64
+                                        CLS
+                                        PRINT "What guide would you like to look at?"
+                                        FOR guidemenu12 = 1 TO UBOUND(guidemenu12$)
+                                            PRINT "-        ";
+                                            IF guidemenu12 = selected THEN
+                                                COLOR backcolor, textcolor
+                                            ELSE
+                                                COLOR textcolor, backcolor
+                                            END IF
+                                            PRINT guidemenu12$(guidemenu12)
+                                            COLOR textcolor, backcolor
+                                        NEXT guidemenu12
+                                        IF row + 24 < UBOUND(guidemenu12$) AND selected > row + 12 THEN
+                                            row = row + 1
+                                        END IF
+                                        IF row <> 1 AND selected < row + 12 THEN
+                                            row = row - 1
+                                        END IF
+                                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu12$) THEN selected = selected + 1
+                                        bibliopgraphy = 2
+                                        GOSUB controls
+                                        _DISPLAY
+                                    LOOP UNTIL k$ = CHR$(13)
+                                    classevanguide$ = guidemenu12$(selected)
+                                    SELECT CASE classevanguide$
+                                        CASE "Evan - Where To Train"
+                                        CASE "Evan: Taming The Dragon"
+                                    END SELECT
+                                    exitloop = 1
+                                    EXIT DO
+                                LOOP
+                                IF exitloop = 1 THEN EXIT DO
+                            LOOP
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                        END IF
+                        IF exitloop = 1 THEN EXIT DO
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                END IF
+                IF k$ = CHR$(51) THEN
+                    questguide$ = ""
+                    exitloop = 0
+                    DO
+                        DO
+                            selected = 1
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What guide would you like to look at?"
+                                PRINT "For PQ Walkthroughs see the 'PQ' section"
+                                FOR guidemenu2 = 1 TO UBOUND(guidemenu2$)
+                                    PRINT "-        ";
+                                    IF guidemenu2 = selected THEN
+                                        COLOR backcolor, textcolor
+                                    ELSE
+                                        COLOR textcolor, backcolor
+                                    END IF
+                                    PRINT guidemenu2$(guidemenu2)
+                                    COLOR textcolor, backcolor
+                                NEXT guidemenu2
+                                IF row + 24 < UBOUND(guidemenu2$) AND selected > row + 12 THEN
+                                    row = row + 1
+                                END IF
+                                IF row <> 1 AND selected < row + 12 THEN
+                                    row = row - 1
+                                END IF
+                                IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu2$) THEN selected = selected + 1
+                                bibliopgraphy = 2
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+
+                            questguide$ = guidemenu2$(selected)
+                            SELECT CASE questguide$
+                                CASE "Quests as a source of EXP"
+                                    titleloc = 27.5
+                                    title$ = "QUESTS AS A SOURCE OF EXP"
+                                    authorloc = 68
+                                    author$ = "by: Beesafree"
+                                    rows = 1164
+                                    file$ = "source\guide\qaasoeguide.txt"
+                                    rsave$ = "user\row\guide\qaasoeguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Quests-as-a-source-of-EXP-319.html"
+                                CASE "Quests You Can Do To Make Money"
+                                    titleloc = 24.5
+                                    title$ = "QUESTS YOU CAN DO TO MAKE MONEY"
+                                    authorloc = 66
+                                    author$ = "by: WinglessOne"
+                                    rows = 118
+                                    file$ = "source\guide\qycdtmmguide.txt"
+                                    rsave$ = "user\row\guide\qycdtmmguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Quests-You-Can-Do-To-Make-Money-199.html"
+                                CASE "Tactical Winning In CPQ"
+                                    titleloc = 28.5
+                                    title$ = "TACTICAL WINNING IN CPQ"
+                                    authorloc = 69
+                                    author$ = "by: RJustice"
+                                    rows = 456
+                                    file$ = "source\guide\twicpqguide.txt"
+                                    rsave$ = "user\row\guide\twicpqguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Tactical-Winning-In-CPQ-236.html"
+                            END SELECT
+                            exitloop = 1
+                            EXIT DO
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                END IF
+                IF k$ = CHR$(52) THEN
+                    otherguide$ = ""
+                    exitloop = 0
+                    DO
+                        DO
+                            selected = 1
+                            DO
+                                _LIMIT 64
+                                CLS
+                                PRINT "What guide would you like to look at?"
+                                FOR guidemenu3 = 1 TO UBOUND(guidemenu3$)
+                                    PRINT "-        ";
+                                    IF guidemenu3 = selected THEN
+                                        COLOR backcolor, textcolor
+                                    ELSE
+                                        COLOR textcolor, backcolor
+                                    END IF
+                                    PRINT guidemenu3$(guidemenu3)
+                                    COLOR textcolor, backcolor
+                                NEXT guidemenu3
+                                IF row + 24 < UBOUND(guidemenu3$) AND selected > row + 12 THEN
+                                    row = row + 1
+                                END IF
+                                IF row <> 1 AND selected < row + 12 THEN
+                                    row = row - 1
+                                END IF
+                                IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                                IF k$ = (CHR$(0) + CHR$(80)) AND selected <> UBOUND(guidemenu3$) THEN selected = selected + 1
+                                bibliopgraphy = 2
+                                GOSUB controls
+                                _DISPLAY
+                            LOOP UNTIL k$ = CHR$(13)
+                            otherguide$ = guidemenu3$(selected)
+                            SELECT CASE otherguide$
+                                CASE "Beginner's Guide to Maplestory"
+                                    titleloc = 25
+                                    title$ = "BEGINNER'S GUIDE TO MAPLESTORY"
+                                    authorloc = 67
+                                    author$ = "by: smartguy11"
+                                    rows = 443
+                                    file$ = "source\guide\bgtmsguide.txt"
+                                    rsave$ = "user\row\guide\bgtmsguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Beginners-Guide-to-Maplestory-190.html"
+                                CASE "Leeching"
+                                    titleloc = 36
+                                    title$ = "LEECHING"
+                                    authorloc = 71
+                                    author$ = "by: Vespeh"
+                                    rows = 528
+                                    file$ = "source\guide\leechguide.txt"
+                                    rsave$ = "user\row\guide\leechguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Leeching-240.html"
+                                CASE "Playing Maple Healthily"
+                                    titleloc = 28.5
+                                    title$ = "PLAYING MAPLE HEALTHILY"
+                                    authorloc = 73
+                                    author$ = "by: Fame"
+                                    rows = 208
+                                    file$ = "source\guide\pmhguide.txt"
+                                    rsave$ = "user\row\guide\pmhguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Playing-Maple-Healthily-257.html"
+                                CASE "Potions"
+                                    titleloc = 36.5
+                                    title$ = "POTIONS"
+                                    authorloc = 66
+                                    author$ = "by: Nightwind90"
+                                    rows = 226
+                                    file$ = "source\guide\potionsguide.txt"
+                                    rsave$ = "user\row\guide\potionsguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Potions-249.html"
+                                CASE "What came when in GMS"
+                                    titleloc = 29.5
+                                    title$ = "WHAT CAME WHEN IN GMS"
+                                    authorloc = 74
+                                    author$ = "by: BBD"
+                                    rows = 783
+                                    file$ = "source\guide\wcwigmsguide.txt"
+                                    rsave$ = "user\row\guide\wcwigmsguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-What-Came-When-in-GMS-283.html"
+                                CASE "Region Explorer Medals"
+                                    titleloc = 29
+                                    title$ = "REGION EXPLORER MEDALS"
+                                    authorloc = 71
+                                    author$ = "by: Gardor"
+                                    rows = 248
+                                    file$ = "source\guide\remguide.txt"
+                                    rsave$ = "user\row\guide\remguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-Region-Explorer-Medals-237.html"
+                                CASE "A Guide to Chairs & How to get them"
+                                    titleloc = 21.5
+                                    title$ = "A GUIDE TO CHAIRS AND HOW TO GET THEM"
+                                    authorloc = 67
+                                    author$ = "by: LEGENDairy"
+                                    rows = 1933
+                                    file$ = "source\guide\chairsguide.txt"
+                                    rsave$ = "user\row\guide\chairsguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-A-Guide-to-Chairs--How-to-get-them-326.html"
+                                CASE "General Problems FAQ"
+                                    titleloc = 26.5
+                                    title$ = "GENERAL PROBLEMS FAQ (TECH)"
+                                    authorloc = 72
+                                    author$ = "by: Kevvl"
+                                    rows = 367
+                                    file$ = "source\guide\gpfaqguide.txt"
+                                    rsave$ = "user\row\guide\gpfaqguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-General-Problems-FAQ-182.html"
+                                CASE "How to not get hacked"
+                                    titleloc = 29.5
+                                    title$ = "HOW TO NOT GET HACKED"
+                                    authorloc = 71
+                                    author$ = "by: RedTape"
+                                    rows = 280
+                                    file$ = "source\guide\hntghguide.txt"
+                                    rsave$ = "user\row\guide\hntghguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-How-to-not-get-hacked-258.html"
+                                CASE "How To Play MapleStory On A Mac"
+                                    titleloc = 24.5
+                                    title$ = "HOW TO PLAY MAPLESTORY ON A MAC"
+                                    authorloc = 67
+                                    author$ = "by: UnholyMist"
+                                    rows = 161
+                                    file$ = "source\guide\htpmsoamguide.txt"
+                                    rsave$ = "user\row\guide\htpmsoamguiders.txt"
+                                    source$ = "http://www.basilmarket.com/MapleStory-Guide-How-To-Play-MapleStory-On-A-Mac-212.html"
+                            END SELECT
+                            exitloop = 1
+                            EXIT DO
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                END IF
+            LOOP
+            IF methodnotimplemented = 1 THEN EXIT DO '''''''''''''''''''''''''''''''''''''''''''''''''
+            exitloop = 0
+            DO
+                DO
+                    _LIMIT 64
+                    CLS
+                    LOCATE 1, titleloc
+                    PRINT title$
+                    LOCATE 2, authorloc
+                    PRINT author$
+                    LOCATE 4, 1
+                    PRINT "What would you like to do?"
+                    PRINT "     1-Read this Guide"
+                    PRINT "     2-Reset this Guide's Row Save"
+                    PRINT "     3-Read another Guide"
+                    PRINT "     4-Exit"
+                    bibliopgraphy = 1
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        inputcount = 0
+                        OPEN rsave$ FOR INPUT AS #1
+                        INPUT #1, row
+                        CLOSE #1
+                        REDIM guide$(rows)
+                        OPEN file$ FOR INPUT AS #1
+                        DO UNTIL EOF(1)
+                            inputcount = inputcount + 1
+                            LINE INPUT #1, guide$(inputcount)
+                            IF inputcount = rows THEN EXIT DO
+                        LOOP
+                        CLOSE #1
+                        CLS
+                        FOR n = row TO row + 27
+                            PRINT guide$(n)
+                            GOSUB scrollbar
+                        NEXT
+                        _DISPLAY
+                        DO
+                            _LIMIT 64
+                            bibliopgraphy = 1
+                            GOSUB controls
+                            IF k$ = CHR$(113) THEN
+                                row = row - 1
+                                GOTO G1
+                            END IF
+                            IF k$ = CHR$(122) THEN
+                                row = row + 1
+                                GOTO G1
+                            END IF
+                            IF k$ = CHR$(119) THEN
+                                row = 1
+                                GOTO G1
+                            END IF
+                            IF k$ = CHR$(97) THEN
+                                row = row - 27
+                                GOTO G1
+                            END IF
+                            IF k$ = CHR$(115) THEN
+                                row = (rows - 27)
+                                GOTO G1
+                            END IF
+                            IF k$ = CHR$(100) THEN
+                                row = row + 27
+                                GOTO G1
+                            END IF
+                            DO WHILE _MOUSEINPUT
+                                row = row + (_MOUSEWHEEL * scrollspeed)
+                                IF prevrow <> row THEN
+                                    G1:
+                                    IF row < 1 THEN
+                                        row = 1
+                                    END IF
+                                    IF row > (rows - 27) THEN
+                                        row = (rows - 27)
+                                    END IF
+                                    OPEN rsave$ FOR OUTPUT AS #1
+                                    WRITE #1, row
+                                    CLOSE #1
+                                    CLS
+                                    FOR n = row TO row + 27
+                                        PRINT guide$(n)
+                                        GOSUB scrollbar
+                                    NEXT
+                                END IF
+                                prevrow = row
+                            LOOP
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(32)
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        row = 1
+                        OPEN rsave$ FOR OUTPUT AS #1
+                        WRITE #1, row
+                        CLOSE #1
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(51) THEN
+                        exitloop = 1
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(52) THEN
+                        GOTO BEGIN
+                    END IF
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+                _DISPLAY
+            LOOP
+        LOOP
+        methodnotimplemented = 0 ''''''''''''''''''''''''''''''
+    LOOP '''''''''''''''''''''''''''''''''''''
+END IF

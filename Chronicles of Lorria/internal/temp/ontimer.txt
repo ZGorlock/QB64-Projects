@@ -1,0 +1,29 @@
+case 1:
+timer_event_occurred++;
+timer_event_id=1;
+timer_event_occurred++;
+return_point[next_return_point++]=0;
+if (next_return_point>=return_points) more_return_points();
+QBMAIN(NULL);
+break;
+case 2:
+SUB_UPDATEHOTKEYS();
+break;
+case 3:
+SUB_UPDATEANIMATION((int16*)&i64);
+break;
+case 4:
+SUB_UPDATEBUTTON((int16*)&i64);
+break;
+case 5:
+SUB_UPDATEBUTTON((int16*)&i64);
+break;
+case 6:
+SUB_DOWNLOADUPDATE((int16*)&i64);
+break;
+case 7:
+SUB_LAYERFADEUPDATE((int16*)&i64);
+break;
+case 8:
+SUB_TEXTBOXTICK((int16*)&i64);
+break;

@@ -1,0 +1,17 @@
+if(oldstr6548){
+if(oldstr6548->fixed)qbs_set(oldstr6548,_SUB_SAVEBMP_STRING_FILENAME);
+qbs_free(_SUB_SAVEBMP_STRING_FILENAME);
+}
+qbs_free(_SUB_SAVEBMP_STRING1_T);
+qbs_free(_SUB_SAVEBMP_STRING_G);
+qbs_free(_SUB_SAVEBMP_STRING_TEMP);
+qbs_free(_SUB_SAVEBMP_STRING_T1);
+qbs_free(_SUB_SAVEBMP_STRING_ZEROPAD);
+if (_SUB_SAVEBMP_ARRAY_LONG_PLT[2]&1){
+if (_SUB_SAVEBMP_ARRAY_LONG_PLT[2]&4){
+cmem_dynamic_free((uint8*)(_SUB_SAVEBMP_ARRAY_LONG_PLT[0]));
+}else{
+free((void*)(_SUB_SAVEBMP_ARRAY_LONG_PLT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_SAVEBMP_ARRAY_LONG_PLT)[8] );

@@ -1,0 +1,5 @@
+if(oldstr8459){
+if(oldstr8459->fixed)qbs_set(oldstr8459,_FUNC_FILETITLE_STRING_FILENAME);
+qbs_free(_FUNC_FILETITLE_STRING_FILENAME);
+}
+qbs_free(_FUNC_FILETITLE_STRING_SLASH);

@@ -1,0 +1,76 @@
+int16 *_FUNC_KEYBOARDNEW_INTEGER_KEYBOARDNEW=NULL;
+if(_FUNC_KEYBOARDNEW_INTEGER_KEYBOARDNEW==NULL){
+_FUNC_KEYBOARDNEW_INTEGER_KEYBOARDNEW=(int16*)mem_static_malloc(2);
+*_FUNC_KEYBOARDNEW_INTEGER_KEYBOARDNEW=0;
+}
+qbs*oldstr6827=NULL;
+if(_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE->tmp||_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE->fixed||_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE->readonly){
+oldstr6827=_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE;
+if (oldstr6827->cmem_descriptor){
+_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE=qbs_new_cmem(oldstr6827->len,0);
+}else{
+_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE=qbs_new(oldstr6827->len,0);
+}
+memcpy(_FUNC_KEYBOARDNEW_STRING_LAYOUTFILE->chr,oldstr6827->chr,oldstr6827->len);
+}
+int8 *_FUNC_KEYBOARDNEW_BYTE_GETKEYBOARDROW=NULL;
+if(_FUNC_KEYBOARDNEW_BYTE_GETKEYBOARDROW==NULL){
+_FUNC_KEYBOARDNEW_BYTE_GETKEYBOARDROW=(int8*)mem_static_malloc(1);
+*_FUNC_KEYBOARDNEW_BYTE_GETKEYBOARDROW=0;
+}
+int8 *_FUNC_KEYBOARDNEW_BYTE_RIPKEYBOARD=NULL;
+if(_FUNC_KEYBOARDNEW_BYTE_RIPKEYBOARD==NULL){
+_FUNC_KEYBOARDNEW_BYTE_RIPKEYBOARD=(int8*)mem_static_malloc(1);
+*_FUNC_KEYBOARDNEW_BYTE_RIPKEYBOARD=0;
+}
+int16 *_FUNC_KEYBOARDNEW_INTEGER_FINDFREEKEYBOARD=NULL;
+if(_FUNC_KEYBOARDNEW_INTEGER_FINDFREEKEYBOARD==NULL){
+_FUNC_KEYBOARDNEW_INTEGER_FINDFREEKEYBOARD=(int16*)mem_static_malloc(2);
+*_FUNC_KEYBOARDNEW_INTEGER_FINDFREEKEYBOARD=0;
+}
+int16 *_FUNC_KEYBOARDNEW_INTEGER_N=NULL;
+if(_FUNC_KEYBOARDNEW_INTEGER_N==NULL){
+_FUNC_KEYBOARDNEW_INTEGER_N=(int16*)mem_static_malloc(2);
+*_FUNC_KEYBOARDNEW_INTEGER_N=0;
+}
+ptrszint *_FUNC_KEYBOARDNEW_ARRAY_STRING_A=NULL;
+if (!_FUNC_KEYBOARDNEW_ARRAY_STRING_A){
+_FUNC_KEYBOARDNEW_ARRAY_STRING_A=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)_FUNC_KEYBOARDNEW_ARRAY_STRING_A)[8]=(ptrszint)mem_lock_tmp;
+_FUNC_KEYBOARDNEW_ARRAY_STRING_A[2]=0;
+_FUNC_KEYBOARDNEW_ARRAY_STRING_A[4]=2147483647;
+_FUNC_KEYBOARDNEW_ARRAY_STRING_A[5]=0;
+_FUNC_KEYBOARDNEW_ARRAY_STRING_A[6]=0;
+_FUNC_KEYBOARDNEW_ARRAY_STRING_A[0]=(ptrszint)&nothingstring;
+}
+int32 fornext_value6829;
+int32 fornext_finalvalue6829;
+int32 fornext_step6829;
+uint8 fornext_step_negative6829;
+byte_element_struct *byte_element_6832=NULL;
+if (!byte_element_6832){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6832=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6832=(byte_element_struct*)mem_static_malloc(12);
+}
+int16 fornext_value6834;
+int16 fornext_finalvalue6834;
+int16 fornext_step6834;
+uint8 fornext_step_negative6834;
+float *_FUNC_KEYBOARDNEW_SINGLE_RIPKEYBOARDKEY=NULL;
+if(_FUNC_KEYBOARDNEW_SINGLE_RIPKEYBOARDKEY==NULL){
+_FUNC_KEYBOARDNEW_SINGLE_RIPKEYBOARDKEY=(float*)mem_static_malloc(4);
+*_FUNC_KEYBOARDNEW_SINGLE_RIPKEYBOARDKEY=0;
+}
+double fornext_value6836;
+double fornext_finalvalue6836;
+double fornext_step6836;
+uint8 fornext_step_negative6836;
+int16 fornext_value6838;
+int16 fornext_finalvalue6838;
+int16 fornext_step6838;
+uint8 fornext_step_negative6838;
+double fornext_value6840;
+double fornext_finalvalue6840;
+double fornext_step6840;
+uint8 fornext_step_negative6840;

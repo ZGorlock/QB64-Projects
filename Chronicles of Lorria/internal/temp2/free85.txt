@@ -1,0 +1,4 @@
+if(oldstr8661){
+if(oldstr8661->fixed)qbs_set(oldstr8661,_FUNC_NEWLAYER_STRING_DESCRIPTION);
+qbs_free(_FUNC_NEWLAYER_STRING_DESCRIPTION);
+}

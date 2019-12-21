@@ -1,0 +1,89 @@
+REDIM a$(1000000)
+OPEN "D:\Dropbox\MSCollector Items\[0list.txt" FOR INPUT AS #1
+DO
+    a = a + 1
+    LINE INPUT #1, a$(a)
+LOOP UNTIL EOF(1) = -1
+CLOSE #1
+REDIM b$(1000000)
+FOR b = 1 TO a
+    OPEN "D:\Dropbox\MSCollector Items\" + a$(b) + ".txt" FOR INPUT AS #1
+    LINE INPUT #1, b$
+    IF b$ <> "" THEN
+        c = c + 1
+        b$(c) = b$
+    END IF
+    CLOSE #1
+NEXT b
+
+REDIM eqpvac$(32768)
+REDIM usevac$(32768)
+REDIM etcvac$(32768)
+REDIM stpvac$(32768)
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0eqp.txt" FOR INPUT AS #1
+DO
+    eqpvac = eqpvac + 1
+    LINE INPUT #1, eqpvac$(eqpvac)
+LOOP UNTIL EOF(1) = -1
+CLOSE #1
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0use.txt" FOR INPUT AS #1
+DO
+    usevac = usevac + 1
+    LINE INPUT #1, usevac$(usevac)
+LOOP UNTIL EOF(1) = -1
+CLOSE #1
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0etc.txt" FOR INPUT AS #1
+DO
+    etcvac = etcvac + 1
+    LINE INPUT #1, etcvac$(etcvac)
+LOOP UNTIL EOF(1) = -1
+CLOSE #1
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0stp.txt" FOR INPUT AS #1
+DO
+    stpvac = stpvac + 1
+    LINE INPUT #1, stpvac$(stpvac)
+LOOP UNTIL EOF(1) = -1
+CLOSE #1
+
+FOR e = 1 TO c
+    FOR d = 1 TO eqpvac
+        IF eqpvac$(d) = b$(e) THEN eqpvac$(d) = ""
+    NEXT d
+    FOR d = 1 TO eqpvac
+        IF usevac$(d) = b$(e) THEN usevac$(d) = ""
+    NEXT d
+    FOR d = 1 TO etcvac
+        IF etcvac$(d) = b$(e) THEN etcvac$(d) = ""
+    NEXT d
+    FOR d = 1 TO stpvac
+        IF stpvac$(d) = b$(e) THEN stpvac$(d) = ""
+    NEXT d
+NEXT e
+
+
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0eqp.txt" FOR OUTPUT AS #1
+FOR remvac = 1 TO eqpvac
+    IF eqpvac$(remvac) <> "" THEN PRINT #1, eqpvac$(remvac)
+NEXT remvac
+CLOSE #1
+
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0use.txt" FOR OUTPUT AS #1
+FOR remvac = 1 TO usevac
+    IF usevac$(remvac) <> "" THEN PRINT #1, usevac$(remvac)
+NEXT remvac
+CLOSE #1
+
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0etc.txt" FOR OUTPUT AS #1
+FOR remvac = 1 TO etcvac
+    IF etcvac$(remvac) <> "" THEN PRINT #1, etcvac$(remvac)
+NEXT remvac
+CLOSE #1
+
+OPEN fileloc$ + "D:\Dropbox\MSCollector Items\[0stp.txt" FOR OUTPUT AS #1
+FOR remvac = 1 TO stpvac
+    IF stpvac$(remvac) <> "" THEN PRINT #1, stpvac$(remvac)
+NEXT remvac
+CLOSE #1
+
+SYSTEM
+

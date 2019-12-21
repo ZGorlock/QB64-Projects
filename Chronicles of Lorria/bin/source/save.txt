@@ -1,0 +1,305 @@
+'sub declarations
+DECLARE SUB cleartextbox (text() AS STRING, stream AS _UNSIGNED _BYTE)
+DECLARE SUB errorhandler (errorcode AS INTEGER)
+DECLARE SUB getinput ()
+DECLARE SUB getminprimebasestats (race AS STRING, primestat() AS _BYTE)
+DECLARE SUB HEXAGON (x AS SINGLE, y AS SINGLE, s AS LONG, c AS LONG)
+DECLARE SUB keyboard (x AS SINGLE, y AS SINGLE, keybd() AS _UNSIGNED INTEGER)
+DECLARE SUB MAPRECT (source AS LONG, sourceleft AS LONG, sourcetop AS LONG, sourceright AS LONG, sourcebottom AS LONG, dest AS LONG, destleft AS LONG, desttop AS LONG, destright AS LONG, destbottom AS LONG)
+DECLARE SUB printtitle ()
+DECLARE SUB resetfile (filename AS STRING)
+DECLARE SUB resetkeyboard ()
+DECLARE SUB resetscreenlayer (layers AS _UNSIGNED _BYTE, savelayers AS _UNSIGNED _BYTE)
+DECLARE SUB resetsettings ()
+DECLARE SUB saveprofile ()
+DECLARE SUB sort_insertion_str (array() AS STRING)
+'DECLARE
+DECLARE SUB texturize (texturechoice AS _UNSIGNED _BYTE, width AS LONG, height AS LONG, dest AS LONG, destleft AS LONG, desttop AS LONG, destright AS LONG, destbottom AS LONG)
+DECLARE SUB texturizebg (texturechoice AS _UNSIGNED _BYTE, width AS LONG, height AS LONG, dest AS LONG)
+DECLARE SUB updatesettings ()
+DECLARE SUB validfps (fpsoption() AS LONG)
+DECLARE SUB versionstamp (sector AS _BYTE)
+
+'function declarations
+DECLARE FUNCTION addtotextbox% (text() AS STRING, stream AS _UNSIGNED _BYTE, add AS STRING, size AS _UNSIGNED INTEGER)
+DECLARE FUNCTION arrayloc_int& (array() AS INTEGER, reference AS INTEGER)
+DECLARE FUNCTION chance` (probability AS SINGLE)
+DECLARE FUNCTION closestelement& (reference AS LONG, array() AS LONG)
+DECLARE FUNCTION ctorgb& (c AS _BYTE)
+DECLARE FUNCTION dbindex& (id AS _UNSIGNED LONG, index() AS _UNSIGNED LONG, db AS _BYTE)
+DECLARE FUNCTION degtorad! (d AS SINGLE)
+DECLARE FUNCTION dice& (sides AS LONG)
+DECLARE FUNCTION distance## (x1 AS LONG, y1 AS LONG, x2 AS LONG, y2 AS LONG)
+DECLARE FUNCTION filetitle$ (filename AS STRING)
+DECLARE FUNCTION filetype$ (filename AS STRING)
+DECLARE FUNCTION getdefaultfps%
+DECLARE FUNCTION isonbox` (x AS LONG, y AS LONG, x1 AS LONG, y1 AS LONG, x2 AS LONG, y2 AS LONG)
+DECLARE FUNCTION maxchars~% (width AS _UNSIGNED INTEGER)
+DECLARE FUNCTION midpoint## (p1 AS LONG, p2 AS LONG)
+DECLARE FUNCTION minprimebasestat%% (race AS STRING, stat AS _UNSIGNED _BYTE)
+DECLARE FUNCTION monsterzoom! (agerange AS RANGE, age AS LONG)
+DECLARE FUNCTION newgamemenubuttons%% (frame AS _BYTE, lastframe AS _BYTE, nextframe AS _BYTE, frames() AS STRING)
+DECLARE FUNCTION pointoncirclex! (x AS SINGLE, y AS SINGLE, r AS LONG, a AS SINGLE)
+DECLARE FUNCTION pointoncircley! (x AS SINGLE, y AS SINGLE, r AS LONG, a AS SINGLE)
+DECLARE FUNCTION primestathextoloc~%% (hex AS _BYTE)
+DECLARE FUNCTION raceloc%% (race AS STRING, races() AS STRING)
+DECLARE FUNCTION radtodeg! (r AS SINGLE)
+DECLARE FUNCTION rangepick& (set AS RANGE)
+DECLARE FUNCTION remfilesuffix$ (filename AS STRING)
+DECLARE FUNCTION summinprimebasestats~%% (race AS STRING)
+DECLARE FUNCTION sumprimebasestats~%% (primestat() AS _BYTE, allocatestats AS _UNSIGNED _BYTE)
+DECLARE FUNCTION TRIM$ (s AS STRING)
+DECLARE FUNCTION trimdec## (num AS _FLOAT, dec AS _UNSIGNED _BYTE)
+DECLARE FUNCTION TRIMnum$ (n AS SINGLE)
+DECLARE FUNCTION updatescreen` ()
+
+'Gorlock's QB64 Animation Library declarations
+DECLARE SUB ANIMATIONFREE (handle AS INTEGER)
+DECLARE SUB STARTANIMATION (handle AS INTEGER)
+DECLARE SUB STOPANIMATION (handle AS INTEGER)
+DECLARE SUB UPDATEANIMATION (handle AS INTEGER)
+DECLARE FUNCTION ANIMATIONSTATUS%% (handle AS INTEGER)
+DECLARE FUNCTION ANIMATIONTIME! (handle AS INTEGER)
+DECLARE FUNCTION ANIMATIONX! (handle AS INTEGER)
+DECLARE FUNCTION ANIMATIONY! (handle AS INTEGER)
+DECLARE FUNCTION NEWANIMATION% (x1 AS SINGLE, y1 AS SINGLE, x2 AS SINGLE, y2 AS SINGLE, time AS SINGLE, auto AS _BYTE)
+DECLARE FUNCTION VALIDANIMATION` (handle AS INTEGER)
+
+'Gorlock's QB64 Button Library declarations
+DECLARE SUB BUTTONFREE (handle AS INTEGER)
+DECLARE SUB HIDEBUTTON (handle AS INTEGER)
+DECLARE SUB LOCKBUTTON (handle AS INTEGER)
+DECLARE SUB LOCKBUTTONTOGGLE (handle AS INTEGER)
+DECLARE SUB PRINTBUTTON (handle AS INTEGER)
+DECLARE SUB SHOWBUTTON (handle AS INTEGER)
+DECLARE SUB UNLOCKBUTTON (handle AS INTEGER)
+DECLARE SUB UPDATEBUTTON (handle AS INTEGER)
+DECLARE FUNCTION BUTTONCLICK%% (handle AS INTEGER)
+DECLARE FUNCTION BUTTONHIT%% (handle AS INTEGER)
+DECLARE FUNCTION BUTTONSTATUS%% (handle AS INTEGER)
+DECLARE FUNCTION BUTTONTIME! (handle AS INTEGER)
+DECLARE FUNCTION BUTTONVALUE` (handle AS INTEGER)
+DECLARE FUNCTION NEWBUTTON% (spritesheet AS STRING, left AS LONG, top AS LONG, leftactive AS LONG, topactive AS LONG, rightactive AS LONG, bottomactive AS LONG, value AS _BYTE, status AS _BYTE, show AS _BYTE, auto AS _BYTE)
+DECLARE FUNCTION VALIDBUTTON` (handle AS INTEGER)
+
+'Ritchie's QB64 Sprite Library declarations
+DECLARE SUB SPRITEANIMATESET (handle AS INTEGER, startcell AS INTEGER, endcell AS INTEGER)
+DECLARE SUB SPRITEANIMATION (handle AS INTEGER, onoff AS INTEGER, behavior AS INTEGER)
+DECLARE SUB SPRITEANIMATIONCELLSET (handleAS INTEGER, cell AS INTEGER)
+DECLARE SUB SPRITECOLLIDETYPE (handle AS INTEGER, behavior AS INTEGER)
+DECLARE SUB SPRITEDIRECTIONSET (handle AS INTEGER, direction AS SINGLE)
+DECLARE SUB SPRITEFLIP (handle AS INTEGER, behavior AS INTEGER)
+DECLARE SUB SPRITEFREE (handle AS INTEGER)
+DECLARE SUB SPRITEHIDE (handle AS INTEGER)
+DECLARE SUB SPRITEMOTION (handle AS INTEGER, behavior AS INTEGER)
+DECLARE SUB SPRITENEXT (handle AS INTEGER)
+DECLARE SUB SPRITEPREVIOUS (handle AS INTEGER)
+DECLARE SUB SPRITEPUT (x AS SINGLE, y AS SINGLE, handle AS INTEGER)
+DECLARE SUB SPRITESTRETCH (x AS SINGLE, y AS SINGLE, x2 AS SINGLE, y2 AS SINGLE, handle AS INTEGER)
+DECLARE SUB SPRITEREVERSEX (handle AS INTEGER)
+DECLARE SUB SPRITEREVERSEY (handle AS INTEGER)
+DECLARE SUB SPRITEROTATE (handle AS INTEGER, degrees AS SINGLE)
+DECLARE SUB SPRITESCORESET (handle AS INTEGER, value AS SINGLE)
+DECLARE SUB SPRITESET (handle AS INTEGER, cell AS INTEGER)
+DECLARE SUB SPRITESHOW (handle AS INTEGER)
+DECLARE SUB SPRITESPEEDSET (handle AS INTEGER, speed AS SINGLE)
+DECLARE SUB SPRITESPINSET (handle AS INTEGER, spin AS SINGLE)
+DECLARE SUB SPRITESTAMP (x AS INTEGER, y AS INTEGER, handle AS INTEGER)
+DECLARE SUB SPRITETRAVEL (handle AS INTEGER, direction AS SINGLE, speed AS SINGLE)
+DECLARE SUB SPRITETRAVEL (handle AS INTEGER, direction AS SINGLE, speed AS SINGLE)
+DECLARE SUB SPRITEZOOM (handle AS INTEGER, zoom AS INTEGER)
+DECLARE FUNCTION SPRITECELLS (handle AS INTEGER)
+DECLARE FUNCTION SPRITEANGLE (handle AS INTEGER, handle2 AS INTEGER)
+DECLARE FUNCTION SPRITEANIMATIONCELL (handle AS INTEGER)
+DECLARE FUNCTION SPRITEAX (handle AS INTEGER)
+DECLARE FUNCTION SPRITEAY (handle AS INTEGER)
+DECLARE FUNCTION SPRITECOLLIDE (handle AS INTEGER, handle2 AS INTEGER)
+DECLARE FUNCTION SPRITECOLLIDEWITH (handle AS INTEGER)
+DECLARE FUNCTION SPRITECOPY (handle AS INTEGER)
+DECLARE FUNCTION SPRITECURRENTHEIGHT (handle AS INTEGER)
+DECLARE FUNCTION SPRITECURRENTWIDTH (handle AS INTEGER)
+DECLARE FUNCTION SPRITEDIRECTION (handle AS INTEGER)
+DECLARE FUNCTION SPRITEFILEEXISTS (filename AS STRING)
+DECLARE FUNCTION SPRITEMOUSE (handle AS INTEGER)
+DECLARE FUNCTION SPRITEMOUSEAX (handle AS INTEGER)
+DECLARE FUNCTION SPRITEMOUSEAY (handle AS INTEGER)
+DECLARE FUNCTION SPRITEMOUSEX (handle AS INTEGER)
+DECLARE FUNCTION SPRITEMOUSEY (handle AS INTEGER)
+DECLARE FUNCTION SPRITENEW (sheet AS INTEGER, cell AS INTEGER, behavior AS INTEGER)
+DECLARE FUNCTION SPRITEROTATION (handle AS INTEGER)
+DECLARE FUNCTION SPRITESCORE (handle AS INTEGER)
+DECLARE FUNCTION SPRITESHEETLOAD (filename AS STRING, spritewidth AS INTEGER, spriteheight AS INTEGER, transparent AS LONG)
+DECLARE FUNCTION SPRITESHOWING (handle AS INTEGER)
+DECLARE FUNCTION SPRITEX (handle AS INTEGER)
+DECLARE FUNCTION SPRITEX1 (handle AS INTEGER)
+DECLARE FUNCTION SPRITEX2 (handle AS INTEGER)
+DECLARE FUNCTION SPRITEY (handle AS INTEGER)
+DECLARE FUNCTION SPRITEY1 (handle AS INTEGER)
+DECLARE FUNCTION SPRITEY2 (handle AS INTEGER)
+DECLARE FUNCTION SPRITEZOOMLEVEL (handle AS INTEGER)
+
+
+
+
+
+'Gorlock's QB64 Animation Library type declarations
+TYPE animation
+    inuse AS _BYTE
+    status AS _BYTE
+    x1 AS SINGLE
+    y1 AS SINGLE
+    x2 AS SINGLE
+    y2 AS SINGLE
+    speed AS SINGLE
+    slope AS SINGLE
+    x AS LONG
+    y AS LONG
+    time AS SINGLE
+    timer AS LONG
+    oldTIMER AS SINGLE
+END TYPE
+
+'Gorlock's QB64 Button Library type declarations
+TYPE buttonimage
+    true AS INTEGER
+    false AS INTEGER
+END TYPE
+TYPE button
+    inuse AS _BYTE
+    show AS _BYTE
+    value AS _BYTE
+    status AS _BYTE
+    click AS _BYTE
+    hit AS _BYTE
+    spritesheet AS INTEGER
+    spritesheet2 AS INTEGER
+    width AS LONG
+    height AS LONG
+    buffer AS INTEGER
+    stand AS buttonimage
+    hover AS buttonimage
+    active AS buttonimage
+    locked AS buttonimage
+    area AS RECT
+    activearea AS RECT
+    time AS SINGLE
+    timer AS LONG
+    oldTIMER AS SINGLE
+END TYPE
+
+
+'Gorlock's QB64 Animation Library constant definitions
+CONST ANIMATION_AUTOUPDATE_OFF = FALSE
+CONST ANIMATION_AUTOUPDATE_ON = TRUE
+CONST ANIMATION_CREATED = 1
+CONST ANIMATION_FINISHED = 4
+CONST ANIMATION_PAUSED = 3
+CONST ANIMATION_STARTED = 2
+CONST ANIMATION_UNCREATED = FALSE
+
+'Gorlock's QB64 Button Library constant definitions
+CONST BUTTON_ALLBUTTONS = TRUE
+CONST BUTTON_AUTOUPDATE_OFF = FALSE
+CONST BUTTON_AUTOUPDATE_ON = TRUE
+CONST BUTTON_ACTION = 4
+CONST BUTTON_CREATED = 1
+CONST BUTTON_HIDE = FALSE
+CONST BUTTON_HOVER = 3
+CONST BUTTON_LCLICK = 1
+CONST BUTTON_LMCLICK = 5
+CONST BUTTON_LOCKED = 5
+CONST BUTTON_LRCLICK = 4
+CONST BUTTON_LRMCLICK = 7
+CONST BUTTON_MCLICK = 3
+CONST BUTTON_NOCLICK = FALSE
+CONST BUTTON_OFF = 0
+CONST BUTTON_ON = -1
+CONST BUTTON_RCLICK = 2
+CONST BUTTON_RMCLICK = 6
+CONST BUTTON_SHOW = TRUE
+CONST BUTTON_STAND = 2
+CONST BUTTON_UNCREATED = FALSE
+
+
+
+'Gorlock's QB64 Animation Library array dimensioning
+REDIM animations(0) AS animation
+
+'Gorlock's QB64 Button Library array dimensioning
+REDIM buttons(0) AS button
+
+
+
+
+REDIM SHARED GUI_frame(2, 8, 4) AS LONG
+
+GUI_frame(1, 1, 1) = _LOADIMAGE("resource\image\gui\frame\frame_bar.png")
+GUI_frame(1, 2, 1) = _LOADIMAGE("resource\image\gui\frame\frame_side_bottom.png")
+GUI_frame(1, 2, 2) = _LOADIMAGE("resource\image\gui\frame\frame_side_left.png")
+GUI_frame(1, 2, 3) = _LOADIMAGE("resource\image\gui\frame\frame_side_right.png")
+GUI_frame(1, 2, 4) = _LOADIMAGE("resource\image\gui\frame\frame_side_top.png")
+GUI_frame(1, 3, 1) = _LOADIMAGE("resource\image\gui\frame\frame_corner_1.png")
+GUI_frame(1, 3, 2) = _LOADIMAGE("resource\image\gui\frame\frame_corner_2.png")
+GUI_frame(1, 3, 3) = _LOADIMAGE("resource\image\gui\frame\frame_corner_3.png")
+GUI_frame(1, 3, 4) = _LOADIMAGE("resource\image\gui\frame\frame_corner_4.png")
+GUI_frame(1, 4, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cross.png")
+GUI_frame(1, 5, 1) = _LOADIMAGE("resource\image\gui\frame\frame_t_bottom.png")
+GUI_frame(1, 5, 2) = _LOADIMAGE("resource\image\gui\frame\frame_t_left.png")
+GUI_frame(1, 5, 3) = _LOADIMAGE("resource\image\gui\frame\frame_t_right.png")
+GUI_frame(1, 5, 4) = _LOADIMAGE("resource\image\gui\frame\frame_t_top.png")
+GUI_frame(1, 6, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cap_bottom.png")
+GUI_frame(1, 6, 2) = _LOADIMAGE("resource\image\gui\frame\frame_cap_left.png")
+GUI_frame(1, 6, 3) = _LOADIMAGE("resource\image\gui\frame\frame_cap_right.png")
+GUI_frame(1, 6, 4) = _LOADIMAGE("resource\image\gui\frame\frame_cap_top.png")
+GUI_frame(1, 7, 1) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_bottom.png")
+GUI_frame(1, 7, 2) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_left.png")
+GUI_frame(1, 7, 3) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_right.png")
+GUI_frame(1, 7, 4) = _LOADIMAGE("resource\image\gui\frame\frame_box_large_top.png")
+GUI_frame(1, 8, 1) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_bottom.png")
+GUI_frame(1, 8, 2) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_left.png")
+GUI_frame(1, 8, 3) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_right.png")
+GUI_frame(1, 8, 4) = _LOADIMAGE("resource\image\gui\frame\frame_box_small_top.png")
+GUI_frame(2, 1, 1) = _LOADIMAGE("resource\image\gui\frame\frame_bar_double.png")
+GUI_frame(2, 2, 1) = _LOADIMAGE("resource\image\gui\frame\frame_side_bottom_double.png")
+GUI_frame(2, 2, 2) = _LOADIMAGE("resource\image\gui\frame\frame_side_left_double.png")
+GUI_frame(2, 2, 3) = _LOADIMAGE("resource\image\gui\frame\frame_side_right_double.png")
+GUI_frame(2, 2, 4) = _LOADIMAGE("resource\image\gui\frame\frame_side_top_double.png")
+GUI_frame(2, 3, 1) = _LOADIMAGE("resource\image\gui\frame\frame_corner_1_double.png")
+GUI_frame(2, 3, 2) = _LOADIMAGE("resource\image\gui\frame\frame_corner_2_double.png")
+GUI_frame(2, 3, 3) = _LOADIMAGE("resource\image\gui\frame\frame_corner_3_double.png")
+GUI_frame(2, 3, 4) = _LOADIMAGE("resource\image\gui\frame\frame_corner_4_double.png")
+GUI_frame(2, 4, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cross_double.png")
+GUI_frame(2, 5, 1) = _LOADIMAGE("resource\image\gui\frame\frame_t_bottom_double.png")
+GUI_frame(2, 5, 2) = _LOADIMAGE("resource\image\gui\frame\frame_t_left_double.png")
+GUI_frame(2, 5, 3) = _LOADIMAGE("resource\image\gui\frame\frame_t_right_double.png")
+GUI_frame(2, 5, 4) = _LOADIMAGE("resource\image\gui\frame\frame_t_top_double.png")
+GUI_frame(2, 6, 1) = _LOADIMAGE("resource\image\gui\frame\frame_cap_bottom_double.png")
+GUI_frame(2, 6, 2) = _LOADIMAGE("resource\image\gui\frame\frame_cap_left_double.png")
+GUI_frame(2, 6, 3) = _LOADIMAGE("resource\image\gui\frame\frame_cap_right_double.png")
+GUI_frame(2, 6, 4) = _LOADIMAGE("resource\image\gui\frame\frame_cap_top_double.png")
+
+
+
+
+
+'open error log
+OPEN "data\errorlog.log" FOR APPEND AS #4
+
+
+
+
+
+'$include:'source\help.txt'
+
+
+'$include:'source\newgame.txt'
+
+
+
+
+
+'QB64 Animation Library by Gorlock
+'$INCLUDE:'lib\animation.bi'
+
+'QB64 Button Library by Gorlock
+'$INCLUDE:'lib\button.bi'

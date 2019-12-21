@@ -1,0 +1,5 @@
+Docile     - 00-19
+Benevolent - 20-39
+Stroppy    - 40-69
+Malevolent - 60-89
+Violent    - 80-99

@@ -1,0 +1,14 @@
+000-027 (013)  -  Lawful Good
+028-055 (041)  -  Neutral Good
+056-084 (069)  -  Chaotic Good
+085-111 (097)  -  Lawful Neutral
+112-139 (125)  -  Neutral
+140-167 (153)  -  Chaotic Neutral
+168-196 (181)  -  Lawful Evil
+197-223 (209)  -  Neutral Evil
+224-252 (237)  -  Chaotic Evil
+
+000 - Saintly
+084 - Beatific
+168 - Diabolic
+252 - Demoniac

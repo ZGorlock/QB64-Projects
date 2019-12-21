@@ -1,0 +1,40 @@
+PROGRAMMING
+Zachary Gill
+QB64 - Galleon
+forum
+Sprtie Library - Terry Ritchie
+Color32.BI - SMcNeill
+
+ART
+Sprites
+	'Clint Bellanger - FLARE
+GUI
+	Under the moon - OGA
+	Jorge Avila - OGA
+Cursors
+	artisticdude - OGA
+	Under the moon - OGA
+Tilesets
+Textures
+	Dakal - OGA
+	Spiral Graphics - spiralgraphics.biz
+	Sethren - spiralgraphics.biz
+        ftourini-stock - deviantart
+
+
+SOUND
+BGM
+	Zachary Gill - FL Studio 10
+	artisticdude - OGA
+	Pub - That Man by Caro Emerald + FL Studio 10
+SFX
+	Zachary Gill - FL Studio 10
+
+
+FONT
+unispace - Typodermic Fonts
+Salterio Shadow - Intellecta Design
+
+
+TESTERS
+Marshall Hendlin

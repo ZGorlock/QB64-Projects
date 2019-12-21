@@ -1,0 +1,303 @@
+IF (k$ = CHR$(102) OR k$ = CHR$(70)) OR (_MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 349 AND _MOUSEY < 365 AND _MOUSEBUTTON(1)) THEN
+    bibliography = 1
+    source$ = "http://global.hidden-street.net/reactor"
+    DO
+        DO
+            REDIM reactorlist$(32768)
+            REDIM reactorlistprint$(32768)
+            reactor$ = ""
+            selected = 1
+            row = 1
+            OPEN "source\list\reactors.txt" FOR INPUT AS #1
+            reactoramount = 1
+            DO UNTIL EOF(1)
+                ON ERROR GOTO endofreactorfile
+                LINE INPUT #1, reactorlist$(reactoramount)
+                reactoramount = reactoramount + 1
+            LOOP
+            endofreactorfile:
+            CLOSE #1
+            reactorlistamount = reactoramount
+            FOR reactorchange = 1 TO reactoramount
+                reactorlistprint$(reactorchange) = reactorlist$(reactorchange)
+            NEXT reactorchange
+            DO
+                _LIMIT 64
+                CLS
+                COLOR textcolor, backcolor
+                PRINT "Enter the name of the reactor you want to learn about"
+                PRINT ": "; reactor$
+                PRINT
+                IF reactorlistamount <= 24 THEN
+                    FOR reactorprint = 1 TO reactorlistamount
+                        IF reactorprint = selected THEN
+                            COLOR backcolor, textcolor
+                        ELSE
+                            COLOR textcolor, backcolor
+                        END IF
+                        PRINT reactorlistprint$(reactorprint)
+                    NEXT reactorprint
+                ELSE
+                    FOR reactorlisting = row TO (row + 24)
+                        IF reactorlisting = selected THEN
+                            COLOR backcolor, textcolor
+                        ELSE
+                            COLOR textcolor, backcolor
+                        END IF
+                        PRINT reactorlistprint$(reactorlisting)
+                    NEXT reactorlisting
+                END IF
+                COLOR textcolor, backcolor
+                IF row + 24 < reactorlistamount AND selected > row + 12 THEN
+                    row = row + 1
+                END IF
+                IF row <> 1 AND selected < row + 12 THEN
+                    row = row - 1
+                END IF
+                IF k$ >= CHR$(32) AND k$ <= CHR$(126) THEN
+                    reactor$ = reactor$ + k$
+                    inputlength = LEN(reactor$)
+                END IF
+                IF k$ = CHR$(8) AND inputlength > 0 THEN
+                    reactor$ = MID$(reactor$, 1, (inputlength - 1))
+                    inputlength = (inputlength - 1)
+                END IF
+                IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                IF k$ = (CHR$(0) + CHR$(80)) AND selected <> reactorlistamount THEN selected = selected + 1
+                IF oldreactor$ <> reactor$ THEN
+                    reactorlistamount = 0
+                    FOR reactornewlist = 1 TO reactoramount
+                        IF MID$(reactorlist$(reactornewlist), 1, inputlength) = reactor$ THEN
+                            reactorlistamount = reactorlistamount + 1
+                            reactorlistprint$(reactorlistamount) = reactorlist$(reactornewlist)
+                        END IF
+                    NEXT reactornewlist
+                    row = 1
+                    selected = 1
+                    oldreactor$ = reactor$
+                END IF
+                GOSUB controls
+                _DISPLAY
+            LOOP UNTIL k$ = CHR$(13)
+            reactor$ = reactorlistprint$(selected)
+            exitloop = 0
+            SELECT CASE reactor$
+                CASE "Aquamarine Herb"
+                    pic$ = "graphic\reactor\aquamarineherb.png"
+                    rtype = 2
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\aquamarineherb.txt"
+                CASE "Aquamarine Vein"
+                    pic$ = "graphic\reactor\aquamarinevein.png"
+                    rtype = 1
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\aquamarinevein.txt"
+                CASE "Black Herb"
+                    pic$ = "graphic\reactor\blackherb.png"
+                    rtype = 2
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\blackherb.txt"
+                CASE "Black Vein"
+                    pic$ = "graphic\reactor\blackvein.png"
+                    rtype = 1
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\blackvein.txt"
+                CASE "Blue Herb"
+                    pic$ = "graphic\reactor\blueherb.png"
+                    rtype = 2
+                    size = 1
+                    drops$ = ""
+                    loc$ = "source\reactor\blueherb.txt"
+                CASE "Blue Vein"
+                    pic$ = "graphic\reactor\bluevein.png"
+                    rtype = 1
+                    size = 1
+                    drops$ = ""
+                    loc$ = "source\reactor\bluevein.txt"
+                CASE "Brown Herb"
+                    pic$ = "graphic\reactor\brownherb.png"
+                    rtype = 2
+                    size = 2
+                    drops$ = ""
+                    loc$ = "source\reactor\brownherb.txt"
+                CASE "Brown Vein"
+                    pic$ = "graphic\reactor\brownvein.png"
+                    rtype = 1
+                    size = 2
+                    drops$ = ""
+                    loc$ = "source\reactor\brownvein.txt"
+                CASE "Emerald Herb"
+                    pic$ = "graphic\reactor\emeraldherb.png"
+                    rtype = 2
+                    size = 2
+                    drops$ = ""
+                    loc$ = "source\reactor\emeraldherb.txt"
+                CASE "Emerald Vein"
+                    pic$ = "graphic\reactor\emeraldvein.png"
+                    rtype = 1
+                    size = 2
+                    drops$ = ""
+                    loc$ = "source\reactor\emeraldvein.txt"
+                CASE "Gold Flower"
+                    pic$ = "graphic\reactor\goldflower.png"
+                    rtype = 2
+                    size = 4
+                    drops$ = ""
+                    loc$ = "source\reactor\goldflower.txt"
+                CASE "Gold Herb"
+                    pic$ = "graphic\reactor\goldherb.png"
+                    rtype = 2
+                    size = 2
+                    drops$ = ""
+                    loc$ = "source\reactor\goldherb.txt"
+                CASE "Gold Vein"
+                    pic$ = "graphic\reactor\goldvein.png"
+                    rtype = 1
+                    size = 2
+                    drops$ = ""
+                    loc$ = "source\reactor\goldvein.txt"
+                CASE "Heartstone"
+                    pic$ = "graphic\reactor\heartstone.png"
+                    rtype = 1
+                    size = 4
+                    drops$ = ""
+                    loc$ = "source\reactor\heartstone.txt"
+                CASE "Magenta Herb"
+                    pic$ = "graphic\reactor\magentaherb.png"
+                    rtype = 2
+                    size = 1
+                    drops$ = ""
+                    loc$ = "source\reactor\magentaherb.txt"
+                CASE "Magenta Vein"
+                    pic$ = "graphic\reactor\magentavein.png"
+                    rtype = 1
+                    size = 1
+                    drops$ = ""
+                    loc$ = "source\reactor\magentavein.txt"
+                CASE "Purple Herb"
+                    pic$ = "graphic\reactor\purpleherb.png"
+                    rtype = 2
+                    size = 4
+                    drops$ = ""
+                    loc$ = "source\reactor\purpleherb.txt"
+                CASE "Purple Vein"
+                    pic$ = "graphic\reactor\purplevein.png"
+                    rtype = 1
+                    size = 4
+                    drops$ = ""
+                    loc$ = "source\reactor\purplevein.txt"
+                CASE "Red Herb"
+                    pic$ = "graphic\reactor\redherb.png"
+                    rtype = 2
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\redherb.txt"
+                CASE "Red Vein"
+                    pic$ = "graphic\reactor\redvein.png"
+                    rtype = 1
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\redvein.txt"
+                CASE "Silver Herb"
+                    pic$ = "graphic\reactor\silverherb.png"
+                    rtype = 2
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\silverherb.txt"
+                CASE "Silver Vein"
+                    pic$ = "graphic\reactor\silvervein.png"
+                    rtype = 1
+                    size = 3
+                    drops$ = ""
+                    loc$ = "source\reactor\silvervein.txt"
+            END SELECT
+            OPEN loc$ FOR INPUT AS #1
+            REDIM loc$(512)
+            inputcount = 1
+            DO UNTIL EOF(1)
+                ON ERROR GOTO endofreactorlocfile
+                LINE INPUT #1, loc$(inputcount)
+                inputcount = inputcount + 1
+            LOOP
+            endofreactorlocfile:
+            CLOSE #1
+            listnum = inputcount
+            row = 1
+            DO
+                _LIMIT 64
+                CLS
+                LOCATE 1, ((80 - (LEN(reactor$))) / 2)
+                PRINT "-"; reactor$; "-"
+                LOCATE 4, 1
+                PRINT "Press 'p' to see a picture of this reactor"
+                LOCATE 8, 1
+                IF rtype = 1 THEN
+                    PRINT "Obtained through Mining"
+                END IF
+                IF rtype = 2 THEN
+                    PRINT "Obtained through Herbalism"
+                END IF
+                PRINT "Size:"; size
+                LOCATE 11, 1
+                PRINT "Drops:"
+                PRINT "      -"; drops$
+                LOCATE 16, 1
+                PRINT "Locations:"
+                FOR rlp = row TO row + 10
+                    PRINT "     -"; loc$(rlp)
+                NEXT rlp
+                scrollgap = 10
+                GOSUB scrollbar
+                GOSUB controls
+                IF k$ = CHR$(112) THEN
+                    SCREEN 13
+                    reactorpic = _LOADIMAGE(pic$)
+                    DO
+                        _LIMIT 64
+                        CLS
+                        _PUTIMAGE (10, 10), reactorpic
+                        LOCATE 25, 1
+                        PRINT "Press Space to Return"
+                        nomouse = 1
+                        GOSUB controls
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    DO
+                        _LIMIT 64
+                        GOSUB controls
+                    LOOP UNTIL k$ = ""
+                    SCREEN 12
+                END IF
+                DO WHILE _MOUSEINPUT
+                    row = row + (_MOUSEWHEEL * scrollspeed)
+                    IF row < 1 THEN row = 1
+                    IF row > (listnum - 11) THEN row = (listnum - 11)
+                LOOP
+                _DISPLAY
+            LOOP UNTIL k$ = CHR$(32)
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "Where would you like to go"
+                PRINT "    1-Reactor Menu"
+                PRINT "    2-Main Menu"
+                GOSUB controls
+                IF k$ = CHR$(49) THEN
+                    DO
+                        GOSUB controls
+                    LOOP UNTIL k$ = ""
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(50) THEN
+                    GOTO BEGIN
+                END IF
+                GOSUB controls
+                _DISPLAY
+            LOOP
+        LOOP
+    LOOP
+END IF

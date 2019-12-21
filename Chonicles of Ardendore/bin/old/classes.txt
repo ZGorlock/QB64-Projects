@@ -1,0 +1,42 @@
+-Apprentice
+	-Fighter
+		-Page
+			-Knight
+				-Paladin
+		-Swordsman
+			-Mercenary
+				-Bezerker
+		-Cavalier
+			-General
+		-Barbarian *
+			- *
+				- *
+	-Magic User
+		-Healer
+			-Priest
+			-Bishop
+		-Wizard
+			-Solar Wizard
+				-Solar Mage
+			-Lunar Wizard
+				-Lunar Mage
+		-Druid
+			-Shaman
+				-Witch Doctor
+		-Conjurer
+			-Necromancer
+				-Puppeteer
+					-Shade
+		- *
+			- *
+				- *
+	-Rogue
+		-Thief
+			-Assassin
+				-Shadow
+		-Archer
+			-Ranger
+				-Marksman
+		-Pirate *
+			-Buccaneer *
+				-Marauder *

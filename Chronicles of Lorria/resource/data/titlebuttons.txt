@@ -1,0 +1,6 @@
+New Game
+Load Game
+Settings
+Help
+Credits
+Quit

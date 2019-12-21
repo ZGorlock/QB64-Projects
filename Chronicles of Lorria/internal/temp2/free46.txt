@@ -1,0 +1,4 @@
+if(oldstr8549){
+if(oldstr8549->fixed)qbs_set(oldstr8549,_FUNC_TRIM_STRING_S);
+qbs_free(_FUNC_TRIM_STRING_S);
+}

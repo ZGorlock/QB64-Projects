@@ -1,0 +1,80 @@
+uint32 *_SUB_KEYBOARD_UBIT1_COLORSCHEME=NULL;
+if(_SUB_KEYBOARD_UBIT1_COLORSCHEME==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_SUB_KEYBOARD_UBIT1_COLORSCHEME=(uint32*)(dblock+cmem_sp);
+*_SUB_KEYBOARD_UBIT1_COLORSCHEME=0;
+}
+uint8 *_SUB_KEYBOARD_UBYTE_BOARD=NULL;
+if(_SUB_KEYBOARD_UBYTE_BOARD==NULL){
+_SUB_KEYBOARD_UBYTE_BOARD=(uint8*)mem_static_malloc(1);
+*_SUB_KEYBOARD_UBYTE_BOARD=0;
+}
+int8 *_SUB_KEYBOARD_BYTE_KEYWIDTH=NULL;
+if(_SUB_KEYBOARD_BYTE_KEYWIDTH==NULL){
+_SUB_KEYBOARD_BYTE_KEYWIDTH=(int8*)mem_static_malloc(1);
+*_SUB_KEYBOARD_BYTE_KEYWIDTH=0;
+}
+uint8 *_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDROW=NULL;
+if(_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDROW==NULL){
+_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDROW=(uint8*)mem_static_malloc(1);
+*_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDROW=0;
+}
+uint8 *_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDCOL=NULL;
+if(_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDCOL==NULL){
+_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDCOL=(uint8*)mem_static_malloc(1);
+*_SUB_KEYBOARD_UBYTE_DRAWKEYBOARDCOL=0;
+}
+uint8 *_SUB_KEYBOARD_UBYTE_GETWIDTH=NULL;
+if(_SUB_KEYBOARD_UBYTE_GETWIDTH==NULL){
+_SUB_KEYBOARD_UBYTE_GETWIDTH=(uint8*)mem_static_malloc(1);
+*_SUB_KEYBOARD_UBYTE_GETWIDTH=0;
+}
+int16 *_SUB_KEYBOARD_INTEGER_KEYPRINT=NULL;
+if(_SUB_KEYBOARD_INTEGER_KEYPRINT==NULL){
+_SUB_KEYBOARD_INTEGER_KEYPRINT=(int16*)mem_static_malloc(2);
+*_SUB_KEYBOARD_INTEGER_KEYPRINT=0;
+}
+int16 fornext_value8339;
+int16 fornext_finalvalue8339;
+int16 fornext_step8339;
+uint8 fornext_step_negative8339;
+int16 fornext_value8341;
+int16 fornext_finalvalue8341;
+int16 fornext_step8341;
+uint8 fornext_step_negative8341;
+int16 fornext_value8343;
+int16 fornext_finalvalue8343;
+int16 fornext_step8343;
+uint8 fornext_step_negative8343;
+int8 pass8344;
+int32 pass8345;
+int32 pass8346;
+int32 pass8347;
+int32 pass8348;
+int32 pass8349;
+int32 pass8350;
+int32 pass8351;
+int32 pass8352;
+int32 pass8353;
+int32 pass8354;
+int32 pass8355;
+int32 pass8356;
+int32 pass8359;
+int32 pass8360;
+int32 pass8361;
+int32 pass8362;
+int32 pass8363;
+int32 pass8364;
+int8 pass8366;
+int32 pass8367;
+int32 pass8368;
+int32 pass8369;
+int32 pass8370;
+int32 pass8371;
+int32 pass8372;
+int8 pass8373;
+int8 pass8374;
+int8 pass8375;
+int8 pass8377;
+int8 pass8378;

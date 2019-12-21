@@ -1,0 +1,4 @@
+if(oldstr6438){
+if(oldstr6438->fixed)qbs_set(oldstr6438,_FUNC_NEWANIMATION_STRING_EQUATION);
+qbs_free(_FUNC_NEWANIMATION_STRING_EQUATION);
+}

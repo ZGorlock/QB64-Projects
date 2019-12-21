@@ -1,0 +1,12 @@
+SCREEN 0
+WIDTH 10, 3
+client = _OPENCLIENT("TCP/IP:319:localhost")
+DO
+    _LIMIT 50
+    INPUT #client, position$
+    IF position$ <> oldposition$ AND position$ <> "" THEN
+        CLS
+        COLOR 15, 0
+        PRINT position$
+    END IF
+LOOP

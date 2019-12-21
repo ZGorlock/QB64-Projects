@@ -1,0 +1,15 @@
+int32val=2;
+sub_put(FF,NULL,byte_element((uint64)&int32val,4,byte_element_190),0);
+if (__ARRAY_UDT_HISTORY[2]&1){
+int32val=3;
+sub_put(FF,NULL,byte_element((uint64)&int32val,4,byte_element_191),0);
+int64val=672;
+sub_put(FF,NULL,byte_element((uint64)&int64val,8,byte_element_192),0);
+int32val=1;
+sub_put(FF,NULL,byte_element((uint64)&int32val,4,byte_element_193),0);
+int64val=func_lbound(__ARRAY_UDT_HISTORY, 1 ,1);
+sub_put(FF,NULL,byte_element((uint64)&int64val,8,byte_element_194),0);
+int64val=func_ubound(__ARRAY_UDT_HISTORY, 1 ,1);
+sub_put(FF,NULL,byte_element((uint64)&int64val,8,byte_element_195),0);
+sub_put(FF,NULL,byte_element((uint64)(((char*)__ARRAY_UDT_HISTORY[0])+((0)*84)),(84*(__ARRAY_UDT_HISTORY[2]&1)*__ARRAY_UDT_HISTORY[5])-((0)*84),byte_element_196),0);
+}

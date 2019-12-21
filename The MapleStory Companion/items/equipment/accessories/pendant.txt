@@ -1,0 +1,3563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="canonical" href="http://global.hidden-street.net/eq/accessories/pendant" />
+<link rel="shortcut icon" href="/sites/all/themes/lithharbor/favicon.ico" type="image/x-icon" />
+  <title>Pendant | MapleStory | HS.MapleGlobal</title>
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/global.hidden-street.net/files/css/css_bb477b98db50b14e9d92f8f98382817a.css" />
+  <!--[if lte IE 8]>
+    <style type="text/css">
+      body { behavior: url(/sites/all/themes/lithharbor/csshover3.htc); }
+    </style>
+  <![endif]-->
+  <!--[if lte IE 6]>
+    <style type="text/css">
+      .pngfix { behavior: url(/sites/all/themes/lithharbor/iepngfix.htc); }
+    </style>
+    <script type="text/javascript" src="/sites/all/themes/lithharbor/iepngfix-tilebg.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_b99b64f78cee0f66772c70d5f5464a10.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "dhtmlMenu": { "slide": "slide", "siblings": 0, "relativity": 0, "children": 0, "clone": 0, "doubleclick": 0 }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/global.hidden-street.net/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 1, "disable_zoom": 0, "force_show_nav": 0, "show_caption": true, "loop_items": 0, "node_link_text": "", "node_link_target": 0, "image_count": "", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 } });
+//--><!]]>
+</script>
+  <script type="text/javascript">window.google_analytics_uacct = "UA-989776-5";</script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-989776-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body class="not-front-page not-logged-in not-admin page-eq sidebar-left-and-right">
+<div id="wrapper">
+  <div id="page">
+    <div class="clear-both"><!-- --></div>
+
+    
+	<div id="header">
+              <div id="logo">
+          <a href="/" title="Home" rel="home">
+            <img src="/sites/all/themes/lithharbor/logo.png" alt="Home" />
+          </a>
+        </div>
+      	  
+	  <div id="user-bar">
+	    	                <form method='post' accept-charset='UTF-8' action='/user/login'>          <div class="form-item" id="edit-name-wrapper">
+
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" tabindex="1" title="Username:" class="form-text required" />
+</div>
+          <div class="form-item" id="edit-pass-wrapper">
+ <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  tabindex="2" title="Password:" class="form-text required" />
+</div>
+          <input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
+<input type="hidden" name="form_build_id" id="form-4fe500aa52da36a8cb105b673690a103" value="form-4fe500aa52da36a8cb105b673690a103"  />
+<input type="submit" name="op" id="edit-submit-2" value="Log in"  tabindex="3" class="form-submit" />
+          </form>				<script type="text/javascript">
+          $('#edit-name').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+		  $('#edit-pass').example(function() {
+            return $(this).attr('title');
+          }, {className: 'not-focus'});
+        </script>
+	  </div>
+
+	</div>
+
+	<div id="navigation">
+              <div id="primary">
+          <ul class="menu"><li class="leaf first dhtml-menu "><a href="/" title="" id="dhtml_menu-1652">Home</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum/forumdisplay.php?420-Guides" title="" id="dhtml_menu-165">Guides</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/forum" title="" id="dhtml_menu-166">Forum</a></li>
+<li class="leaf  dhtml-menu "><a href="http://www.hidden-street.net/guild" title="" id="dhtml_menu-167">Guild</a></li>
+<li class="leaf last dhtml-menu "><a href="/contact" title="" id="dhtml_menu-168">Contact Us</a></li>
+
+</ul>        </div>
+      	          <div id="search-box">
+          <div id="block-finder-finder_3" class="block block-finder block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div id="finder-block-3" class="finder-block"><div id="finder-block-3-wrapper" class="finder-view-wrapper"><div class="finder-view-3 finder-view"><form action="/search_finder"  accept-charset="UTF-8" method="post" id="finder-form-3">
+<div><div class="finder-form finder-3"><div class="form-item" id="edit-3-wrapper">
+ <label for="edit-3">Search: </label>
+
+ <input type="text" maxlength="128" name="3" id="edit-3" size="60" value="" class="form-text form-autocomplete" />
+</div>
+<input class="finder-autocomplete" type="hidden" id="edit-3-autocomplete" value="http://global.hidden-street.net/finder_autocomplete/autocomplete/3/3" disabled="disabled" /><input type="submit" name="find" id="edit-submit" value="Submit"  class="form-submit" />
+</div><input type="hidden" name="form_build_id" id="form-be59a9a93daa83f0bc4089a66add0888" value="form-be59a9a93daa83f0bc4089a66add0888"  />
+<input type="hidden" name="form_id" id="edit-finder-form-3" value="finder_form_3"  />
+
+</div></form>
+</div></div></div>      </div>
+    </div>
+  </div>  
+</div>
+        </div>
+
+		<script type="text/javascript">
+          $('#edit-3').example('Search for...', {className: 'not-focus'});
+        </script>
+      	</div>
+
+    <div id="main-wrapper">
+      <div id="main-wrapper-t">
+        <div id="main-wrapper-b" class="clear-both">
+          <div id="sidebar-left-and-main">
+                          <div id="sidebar-left">
+                <div id="block-menu-menu-database" class="block block-menu block-1 block-first clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+
+        <ul class="menu"><li class="expanded first dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-171">General</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/experience-table" title="" id="dhtml_menu-181">Experience Table</a></li>
+<li class="leaf last dhtml-menu "><a href="/pet-closeness-table" title="" id="dhtml_menu-192">Pet Closeness Table</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-15281">Tools</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character-avoidance-calculator" title="" id="dhtml_menu-15283">Character Avoidance Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/character-damage-calculator" title="" id="dhtml_menu-15285">Character Damage Calculator</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster-avoidance-calculator" title="" id="dhtml_menu-15282">Monster Avoidance Calculator</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster-damage-calculator" title="" id="dhtml_menu-15284">Monster Damage Calculator</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-172">Characters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/character/class/admin" title="" id="dhtml_menu-193">Admin</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/adventurers" title="" id="dhtml_menu-1653">Adventurers</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/cygnus-knights" title="" id="dhtml_menu-1654">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/class/guild" title="" id="dhtml_menu-16175">Guild</a></li>
+<li class="leaf  dhtml-menu "><a href="/character/legends" title="" id="dhtml_menu-5111">Legends</a></li>
+<li class="leaf last dhtml-menu "><a href="/character/resistance" title="Resistance" id="dhtml_menu-15274">Resistance</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-174">Equipment</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/eq/accessories" title="" id="dhtml_menu-197">Accessories</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/eq/armours" title="" id="dhtml_menu-196">Armours</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/taming-mob" id="dhtml_menu-15267">Taming Mob</a></li>
+<li class="leaf  dhtml-menu "><a href="/eq/weapons" title="" id="dhtml_menu-995">Weapons</a></li>
+<li class="leaf last dhtml-menu "><a href="/eq/monster-card-set" id="dhtml_menu-18898">Monster Card Set</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu "><a href="/database" title="" id="dhtml_menu-173">Items</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/items/useable-items" title="" id="dhtml_menu-199">Useable Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/ores" title="" id="dhtml_menu-200">Ores</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/misc-items" title="" id="dhtml_menu-201">Misc. Items</a></li>
+<li class="leaf  dhtml-menu "><a href="/items/set-up" title="" id="dhtml_menu-202">Set-up</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/items/maker-items" title="" id="dhtml_menu-3742">Maker Items</a></li>
+<li class="leaf last dhtml-menu "><a href="/items/profession-items" title="" id="dhtml_menu-18796">Profession Items</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-186">Item Synthesis</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-synthesis/common" title="" id="dhtml_menu-203">Common</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/bowman" title="" id="dhtml_menu-205">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/magician" title="" id="dhtml_menu-206">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/pirate" title="" id="dhtml_menu-208">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/thief" title="" id="dhtml_menu-207">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/warrior" title="" id="dhtml_menu-204">Warrior</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/item-synthesis/weapon-forging" title="" id="dhtml_menu-209">Weapon Forging</a></li>
+<li class="leaf last dhtml-menu "><a href="/item-synthesis/itcg" title="" id="dhtml_menu-3759">iTCG Forging</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-5091">Item Maker</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/item-maker/warrior" title="" id="dhtml_menu-5092">Warrior</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/magician" title="" id="dhtml_menu-5093">Magician</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/bowman" title="" id="dhtml_menu-5094">Bowman</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/thief" title="" id="dhtml_menu-5095">Thief</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/pirate" title="" id="dhtml_menu-5096">Pirate</a></li>
+<li class="leaf  dhtml-menu "><a href="/item-maker/etc" title="" id="dhtml_menu-5097">Etc</a></li>
+
+<li class="leaf last dhtml-menu "><a href="/item-maker/useable" title="" id="dhtml_menu-5098">Useable</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-176">Maps</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/map/amoria" title="" id="dhtml_menu-214">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/edelstein" title="" id="dhtml_menu-15537">Edelstein</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ellin" title="" id="dhtml_menu-2287">Ellin</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ereve" title="" id="dhtml_menu-2286">Ereve</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/maple-island" title="" id="dhtml_menu-211">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/masteria" title="" id="dhtml_menu-1413">Masteria</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/ossyria" title="" id="dhtml_menu-213">Ossyria</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/map/rien" title="Rien" id="dhtml_menu-8255">Rien</a></li>
+<li class="leaf  dhtml-menu "><a href="/map/victoria-island" title="" id="dhtml_menu-212">Victoria Island</a></li>
+<li class="leaf last dhtml-menu "><a href="/map/world-tour" title="" id="dhtml_menu-215">World Tour</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-175">Monsters</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/monster/list" id="dhtml_menu-1033">Monster List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/element-weakness-list" id="dhtml_menu-1034">Element Weakness List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/boss-list" title="" id="dhtml_menu-9027">Boss List</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/event" id="dhtml_menu-1032">Event Monsters</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/1-10" id="dhtml_menu-990">Level 1-10</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/11-20" id="dhtml_menu-1012">Level 11-20</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/21-30" id="dhtml_menu-1013">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/31-40" id="dhtml_menu-1014">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/41-50" id="dhtml_menu-1015">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/51-60" id="dhtml_menu-1016">Level 51-60</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/61-70" id="dhtml_menu-1017">Level 61-70</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/71-80" id="dhtml_menu-1018">Level 71-80</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/81-90" id="dhtml_menu-1019">Level 81-90</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/91-100" id="dhtml_menu-1020">Level 91-100</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/monster/101-120" id="dhtml_menu-16164">Level 101-120</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/121-140" id="dhtml_menu-16165">Level 121-140</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/141-160" id="dhtml_menu-16166">Level 141-160</a></li>
+<li class="leaf  dhtml-menu "><a href="/monster/161-180" id="dhtml_menu-16167">Level 161-180</a></li>
+<li class="leaf last dhtml-menu "><a href="/monster/181-200" id="dhtml_menu-16168">Level 181-200</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-177">NPC &amp; Towns</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/npc/npc-list" title="" id="dhtml_menu-230">NPC List</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/aquaroad" title="" id="dhtml_menu-240">Aquaroad</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ariant" title="" id="dhtml_menu-249">Ariant</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/el-nath" title="" id="dhtml_menu-238">El Nath</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/ellinia" title="" id="dhtml_menu-233">Ellinia</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/henesys" title="" id="dhtml_menu-232">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/herb-town" title="" id="dhtml_menu-248">Herb Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/kerning-city" title="" id="dhtml_menu-235">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/korean-folk-town" title="" id="dhtml_menu-245">Korean Folk Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/leafre" title="" id="dhtml_menu-246">Leafre</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/lith-harbor" title="" id="dhtml_menu-4818">Lith Harbor</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/ludibrium" title="" id="dhtml_menu-239">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-kampung-village" title="" id="dhtml_menu-255">Malaysia : Kampung Village</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/malaysia-trend-zone" title="" id="dhtml_menu-254">Malaysia : Trend Zone</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mu-lung" title="" id="dhtml_menu-247">Mu Lung</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/mushroom-shrine" title="" id="dhtml_menu-242">Mushroom Shrine</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/nautilus-port" title="" id="dhtml_menu-250">Nautilus Port</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/new-leaf-city" title="" id="dhtml_menu-256">New Leaf City</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/omega-sector" title="" id="dhtml_menu-241">Omega Sector</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/orbis" title="" id="dhtml_menu-237">Orbis</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/town/perion" title="" id="dhtml_menu-234">Perion</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/showa" title="" id="dhtml_menu-243">Showa</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-boat-quay-town" title="" id="dhtml_menu-251">Singapore : Boat Quay Town</a></li>
+<li class="leaf  dhtml-menu "><a href="/town/singapore-cbd" title="" id="dhtml_menu-252">Singapore : CBD</a></li>
+<li class="leaf last dhtml-menu "><a href="/town/sleepywood" title="" id="dhtml_menu-236">Sleepywood</a></li>
+</ul></li>
+<li class="leaf  dhtml-menu "><a href="/reactor" id="dhtml_menu-18853">Reactor</a></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-178">Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/quest/list" id="dhtml_menu-5080">Quest List</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/fame" title="" id="dhtml_menu-16162">Quests with Fame</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/repeatable" id="dhtml_menu-17642">Quest with Repeatable</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/events" id="dhtml_menu-1029">Events</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/cygnus-knights" title="" id="dhtml_menu-5078">Cygnus Knights</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/hero-with-lost-memory" title="" id="dhtml_menu-6295">Hero With The Lost Memory</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/new-hero" title="" id="dhtml_menu-15271">New Hero</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/resistance" title="" id="dhtml_menu-16153">Resistance</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/maple-island" id="dhtml_menu-1030">Maple Island</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/1-10" id="dhtml_menu-999">Level 1-10</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/11-20" id="dhtml_menu-1022">Level 11-20</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/quest/21-30" id="dhtml_menu-1023">Level 21-30</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/31-40" id="dhtml_menu-1024">Level 31-40</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/41-50" id="dhtml_menu-1025">Level 41-50</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/51-65" title="" id="dhtml_menu-1027">Level 51-65</a></li>
+<li class="leaf  dhtml-menu "><a href="/quest/66-200" id="dhtml_menu-11065">Level 66-200</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-crimsonwood" title="" id="dhtml_menu-6287">Exchange Quest (Crimsonwood)</a></li>
+<li class="leaf  dhtml-menu "><a href="/exchange-quest-orbis" title="" id="dhtml_menu-266">Exchange Quest (Orbis)</a></li>
+<li class="leaf last dhtml-menu "><a href="/exchange-quest-showa-town" title="" id="dhtml_menu-267">Exchange Quest (Showa)</a></li>
+</ul></li>
+
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-179">Guild Quests</a><ul class="menu"><li class="leaf first last dhtml-menu "><a href="/guild-quest/sharenian" title="" id="dhtml_menu-268">Sharenian</a></li>
+</ul></li>
+<li class="expanded  dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-180">Party Quests</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/party-quest/amorian-challenge" title="" id="dhtml_menu-272">Amoria</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/crimsonwood-keep" title="" id="dhtml_menu-276">Crimsonwood Keep</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ellin-forest" title="" id="dhtml_menu-4848">Ellin Forest</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ghost-ship-in-the-sea-mist" title="" id="dhtml_menu-16158">Ghost Ship in the Sea Mist</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/henesys" title="" id="dhtml_menu-274">Henesys</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/herb-town" title="" id="dhtml_menu-273">Herb Town</a></li>
+
+<li class="leaf  dhtml-menu "><a href="/party-quest/kerning-city" title="" id="dhtml_menu-269">Kerning City</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/ludibrium" title="" id="dhtml_menu-270">Ludibrium</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/magatia" title="" id="dhtml_menu-275">Magatia</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival" title="" id="dhtml_menu-277">Monster Carnival</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/monster-carnival-2" title="" id="dhtml_menu-5065">Monster Carnival 2</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/mu-lung-dojo" title="" id="dhtml_menu-5073">Mu Lung Dojo</a></li>
+<li class="leaf  dhtml-menu "><a href="/party-quest/netts-pyramid" title="Nett&#039;s Pyramid Party Quest" id="dhtml_menu-12570">Nett&#039;s Pyramid</a></li>
+<li class="leaf last dhtml-menu "><a href="/party-quest/orbis" title="" id="dhtml_menu-271">Orbis</a></li>
+
+</ul></li>
+<li class="expanded last dhtml-menu  collapsed start-collapsed "><a href="/database" title="" id="dhtml_menu-4845">Cash Shop</a><ul class="menu"><li class="leaf first dhtml-menu "><a href="/cash-shop/beauty-parlor" title="" id="dhtml_menu-4847">Beauty Parlor</a></li>
+<li class="leaf last dhtml-menu "><a href="/cash-shop/gachapon" title="" id="dhtml_menu-4846">Gachapon</a></li>
+</ul></li>
+</ul>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-1" class="block block-block block-2 clear-both">
+  <div class="block-t">
+
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Affiliates</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <ul>
+
+<li><a href="http://www.sleepywood.net/">Sleepywood.net</a></li>
+<li><a href="http://www.mapletip.com/">MapleTip</a></li>
+<li><a href="http://www.basilmarket.com/">Basil Market</a></li>
+<li><a href="http://aquaroadradio.wordpress.com/">Aqua Road Radio</a></li>
+<li><a href="http://www.perioncorner.com/">Perion Corner</a></li>
+<li><a href="http://www.maple-radio.com/">Maple Radio</a></li>
+<li><a href="http://www.maple-news.com/">Maple News</a></li>
+<li><a href="http://mapledictionary.co.cc/">Maple Dictionary</a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-views-updated-block_1" class="block block-views block-3 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Database Updates</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        <div class="view view-updated view-id-updated view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">
+    <ul>
+          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field-title">
+
+                <span class="field-content"><a href="/monster/dark-stump">Dark Stump</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 2.</span>
+  </div>
+</li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/stump">Stump</a></span>
+
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Added Purple Plains 1.</span>
+  </div>
+</li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/green-mushroom">Green Mushroom</a></span>
+  </div>
+
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/shroom">Shroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+
+                <span class="field-content">Updated locations.</span>
+  </div>
+</li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field-title">
+                <span class="field-content"><a href="/monster/orange-mushroom">Orange Mushroom</a></span>
+  </div>
+  
+  <div class="views-field-log">
+                <span class="field-content">Updated locations.</span>
+
+  </div>
+</li>
+      </ul>
+</div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div align="right"><a href="/database-updates">View more</a></div>
+    </div>
+  
+  
+</div>       </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-block-10" class="block block-block block-4 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Donation</h2>
+
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        Have a dollar or two to spare?
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="paypal-donation">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="10638353">
+<input type="image" src="/sites/all/themes/lithharbor/images/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<h5><strong>Why should I donate?</strong></h5>
+
+Consider donating to help us with the high server costs of our database!<br />
+<a href="/why-should-i-donate">Read more details &raquo;</a>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-block-12" class="block block-block block-5 clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+
+        <p><a href="http://twitter.com/hiddenstreet"><img src="http://www.hidden-street.net/images/twitter.gif" title="Follow Hidden Street on Twitter!" /></a></p>
+      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-facebook_fan-0" class="block block-facebook_fan block-6 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("7fee1a8c40ca9e1bbf4f1376d1eddb61");</script><fb:fan profile_id="119198064766791" stream="0" connections="6" logobar="0" width="180" height="260"></fb:fan>      </div>
+
+    </div>
+  </div>  
+</div>
+              </div>
+            
+            <div id="main">
+                              <div id="top-content" class="clear-both">
+                  <div id="block-block-5" class="block block-block block-1 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+
+      
+      <div class="block-content content">
+        <div align="center" style="margin-bottom: 15px;">
+<!--JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918766|0|170|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918766|0|170|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="300" height="250"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+                </div>
+
+                    
+              <div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a> » <a href="/database">Equipment</a> » <a href="/eq/accessories">Accessories</a></div></div>              
+              <div id="content">
+                                  <div class="title-t">
+                    <div class="title-b">
+                      <h1 class="title" id="page-title">Pendant</h1>
+
+                    </div>
+                  </div>
+                                                <div class="clear-both"><!-- --></div>
+                                                <div id="content-content" class="clear-both">
+                  <div class="view view-accessories view-id-accessories view-display-id-page_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-18162" class="database node clear-block">
+<table id="18162">
+
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Pendant%20of%20the%20Spirit.png?1316838779" /></td>
+    <td width="145"><strong>Pendant of the Spirit      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 0</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 5</div>
+                    <div><strong>Magic Att.:</strong> 5</div>
+                              </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> -          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>Boosts EXP when equipped. The longer you wear it, the greater the effect becomes. 1 hr: 10% additional EXP. 2 hr: 20% additional EXP. 2 hr+: 30% additional EXP</p>
+
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                        <li>This item is limited by time.</li>                                                                    </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4879" class="database node clear-block">
+<table id="4879">
+
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant011.gif?1245473573" /></td>
+    <td width="145"><strong>Warm Muffler      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 10</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 15</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 15          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2, DEX +2, INT +2, LUK +2</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>Lasts for a limited time only.</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+
+    <div id="node-15232" class="database node clear-block">
+<table id="15232">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Grape%20Pendant.png?1309303964" /></td>
+    <td width="145"><strong>Grape Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 13</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 50</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 50          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +5, DEX +5, INT +5, LUK +5</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                        <li>This item is limited by time.</li>                                                                    </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-4880" class="database node clear-block">
+<table id="4880">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="29" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant002.gif?1245474436" /></td>
+
+    <td width="145"><strong>Spiegelmann&#039;s Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 27 (24-29)</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 27 (25-29)          </td>
+    <td><strong>Job:</strong>
+
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +1 (0-3), DEX +1 (0-3), INT +1 (0-3), LUK +1 (0-3), Avoidability +0</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      75,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-4881" class="database node clear-block">
+
+<table id="4881">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="24" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant003.png?1245477086" /></td>
+    <td width="145"><strong>Bow-tie (Green)      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 2 (1-4)</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 5 (3-7)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      4,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-4882" class="database node clear-block">
+
+<table id="4882">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="24" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant005.png?1245477221" /></td>
+    <td width="145"><strong>Bow-tie (Yellow)      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 5 (3-6)</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 2 (0-3)          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      4,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+          
+                    
+                      <li>A chance to obtain this item from <a href="/cash-shop/gachapon/gachapon-henesys">Gachapon (Henesys)</a>.</li>
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-8111" class="database node clear-block">
+<table id="8111">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="29" height="29" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.icon__42.png?1256350444" /></td>
+    <td width="145"><strong>Locked Timeless Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 30</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 30          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> Avoidability +5</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Only one item per character.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-15231" class="database node clear-block">
+<table id="15231">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Larson%27s%20Challenger%20Pendant.png?1309303707" /></td>
+    <td width="145"><strong>Larson&#039;s Challenger Pendant      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 1</div>
+
+                    <div><strong>Magic Att.:</strong> 1</div>
+                              <div><strong>Weapon Def.:</strong> 30</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 30          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2, DEX +2, INT +2, LUK +2, Accuracy +50, Avoid +50, Speed +15, Jump +15</td>
+    <td><strong>No. of upgrades available:</strong> 2</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/event/score-1000-points-in-battle-mode">Score 1000 Points in Battle Mode</a> quest.</li>
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item is part of the <strong>Larson's Challenger Set</strong>. The following equipment are part of the set:<br />
+<a href="/eq/belt/larsons-challenger-belt">Larson&#039;s Challenger Belt</a><br />
+<a href="/eq/pendant/larsons-challenger-pendant">Larson&#039;s Challenger Pendant</a><br />
+
+<a href="/eq/shoulderpad/larsons-challenger-epaulette">Larson&#039;s Challenger Epaulette</a><br />
+<a href="/eq/ring/larsons-challenger-ring">Larson&#039;s Challenger Ring</a></p>
+<p><strong>2 equipment</strong> from this set would give the following benefits:<br />
+PVP Damage: +1%<br />
+Weapon Attack: +1<br />
+Magic Attack: +1<br />
+Avoidability: +100<br />
+
+Accuracy: +100</p>
+<p><strong>3 equipment</strong> from this set would give the following benefits:<br />
+MaxHP: +200<br />
+MaxMP: +200<br />
+PVP Damage: +2%</p>
+<p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+Weapon Attack: +5<br />
+
+Magic Attack: +5<br />
+PVP Damage: +3%<br />
+All Stats: +10</p>
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+
+    <div id="node-15383" class="database node clear-block">
+<table id="15383">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Larson%27s%20Challenger%20Pendant.png?1309303707" /></td>
+    <td width="145"><strong>Larson&#039;s Event Challenger Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 30</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 1</div>
+                    <div><strong>Magic Att.:</strong> 1</div>
+                              <div><strong>Weapon Def.:</strong> 30</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 30          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2, DEX +2, INT +2, LUK +2, Accuracy +50, Avoid +50, Speed +15, Jump +15</td>
+    <td><strong>No. of upgrades available:</strong> 2</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                        <li>This item is limited by time.</li>                                                                    </ul>
+      </td>
+    </tr>
+  </table>
+
+</div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-12396" class="database node clear-block">
+<table id="12396">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/1st-unwelcome-guest-necklace.png?1282643205" /></td>
+    <td width="145"><strong>1st Unwelcome Guest Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 47</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 40</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 40          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +2, DEX +2, INT +2, LUK +2, Avoidability +10</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      80,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-4883" class="database node clear-block">
+<table id="4883">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="24" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant006.png?1245477376" /></td>
+    <td width="145"><strong>Bow-tie (Pink)      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 50</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 9</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 5          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      6,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-4884" class="database node clear-block">
+<table id="4884">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="24" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant008.png?1245477459" /></td>
+    <td width="145"><strong>Bow-tie (Blue)      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 50</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 5</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 9          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      6,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div id="node-4885" class="database node clear-block">
+<table id="4885">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="28" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant010.png?1245477822" /></td>
+    <td width="145"><strong>Silver Deputy Star      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 50</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 35</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 35          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +5, DEX +5, INT +5, LUK +5, HP +100, MP +100</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      150,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>A badge of honor given by Lita Lawless for vanquishing monsters in defense of NLC. You're part of the law now!</p>
+
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/masteria/bounty-hunter">Bounty Hunter (Level 40 and above)</a> quest.</li>
+          
+                    
+                  </ul>
+          </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-7762" class="database node clear-block">
+<table id="7762">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.iconRaw_4.png?1253173665" /></td>
+    <td width="145"><strong>Gordon&#039;s Magic Iron      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 50</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> -</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> -          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/mu-lung-nihal-desert/gordon-passes-his-magic">Gordon Passes His Magic (Level 50 and above)</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-18161" class="database node clear-block">
+<table id="18161">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Watermelon%20Necklace.png?1316838453" /></td>
+    <td width="145"><strong>Watermelon Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 50</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 5</div>
+                    <div><strong>Magic Att.:</strong> 5</div>
+
+                              <div><strong>Weapon Def.:</strong> 50</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 50          </td>
+    <td><strong>Job:</strong>
+
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> Speed +10, Jump +8</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                        <li>This item is limited by time.</li>                                                            <li><p>Cannot extend time limit.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-16 views-row-even">
+    <div id="node-10291" class="database node clear-block">
+<table id="10291">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="26" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos%20necklace_3.gif?1262220507" /></td>
+    <td width="145"><strong>Spiegelmann&#039;s Necklace Of Chaos       </strong></td>
+    <td width="165"><strong>Req Level:</strong> 51</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 1</div>
+                    <div><strong>Magic Att.:</strong> 1</div>
+                              <div><strong>Weapon Def.:</strong> 27</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 27          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +1, DEX +1, INT +1, LUK+1</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+
+  <div class="views-row views-row-17 views-row-odd">
+    <div id="node-12397" class="database node clear-block">
+<table id="12397">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/2nd-unwelcome-guest-necklace.png?1282643539" /></td>
+    <td width="145"><strong>2nd Unwelcome Guest Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 67</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 60</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 60          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +3, DEX +3, INT +3, LUK +3, Avoidability +15</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      160,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-18 views-row-even">
+    <div id="node-4886" class="database node clear-block">
+<table id="4886">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="24" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant004.png?1245477939" /></td>
+    <td width="145"><strong>Bow-tie (Red)      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 15 (13-19)</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 12 (10-13)          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      20,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-19 views-row-odd">
+    <div id="node-4887" class="database node clear-block">
+<table id="4887">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="24" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant007.png?1245478100" /></td>
+    <td width="145"><strong>Bow-tie (Black)      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 12 (9-13)</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 15 (14-17)          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> -</td>
+    <td><strong>No. of upgrades available:</strong> 7</td>
+    <td>
+      <strong>Sold for:</strong> 
+      20,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/kacchuu-musha" alt="/tip.php?nid=13122">Kacchuu Musha</a>    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-20 views-row-even">
+    <div id="node-4888" class="database node clear-block">
+<table id="4888">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant009.png?1245478400" /></td>
+    <td width="145"><strong>Eye of Horus      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 60</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 60          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +3, DEX +3, INT +3, LUK +3, Avoidability +14</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      175,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	        <ul> 
+                    
+                      <li>This item can be obtained from <a href="/quest/mu-lung-nihal-desert/yuletes-reward">Yulete's Reward (Level 70 and above)</a> quest.</li>
+
+          
+                    
+                  </ul>
+          </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-21 views-row-odd">
+    <div id="node-18157" class="database node clear-block">
+<table id="18157">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="27" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Maple%20Togetherness%20Pendant.png?1316837583" /></td>
+    <td width="145"><strong>Maple Togetherness Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 70</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 100</div>
+                  </td>
+    <td>
+	            <strong>Durability:</strong> 1000<br />
+
+	        	        <strong>Magic Def.:</strong> 100          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +4, DEX +4, INT +4, LUK +4</td>
+
+    <td><strong>No. of upgrades available:</strong> -</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                  <li>One-of-a-kind.</li>                                                          </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-22 views-row-even">
+    <div id="node-14925" class="database node clear-block">
+<table id="14925">
+
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="28" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/maple-pendant.png?1304058087" /></td>
+    <td width="145"><strong>Maple Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 77</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 30</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 30          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +1, DEX +1, INT +1, LUK +1</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-23 views-row-odd">
+    <div id="node-14927" class="database node clear-block">
+<table id="14927">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="28" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/maple-pyrope-magic-pendant.png?1304058165" /></td>
+
+    <td width="145"><strong>Maple Pyrope Magic Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 77</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 70</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 70          </td>
+    <td><strong>Job:</strong>
+
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2, DEX +2, INT +2, LUK +2, MaxMP +7%</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/hankie" alt="/tip.php?nid=627">Hankie</a>, <a href="/monster/iruvata" alt="/tip.php?nid=10741">Iruvata</a>, <a href="/monster/green-hobi" alt="/tip.php?nid=618">Green Hobi</a>      </td>
+    </tr>
+    
+  
+  <tr>
+
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+      </td>
+
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-24 views-row-even">
+    <div id="node-14928" class="database node clear-block">
+<table id="14928">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="28" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/maple-pyrope-magic-pendant.png?1304058165" /></td>
+    <td width="145"><strong>Maple Pyrope Power Pendant      </strong></td>
+
+    <td width="165"><strong>Req Level:</strong> 77</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 70</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 70          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +2, DEX +2, INT +2, LUK +2, MaxHP +7%</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      Cannot be sold, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+        <tr>
+      <td colspan="4" class="mouse-hover"><strong>Dropped by (Event - 27 April 2011-14 June 2011):</strong><br />
+        <a href="/monster/hankie" alt="/tip.php?nid=627">Hankie</a>, <a href="/monster/iruvata" alt="/tip.php?nid=10741">Iruvata</a>, <a href="/monster/green-hobi" alt="/tip.php?nid=618">Green Hobi</a>      </td>
+
+    </tr>
+    
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                            </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-25 views-row-odd">
+    <div id="node-18158" class="database node clear-block">
+<table id="18158">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Romeo%27s%20Pendant.png?1316837683" /></td>
+    <td width="145"><strong>Romeo&#039;s Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 85</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 85</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 85          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +6, DEX +6, INT +6, LUK +6, Accuracy +30, Avoid +30</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +60      </td>
+
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+
+  <div class="views-row views-row-26 views-row-even">
+    <div id="node-18159" class="database node clear-block">
+<table id="18159">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="29" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Juliet%27s%20Pendant.png?1316837766" /></td>
+    <td width="145"><strong>Juliet&#039;s Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 85</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 85</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 85          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +6, DEX +6, INT +6, LUK +6, Accuracy +30, Avoid +30</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +60      </td>
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                            </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-27 views-row-odd">
+    <div id="node-18160" class="database node clear-block">
+<table id="18160">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Symbol%20of%20Eternal%20Love.png?1316837876" /></td>
+    <td width="145"><strong>Symbol of Eternal Love      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 85</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 1</div>
+                    <div><strong>Magic Att.:</strong> 1</div>
+                              <div><strong>Weapon Def.:</strong> 120</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 120          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +9, DEX +9, INT +9, LUK +9, Accuracy +60, Avoid +60, Speed +10, Jump +5</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +80      </td>
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                                                                                                            </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-28 views-row-even">
+    <div id="node-12398" class="database node clear-block">
+<table id="12398">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/3rd-unwelcome-guest-necklace.png?1282644820" /></td>
+    <td width="145"><strong>3rd Unwelcome Guest Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 87</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 80</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 80          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +4, DEX +4, INT +4, LUK +4, Avoidability +20</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      240,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-29 views-row-odd">
+    <div id="node-15214" class="database node clear-block">
+
+<table id="15214">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Green%20Bear%20Pendant.png?1309301969" /></td>
+    <td width="145"><strong>Green Bear Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 65</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 65          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +4, HP +45, MP +45, Accuracy +8, Avoid +8</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/green-bear-pendant-recipe">Green Bear Pendant Recipe</a>, 5 <a href="/items/jewel/diamond">Diamond</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-30 views-row-even">
+    <div id="node-15218" class="database node clear-block">
+<table id="15218">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Green%20Owl%20Pendant.png?1309302442" /></td>
+    <td width="145"><strong>Green Owl Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 65</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 65          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> INT +4, HP +45, MP +45, Accuracy +8, Avoid +8</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/green-owl-pendant-recipe">Green Owl Pendant Recipe</a>, 5 <a href="/items/jewel/diamond">Diamond</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-31 views-row-odd">
+    <div id="node-15222" class="database node clear-block">
+<table id="15222">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Green%20Wolf%20Pendant.png?1309302854" /></td>
+    <td width="145"><strong>Green Wolf Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 65</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 65          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +4, HP +45, MP +45, Accuracy +8, Avoid +8</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/green-wolf-pendant-recipe">Green Wolf Pendant Recipe</a>, 5 <a href="/items/jewel/diamond">Diamond</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-32 views-row-even">
+    <div id="node-15226" class="database node clear-block">
+<table id="15226">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Green%20Peacock%20Pendant.png?1309303128" /></td>
+    <td width="145"><strong>Green Peacock Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 100</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 65</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 65          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> LUK +4, HP +45, MP +45, Accuracy +8, Avoid +8</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/green-peacock-pendant-recipe">Green Peacock Pendant Recipe</a>, 5 <a href="/items/jewel/diamond">Diamond</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-33 views-row-odd">
+    <div id="node-12399" class="database node clear-block">
+<table id="12399">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="32" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/last-unwelcome-guest-necklace.png?1282644932" /></td>
+    <td width="145"><strong>Last Unwelcome Guest Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 107</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 100</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 100          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +5, DEX +5, INT +5, LUK +5, Avoidability +25</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      320,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-34 views-row-even">
+    <div id="node-4889" class="database node clear-block">
+
+<table id="4889">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="34" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant012.png?1245478547" /></td>
+    <td width="145"><strong>Mark of Naricain      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+
+  </tr>
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 10 (9-12)</div>
+                    <div><strong>Magic Att.:</strong> 10 (9-12)</div>
+                              </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> -          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +5 (4-6), DEX +5 (4-6), INT +5 (4-6), LUK +5 (4-6), Accuracy +15 (13-15), Speed +5, Jump +5, MaxHP +300 (296-303), MaxMP +300 (296-303)</td>
+    <td><strong>No. of upgrades available:</strong> -</td>
+    <td>
+      <strong>Sold for:</strong> 
+      1 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      <a href="/monster/margana" alt="/tip.php?nid=758">Margana</a>, <a href="/monster/red-nirg" alt="/tip.php?nid=759">Red Nirg</a>, <a href="/monster/rellik" alt="/tip.php?nid=760">Rellik</a>, <a href="/monster/hsalf" alt="/tip.php?nid=761">Hsalf</a>    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>A token given to those who have found favor with the demon Naricain. It may be wise to hold onto this...</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-35 views-row-odd">
+    <div id="node-15215" class="database node clear-block">
+<table id="15215">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Red%20Bear%20Pendant.png?1309302066" /></td>
+    <td width="145"><strong>Red Bear Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 105</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 105          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +8, HP +90, MP +90, Accuracy +16, Avoid +16</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/red-bear-pendant-recipe">Red Bear Pendant Recipe</a>, 5 <a href="/items/jewel/garnet">Garnet</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-36 views-row-even">
+    <div id="node-15219" class="database node clear-block">
+<table id="15219">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Red%20Owl%20Pendant.png?1309302499" /></td>
+    <td width="145"><strong>Red Owl Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 105</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 105          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> INT +8, HP +90, MP +90, Accuracy +16, Avoid +16</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/red-owl-pendant-recipe">Red Owl Pendant Recipe</a>, 5 <a href="/items/jewel/garnet">Garnet</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-37 views-row-odd">
+    <div id="node-15223" class="database node clear-block">
+<table id="15223">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Red%20Wolf%20Pendant.png?1309302913" /></td>
+    <td width="145"><strong>Red Wolf Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 105</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 105          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +8, HP +90, MP +90, Accuracy +16, Avoid +16</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/red-wolf-pendant-recipe">Red Wolf Pendant Recipe</a>, 5 <a href="/items/jewel/garnet">Garnet</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-38 views-row-even">
+    <div id="node-15227" class="database node clear-block">
+<table id="15227">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Red%20Peacock%20Pendant.png?1309303196" /></td>
+    <td width="145"><strong>Red Peacock Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 105</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 105          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> LUK +8, HP +90, MP +90, Accuracy +16, Avoid +16</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/red-peacock-pendant-recipe">Red Peacock Pendant Recipe</a>, 5 <a href="/items/jewel/garnet">Garnet</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-39 views-row-odd">
+    <div id="node-17811" class="database node clear-block">
+<table id="17811">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/crusaders-zeal-necklace.png?1312607512" /></td>
+    <td width="145"><strong>Crusader&#039;s Zeal Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 110</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 100</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 100          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +8, DEX +8, INT +8, LUK +8, Avoidability +24, MaxHP +10%, MaxMP +10%</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-40 views-row-even">
+    <div id="node-4890" class="database node clear-block">
+<table id="4890">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/pendant001.gif?1245478708" /></td>
+
+    <td width="145"><strong>Horned Tail Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 108</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 108          </td>
+    <td><strong>Job:</strong>
+
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +7, DEX +7, INT +7, LUK +7, Avoidability +24</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      300,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                            </ul>
+
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-41 views-row-odd">
+    <div id="node-12395" class="database node clear-block">
+<table id="12395">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="33" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/dragon-lord-necklace.png?1282641703" /></td>
+
+    <td width="145"><strong>Dragon Lord Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> -</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> -          </td>
+    <td><strong>Job:</strong>
+
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +9, DEX +9, INT +9, LUK +9</td>
+    <td><strong>No. of upgrades available:</strong> 1</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      300,000 mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+      <tr>
+      <td colspan="4"><strong>Description:</strong><p>All stats +4, Upgrade Count 1</p>
+</td>
+    </tr>
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+
+    
+    
+    
+  </table>
+</div>  </div>
+  <div class="views-row views-row-42 views-row-even">
+    <div id="node-13973" class="database node clear-block">
+<table id="13973">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="32" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/chaos-horntail-necklace.png?1292567532" /></td>
+    <td width="145"><strong>Chaos Horntail Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 140</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 140          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +10, DEX +10, INT +10, LUK +10, Weapon Att. +2, Magic Att. +2, Avoidability +32, MaxHP +10%, MaxMP +10%</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      150,000 mesos, cannot be traded    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-43 views-row-odd">
+    <div id="node-15216" class="database node clear-block">
+<table id="15216">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Pink%20Bear%20Pendant.png?1309302202" /></td>
+    <td width="145"><strong>Pink Bear Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 145</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 145          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +12, HP +135, MP +135, Accuracy +24, Avoid +24</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/pink-bear-pendant-recipe">Pink Bear Pendant Recipe</a>, 5 <a href="/items/jewel/black-crystal">Black Crystal</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-44 views-row-even">
+    <div id="node-15220" class="database node clear-block">
+<table id="15220">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Pink%20Owl%20Pendant.png?1309302670" /></td>
+    <td width="145"><strong>Pink Owl Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 145</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 145          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> INT +12, HP +135, MP +135, Accuracy +24, Avoid +24</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/pink-owl-pendant-recipe">Pink Owl Pendant Recipe</a>, 5 <a href="/items/jewel/black-crystal">Black Crystal</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-45 views-row-odd">
+    <div id="node-15224" class="database node clear-block">
+<table id="15224">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Pink%20Wolf%20Pendant.png?1309302980" /></td>
+    <td width="145"><strong>Pink Wolf Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 145</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 145          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +12, HP +135, MP +135, Accuracy +24, Avoid +24</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/pink-wolf-pendant-recipe">Pink Wolf Pendant Recipe</a>, 5 <a href="/items/jewel/black-crystal">Black Crystal</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-46 views-row-even">
+    <div id="node-15228" class="database node clear-block">
+<table id="15228">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Pink%20Peacock%20Pendant.png?1309303273" /></td>
+    <td width="145"><strong>Pink Peacock Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 120</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 145</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 145          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> LUK +12, HP +135, MP +135, Accuracy +24, Avoid +24</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                              <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/pink-peacock-pendant-recipe">Pink Peacock Pendant Recipe</a>, 5 <a href="/items/jewel/black-crystal">Black Crystal</a>, 1 <a href="/items/profession-materials/advanced-abrasive">Advanced Abrasive</a>, and 10 <a href="/items/profession-materials/advanced-item-crystal">Advanced Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-47 views-row-odd">
+    <div id="node-15217" class="database node clear-block">
+<table id="15217">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Purple%20Bear%20Pendant.png?1309302321" /></td>
+    <td width="145"><strong>Purple Bear Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 185</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 185          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +16, HP +180, MP +180, Accuracy +32, Avoid +32</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/purple-bear-pendant-recipe">Purple Bear Pendant Recipe</a>, 5 <a href="/items/mineral/lidium">Lidium</a>, 1 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, and 10 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-48 views-row-even">
+    <div id="node-15221" class="database node clear-block">
+<table id="15221">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Purple%20Owl%20Pendant.png?1309302764" /></td>
+    <td width="145"><strong>Purple Owl Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 185</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 185          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> INT +16, HP +180, MP +180, Accuracy +32, Avoid +32</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/purple-owl-pendant-recipe">Purple Owl Pendant Recipe</a>, 5 <a href="/items/mineral/lidium">Lidium</a>, 1 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, and 10 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-49 views-row-odd">
+    <div id="node-15225" class="database node clear-block">
+<table id="15225">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Purple%20Wolf%20Pendant.png?1309303052" /></td>
+    <td width="145"><strong>Purple Wolf Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 185</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 185          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> DEX +16, HP +180, MP +180, Accuracy +32, Avoid +32</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/purple-wolf-pendant-recipe">Purple Wolf Pendant Recipe</a>, 5 <a href="/items/mineral/lidium">Lidium</a>, 1 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, and 10 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-50 views-row-even">
+    <div id="node-15229" class="database node clear-block">
+<table id="15229">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="28" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Purple%20Peacock%20Pendant.png?1309303341" /></td>
+    <td width="145"><strong>Purple Peacock Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 185</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 185          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> LUK +16, HP +180, MP +180, Accuracy +32, Avoid +32</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/purple-peacock-pendant-recipe">Purple Peacock Pendant Recipe</a>, 5 <a href="/items/mineral/lidium">Lidium</a>, 1 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, and 10 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-51 views-row-odd">
+    <div id="node-15230" class="database node clear-block">
+<table id="15230">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="30" height="30" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/Rising%20Sun%20Pendant.png?1309303533" /></td>
+    <td width="145"><strong>Rising Sun Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 130</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	    		<div><strong>Weapon Att.:</strong> 2</div>
+                    <div><strong>Magic Att.:</strong> 2</div>
+                              <div><strong>Weapon Def.:</strong> 185</div>
+
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 185          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +16, DEX +16, INT +16, LUK +16, HP +180, MP +180, Accuracy +32, Avoid +32</td>
+    <td><strong>No. of upgrades available:</strong> 4</td>
+    <td>
+      <strong>Sold for:</strong> 
+      ? mesos, cannot be traded    </td>
+
+  </tr>
+        <tr>
+      <td colspan="4">
+        <strong>Traits EXP:</strong> Charm EXP +90      </td>
+    </tr>
+    <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+
+                    <li>Trading can be enabled once when the Platinum Scissors of Karma (Cash Shop item) is used.</li>          <li>This item cannot be traded after it has been equipped by the user.</li>                                                                      <li><p>This item is part of the <strong>Intaglio's Rising Sun Set</strong>. The following equipment are part of the set:<br />
+<a href="/eq/belt/rising-sun-belt">Rising Sun Belt</a><br />
+<a href="/eq/earring/rising-sun-earrings">Rising Sun Earrings</a><br />
+<a href="/eq/pendant/rising-sun-pendant">Rising Sun Pendant</a><br />
+<a href="/eq/face-accessory/rising-sun-face-paint">Rising Sun Face Paint</a><br />
+
+<a href="/eq/ring/rising-sun-ring">Rising Sun Ring</a></p>
+<p><strong>3 equipment</strong> from this set would give the following benefits:<br />
+PVP Damage: +4%<br />
+Avoidability: +200<br />
+Accuracy: +200</p>
+<p><strong>4 equipment</strong> from this set would give the following benefits:<br />
+MaxHP: +400<br />
+
+MaxMP: +400<br />
+PVP Damage: +5%</p>
+<p><strong>5 equipment</strong> from this set would give the following benefits:<br />
+PVP Damage: +6%<br />
+All Stats: +20</p>
+</li><li><p>This item can be forged by a Jeweler with 1 <a href="/items/recipes-for-accessories/rising-sun-pendant-recipe">Rising Sun Pendant Recipe</a>, 5 <a href="/items/crystal/wisdom-crystal">Wisdom Crystal</a>, 5 <a href="/items/crystal/luk-crystal">LUK Crystal</a>, 5 <a href="/items/mineral/lidium">Lidium</a>, 30 <a href="/items/leftover/gallant-emblem">Gallant Emblem</a>, 4 <a href="/items/profession-materials/superior-abrasive">Superior Abrasive</a>, and 10 <a href="/items/profession-materials/superior-item-crystal">Superior Item Crystal</a>.</p>
+
+</li>        </ul>
+      </td>
+    </tr>
+  </table>
+</div>  </div>
+  <div class="views-row views-row-52 views-row-even">
+    <div id="node-8112" class="database node clear-block">
+<table id="8112">
+  <tr>
+
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="31" height="29" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/info.icon__43.png?1256350699" /></td>
+    <td width="145"><strong>Timeless Pendant      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 140</td>
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 126</div>
+                  </td>
+    <td>
+	        	        <strong>Magic Def.:</strong> 126          </td>
+
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Effects:</strong> STR +9, DEX +9, INT +9, LUK +9, Avoidability +28</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+
+    <td>
+      <strong>Sold for:</strong> 
+      400,000 mesos, cannot be traded    </td>
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+  </tr>
+    
+    
+      <tr>
+      <td colspan="4"><strong>Equipment Level Up Info:</strong> 
+        <ul>
+          <li><p><strong>Level 1</strong> - requires 80 item exp<br />
+
+Increases STR between a minimum of 2 and a maximum of 4.<br />
+Increases DEX between a minimum of 2 and a maximum of 4.<br />
+Increases INT between a minimum of 2 and a maximum of 4.<br />
+Increases LUK between a minimum of 2 and a maximum of 4.<br />
+Increases Weapon Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Magic Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Avoidability between a minimum of 2 and a maximum of 4.</p>
+</li><li><p><strong>Level 2</strong> - requires 90 item exp<br />
+
+Increases STR between a minimum of 2 and a maximum of 4.<br />
+Increases DEX between a minimum of 2 and a maximum of 4.<br />
+Increases INT between a minimum of 2 and a maximum of 4.<br />
+Increases LUK between a minimum of 2 and a maximum of 4.<br />
+Increases Weapon Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Magic Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Avoidability between a minimum of 2 and a maximum of 4.</p>
+</li><li><p><strong>Level 3</strong> - requires 100 item exp<br />
+
+Increases STR between a minimum of 2 and a maximum of 4.<br />
+Increases DEX between a minimum of 2 and a maximum of 4.<br />
+Increases INT between a minimum of 2 and a maximum of 4.<br />
+Increases LUK between a minimum of 2 and a maximum of 4.<br />
+Increases Weapon Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Magic Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Avoidability between a minimum of 2 and a maximum of 4.</p>
+</li><li><p><strong>Level 4</strong> - requires 110 item exp<br />
+
+Increases STR between a minimum of 2 and a maximum of 4.<br />
+Increases DEX between a minimum of 2 and a maximum of 4.<br />
+Increases INT between a minimum of 2 and a maximum of 4.<br />
+Increases LUK between a minimum of 2 and a maximum of 4.<br />
+Increases Weapon Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Magic Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Avoidability between a minimum of 2 and a maximum of 4.</p>
+</li><li><p><strong>Level 5</strong> - requires 120 item exp<br />
+
+Increases STR between a minimum of 2 and a maximum of 4.<br />
+Increases DEX between a minimum of 2 and a maximum of 4.<br />
+Increases INT between a minimum of 2 and a maximum of 4.<br />
+Increases LUK between a minimum of 2 and a maximum of 4.<br />
+Increases Weapon Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Magic Def. between a minimum of 20 and a maximum of 30.<br />
+Increases Avoidability between a minimum of 2 and a maximum of 4.</p>
+</li>        </ul>
+      </td>
+
+    </tr>
+    
+      <tr>
+      <td colspan="4" class="remarks"><strong>Remarks:</strong> 
+        <ul>
+                                                                                                    <li><p>Only one item per character.</p>
+</li>        </ul>
+      </td>
+    </tr>
+
+  </table>
+</div>  </div>
+  <div class="views-row views-row-53 views-row-odd views-row-last">
+    <div id="node-12400" class="database node clear-block">
+<table id="12400">
+  <tr>
+    <td class="image" width="36"><img  class="imagefield imagefield-field_image" width="33" height="31" alt="" src="http://global.hidden-street.net/sites/global.hidden-street.net/files/eqs/vip-necklace.png?1282645792" /></td>
+    <td width="145"><strong>VIP Necklace      </strong></td>
+    <td width="165"><strong>Req Level:</strong> 145</td>
+
+    <td width="186"><strong>Req Stats: </strong> -</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    	                              <div><strong>Weapon Def.:</strong> 150</div>
+                  </td>
+
+    <td>
+	        	        <strong>Magic Def.:</strong> 150          </td>
+    <td><strong>Job:</strong>
+    Common    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2"><strong>Effects:</strong> STR +10, DEX +10, INT +10, LUK +10, Avoidability +35</td>
+    <td><strong>No. of upgrades available:</strong> 3</td>
+    <td>
+      <strong>Sold for:</strong> 
+      480,000 mesos    </td>
+
+  </tr>
+      <tr>
+    <td colspan="4" class="mouse-hover"><strong>Dropped by:</strong> 
+      -    </td>
+  </tr>
+  
+      
+  
+  <tr>
+    <td colspan="4"><strong>Available from:</strong>					     
+    	-    </td>
+
+  </tr>
+    
+    
+    
+  </table>
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                 </div>
+              </div>
+      
+              
+              <div id="bottom-content">
+                                  <div id="block-block-13" class="block block-block block-1 block-last clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <!--JavaScript Tag // Tag for network 5223: Gamer DNA Media // Website: HiddenStreet // Page: Global.hidden-Street // Placement: Global.hidden-Street-Site Skin-1 x 1 (1825691) // created at: Jan 13, 2011 10:36:22 AM-->
+<script language="javascript"><!--
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn/3.0/5223/1825691/0/16/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp=[group];misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" target="_blank"><img src="http://helios.gamerdna.com/adserv/3.0/5223/1825691/0/16/ADTECH;loc=300;key=key1+key2+key3+key4;grp=[group]" border="0" width="1" height="1"></a></noscript>
+<!-- End of JavaScript Tag -->      </div>
+    </div>
+  </div>  
+
+</div>
+                                <div id="back-to-top"><a href="#top">Top</a></div>
+              </div>
+            </div>
+
+            <div class="clear-both"><!-- --></div>
+          </div>
+
+                      <div id="sidebar-right">
+              <div id="block-block-4" class="block block-block block-1 block-first clear-both">
+
+  <div class="block-t">
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Sponsors</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+
+        <div align="center">
+<!-- JavaScript Tag -->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://helios.gamerdna.com/addyn|3.0|5223|918762|0|154|ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://helios.gamerdna.com/adlink|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://helios.gamerdna.com/adserv|3.0|5223|918762|0|154|ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="160" height="600"></a></noscript>
+<!-- End of JavaScript Tag -->
+</div>      </div>
+    </div>
+  </div>  
+</div>
+<div id="block-user-3" class="block block-user block-2 clear-both">
+  <div class="block-t">
+
+    <div class="block-b">
+              <div class="block-subject-t">
+          <div class="block-subject-b">
+            <h2 class="block-subject">Who's online</h2>
+          </div>
+        </div>
+      
+      <div class="block-content content">
+        There are currently <em>0 users</em> and <em>887 guests</em> online.      </div>
+
+    </div>
+  </div>  
+</div>
+<div id="block-views-quote-block_1" class="block block-views block-3 block-last clear-both">
+  <div class="block-t">
+    <div class="block-b">
+      
+      <div class="block-content content">
+        <div class="view view-quote view-id-quote view-display-id-block_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+      
+  <div class="views-field-field-quote-value">
+                <div class="field-content">We are not the GameMasters (GM) for MapleStory.</div>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>       </div>
+    </div>
+  </div>  
+
+</div>
+            </div>
+          
+          <div class="clear-both"><!-- --></div>
+        </div>
+      </div>
+    </div>
+
+          <div id="footer">
+        <div id="footer-message">
+          Copyright &copy; 2004-2011 Hidden Street. <a href="/privacy-policy">Privacy Policy</a><br /><br />
+
+MapleStory and any related images and content are copyrighted by Nexon.
+<br /><br />
+Hidden Street is a not-for-profit fansite set up for the sole purpose of providing cohesive and comprehensive information to MapleStory gamers. Advertisements found in this site are to support server and related costs of maintaining this website.        </div>
+      </div>
+      </div>
+</div>
+  <script type="text/javascript" src="/sites/global.hidden-street.net/files/js/js_41ef61120bf2352553be89269f538c45.jsmin.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+//--><!]]>
+</script>
+
+<!-- COMSCORE -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+
+</script>
+<script type="text/javascript">
+COMSCORE.beacon({
+	c1:2,
+	c2:"6885237",
+	c3:"",
+	c4:"",
+	c5:"",
+	c6:"",
+	c15:""
+});
+</script>
+<noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=6885237&c3=&c4=&c5=&c6=&c15=&cj=1" /></noscript>
+<!-- /COMSCORE -->
+</body>
+</html>

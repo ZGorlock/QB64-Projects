@@ -1,0 +1,4 @@
+if(oldstr7287){
+if(oldstr7287->fixed)qbs_set(oldstr7287,_SUB_SPRITEERROR_STRING_ROUTINE);
+qbs_free(_SUB_SPRITEERROR_STRING_ROUTINE);
+}

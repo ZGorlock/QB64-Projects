@@ -1,0 +1,568 @@
+qbs_free(__STRING_CRLF);
+qbs_free(__STRING_NULL);
+qbs_free(__STRING_PROGRAMNAME);
+qbs_free(__STRING_Q);
+qbs_free(__STRING_SLASH);
+qbs_free(__STRING_SSLOC);
+if (__ARRAY_LONG_FONTS[2]&1){
+if (__ARRAY_LONG_FONTS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_LONG_FONTS[0]));
+}else{
+free((void*)(__ARRAY_LONG_FONTS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_LONG_FONTS)[8] );
+if (__ARRAY_UDT_ERRORS[2]&1){
+if (__ARRAY_UDT_ERRORS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_ERRORS[0]));
+}else{
+free((void*)(__ARRAY_UDT_ERRORS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_ERRORS)[8] );
+if (__ARRAY_UDT_ANIMATIONS[2]&1){
+if (__ARRAY_UDT_ANIMATIONS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_ANIMATIONS[0]));
+}else{
+free((void*)(__ARRAY_UDT_ANIMATIONS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_ANIMATIONS)[8] );
+qbs_free(__STRING_BUTTONLOC);
+if (__ARRAY_UDT_BUTTONS[2]&1){
+if (__ARRAY_UDT_BUTTONS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_BUTTONS[0]));
+}else{
+free((void*)(__ARRAY_UDT_BUTTONS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_BUTTONS)[8] );
+if (__ARRAY_UDT_BUTTONTEMPLATES[2]&1){
+if (__ARRAY_UDT_BUTTONTEMPLATES[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_BUTTONTEMPLATES[0]));
+}else{
+free((void*)(__ARRAY_UDT_BUTTONTEMPLATES[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_BUTTONTEMPLATES)[8] );
+if (__ARRAY_UDT_DOWNLOADS[2]&1){
+if (__ARRAY_UDT_DOWNLOADS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_DOWNLOADS[0]));
+}else{
+free((void*)(__ARRAY_UDT_DOWNLOADS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_DOWNLOADS)[8] );
+if (__ARRAY_STRING_DOWNLOADS_HEADER[2]&1){
+tmp_long=__ARRAY_STRING_DOWNLOADS_HEADER[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_DOWNLOADS_HEADER[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_DOWNLOADS_HEADER[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_DOWNLOADS_HEADER)[8] );
+qbs_free(__STRING_FRAMELOC);
+qbs_free(__STRING_K);
+if (__ARRAY_UDT_KEYBOARDS[2]&1){
+if (__ARRAY_UDT_KEYBOARDS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_KEYBOARDS[0]));
+}else{
+free((void*)(__ARRAY_UDT_KEYBOARDS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_KEYBOARDS)[8] );
+if (__ARRAY_INTEGER_KEYBOARDLAYOUTS[2]&1){
+if (__ARRAY_INTEGER_KEYBOARDLAYOUTS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_INTEGER_KEYBOARDLAYOUTS[0]));
+}else{
+free((void*)(__ARRAY_INTEGER_KEYBOARDLAYOUTS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_INTEGER_KEYBOARDLAYOUTS)[20] );
+if (__ARRAY_UDT_LAYERS[2]&1){
+if (__ARRAY_UDT_LAYERS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_LAYERS[0]));
+}else{
+free((void*)(__ARRAY_UDT_LAYERS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_LAYERS)[8] );
+qbs_free(__STRING_MATH_DIRNAME);
+qbs_free(__STRING_MATH_FILENAME);
+if (__ARRAY_STRING_MATH_ONAME[2]&1){
+tmp_long=__ARRAY_STRING_MATH_ONAME[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_MATH_ONAME[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_MATH_ONAME[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_MATH_ONAME)[8] );
+if (__ARRAY_INTEGER_MATH_PL[2]&1){
+if (__ARRAY_INTEGER_MATH_PL[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_INTEGER_MATH_PL[0]));
+}else{
+free((void*)(__ARRAY_INTEGER_MATH_PL[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_INTEGER_MATH_PL)[8] );
+if (__ARRAY_STRING_MATH_VARS[2]&1){
+tmp_long=__ARRAY_STRING_MATH_VARS[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_MATH_VARS[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_MATH_VARS[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_MATH_VARS)[8] );
+if (__ARRAY_UDT_SHEETS[2]&1){
+if (__ARRAY_UDT_SHEETS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_SHEETS[0]));
+}else{
+free((void*)(__ARRAY_UDT_SHEETS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_SHEETS)[8] );
+if (__ARRAY_UDT_SPRITES[2]&1){
+if (__ARRAY_UDT_SPRITES[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_SPRITES[0]));
+}else{
+free((void*)(__ARRAY_UDT_SPRITES[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_SPRITES)[8] );
+if (__ARRAY_ULONG_TEXTBOX_BOOKMARK[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_BOOKMARK[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_BOOKMARK[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_BOOKMARK[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_BOOKMARK)[16] );
+if (__ARRAY_ULONG_TEXTBOX_COLOR[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_COLOR[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_COLOR[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_COLOR[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_COLOR)[16] );
+if (__ARRAY_ULONG_TEXTBOX_CONTENT[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_CONTENT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_CONTENT[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_CONTENT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_CONTENT)[16] );
+if (__ARRAY_ULONG_TEXTBOX_IMAGE[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_IMAGE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_IMAGE[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_IMAGE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_IMAGE)[16] );
+if (__ARRAY_ULONG_TEXTBOX_INDEX[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_INDEX[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_INDEX[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_INDEX[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_INDEX)[12] );
+if (__ARRAY_ULONG_TEXTBOX_LINK[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_LINK[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_LINK[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_LINK[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_LINK)[16] );
+if (__ARRAY_ULONG_TEXTBOX_TEXTBOX[2]&1){
+if (__ARRAY_ULONG_TEXTBOX_TEXTBOX[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEXTBOX_TEXTBOX[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEXTBOX_TEXTBOX[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEXTBOX_TEXTBOX)[16] );
+if (__ARRAY_STRING_TEXTBOX_STRINGS[2]&1){
+tmp_long=__ARRAY_STRING_TEXTBOX_STRINGS[5]*__ARRAY_STRING_TEXTBOX_STRINGS[9];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_TEXTBOX_STRINGS[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_TEXTBOX_STRINGS[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_TEXTBOX_STRINGS)[12] );
+if (__ARRAY_STRING_TEXTBOX_TEXT[2]&1){
+tmp_long=__ARRAY_STRING_TEXTBOX_TEXT[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_TEXTBOX_TEXT[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_TEXTBOX_TEXT[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_TEXTBOX_TEXT)[8] );
+if (__ARRAY_UDT_TEXTBOXES[2]&1){
+if (__ARRAY_UDT_TEXTBOXES[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_TEXTBOXES[0]));
+}else{
+free((void*)(__ARRAY_UDT_TEXTBOXES[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_TEXTBOXES)[8] );
+qbs_free(__STRING_INITTIMSTAMP);
+qbs_free(__STRING_MODULE);
+if (__ARRAY_INTEGER_CURSORDATA[2]&1){
+if (__ARRAY_INTEGER_CURSORDATA[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_INTEGER_CURSORDATA[0]));
+}else{
+free((void*)(__ARRAY_INTEGER_CURSORDATA[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_INTEGER_CURSORDATA)[12] );
+if (__ARRAY_LONG_SCREENLAYER[2]&1){
+if (__ARRAY_LONG_SCREENLAYER[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_LONG_SCREENLAYER[0]));
+}else{
+free((void*)(__ARRAY_LONG_SCREENLAYER[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_LONG_SCREENLAYER)[8] );
+if (__ARRAY_STRING_CURSORS[2]&1){
+tmp_long=__ARRAY_STRING_CURSORS[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_CURSORS[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_CURSORS[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_CURSORS)[8] );
+if (__ARRAY_ULONG_INDEX_ITEM[2]&1){
+if (__ARRAY_ULONG_INDEX_ITEM[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_INDEX_ITEM[0]));
+}else{
+free((void*)(__ARRAY_ULONG_INDEX_ITEM[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_INDEX_ITEM)[8] );
+if (__ARRAY_ULONG_INDEX_MAP[2]&1){
+if (__ARRAY_ULONG_INDEX_MAP[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_INDEX_MAP[0]));
+}else{
+free((void*)(__ARRAY_ULONG_INDEX_MAP[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_INDEX_MAP)[8] );
+if (__ARRAY_ULONG_INDEX_MONSTER[2]&1){
+if (__ARRAY_ULONG_INDEX_MONSTER[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_INDEX_MONSTER[0]));
+}else{
+free((void*)(__ARRAY_ULONG_INDEX_MONSTER[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_INDEX_MONSTER)[8] );
+if (__ARRAY_ULONG_INDEX_NPC[2]&1){
+if (__ARRAY_ULONG_INDEX_NPC[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_INDEX_NPC[0]));
+}else{
+free((void*)(__ARRAY_ULONG_INDEX_NPC[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_INDEX_NPC)[8] );
+if (__ARRAY_ULONG_INDEX_QUEST[2]&1){
+if (__ARRAY_ULONG_INDEX_QUEST[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_INDEX_QUEST[0]));
+}else{
+free((void*)(__ARRAY_ULONG_INDEX_QUEST[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_INDEX_QUEST)[8] );
+if (__ARRAY_ULONG_INDEX_SPELL[2]&1){
+if (__ARRAY_ULONG_INDEX_SPELL[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_INDEX_SPELL[0]));
+}else{
+free((void*)(__ARRAY_ULONG_INDEX_SPELL[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_INDEX_SPELL)[8] );
+if (__ARRAY_BYTE_PRIMESTAT[2]&1){
+if (__ARRAY_BYTE_PRIMESTAT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_PRIMESTAT[0]));
+}else{
+free((void*)(__ARRAY_BYTE_PRIMESTAT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_PRIMESTAT)[8] );
+if (__ARRAY_BYTE_MONSTERS_SOUNDS[2]&1){
+if (__ARRAY_BYTE_MONSTERS_SOUNDS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_MONSTERS_SOUNDS[0]));
+}else{
+free((void*)(__ARRAY_BYTE_MONSTERS_SOUNDS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_MONSTERS_SOUNDS)[12] );
+if (__ARRAY_BYTE_MONSTERS_SOUNDNAME[2]&1){
+if (__ARRAY_BYTE_MONSTERS_SOUNDNAME[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_MONSTERS_SOUNDNAME[0]));
+}else{
+free((void*)(__ARRAY_BYTE_MONSTERS_SOUNDNAME[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_MONSTERS_SOUNDNAME)[12] );
+if (__ARRAY_BYTE_MONSTERS_SPRITES[2]&1){
+if (__ARRAY_BYTE_MONSTERS_SPRITES[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_MONSTERS_SPRITES[0]));
+}else{
+free((void*)(__ARRAY_BYTE_MONSTERS_SPRITES[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_MONSTERS_SPRITES)[12] );
+if (__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[2]&1){
+if (__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[0]));
+}else{
+free((void*)(__ARRAY_BYTE_TEMPMONSTERSOUNDNAME[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_TEMPMONSTERSOUNDNAME)[8] );
+if (__ARRAY_BYTE_TEMPMONSTERSOUNDS[2]&1){
+if (__ARRAY_BYTE_TEMPMONSTERSOUNDS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_TEMPMONSTERSOUNDS[0]));
+}else{
+free((void*)(__ARRAY_BYTE_TEMPMONSTERSOUNDS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_TEMPMONSTERSOUNDS)[8] );
+if (__ARRAY_BYTE_TEMPMONSTERSPRITES[2]&1){
+if (__ARRAY_BYTE_TEMPMONSTERSPRITES[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_BYTE_TEMPMONSTERSPRITES[0]));
+}else{
+free((void*)(__ARRAY_BYTE_TEMPMONSTERSPRITES[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_BYTE_TEMPMONSTERSPRITES)[8] );
+if (__ARRAY_UBYTE_NEWGAMEPASS[2]&1){
+if (__ARRAY_UBYTE_NEWGAMEPASS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UBYTE_NEWGAMEPASS[0]));
+}else{
+free((void*)(__ARRAY_UBYTE_NEWGAMEPASS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UBYTE_NEWGAMEPASS)[8] );
+if (__ARRAY_INTEGER_FREEDMONSTERIMAGE[2]&1){
+if (__ARRAY_INTEGER_FREEDMONSTERIMAGE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_INTEGER_FREEDMONSTERIMAGE[0]));
+}else{
+free((void*)(__ARRAY_INTEGER_FREEDMONSTERIMAGE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_INTEGER_FREEDMONSTERIMAGE)[8] );
+if (__ARRAY_INTEGER_MONSTERS_IMAGE[2]&1){
+if (__ARRAY_INTEGER_MONSTERS_IMAGE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_INTEGER_MONSTERS_IMAGE[0]));
+}else{
+free((void*)(__ARRAY_INTEGER_MONSTERS_IMAGE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_INTEGER_MONSTERS_IMAGE)[16] );
+if (__ARRAY_UINTEGER_RACEHAVE[2]&1){
+if (__ARRAY_UINTEGER_RACEHAVE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UINTEGER_RACEHAVE[0]));
+}else{
+free((void*)(__ARRAY_UINTEGER_RACEHAVE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UINTEGER_RACEHAVE)[8] );
+if (__ARRAY_LONG_MONSTERS_SOUND[2]&1){
+if (__ARRAY_LONG_MONSTERS_SOUND[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_LONG_MONSTERS_SOUND[0]));
+}else{
+free((void*)(__ARRAY_LONG_MONSTERS_SOUND[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_LONG_MONSTERS_SOUND)[12] );
+if (__ARRAY_ULONG_TEMPMONSTERSPELL[2]&1){
+if (__ARRAY_ULONG_TEMPMONSTERSPELL[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEMPMONSTERSPELL[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEMPMONSTERSPELL[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEMPMONSTERSPELL)[8] );
+if (__ARRAY_ULONG_MONSTERS_SPELL[2]&1){
+if (__ARRAY_ULONG_MONSTERS_SPELL[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_MONSTERS_SPELL[0]));
+}else{
+free((void*)(__ARRAY_ULONG_MONSTERS_SPELL[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_MONSTERS_SPELL)[12] );
+if (__ARRAY_ULONG_TEMPMONSTERINTERACT[2]&1){
+if (__ARRAY_ULONG_TEMPMONSTERINTERACT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEMPMONSTERINTERACT[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEMPMONSTERINTERACT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEMPMONSTERINTERACT)[12] );
+if (__ARRAY_ULONG_TEMPMONSTERLOOT[2]&1){
+if (__ARRAY_ULONG_TEMPMONSTERLOOT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEMPMONSTERLOOT[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEMPMONSTERLOOT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEMPMONSTERLOOT)[8] );
+if (__ARRAY_ULONG_MONSTERS_INTERACT[2]&1){
+if (__ARRAY_ULONG_MONSTERS_INTERACT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_MONSTERS_INTERACT[0]));
+}else{
+free((void*)(__ARRAY_ULONG_MONSTERS_INTERACT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_MONSTERS_INTERACT)[16] );
+if (__ARRAY_ULONG_MONSTERS_LOOT[2]&1){
+if (__ARRAY_ULONG_MONSTERS_LOOT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_MONSTERS_LOOT[0]));
+}else{
+free((void*)(__ARRAY_ULONG_MONSTERS_LOOT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_MONSTERS_LOOT)[12] );
+if (__ARRAY_ULONG_TEMPMONSTERARMOUR[2]&1){
+if (__ARRAY_ULONG_TEMPMONSTERARMOUR[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_TEMPMONSTERARMOUR[0]));
+}else{
+free((void*)(__ARRAY_ULONG_TEMPMONSTERARMOUR[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_TEMPMONSTERARMOUR)[12] );
+if (__ARRAY_ULONG_MONSTERS_ARMOUR[2]&1){
+if (__ARRAY_ULONG_MONSTERS_ARMOUR[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_ULONG_MONSTERS_ARMOUR[0]));
+}else{
+free((void*)(__ARRAY_ULONG_MONSTERS_ARMOUR[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_ULONG_MONSTERS_ARMOUR)[16] );
+if (__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[2]&1){
+if (__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[0]));
+}else{
+free((void*)(__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_SINGLE_TEMPMONSTERLOOTCHANCE)[8] );
+if (__ARRAY_SINGLE_HEXP[2]&1){
+if (__ARRAY_SINGLE_HEXP[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_SINGLE_HEXP[0]));
+}else{
+free((void*)(__ARRAY_SINGLE_HEXP[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_SINGLE_HEXP)[12] );
+if (__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[2]&1){
+if (__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[0]));
+}else{
+free((void*)(__ARRAY_SINGLE_MONSTERS_LOOTCHANCE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_SINGLE_MONSTERS_LOOTCHANCE)[12] );
+if (__ARRAY_SINGLE_SETPRIMESTATPOINT[2]&1){
+if (__ARRAY_SINGLE_SETPRIMESTATPOINT[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_SINGLE_SETPRIMESTATPOINT[0]));
+}else{
+free((void*)(__ARRAY_SINGLE_SETPRIMESTATPOINT[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_SINGLE_SETPRIMESTATPOINT)[12] );
+if (__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[2]&1){
+if (__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[0]));
+}else{
+free((void*)(__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_SINGLE_TEMPMONSTERARMOURCHANCE)[12] );
+if (__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[2]&1){
+if (__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[0]));
+}else{
+free((void*)(__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_SINGLE_MONSTERS_ARMOURCHANCE)[16] );
+if (__ARRAY_STRING_ERRORMESSAGE[2]&1){
+tmp_long=__ARRAY_STRING_ERRORMESSAGE[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_ERRORMESSAGE[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_ERRORMESSAGE[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_ERRORMESSAGE)[8] );
+if (__ARRAY_STRING_INSTRUCTION[2]&1){
+tmp_long=__ARRAY_STRING_INSTRUCTION[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_INSTRUCTION[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_INSTRUCTION[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_INSTRUCTION)[8] );
+if (__ARRAY_STRING_NEWGAMEMENUSLIDES[2]&1){
+tmp_long=__ARRAY_STRING_NEWGAMEMENUSLIDES[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_NEWGAMEMENUSLIDES[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_NEWGAMEMENUSLIDES[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_NEWGAMEMENUSLIDES)[8] );
+if (__ARRAY_STRING_PRIMESTATDESCRIPTION[2]&1){
+tmp_long=__ARRAY_STRING_PRIMESTATDESCRIPTION[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_PRIMESTATDESCRIPTION[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_PRIMESTATDESCRIPTION[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_PRIMESTATDESCRIPTION)[8] );
+if (__ARRAY_STRING_PRIMESTATNAME[2]&1){
+tmp_long=__ARRAY_STRING_PRIMESTATNAME[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_PRIMESTATNAME[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_PRIMESTATNAME[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_PRIMESTATNAME)[8] );
+if (__ARRAY_STRING_RACEDESCRIPTION[2]&1){
+tmp_long=__ARRAY_STRING_RACEDESCRIPTION[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_RACEDESCRIPTION[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_RACEDESCRIPTION[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_RACEDESCRIPTION)[8] );
+if (__ARRAY_STRING_RACES[2]&1){
+tmp_long=__ARRAY_STRING_RACES[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_RACES[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_RACES[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_RACES)[8] );
+if (__ARRAY_STRING_TEXTURES[2]&1){
+tmp_long=__ARRAY_STRING_TEXTURES[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_TEXTURES[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_TEXTURES[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_TEXTURES)[8] );
+if (__ARRAY_STRING_TITLEBUTTONS[2]&1){
+tmp_long=__ARRAY_STRING_TITLEBUTTONS[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_TITLEBUTTONS[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_TITLEBUTTONS[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_TITLEBUTTONS)[8] );
+if (__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[2]&1){
+if (__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[0]));
+}else{
+free((void*)(__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_TEMPMONSTERLOOTQUANTITY)[8] );
+if (__ARRAY_UDT_MONSTERS_LOOTQUANTITY[2]&1){
+if (__ARRAY_UDT_MONSTERS_LOOTQUANTITY[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_MONSTERS_LOOTQUANTITY[0]));
+}else{
+free((void*)(__ARRAY_UDT_MONSTERS_LOOTQUANTITY[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_MONSTERS_LOOTQUANTITY)[12] );
+if (__ARRAY_UDT_MONSTERS[2]&1){
+if (__ARRAY_UDT_MONSTERS[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_UDT_MONSTERS[0]));
+}else{
+free((void*)(__ARRAY_UDT_MONSTERS[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_UDT_MONSTERS)[8] );
+qbs_free(__STRING_INITTIMESTAMP);
+if (__ARRAY_INTEGER_ANIMATIONSEQUENCE[2]&1){
+if (__ARRAY_INTEGER_ANIMATIONSEQUENCE[2]&4){
+cmem_dynamic_free((uint8*)(__ARRAY_INTEGER_ANIMATIONSEQUENCE[0]));
+}else{
+free((void*)(__ARRAY_INTEGER_ANIMATIONSEQUENCE[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_INTEGER_ANIMATIONSEQUENCE)[8] );

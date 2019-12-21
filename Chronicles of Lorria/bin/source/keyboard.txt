@@ -1,0 +1,313 @@
+a = KEYBOARDNEW("resource\data\keybd.txt", KEYBOARD_DEFAULTKEYWIDTH, KEYBOARD_SHOW)
+PUTKEYBOARD 100, 100, a, 0
+
+DO
+    _LIMIT 32
+    CLS
+    COLOR ctorgb(TEXTCOLOR_DEFAULT)
+    PRINT n$
+    PRINT keyboards(handle).click
+    GETINPUT
+    DRAWKEYBOARD a
+    _DISPLAY
+    n = KEYBOARDHIT(a)
+    SELECT CASE n
+        CASE 0
+        CASE 8
+            n$ = LEFT$(n$, LEN(n$) - 1)
+        CASE 13
+            EXIT DO
+        CASE ELSE
+            n$ = n$ + CHR$(n)
+    END SELECT
+    n$ = n$ + K
+LOOP UNTIL ESC
+CLS
+PRINT n$
+_DISPLAY
+END
+
+
+
+
+
+
+
+
+
+
+
+
+SUB HIDEKEYBOARD (handle AS INTEGER)
+SHARED keyboards() AS KEYBOARD
+SELECT CASE handle
+    CASE KEYBOARD_ALLKEYBOARDS
+        FOR handle = UBOUND(keyboards) TO 1 STEP -1
+            HIDEKEYBOARD handle
+        NEXT handle
+    CASE ELSE
+        IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+        keyboards(handle).status = KEYBOARD_HIDE
+END SELECT
+END SUB
+
+SUB KEYBOARDFREE (handle AS INTEGER)
+SHARED keyboards() AS KEYBOARD
+SHARED keyboardlayouts() AS INTEGER
+SELECT CASE handle
+    CASE KEYBOARD_ALLKEYBOARDS
+        FOR handle = UBOUND(keyboards) TO 1 STEP -1
+            KEYBOARDFREE handle
+        NEXT handle
+    CASE ELSE
+        IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+        IF handle = UBOUND(keyboards) THEN
+            REDIM _PRESERVE keyboards(1 TO UBOUND(keyboards) - 1) AS KEYBOARD
+            REDIM _PRESERVE keyboardlayouts(1 TO 2, 1 TO 128, 1 TO 128, 1 TO UBOUND(keyboardlayouts, 4) - 1) AS INTEGER
+        ELSE
+            keyboards(handle).inuse = FALSE
+        END IF
+END SELECT
+END SUB
+
+SUB KEYBOARDSETCOLOR (handle AS INTEGER, frame AS _UNSIGNED LONG, l AS _UNSIGNED LONG, f AS _UNSIGNED LONG, lh AS _UNSIGNED LONG, fh AS _UNSIGNED LONG, la AS _UNSIGNED LONG, fa AS _UNSIGNED LONG)
+SHARED keyboards() AS KEYBOARD
+SELECT CASE handle
+    CASE KEYBOARD_ALLKEYBOARDS
+        FOR handle = UBOUND(keyboards) TO 1 STEP -1
+            KEYBOARDSETCOLOR handle, frame, l, f, lh, fh, la, fa
+        NEXT handle
+    CASE ELSE
+        IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+        IF frame THEN keyboards(handle).framecolor = frame
+        IF l THEN keyboards(handle).lettercolor = lr
+        IF f THEN keyboards(handle).fillcolor = f
+        IF lh THEN keyboards(handle).lettercolor_hover = lh
+        IF fh THEN keyboards(handle).fillcolor_hover = fh
+        IF la THEN keyboards(handle).lettercolor_active = la
+        IF fa THEN keyboards(handle).fillcolor_active = fa
+END SELECT
+END SUB
+
+SUB DRAWKEYBOARD (handle AS INTEGER)
+DIM colorscheme AS _BYTE
+DIM keywidth AS _BYTE
+DIM board AS _UNSIGNED _BYTE
+DIM drawkeyboardcol AS _UNSIGNED _BYTE
+DIM drawkeyboardrow AS _UNSIGNED _BYTE
+DIM getwidth AS _UNSIGNED _BYTE
+DIM keyprint AS INTEGER
+DIM keyspace AS INTEGER
+SHARED keyboards() AS KEYBOARD
+SHARED keyboardlayouts() AS INTEGER
+SELECT CASE handle
+    CASE KEYBOARD_ALLKEYBOARDS
+        FOR handle = UBOUND(keyboards) TO 1 STEP -1
+            DRAWKEYBOARD handle
+        NEXT handle
+    CASE ELSE
+        IF keyboards(handle).shift = 1 THEN keyboards(handle).shift = 0
+        IF SFT THEN keyboards(handle).shift = 1
+        IF LKEY(LKEY_CAPS) = 1 THEN
+            keyboards(handle).caps = 1
+        ELSE IF LKEY(LKEY_CAPS) = -128 THEN
+                keyboards(handle).caps = 0
+            END IF
+        END IF
+        board = 1
+        IF keyboards(handle).shift > 0 OR keyboards(handle).caps > 0 THEN board = 2
+        IF keyboards(handle).dest THEN _DEST keyboards(handle).dest
+        FOR drawkeyboardrow = 0 TO keyboards(handle).rows - 1
+            FOR drawkeyboardcol = 0 TO keyboards(handle).cols - 1
+                keyprint = keyboardlayouts(board, drawkeyboardrow + 1, drawkeyboardcol + 1, handle)
+                IF keyprint THEN
+                    keywidth = 1
+                    FOR getwidth = drawkeyboardcol + 1 TO keyboards(handle).cols - 1
+                        IF keyboardlayouts(board, drawkeyboardrow + 1, getwidth + 1, handle) = keyprint THEN
+                            keywidth = keywidth + 1
+                        ELSE
+                            EXIT FOR
+                        END IF
+                    NEXT getwidth
+                    LINE (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth)-STEP(keywidth * keyboards(handle).keywidth, keyboards(handle).keywidth), keyboards(handle).framecolor, B
+                    colorscheme = 0
+                    IF isonbox(MInput.x, MInput.y, keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth, keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + (keywidth * keyboards(handle).keywidth - 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + (keyboards(handle).keywidth - 2)) THEN
+                        IF LCLICK THEN
+                            keyboards(handle).click = keyprint
+                            colorscheme = 1
+                        ELSE
+                            IF keyboards(handle).click = keyprint THEN
+                                SELECT CASE keyboards(handle).click
+                                    CASE 256
+                                        IF NOT SFT THEN keyboards(handle).shift = 2
+                                    CASE 257
+                                        SELECT CASE keyboards(handle).caps
+                                            CASE 0
+                                                keyboards(handle).caps = 1
+                                            CASE 1
+                                                keyboards(handle).caps = 0
+                                        END SELECT
+                                    CASE ELSE
+                                        keyboards(handle).hit = keyprint
+                                        IF NOT SFT THEN keyboards(handle).shift = FALSE
+                                END SELECT
+                            END IF
+                            keyboards(handle).click = FALSE
+                            colorscheme = -1
+                        END IF
+                    END IF
+                    SELECT CASE keyprint
+                        CASE 39
+                            IF _KEYDOWN(39) THEN colorscheme = 1
+                        CASE 45
+                            IF KEYX(189) THEN colorscheme = 1
+                        CASE 46
+                            IF KEYX(190) THEN colorscheme = 1
+                        CASE 96
+                            IF _KEYDOWN(96) THEN colorscheme = 1
+                        CASE 97 TO 122
+                            IF KEYX(keyprint - 32) THEN colorscheme = 1
+                        CASE 256
+                            IF keyboards(handle).shift THEN colorscheme = 1
+                        CASE 257
+                            IF keyboards(handle).caps THEN colorscheme = 1
+                        CASE ELSE
+                            IF KEYX(keyprint) THEN colorscheme = 1
+                    END SELECT
+                    keyspace = keywidth * keyboards(handle).keywidth
+                    _PRINTMODE _KEEPBACKGROUND
+                    SELECT CASE colorscheme
+                        CASE -1
+                            COLOR keyboards(handle).lettercolor_hover
+                            LINE (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + 1, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + 1)-STEP(keywidth * keyboards(handle).keywidth - 2, (keyboards(handle).keywidth - 2)), keyboards(handle).fillcolor_hover, BF
+                        CASE 0
+                            COLOR keyboards(handle).lettercolor
+                            LINE (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + 1, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + 1)-STEP(keywidth * keyboards(handle).keywidth - 2, (keyboards(handle).keywidth - 2)), keyboards(handle).fillcolor, BF
+                        CASE 1
+                            COLOR keyboards(handle).lettercolor_active
+                            LINE (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + 1, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + 1)-STEP(keywidth * keyboards(handle).keywidth - 2, (keyboards(handle).keywidth - 2)), keyboards(handle).fillcolor_active, BF
+                    END SELECT
+                    SELECT CASE keyprint
+                        CASE 8
+                            _PRINTSTRING (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + ((keyspace - (2 * _FONTWIDTH)) \ 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + ((keyboards(handle).keywidth - _FONTHEIGHT) \ 2)), "<-"
+                        CASE 13
+                            _PRINTSTRING (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + ((keyspace - (6 * _FONTWIDTH)) \ 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + ((keyboards(handle).keywidth - _FONTHEIGHT) \ 2)), "Return"
+                        CASE 32
+                            _PRINTSTRING (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + ((keyspace - (5 * _FONTWIDTH)) \ 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + ((keyboards(handle).keywidth - _FONTHEIGHT) \ 2)), "Space"
+                        CASE 256
+                            _PRINTSTRING (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + ((keyspace - (5 * _FONTWIDTH)) \ 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + ((keyboards(handle).keywidth - _FONTHEIGHT) \ 2)), "Shift"
+                        CASE 257
+                            _PRINTSTRING (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + ((keyspace - (4 * _FONTWIDTH)) \ 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + ((keyboards(handle).keywidth - _FONTHEIGHT) \ 2)), "Caps"
+                        CASE ELSE
+                            _PRINTSTRING (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + ((keyspace - _FONTWIDTH) \ 2), keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + ((keyboards(handle).keywidth - _FONTHEIGHT) \ 2)), CHR$(keyprint)
+                    END SELECT
+                    drawkeyboardcol = drawkeyboardcol + keywidth - 1
+                ELSE
+                    LINE (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth)-STEP(keyboards(handle).keywidth, keyboards(handle).keywidth), keyboards(handle).framecolor, B
+                    LINE (keyboards(handle).x + drawkeyboardcol * keyboards(handle).keywidth + 1, keyboards(handle).y + drawkeyboardrow * keyboards(handle).keywidth + 1)-STEP((keyboards(handle).keywidth - 2), (keyboards(handle).keywidth - 2)), keyboards(handle).fillcolor_hover, BF
+                END IF
+        NEXT drawkeyboardcol, drawkeyboardrow
+        IF keyboards(handle).dest THEN _DEST 0
+END SELECT
+END SUB
+
+SUB PUTKEYBOARD (x AS LONG, y AS LONG, handle AS INTEGER, dest AS LONG)
+SHARED keyboards() AS KEYBOARD
+IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+keyboards(handle).x = x
+keyboards(handle).y = y
+IF dest THEN keyboards(handle).dest = dest
+END SUB
+
+SUB SHOWKEYBOARD (handle AS INTEGER)
+SHARED keyboards() AS KEYBOARD
+SELECT CASE handle
+    CASE KEYBOARD_ALLKEYBOARDS
+        FOR handle = UBOUND(keyboards) TO 1 STEP -1
+            SHOWKEYBOARD handle
+        NEXT handle
+    CASE ELSE
+        IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+        keyboards(handle).status = KEYBOARD_SHOW
+END SELECT
+END SUB
+
+FUNCTION KEYBOARDHIT% (handle AS INTEGER)
+SHARED keyboards() AS KEYBOARD
+IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+KEYBOARDHIT = keyboards(handle).hit
+keyboards(handle).hit = FALSE
+END FUNCTION
+
+FUNCTION KEYBOARDNEW% (layoutfile AS STRING, keywidth AS INTEGER, status AS _BYTE)
+DIM getkeyboardrow AS _BYTE
+DIM ripkeyboard AS _BYTE
+DIM findfreekeyboard AS INTEGER
+DIM n AS INTEGER
+DIM a(256) AS STRING
+SHARED keyboards() AS KEYBOARD
+SHARED keyboardlayouts() AS INTEGER
+IF NOT _FILEEXISTS(layoutfile) THEN EXIT FUNCTION
+IF keywidth = 0 THEN keywidth = KEYBOARD_DEFAULTKEYWIDTH
+IF status > KEYBOARD_HIDE THEN status = KEYBOARD_HIDE
+IF status < KEYBOARD_SHOW THEN status = KEYBOARD_SHOW
+FOR findfreekeyboard = 1 TO UBOUND(keyboards)
+    IF keyboards(findfreekeyboard).inuse = FALSE THEN
+        KEYBOARDNEW = findfreekeyboard
+        EXIT FOR
+    END IF
+NEXT findfreekeyboard
+IF KEYBOARDNEW = 0 THEN
+    REDIM _PRESERVE keyboards(1 TO UBOUND(keyboards) + 1) AS KEYBOARD
+    REDIM _PRESERVE keyboardlayouts(1 TO 2, 1 TO 128, 1 TO 128, 1 TO UBOUND(keyboardlayouts, 4) + 1) AS INTEGER
+    KEYBOARDNEW = UBOUND(keyboards)
+END IF
+keyboards(KEYBOARDNEW).inuse = TRUE
+keyboards(KEYBOARDNEW).status = status
+keyboards(KEYBOARDNEW).x = 0
+keyboards(KEYBOARDNEW).y = 0
+keyboards(KEYBOARDNEW).hit = FALSE
+keyboards(KEYBOARDNEW).framecolor = KEYBOARD_DEFAULTCOLOR_FRAME
+keyboards(KEYBOARDNEW).lettercolor = KEYBOARD_DEFAULTCOLOR_LETTER
+keyboards(KEYBOARDNEW).fillcolor = KEYBOARD_DEFAULTCOLOR_FILL
+keyboards(KEYBOARDNEW).lettercolor_hover = KEYBOARD_DEFAULTCOLOR_LETTER_HOVER
+keyboards(KEYBOARDNEW).fillcolor_hover = KEYBOARD_DEFAULTCOLOR_FILL_HOVER
+keyboards(KEYBOARDNEW).lettercolor_active = KEYBOARD_DEFAULTCOLOR_LETTER_ACTIVE
+keyboards(KEYBOARDNEW).fillcolor_active = KEYBOARD_DEFAULTCOLOR_FILL_ACTIVE
+keyboards(KEYBOARDNEW).keywidth = keywidth
+keyboards(KEYBOARDNEW).dest = 0
+OPEN layoutfile FOR INPUT AS #1
+DO
+    n = n + 1
+    LINE INPUT #1, a(n)
+LOOP UNTIL EOF(1)
+CLOSE #1
+keyboards(KEYBOARDNEW).rows = n \ 2
+keyboards(KEYBOARDNEW).cols = LEN(a(1)) \ 3
+FOR getkeyboardrow = 1 TO keyboards(KEYBOARDNEW).rows
+    FOR ripkeyboardkey = 1 TO keyboards(KEYBOARDNEW).cols
+        keyboardlayouts(1, getkeyboardrow, ripkeyboardkey, KEYBOARDNEW) = VAL(MID$(a(getkeyboardrow), (ripkeyboardkey - 1) * 3 + 1, 3))
+    NEXT ripkeyboardkey
+NEXT getkeyboardrow
+FOR getkeyboardrow = 1 TO keyboards(KEYBOARDNEW).rows
+    FOR ripkeyboardkey = 1 TO keyboards(KEYBOARDNEW).cols
+        keyboardlayouts(2, getkeyboardrow, ripkeyboardkey, KEYBOARDNEW) = VAL(MID$(a(getkeyboardrow + keyboards(KEYBOARDNEW).rows), (ripkeyboardkey - 1) * 3 + 1, 3))
+    NEXT ripkeyboardkey
+NEXT getkeyboardrow
+keyboards(KEYBOARDNEW).width = keyboards(KEYBOARDNEW).cols * keyboards(KEYBOARDNEW).keywidth
+keyboards(KEYBOARDNEW).height = keyboards(KEYBOARDNEW).rows * keyboards(KEYBOARDNEW).keywidth
+END FUNCTION
+
+FUNCTION KEYBOARDSTATUS` (handle AS INTEGER)
+SHARED keyboards() AS KEYBOARD
+IF NOT VALIDKEYBOARD(handle) THEN EXIT FUNCTION
+KEYBOARDSTATUS = keyboards(handle).status
+END FUNCTION
+
+FUNCTION VALIDKEYBOARD` (handle AS INTEGER)
+SHARED keyboards() AS KEYBOARD
+IF handle = FALSE THEN EXIT FUNCTION
+IF handle > UBOUND(keyboards) THEN EXIT FUNCTION
+IF keyboards(handle).inuse = FALSE THEN EXIT FUNCTION
+VALIDKEYBOARD = TRUE
+END FUNCTION

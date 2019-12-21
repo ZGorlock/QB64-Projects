@@ -1,0 +1,90 @@
+qbs*oldstr8873=NULL;
+if(_SUB_TEXTBOXADDTEXT_STRING_TEXT->tmp||_SUB_TEXTBOXADDTEXT_STRING_TEXT->fixed||_SUB_TEXTBOXADDTEXT_STRING_TEXT->readonly){
+oldstr8873=_SUB_TEXTBOXADDTEXT_STRING_TEXT;
+if (oldstr8873->cmem_descriptor){
+_SUB_TEXTBOXADDTEXT_STRING_TEXT=qbs_new_cmem(oldstr8873->len,0);
+}else{
+_SUB_TEXTBOXADDTEXT_STRING_TEXT=qbs_new(oldstr8873->len,0);
+}
+memcpy(_SUB_TEXTBOXADDTEXT_STRING_TEXT->chr,oldstr8873->chr,oldstr8873->len);
+}
+int32 *_SUB_TEXTBOXADDTEXT_BIT1_LINKCOLOR=NULL;
+if(_SUB_TEXTBOXADDTEXT_BIT1_LINKCOLOR==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_SUB_TEXTBOXADDTEXT_BIT1_LINKCOLOR=(int32*)(dblock+cmem_sp);
+*_SUB_TEXTBOXADDTEXT_BIT1_LINKCOLOR=0;
+}
+int16 *_SUB_TEXTBOXADDTEXT_INTEGER_TERMINATEINDEX=NULL;
+if(_SUB_TEXTBOXADDTEXT_INTEGER_TERMINATEINDEX==NULL){
+_SUB_TEXTBOXADDTEXT_INTEGER_TERMINATEINDEX=(int16*)mem_static_malloc(2);
+*_SUB_TEXTBOXADDTEXT_INTEGER_TERMINATEINDEX=0;
+}
+int32 *_SUB_TEXTBOXADDTEXT_LONG_MOVETEXT=NULL;
+if(_SUB_TEXTBOXADDTEXT_LONG_MOVETEXT==NULL){
+_SUB_TEXTBOXADDTEXT_LONG_MOVETEXT=(int32*)mem_static_malloc(4);
+*_SUB_TEXTBOXADDTEXT_LONG_MOVETEXT=0;
+}
+qbs *_SUB_TEXTBOXADDTEXT_STRING_VALUESAVE=NULL;
+if (!_SUB_TEXTBOXADDTEXT_STRING_VALUESAVE)_SUB_TEXTBOXADDTEXT_STRING_VALUESAVE=qbs_new(0,0);
+int64 fornext_value8875;
+int64 fornext_finalvalue8875;
+int64 fornext_step8875;
+uint8 fornext_step_negative8875;
+byte_element_struct *byte_element_8876=NULL;
+if (!byte_element_8876){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8876=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8876=(byte_element_struct*)mem_static_malloc(12);
+}
+static qbs *sc_8877=qbs_new(0,0);
+byte_element_struct *byte_element_8878=NULL;
+if (!byte_element_8878){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8878=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8878=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_8880=NULL;
+if (!byte_element_8880){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8880=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8880=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_8881=NULL;
+if (!byte_element_8881){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8881=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8881=(byte_element_struct*)mem_static_malloc(12);
+}
+static long double sc_8882;
+static qbs *sc_8883=qbs_new(0,0);
+byte_element_struct *byte_element_8884=NULL;
+if (!byte_element_8884){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8884=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8884=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_8886=NULL;
+if (!byte_element_8886){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8886=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8886=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_8887=NULL;
+if (!byte_element_8887){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8887=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8887=(byte_element_struct*)mem_static_malloc(12);
+}
+static qbs *sc_8888=qbs_new(0,0);
+int32 fornext_value8890;
+int32 fornext_finalvalue8890;
+int32 fornext_step8890;
+uint8 fornext_step_negative8890;
+float *_SUB_TEXTBOXADDTEXT_SINGLE_CHECKLINKS=NULL;
+if(_SUB_TEXTBOXADDTEXT_SINGLE_CHECKLINKS==NULL){
+_SUB_TEXTBOXADDTEXT_SINGLE_CHECKLINKS=(float*)mem_static_malloc(4);
+*_SUB_TEXTBOXADDTEXT_SINGLE_CHECKLINKS=0;
+}
+double fornext_value8892;
+double fornext_finalvalue8892;
+double fornext_step8892;
+uint8 fornext_step_negative8892;
+byte_element_struct *byte_element_8893=NULL;
+if (!byte_element_8893){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8893=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8893=(byte_element_struct*)mem_static_malloc(12);
+}
+int32 fornext_value8895;
+int32 fornext_finalvalue8895;
+int32 fornext_step8895;
+uint8 fornext_step_negative8895;
+byte_element_struct *byte_element_8896=NULL;
+if (!byte_element_8896){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8896=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8896=(byte_element_struct*)mem_static_malloc(12);
+}

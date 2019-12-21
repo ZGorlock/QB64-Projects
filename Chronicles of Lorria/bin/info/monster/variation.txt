@@ -1,0 +1,36 @@
+XX - All off
+
+Ft - Fire Type
+Wt - Water Type
+Et - Earth Type
+Dt - Dark Type
+Ht - Holy Type
+At - Flying Type
+Lt - Lightning Type
+It - Ice Type
+Pt - Poison Type
+Rt - Rock Type
+Mt - Metal Type
+Ut - Undead Type
+Gt - Ghost Type
+
+Xv - Vampiric
+Xu - Undead
+Xc - Cannibal
+Xx - Contaminated
+
+Fi - Fire Immune
+Wi - Water Immune
+Ei - Earth Immune
+Di - Dark Immune
+Hi - Holy Immune
+Li - Lightning Immune
+Ii - Ice Immune
+Pi - Poison Immune
+
+F - On Fire
+I - Frozen
+Z - Charged
+P - Poisoned
+C - Cursed
+B - Blessed

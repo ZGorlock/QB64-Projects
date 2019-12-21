@@ -1,0 +1,4 @@
+if(oldstr6416){
+if(oldstr6416->fixed)qbs_set(oldstr6416,_FUNC_SUMMINPRIMEBASESTATS_STRING_RACE);
+qbs_free(_FUNC_SUMMINPRIMEBASESTATS_STRING_RACE);
+}

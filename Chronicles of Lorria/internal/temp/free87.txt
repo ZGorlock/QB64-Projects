@@ -1,0 +1,4 @@
+if(oldstr6659){
+if(oldstr6659->fixed)qbs_set(oldstr6659,_FUNC_UNICODETOANSI_STRING_U);
+qbs_free(_FUNC_UNICODETOANSI_STRING_U);
+}

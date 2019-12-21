@@ -1,0 +1,743 @@
+IF (k$ = CHR$(116) OR k$ = CHR$(84)) OR (_MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 317 AND _MOUSEY < 333 AND _MOUSEBUTTON(1)) THEN
+    DO
+        exittomenu = 0
+        exitloop = 0
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "What would you like to do?"
+            PRINT "     1-Class Chart"
+            PRINT "     2-Classes"
+            PRINT "     3-Job Advancement Guides"
+            PRINT "     4-Class Recommendation Quiz"
+            bibliography = 2
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                exitloop = 0
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "What class group would you like to look at?"
+                    PRINT "     1-Adventurer"
+                    PRINT "     2-Legend"
+                    PRINT "     3-Cygnus Knight"
+                    PRINT "     4-Resistance"
+                    bibliography = 2
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        T1:
+                        source$ = "http://global.hidden-street.net/character/adventurers"
+                        classgroup$ = "Adventurer"
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What class system would you like to know about?"
+                            PRINT "     1-Warrior"
+                            PRINT "     2-Bowman"
+                            PRINT "     3-Magician"
+                            PRINT "     4-Thief"
+                            PRINT "     5-Pirate"
+                            PRINT "     6-Dual Blader"
+                            bibliography = 1
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                                rows = 15
+                                file$ = "source\class\waclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/swordman"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                rows = 12
+                                file$ = "source\class\boclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/archer"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                                rows = 15
+                                file$ = "source\class\maclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/magician"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(52) THEN
+                                rows = 12
+                                file$ = "source\class\thclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/rogue"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(53) THEN
+                                rows = 12
+                                file$ = "source\class\piclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/pirate"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(54) THEN
+                                rows = 10
+                                file$ = "source\class\dbclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/blade-recruit"
+                                exitloop = 1
+                            END IF
+                            IF exitloop = 1 THEN EXIT DO
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF exitloop = 1 THEN EXIT DO
+                    IF k$ = CHR$(50) THEN
+                        T2:
+                        source$ = "http://global.hidden-street.net/character/legends"
+                        classgroup$ = "Legend"
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What class system would you like to know about?"
+                            PRINT "     1-Aran"
+                            PRINT "     2-Evan"
+                            bibliography = 1
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                                rows = 9
+                                file$ = "source\class\arclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/aran-beginner"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                rows = 15
+                                file$ = "source\class\evclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/beginner-master-evan"
+                                exitloop = 1
+                            END IF
+                            IF exitloop = 1 THEN EXIT DO
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF exitloop = 1 THEN EXIT DO
+                    IF k$ = CHR$(51) THEN
+                        T3:
+                        source$ = "http://global.hidden-street.net/character/cygnus-knights"
+                        classgroup$ = "Cygnus Knight"
+                        rows = 8
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What class system would you like to know about?"
+                            PRINT "     1-Blaze Wizard"
+                            PRINT "     2-Dawn Warrior"
+                            PRINT "     3-Night Walker"
+                            PRINT "     4-Thunder Breaker"
+                            PRINT "     5-Wind Archer"
+                            bibliography = 1
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                                file$ = "source\class\bwclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/blaze-wizard-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                file$ = "source\class\dwclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/dawn-warrior-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                                file$ = "source\class\nwclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/night-walker-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(52) THEN
+                                file$ = "source\class\tbclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/thunder-breaker-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(53) THEN
+                                file$ = "source\class\wrclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/wind-archer-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF exitloop = 1 THEN EXIT DO
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF exitloop = 1 THEN EXIT DO
+                    IF k$ = CHR$(52) THEN
+                        T4:
+                        source$ = "http://global.hidden-street.net/character/resistance"
+                        classgroup$ = "Resistance"
+                        rows = 9
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What class system would you like to know about?"
+                            PRINT "     1-Battle Mage"
+                            PRINT "     2-Wild Hunter"
+                            PRINT "     3-Mechanic"
+                            bibliography = 1
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                                file$ = "source\class\bmclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/battle-mage-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                file$ = "source\class\whclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/wild-hunter-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                                file$ = "source\class\meclasschart.txt"
+                                source$ = "http://global.hidden-street.net/chatacter/class/mechanic-1st-job"
+                                exitloop = 1
+                            END IF
+                            IF exitloop = 1 THEN EXIT DO
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF exitloop = 1 THEN EXIT DO
+                    _DISPLAY
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                source$ = "http://strategywiki.org/wiki/MapleStory/Jobs"
+                DO
+                    DO
+                        class$ = ""
+                        classinfo$ = ""
+                        classinfo2$ = ""
+                        classinfo3$ = ""
+                        classinfo4$ = ""
+                        classinfo5$ = ""
+                        classinfo6$ = ""
+                        classinfo7$ = ""
+                        classinfo8$ = ""
+                        classinfo9$ = ""
+                        classinfo10$ = ""
+                        classinfo11$ = ""
+                        classinfo12$ = ""
+                        exitloop = 0
+                        class$ = ""
+                        inputlength = 0
+                        row = 1
+                        selected = 1
+                        exitloop = 0
+                        OPEN "source\list\classes.txt" FOR INPUT AS #1
+                        REDIM classes$(128)
+                        REDIM classlistprint$(128)
+                        classamount = 1
+                        DO UNTIL EOF(1)
+                            ON ERROR GOTO endofclassfiled
+                            LINE INPUT #1, classes$(classamount)
+                            classamount = classamount + 1
+                        LOOP
+                        endofclassfiled:
+                        classamount = classamount - 1
+                        CLOSE #1
+                        classlistamount = classamount
+                        FOR classchange = 1 TO classamount
+                            classlistprint$(classchange) = classes$(classchange)
+                        NEXT classchange
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What class would you like to know about?"
+                            PRINT ": "; class$
+                            PRINT
+                            IF classlistamount <= 24 THEN
+                                FOR classprint = 1 TO classlistamount
+                                    IF classprint = selected THEN
+                                        COLOR backcolor, textcolor
+                                    ELSE
+                                        COLOR textcolor, backcolor
+                                    END IF
+                                    PRINT classlistprint$(classprint)
+                                NEXT classprint
+                            ELSE
+                                FOR classlisting = row TO (row + 24)
+                                    IF classlisting = selected THEN
+                                        COLOR backcolor, textcolor
+                                    ELSE
+                                        COLOR textcolor, backcolor
+                                    END IF
+                                    PRINT classlistprint$(classlisting)
+                                NEXT classlisting
+                            END IF
+                            COLOR textcolor, backcolor
+                            IF row + 24 < classlistamount AND selected > row + 12 THEN
+                                row = row + 1
+                            END IF
+                            IF row <> 1 AND selected < row + 12 THEN
+                                row = row - 1
+                            END IF
+                            GOSUB controls
+                            IF selected < 1 THEN selected = 1
+                            IF selected > classlistamount THEN selected = classlistamount
+                            IF (k$ >= CHR$(48) AND k$ <= CHR$(57)) OR (k$ >= CHR$(65) AND k$ <= CHR$(122)) OR (k$ = CHR$(32)) THEN
+                                class$ = class$ + k$
+                                inputlength = LEN(class$)
+                            END IF
+                            IF k$ = CHR$(8) AND inputlength > 0 THEN
+                                class$ = MID$(class$, 1, (inputlength - 1))
+                                inputlength = (inputlength - 1)
+                            END IF
+                            IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                            IF k$ = (CHR$(0) + CHR$(80)) AND selected <> classlistamount THEN selected = selected + 1
+                            IF oldclass$ <> class$ THEN
+                                REDIM classlistprint$(128)
+                                classlistamount = 0
+                                FOR classnewlist = 1 TO classamount
+                                    IF MID$(classes$(classnewlist), 1, inputlength) = class$ THEN
+                                        classlistamount = classlistamount + 1
+                                        classlistprint$(classlistamount) = classes$(classnewlist)
+                                    END IF
+                                NEXT classnewlist
+                                row = 1
+                                selected = 1
+                                oldclass$ = class$
+                            END IF
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(13)
+                        class$ = classlistprint$(selected)
+                        SELECT CASE class$
+                            CASE "Admin"
+                                classinfo$ = "You can not play as this class, only GMs can. This class has very high-powered skills."
+                            CASE "Adventurer"
+                                classinfo$ = "Adventurers can reach a maximum level of 200 and classes under this group advance 4 times. The classes in the Adventurer group are 'Warrior', 'Bowmen', 'Magician', 'Thief', and 'Pirate'"
+                            CASE "Beginner"
+                                classinfo$ = "All characters start the game as beginners. They have only a few minor skills and can wear only the most basic equipment. However, the class has its advantages. Beginner characters do not lose experience when they die, and they receive a 90% discount on taxi fares across Victoria Island. Many players often keep a beginner in their account as a 'mule.' Mules are usually very low-leveled and are used to store items when the player's main character does not have enough inventory space. Mules at level 15 and above are sometimes also used to fame or defame other characters, and mules at level 40+ are sometime used to buy potions from Jane the Alchemist or to do Party Quests for characters in Ossyria."
+                            CASE "Warrior"
+                                classinfo$ = "Warriors are called 'Swordsmen' in their first jobs, and have the strongest raw damage out of all the classes. At the beginning of the game as a beginner, future warriors mainly raise their STR points to increase damage. Warriors also need some DEX points for accuracy. This gives the pre-warrior beginner a huge advantage over other beginners allowing them to gain levels much quicker. To obtain the job of warrior, one must reach level 10 with a STR level of 35. Warriors possess a skill called Improving Max HP Increase that raises their max HP more than usual with every level gained. If this skill is maxed as soon as possible after changing classes, the warrior will have at least double the max HP of that of Thieves and Archers, and at least quadruple that of the Mage. Warriors also have 2 attacking skills: Power Strike, which does large amounts of damage to one enemy and Slash Blast, which can attack up to 6 enemies near the character. Warrior armor has the highest weapon defense in the game. Since warriors require both STR and DEX, they choose to wear armor that increases STR or DEX. The warrior weapons consist of many classes, and the second job advancement will affect which weapon one will choose to use for the rest of the game. The jobs are Fighter, Page, and Spearman and each class masters a different set of weapons. When the job advancement test is complete, the player will have to choose between the different jobs, and must take into consideration the HP and MP boosts each job grants. Fighters gain the most HP, but they get little MP after level 30. Pages are considered the 'in between' choice, with an equal increase of both HP and MP. Spearmen gain more MP than Pages and Fighters, but they gain the least HP out of the three."
+                            CASE "Swordsman"
+                                classinfo$ = "The post-beginner class of the Warrior branch of Adventurers. See 'Warrior'."
+                            CASE "Fighter"
+                                classinfo$ = "Fighters use swords and axes. Compared to axes, swords provide more consistent but lower average damage with a faster attack speed. Most Fighters skills raise the efficiency of the attack. For example, Final Attack is a skill that gives a chance for a fast, free attack after an attack skill is used; Booster Skill increases the attack speed. However, two support skills are also available: Rage, which increases the weapon attack of the party at the expense of a small amount of defense; and Power Guard, which reflects 40% of contact damage back to the enemy and reduce knock back. Fighters tend to level as fast as pages in 2nd job, now that New Leaf City has been released with 12 attack potions (2 more attack than rage), setting rage at a disadvantage, yet still allowing fighters to save a considerable amount of money at the cost of 2 attack."
+                            CASE "Crusader"
+                                classinfo$ = "Using brute force, Crusaders are the raw brute strength of MapleStory. They feature a threatening Combo Attack, which not only gives a boost to Crusaders' attacks, but also allows them to charge up to 5 counters (in the form of aural orbs that float around the character) which can be used to unleash two powerful attacks: Panic and Coma. Panic is analogous to a much stronger version of Power Strike, whereas Coma is analogous to a much stronger version of Slash Blast but can also stun; using either skill will require recharging of the counters. Crusaders also have a skill called Shout that does minimal damage but stuns at a high rate. Stunned monsters however, recover from their stun state if they are attacked again."
+                            CASE "Hero"
+                                classinfo$ = "Hero - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Monster Magnet"
+                                classinfo5$ = "     Stance"
+                                classinfo6$ = "     Charge"
+                                classinfo7$ = "     Achilles"
+                                classinfo8$ = "     Blocking"
+                                classinfo9$ = "     Brandish"
+                                classinfo10$ = "     Advanced Combo Attack"
+                                classinfo$11 = "     Enrage"
+                            CASE "Page"
+                                classinfo$ = "Pages have the ability to use swords and blunt weapons. Compared to blunt weapons, swords are generally faster, have a more stable damage range, higher average damage, and a longer reach, although they cost more. Blunt weapons also tend to deal very high damage when the character swings, while they deal lower damage with a stabbing motion. Pages have the same skills as Fighters except Pages have Threaten instead of Rage. Threaten decreases nearby monster's physical attack and weapon defense by 20 points."
+                            CASE "White Knight"
+                                classinfo$ = "White Knights are like a fusion of warrior and mage. They have the ability to charge up their weapon with an element, Fire, Ice, or Lightning, to increase their weapon damage. Enemies weak to the chosen element will have their final damage multiplied by 1.5 (150%) when that skill is maxed. An added advantage of 'Ice Charge' is its ability to freeze monsters temporarily, but applying only 105% damage when maxed. 'Fire Charge' applies 120% damage, and many monsters are weak against fire, while 'Lightning' applies 125% damage, making it the most useful against enemies that aren't weak against any elements and cannot be frozen. In addition to charging their weapon, White Knights can use the 'Charged Blow' skill to deal 250% damage to up to 6 monsters at once and stun the enemy with a 90% chance when the skill is maxed. The stun time is 10 seconds, or 5 seconds if the enemy is attacked while stunned, the latter being a possibly unique property the White Knight class 'Charged Blow' cancels out the charge but keeps the elemental attribute. They also have the skills 'Relax', which increases the amount of MP regained every 10 seconds, 'Shield Mastery', which increases a shield's weapon defense, and 'Magic Crush', which cancels out the enemy's magic defense skills."
+                            CASE "Paladin"
+                                classinfo$ = "Paladin - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Warrior"
+                                classinfo3$ = "     Awakening"
+                                classinfo4$ = "     Monster Magnet"
+                                classinfo5$ = "     Power Stance"
+                                classinfo6$ = "     Rush"
+                                classinfo7$ = "     Achilles"
+                                classinfo8$ = "     Guardian"
+                                classinfo9$ = "     Holy Charge / Divine Charge"
+                                classinfo10$ = "     Advanced Charge"
+                                classinfo11$ = "     Blast"
+                                classinfo12$ = "     Heaven's Hammer"
+                            CASE "Spearman"
+                                classinfo$ = "Spearmen, the final choice for warriors, have the highest maximum damage of the three (lowest minimum as well), although they have a very slow attack speed. Spearmen's weapons of choice are Pole Arms or Spears. Iron Will and Hyper Body are available to them; the former raises a party's defense and magic defense, the latter raises max HP and max MP of the party temporarily. Unlike their Fighter and Page counterparts who typically only master one weapon, Spearmen can master both weapon types, due to how 3rd job advance skills work. Spearmen are considered to be more party oriented than Fighters or Pages because of their party skills. However, they tend to be weak at solo, because of slow weapons, unstable damage, and they suffer from the stab/slash animation."
+                            CASE "Dragon Knight"
+                                classinfo$ = "Dragon Knights are totally different from the two other classes. When they make the third job advancement Spearmen obtain a slew of powerful attacks and skills. The Crusher skill (Buster in some versions) can attack up to 3 enemies 3 times. Dragon Fury is a skill that does increased damage to up to 6 enemies, replacing Slash Blast. Crusher forces a stab animation, which benefits Spear users; Dragon Fury forces a swing animation, which benefits Pole arm users. Sacrifice, an active skill, gives up HP to deal damage to the enemy, ignoring enemy's weapon defense. Dragon Blood, similar to the Fighter's Rage, increases damage while reducing weapon defense. However, this skill is more powerful, only affects the caster, and periodically reduces the Dragon Knight's HP. The Dragon Knight's signature skill is Dragon Roar. This skill shakes the screen and attacks up to 15 enemies on the map at a massive 240% damage each. However, this skill temporarily stuns the caster and costs a massive amount of HP. Dragon Knights often party with Clerics or Priests who can heal large HP losses caused by a Dragon Knight's skills."
+                            CASE "Dark Knight"
+                                classinfo$ = "Dark Knight - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Monster Magnet"
+                                classinfo5$ = "     Stance"
+                                classinfo6$ = "     Charge"
+                                classinfo7$ = "     Achilles"
+                                classinfo8$ = "     Berserk"
+                                classinfo9$ = "     Beholder"
+                                classinfo10$ = "     Beholder: Heal Mastery"
+                                classinfo11$ = "     Beholder: Buff Mastery"
+                                classinfo12$ = "     Rush"
+                            CASE "Bowman"
+                                classinfo$ = "Bowmen are called 'archers' in their first jobs and use bows and crossbows to battle enemies. Arrows are required for each attack and are stored in blue or brown quivers in the 'Use' section of the inventory. There are normal arrows and the stronger, costlier bronze arrows and steel arrows from which they can choose. They are relatively weak at lower levels but become much stronger as they reach higher levels. An archer's damage is based mainly on DEX, which is where most stat points are placed, whereas STR is raised to meet equipment requirements. Archers cannot attack monsters from a short range, so when a monster gets too close, they swing their bow or crossbow in an attempt to knock the monster away. Success rates for knocking the monster back depend on the knockback rate of the weapon, with stronger bows and crossbows having higher chances of knocking the enemy back. Archers also have the largest damage range of any class making their damage highly inconsistent. All of an archer's skill are used to improve their damage dealing capabilities and their other weaknesses, however they have no party-support skills. A vital skill for an archer is Eye of Amazon, which increases the range of arrows. Critical Shot gives a chance of doing bonus damage with every arrow shot. Arrow Blow is an active skill that deals more damage than a regular shot, having high knockback rate. Double Shot allows the archer to fire two arrows at once, each with their own ability to do critical damage. Other skills are Blessing of Amazon, a passive skill that increases Accuracy, and Focus, an active skill that temporarily increases accuracy and avoidability."
+                            CASE "Archer"
+                                classinfo$ = "The post-beginner class of the Bowman branch of Adventurers. See 'Bowman'."
+                            CASE "Hunter"
+                                classinfo$ = "Hunters use bows and arrows for their usual weapons. Bows are faster but weaker than crossbows. Hunters/Rangers tend to be far more common than Crossbowmen/Snipers. Hunter skills include Bow Mastery, Power Knockback, Arrow Bomb, Bow Booster, Final Attack: Bow, and Soul Arrow. Bow Mastery raises the minimum damage and accuracy of hunters. Power Knockback lets a Hunter swing their bow to attack multiple enemies, giving a boost to their knockback rate. Arrow Bomb is a skill that will explode when the arrow contacts an enemy, damaging and possibly stunning up to six surrounding enemies as well. Bow Booster is a skill that increases the rate of fire of the bow. Final Attack allows the chance to randomly, and quickly, fire another arrow after using an attacking skill. Finally, Soul Arrow is a skill that allows a player to shoot arrows without using the ones in their inventory. However, these arrows have none of the bonus aspects of special arrows like Bronze or Steel Arrows."
+                            CASE "Ranger"
+                                classinfo$ = "Rangers gain several new abilities that help to shore up the major weaknesses of the archer class. Arrow Rain causes arrows to rain down around the archer hitting nearby enemies, which effectively eliminates the archers' close-range weakness. Fire Shot is an elemental mob attack which charges arrows with fire elemental damage. Mortal Blow is a passive, close-range skill that sometimes triggers when a monster comes within bow-swinging range, and fires a powerful shot that has a small chance to instantly kill that creature. Thrust provides a passive speed boost. Puppet draws aggro from damaged monsters to itself. Silver Hawk summons a bird that flies around the player and attacks the monster nearest to the player, with a high chance of stunning enemies, though it also requires the Ranger to use a Summoning Rock. Finally, archers gain the skill Strafe, which fires four arrows simultaneously, each with the chance of a critical hit, and is the only skill that can do 800% of the character's base damage without using other active skills (counting that a. the skill is maxed and b. all the hits are critical.)."
+                            CASE "Bow Master"
+                                classinfo$ = "Bow Master - 4th Job Advancement- Available Skills:"
+                                classinfo1$ = "     Maple Hero"
+                                classinfo2$ = "     Hero's Will"
+                                classinfo3$ = "     Sharp Eyes"
+                                classinfo4$ = "     Dragon Pulse"
+                                classinfo5$ = "     Advanced Bow Mastery"
+                                classinfo6$ = "     Phoenix (Summon)"
+                                classinfo7$ = "     Hamstring"
+                                classinfo8$ = "     Hurricane"
+                                classinfo9$ = "     Concentrate"
+                            CASE "Crossbowman"
+                                classinfo$ = "Crossbowmen use crossbows and crossbow arrows, which are thicker than primary arrows and appear in a blue quiver. Crossbows are stronger but slower than bows. Their second job skills are mostly the same as Hunters, except that instead of Arrow Bomb they get Iron Arrow, a skill that causes an arrow to go through up to six monsters in a row. Iron Arrow does more damage than Arrow Bomb, and while it doesn't stun, it can knockback the monsters. Also, Iron Arrow does not divert to attack the enemy (such as a monster that is on a different platform)."
+                            CASE "Sniper"
+                                classinfo$ = "For the most part, Snipers have the same skills as Rangers. They receive Arrow Eruption and Golden Eagle rather than Arrow Rain and Silver Hawk, although the difference is purely cosmetic; Eruption is pink while Rain is blue, and shoots up from the ground rather than falling from above. The prominent difference between the Sniper and Ranger class is that Sniper gets Ice Shot over Ranger's Fire Shot, which can damage up to six close enemies as well as freezes them solid, however, it does 10% less damage than Fire Shot and it does not trigger critical hits."
+                            CASE "Marksman"
+                                classinfo$ = "Marksman - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Sharp Eyes"
+                                classinfo5$ = "     Dragon Pulse"
+                                classinfo6$ = "     Advanced Crossbow Mastery"
+                                classinfo7$ = "     Freezer (Summon)"
+                                classinfo8$ = "     Snipe"
+                                classinfo9$ = "     Blind"
+                                classinfo10$ = "     Piercing"
+                            CASE "Magician"
+                                classinfo$ = "Magicians are spell casters, and as such, their power is based mainly on magic attack. Magic attack is increased by raising INT, and magicians require some LUK to wear their equips. The antithesis of Warriors, magicians (popularly referred to as 'mages') have very low HP, by far the lowest of the four classes, and the highest MP of the four classes. As beginners, due to the lack of STR and DEX, magicians are very weak. The first job advancement for Magicians is at Level 8, as opposed to Level 10 for the other 3 classes, and requires 20 INT. This gives magicians more SPs (Skill Points) than the other classes during the 1st job and allows the use of skills sooner. Similar to Warrior's Improving Max HP Increase, magicians have Improving Max MP Increase, which is typically maxed immediately in order to increase their MP as much as possible. Magicians improve very quickly during the 1st job, and at about Level 20 can easily do much more damage than the other classes at the same level. This is largely due to the powerful 1st job spell Magic Claw, which like all magician spells comes with 'mastery', which raises the spell's minimum damage to a significant percentage of the maximum damage, allowing more stable, higher damage. The other most important 1st job magician skill is Magic Guard, which diverts a percentage of the damage taken to the magician's MP instead of HP, effectively giving them thousands of HP. At higher levels Magic Guard is absolutely necessary to survive monster attacks due to a magicians low HP."
+                            CASE "Wizard (Fire/Poison)"
+                                classinfo$ = "Fire/Poison Wizards, who typically use only fire, have the highest base spell damage of all magician second-job classes. Their main second job skill is Fire Arrow. Fire Arrow has an elemental advantage against all Ice-based enemies. They are also effective against various plant and water based enemies. The seldom-used poison spell, Poison Brace, can poison the enemy for added damage over time. This spell is not used often since enemies typically die before the poison can do significant damage. Their other skills include Slow, which slows down up to six nearby enemies, Meditation, which increases a party's Magic Attack, Teleport, which warps the character a short distance instantaneously, and MP Eater, which has a chance of stealing MP from an enemy with each attack"
+                            CASE "Mage (Fire/Poison)"
+                                classinfo$ = "The fire/poison mage is now much more powerful with more skills such as Explosion, Poison Mist, Magic Composition, Seal, Magic Booster, Element Amplification, and Elemental Resistance. Explosion is a multi-targeting spell with high damage, although it is quite slow. Poison Mist releases a poison fog around the mage, which does damage to nearby enemies, as well as having a chance to poison them. Unlike most skills, Poison Mist can target more than 6 monsters every time the skill is used. Magic Composition fires an arrow made of fire and poison causing damage with both elements. However, enemies strong to either element will greatly reduce the damage received. Seal is an active skill that stops monsters from using skills, but does not work on boss monsters. Magic Booster increases the speed of spell casting. Elemental Resistance improves the defense against monsters with fire or poison elemental attacks."
+                            CASE "Arch Mage (Fire/Poison)"
+                                classinfo$ = "Arch Mage (Fire/Poison) - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Mana Reflection"
+                                classinfo5$ = "     Big Bang"
+                                classinfo6$ = "     Infinity"
+                                classinfo7$ = "     Paralyze"
+                                classinfo8$ = "     Elquines"
+                                classinfo9$ = "     Fire Demon"
+                                classinfo10$ = "     Meteor"
+                            CASE "Wizard (Ice/Lightning)"
+                                classinfo$ = "Ice/Lightning Wizards are more powerful than Clerics, but do not have the pure power of Fire/Poison Wizards. They have two main attack spells: Cold Beam and Thunderbolt. Cold Beam is usually referred to as 'ice' and freezes enemies, making Ice/Lightning Wizards very effective against single enemies. Thunderbolt is a weaker spell, but can hit up to six nearby enemies at once. Similarly to Fire/Poison Wizards, Ice/Lightning wizards have Teleport, MP Eater, Meditation and Slow. Slow is not very useful for this class since enemies frozen with Cold Beam cannot move anyway. MP Eater, when combined with Thunderbolt, has a chance of stealing MP from each enemy hit, meaning that there is a much higher chance of stealing MP with each attack."
+                            CASE "Mage (Ice/Lightning)"
+                                classinfo$ = "The Ice/Lightning Mage receives a new and more powerful set of skills in this job advancement. One of their attack skills, Thunder Spear, is the strongest single target magical attack wielded by any Third Job Magician class. However, it is a relatively slow skill. Ice/Lightning Mages also get Ice Strike, a multi-target attack that does damage and freezes enemies, making skills like Slow and Seal quite useless. Similarly to Fire/Poison Mages, they also receive the Magic Composition skill which does Ice and Lightning based damage, again with a chance to freeze the enemy. They also get Seal, Partial Resistance, Magic Booster and Element Amplification. Seal isn't as useful to Ice/Lightning Mages because of their ability to freeze enemies, making them unable to use skills anyway. However, a very common technique is to seal a target that is not able to be frozen, and use Thunder Spear against it for high damage and knock back."
+                            CASE "Arch Mage (Ice/Lightning)"
+                                classinfo$ = "Arch Mage (Ice/Lightning) - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Mana Reflection"
+                                classinfo5$ = "     Quantum Explosion"
+                                classinfo6$ = "     Infinity"
+                                classinfo7$ = "     Ifrit"
+                                classinfo8$ = "     Ice Demon"
+                                classinfo9$ = "     Blizzard"
+                                classinfo10$ = "     Chain Lightning"
+                            CASE "Cleric"
+                                classinfo$ = "Clerics are designed to be support characters that heal and cast beneficial spells on party members. Their trademark skill, Heal, spends MP to increase the HP of the caster and up to 5 other party members within the range of the spell. However, Heal can also be used to damage up to 5 nearby undead monsters. Combined, these effects make Clerics essentially invincible while training. Unfortunately for Clerics, there aren't many undead monsters, and popular training spots are often crowded. A second attack skill Clerics receive is Holy Arrow, which does holy elemental damage. Clerics also receive support skills called Bless, and Invincible. Bless increases the magic and weapon defense, accuracy, and avoidability of everyone in the party; Invincible reduces a percentage of the damage taken by Cleric. As the Wizards, Clerics also receive Teleport and MP Eater. Like Ice/Lightning Wizards, Heal combined with the skill MP Eater, has a very high chance of stealing MP due to hitting up to 5 enemies."
+                            CASE "Priest"
+                                classinfo$ = "In the third job advancement for Clerics, they become Priests. Once again, they have more party-type skills such as Holy Symbol, Dispel, and Mystic Door. Holy Symbol is extremely useful for training in parties, since all party members affected receive bonus experience. Dispel cures the party from status ailments and cancels out all the status effects of the monsters nearby. Mystic Door creates a magic portal that allows characters to travel to the nearest town, and return, very quickly. This can also be used to bring party members to the Priest. The new attacks that priests receive are Shining Ray and Summon Dragon. Shining Ray attacks multiple nearby enemies with holy elemental damage. Summon Dragon summons a small dragon which flies around and attacks nearby monsters. Although slow, it is useful for constant damage. Finally, priests also get Doom and Element Resistance. Doom changes six (non-boss) monsters into Blue Snails, reducing their attack power, movement speed and their ability to use skills. Elemental Resistance is a passive skill and provides resistance against all types of magic attacks, though the resistance amount is lower than that of the Mages."
+                            CASE "Bishop"
+                                classinfo$ = "Bishop - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Awaken"
+                                classinfo4$ = "     Mana Reflection"
+                                classinfo5$ = "     Big Bang"
+                                classinfo6$ = "     Infinity"
+                                classinfo7$ = "     Bahamut"
+                                classinfo8$ = "     Holy Shield"
+                                classinfo9$ = "     Resurrection"
+                                classinfo10$ = "     Angel Ray"
+                                classinfo11$ = "     Genesis"
+                            CASE "Thief"
+                                classinfo$ = "Thieves in their first job are called rogues. To become a thief one must be level 10 and have at least 25 DEX. From there, thieves can choose to use either a claw with throwing stars, or daggers. A thief's damage is mainly dependent on LUK, with equipment requiring DEX. Some daggers require STR to be equipped. After the second job advancement, thieves are the fastest characters in the game. Throwing star thieves require a claw equipment and throwing stars, which are stored in the 'Use' inventory page. Higher level claws can increase the thief's damage, as can stronger throwing stars. Like arrows, throwing stars are used up with every attack. However, rather than buying a new set of arrows each time they run out, a set of throwing stars can be recharged at any potion shop. It requires both hands for claw thief to throw stars, so they are unable to wear a shield. Similarly to Bowmen, claw thieves convert to a weak melee attack when monsters get too close. Dagger thieves use daggers to perform melee attacks. There are two types of daggers: STR and LUK daggers. STR daggers tend to be faster at lower levels and require some points to be placed in STR. The dagger only requires one hand so they are able to carry a shield. This also allows bandits to have a higher defense than assassins. Thief skills include Double Stab, Lucky Seven, Keen Eyes, Dark Sight, Disorder, and Nimble Body."
+                            CASE "Rogue"
+                                classinfo$ = "The post-beginner class of the Thief branch of Adventurers. See 'Thief'. This is the Dual Bladers' post-beginner class also."
+                            CASE "Assassin"
+                                classinfo$ = "Once a Rogue reaches Level 30, they can become an Assassin. Assassins receive the skills Claw Mastery, Critical Throw, Endure, Drain, Haste and Claw Booster. Claw Mastery increases the minimum damage done to a significant percentage of the maximum possible and increases the maximum amount of stars per stack. Critical Throw gives a chance of doing bonus damage with every star thrown. A thief's Endure skill is different from a warrior's endure skill since it increases HP and MP regeneration, and allows regeneration while hanging onto a rope. Drain is an active skill that absorbs some of the damage done by the attack and adds it back to the player's health. Haste is a skill that temporarily increases walking speed and jumping abilities of everyone in the party. Like the other booster skills, claw booster raises the assassin's attack speed."
+                            CASE "Hermit"
+                                classinfo$ = "Hermits, like Assassins, are fast and evasive. They have several support skills, including Alchemist, in which potions are used with increased efficiency; Meso Up, which temporarily causes monsters killed by party members to drop more money than usual; Flash Jump, which enables the character to do another jump whilst in mid-air after normal jump; and Shadow Web, which holds nearby enemies still. They also have several attacking skills, such as Avenger, which attacks up to 6 enemies in a single line by throwing a large star, and Shadow Meso, in which mesos are used rather than throwing stars. Their most frequently used skill, Shadow Partner, creates a double of the caster that mimics every attack. The shadow's damage is slightly lower when performing a normal attack, but significantly lower for a skill attack."
+                            CASE "Night Lord"
+                                classinfo$ = "Night Lord - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Showdown"
+                                classinfo5$ = "     Fake"
+                                classinfo6$ = "     Venom"
+                                classinfo7$ = "     Ninja Ambush"
+                                classinfo8$ = "     Ninja's Dance"
+                                classinfo9$ = "     Spirit Javelin"
+                                classinfo10$ = "     Triple Throw"
+                            CASE "Bandit"
+                                classinfo$ = "At level 30, rogues can choose to take the class of bandit. Rather than throwing stars, the bandit uses daggers to fight. The main offensive Bandit ability is Savage Blow, which hits up to 6 times with a dagger. Haste, another Bandit (Thief) skill, increases jumping and speed abilities temporarily. Bandits may use stars to train in the earlier 2nd job levels; they are commonly referred to as Sindits/Banditsins."
+                            CASE "Chief Bandits"
+                                classinfo$ = "Chief Bandit is the level 70 Job Advancement for Bandits. One of the Chief Bandit's most devastating attacks is Meso Explosion, where massive damage is dealt depending on the amount of meso you drop. Another major Chief Bandit skill is Assaulter, which is similar to a 'quick draw', teleporting you to or past the enemy, while dealing damage. Other Chief Bandit skills include; Band Of Thieves, Pickpocket, Meso Guard, Chakra and Shield Mastery."
+                            CASE "Shadower"
+                                classinfo$ = "Shadower - 4th Job Advancement - Available Skills:"
+                                classinfo2$ = "     Maple Hero"
+                                classinfo3$ = "     Hero's Will"
+                                classinfo4$ = "     Showdown"
+                                classinfo5$ = "     Fake"
+                                classinfo6$ = "     Venom"
+                                classinfo7$ = "     Ninja Ambush"
+                                classinfo8$ = "     Assassinate"
+                                classinfo9$ = "     Smoke Bomb"
+                                classinfo10$ = "     Boomerang Step"
+                            CASE "Pirate"
+                                classinfo$ = "To become a Pirate you must go to Nautilus Port and talk to Kairin who gives you the job advancement. You need to have at least 20 DEX and be level 10 to receive the job. It gets skills that prepare you for your next Job advancement, a unique passive skill that raises accuracy and avoid, and a skill that allows you to dash by tapping a direction key twice. You can choose in this advancement to be a Infighter or a Gunslinger. If you choose to be Infighter, you can add Skill Points to the skills: 'Flash Fist' ('Straight' in other clients) and 'Somersault Kick', if you choose to be Gunslinger, you can max the skills: 'Dash', 'Double Fire' and 'Bullet Time' (or 'Quick Motion' in other clients)."
+                            CASE "Brawler"
+                                classinfo$ = "At level 30, Pirates can become a Brawler. Unlike the other path Gunslinger, Brawlers are like warriors but instead of using Swords/Axes/Spears, they use Knuckles. It receives skills to increase minimum damage with Knuckles, attack faster with Knuckles, it can use its HP to restore MP, has a unique ability to make monsters not target you, and mainly melee type attack skills. The damage output from these skills is high, but you need to go close range to be able to deal damage just like a Warrior."
+                            CASE "Marauder"
+                                classinfo$ = "At level 70, an Brawler can become a Marauder. It's a big improvement over the Brawler giving it abilities like a Crusader's Combo skill that allows it to execute a strong mob attack, or drain HP from a monster. Probably the most interesting skill it gets is Stimulation, which turns you into a Super Saiyan like character and increasing your stats for a short time. While it is in this mode, it can execute a powerful move called Smasher, which can target six enemies with no cooldown."
+                            CASE "Buccaneer"
+                                classinfo$ = "At level 120, a Marauder can become a Buccaneer. This is the final job for the Brawler path. It gains a six-hitting move called Fist which is weak on the first 2 hits, but gets stronger on the 3rd and 4th hits and does extremely high damage in the final two hits. It also gains a powerful AoE move. It also gains a improvement for its Super Saiyan like skill after defeating Kairin for it which allows it to attack 8 times so extremely fast that its invisible to the naked eye, and a move that allows to grab a monster toward you like Scorpion's Harpoon move. Plus it gains a drain like ability that acts like the assassin skill drain but its tons more powerful and hits multiple targets which functions like Chain Lightning. Buccaneer is the only Pirate Job that has party skills. These party skills are Wind Booster and Time Leap. Wind Booster increases the weapon speed for ALL party members and stacks with the booster that your party members already have. Time Leap eliminates all cooldown timers from all skills, but the skill itself has a cooldown that is not affected by its own skill."
+                            CASE "Gunslinger"
+                                classinfo$ = "At level 30, a Pirate can become a Gunslinger. Gunslingers are like assassin as a mean of using bullets. It needs a gun and bullets. Like the Assassin's stars, bullets need to be recharged. Unlike stars, bullets have a greater range and some bullets are elemental based. Its also been confirmed that Gunslingers fire faster than Assassins but do less damage due to a different damage formula for guns. Gains skills to raise minimum damage with guns, a unique ability that allows them to float in the air for a short time, has the ability to throw bombs at the enemy, and mainly Gun skills."
+                            CASE "Outlaw"
+                                classinfo$ = "At level 70, a Gunslinger can become an Outlaw. It is a big improvement over the Gunslinger giving it abilities like firing three bullets and summoning Octopuses or Birds that drop bombs on the enemy. It also gains abilities that improve on the elemental bullets you may receive. Also, its unique skill is that it can stick a flag on an enemy dealing damage and the enemy will just follow you and not attack you."
+                            CASE "Corsair"
+                                classinfo$ = "At level 120, an Outlaw can become a Corsair. This is the final job for the Gunslinger path. It mainly gains skills that improves on the Outlaw skills and gains a gun attack that is basically similar to Storm Arrow. Its most unique skills are its ability is that it let's you ride a miniature pirate ship. You can only use a Pirate Ship only after beating Kairin while she is on her own pirate ship. While on the Pirate Ship, you gain defense but you lose a lot of speed. You can use all bullet skills while on the Ship and it has a Strafe like skill and a Cannonball move that hits up to six enemies at once. The best skill in its arsenal is the skill Mind Control that allows you to gain control of a monster and have it attack the monsters that are similar to it."
+                            CASE "Dual Blader"
+                                classinfo$ = "Dual Bladers start off the same as Adventurers, on Maple Island. They use kataras (blades) in one hand and daggers in the other. The Katara is a weapon type specific to the Dual Blade job. Dual Bladers have six distinct stages, though they still have four job advancements, like traditional Adventurers."
+                            CASE "Blade Recruit"
+                                classinfo$ = "The 2nd stage and 2nd job advancement of the class branch 'Dual Blader'. At level 20, a 'Rouge' can advance into a 'Blade Recriut'."
+                            CASE "Blade Acolyte"
+                                classinfo$ = "The 3rd stage and 2nd job advancement of the class branch 'Dual Blader'. At level 30, a 'Blade Recriut' can advance into a 'Blade Acolyte'."
+                            CASE "Blade Specialist"
+                                classinfo$ = "The 4th stage and 3rd job advancement of the class branch 'Dual Blader'. At level 55, a 'Blade Acolyte' can advance into a 'Blade Specialist'."
+                            CASE "Blade Lord"
+                                classinfo$ = "The 5th stage and 3rd job advancement of the class branch 'Dual Blader'. At level 70, a 'Blade Specialist' can advance into a 'Blade Lord'."
+                            CASE "Blade Master"
+                                classinfo$ = "The 6th stage and 4th job advancement of the class branch 'Dual Blader'. At level 120, a 'Blade Lord' can advance into a 'Blade Master'."
+                            CASE "Legend"
+                                classinfo$ = "Legends can reach a maximum level of 200. This class group includes 'Aran' and 'Evan'."
+                            CASE "Aran"
+                                classinfo$ = "The Aran is a Warrior-like class that utilizes a combo system, using Polearms as their main weapons. When you create an Aran, the new character will have a default tan skin (except in GlobalMS). Arans starts in an area called Rien, an icy snow covered island with very low temperatures, located in a warm place due to a curse. More than half of the island is covered with snow and ice. Similarly to a Cygnus Knight, an Aran character has a bamboo backdrop on the character-select screen. To make the Arans even more unique, they have a game mechanic that no other class gets to use: the combo system. Players are able to increase their combo counter by continuously hitting monsters. As their combo counter increases, so does their damage. Some Aran skills require the player to build up their combo counter before they can use them."
+                            CASE "Aran (Beginner)"
+                                classinfo$ = "The Aran equivalent to the Beginner class of the Adventurer class group. See 'Aran'."
+                            CASE "Aran (1st Job)"
+                                classinfo$ = "The post-beginner class of Aran brach of Legends. See 'Aran'."
+                            CASE "Aran (2nd Job)"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Aran'. See 'Aran'."
+                            CASE "Aran (3rd Job)"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Aran'. See 'Aran'."
+                            CASE "Aran (4th Job)"
+                                classinfo$ = "The 4th job advancement of the class branch 'Aran'. See 'Aran'."
+                            CASE "Evan"
+                                classinfo$ = "Evan is a Magician-type Legend class that is separate from Adventurers; similar to Aran. Once, there was a normal boy that lived near the village of Henesys. In a field, he discovered a dragon egg that he saw in his dreams. And so, the story of Evan the Dragon Master unfolds. In the beginning, Evan and the baby dragon knew nothing. But with the growth of the baby dragon, Evan's strength continues to increase endlessly."
+                            CASE "Beginner Master (Evan)"
+                                classinfo$ = "The Evan equivalent to the Beginner class of the Adventurer class group. See 'Evan'."
+                            CASE "Evan (First Master)"
+                                classinfo$ = "The 1st evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Second Master)"
+                                classinfo$ = "The 2nd evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Third Master)"
+                                classinfo$ = "The 3rd evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Fourth Master)"
+                                classinfo$ = "The 4th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Fifth Master)"
+                                classinfo$ = "The 5th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Sixth Master)"
+                                classinfo$ = "The 6th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Seventh Master)"
+                                classinfo$ = "The 7th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Eighth Master)"
+                                classinfo$ = "The 8th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Ninth Master)"
+                                classinfo$ = "The 9th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Evan (Tenth Master)"
+                                classinfo$ = "The 10th evolution of the class branch 'Evan'. See 'Evan'."
+                            CASE "Cygnus Knight"
+                                classinfo$ = "Cygnus knights can reach a maximum level of 120 and can only job advance 3 times. However, you will gain 6 AP points each level up to 70. This class group includes 'Blaze Wizard', 'Dawn Warrior', 'Night Walker', 'Thunder Breaker', and 'Wind Archer'."
+                            CASE "Noblesse"
+                                classinfo$ = "Once you start your Cygnus Knight, you appear in Ereve. New characters are equipped with the same basic equipment as a Beginner on Maple Island. By questing, players can acquire a hat, an overall, and a medal which identifies them as a Cygnus Knight. Quests in Ereve are simple, just like the quests in Maple Island, but are required to get the first job advancement (meaning that you must complete all of Kiku's quests if you want to advance)."
+                            CASE "Blaze Wizard"
+                                classinfo$ = "Blaze Wizards have high intelligence and use the spirit of fire."
+                            CASE "Blaze Wizard (1st Job)"
+                                classinfo$ = "The 1st job advancement of the class branch 'Blaze Wizard'. See 'Blaze Wizard'."
+                            CASE "Blaze Wizard (2nd Job)"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Blaze Wizard'. See 'Blaze Wizard'."
+                            CASE "Blaze Wizard (3rd Job)"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Blaze Wizard'. See 'Blaze Wizard'."
+                            CASE "Dawn Warrior"
+                                classinfo$ = "Dawn Warriors are champions that boast powerful offensive strength. Not just a plain warrior, they use the spirit of light to enhance their weapons."
+                            CASE "Dawn Warrior (1st Job)"
+                                classinfo$ = "The 1st job advancement of the class branch 'Dawn Warrior'. See 'Dawn Warrior'."
+                            CASE "Dawn Warrior (2nd Job)"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Dawn Warrior'. See 'Dawn Warrior'."
+                            CASE "Dawn Warrior (3rd Job)"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Dawn Warrior'. See 'Dawn Warrior'."
+                            CASE "Night Walker"
+                                classinfo$ = "Night Walkers use fast and powerful attacks, using the darkness to their advantage. They are enhanced with the element of poison."
+                            CASE "Night Walker (1st Job)"
+                                classinfo$ = "The 1st job advancement of the class branch 'Night Walker'. See 'Night Walker'."
+                            CASE "Night Walker (2nd Job)"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Night Walker'. See 'Night Walker'."
+                            CASE "Night Walker (3rd Job)"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Night Walker'. See 'Night Walker'."
+                            CASE "Thunder Breaker"
+                                classinfo$ = "Thunder Breakers are melee fighters who are blessed by the spirit of lightning. They use knuckles as their main weapons, but although they fight at close range, their skills are very powerful compared to the standard infighter."
+                            CASE "Thunder Breaker (1st Job)"
+                                classinfo$ = "The 1st job advancement of the class branch 'Thunder Breaker'. See 'Thunder Breaker'."
+                            CASE "Thunder Breaker (2nd Job)"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Thunder Breaker'. See 'Thunder Breaker'."
+                            CASE "Thunder Breaker (3rd Job)"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Thunder Breaker'. See 'Thunder Breaker'."
+                            CASE "Wind Archer"
+                                classinfo$ = "Wind Archers, like bowmen, use arrows and attack from a distance. They use wind energy to enhance a variety of abilities."
+                            CASE "Wind Archer (1st Job)"
+                                classinfo$ = "The 1st job advancement of the class branch 'Wind Archer'. See 'Wind Archer'."
+                            CASE "Wind Archer (2nd Job)"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Wind Archer'. See 'Wind Archer'."
+                            CASE "Wind Archer (3rd Job)"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Wind Archer'. See 'Wind Archer'."
+                            CASE "Resistance"
+                                classinfo$ = "Resistance can reach a maximum level of 200 and job advance 4 times. This class group includes 'Wild Hunter', 'Battle Mage', and 'Mechanic'."
+                            CASE "Citizen"
+                                classinfo$ = "The Resistance equivalent to Beginner in the Adventurer class group."
+                            CASE "Wild Hunter"
+                                classinfo$ = "Wild Hunters use Cross Bows and Cross bow arrows to attack. Their unique quality is that they can ride animals while attacking."
+                            CASE "Wild Hunter 1"
+                                classinfo$ = "The 1st job advancement of the class branch 'Wild Hunter'. See 'Wild Hunter'."
+                            CASE "Wild Hunter 2"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Wild Hunter'. See 'Wild Hunter'."
+                            CASE "Wild Hunter 3"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Wild Hunter'. See 'Wild Hunter'."
+                            CASE "Wild Hunter 4"
+                                classinfo$ = "The 4th job advancement of the class branch 'Wild Hunter'. See 'Wild Hunter'."
+                            CASE "Battle Mage"
+                                classinfo$ = "The Battle Mage uses a staff and attacks in close range. However it deals magic attack instead of weapon attack."
+                            CASE "Battle Mage 1"
+                                classinfo$ = "The 1st job advancement of the class branch 'Battle Mage'. See 'Battle Mage'."
+                            CASE "Battle Mage 2"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Battle Mage'. See 'Battle Mage'."
+                            CASE "Battle Mage 3"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Battle Mage'. See 'Battle Mage'."
+                            CASE "Battle Mage 4"
+                                classinfo$ = "The 4th job advancement of the class branch 'Battle Mage'. See 'Battle Mage'."
+                            CASE "Mechanic"
+                                classinfo$ = "The Mechanics are the 'Reinforcements'. This class rides on robots mounts when they fight. They are basically pirates that use guns; however, they do not require bullets."
+                            CASE "Mechanic 1"
+                                classinfo$ = "The 1st job advancement of the class branch 'Mechanic'. See 'Mechanic'."
+                            CASE "Mechanic 2"
+                                classinfo$ = "The 2nd job advancement of the class branch 'Mechanic'. See 'Mechanic'."
+                            CASE "Mechanic 3"
+                                classinfo$ = "The 3rd job advancement of the class branch 'Mechanic'. See 'Mechanic'."
+                            CASE "Mechanic 4"
+                                classinfo$ = "The 4th job advancement of the class branch 'Mechanic'. See 'Mechanic'."
+                            CASE ELSE
+                                class$ = ""
+                                inputlength = 0
+                                EXIT DO
+                        END SELECT
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT classinfo$
+                            PRINT classinfo2$
+                            PRINT classinfo3$
+                            PRINT classinfo4$
+                            PRINT classinfo5$
+                            PRINT classinfo6$
+                            PRINT classinfo7$
+                            PRINT classinfo8$
+                            PRINT classinfo9$
+                            PRINT classinfo10$
+                            PRINT classinfo11$
+                            PRINT classinfo12$
+                            bibliography = 1
+                            GOSUB controls
+                            _DISPLAY
+                        LOOP UNTIL k$ = CHR$(32)
+                        exitloop = 0
+                        exittomenu = 0
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "Would you like to look at another class?"
+                            PRINT "     y-Yes"
+                            PRINT "     n-No"
+                            bibliography = 2
+                            GOSUB controls
+                            IF k$ = CHR$(121) THEN
+                                EXIT DO
+                            END IF
+                            IF k$ = CHR$(110) THEN
+                                exittomenu = 1
+                                exitloop = 1
+                                EXIT DO
+                            END IF
+                            _DISPLAY
+                        LOOP
+                        IF exitloop = 1 THEN EXIT DO
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+                IF exitloop = 1 THEN EXIT DO
+            END IF
+            IF k$ = CHR$(51) THEN
+            END IF
+            IF k$ = CHR$(52) THEN
+            END IF
+            IF exitloop = 1 THEN EXIT DO
+            _DISPLAY
+        LOOP
+        exitloop = 0
+        DO
+            IF exittomenu = 1 THEN EXIT DO
+            row = 1
+            inputcount = 0
+            REDIM classadv$(rows)
+            OPEN file$ FOR INPUT AS #1
+            DO UNTIL EOF(1)
+                inputcount = inputcount + 1
+                LINE INPUT #1, classadv$(inputcount)
+                IF inputcount = rows THEN EXIT DO
+            LOOP
+            CLOSE #1
+            DO
+                _LIMIT 64
+                CLS
+                FOR n = row TO row + (rows - 1)
+                    PRINT classadv$(n)
+                NEXT
+                bibliography = 1
+                GOSUB controls
+                _DISPLAY
+            LOOP UNTIL k$ = CHR$(32)
+            DO
+                _LIMIT 64
+                CLS
+                PRINT "Would you like to look at another "; classgroup$; " Class"; ""
+                PRINT "     y-Yes"
+                PRINT "     n-No"
+                bibliography = 2
+                GOSUB controls
+                IF k$ = CHR$(121) THEN
+                    IF classgroup$ = "Adventurer" THEN
+                        GOTO T1
+                    END IF
+                    IF classgroup$ = "Legend" THEN
+                        GOTO T2
+                    END IF
+                    IF classgroup$ = "Cygnus Knight" THEN
+                        GOTO T3
+                    END IF
+                    IF classgroup$ = "Resistance" THEN
+                        GOTO T4
+                    END IF
+                END IF
+                IF k$ = CHR$(110) THEN
+                    exitloop = 1
+                    EXIT DO
+                END IF
+                _DISPLAY
+            LOOP
+            IF exitloop = 1 THEN EXIT DO
+        LOOP
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "Where would you like to go?"
+            PRINT "     1-Class Menu"
+            PRINT "     2-Main Menu"
+            bibliography = 2
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                GOTO BEGIN
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

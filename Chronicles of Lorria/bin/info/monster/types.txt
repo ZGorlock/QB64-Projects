@@ -1,0 +1,18 @@
+F - Fire
+w - Water
+E - Earth
+
+D - Dark
+H - Holy
+
+A - Flying
+
+L - Lightning
+I - Ice
+P - Poison
+
+R - Rock
+M - Metal
+
+U - Undead
+G - Ghost

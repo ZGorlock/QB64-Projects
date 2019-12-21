@@ -1,0 +1,9 @@
+if(oldstr6619){
+if(oldstr6619->fixed)qbs_set(oldstr6619,_FUNC_BASECONV_STRING_N);
+qbs_free(_FUNC_BASECONV_STRING_N);
+}
+qbs_free(_FUNC_BASECONV_STRING_C);
+qbs_free(_FUNC_BASECONV_STRING_CHARSETI);
+qbs_free(_FUNC_BASECONV_STRING_CHARSETF);
+qbs_free(_FUNC_BASECONV_STRING_DEC);
+qbs_free(_FUNC_BASECONV_STRING_NUMDEC);

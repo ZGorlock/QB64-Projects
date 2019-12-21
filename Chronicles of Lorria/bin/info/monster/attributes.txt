@@ -1,0 +1,11 @@
+B - Boss
+
+H - Humanoid
+
+M - Mammal
+R - Reptile
+F - Fish
+B - Bird
+
+I - Intelligent
+A - Astral

@@ -1,0 +1,22 @@
+uint32 *_SUB_TEXTBOXTICK_ULONG_FINDNEXTSPACE=NULL;
+if(_SUB_TEXTBOXTICK_ULONG_FINDNEXTSPACE==NULL){
+_SUB_TEXTBOXTICK_ULONG_FINDNEXTSPACE=(uint32*)mem_static_malloc(4);
+*_SUB_TEXTBOXTICK_ULONG_FINDNEXTSPACE=0;
+}
+static qbs *sc_7621=qbs_new(0,0);
+byte_element_struct *byte_element_7622=NULL;
+if (!byte_element_7622){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7622=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7622=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7623=NULL;
+if (!byte_element_7623){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7623=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7623=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7624=NULL;
+if (!byte_element_7624){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7624=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7624=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7625=NULL;
+if (!byte_element_7625){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7625=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7625=(byte_element_struct*)mem_static_malloc(12);
+}

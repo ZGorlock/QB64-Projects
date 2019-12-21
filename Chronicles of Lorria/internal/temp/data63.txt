@@ -1,0 +1,15 @@
+qbs*oldstr6547=NULL;
+if(_SUB_RESETFILE_STRING_FILENAME->tmp||_SUB_RESETFILE_STRING_FILENAME->fixed||_SUB_RESETFILE_STRING_FILENAME->readonly){
+oldstr6547=_SUB_RESETFILE_STRING_FILENAME;
+if (oldstr6547->cmem_descriptor){
+_SUB_RESETFILE_STRING_FILENAME=qbs_new_cmem(oldstr6547->len,0);
+}else{
+_SUB_RESETFILE_STRING_FILENAME=qbs_new(oldstr6547->len,0);
+}
+memcpy(_SUB_RESETFILE_STRING_FILENAME->chr,oldstr6547->chr,oldstr6547->len);
+}
+int32 *_SUB_RESETFILE_LONG_FF=NULL;
+if(_SUB_RESETFILE_LONG_FF==NULL){
+_SUB_RESETFILE_LONG_FF=(int32*)mem_static_malloc(4);
+*_SUB_RESETFILE_LONG_FF=0;
+}

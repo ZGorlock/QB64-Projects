@@ -1,0 +1,14 @@
+int16 *_SUB_TEXTBOXFREE_INTEGER_FREESUBTEXTBOX=NULL;
+if(_SUB_TEXTBOXFREE_INTEGER_FREESUBTEXTBOX==NULL){
+_SUB_TEXTBOXFREE_INTEGER_FREESUBTEXTBOX=(int16*)mem_static_malloc(2);
+*_SUB_TEXTBOXFREE_INTEGER_FREESUBTEXTBOX=0;
+}
+int32 fornext_value7590;
+int32 fornext_finalvalue7590;
+int32 fornext_step7590;
+uint8 fornext_step_negative7590;
+int32 fornext_value7592;
+int32 fornext_finalvalue7592;
+int32 fornext_step7592;
+uint8 fornext_step_negative7592;
+int16 pass7593;

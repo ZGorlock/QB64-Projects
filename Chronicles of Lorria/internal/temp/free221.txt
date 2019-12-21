@@ -1,0 +1,15 @@
+if(oldstr6964){
+if(oldstr6964->fixed)qbs_set(oldstr6964,_SUB_PREPARSE_STRING_E);
+qbs_free(_SUB_PREPARSE_STRING_E);
+}
+qbs_free(_SUB_PREPARSE_STRING_T);
+qbs_free(_SUB_PREPARSE_STRING_COMP);
+if (_SUB_PREPARSE_ARRAY_SINGLE_ONAME[2]&1){
+if (_SUB_PREPARSE_ARRAY_SINGLE_ONAME[2]&4){
+cmem_dynamic_free((uint8*)(_SUB_PREPARSE_ARRAY_SINGLE_ONAME[0]));
+}else{
+free((void*)(_SUB_PREPARSE_ARRAY_SINGLE_ONAME[0]));
+}
+}
+free_mem_lock( (mem_lock*)((ptrszint*)_SUB_PREPARSE_ARRAY_SINGLE_ONAME)[8] );
+qbs_free(_SUB_PREPARSE_STRING_BIN);

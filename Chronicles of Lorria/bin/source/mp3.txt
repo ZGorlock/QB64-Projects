@@ -1,0 +1,25 @@
+DECLARE DYNAMIC LIBRARY "ole32"
+    FUNCTION CoCreateInstance& (BYVAL rclsid%&, BYVAL pUnkOuter%&, BYVAL dwClsContext&, BYVAL riid%&, BYVAL ppv%&)
+    FUNCTION CoInitializeEx& (BYVAL pvReserved%&, BYVAL dwCoInit~&)
+    SUB CoTaskMemFree (BYVAL pv%&)
+    SUB CoUninitialize ()
+END DECLARE
+
+'http://msdn.microsoft.com/en-us/library/windows/desktop/dd389098(v=vs.85).aspx
+
+CONST CLSCTX_INPROC_SERVER = &H1
+
+CONST COINIT_MULTITHREADED = &H0
+CONST COINIT_APARTMENTTHREADED = &H2
+CONST COINIT_DISABLE_OLE1DDE = &H4
+CONST COINIT_SPEED_OVER_MEMORY = &H8
+
+DIM hr AS LONG
+
+hr = CoInitializeEx(0, COINIT_MULTITHREADED)
+IF hr < 0 THEN
+    PRINT "error"
+    END
+END IF
+
+hr = CoCreateInstance(CLSID_FilterGraph, 0, CLSCTX_INPROC_SERVER, IID_IGraphBuilder, 0)

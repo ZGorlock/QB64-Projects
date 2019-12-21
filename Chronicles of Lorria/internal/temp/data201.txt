@@ -1,0 +1,9 @@
+int16 *_SUB_LAYERSETQUEUE_INTEGER_FINDQUEUE=NULL;
+if(_SUB_LAYERSETQUEUE_INTEGER_FINDQUEUE==NULL){
+_SUB_LAYERSETQUEUE_INTEGER_FINDQUEUE=(int16*)mem_static_malloc(2);
+*_SUB_LAYERSETQUEUE_INTEGER_FINDQUEUE=0;
+}
+int32 fornext_value6904;
+int32 fornext_finalvalue6904;
+int32 fornext_step6904;
+uint8 fornext_step_negative6904;

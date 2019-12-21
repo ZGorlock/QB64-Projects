@@ -1,0 +1,18 @@
+int64 *_SUB_TIMEBEFORE_INTEGER64_CFT=NULL;
+if(_SUB_TIMEBEFORE_INTEGER64_CFT==NULL){
+_SUB_TIMEBEFORE_INTEGER64_CFT=(int64*)mem_static_malloc(8);
+*_SUB_TIMEBEFORE_INTEGER64_CFT=0;
+}
+void *_SUB_TIMEBEFORE_UDT_FT=NULL;
+if(_SUB_TIMEBEFORE_UDT_FT==NULL){
+_SUB_TIMEBEFORE_UDT_FT=(void*)mem_static_malloc(8);
+memset(_SUB_TIMEBEFORE_UDT_FT,0,8);
+}
+byte_element_struct *byte_element_7779=NULL;
+if (!byte_element_7779){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7779=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7779=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_7780=NULL;
+if (!byte_element_7780){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_7780=(byte_element_struct*)(mem_static_pointer-12); else byte_element_7780=(byte_element_struct*)mem_static_malloc(12);
+}

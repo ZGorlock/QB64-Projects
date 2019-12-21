@@ -1,0 +1,8 @@
+int32 *_FUNC_PUP_BIT1_PUP=NULL;
+if(_FUNC_PUP_BIT1_PUP==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_PUP_BIT1_PUP=(int32*)(dblock+cmem_sp);
+*_FUNC_PUP_BIT1_PUP=0;
+}
+uint8 pass6854;

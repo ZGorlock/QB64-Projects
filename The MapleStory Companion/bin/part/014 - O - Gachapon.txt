@@ -1,0 +1,195 @@
+IF (k$ = CHR$(111) OR k$ = CHR$(79)) OR (_MOUSEX > 234 AND _MOUSEX < 401 AND _MOUSEY > 333 AND _MOUSEY < 349 AND _MOUSEBUTTON(1)) THEN
+    DO
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "Which Gachapon would you like to see?"
+            PRINT "      0-Henesys"
+            PRINT "      1-Ellinia"
+            PRINT "      2-Kerning City"
+            PRINT "      3-Perion"
+            PRINT "      4-Nautilus"
+            PRINT "      5-Sleepywood"
+            PRINT "      6-Mushroom Temple"
+            PRINT "      7-New Leaf City"
+            PRINT "      8-Showa"
+            PRINT "      9-Singapore"
+            bibliography = 2
+            GOSUB controls
+            IF k$ = CHR$(48) THEN
+                titleloc = 32
+                name$ = "HENESYS GACHAPON"
+                rows = 137
+                file$ = "source\gach\henesysgach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Henesys.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(49) THEN
+                titleloc = 32
+                name$ = "ELLINIA GACHAPON"
+                rows = 35
+                file$ = "source\gach\elliniagach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Ellinia.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(50) THEN
+                titleloc = 29.5
+                name$ = "KERNING CITY GACHAPON"
+                rows = 37
+                file$ = "source\gach\kcitygach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Kerning.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(51) THEN
+                titleloc = 32.5
+                name$ = "PERION GACHAPON"
+                rows = 94
+                file$ = "source\gach\periongach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Perion.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(52) THEN
+                titleloc = 31.5
+                name$ = "NAUTILUS GACHAPON"
+                rows = 28
+                file$ = "source\gach\nautilusgach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Nautilus.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(53) THEN
+                titleloc = 30.5
+                name$ = "SLEEPYWOOD GACHAPON"
+                rows = 28
+                file$ = "source\gach\swoodgach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Sleepywood.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(54) THEN
+                titleloc = 28
+                name$ = "MUSHROOM TEMPLE GACHAPON"
+                rows = 302
+                file$ = "source\gach\mtemplegach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Mushroom-Temple.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(55) THEN
+                titleloc = 29
+                name$ = "NEW LEAF CITY GACHAPON"
+                rows = 136
+                file$ = "source\gach\nlcgach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-NLC.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(56) THEN
+                titleloc = 33
+                name$ = "SHOWA GACHAPON"
+                rows = 65
+                file$ = "source\gach\showagach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Showa.html"
+                EXIT DO
+            END IF
+            IF k$ = CHR$(57) THEN
+                titleloc = 31
+                name$ = "SINGAPORE GACHAPON"
+                rows = 45
+                file$ = "source\gach\singagach.txt"
+                source$ = "http://www.basilmarket.com/MapleStory-Gachapon-Singapore.html"
+                EXIT DO
+            END IF
+            _DISPLAY
+        LOOP
+        DO
+            DO
+                _LIMIT 64
+                CLS
+                LOCATE 1, titleloc
+                PRINT name$
+                LOCATE 3, 1
+                PRINT "What would you like to do?"
+                PRINT "     1-Look at this Gachapon"
+                PRINT "     2-Look at another Gachapon"
+                PRINT "     3-Exit"
+                bibliography = 1
+                GOSUB controls
+                IF k$ = CHR$(49) THEN
+                    exitloop = 0
+                    row = 1
+                    inputcount = 0
+                    REDIM gachapon$(rows)
+                    OPEN file$ FOR INPUT AS #1
+                    DO UNTIL EOF(1)
+                        inputcount = inputcount + 1
+                        LINE INPUT #1, gachapon$(inputcount)
+                        IF inputcount = rows THEN EXIT DO
+                    LOOP
+                    CLOSE #1
+                    CLS
+                    FOR n = row TO row + 27
+                        PRINT gachapon$(n)
+                        GOSUB scrollbar
+                    NEXT
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        bibliography = 1
+                        sleepno = 1
+                        GOSUB controls
+                        IF k$ = CHR$(113) THEN
+                            row = row - 1
+                            GOTO I1
+                        END IF
+                        IF k$ = CHR$(122) THEN
+                            row = row + 1
+                            GOTO I1
+                        END IF
+                        IF k$ = CHR$(119) THEN
+                            row = 1
+                            GOTO I1
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                            row = row - 27
+                            GOTO I1
+                        END IF
+                        IF k$ = CHR$(115) THEN
+                            row = (rows - 27)
+                            GOTO I1
+                        END IF
+                        IF k$ = CHR$(100) THEN
+                            row = row + 27
+                            GOTO I1
+                        END IF
+                        DO WHILE _MOUSEINPUT
+                            row = row + (_MOUSEWHEEL * scrollspeed)
+                            IF prevrow <> row THEN
+                                I1:
+                                IF row < 1 THEN
+                                    row = 1
+                                END IF
+                                IF row > (rows - 27) THEN
+                                    row = (rows - 27)
+                                END IF
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT gachapon$(n)
+                                    GOSUB scrollbar
+                                NEXT
+                            END IF
+                            prevrow = row
+                        LOOP
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(50) THEN
+                    exitloop = 1
+                    EXIT DO
+                END IF
+                IF k$ = CHR$(51) THEN
+                    GOTO BEGIN
+                END IF
+                _DISPLAY
+            LOOP
+            IF exitloop = 1 THEN EXIT DO
+        LOOP
+    LOOP
+END IF

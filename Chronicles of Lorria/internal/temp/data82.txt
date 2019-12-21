@@ -1,0 +1,25 @@
+qbs *_FUNC_REMFILESUFFIX_STRING_REMFILESUFFIX=NULL;
+if (!_FUNC_REMFILESUFFIX_STRING_REMFILESUFFIX)_FUNC_REMFILESUFFIX_STRING_REMFILESUFFIX=qbs_new(0,0);
+qbs*oldstr6654=NULL;
+if(_FUNC_REMFILESUFFIX_STRING_F->tmp||_FUNC_REMFILESUFFIX_STRING_F->fixed||_FUNC_REMFILESUFFIX_STRING_F->readonly){
+oldstr6654=_FUNC_REMFILESUFFIX_STRING_F;
+if (oldstr6654->cmem_descriptor){
+_FUNC_REMFILESUFFIX_STRING_F=qbs_new_cmem(oldstr6654->len,0);
+}else{
+_FUNC_REMFILESUFFIX_STRING_F=qbs_new(oldstr6654->len,0);
+}
+memcpy(_FUNC_REMFILESUFFIX_STRING_F->chr,oldstr6654->chr,oldstr6654->len);
+}
+int32 *_FUNC_REMFILESUFFIX_LONG_X=NULL;
+if(_FUNC_REMFILESUFFIX_LONG_X==NULL){
+_FUNC_REMFILESUFFIX_LONG_X=(int32*)mem_static_malloc(4);
+*_FUNC_REMFILESUFFIX_LONG_X=0;
+}
+int64 fornext_value6656;
+int64 fornext_finalvalue6656;
+int64 fornext_step6656;
+uint8 fornext_step_negative6656;
+byte_element_struct *byte_element_6657=NULL;
+if (!byte_element_6657){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6657=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6657=(byte_element_struct*)mem_static_malloc(12);
+}

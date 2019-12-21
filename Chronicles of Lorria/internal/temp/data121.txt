@@ -1,0 +1,5 @@
+uint8 *_FUNC_CHAR_UBYTE_CHAR=NULL;
+if(_FUNC_CHAR_UBYTE_CHAR==NULL){
+_FUNC_CHAR_UBYTE_CHAR=(uint8*)mem_static_malloc(1);
+*_FUNC_CHAR_UBYTE_CHAR=0;
+}

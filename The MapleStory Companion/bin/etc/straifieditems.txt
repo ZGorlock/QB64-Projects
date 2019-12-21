@@ -1,0 +1,642 @@
+
+                    PRINT "     1-All Items"
+                    PRINT "     2-Equips"
+                    PRINT "     3-Use"
+                    PRINT "     4-Etc"
+                    PRINT "     5-Setup"
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What Equips would you like to search?"
+                            PRINT "     1-All Equips"
+                            PRINT "     2-Weapons"
+                            PRINT "     3-Armours"
+                            PRINT "     4-Accessories"
+                            PRINT "     5-Taming Mob"
+                            PRINT "     6-Monster Card Sets"
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Weapons would you like to search?"
+                                    PRINT "     1-One Handed Sword"
+                                    PRINT "     2-Two Handed Sword"
+                                    PRINT "     3-One Handed Axe"
+                                    PRINT "     4-Two Handed Axe"
+                                    PRINT "     5-One Handed Blunt Weapon"
+                                    PRINT "     6-Two Handed Blunt Weapon"
+                                    PRINT "     7-Bow"
+                                    PRINT "     8-Crossbow"
+                                    PRINT "     9-Claw"
+                                    PRINT "     0-Dagger"
+                                    PRINT "     a-Spear"
+                                    PRINT "     b-Polearm"
+                                    PRINT "     c-Wand"
+                                    PRINT "     d-Staff"
+                                    PRINT "     e-Knuckle"
+                                    PRINT "     f-Gun"
+                                    PRINT "     g-Katara"
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                    END IF
+                                    IF k$ = CHR$(56) THEN
+                                    END IF
+                                    IF k$ = CHR$(57) THEN
+                                    END IF
+                                    IF k$ = CHR$(48) THEN
+                                    END IF
+                                    IF k$ = CHR$(97) THEN
+                                    END IF
+                                    IF k$ = CHR$(98) THEN
+                                    END IF
+                                    IF k$ = CHR$(99) THEN
+                                    END IF
+                                    IF k$ = CHR$(100) THEN
+                                    END IF
+                                    IF k$ = CHR$(101) THEN
+                                    END IF
+                                    IF k$ = CHR$(102) THEN
+                                    END IF
+                                    IF k$ = CHR$(103) THEN
+                                    END IF
+                                    GOSUB controls
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Armours would you like to search?"
+                                    PRINT "     1-All Amours"
+                                    PRINT "     2-Hat"
+                                    PRINT "     3-Overall"
+                                    PRINT "     4-Top"
+                                    PRINT "     5-Bottom"
+                                    PRINT "     6-Shoes"
+                                    PRINT "     7-Gloves"
+                                    PRINT "     8-Cape"
+                                    PRINT "     9-Shield"
+                                    PRINT "     0-Dragon"
+                                    PRINT "     a-Mechanic"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Hats would you like to search?"
+                                            PRINT "     1-All Hats"
+                                            PRINT "     2-Common"
+                                            PRINT "     3-Bowman"
+                                            PRINT "     4-Magician"
+                                            PRINT "     5-Pirate"
+                                            PRINT "     6-Thief"
+                                            PRINT "     7-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            IF k$ = CHR$(55) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Overalls would you like to search?"
+                                            PRINT "     1-All Overalls"
+                                            PRINT "     2-Common"
+                                            PRINT "     3-Bowman"
+                                            PRINT "     4-Magician"
+                                            PRINT "     5-Pirate"
+                                            PRINT "     6-Thief"
+                                            PRINT "     7-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            IF k$ = CHR$(55) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Tops would you like to search?"
+                                            PRINT "     1-All Tops"
+                                            PRINT "     2-Common"
+                                            PRINT "     3-Bowman"
+                                            PRINT "     4-Magician"
+                                            PRINT "     5-Pirate"
+                                            PRINT "     6-Thief"
+                                            PRINT "     7-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            IF k$ = CHR$(55) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Bottoms would you like to search?"
+                                            PRINT "     1-All Bottoms"
+                                            PRINT "     2-Common"
+                                            PRINT "     3-Bowman"
+                                            PRINT "     4-Magician"
+                                            PRINT "     5-Pirate"
+                                            PRINT "     6-Thief"
+                                            PRINT "     7-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            IF k$ = CHR$(55) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Shoes would you like to search?"
+                                            PRINT "     1-All Shoes"
+                                            PRINT "     2-Common"
+                                            PRINT "     3-Bowman"
+                                            PRINT "     4-Magician"
+                                            PRINT "     5-Pirate"
+                                            PRINT "     6-Thief"
+                                            PRINT "     7-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            IF k$ = CHR$(55) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Gloves would you like to search?"
+                                            PRINT "     1-All Gloves"
+                                            PRINT "     2-Common"
+                                            PRINT "     3-Bowman"
+                                            PRINT "     4-Magician"
+                                            PRINT "     5-Pirate"
+                                            PRINT "     6-Thief"
+                                            PRINT "     7-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            IF k$ = CHR$(55) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(56) THEN
+                                    END IF
+                                    IF k$ = CHR$(57) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Shields would you like to search?"
+                                            PRINT "    1-All Shields"
+                                            PRINT "    2-Common"
+                                            PRINT "    3-Magician"
+                                            PRINT "    4-Thief"
+                                            PRINT "    5-Warrior"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    IF k$ = CHR$(48) THEN
+                                    END IF
+                                    IF k$ = CHR$(97) THEN
+                                        DO
+                                            _LIMIT 64
+                                            CLS
+                                            PRINT "What Mechanics would you like to search?"
+                                            PRINT "    1-All Mechanics"
+                                            PRINT "    2-Arms"
+                                            PRINT "    3-Body"
+                                            PRINT "    4-Engine"
+                                            PRINT "    5-Legs"
+                                            PRINT "    6-Transistor"
+                                            GOSUB controls
+                                            IF k$ = CHR$(49) THEN
+                                            END IF
+                                            IF k$ = CHR$(50) THEN
+                                            END IF
+                                            IF k$ = CHR$(51) THEN
+                                            END IF
+                                            IF k$ = CHR$(52) THEN
+                                            END IF
+                                            IF k$ = CHR$(53) THEN
+                                            END IF
+                                            IF k$ = CHR$(54) THEN
+                                            END IF
+                                            _DISPLAY
+                                        LOOP
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(52) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Accessories would you like to search?"
+                                    PRINT "    1-All Accessories"
+                                    PRINT "    2-Earring"
+                                    PRINT "    3-Eye Accessory"
+                                    PRINT "    4-Face Accessory"
+                                    PRINT "    5-Pendant"
+                                    PRINT "    6-Belt"
+                                    PRINT "    7-Medal"
+                                    PRINT "    8-Ring"
+                                    PRINT "    9-Shoulderpad"
+                                    PRINT "    0-Pocket"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                    END IF
+                                    IF k$ = CHR$(56) THEN
+                                    END IF
+                                    IF k$ = CHR$(57) THEN
+                                    END IF
+                                    IF k$ = CHR$(48) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(53) THEN
+                            END IF
+                            IF k$ = CHR$(54) THEN
+                            END IF
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(51) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What Use would you like search?"
+                            PRINT "     1-All Use"
+                            PRINT "     2-Useable"
+                            PRINT "     3-Scroll"
+                            PRINT "     4-Equip"
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Useables would you like to search?"
+                                    PRINT "     1-All Useables"
+                                    PRINT "     2-Potion"
+                                    PRINT "     3-Food"
+                                    PRINT "     4-Etc"
+                                    PRINT "     5-Pet Food"
+                                    PRINT "     6-Skill Book"
+                                    PRINT "     7-Monster Card"
+                                    PRINT "     8-Morph"
+                                    PRINT "     9-Treasures"
+                                    PRINT "     0-Buff"
+                                    PRINT "     a-Item Pot"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                    END IF
+                                    IF k$ = CHR$(56) THEN
+                                    END IF
+                                    IF k$ = CHR$(57) THEN
+                                    END IF
+                                    IF k$ = CHR$(48) THEN
+                                    END IF
+                                    IF k$ = CHR$(97) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Scrolls would you like to search?"
+                                    PRINT "     1-All Scrolls"
+                                    PRINT "     2-Return Scroll"
+                                    PRINT "     3-Scroll for Armour"
+                                    PRINT "     4-Scroll for Weapon"
+                                    PRINT "     5-Scroll for Pet Equipment"
+                                    PRINT "     6-Scroll for Accessories"
+                                    PRINT "     7-Misc. Scrolls"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(52) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Weapons would you like to search?"
+                                    PRINT "     1-All Weapons"
+                                    PRINT "     2-Arrow"
+                                    PRINT "     3-Bullet"
+                                    PRINT "     4-Capsule"
+                                    PRINT "     5-Throwing Star"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(52) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What Etc would you like to search?"
+                            PRINT "     1-All Etc"
+                            PRINT "     2-Misc. Items"
+                            PRINT "     3-Ores"
+                            PRINT "     4-Maker Items"
+                            PRINT "     5-Profession Items"
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Misc. Items would you like to search?"
+                                    PRINT "     1-All Misc. Items"
+                                    PRINT "     2-Leftover"
+                                    PRINT "     3-Quest"
+                                    PRINT "     4-MiniGame"
+                                    PRINT "     5-Ticket"
+                                    PRINT "     6-Growable"
+                                    PRINT "     7-Gachapon Box"
+                                    PRINT "     8-Stimulator"
+                                    PRINT "     9-Manual"
+                                    PRINT "     0-Bags"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                    END IF
+                                    IF k$ = CHR$(56) THEN
+                                    END IF
+                                    IF k$ = CHR$(57) THEN
+                                    END IF
+                                    IF k$ = CHR$(48) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Ores would you like to browse?"
+                                    PRINT "     1-All Ores"
+                                    PRINT "     2-Mineral"
+                                    PRINT "     3-Jewel"
+                                    PRINT "     4-Crystal"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(52) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Maker Items would you like to search?"
+                                    PRINT "     1-All Maker Items"
+                                    PRINT "     2-Ores"
+                                    PRINT "     3-Monster Crystals"
+                                    PRINT "     4-Magic Powder"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            IF k$ = CHR$(53) THEN
+                                DO
+                                    _LIMIT 64
+                                    CLS
+                                    PRINT "What Profession Items would you like to search?"
+                                    PRINT "     1-All Profession Items"
+                                    PRINT "     2-Profession Materials"
+                                    PRINT "     3-Recipes for Accessories"
+                                    PRINT "     4-Recipes for Android"
+                                    PRINT "     5-Recipes for Armours"
+                                    PRINT "     6-Recipes for Consumables"
+                                    PRINT "     7-Recipes for Weapons"
+                                    GOSUB controls
+                                    IF k$ = CHR$(49) THEN
+                                    END IF
+                                    IF k$ = CHR$(50) THEN
+                                    END IF
+                                    IF k$ = CHR$(51) THEN
+                                    END IF
+                                    IF k$ = CHR$(52) THEN
+                                    END IF
+                                    IF k$ = CHR$(53) THEN
+                                    END IF
+                                    IF k$ = CHR$(54) THEN
+                                    END IF
+                                    IF k$ = CHR$(55) THEN
+                                    END IF
+                                    _DISPLAY
+                                LOOP
+                            END IF
+                            _DISPLAY
+                        LOOP
+                    END IF
+                    IF k$ = CHR$(53) THEN
+                        DO
+                            _LIMIT 64
+                            CLS
+                            PRINT "What Setup would you like to browse?"
+                            PRINT "     1-All Setup"
+                            PRINT "     2-Accessories"
+                            PRINT "     3-Equipments"
+                            GOSUB controls
+                            IF k$ = CHR$(49) THEN
+                            END IF
+                            IF k$ = CHR$(50) THEN
+                            END IF
+                            IF k$ = CHR$(51) THEN
+                            END IF
+                            _DISPLAY
+                        LOOP
+                    END IF

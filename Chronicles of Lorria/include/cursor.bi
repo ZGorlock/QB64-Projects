@@ -1,0 +1,7 @@
+'load cursor
+DIM SHARED Cursoraction AS INTEGER
+DIM SHARED Cursorhit AS INTEGER
+DIM SHARED Cursorhover AS INTEGER
+DIM SHARED Cursorsheet AS INTEGER
+DIM SHARED Cursorstand AS INTEGER
+CALL getcursor

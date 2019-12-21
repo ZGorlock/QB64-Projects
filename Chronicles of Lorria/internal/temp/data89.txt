@@ -1,0 +1,6 @@
+qbs *_FUNC_ZEROSET_STRING_ZEROSET=NULL;
+if (!_FUNC_ZEROSET_STRING_ZEROSET)_FUNC_ZEROSET_STRING_ZEROSET=qbs_new(0,0);
+byte_element_struct *byte_element_6668=NULL;
+if (!byte_element_6668){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6668=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6668=(byte_element_struct*)mem_static_malloc(12);
+}

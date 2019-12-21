@@ -1,0 +1,44 @@
+int32 *_SUB_DOWNLOADUPDATE_LONG_CLIENT=NULL;
+if(_SUB_DOWNLOADUPDATE_LONG_CLIENT==NULL){
+_SUB_DOWNLOADUPDATE_LONG_CLIENT=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADUPDATE_LONG_CLIENT=0;
+}
+int8 *_SUB_DOWNLOADUPDATE_BYTE_X=NULL;
+if(_SUB_DOWNLOADUPDATE_BYTE_X==NULL){
+_SUB_DOWNLOADUPDATE_BYTE_X=(int8*)mem_static_malloc(1);
+*_SUB_DOWNLOADUPDATE_BYTE_X=0;
+}
+int32 *_SUB_DOWNLOADUPDATE_LONG_FH=NULL;
+if(_SUB_DOWNLOADUPDATE_LONG_FH==NULL){
+_SUB_DOWNLOADUPDATE_LONG_FH=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADUPDATE_LONG_FH=0;
+}
+int32 *_SUB_DOWNLOADUPDATE_LONG_I=NULL;
+if(_SUB_DOWNLOADUPDATE_LONG_I==NULL){
+_SUB_DOWNLOADUPDATE_LONG_I=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADUPDATE_LONG_I=0;
+}
+int32 *_SUB_DOWNLOADUPDATE_LONG_I2=NULL;
+if(_SUB_DOWNLOADUPDATE_LONG_I2==NULL){
+_SUB_DOWNLOADUPDATE_LONG_I2=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADUPDATE_LONG_I2=0;
+}
+int32 *_SUB_DOWNLOADUPDATE_LONG_I3=NULL;
+if(_SUB_DOWNLOADUPDATE_LONG_I3==NULL){
+_SUB_DOWNLOADUPDATE_LONG_I3=(int32*)mem_static_malloc(4);
+*_SUB_DOWNLOADUPDATE_LONG_I3=0;
+}
+qbs *_SUB_DOWNLOADUPDATE_STRING_RESPONSE=NULL;
+if (!_SUB_DOWNLOADUPDATE_STRING_RESPONSE)_SUB_DOWNLOADUPDATE_STRING_RESPONSE=qbs_new(0,0);
+int32 fornext_value6683;
+int32 fornext_finalvalue6683;
+int32 fornext_step6683;
+uint8 fornext_step_negative6683;
+byte_element_struct *byte_element_6684=NULL;
+if (!byte_element_6684){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6684=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6684=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_6685=NULL;
+if (!byte_element_6685){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6685=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6685=(byte_element_struct*)mem_static_malloc(12);
+}

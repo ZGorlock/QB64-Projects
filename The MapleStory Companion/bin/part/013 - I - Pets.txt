@@ -1,0 +1,1056 @@
+IF (k$ = CHR$(105) OR k$ = CHR$(73)) OR (_MOUSEX > 67 AND _MOUSEX < 234 AND _MOUSEY > 333 AND _MOUSEY < 349 AND _MOUSEBUTTON(1)) THEN
+    DO
+        DO
+            _LIMIT 64
+            CLS
+            PRINT "What would you like to do?"
+            PRINT "     1-Pet Closeness Table"
+            PRINT "     2-Pets"
+            GOSUB controls
+            IF k$ = CHR$(49) THEN
+                bibliography = 1
+                source$ = "http://global.hidden-street.net/pet-closeness-table"
+                row = 1
+                inputcount = 0
+                REDIM petexp$(32)
+                OPEN "source\list\petexptable.txt" FOR INPUT AS #1
+                DO UNTIL EOF(1)
+                    inputcount = inputcount + 1
+                    LINE INPUT #1, petexp$(inputcount)
+                    IF inputcount = 32 THEN EXIT DO
+                LOOP
+                CLOSE #1
+                listnum = 32
+                scrollgap = 27
+                CLS
+                FOR n = row TO row + 27
+                    PRINT petexp$(n)
+                NEXT
+                _DISPLAY
+                DO
+                    _LIMIT 64
+                    GOSUB controls
+                    IF k$ = CHR$(113) THEN
+                        row = row - 1
+                        GOTO U1
+                    END IF
+                    IF k$ = CHR$(122) THEN
+                        row = row + 1
+                        GOTO U1
+                    END IF
+                    IF k$ = CHR$(119) THEN
+                        row = 1
+                        GOTO U1
+                    END IF
+                    IF k$ = CHR$(97) THEN
+                        row = row - 27
+                        GOTO U1
+                    END IF
+                    IF k$ = CHR$(115) THEN
+                        row = 5
+                        GOTO U1
+                    END IF
+                    IF k$ = CHR$(100) THEN
+                        row = row + 27
+                        GOTO U1
+                    END IF
+                    DO WHILE _MOUSEINPUT
+                        row = row + (_MOUSEWHEEL * scrollspeed)
+                        IF prevrow <> row THEN
+                            U1:
+                            IF row < 1 THEN
+                                row = 1
+                            END IF
+                            IF row > 5 THEN
+                                row = 5
+                            END IF
+                            CLS
+                            FOR n = row TO row + 27
+                                PRINT petexp$(n)
+                            NEXT
+                            GOSUB scrollbar
+                        END IF
+                        prevrow = row
+                        _DISPLAY
+                    LOOP
+                LOOP UNTIL k$ = CHR$(32)
+                DO
+                    _LIMIT 64
+                    CLS
+                    PRINT "Where would you like to go?"
+                    PRINT "     1-Pet Menu"
+                    PRINT "     2-Main Menu"
+                    bibliography = 2
+                    GOSUB controls
+                    IF k$ = CHR$(49) THEN
+                        EXIT DO
+                    END IF
+                    IF k$ = CHR$(50) THEN
+                        GOTO BEGIN
+                    END IF
+                    _DISPLAY
+                LOOP
+            END IF
+            IF k$ = CHR$(50) THEN
+                bibliography = 3
+                DO
+                    REDIM petlist$(32768)
+                    REDIM petlistprint$(32768)
+                    pet$ = ""
+                    row = 1
+                    selected = 1
+                    exitloop = 0
+                    OPEN "source\list\petlist.txt" FOR INPUT AS #1
+                    petamount = 1
+                    DO UNTIL EOF(1)
+                        ON ERROR GOTO endofpetfile
+                        LINE INPUT #1, petlist$(petamount)
+                        petamount = petamount + 1
+                    LOOP
+                    endofpetfile:
+                    CLOSE #1
+                    petlistamount = petamount
+                    FOR petchange = 1 TO petamount
+                        petlistprint$(petchange) = petlist$(petchange)
+                    NEXT petchange
+                    DO
+                        _LIMIT 64
+                        CLS
+                        COLOR textcolor, backcolor
+                        PRINT "Enter the name of the pet you want to learn about"
+                        PRINT ": "; pet$
+                        PRINT
+                        IF petlistamount <= 24 THEN
+                            FOR petprint = 1 TO petlistamount
+                                IF petprint = selected THEN
+                                    COLOR backcolor, textcolor
+                                ELSE
+                                    COLOR textcolor, backcolor
+                                END IF
+                                PRINT petlistprint$(petprint)
+                            NEXT petprint
+                        ELSE
+                            FOR petlisting = row TO (row + 24)
+                                IF petlisting = selected THEN
+                                    COLOR backcolor, textcolor
+                                ELSE
+                                    COLOR textcolor, backcolor
+                                END IF
+                                PRINT petlistprint$(petlisting)
+                            NEXT petlisting
+                        END IF
+                        COLOR textcolor, backcolor
+                        IF row + 24 < petlistamount AND selected > row + 12 THEN
+                            row = row + 1
+                        END IF
+                        IF row <> 1 AND selected < row + 12 THEN
+                            row = row - 1
+                        END IF
+                        GOSUB controls
+                        IF k$ >= CHR$(32) AND k$ <= CHR$(126) THEN
+                            pet$ = pet$ + k$
+                            inputlength = LEN(pet$)
+                        END IF
+                        IF k$ = CHR$(8) AND inputlength > 0 THEN
+                            pet$ = MID$(pet$, 1, (inputlength - 1))
+                            inputlength = (inputlength - 1)
+                        END IF
+                        IF k$ = (CHR$(0) + CHR$(72)) AND selected <> 1 THEN selected = selected - 1
+                        IF k$ = (CHR$(0) + CHR$(80)) AND selected <> (petlistamount - 1) THEN selected = selected + 1
+                        IF oldpet$ <> pet$ THEN
+                            REDIM monserlistprint$(32768)
+                            petlistamount = 0
+                            FOR petnewlist = 1 TO petamount
+                                IF MID$(petlist$(petnewlist), 1, inputlength) = pet$ THEN
+                                    petlistamount = petlistamount + 1
+                                    petlistprint$(petlistamount) = petlist$(petnewlist)
+                                END IF
+                            NEXT petnewlist
+                            row = 1
+                            selected = 1
+                            oldpet$ = pet$
+                        END IF
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(13)
+                    pet$ = petlistprint$(selected)
+                    SELECT CASE pet$
+                        CASE "Jr. Reaper"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6100nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, playdead, poop, iloveyou, hug, rockout, boo, talk, chat, say, smellmyfeet, trickortreat, monstermash"
+                            epersonal$ = "Guitar, Jr. Reaper Sign (I'm with stoopid), Jr. Reaper Sign (<__Noob), Jr. Reaper Sign (cc plz), Jr. Reaper Sign (I love pie)"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Caramel Beetle"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Brown Puppy"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "4900nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stuipd, ihateyou, baddog, dummy, iloveyou, pee"
+                            lveleven$ = "talk, chat, say, bark, down"
+                            lvtwentyone$ = "up, stand, rise"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Dog Bone"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Brown Kitty"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "4900nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stuipd, ihateyou, dummy, poop, iloveyou"
+                            lveleven$ = "talk, chat, say, cutie"
+                            lvtwentyone$ = "up, stand, rise"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Porgy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Black Kitty"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5100nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stuipd, ihateyou, dummy, poop, iloveyou"
+                            lveleven$ = "talk, chat, say, cutie"
+                            lvtwentyone$ = "up, stand, rise"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Porgy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "White Bunny"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5100nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, up, stand, rise, poop, iloveyou"
+                            lveleven$ = "talk, chat, say, hug"
+                            lvtwentyone$ = "sleep, sleepy, gotobed"
+                            epersonal$ = "Red Scarf"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Clover"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Pink Bunny"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5100nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, up, stand, rise, poop, iloveyou"
+                            lveleven$ = "talk, chat, say, hug"
+                            lvtwentyone$ = "sleep, sleepy, gotobed"
+                            epersonal$ = "Red Scarf"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Clover"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Mini Kargo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "4900nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, up, stand, rise, pee, iloveyou"
+                            lveleven$ = "talk, chat, say, thelook, charisma, down"
+                            lvtwentyone$ = "good, goodboy"
+                            epersonal$ = "Cowboy Kargo, Mini Kargo Wings"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Red Meat"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Husky"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6400nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, baddog, dummy, poop, iloveyou, hand"
+                            lveleven$ = "talk, chat, say, bark, down"
+                            lvtwentyone$ = "up, stand, rise"
+                            epersonal$ = "Husky Yellow Tights, Bunny Suit, Bare Bones, Oinker Suit"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Dog Bone"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Panda"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5900nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, chill, relax, poop, iloveyou, up, stand, rise"
+                            lveleven$ = "talk, chat, say, letsplay, meh, bleh"
+                            lvtwentyone$ = "sleep"
+                            epersonal$ = "Chestnut Cap, Pet-o-Lanturn, Clown Dress"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Bamboo"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Dino Girl"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5700nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, iloveyou, smile, laugh, stupid, ihateyou, dummy"
+                            lveleven$ = "talk, chat, say, cutie"
+                            lvtwentyone$ = "sleep, nap, sleepy"
+                            epersonal$ = "Dino King & Queen, Ghosty"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Red Meat"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Dino Boy"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5700nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, iloveyou, smile, laugh, stupid, ihateyou, dummy"
+                            lveleven$ = "talk, chat, say, cutie"
+                            lvtwentyone$ = "sleep, nap, sleepy"
+                            epersonal$ = "Dino King & Queen, Ghosty"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Red Meat"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "White Tiger"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6000nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, iloveyou, rest, chill, stupid, ihateyou, dummy"
+                            lveleven$ = "talk, chat, say, actsad, sadlook"
+                            lvtwentyone$ = "wait"
+                            epersonal$ = "White Tiger Suit, White Tiger the Wizard"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Red Meat"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Rudolph"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6700nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, up, stand, poop, merryxmas"
+                            lveleven$ = "talk, chat, say, cutie, lonely, alone"
+                            lvtwentyone$ = "mush, go"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Clover"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Monkey"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5700nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, rest, no, badgirl, badboy, pee, iloveyou, up, stand"
+                            lveleven$ = "talk, say, chat, play, melong"
+                            lvtwentyone$ = "sleep, sleepy, gotobed"
+                            epersonal$ = "Monkey Sack, Pelvis Hair, Cute Beggar Overall, Jail Bird Pet Costume"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Monkey Banana"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Turkey"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5300nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, no, rudeboy, mischief, up, stand, stupid, iloveyou, loveyou"
+                            lveleven$ = "talk, chat, gobble, yes, goodboy"
+                            lvtwentyone$ = "sleepy, birdnap, doze"
+                            lvthirty$ = "birdeye, thanksgiving, fly, friedbird, imhungry"
+                            epersonal$ = "Baby Turkey Carriage"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Turkey Feed"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can also be obtained from the Thanksgiving Event."
+                            EXIT DO
+                        CASE "Penguin"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5300nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, iloveyou, up, stand, rise"
+                            lveleven$ = "talk, chat, say, wing, hand"
+                            lvtwentyone$ = "kiss, smooch, muah, fly, cute, adorable"
+                            epersonal$ = "Baby Turkey Carriage"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Porgy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Golden Pig"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "4900nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, iloveyou"
+                            lveleven$ = "talk, chat, say, loveme, hugme"
+                            lvtwentyone$ = "sleep, sleepy, gotobed, impressed, outofhere, roll, showmethemoney"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Porgy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Black Pig"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5700nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, poop, iloveyou, hand"
+                            lveleven$ = "talk, chat, say, smile"
+                            lvtwentyone$ = "thelook, charisma"
+                            epersonal$ = "Mushroom Suit"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Porgy, Clover, Red Meat, Frozen Fruits"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "You could obtain an immortal Black Pig during an event. Select 'immortal Black Pig' in the Pet select for more information."
+                            EXIT DO
+                        CASE "immortal Black Pig"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "Forever"
+                            wol$ = "N/A"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, poop, iloveyou, hand"
+                            lveleven$ = "talk, chat, say, smile"
+                            lvtwentyone$ = "thelook, charisma"
+                            epersonal$ = "Mushroom Suit"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Porgy, Clover, Red Meat, Frozen Fruits"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet could be obtained from the Gachapon Stamp 2 Event."
+                            EXIT DO
+                        CASE "Robot"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6000nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, up, stand, rise, attack,charge, stupid, dummy, ihateyou, iloveyou, bad, no, badboy, badgirl, good, thelook, charisma"
+                            lvten$ = "disguise, change, transform, speak, talk, chat, say"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Micro-Chips"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Mini Yeti"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5800nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, no, bad, badgirl, badboy, dance, boogie, shakeit, poop, cute, cutie, pretty, adorable, iloveyou, mylove, likeyou"
+                            lvten$ = "sleep, nap, sleepy, gotobed, talk, say, chat"
+                            epersonal$ = "Prince Pepe, White Angel"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Frozen Fruits"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Jr. Balrog"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6000nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "liedown, no, bad, badgirl, badboy,iloveyou, mylove, likeyou, cute, cutie, pretty, adorable, poop, smirk, crooked, laugh"
+                            lveleven$ = "melong, good, thelook, charisma, speak, talk, chat, say, sleep, nap, sleepy"
+                            lvtwentyone$ = "gas"
+                            epersonal$ = "Crimson Mask"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Purple Heart Pudding"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Baby Dragon"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "12000nx"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, loveyou, poop"
+                            lveleven$ = "talk, chat, say, cutie, sleep, sleepy, gotobed"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Dragon Marble Candy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag, The Rock of Evolution"
+                            notes$ = "This pet hatches from Dragon [egg]. It will evolve into a Green, Red, Blue, or Black Dragon."
+                            EXIT DO
+                        CASE "Green Dragon"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvfifteen$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, loveyou, poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lvtwentyone$ = "change"
+                            epersonal$ = "Dragon Armor"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Dragon Marble Candy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Dragon."
+                            EXIT DO
+                        CASE "Red Dragon"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvfifteen$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, loveyou, poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lvtwentyone$ = "change"
+                            epersonal$ = "Dragon Armor"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Dragon Marble Candy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Dragon."
+                            EXIT DO
+                        CASE "Blue Dragon"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvfifteen$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, loveyou, poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lvtwentyone$ = "change"
+                            epersonal$ = "Dragon Armor"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Dragon Marble Candy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Dragon."
+                            EXIT DO
+                        CASE "Black Dragon"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvfifteen$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, loveyou, poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lvtwentyone$ = "cutie, change"
+                            epersonal$ = "Dragon Armor"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Dragon Marble Candy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Dragon at a very low chance."
+                            EXIT DO
+                        CASE "Skunk"
+                            event$ = "No"
+                            itcg$ = "Yes"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, restandrelax, poop, talk, chat, say, iloveyou, snuggle, hug, sleep, goodboy"
+                            lvten$ = "fatty, blind, badbreath"
+                            lvtwentyone$ = "suitup, bringthefunk"
+                            epersonal$ = "Gas Mask"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Caviar"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can be obtained from an iTCG code."
+                            EXIT DO
+                        CASE "Baby Robo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "12000"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, mylove, ilikeyou poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lveleven$ = "fire, attack, change, go"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Robo Oil"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag, The Rock of Evolution"
+                            notes$ = "This pet hatches from Robo [egg]. It evolves into a Blue, Red, Green, Gold, or Gorilla Robo"
+                            EXIT DO
+                        CASE "Blue Robo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, mylove, ilikeyou poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lveleven$ = "fire, attack, change, go"
+                            lvtwentyone$ = "fire, attack, change, go, hand"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Robo Oil"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Robo."
+                            EXIT DO
+                        CASE "Red Robo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, mylove, ilikeyou poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lveleven$ = "fire, attack, change, go"
+                            lvtwentyone$ = "fire, attack, change, go, hand"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Robo Oil"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Robo."
+                            EXIT DO
+                        CASE "Green Robo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, mylove, ilikeyou poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lveleven$ = "fire, attack, change, go"
+                            lvtwentyone$ = "fire, attack, change, go, hand"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Robo Oil"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Robo."
+                            EXIT DO
+                        CASE "Gold Robo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, mylove, ilikeyou poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lveleven$ = "fire, attack, change, go"
+                            lvtwentyone$ = "fire, attack, change, go, hand"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Robo Oil"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Robo."
+                            EXIT DO
+                        CASE "Gorilla Robo"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, dummy, iloveyou, mylove, ilikeyou poop, talk, chat, say, sleep, sleepy, gotobed"
+                            lveleven$ = "fire, attack, change, go"
+                            lvtwentyone$ = "fire, attack, change, go"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Robo Oil"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet evolves from Baby Robo at a very low chance."
+                            EXIT DO
+                        CASE "Crystal Rudolph"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, no, badgirl, badboy, bleh, joke, disguise, transform, awesome, feelgood, lalala"
+                            lvten$ = "talk, say, chat, sleep, nap, sleepy, gotobed"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Snowflake"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can only be bought during the holidays."
+                            EXIT DO
+                        CASE "Snowman"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5900"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, stupid, ihateyou, dummy, loveyou, mylove, ilikeyou, merrychristmas, cutie, adorable, cute, pretty, comb, beach, bad, no, badgirl, badboy"
+                            lvten$ = "talk, chat, say, sleep, nap, sleepy, gotobed"
+                            lvtwenty$ = "chang"
+                            epersonal$ = "Snowman Gear"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Snowflake"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "White Duck"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "6200"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit,bad, no, badgirl, badboy, up, stand, poop, talk, chat, say, hug, loveyou, cutie, sleep"
+                            lvten$ = "smarty"
+                            lvtwenty$ = "dance, swan"
+                            epersonal$ = "Scuba Mask"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Bread"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Sun Wu Kong"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5200"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, poop, no, badgirl, badboy, cutie, adorable, cute, pretty, iloveyou, loveyou, luvyou, ilikeyou, mylove"
+                            lvten$ = "talk, say, chat, sleep, sleepy, gotobed"
+                            lvtwenty$ = "transform"
+                            epersonal$ = "Mini Celestial Wand"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Cotton Candy"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Pink Bean"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "Forever"
+                            wol$ = "N/A"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, lazy, dummy, ihateyou, talk, chat, say, mumble, iloveyou, hugme, loveyou"
+                            lvtwenty$ = "shake, music, charm, bleh, joke, boo, gotobed, sleep, sleepy, poke, stinky, dummy, ihateyou"
+                            lvthirty$ = "kongkong"
+                            epersonal$ = "Starry Stereo Headset"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Pinky DrumStick"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet could be obtained only from the Cash Shop Surprise Event."
+                            EXIT DO
+                        CASE "Baby Tiger"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5800"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "hungry?, food?, don't, no, scold, stop it!, poo, poop, focus, sleep, sleepy, doze, tired, go away, stupid, graw, angry, what's this?, curious?, say something!, tell something!, sing something!"
+                            lvfifteen$ = "good, impressive, proud, love you, like you, honey"
+                            epersonal$ = "Baby Tiger Wings"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Golden Drumstick"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This a special pet for the year 2010."
+                            EXIT DO
+                        CASE "Mir"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5500"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, loveyou, talk, chat, say, sleep, eat"
+                            lvten$ = "fire, poop"
+                            lvtwenty$ = "fly"
+                            epersonal$ = "Dragon Egg Shell"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Fireball"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Ruby"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "5500"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, loveyou, talk, chat, say, sleep, eat"
+                            lvten$ = "fire, poop"
+                            lvtwenty$ = "fly"
+                            epersonal$ = "Dragon Egg Shell"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Fireball"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "White Monkey"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, rest, bad, no, badboy, badgirl, pee, iloveyou, up, stand"
+                            lvten$ = "talk, chat, say, play"
+                            lvtwenty$ = "sleep, gotobed, sleepy"
+                            epersonal$ = "Rabbit Ears"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Watermelon"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet could only be bought during the Golden Temple Event."
+                            EXIT DO
+                        CASE "Toucan"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badboy, badgirl,iloveyou"
+                            lvten$ = "talk, chat, say, sleep, gotobed, sleepy"
+                            lvtwenty$ = "attack, whistle"
+                            epersonal$ = "N/A"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Little Fruits"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet could only be obtained from the Peanut Cracker Event."
+                            EXIT DO
+                        CASE "Bing Monkey"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, rest, bad, no, badboy, badgirl, poop, iloveyou, up, stand"
+                            lvten$ = "talk, chat, say, play"
+                            lvtwenty$ = "sleep, gotobed, sleepy"
+                            epersonal$ = "Pink Oxygen Tank"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Unidentified Liquid"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet could only be obtained from the OSSS Event."
+                            EXIT DO
+                        CASE "Kino"
+                            event$ = "No"
+                            itcg$ = "No"
+                            cost$ = "4900"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, poop, bad, no, badgirl, badboy, sleep, nap, sleepy, gotobed"
+                            lvten$ = "talk, say, chat, iloveyou, mylove, ilikeyou, meh, bleh"
+                            lvtwenty$ = "disguise, change, transform"
+                            epersonal$ = "Kino's Green Mushroom Hat"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars"
+                            upersonal$ = "Sprout"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "N/A"
+                            EXIT DO
+                        CASE "Orange Tiger"
+                            event$ = "No"
+                            itcg$ = "Yes"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, poop, iloveyou, rest, chill, stupid, ihateyou, dummy"
+                            lveleven$ = "talk, chat, say, actsad, sadlook"
+                            lvtwentyone$ = "wait"
+                            epersonal$ = "White Tiger Suit, White Tiger the Wizard"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Red Meat"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can be obtained from an iTCG code."
+                            EXIT DO
+                        CASE "Blue Husky"
+                            event$ = "No"
+                            itcg$ = "Yes"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, stupid, ihateyou, baddog, dummy, poop, iloveyou, hand"
+                            lveleven$ = "talk, chat, say, bark, down"
+                            lvtwentyone$ = "up, stand, rise"
+                            epersonal$ = "Husky Yellow Tights, Bunny Suit, Bare Bones, Oinker Suit"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Dog Bone"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can be obtained from an iTCG code."
+                            EXIT DO
+                        CASE "Black Bunny"
+                            event$ = "No"
+                            itcg$ = "Yes"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, bad, no, badgirl, badboy, up, stand, rise, poop, iloveyou"
+                            lveleven$ = "talk, chat, say, hug"
+                            lvtwentyone$ = "sleep, sleepy, gotobed"
+                            epersonal$ = "Red Scarf"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Clover"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can be obtained from an iTCG code."
+                            EXIT DO
+                        CASE "Porcupine"
+                            event$ = "No"
+                            itcg$ = "Yes"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "sit, no, bad, badgirl, badboy, iloveyou, hug, goodboy, talk, chat, say, cushion, sleep, knit, poop"
+                            lvten$ = "comb, beach"
+                            lvtwenty$ = "treeninja, dart"
+                            epersonal$ = "Porcupine Sunglasses"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat, Pet Label Ring, Pet Quote Ring"
+                            upersonal$ = "Garlic Salt Chips"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet can be obtained from an iTCG code."
+                            EXIT DO
+                        CASE "Wierd Alien"
+                            event$ = "Yes"
+                            itcg$ = "No"
+                            cost$ = "N/A"
+                            life$ = "90 Days"
+                            wol$ = "Yes"
+                            lvone$ = "N/A"
+                            epersonal$ = "Alien's Pet"
+                            ecan$ = "Meso Magnet, Item Pouch, Item Ignore Pendant, Auto HP Potion Pouch, Auto MP Potion Pouch, Wing Boots, Magic Scales, Binoculars, Red Ribbon, Pink Laced Cap, Blue Laced Cap, Blue Top Hat, Red Top Hat, Yellow Hat, Red Hat, Black Hat"
+                            upersonal$ = "Dynamite"
+                            ucan$ = "Pet Food, Water of Life, Pet Name Tag"
+                            notes$ = "This pet could be obtained only from the Cash Shop Surprise Event."
+                            EXIT DO
+                    END SELECT
+                LOOP
+                REDIM petinfo$(41)
+                petinfo$(1) = "--------------------------------------------------------------------------------"
+                petinfo$(2) = pet$
+                petinfo$(3) = ""
+                petinfo$(4) = "-INFO-"
+                petinfo$(5) = "Event: " + SPACE$(12) + event$
+                petinfo$(6) = "iTCG: " + SPACE$(13) + itcg$
+                petinfo$(7) = "Cost: " + SPACE$(13) + cost$
+                petinfo$(8) = "Lives for: " + SPACE$(8) + life$
+                petinfo$(9) = "Water of Life: " + SPACE$(4) + wol$
+                petinfo$(10) = ""
+                petinfo$(11) = "-COMMANDS-"
+                petinfo$(12) = "Level 1-30:"
+                petinfo$(13) = lvone$
+                petinfo$(14) = "Level 10-30:"
+                petinfo$(15) = lvten$
+                petinfo$(16) = "Level 11-30:"
+                petinfo$(17) = lveleven$
+                petinfo$(18) = "Level 15-30:"
+                petinfo$(19) = "/pet," + lvfifteen$
+                petinfo$(20) = "Level 20-30:"
+                petinfo$(21) = lvtwenty$
+                petinfo$(22) = "Level 21-30:"
+                petinfo$(23) = lvtwentyone$
+                petinfo$(24) = "Level 30:"
+                petinfo$(25) = lvthirty$
+                petinfo$(26) = ""
+                petinfo$(27) = "-EQUIPS-"
+                petinfo$(28) = "Personal:"
+                petinfo$(29) = epersonal$
+                petinfo$(30) = "Can Wear:"
+                petinfo$(31) = ecan$
+                petinfo$(32) = ""
+                petinfo$(33) = "-USE-"
+                petinfo$(34) = "Personal:"
+                petinfo$(35) = upersonal$
+                petinfo$(36) = "Can Use:"
+                petinfo$(37) = ucan$
+                petinfo$(38) = ""
+                petinfo$(39) = "-NOTES-"
+                petinfo$(40) = notes$
+                petinfo$(41) = "--------------------------------------------------------------------------------"
+                row = 1
+                listnum = 41
+                scrollgap = 27
+                DO
+                    _LIMIT 64
+                    CLS
+                    FOR n = row TO row + 27
+                        PRINT petinfo$(n)
+                        GOSUB scrollbar
+                    NEXT
+                    _DISPLAY
+                    DO
+                        _LIMIT 64
+                        bibliography = 3
+                        GOSUB controls
+                        IF k$ = CHR$(113) THEN
+                            row = row - 1
+                            GOTO U3
+                        END IF
+                        IF k$ = CHR$(122) THEN
+                            row = row + 1
+                            GOTO U3
+                        END IF
+                        IF k$ = CHR$(119) THEN
+                            row = 1
+                            GOTO U3
+                        END IF
+                        IF k$ = CHR$(97) THEN
+                            row = row - 27
+                            GOTO U3
+                        END IF
+                        IF k$ = CHR$(115) THEN
+                            row = 14
+                            GOTO U3
+                        END IF
+                        IF k$ = CHR$(100) THEN
+                            row = row + 27
+                            GOTO U3
+                        END IF
+                        DO WHILE _MOUSEINPUT
+                            row = row + (_MOUSEWHEEL * scrollspeed)
+                            IF prevrow <> row THEN
+                                U3:
+                                IF row < 1 THEN
+                                    row = 1
+                                END IF
+                                IF row > 14 THEN
+                                    row = 14
+                                END IF
+                                CLS
+                                FOR n = row TO row + 27
+                                    PRINT petinfo$(n)
+                                NEXT
+                                GOSUB scrollbar
+                            END IF
+                            prevrow = row
+                        LOOP
+                        _DISPLAY
+                    LOOP UNTIL k$ = CHR$(32)
+                    exitloop = 0
+                    DO
+                        _LIMIT 64
+                        CLS
+                        PRINT "Where would you like to go?"
+                        PRINT "     1-Pet Menu"
+                        PRINT "     2-Main Menu"
+                        bibliography = 2
+                        GOSUB controls
+                        IF k$ = CHR$(49) THEN
+                            exitloop = 1
+                            EXIT DO
+                        END IF
+                        IF k$ = CHR$(50) THEN
+                            GOTO BEGIN
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    IF exitloop = 1 THEN EXIT DO
+                LOOP
+            END IF
+            _DISPLAY
+        LOOP
+    LOOP
+END IF

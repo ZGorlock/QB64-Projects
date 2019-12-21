@@ -1,0 +1,116 @@
+OPEN "bin\part\007 - W - Items[2].txt" FOR OUTPUT AS #1
+attspeed = 0
+FOR a = 1 TO lomsb
+    percent = INT(100 * (a / lomsb))
+    percent$ = STR$(percent) + "%"
+    pullstatus$ = status$ + CHR$(13) + ">pulling data from item source(1):" + percent$
+    IF VAL(percent$) <> oldpercent THEN
+        CLS
+        PRINT pullstatus$
+        oldpercent = VAL(percent$)
+        percent$ = ""
+        pullstatus$ = ""
+    END IF
+    DO
+        IF itemb$(a) = "" THEN EXIT DO
+        IF MID$(itemb$(a), 1, 28) = "    <td width=" + CHR$(34) + "145" + CHR$(34) + "><strong>" THEN
+            name$ = MID$(itemb$(a), 29, (LEN(itemb$(a)) - 46))
+            DO
+                ss = (INSTR(name$, "&amp;") - 1)
+                IF ss <> -1 THEN
+                    frontname$ = LEFT$(name$, ss)
+                    backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 5)))
+                    name$ = frontname$ + "&" + backname$
+                END IF
+            LOOP UNTIL ss = -1
+            DO
+                ss = (INSTR(name$, "&#039;") - 1)
+                IF ss <> -1 THEN
+                    frontname$ = LEFT$(name$, ss)
+                    backname$ = RIGHT$(name$, (LEN(name$) - ((LEN(frontname$)) + 6)))
+                    name$ = frontname$ + "'" + backname$
+                END IF
+            LOOP UNTIL ss = -1
+            name$ = LEFT$(name$, (LEN(name$) - 2))
+            x1$ = "                    CASE " + CHR$(34) + name$ + CHR$(34)
+            picname$ = ""
+            FOR p = 1 TO LEN(name$)
+                m$ = MID$(name$, p, 1)
+                l = ASC(m$)
+                IF l >= 65 AND l <= 90 THEN
+                    l = l + 32
+                END IF
+                l$ = CHR$(l)
+                IF l <> 32 AND l <> 39 THEN
+                    namepic$ = namepic$ + l$
+                END IF
+            NEXT p
+            namepic$ = namepic$ + ".png"
+            itemnames$(itemnames) = name$
+            itemnames = itemnames + 1
+            PRINT #1, x1$
+            PRINT #1, "                        itemtype = 1"
+            PRINT #1, "                        itempic$ = " + CHR$(34) + namepic$ + CHR$(34)
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 48) = "    <td width=" + CHR$(34) + "165" + CHR$(34) + "><strong>Req Level:</strong> " THEN
+            reqlv$ = MID$(itemb$(a), 49, (LEN(itemb$(a)) - 54))
+            PRINT #1, "                        reqlevel$ = " + CHR$(34) + reqlv$ + CHR$(34)
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 49) = "    <td width=" + CHR$(34) + "186" + CHR$(34) + "><strong>Req Stats: </strong> " THEN
+            reqstats$ = MID$(itemb$(a), 50, (LEN(itemb$(a)) - 55))
+            PRINT #1, "                        reqstats$ = " + CHR$(34) + reqstats$ + CHR$(34)
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 46) = "                   <div><strong>Weapon Att.:</strong> " THEN
+            wepatt$ = MID$(item$(b), 47, (LEN(itemb$(a)) - 52))
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 54) = "                    <div><strong>Magic Att.:</strong> " THEN
+            magatt$ = MID$(itemb$(a), 55, (LEN(itemb$(a)) - 60))
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 71) = "                                    <div><strong>Weapon Def.:</strong> " THEN
+            wepdef$ = MID$(itemb$(a), 71, (LEN(itemb$(a)) - 76))
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 47) = "                       <strong>Magic Def.:</strong> " THEN
+            magdef$ = MID$(itemb$(a), 48, (LEN(itemb$(a)) - 63))
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 47) = "                       <strong>Att. Speed:</strong> " THEN
+            attspeed$ = MID$(itemb$(a), 48, (LEN(itemb$(a)) - 63))
+            attspeed = 1
+            EXIT DO
+        END IF
+        IF itemb$(a) = "    <td><strong>Job:</strong>" THEN
+            jobnextloop = 1
+            EXIT DO
+        END IF
+        IF jobnextloop = 1 THEN
+            IF itemb$(a) = "" THEN EXIT DO
+            IF attspeed = 0 THEN attspeed$ = "-"
+            attspeed = 0
+            job$ = MID$(itemb$(a), 5, (LEN(itemb$(a)) - 13))
+            PRINT #1, "                        job$ = " + CHR$(34) + job$ + CHR$(34)
+            jobnextloop = 0
+            EXIT DO
+        END IF
+        IF MID$(itemb$(a), 1, 46) = "    <td colspan=" + CHR$(34) + "2" + CHR$(34) + "><strong>Effects:</strong> " THEN
+            effects$ = MID$(itemb$(a), 47, (LEN(itemb$(a)) - 51))
+            IF wepatt$ <> "" THEN effects$ = "WATT:" + wepatt$ + ", " + effects$
+            IF magatt$ <> "" THEN effects$ = "MATT:" + magatt$ + ", " + effects$
+            IF wepdef$ <> "" THEN effects$ = "WDEF:" + wepdef$ + ", " + effects$
+            IF magdef$ <> "" THEN effects$ = "MDEF:" + magdef$ + ", " + effects$
+            PRINT #1, "                        effects$ = " + CHR$(34) + effects$ + CHR$(34)
+            PRINT #1, "                        attspeed$ = " + CHR$(34) + attspeed$ + CHR$(34)
+            wepatt$ = ""
+            magatt$ = ""
+            wepdef$ = ""
+            magdef$ = ""
+            EXIT DO
+        END IF
+        EXIT DO
+    LOOP
+NEXT a

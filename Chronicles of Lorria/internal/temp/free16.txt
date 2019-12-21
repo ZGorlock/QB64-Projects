@@ -1,0 +1,4 @@
+if(oldstr6357){
+if(oldstr6357->fixed)qbs_set(oldstr6357,_FUNC_MINPRIMEBASESTAT_STRING_RACE);
+qbs_free(_FUNC_MINPRIMEBASESTAT_STRING_RACE);
+}

@@ -1,0 +1,6 @@
+STR
+DEX
+INT
+WIS
+CON
+CHR

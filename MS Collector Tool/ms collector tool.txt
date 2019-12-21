@@ -1,0 +1,19 @@
+_TITLE "MS Collector Tool"
+SCREEN 12
+
+CONST CSIDL_PERSONAL = &H5
+
+DECLARE DYNAMIC LIBRARY "shell32"
+    FUNCTION SHGetFolderPathA& (BYVAL hwndOwner%&, BYVAL nFolder&, BYVAL hToken%&, BYVAL dwFlags~&, BYVAL pszPath%&)
+END DECLARE
+
+path$ = STRING$(260, 0)
+hr& = SHGetFolderPathA(0, CSIDL_PERSONAL, 0, 0, _OFFSET(path$))
+n& = 1
+DO WHILE ASC(path$, n&)
+    n& = n& + 1
+    IF n& > 260 THEN EXIT DO
+LOOP
+path$ = LEFT$(path$, n& - 1)
+fileloc$ = path$
+fileloc$ = fileloc$ + "Dropbox\MSCollector Items\"

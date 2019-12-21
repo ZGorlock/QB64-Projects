@@ -1,0 +1,8 @@
+qbs *_FUNC_TIME_X_STRING_TIME_X=NULL;
+if (!_FUNC_TIME_X_STRING_TIME_X)_FUNC_TIME_X_STRING_TIME_X=qbs_new(0,0);
+float pass7951;
+int8 pass7952;
+float pass7953;
+int8 pass7954;
+float pass7955;
+int8 pass7956;

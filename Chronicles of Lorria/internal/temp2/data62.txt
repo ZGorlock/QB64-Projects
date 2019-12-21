@@ -1,0 +1,4 @@
+int32 fornext_value8573;
+int32 fornext_finalvalue8573;
+int32 fornext_step8573;
+uint8 fornext_step_negative8573;

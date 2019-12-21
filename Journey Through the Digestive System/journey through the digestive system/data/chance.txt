@@ -1,0 +1,16 @@
+Lose a turn!
+Drink lots of water! Move forward 1 space.
+Vitamin overdose! Move backwards 1 space.
+Overnourished! Move forward 1 space.
+Lacking an amino acid! Move backwards 1 space.
+Healthy Calcium level! Move forward 1 space.
+Lacking a vitamin! Move backward 1 space.
+Healthy Iron level! Move forwad 2 spaces.
+Too much sugar! Move backward 2 spaces.
+Peristalsis pushes you forward 2 spaces!
+Undernourished! Move backward 2 spaces.
+Lots of fiber in the system! Move forward 3 spaces.
+Malnourished! Move backward 3 spaces.
+Move forward 4 spaces. Actually that was a joke, move back 2 spaces.
+Count how many stomachs you have. Move forward that many spaces.
+How long is your small intestine in feet? Actually, go back 3 spaces.

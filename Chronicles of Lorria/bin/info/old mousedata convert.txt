@@ -1,0 +1,10 @@
+mousedata(1) = mouse x position on program window
+mousedata(2) = mouse y position on program window
+mousedata(3) = mouse x position on screen
+mousedata(4) = mouse y position on screen
+mousedata(5) = left click, -1=clicked
+mousedata(6) = right click, -1 = clicked
+mousedata(7) = middle click, -1 = clicked
+mousedata(8) = scroll wheel
+mousedata(9) = old mouse x on program
+mousedata(10) = old mouse y on program

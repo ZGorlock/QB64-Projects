@@ -1,0 +1,5 @@
+if(oldstr7433){
+if(oldstr7433->fixed)qbs_set(oldstr7433,_SUB_TEXTBOXADDTEXT_STRING_TEXT);
+qbs_free(_SUB_TEXTBOXADDTEXT_STRING_TEXT);
+}
+qbs_free(_SUB_TEXTBOXADDTEXT_STRING_VALUESAVE);

@@ -1,0 +1,25 @@
+qbs *_FUNC_UNICODETOANSI_STRING_UNICODETOANSI=NULL;
+if (!_FUNC_UNICODETOANSI_STRING_UNICODETOANSI)_FUNC_UNICODETOANSI_STRING_UNICODETOANSI=qbs_new(0,0);
+qbs*oldstr6659=NULL;
+if(_FUNC_UNICODETOANSI_STRING_U->tmp||_FUNC_UNICODETOANSI_STRING_U->fixed||_FUNC_UNICODETOANSI_STRING_U->readonly){
+oldstr6659=_FUNC_UNICODETOANSI_STRING_U;
+if (oldstr6659->cmem_descriptor){
+_FUNC_UNICODETOANSI_STRING_U=qbs_new_cmem(oldstr6659->len,0);
+}else{
+_FUNC_UNICODETOANSI_STRING_U=qbs_new(oldstr6659->len,0);
+}
+memcpy(_FUNC_UNICODETOANSI_STRING_U->chr,oldstr6659->chr,oldstr6659->len);
+}
+uint32 *_FUNC_UNICODETOANSI_ULONG_GETANSI=NULL;
+if(_FUNC_UNICODETOANSI_ULONG_GETANSI==NULL){
+_FUNC_UNICODETOANSI_ULONG_GETANSI=(uint32*)mem_static_malloc(4);
+*_FUNC_UNICODETOANSI_ULONG_GETANSI=0;
+}
+int64 fornext_value6661;
+int64 fornext_finalvalue6661;
+int64 fornext_step6661;
+uint8 fornext_step_negative6661;
+byte_element_struct *byte_element_6662=NULL;
+if (!byte_element_6662){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_6662=(byte_element_struct*)(mem_static_pointer-12); else byte_element_6662=(byte_element_struct*)mem_static_malloc(12);
+}

@@ -1,0 +1,27 @@
+SCREEN 12
+
+x1 = 320
+y1 = 85
+x2 = 20
+y2 = 385
+x3 = 620
+y3 = 385
+DO
+
+    CLS
+    a = a + 1
+    CALL triangle(x1, y1 - a, x2 - a, y2 + a, x3 + a, y3 + a)
+    _DISPLAY
+LOOP UNTIL INKEY$ > ""
+SYSTEM
+
+SUB triangle (x1, y1, x2, y2, x3, y3)
+IF dis(x1, y1, x2, y2) > 1 THEN CALL triangle((x1 + x2) / 2, (y1 + y2) / 2, (x2 + x3) / 2, (y2 + y3) / 2, (x1 + x3) / 2, (y1 + y3) / 2)
+LINE (x1, y1)-(x2, y2), 15
+LINE (x2, y2)-(x3, y3), 15
+LINE (x1, y1)-(x3, y3), 15
+END SUB
+
+FUNCTION dis (x1, y1, x2, y2)
+dis = SQR(((x1 - x2) ^ 2) + ((y1 - y2) ^ 2))
+END FUNCTION

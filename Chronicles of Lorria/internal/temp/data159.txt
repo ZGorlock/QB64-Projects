@@ -1,0 +1,7 @@
+int32 *_FUNC_MOVEMOUSE_BIT1_MOVEMOUSE=NULL;
+if(_FUNC_MOVEMOUSE_BIT1_MOVEMOUSE==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_MOVEMOUSE_BIT1_MOVEMOUSE=(int32*)(dblock+cmem_sp);
+*_FUNC_MOVEMOUSE_BIT1_MOVEMOUSE=0;
+}

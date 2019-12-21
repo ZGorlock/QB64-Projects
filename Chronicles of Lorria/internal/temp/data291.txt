@@ -1,0 +1,126 @@
+int8 *_SUB_SWAPTEXTBOX_BYTE_SWAPBOOKMARKY=NULL;
+if(_SUB_SWAPTEXTBOX_BYTE_SWAPBOOKMARKY==NULL){
+_SUB_SWAPTEXTBOX_BYTE_SWAPBOOKMARKY=(int8*)mem_static_malloc(1);
+*_SUB_SWAPTEXTBOX_BYTE_SWAPBOOKMARKY=0;
+}
+int8 *_SUB_SWAPTEXTBOX_BYTE_SWAPCOLORY=NULL;
+if(_SUB_SWAPTEXTBOX_BYTE_SWAPCOLORY==NULL){
+_SUB_SWAPTEXTBOX_BYTE_SWAPCOLORY=(int8*)mem_static_malloc(1);
+*_SUB_SWAPTEXTBOX_BYTE_SWAPCOLORY=0;
+}
+int8 *_SUB_SWAPTEXTBOX_BYTE_SWAPCONTENTY=NULL;
+if(_SUB_SWAPTEXTBOX_BYTE_SWAPCONTENTY==NULL){
+_SUB_SWAPTEXTBOX_BYTE_SWAPCONTENTY=(int8*)mem_static_malloc(1);
+*_SUB_SWAPTEXTBOX_BYTE_SWAPCONTENTY=0;
+}
+int8 *_SUB_SWAPTEXTBOX_BYTE_SWAPLINKY=NULL;
+if(_SUB_SWAPTEXTBOX_BYTE_SWAPLINKY==NULL){
+_SUB_SWAPTEXTBOX_BYTE_SWAPLINKY=(int8*)mem_static_malloc(1);
+*_SUB_SWAPTEXTBOX_BYTE_SWAPLINKY=0;
+}
+int8 *_SUB_SWAPTEXTBOX_BYTE_SWAPIMAGEY=NULL;
+if(_SUB_SWAPTEXTBOX_BYTE_SWAPIMAGEY==NULL){
+_SUB_SWAPTEXTBOX_BYTE_SWAPIMAGEY=(int8*)mem_static_malloc(1);
+*_SUB_SWAPTEXTBOX_BYTE_SWAPIMAGEY=0;
+}
+int8 *_SUB_SWAPTEXTBOX_BYTE_SWAPTEXTBOXY=NULL;
+if(_SUB_SWAPTEXTBOX_BYTE_SWAPTEXTBOXY==NULL){
+_SUB_SWAPTEXTBOX_BYTE_SWAPTEXTBOXY=(int8*)mem_static_malloc(1);
+*_SUB_SWAPTEXTBOX_BYTE_SWAPTEXTBOXY=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPBOOKMARKX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPBOOKMARKX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPBOOKMARKX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPBOOKMARKX=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPCOLORX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPCOLORX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPCOLORX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPCOLORX=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPCONTENTX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPCONTENTX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPCONTENTX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPCONTENTX=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPIMAGEX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPIMAGEX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPIMAGEX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPIMAGEX=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPINDEX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPINDEX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPINDEX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPINDEX=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPLINKX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPLINKX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPLINKX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPLINKX=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPSTRINGS=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPSTRINGS==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPSTRINGS=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPSTRINGS=0;
+}
+int16 *_SUB_SWAPTEXTBOX_INTEGER_SWAPTEXTBOXX=NULL;
+if(_SUB_SWAPTEXTBOX_INTEGER_SWAPTEXTBOXX==NULL){
+_SUB_SWAPTEXTBOX_INTEGER_SWAPTEXTBOXX=(int16*)mem_static_malloc(2);
+*_SUB_SWAPTEXTBOX_INTEGER_SWAPTEXTBOXX=0;
+}
+int32 fornext_value7404;
+int32 fornext_finalvalue7404;
+int32 fornext_step7404;
+uint8 fornext_step_negative7404;
+int16 fornext_value7406;
+int16 fornext_finalvalue7406;
+int16 fornext_step7406;
+uint8 fornext_step_negative7406;
+int32 fornext_value7408;
+int32 fornext_finalvalue7408;
+int32 fornext_step7408;
+uint8 fornext_step_negative7408;
+int16 fornext_value7410;
+int16 fornext_finalvalue7410;
+int16 fornext_step7410;
+uint8 fornext_step_negative7410;
+int32 fornext_value7412;
+int32 fornext_finalvalue7412;
+int32 fornext_step7412;
+uint8 fornext_step_negative7412;
+int16 fornext_value7414;
+int16 fornext_finalvalue7414;
+int16 fornext_step7414;
+uint8 fornext_step_negative7414;
+int32 fornext_value7416;
+int32 fornext_finalvalue7416;
+int32 fornext_step7416;
+uint8 fornext_step_negative7416;
+int32 fornext_value7418;
+int32 fornext_finalvalue7418;
+int32 fornext_step7418;
+uint8 fornext_step_negative7418;
+int16 fornext_value7420;
+int16 fornext_finalvalue7420;
+int16 fornext_step7420;
+uint8 fornext_step_negative7420;
+int32 fornext_value7422;
+int32 fornext_finalvalue7422;
+int32 fornext_step7422;
+uint8 fornext_step_negative7422;
+int16 fornext_value7424;
+int16 fornext_finalvalue7424;
+int16 fornext_step7424;
+uint8 fornext_step_negative7424;
+int32 fornext_value7426;
+int32 fornext_finalvalue7426;
+int32 fornext_step7426;
+uint8 fornext_step_negative7426;
+int32 fornext_value7428;
+int32 fornext_finalvalue7428;
+int32 fornext_step7428;
+uint8 fornext_step_negative7428;
+int16 fornext_value7430;
+int16 fornext_finalvalue7430;
+int16 fornext_step7430;
+uint8 fornext_step_negative7430;

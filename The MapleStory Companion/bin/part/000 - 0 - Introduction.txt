@@ -1,0 +1,581 @@
+datatype = 1
+datastring$ = icon$
+outpic$ = "temp\p00001.png"
+GOSUB picrypter
+icon = outpic
+_ICON icon
+_TITLE "The MapleStory Companion"
+_SCREENMOVE _MIDDLE
+SCREEN 13
+picscreen = _NEWIMAGE(640, 480, 256)
+logo = _LOADIMAGE("graphic\program\logo.png")
+OPEN "user\program\randomization.txt" FOR INPUT AS #1
+INPUT #1, randomization
+CLOSE #1
+OPEN "user\program\id.txt" FOR INPUT AS #1
+INPUT #1, id$
+CLOSE #1
+full = 0
+IF id$ = "0" THEN
+    randomization = INT(RND * 94 + 32)
+    OPEN "user\program\randomization.txt" FOR OUTPUT AS #1
+    WRITE #1, randomization
+    CLOSE #1
+    id$ = ""
+    FOR id = 1 TO 50
+        RANDOMIZE TIMER
+        x = INT(RND * 94 + 32)
+        x$ = CHR$(x)
+        id$ = id$ + x$
+    NEXT id
+    OPEN "user\program\id.txt" FOR OUTPUT AS #1
+    WRITE #1, id$
+    CLOSE #1
+    SHELL "CD > fileloc.tmp"
+    OPEN "fileloc.tmp" FOR INPUT AS #1
+    INPUT #1, fileloc$
+    CLOSE #1
+    filename$ = "source\program\fileloc.txt"
+    userdata$ = fileloc$
+    GOSUB encrypter
+    KILL "fileloc.tmp"
+    SHELL _HIDE ("MOVE /Y " + CHR$(34) + fileloc$ + "\tmcicon.ico" + CHR$(34) + " " + CHR$(34) + "C:\WINDOWS" + CHR$(34))
+    zero$ = CHR$(48 + randomization)
+    onenum$ = CHR$(49 + randomization)
+    nstr$ = CHR$(78 + randomization)
+    astr$ = CHR$(65 + randomization)
+    color15$ = (CHR$(49 + randomization) + CHR$(53 + randomization))
+    welcomenameold$ = "User"
+    FOR c = 1 TO LEN(welcomenameold$)
+        currentc$ = MID$(welcomenameold$, c, 1)
+        Code = ASC(currentc$)
+        currentc$ = CHR$(Code + randomization)
+        welcomename$ = welcomename$ + currentc$
+    NEXT c
+    scrollspeed$ = CHR$(51 + randomization)
+    themeold$ = "audio\Event\DrBing.ogg"
+    FOR c = 1 TO LEN(themeold$)
+        currentc$ = MID$(themeold$, c, 1)
+        Code = ASC(currentc$)
+        currentc$ = CHR$(Code + randomization)
+        theme$ = theme$ + currentc$
+    NEXT c
+    OPEN "user\program\titlename.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\program\welcomename.txt" FOR OUTPUT AS #1
+    WRITE #1, welcomename$
+    CLOSE #1
+    OPEN "user\program\uses.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\program\time.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\program\timeuse.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\program\shortcutprompt.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\pref\textcolor.txt" FOR OUTPUT AS #1
+    WRITE #1, color15$
+    CLOSE #1
+    OPEN "user\pref\backcolor.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\pref\cursorcolor.txt" FOR OUTPUT AS #1
+    WRITE #1, color15$
+    CLOSE #1
+    OPEN "user\pref\scrollcolor.txt" FOR OUTPUT AS #1
+    WRITE #1, color15$
+    CLOSE #1
+    OPEN "user\pref\timepref.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\pref\autocharupdate.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\pref\scrollspeed.txt" FOR OUTPUT AS #1
+    WRITE #1, scrollspeed$
+    CLOSE #1
+    OPEN "user\pref\duotheme.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\pref\theme.txt" FOR OUTPUT AS #1
+    WRITE #1, theme$
+    CLOSE #1
+    OPEN "user\pref\thememix.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\pref\themevol.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\pref\thememixvol.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\ign.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\stat\level.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\perctnl.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\class.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\stat\guild.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\stat\server.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\stat\atk.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\matk.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\str.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\dex.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\int.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\luk.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\hp.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\mp.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\speed.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\jump.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\hands.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\critrate.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\mesos.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\stat\fame.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\dmgmax.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\dmgmin.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\def.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\mdef.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\macc.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\pacc.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\pavoid.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\mavoid.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\calc\minmp.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\acc\pin.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\acc\user.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\acc\pass.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\acc\pic.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\acc\name.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\acc\dob.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\acc\email.txt" FOR OUTPUT AS #1
+    WRITE #1, zerstr$
+    CLOSE #1
+    OPEN "user\mixer\fav1song1.txt" FOR OUTPUT AS #1
+    WRITE #1, nstr$
+    CLOSE #1
+    OPEN "user\mixer\fav1song2.txt" FOR OUTPUT AS #1
+    WRITE #1, astr$
+    CLOSE #1
+    OPEN "user\mixer\fav1location1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav1location2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav1vol1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav1vol2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav2song1.txt" FOR OUTPUT AS #1
+    WRITE #1, nstr$
+    CLOSE #1
+    OPEN "user\mixer\fav2song2.txt" FOR OUTPUT AS #1
+    WRITE #1, astr$
+    CLOSE #1
+    OPEN "user\mixer\fav2location1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav2location2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav2vol1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav2vol2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav3song1.txt" FOR OUTPUT AS #1
+    WRITE #1, nstr$
+    CLOSE #1
+    OPEN "user\mixer\fav3song2.txt" FOR OUTPUT AS #1
+    WRITE #1, astr$
+    CLOSE #1
+    OPEN "user\mixer\fav3location1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav3location2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav3vol1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav3vol2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav4song1.txt" FOR OUTPUT AS #1
+    WRITE #1, nstr$
+    CLOSE #1
+    OPEN "user\mixer\fav4song2.txt" FOR OUTPUT AS #1
+    WRITE #1, astr$
+    CLOSE #1
+    OPEN "user\mixer\fav4location1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav4location2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav4vol1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav4vol2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav5song1.txt" FOR OUTPUT AS #1
+    WRITE #1, nstr$
+    CLOSE #1
+    OPEN "user\mixer\fav5song2.txt" FOR OUTPUT AS #1
+    WRITE #1, astr$
+    CLOSE #1
+    OPEN "user\mixer\fav5location1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav5location2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav5vol1.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\mixer\fav5vol2.txt" FOR OUTPUT AS #1
+    WRITE #1, zero$
+    CLOSE #1
+    OPEN "user\row\guide\abguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\abrguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\bgtmsguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\chairsguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\cmssguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\csgarguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\ethicsguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\faqguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\gpguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\hntguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\htpmsoaguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\leechguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\macrosguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\makerguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\merchguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\mfbguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\mtsguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\pmhguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\potguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\potionguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\qaasoeguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\qycdtmmguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\remguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\suamagguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\twicpqguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\guide\wcwigmsguiders.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\apqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\cwkpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\dojo.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\efpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\gpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\gspqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\hpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\kpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\lpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\mcrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\mc2rs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\mpqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\nettspyramid.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\opqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\pq\ppqrs.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+    OPEN "user\row\egg\sfrow.txt" FOR OUTPUT AS #1
+    WRITE #1, onenum$
+    CLOSE #1
+END IF
+SCREEN 12
+CLS
+COLOR 12, 0
+LOCATE 13, 6
+PRINT "All information herein is property of Nexon or the appropriate author"
+LOCATE 14, 2
+PRINT "In no way do I claim any of this information, pictures, or music to be my own"
+LOCATE 15, 3
+PRINT "If Nexon or the owner wishes for something to be removed, so shall be done"
+LOCATE 16, 5
+PRINT "If you find an error, bug, or inaccurate information please contact me"
+SLEEP 3
+filename$ = "user\program\uses.txt"
+GOSUB decrypter
+uses~&& = VAL(userdata$)
+uses~&& = uses~&& + 1
+filename$ = "user\program\uses.txt"
+userdata$ = STR$(uses~&&)
+GOSUB encrypter
+filename$ = "user\program\uses.txt"
+GOSUB decrypter
+uses~&& = VAL(userdata$)
+filename$ = "source\program\fileloc.txt"
+GOSUB decrypter
+fileloc$ = userdata$
+filename$ = "user\program\titlename.txt"
+GOSUB decrypter
+titlename = VAL(userdata$)
+filename$ = "user\program\welcomename.txt"
+GOSUB decrypter
+welcomename$ = userdata$
+filename$ = "user\pref\theme.txt"
+GOSUB decrypter
+theme$ = userdata$
+filename$ = "user\pref\themevol.txt"
+GOSUB decrypter
+themevol = VAL(userdata$)
+filename$ = "user\pref\thememix.txt"
+GOSUB decrypter
+thememix$ = userdata$
+filename$ = "user\pref\thememixvol.txt"
+GOSUB decrypter
+thememixvol = VAL(userdata$)
+filename$ = "user\pref\duotheme.txt"
+GOSUB decrypter
+duotheme = VAL(userdata$)
+filename$ = "user\pref\textcolor.txt"
+GOSUB decrypter
+textcolor = VAL(userdata$)
+filename$ = "user\pref\backcolor.txt"
+GOSUB decrypter
+backcolor = VAL(userdata$)
+filename$ = "user\pref\cursorcolor.txt"
+GOSUB decrypter
+cursorcolor = VAL(userdata$)
+filename$ = "user\pref\scrollcolor.txt"
+GOSUB decrypter
+scrollcolor = VAL(userdata$)
+filename$ = "user\pref\timepref.txt"
+GOSUB decrypter
+timepref = VAL(userdata$)
+filename$ = "user\pref\scrollspeed.txt"
+GOSUB decrypter
+scrollspeed = VAL(userdata$)
+filename$ = "user\pref\autocharupdate.txt"
+GOSUB decrypter
+autocharudate = VAL(userdata$)
+filename$ = "user\program\timeuse.txt"
+GOSUB decrypter
+timeuse = VAL(userdata$)
+told = TIMER
+PREBEGIN:
+themeplaying = _SNDPLAYING(theme)
+IF themeplaying = -1 THEN _SNDPAUSE theme
+thememixplaying = _SNDPLAYING(thememix)
+IF thememixplaying = -1 THEN _SNDPAUSE thememix
+jukeboxplaying = _SNDPLAYING(jukebox)
+IF jukeboxplaying = -1 THEN _SNDPAUSE jukebox
+randomjukeboxplaying = _SNDPLAYING(randomjukebox)
+IF randomjukeboxplaying = -1 THEN _SNDPAUSE randomjukebox
+shufflejukeboxplaying = _SNDPLAYING(shufflejukebox)
+IF shufflejukeboxplaying = -1 THEN _SNDPAUSE shufflejukebox
+jukeboxmixer1playing = _SNDPLAYING(jukeboxmixer1)
+IF jukeboxmixer1playing = -1 THEN _SNDPAUSE jukeboxmixer1
+jukeboxmixer2playing = _SNDPLAYING(jukeboxmixer2)
+IF jukeboxmixer2playing = -1 THEN _SNDPAUSE jukeboxmixer2
+jukeboxunknownplaying = _SNDPLAYING(jukeboxunknown)
+IF jukeboxunknownplaying = -1 THEN _SNDPAUSE jukeboxunknown
+galleryaudioplaying = _SNDPLAYING(galleryaudio)
+IF galleryaudioplaying = -1 THEN _SNDPAUSE galleryaudio
+thememuteplaying = _SNDPLAYING(thememute)
+IF thememuteplaying = -1 THEN _SNDPAUSE thememute
+creditsplaying = _SNDPLAYING(credits)
+IF creditsplaying = -1 THEN _SNDPAUSE credits
+IF duotheme = 1 THEN
+    theme = _SNDOPEN(theme$, "SYNC, PAUSE, VOL")
+    thememix = _SNDOPEN(thememix$, "SYNC, PAUSE, VOL")
+    _SNDLOOP theme
+    _SNDLOOP thememix
+    _SNDVOL theme, themevol
+    _SNDVOL thememix, thememixvol
+ELSE
+    theme = _SNDOPEN(theme$, "SYNC, PAUSE")
+    _SNDLOOP theme
+END IF
+BEGIN:
+exitloop = 0
+bibliography = 2
+SCREEN 12
+COLOR textcolor, backcolor
+IF titlename = 1 THEN
+    title$ = welcomename$ + "'s" + " MapleStory Companion"
+    _TITLE title$
+ELSE
+    _TITLE "The MapleStory Companion"
+END IF
+CLS
+LOCATE 30, 1
+PRINT "v0.5"
+LOCATE 30, 71
+PRINT "Gorlock897"
+LOCATE 14, 1
+PRINT " Welcome Back "; welcomename$; "!"
+PRINT " You have ran this program"; uses~&&; "times!"
+PRINT " What would you like to do?"
+LOCATE 18, 1
+PRINT "          Z-Start MapleStory     A-Character           S-Calculator"
+PRINT "          C-Experience           D-Guild               Q-Monsters"
+PRINT "          W-Items                E-Quests              R-Maps"
+PRINT "          T-Classes              Y-Skills              U-NPCs"
+PRINT "          I-Pets                 O-Gachapon            P-Fashion"
+PRINT "          F-Reactor              J-Cash Shop           G-Guides"
+PRINT "          H-Party Quests         B-Facts & Tips        N-Jukebox"
+PRINT "          M-Gallery              K-Options             L-Credits"
+PSET (67, 269), textcolor
+DRAW "R500 D132 L500 U132 R167 D132 R167 BU17 U115 R166 D18 L500 D16 R500 D16 L500 D16 R500 D16 L500 D16 R500 D16 L500"
+_PUTIMAGE (130, 1), logo
+DO
+    _LIMIT 64
+    GOSUB controls

@@ -1,0 +1,19 @@
+int8 *_FUNC_RACELOC_BYTE_RACELOC=NULL;
+if(_FUNC_RACELOC_BYTE_RACELOC==NULL){
+_FUNC_RACELOC_BYTE_RACELOC=(int8*)mem_static_malloc(1);
+*_FUNC_RACELOC_BYTE_RACELOC=0;
+}
+qbs*oldstr6413=NULL;
+if(_FUNC_RACELOC_STRING_RACE->tmp||_FUNC_RACELOC_STRING_RACE->fixed||_FUNC_RACELOC_STRING_RACE->readonly){
+oldstr6413=_FUNC_RACELOC_STRING_RACE;
+if (oldstr6413->cmem_descriptor){
+_FUNC_RACELOC_STRING_RACE=qbs_new_cmem(oldstr6413->len,0);
+}else{
+_FUNC_RACELOC_STRING_RACE=qbs_new(oldstr6413->len,0);
+}
+memcpy(_FUNC_RACELOC_STRING_RACE->chr,oldstr6413->chr,oldstr6413->len);
+}
+int16 fornext_value6415;
+int16 fornext_finalvalue6415;
+int16 fornext_step6415;
+uint8 fornext_step_negative6415;

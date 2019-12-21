@@ -1,0 +1,29 @@
+qbs *_FUNC_FILETYPE_STRING_FILETYPE=NULL;
+if (!_FUNC_FILETYPE_STRING_FILETYPE)_FUNC_FILETYPE_STRING_FILETYPE=qbs_new(0,0);
+qbs*oldstr8464=NULL;
+if(_FUNC_FILETYPE_STRING_FILENAME->tmp||_FUNC_FILETYPE_STRING_FILENAME->fixed||_FUNC_FILETYPE_STRING_FILENAME->readonly){
+oldstr8464=_FUNC_FILETYPE_STRING_FILENAME;
+if (oldstr8464->cmem_descriptor){
+_FUNC_FILETYPE_STRING_FILENAME=qbs_new_cmem(oldstr8464->len,0);
+}else{
+_FUNC_FILETYPE_STRING_FILENAME=qbs_new(oldstr8464->len,0);
+}
+memcpy(_FUNC_FILETYPE_STRING_FILENAME->chr,oldstr8464->chr,oldstr8464->len);
+}
+int32 *_FUNC_FILETYPE_LONG_FINDDOT=NULL;
+if(_FUNC_FILETYPE_LONG_FINDDOT==NULL){
+_FUNC_FILETYPE_LONG_FINDDOT=(int32*)mem_static_malloc(4);
+*_FUNC_FILETYPE_LONG_FINDDOT=0;
+}
+int64 fornext_value8466;
+int64 fornext_finalvalue8466;
+int64 fornext_step8466;
+uint8 fornext_step_negative8466;
+byte_element_struct *byte_element_8467=NULL;
+if (!byte_element_8467){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8467=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8467=(byte_element_struct*)mem_static_malloc(12);
+}
+byte_element_struct *byte_element_8468=NULL;
+if (!byte_element_8468){
+if ((mem_static_pointer+=12)<mem_static_limit) byte_element_8468=(byte_element_struct*)(mem_static_pointer-12); else byte_element_8468=(byte_element_struct*)mem_static_malloc(12);
+}

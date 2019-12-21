@@ -1,0 +1,15 @@
+'load fonts
+REDIM SHARED fonts(FONT_NUM) AS LONG
+fonts(1) = _LOADFONT("resource\font\unispace.ttf", 8)
+fonts(2) = _LOADFONT("resource\font\unispace.ttf", 10)
+fonts(3) = _LOADFONT("resource\font\unispace.ttf", 12)
+fonts(4) = _LOADFONT("resource\font\unispace.ttf", 16)
+fonts(5) = _LOADFONT("resource\font\unispace.ttf", 18)
+fonts(6) = _LOADFONT("resource\font\unispace.ttf", 24)
+fonts(7) = _LOADFONT("resource\font\unispace.ttf", 36)
+fonts(8) = _LOADFONT("resource\font\Salterio Shadow.ttf", 12)
+fonts(9) = _LOADFONT("resource\font\Salterio Shadow.ttf", 24)
+fonts(10) = _LOADFONT("resource\font\Salterio Shadow.ttf", 36)
+fonts(11) = _LOADFONT("resource\font\Salterio Shadow.ttf", 48)
+fonts(12) = _LOADFONT("resource\font\Salterio Shadow.ttf", 60)
+fonts(13) = _LOADFONT("resource\font\Salterio Shadow.ttf", 72)

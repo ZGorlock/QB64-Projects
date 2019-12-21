@@ -1,0 +1,5 @@
+if(oldstr6663){
+if(oldstr6663->fixed)qbs_set(oldstr6663,_FUNC_URLCASE_STRING_S);
+qbs_free(_FUNC_URLCASE_STRING_S);
+}
+qbs_free(_FUNC_URLCASE_STRING_C);

@@ -1,0 +1,1157 @@
+TYPE LPPOINT
+    x AS _UNSIGNED LONG
+    y AS _UNSIGNED LONG
+END TYPE
+TYPE POINTL
+    x AS LONG
+    y AS LONG
+END TYPE
+TYPE RECT
+    left AS LONG
+    top AS LONG
+    right AS LONG
+    bottom AS LONG
+END TYPE
+
+'secondary windows type declarations
+TYPE DEVMODE
+    dmDeviceName AS STRING * 32
+    dmSpecVersion AS _UNSIGNED INTEGER
+    dmDriverVersion AS _UNSIGNED INTEGER
+    dmSize AS _UNSIGNED INTEGER
+    dmDriverExtra AS _UNSIGNED INTEGER
+    dmFields AS _UNSIGNED LONG
+    dmPosition AS POINTL
+    dmDisplayOrientation AS _UNSIGNED LONG
+    dmDisplayFixedOutput AS _UNSIGNED LONG
+    dmColor AS INTEGER
+    dmDuples AS INTEGER
+    dmYResoluction AS INTEGER
+    dmTTOption AS INTEGER
+    dmCollate AS INTEGER
+    dmFormName AS STRING * 32
+    dmLogPixels AS _UNSIGNED INTEGER
+    dmBitsPerPixel AS _UNSIGNED LONG
+    dmPelsWidth AS _UNSIGNED LONG
+    dmPelsHeight AS _UNSIGNED LONG
+    dmDisplayFlags AS _UNSIGNED LONG
+    dmDisplayFrequency AS _UNSIGNED LONG
+    dmICMMethod AS _UNSIGNED LONG
+    dmICMIntent AS _UNSIGNED LONG
+    dmMediaType AS _UNSIGNED LONG
+    dmDitherType AS _UNSIGNED LONG
+    dmReserved1 AS _UNSIGNED LONG
+    dmReserved2 AS _UNSIGNED LONG
+    dmPlanningWidth AS _UNSIGNED LONG
+    dmPlanningHeight AS _UNSIGNED LONG
+END TYPE
+TYPE OSVERSIONINFOEX
+    dwOSVersionInfoSize AS _UNSIGNED LONG
+    dwMajorVersion AS _UNSIGNED LONG
+    dwMinorVersion AS _UNSIGNED LONG
+    dwBuildNumber AS _UNSIGNED LONG
+    dwPlatformId AS _UNSIGNED LONG
+    szCSDVersion AS STRING * 128
+    wServicePackMajor AS _UNSIGNED INTEGER
+    wServicePackMinor AS _UNSIGNED INTEGER
+    wSuiteMask AS _UNSIGNED INTEGER
+    wProductType AS _UNSIGNED _BYTE
+    wReserved AS _UNSIGNED _BYTE
+END TYPE
+
+'custom primary type declarations
+TYPE RANGE
+    min AS LONG
+    max AS LONG
+END TYPE
+
+'custom type declarations
+TYPE metrics
+    sound AS _BYTE
+    fx AS _BYTE
+    lps AS _UNSIGNED INTEGER
+    fps AS _UNSIGNED INTEGER
+    ssloc AS STRING * 128
+    cursorstand AS STRING * 128
+    cursoraction AS STRING * 128
+    hidecursor AS _BYTE
+    races AS STRING * 16
+END TYPE
+TYPE outfit
+    helm AS LONG
+    body AS LONG
+    leg AS LONG
+    boot AS LONG
+    glove AS LONG
+    shield AS LONG
+    weapon AS LONG
+    belt AS LONG
+    shoulder AS LONG
+    mantle AS LONG
+    pendant AS LONG
+    lring AS LONG
+    rring AS LONG
+    earring AS LONG
+    bracelet AS LONG
+    other AS LONG
+    tatoo AS LONG
+END TYPE
+TYPE character
+    file AS STRING * 128
+    name AS STRING * 32
+    race AS STRING * 16
+    gender AS STRING * 1
+    class AS STRING * 16
+    str AS _BYTE
+    dex AS _BYTE
+    int AS _BYTE
+    wis AS _BYTE
+    con AS _BYTE
+    chr AS _BYTE
+    alignment AS STRING * 32
+    faction AS STRING * 32
+END TYPE
+TYPE monster
+    id AS _UNSIGNED LONG
+    name AS STRING * 32
+    lv AS RANGE
+    description AS STRING * 4096
+    alignment AS RANGE
+    type AS STRING * 16
+    attribute AS STRING * 16
+    variation AS STRING * 40
+    behaviour AS _BYTE
+    action AS STRING * 1024
+    interact AS STRING * 256 'interact(2, 32) AS _UNSIGNED LONG
+    width AS LONG
+    height AS LONG
+    age AS RANGE
+    health AS RANGE
+    mana AS RANGE
+    stamina AS RANGE
+    attack AS RANGE
+    defense AS RANGE
+    speed AS RANGE
+    intelligence AS RANGE
+    armour AS STRING * 960 'armour(15, 16) AS _UNSIGNED LONG
+    armourchance AS STRING * 960 'armourchance(15, 16) AS SINGLE
+    exp AS RANGE
+    gold AS RANGE
+    loot AS STRING * 2048 'loot(512) AS _UNSIGNED LONG
+    lootchance AS STRING * 2048 'lootchance(512) AS SINGLE
+    lootquantity AS STRING * 4096 'lootquantity(512) AS RANGE
+    traindif AS RANGE
+    spell AS STRING * 512 'spell(128) AS _UNSIGNED LONG
+    psionics AS RANGE
+    sprites AS STRING * 10 'sprites(10) AS _BYTE
+    sounds AS STRING * 12 'sounds(12) AS _BYTE
+    soundname AS STRING * 96 'soundname(96) AS _BYTE
+    pad AS STRING * 37
+END TYPE
+TYPE monsterinstance
+    monsternum AS LONG
+    lv AS _UNSIGNED _BYTE
+    alignment AS _UNSIGNED _BYTE
+    type AS STRING * 16
+    variation AS STRING * 40
+    status AS STRING * 8
+    locx AS LONG
+    locy AS LONG
+    memory AS _BYTE
+    age AS LONG
+    zoom AS SINGLE
+    maxhealth AS LONG
+    maxmana AS LONG
+    maxstamina AS LONG
+    health AS LONG
+    mana AS LONG
+    stamina AS LONG
+    attack AS LONG
+    defense AS LONG
+    speed AS LONG
+    intelligence AS _BYTE
+    equipment AS outfit
+    exp AS LONG
+    gold AS LONG
+    loot AS STRING * 4096 'loot(512, 2) AS _UNSIGNED LONG
+    traindif AS _UNSIGNED _BYTE
+    psionics AS _UNSIGNED _BYTE
+END TYPE
+
+
+'Ritchie's QB64 Sprite Library type declarations
+TYPE SPRLIB_SHEET
+    inuse AS INTEGER '         sheet is in use              (true / false)
+    sheetimage AS DOUBLE '     image handle of sheet
+    sheetwidth AS INTEGER '    width of sheet
+    sheetheight AS INTEGER '   height of sheet
+    spritewidth AS INTEGER '   width of each sprite
+    spriteheight AS INTEGER '  height of each sprite
+    transparent AS DOUBLE '    transparent color on sheet   (negative = none, 0 and greater = color)
+    columns AS INTEGER '       number of sprite columns
+END TYPE
+TYPE SPRLIB_SPRITE
+    inuse AS INTEGER '         sprite is in use             (true / false)
+    sheet AS INTEGER '         what sheet is sprite on
+    onscreen AS INTEGER '      sprite showing on screen     (true / false)
+    visible AS INTEGER '       sprite hidden/showing        (true / false)
+    currentwidth AS INTEGER '  current width of sprite      (width after zoom/rotate)
+    currentheight AS INTEGER ' current height of sprite     (height after zoom/rotate)
+    restore AS INTEGER '       sprite restores background   (true / false)
+    image AS DOUBLE '          current image on screen      (use for pixel accurate detection)
+    background AS DOUBLE '     sprite background image
+    currentcell AS INTEGER '   current animation cell       (1 to cells)
+    flip AS INTEGER '          flip vertical/horizonatal    (0 = none, 1 = horizontal, 2 = vertical, 3 = both)
+    animation AS INTEGER '     automatic sprite animation   (true / false)
+    animtype AS INTEGER '      automatic animation type     (0 = acsending loop, 1 = descending loop, 2 = forward/backward loop
+    animdir AS INTEGER '       forward/backward loop dir    (1 = forward, -1 = backward)
+    animstart AS INTEGER '     animation sequence start     (=> 1 to <= animend)
+    animend AS INTEGER '       animation sequence end       (=> animstart to <= cells)
+    transparent AS DOUBLE '    transparent color            (-1 = none, 0 and higher = color)
+    zoom AS INTEGER '          zoom level in percentage     (1 to x%)
+    rotation AS SINGLE '       rotation in degrees          (0 to 359.9999 degrees)
+    motion AS INTEGER '        sprite auto motion           (true / false)
+    speed AS SINGLE '          sprite auto motion speed     (any numeric value)
+    direction AS SINGLE '      sprite auto motion angle     (0 to 359.9999 degrees)
+    xdir AS SINGLE '           x vector for automotion
+    ydir AS SINGLE '           y vector for automotion
+    spindir AS SINGLE '        spin direction for automotion
+    actualx AS SINGLE '        actual x location
+    actualy AS SINGLE '        actual y location
+    currentx AS INTEGER '      current x location on screen (INT(actualx))
+    currenty AS INTEGER '      current y location on screen (INT(actualy))
+    backx AS INTEGER '         x location of background image
+    backy AS INTEGER '         y location of background image
+    screenx1 AS INTEGER '      upper left x of sprite
+    screeny1 AS INTEGER '      upper left y of sprite
+    screenx2 AS INTEGER '      lower right x of sprite
+    screeny2 AS INTEGER '      lower right y of sprite
+    layer AS INTEGER '         layer the sprite resides on (1 to x, lower sprite layers drawn first)
+    detect AS INTEGER '        collision detection          (true / false)
+    detecttype AS INTEGER '    the type of detection use    (0 = do not detect collisions, 1 = box, 2 = pixel accurate)
+    collx1 AS INTEGER '        upper left x collision area  (pixel accurate = x location of hit, box = upper left x)
+    colly1 AS INTEGER '        upper left y collision area  (pixel accurate = y location of hit, box = upper left x)
+    collx2 AS INTEGER '        lower right x collision area
+    colly2 AS INTEGER '        lower right y collision area
+    collsprite AS INTEGER '    sprite number colliding with (0 = none, 1 to x = sprite colliding with)
+    pointer AS INTEGER '       mouse pointer interaction    (0 none, 1 left button, 2 right button, 3 hovering)
+    mouseax AS INTEGER '       actual x location of pointer (x = 0 to screen width)
+    mouseay AS INTEGER '       actual y location of pointer (y = 0 to screen height)
+    mousecx AS INTEGER '       x location pointer on sprite (x = 0 to sprite width)
+    mousecy AS INTEGER '       y location pointer on sprite (y = 0 to sprite height)
+    score AS SINGLE '          sprite score value for games
+END TYPE
+
+'Ritchie's QB64 Sprite Library constant definitions
+CONST SPRITE_ANIMATE = -1 '          animate
+CONST SPRITE_BACKFORTHLOOP = 2 '     animate an oscilating loop
+CONST SPRITE_BACKWARDLOOP = 1 '      animate a backward loop
+CONST SPRITE_FORWARDLOOP = 0 '       animate a forward loop
+CONST SPRITE_NOANIMATE = 0 '         no animation
+CONST SPRITE_BOXDETECT = 1 '         use rectangular detection
+CONST SPRITE_NODETECT = 0 '          do not detect collisions
+CONST SPRITE_PIXELDETECT = 2 '       use pixel accurate detection
+CONST SPRITE_ALLSPRS = -1 '          check all sprites for collision
+CONST SPRITE_BOTH = 3 '              flip both horiz/vertical
+CONST SPRITE_HORIZONTAL = 1 '        flip sprite horizontal
+CONST SPRITE_NONE = 0 '              no sprite flipping
+CONST SPRITE_VERTICAL = 2 '          flip sprite vertical
+CONST SPRITE_DONTMOVE = 0 '          disable automotion
+CONST SPRITE_MOVE = -1 '             enable automotion
+CONST SPRITE_MOUSEHOVER = 3 '        mouse hovering over sprite
+CONST SPRITE_MOUSELEFT = 1 '         left button clicked on sprite
+CONST SPRITE_MOUSERIGHT = 2 '        right button clicked on sprite
+CONST SPRITE_NOMOUSE = 0 '           no current mouse interaction
+CONST SPRITE_DONTSAVE = 0 '          don't save background image
+CONST SPRITE_SAVE = -1 '             save background image
+CONST SPRITE_NOVALUE = -32767 '      variables with no value assigned
+CONST SPRITE_AUTOTRANSPARENCY = -2 ' automatically discover transparency
+CONST SPRITE_NOTRANSPARENCY = -1 '   sheet has no transparency
+
+CONST SPRITESHEET_MONSTER_LENGTH = 40
+
+'Ritchie's QB64 Sprite Library
+REDIM sprlib_sprite(1) AS SPRLIB_SPRITE
+REDIM sprlib_sheet(1) AS SPRLIB_SHEET
+
+
+SCREEN _NEWIMAGE(640, 800, 32)
+OPTION BASE 1
+RANDOMIZE TIMER
+
+CONST DB_ITEM_SIZE = 0
+CONST DB_MAP_SIZE = 0
+CONST DB_MONSTER_SIZE = 16384
+CONST DB_NPC_SIZE = 0
+CONST DB_QUEST_SIZE = 0
+CONST DB_SPELL_SIZE = 0
+
+REDIM index_item(0) AS _UNSIGNED LONG
+REDIM index_map(0) AS _UNSIGNED LONG
+REDIM index_monster(0) AS _UNSIGNED LONG
+REDIM index_npc(0) AS _UNSIGNED LONG
+REDIM index_quest(0) AS _UNSIGNED LONG
+REDIM index_spell(0) AS _UNSIGNED LONG
+
+DIM indexcount AS _UNSIGNED LONG
+indexcount = 0
+OPEN "resource\db\index\map.idx" FOR INPUT AS #1
+IF LOF(1) THEN
+    REDIM index_map(LOF(1) / 12)
+    DO
+        indexcount = indexcount + 1
+        INPUT #1, index_map(indexcount)
+    LOOP UNTIL EOF(1)
+END IF
+CLOSE #1
+indexcount = 0
+OPEN "resource\db\index\monster.idx" FOR INPUT AS #1
+IF LOF(1) THEN
+    REDIM index_monster(LOF(1) / 12)
+    DO
+        indexcount = indexcount + 1
+        INPUT #1, index_monster(indexcount)
+    LOOP UNTIL EOF(1)
+END IF
+CLOSE #1
+indexcount = 0
+OPEN "resource\db\index\item.idx" FOR INPUT AS #1
+IF LOF(1) THEN
+    REDIM index_item(LOF(1) / 12)
+    DO
+        indexcount = indexcount + 1
+        INPUT #1, index_item(indexcount)
+    LOOP UNTIL EOF(1)
+END IF
+CLOSE #1
+indexcount = 0
+OPEN "resource\db\index\npc.idx" FOR INPUT AS #1
+IF LOF(1) THEN
+    REDIM index_npc(LOF(1) / 12)
+    DO
+        indexcount = indexcount + 1
+        INPUT #1, index_npc(indexcount)
+    LOOP UNTIL EOF(1)
+END IF
+CLOSE #1
+indexcount = 0
+OPEN "resource\db\index\spell.idx" FOR INPUT AS #1
+IF LOF(1) THEN
+    REDIM index_spell(LOF(1) / 12)
+    DO
+        indexcount = indexcount + 1
+        INPUT #1, index_spell(indexcount)
+    LOOP UNTIL EOF(1)
+END IF
+CLOSE #1
+indexcount = 0
+OPEN "resource\db\index\quest.idx" FOR INPUT AS #1
+IF LOF(1) THEN
+    REDIM index_quest(LOF(1) / 12)
+    DO
+        indexcount = indexcount + 1
+        INPUT #1, index_quest(indexcount)
+    LOOP UNTIL EOF(1)
+END IF
+CLOSE #1
+
+
+DIM monsternum AS _UNSIGNED _BYTE '                           ||
+monsternum = 1 '''''''''''''''''''''''''''''''''''''''''''''''would be defined in map structure
+REDIM mapmonsters(monsternum) AS _UNSIGNED LONG '             ||
+mapmonsters(1) = &H2200495E '                                 ||
+mapmonsters(1) = &H2200495F '                                 ||
+
+
+
+DIM clonemonsterimagesx AS _UNSIGNED _BYTE
+DIM clonemonsterimagesy AS _UNSIGNED _BYTE
+DIM createmonstersarrays AS _UNSIGNED _BYTE
+DIM getmonsterdata AS _UNSIGNED _BYTE
+DIM loadmonsterdata AS _UNSIGNED _BYTE
+DIM loadmonsterimagesx AS _UNSIGNED _BYTE
+DIM loadmonsterimagesxclone AS _UNSIGNED _BYTE
+DIM loadmonsterimagesxclonecount AS _UNSIGNED _BYTE
+DIM loadmonsterimagesy AS _UNSIGNED _BYTE
+DIM loadmonstersounds AS _UNSIGNED _BYTE
+DIM movearmourchancex AS _UNSIGNED _BYTE
+DIM movearmourchancey AS _UNSIGNED _BYTE
+DIM movearmourx AS _UNSIGNED _BYTE
+DIM movearmoury AS _UNSIGNED _BYTE
+DIM moveinteractx AS _UNSIGNED _BYTE
+DIM moveinteracty AS _UNSIGNED _BYTE
+DIM movesoundname AS _UNSIGNED _BYTE
+DIM movesounds AS _UNSIGNED _BYTE
+DIM movespell AS _UNSIGNED _BYTE
+DIM movesprites AS _UNSIGNED _BYTE
+DIM removelostsounds AS _UNSIGNED _BYTE
+DIM saveclonemonsterimagesx AS _UNSIGNED _BYTE
+DIM moveloot AS INTEGER
+DIM movelootchance AS INTEGER
+DIM movelootquantity AS INTEGER
+DIM monsterspritecell AS INTEGER
+DIM monsteraudio AS STRING
+DIM monsteraudiofolder AS STRING
+DIM monsterimage AS STRING
+DIM monstersound AS STRING
+DIM monstersarraysm AS _MEM
+DIM monstersarraysn AS _MEM
+
+REDIM tempmonstersoundname(96) AS _BYTE
+REDIM tempmonstersounds(12) AS _BYTE
+REDIM tempmonstersprites(32) AS _BYTE
+REDIM monsters_sounds(monsternum, 12) AS _BYTE
+REDIM monsters_soundname(monsternum, 96) AS _BYTE
+REDIM monsters_sprites(monsternum, 10) AS _BYTE
+REDIM monsters_spritesheet(monsternum) AS INTEGER
+REDIM monsters_image(monsternum, 8, 10) AS INTEGER
+REDIM monsters_sound(monsternum, 127) AS LONG
+REDIM tempmonsterspell(128) AS _UNSIGNED LONG
+REDIM monsters_spell(monsternum, 128) AS _UNSIGNED LONG
+REDIM tempmonsterinteract(2, 32) AS _UNSIGNED LONG
+REDIM tempmonsterloot(512) AS _UNSIGNED LONG
+REDIM monsters_interact(monsternum, 2, 32) AS _UNSIGNED LONG
+REDIM monsters_loot(monsternum, 512) AS _UNSIGNED LONG
+REDIM tempmonsterarmour(15, 16) AS _UNSIGNED LONG
+REDIM monsters_armour(monsternum, 15, 16) AS _UNSIGNED LONG
+REDIM tempmonsterlootchance(512) AS SINGLE
+REDIM monsters_lootchance(monsternum, 512) AS SINGLE
+REDIM tempmonsterarmourchance(15, 16) AS SINGLE
+REDIM monsters_armourchance(monsternum, 15, 16) AS SINGLE
+REDIM monsters_lootquantity(monsternum, 512) AS RANGE
+REDIM tempmonsterlootquantity(512) AS RANGE
+
+REDIM monsters(monsternum) AS monster
+
+OPEN "resource\db\monster.db" FOR BINARY AS #1
+FOR getmonsterdata = 1 TO monsternum
+    GET #1, dbindex(mapmonsters(getmonsterdata), index_monster(), 2), monsters(getmonsterdata)
+NEXT getmonsterdata
+CLOSE #1
+
+FOR createmonstersarrays = 1 TO monsternum
+    monstersarraysm = _MEM(monsters(createmonstersarrays).interact)
+    monstersarraysn = _MEM(tempmonsterinteract())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 256 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR moveinteractx = 1 TO 2
+        FOR moveinteracty = 1 TO 32
+            monsters_interact(createmonstersarrays, moveinteractx, moveinteracty) = tempmonsterinteract(moveinteractx, moveinteracty)
+    NEXT moveinteracty, moveinteractx
+    monstersarraysm = _MEM(monsters(createmonstersarrays).armour)
+    monstersarraysn = _MEM(tempmonsterarmour())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 960 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movearmourx = 1 TO 15
+        FOR movearmoury = 1 TO 16
+            monsters_armour(createmonstersarrays, movearmourx, movearmoury) = tempmonsterarmour(movearmourx, movearmoury)
+    NEXT movearmoury, movearmourx
+    monstersarraysm = _MEM(monsters(createmonstersarrays).armourchance)
+    monstersarraysn = _MEM(tempmonsterarmourchance())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 960 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movearmourchancex = 1 TO 15
+        FOR movearmourchancey = 1 TO 16
+            monsters_armourchance(createmonstersarrays, movearmourchancex, movearmourchancey) = tempmonsterarmourchance(movearmourchancex, movearmourchancey)
+    NEXT movearmourchancey, movearmourchancex
+    monstersarraysm = _MEM(monsters(createmonstersarrays).loot)
+    monstersarraysn = _MEM(tempmonsterloot())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 2048 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR moveloot = 1 TO 512
+        monsters_loot(createmonstersarrays, moveloot) = tempmonsterloot(moveloot)
+    NEXT moveloot
+    monstersarraysm = _MEM(monsters(createmonstersarrays).lootchance)
+    monstersarraysn = _MEM(tempmonsterlootchance())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 2048 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movelootchance = 1 TO 512
+        monsters_lootchance(createmonstersarrays, movelootchance) = tempmonsterlootchance(movelootchance)
+    NEXT movelootchance
+    monstersarraysm = _MEM(monsters(createmonstersarrays).lootquantity)
+    monstersarraysn = _MEM(tempmonsterlootquantity())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 4096 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movelootquantity = 1 TO 512
+        monsters_lootquantity(createmonstersarrays, movelootquantity) = tempmonsterlootquantity(movelootquantity)
+    NEXT movelootquantity
+    monstersarraysm = _MEM(monsters(createmonstersarrays).spell)
+    monstersarraysn = _MEM(tempmonsterspell())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 512 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movespell = 1 TO 128
+        monsters_spell(createmonstersarrays, movespell) = tempmonsterspell(movespell)
+    NEXT movespell
+    monstersarraysm = _MEM(monsters(createmonstersarrays).sprites)
+    monstersarraysn = _MEM(tempmonstersprites())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 10 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movesprites = 1 TO 10
+        monsters_sprites(createmonstersarrays, movesprites) = tempmonstersprites(movesprites)
+    NEXT movesprites
+    monstersarraysm = _MEM(monsters(createmonstersarrays).sounds)
+    monstersarraysn = _MEM(tempmonstersounds())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 12 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movesounds = 1 TO 12
+        monsters_sounds(createmonstersarrays, movesounds) = tempmonstersounds(movesounds)
+    NEXT movesounds
+    monstersarraysm = _MEM(monsters(createmonstersarrays).soundname)
+    monstersarraysn = _MEM(tempmonstersoundname())
+    _MEMCOPY monstersarraysm, monstersarraysm.OFFSET, 96 TO monstersarraysn, monstersarraysn.OFFSET
+    _MEMFREE monstersarraysm
+    _MEMFREE monstersarraysn
+    FOR movesoundname = 1 TO 96
+        monsters_soundname(createmonstersarrays, movesoundname) = tempmonstersoundname(movesoundname)
+    NEXT movesoundname
+NEXT createmonstersarrays
+REDIM tempmonstersoundname(0) AS _BYTE
+REDIM tempmonstersounds(0) AS _BYTE
+REDIM tempmonstersprites(0) AS _BYTE
+REDIM tempmonsterspell(0) AS _UNSIGNED LONG
+REDIM tempmonsterinteract(0, 0) AS _UNSIGNED LONG
+REDIM tempmonsterloot(0) AS _UNSIGNED LONG
+REDIM tempmonsterarmour(0, 0) AS _UNSIGNED LONG
+REDIM tempmonsterlootchance(0) AS SINGLE
+REDIM tempmonsterarmourchance(0, 0) AS SINGLE
+REDIM tempmonsterlootquantity(0) AS RANGE
+FOR loadmonsterdata = 1 TO monsternum
+    monsterimage$ = "resource\image\monster\" + MID$(HEX$(monsters(loadmonsterdata).id), 2, 1) + "\" + RIGHT$(HEX$(monsters(loadmonsterdata).id), 4) + "\spritesheet.png"
+    IF _FILEEXISTS(monsterimage$) THEN
+        monsters_spritesheet(loadmonsterdata) = SPRITESHEETLOAD(monsterimage$, monsters(loadmonsterdata).width, monsters(loadmonsterdata).height, SPRITE_NOTRANSPARENCY)
+        FOR loadmonsterimagesx = 1 TO 10
+            IF monsters_sprites(loadmonsterdata, loadmonsterimagesx) THEN
+                FOR loadmonsterimagesy = 1 TO 8
+                    monsterspritecell = ((loadmonsterimagesy - 1) * SPRITESHEET_MONSTER_LENGTH) + ((loadmonsterimagesx - 1) * 4) + 1
+                    monsters_image(loadmonsterdata, loadmonsterimagesy, loadmonsterimagesx) = SPRITENEW(monsters_spritesheet(loadmonsterdata), monsterspritecell, SPRITE_DONTSAVE)
+                    ' IF monsters_sprites(loadmonsterdata, loadmonsterimagesx) > 1 THEN SPRITEANIMATESET monsters_image(loadmonsterdata, loadmonsterimagesy, loadmonsterimagesx), monsterspritecell, monsterspritecell + (monsters_sprites(loadmonsterdata, loadmonsterimagesx) - 1)
+                NEXT loadmonsterimagesy
+            END IF
+        NEXT loadmonsterimagesx
+        FOR clonemonsterimagesx = 1 TO 10
+            IF monsters_sprites(loadmonsterdata, clonemonsterimagesx) = 0 THEN
+                saveclonemonsterimagesx = clonemonsterimagesx
+                loadmonsterimagesxclonecount = 0
+                DO
+                    loadmonsterimagesxclonecount = loadmonsterimagesxclonecount + 1
+                    SELECT CASE clonemonsterimagesx
+                        CASE 1
+                            IF monsters_sprites(loadmonsterdata, 2) THEN
+                                loadmonsterimagesxclone = 2
+                            ELSE
+                                loadmonsterimagesxclone = 1
+                                EXIT DO
+                            END IF
+                        CASE 2, 3, 4
+                            loadmonsterimagesxclone = 1
+                        CASE 5
+                            IF monsters_sprites(loadmonsterdata, 6) THEN
+                                loadmonsterimagesxclone = 6
+                            ELSE
+                                loadmonsterimagesxclone = 7
+                            END IF
+                        CASE 6
+                            IF monsters_sprites(loadmonsterdata, 5) THEN
+                                loadmonsterimagesxclone = 5
+                            ELSE
+                                loadmonsterimagesxclone = 7
+                            END IF
+                        CASE 7
+                            IF monsters_sprites(loadmonsterdata, 5) THEN
+                                loadmonsterimagesxclone = 5
+                            ELSE IF monsters_sprites(loadmonsterdata, 6) THEN
+                                    loadmonsterimagesxclone = 6
+                                ELSE
+                                    loadmonsterimagesxclone = 1
+                                END IF
+                            END IF
+                        CASE 8
+                            loadmonsterimagesxclone = 1
+                        CASE 9
+                            IF monsters_sprites(loadmonsterdata, 8) THEN
+                                loadmonsterimagesxclone = 8
+                            ELSE
+                                loadmonsterimagesxclone = 1
+                            END IF
+                        CASE 10
+                            IF monsters_sprites(loadmonsterdata, 5) THEN
+                                loadmonsterimagesxclone = 5
+                            ELSE IF monsters_sprites(loadmonsterdata, 6) THEN
+                                    loadmonsterimagesxclone = 6
+                                ELSE
+                                    loadmonsterimagesxclone = 1
+                                END IF
+                            END IF
+                        CASE ELSE
+                            loadmonsterimagesxclone = 1
+                    END SELECT
+                    IF loadmonsterimagesxclonecount = 10 THEN
+                        loadmonsterimagesxclone = 1
+                        EXIT DO
+                    END IF
+                    clonemonsterimagesx = loadmonsterimagesxclone
+                LOOP UNTIL monsters_sprites(loadmonsterdata, clonemonsterimagesx)
+                FOR clonemonsterimagesy = 1 TO 8
+                    monsters_image(loadmonsterdata, clonemonsterimagesy, clonemonsterimagesx) = monsters_image(loadmonsterdata, clonemonsterimagesy, loadmonsterimagesxclone)
+                NEXT clonemonsterimagesy
+                clonemonsterimagesx = saveclonemonsterimagesx
+            END IF
+        NEXT clonemonsterimagesx
+    END IF
+    monsteraudiofolder$ = "resource\audio\sfx\monster\" + MID$(HEX$(monsters(loadmonsterdata).id), 2, 1) + "\" + RIGHT$(HEX$(monsters(loadmonsterdata).id), 4) + "\"
+    FOR loadmonstersounds = 1 TO 127
+        monstersound$ = TRIMnum$(loadmonstersounds)
+        monstersound$ = SPACE$(3 - LEN(monstersound$)) + monstersound$
+        monsteraudio$ = monsteraudiofolder$ + monstersound$ + ".ogg"
+        IF _FILEEXISTS(monsteraudio$) THEN monsters_sound(loadmonsterdata, loadmonstersounds) = _SNDOPEN(monsteraudiofolder$, "VOL,SYNC,LEN,PAUSE")
+    NEXT loadmonstersounds
+    FOR removelostsounds = 1 TO 96
+        IF monsters_soundname(loadmonsterdata, removelostsounds) THEN
+            monstersound$ = TRIMnum$(monsters_soundname(loadmonsterdata, removelostsounds))
+            monstersound$ = SPACE$(3 - LEN(monstersound$)) + monstersound$
+            IF NOT _FILEEXISTS(monsteraudio$ + monstersound$ + ".ogg") THEN
+                monsters_soundname(loadmonsterdata, removelostsounds) = 0
+                monsters_sounds(loadmonsterdata, INT(removelostsounds / 8) + 1) = monsters_sounds(loadmonsterdata, INT(removelostsounds / 8) + 1) - 1
+            END IF
+        END IF
+    NEXT removelostsounds
+
+NEXT loadmonsterdata
+
+
+
+
+
+'something something map do
+
+
+
+
+'''below this line temp
+
+DIM openmonster AS monsterinstance
+
+
+monstertype = 1
+
+DO
+
+
+
+
+    openmonster.monsternum = 1 'monstertype
+
+    openmonster.lv = rangepick(monsters(openmonster.monsternum).lv)
+    openmonster.alignment = rangepick(monsters(openmonster.monsternum).alignment)
+
+    openmonster.type = monsters(openmonster.monsternum).type
+    openmonster.variation = ""
+    openmonster.status = ""
+
+
+    'make data files'''''''''''
+
+    FOR monsterstatusvariation = 1 TO 4
+        IF chance(.01) = -1 THEN
+            SELECT CASE monsterstatusvariation
+                CASE 1
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "F") THEN openmonster.status = RTRIM$(openmonster.status) + "F"
+                CASE 2
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "I") THEN openmonster.status = RTRIM$(openmonster.status) + "I"
+                CASE 3
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "P") THEN openmonster.status = RTRIM$(openmonster.status) + "P"
+                CASE 4
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "C") THEN openmonster.status = RTRIM$(openmonster.status) + "C"
+            END SELECT
+        END IF
+    NEXT monsterstatusvariation
+    FOR monstertypevariation = 1 TO 13
+        IF chance(.005) = -1 THEN
+            SELECT CASE monstertypevariation
+                CASE 1
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Ft") THEN openmonster.type = RTRIM$(openmonster.type) + "Ft"
+                CASE 2
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Wt") THEN openmonster.type = RTRIM$(openmonster.type) + "Wt"
+                CASE 3
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Et") THEN openmonster.type = RTRIM$(openmonster.type) + "Et"
+                CASE 4
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Dt") THEN openmonster.type = RTRIM$(openmonster.type) + "Dt"
+                CASE 5
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Ht") THEN openmonster.type = RTRIM$(openmonster.type) + "Ht"
+                CASE 6
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "At") THEN openmonster.type = RTRIM$(openmonster.type) + "At"
+                CASE 7
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Lt") THEN openmonster.type = RTRIM$(openmonster.type) + "Lt"
+                CASE 8
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "It") THEN openmonster.type = RTRIM$(openmonster.type) + "It"
+                CASE 9
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Pt") THEN openmonster.type = RTRIM$(openmonster.type) + "Pt"
+                CASE 10
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Rt") THEN openmonster.type = RTRIM$(openmonster.type) + "Rt"
+                CASE 11
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Mt") THEN openmonster.type = RTRIM$(openmonster.type) + "Mt"
+                CASE 12
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Ut") THEN openmonster.type = RTRIM$(openmonster.type) + "Ut"
+                CASE 13
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Gt") THEN openmonster.type = RTRIM$(openmonster.type) + "Gt"
+            END SELECT
+        END IF
+    NEXT monstertypevariation
+    FOR monsterimmunevariation = 1 TO 8
+        IF chance(.005) = -1 THEN
+            SELECT CASE monsterimmunevariation
+                CASE 1
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Fi") THEN openmonster.type = RTRIM$(openmonster.type) + "Fi"
+                CASE 2
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Wi") THEN openmonster.type = RTRIM$(openmonster.type) + "Wi"
+                CASE 3
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Ei") THEN openmonster.type = RTRIM$(openmonster.type) + "Ei"
+                CASE 4
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Di") THEN openmonster.type = RTRIM$(openmonster.type) + "Di"
+                CASE 5
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Hi") THEN openmonster.type = RTRIM$(openmonster.type) + "Hi"
+                CASE 6
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Li") THEN openmonster.type = RTRIM$(openmonster.type) + "Li"
+                CASE 7
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Ii") THEN openmonster.type = RTRIM$(openmonster.type) + "Ii"
+                CASE 8
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Pi") THEN openmonster.type = RTRIM$(openmonster.type) + "Pi"
+            END SELECT
+        END IF
+    NEXT monsterimmunevariation
+    FOR monstersubsetvariation = 1 TO 4
+        IF chance(.001) = -1 THEN
+            SELECT CASE monstersubsetvariation
+                CASE 1
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Xv") THEN openmonster.type = RTRIM$(openmonster.type) + "Xv"
+                CASE 2
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Xu") THEN openmonster.type = RTRIM$(openmonster.type) + "Xu"
+                CASE 3
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Xc") THEN openmonster.type = RTRIM$(openmonster.type) + "Xc"
+                CASE 4
+                    IF NOT INSTR(monsters(openmonster.monsternum).variation, "Xx") THEN openmonster.type = RTRIM$(openmonster.type) + "Xx"
+            END SELECT
+        END IF
+    NEXT monstersubsetvariation
+
+    openmonster.locx = 1
+    openmonster.locy = 1
+
+    openmonster.memory = 0
+
+    openmonster.age = rangepick(monsters(openmonster.monsternum).age)
+    openmonster.zoom = monsterzoom(monsters(openmonster.monsternum).age, openmonster.age)
+
+    openmonster.maxhealth = rangepick(monsters(openmonster.monsternum).health)
+    openmonster.maxmana = rangepick(monsters(openmonster.monsternum).mana)
+    openmonster.maxstamina = rangepick(monsters(openmonster.monsternum).stamina)
+    openmonster.health = openmonster.maxhealth
+    openmonster.mana = openmonster.maxmana
+    openmonster.stamina = openmonster.maxstamina
+
+    openmonster.attack = rangepick(monsters(openmonster.monsternum).attack)
+    openmonster.defense = rangepick(monsters(openmonster.monsternum).defense)
+    openmonster.speed = rangepick(monsters(openmonster.monsternum).speed)
+    openmonster.intelligence = rangepick(monsters(openmonster.monsternum).intelligence)
+
+    'armour needs to be sorted from highest chance to lowest chance
+    openmonster.equipment.helm = 0
+    openmonster.equipment.body = 0
+    openmonster.equipment.leg = 0
+    openmonster.equipment.boot = 0
+    openmonster.equipment.glove = 0
+    openmonster.equipment.shield = 0
+    openmonster.equipment.weapon = 0
+    openmonster.equipment.belt = 0
+    openmonster.equipment.shoulder = 0
+    openmonster.equipment.mantle = 0
+    openmonster.equipment.pendant = 0
+    openmonster.equipment.lring = 0
+    openmonster.equipment.rring = 0
+    openmonster.equipment.earring = 0
+    openmonster.equipment.bracelet = 0
+    openmonster.equipment.tatoo = 0
+    FOR monsterhelmchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 1, monsterhelmchoice)) THEN
+            openmonster.equipment.helm = monsters_armour(openmonster.monsternum, 1, monsterhelmchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterhelmchoice
+    FOR monsterbodychoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 2, monsterbodychoice)) THEN
+            openmonster.equipment.body = monsters_armour(openmonster.monsternum, 2, monsterbodychoice)
+            EXIT FOR
+        END IF
+    NEXT monsterbodychoice
+    FOR monsterlegchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 3, monsterlegchoice)) THEN
+            openmonster.equipment.leg = monsters_armour(openmonster.monsternum, 3, monsterlegchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterlegchoice
+    FOR monsterbootchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 4, monsterbootchoice)) THEN
+            openmonster.equipment.boot = monsters_armour(openmonster.monsternum, 4, monsterbootchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterbootchoice
+    FOR monsterglovechoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 5, monsterglovechoice)) THEN
+            openmonster.equipment.glove = monsters_armour(openmonster.monsternum, 5, monsterglovechoice)
+            EXIT FOR
+        END IF
+    NEXT monsterglovechoice
+    FOR monstershieldchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 6, monstershieldchoice)) THEN
+            openmonster.equipment.shield = monsters_armour(openmonster.monsternum, 6, monstershieldchoice)
+            EXIT FOR
+        END IF
+    NEXT monstershieldchoice
+    FOR monsterweaponchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 7, monsterweaponchoice)) THEN
+            openmonster.equipment.weapon = monsters_armour(openmonster.monsternum, 7, monsterweaponchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterweaponchoice
+    FOR monsterbeltchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 8, monsterbeltchoice)) THEN
+            openmonster.equipment.belt = monsters_armour(openmonster.monsternum, 8, monsterbeltchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterbeltchoice
+    FOR monstershoulderchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 9, monstershoulderchoice)) THEN
+            openmonster.equipment.shoulder = monsters_armour(openmonster.monsternum, 9, monstershoulderchoice)
+            EXIT FOR
+        END IF
+    NEXT monstershoulderchoice
+    FOR monstermantlechoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 10, monstermantlechoice)) THEN
+            openmonster.equipment.mantle = monsters_armour(openmonster.monsternum, 10, monstermantlechoice)
+            EXIT FOR
+        END IF
+    NEXT monstermantlechoice
+    FOR monsterpendantchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 11, monsterpendantchoice)) THEN
+            openmonster.equipment.pendant = monsters_armour(openmonster.monsternum, 11, monsterpendantchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterpendantchoice
+    FOR monsterlringchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 12, monsterlringchoice)) THEN
+            openmonster.equipment.lring = monsters_armour(openmonster.monsternum, 12, monsterlringchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterlringchoice
+    FOR monsterrringchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 12, monsterrringchoice)) THEN
+            openmonster.equipment.rring = monsters_armour(openmonster.monsternum, 12, monsterrringchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterrringchoice
+    FOR monsterearringchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 13, monsterearringchoice)) THEN
+            openmonster.equipment.earring = monsters_armour(openmonster.monsternum, 13, monsterearringchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterearringchoice
+    FOR monsterbraceletchoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 14, monsterbraceletchoice)) THEN
+            openmonster.equipment.bracelet = monsters_armour(openmonster.monsternum, 14, monsterbraceletchoice)
+            EXIT FOR
+        END IF
+    NEXT monsterbraceletchoice
+    FOR monstertatoochoice = 16 TO 1 STEP -1
+        IF chance(monsters_armourchance(openmonster.monsternum, 15, monstertatoochoice)) THEN
+            openmonster.equipment.tatoo = monsters_armour(openmonster.monsternum, 15, monstertatoochoice)
+            EXIT FOR
+        END IF
+    NEXT monstertatoochoice
+
+    openmonster.exp = rangepick(monsters(openmonster.monsternum).exp)
+    openmonster.gold = rangepick(monsters(openmonster.monsternum).gold)
+
+    openmonster.loot = ""
+
+    REDIM tempmonsterchooseloot(512, 2) AS _UNSIGNED LONG
+
+    monsterchooseloot = 0
+    FOR monsterlootchoice = 1 TO 512
+        IF monsters_loot(openmonster.monsternum, monsterlootchoice) = 0 THEN EXIT FOR
+        IF chance(monsters_lootchance(openmonster.monsternum, monsterlootchoice)) THEN
+            monsterchooseloot = monsterchooseloot + 1
+            tempmonsterchooseloot(monsterchooseloot, 1) = monsters_loot(openmonster.monsternum, monsterlootchoice)
+            IF monsters_lootquantity(openmonster.monsternum, monsterlootchoice).min > 0 THEN tempmonsterchooseloot(monsterchooseloot, 2) = rangepick(monsters_lootquantity(openmonster.monsternum, monsterlootchoice))
+        END IF
+    NEXT monsterlootchoice
+
+
+    DIM movemonsterlootchoicem AS _MEM
+    DIM movemonsterlootchoicen AS _MEM
+
+    movemonsterlootchoicem = _MEM(tempmonsterchooseloot())
+    movemonsterlootchoicen = _MEM(openmonster.loot)
+    _MEMCOPY movemonsterlootchoicem, movemonsterlootchoicem.OFFSET, movemonsterlootchoicem.SIZE TO movemonsterlootchoicen, movemonsterlootchoicen.OFFSET
+
+    'REDIM tempmonsterchooseloot(0, 0) AS _UNSIGNED LONG
+
+    openmonster.traindif = rangepick(monsters(openmonster.monsternum).traindif)
+
+    openmonster.psionics = rangepick(monsters(openmonster.monsternum).psionics)
+
+
+
+    CLS
+    PRINT monsters(openmonster.monsternum).id
+    PRINT monsters(openmonster.monsternum).name
+
+    PRINT "-"
+
+    PRINT openmonster.lv
+    PRINT openmonster.alignment
+    PRINT openmonster.type
+    PRINT openmonster.variation
+    PRINT openmonster.status
+
+    PRINT "-"
+
+    PRINT openmonster.age
+    PRINT openmonster.maxhealth
+    PRINT openmonster.maxmana
+    PRINT openmonster.maxstamina
+    PRINT openmonster.attack
+    PRINT openmonster.defense
+    PRINT openmonster.speed
+    PRINT openmonster.intelligence
+
+    PRINT "-"
+
+    PRINT openmonster.equipment.helm
+    PRINT openmonster.equipment.body
+    PRINT openmonster.equipment.leg
+    PRINT openmonster.equipment.boot
+    PRINT openmonster.equipment.glove
+    PRINT openmonster.equipment.shield
+    PRINT openmonster.equipment.weapon
+    PRINT openmonster.equipment.belt
+    PRINT openmonster.equipment.shoulder
+    PRINT openmonster.equipment.mantle
+    PRINT openmonster.equipment.pendant
+    PRINT openmonster.equipment.lring
+    PRINT openmonster.equipment.rring
+    PRINT openmonster.equipment.earring
+    PRINT openmonster.equipment.bracelet
+    PRINT openmonster.equipment.tatoo
+
+    PRINT "-"
+
+    PRINT openmonster.exp
+    PRINT openmonster.gold
+
+    PRINT "-"
+
+    FOR x = 1 TO 512
+        IF tempmonsterchooseloot(x, 1) = 0 THEN EXIT FOR
+        PRINT tempmonsterchooseloot(x, 1); 'should be read from string
+        IF tempmonsterchooseloot(x, 2) THEN
+            PRINT " x"; tempmonsterchooseloot(x, 2) 'should be read from string
+        ELSE
+            PRINT
+        END IF
+    NEXT x
+
+    PRINT "-"
+    PRINT openmonster.traindif
+    PRINT openmonster.psionics
+
+
+    SPRITEPUT 250, 600, monsters_image(openmonster.monsternum, 1, 1)
+    SPRITEZOOM monsters_image(openmonster.monsternum, 1, 1), openmonster.zoom
+    SPRITEPUT 390, 600, monsters_image(openmonster.monsternum, 1, 1)
+    SPRITEZOOM monsters_image(openmonster.monsternum, 1, 1), 100
+
+    SLEEP
+    IF monstertype = 1 THEN monstertype = 2 ELSE monstertype = 1
+
+    k$ = INKEY$
+LOOP UNTIL k$ = CHR$(27)
+SYSTEM
+
+
+
+
+
+'''above this line temp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'free map
+
+DIM freedmonsterimageindex AS _UNSIGNED _BYTE
+DIM freemonsterdata AS _UNSIGNED _BYTE
+DIM freemonsterimagesx AS _UNSIGNED _BYTE
+DIM freemonsterimagesy AS _UNSIGNED _BYTE
+DIM freemonstersounds AS _UNSIGNED _BYTE
+DIM freemonsterspritesheets AS _UNSIGNED _BYTE
+FOR freemonsterdata = 1 TO monsternum
+    REDIM freedmonsterimage(80) AS INTEGER
+    freedmonsterimageindex = 0
+    FOR freemonsterimagesx = 1 TO 8
+        FOR freemonsterimagesy = 1 TO 10
+            IF monsters_image(freemonsterdata, freemonsterimagesx, freemonsterimagesy) THEN
+                IF arrayloc_int(freedmonsterimage(), monsters_image(freemonsterdata, freemonsterimagesx, freemonsterimagesy)) = 0 THEN
+                    freedmonsterimageindex = freedmonsterimageindex + 1
+                    freedmonsterimage(freedmonsterimageindex) = monsters_image(freemonsterdata, freemonsterimagesx, freemonsterimagesy)
+                    SPRITEFREE monsters_image(freemonsterdata, freemonsterimagesx, freemonsterimagesy)
+                END IF
+            END IF
+    NEXT freemonsterimagesy, freemonsterimagesx
+    FOR freemonsterspritesheets = 1 TO 255
+        IF monsters_spritesheet(freemonsterspritesheets) THEN SPRITEFREE monsters_spritesheet(freemonsterspritesheets)
+    NEXT freemonsterspritesheets
+    FOR freemonstersounds = 1 TO 127
+        IF monsters_sound(freemonsterdata, freemonstersounds) THEN _SNDCLOSE monsters_sound(freemonsterdata, freemonstersounds)
+    NEXT freemonstersounds
+NEXT freemonsterdata
+REDIM monsters_sounds(0, 0) AS _BYTE
+REDIM monsters_soundname(0, 0) AS _BYTE
+REDIM monsters_sprites(0, 0) AS _BYTE
+REDIM freedmonsterimage(0) AS INTEGER
+REDIM monsters_spritesheet(0) AS INTEGER
+REDIM monsters_image(0, 0, 0) AS INTEGER
+REDIM monsters_sound(0, 0) AS LONG
+REDIM monsters_armour(0, 0, 0) AS _UNSIGNED LONG
+REDIM monsters_interact(0, 0, 0) AS _UNSIGNED LONG
+REDIM monsters_loot(0, 0) AS _UNSIGNED LONG
+REDIM monsters_spell(0, 0) AS _UNSIGNED LONG
+REDIM monsters_lootchance(0, 0) AS SINGLE
+REDIM monsters_armourchance(0, 0, 0) AS SINGLE
+REDIM monsters_lootquantity(0, 0) AS RANGE
+REDIM monsters(0) AS monster
+
+
+
+
+
+
+
+
+
+'finds the index of a data stucture in a database
+'parameter: the id to search for
+'parameter: the array of sequencial ids of the particular database
+'parameter: the code of the database to look in
+'return: the location in the database where the structure with the id begins
+FUNCTION dbindex& (id AS _UNSIGNED LONG, index() AS _UNSIGNED LONG, db AS _BYTE)
+DIM blocklength AS LONG
+FOR dbindex = 1 TO UBOUND(index)
+    IF id = index(dbindex) THEN
+        SELECT CASE db
+            CASE 1
+                blocklength = DB_MAP_SIZE
+            CASE 2
+                blocklength = DB_MONSTER_SIZE
+            CASE 3
+                blocklength = DB_ITEM_SIZE
+            CASE 4
+                blocklength = DB_NPC_SIZE
+            CASE 5
+                blocklength = DB_SPELL_SIZE
+            CASE 6
+                blocklength = DB_QUEST_SIZE
+        END SELECT
+        dbindex = (dbindex - 1) * blocklength - (dbindex - 2)
+        EXIT FUNCTION
+    END IF
+NEXT dbindex
+dbindex = -1
+END FUNCTION
+
+'finds the location of an element in an array of integers
+'parameter: an array of integers
+'parameter: the integer to search for
+'return: the index of the first matching element
+FUNCTION arrayloc_int& (array() AS INTEGER, reference AS INTEGER)
+FOR arrayloc_int = LBOUND(array) TO UBOUND(array)
+    IF array(checkarray) = reference THEN EXIT FUNCTION
+NEXT arrayloc_int
+arrayloc_int = 0
+END FUNCTION
+
+'calculates a chance event
+'parameter: the probability of the event occurring
+'return: true or false
+FUNCTION chance` (probability AS SINGLE)
+chance = probability >= RND
+END FUNCTION
+
+'simulates a dice roll
+'parameter: number of sides on the dice
+'return: the result of the roll
+FUNCTION dice& (sides AS LONG)
+dice = INT(RND * sides + 1)
+END FUNCTION
+
+'calculates the midpoint of 2 values
+'parameter: the first value
+'parameter: the second value
+'return: the midpoint
+FUNCTION midpoint## (p1 AS LONG, p2 AS LONG)
+midpoint = (p1 + p2) / 2
+END FUNCTION
+
+'determines the zoom aspect of a monster sprite
+'parameter: the range of ages for the monster
+'parameter: the age of the monster
+'return: the zoom aspect
+FUNCTION monsterzoom! (agerange AS RANGE, age AS LONG)
+DIM spread AS LONG
+DIM midage AS DOUBLE
+DIM normality AS DOUBLE
+DIM offness AS DOUBLE
+spread = agerange.max - agerange.min
+midage = midpoint(agerange.min, agerange.max)
+offness = age - midage
+normality = offness / spread
+monsterzoom = 100 + (normality * 100)
+END FUNCTION
+
+'picks a number from a range
+'parameter: the range
+'return: a number within the range
+FUNCTION rangepick& (set AS RANGE)
+rangepick = INT(RND * (set.max - set.min) + set.min)
+END FUNCTION
+
+'trims the beginning and end of a number for spaces
+'parameter: the number to be trimmed
+'return: the trimmed number converted to a string
+FUNCTION TRIMnum$ (n AS SINGLE)
+TRIMnum$ = LTRIM$(RTRIM$(STR$(n)))
+END FUNCTION
+
+'''''''''''''''''RITCHIE'S QB64 SPRITE LIBRARY''''''''''''''''''
+
+'$include:'lib\sprite.bi'
+
+''''''''''''''''''''''''''''''''''''''''''''''

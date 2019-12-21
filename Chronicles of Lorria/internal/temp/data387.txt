@@ -1,0 +1,5 @@
+int8 *_FUNC_HOUR_X_BYTE_HOUR_X=NULL;
+if(_FUNC_HOUR_X_BYTE_HOUR_X==NULL){
+_FUNC_HOUR_X_BYTE_HOUR_X=(int8*)mem_static_malloc(1);
+*_FUNC_HOUR_X_BYTE_HOUR_X=0;
+}

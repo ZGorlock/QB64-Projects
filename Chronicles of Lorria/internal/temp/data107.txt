@@ -1,0 +1,12 @@
+qbs*oldstr6763=NULL;
+if(_SUB_LOADFRAME_STRING_FLOC->tmp||_SUB_LOADFRAME_STRING_FLOC->fixed||_SUB_LOADFRAME_STRING_FLOC->readonly){
+oldstr6763=_SUB_LOADFRAME_STRING_FLOC;
+if (oldstr6763->cmem_descriptor){
+_SUB_LOADFRAME_STRING_FLOC=qbs_new_cmem(oldstr6763->len,0);
+}else{
+_SUB_LOADFRAME_STRING_FLOC=qbs_new(oldstr6763->len,0);
+}
+memcpy(_SUB_LOADFRAME_STRING_FLOC->chr,oldstr6763->chr,oldstr6763->len);
+}
+qbs *_SUB_LOADFRAME_STRING_SETNAME=NULL;
+if (!_SUB_LOADFRAME_STRING_SETNAME)_SUB_LOADFRAME_STRING_SETNAME=qbs_new(0,0);

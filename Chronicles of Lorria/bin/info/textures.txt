@@ -1,0 +1,29 @@
+001 - Parchment
+008 - Deep Cave
+011 - Forest Temple
+030 - Impenetrable Iron
+034 - Midnight Stone
+054 - Anisotropic Metal
+056 - Volcano Floor
+058 - Tower Wall
+067 - Jungle Stone
+068 - Scorched Earth
+101 - Imprinted Metal
+113 - Deep Fire
+118 - Primordial Mudstone
+120 - Wood Planks
+122 - Geiger's Cave
+125 - Black Rock
+126 - Planet
+140 - Patagonia
+143 - Gold Foil
+210 - Lava Bowl
+215 - Lava Cracks
+221 - Dark Gold Dust
+230 - Persian Floor
+232 - Slumbering Volcano
+233 - Mossy Bank
+234 - Desert
+245 - Black Reflective
+246 - Fortress Wall
+255 - Cracked Rock Cliff

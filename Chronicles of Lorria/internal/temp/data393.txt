@@ -1,0 +1,7 @@
+int32 *_FUNC_LEAPYEAR_X_BIT1_LEAPYEAR_X=NULL;
+if(_FUNC_LEAPYEAR_X_BIT1_LEAPYEAR_X==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+_FUNC_LEAPYEAR_X_BIT1_LEAPYEAR_X=(int32*)(dblock+cmem_sp);
+*_FUNC_LEAPYEAR_X_BIT1_LEAPYEAR_X=0;
+}

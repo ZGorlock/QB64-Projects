@@ -1,0 +1,4 @@
+if(oldstr8537){
+if(oldstr8537->fixed)qbs_set(oldstr8537,_FUNC_RACELOC_STRING_RACE);
+qbs_free(_FUNC_RACELOC_STRING_RACE);
+}

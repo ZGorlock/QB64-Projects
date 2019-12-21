@@ -1,0 +1,1 @@
+float GetAsyncKeyState(uint32);

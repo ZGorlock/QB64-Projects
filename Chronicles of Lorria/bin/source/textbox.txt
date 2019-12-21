@@ -1,0 +1,281 @@
+SCREEN _NEWIMAGE(640, 480, 32)
+CLS
+
+CONST SCRX = 640
+CONST SCRY = 480
+
+fonta = _LOADFONT("resource\font\unispace.ttf", 10)
+_FONT fonta
+
+a$ = "QB64 ignores DECLARE statements, so define the parameter TYPEs in the SUB procedure!   Parameters MUST be placed in parenthesis separated by commas when necessary.   Empty parenthesis are required when no parameters are used.           Declarations should be placed at the top of the main program code after Metacommand and DEF statements if used.Parameters can be defined in a DECLARE statement AS INTEGER, SINGLE, DOUBLE, LONG, STRING or ANY.The Qbasic IDE can automatically DECLARE a SUB or FUNCTION once the procedure is called and the module is Saved. If a procedure is never called, it will not be automatically be DECLAREd by the Qbasic IDE when the program is saved."
+
+
+REDIM text(16, 32768) AS STRING
+
+CALL textbox(50, 50, 450, 200, 0, 0, -1, 0, 0, 0, ctorgb(7), ctorgb(8), ctorgb(15), a$, 1)
+
+
+SLEEP
+SYSTEM
+
+
+
+
+'calculates the maximum characters for a textbox
+'paramter: the width in pixels of the textbox
+'return: the maximum characters
+FUNCTION maxchars~% (width AS _UNSIGNED INTEGER)
+IF width = 0 THEN width = SCRX - 4
+maxchars = INT(width / _FONTWIDTH) - 2
+END FUNCTION
+
+
+
+
+'creates a text box on the screen
+
+'parameter: location of the text box
+'parameter: the x coordinate of the upper left corner of a custom location text box
+'parameter: the y coordinate of the upper left corner of a custom location text box
+'parameter: the width in pixels of a custom text box (text$() must be formatted seperately)
+
+'parameter: whether to clear the screen or not
+'parameter: the behaviour of the text box
+
+'parameter: number of rows of the text box
+
+'parameter: location in the rows of the text box
+'parameter: whether to have ticks or not
+'parameter: the speed of the text printing
+
+'parameter: the color of the trim of the text box
+'parameter: the color of the shading of the text box
+'parameter: the color of the text of the text box
+
+'parameter: the array of strings to print in the text box
+'parameter: the stream of the array to use
+
+
+SUB textbox (boxlocleft AS LONG, boxloctop AS LONG, boxlocright AS LONG, boxlocbottom AS LONG, clrscr AS _BYTE, behaviour AS _BYTE, textboxshow AS _BYTE, row AS _BYTE, ticks AS _BYTE, speed AS _UNSIGNED _BYTE, colortrim AS LONG, colorshade AS LONG, colortext AS LONG, textadd AS STRING, stream AS _UNSIGNED _BYTE)
+
+DIM rowprint AS _BYTE
+DIM itsnew AS _UNSIGNED _BYTE
+DIM printrows AS _UNSIGNED _BYTE
+DIM counttick AS INTEGER
+DIM findnew AS INTEGER
+DIM getnew AS INTEGER
+DIM replacenew AS INTEGER
+
+SHARED text() AS STRING
+
+
+customwidth = (boxlocright - boxlocleft)
+new = addtotextbox(text(), 1, textadd, (customwidth / _PRINTWIDTH(CHR$(255))))
+rows = INT((boxlocbottom - boxloctop) / _FONTHEIGHT)
+locx = boxlocleft
+locy = boxloctop
+location = 2
+
+FOR findnew = 1 TO 32767
+    IF text(stream, findnew) = "" AND findnew >= new THEN
+        IF new THEN
+            REDIM newtext(1024) AS STRING
+            FOR getnew = 1 TO new
+                newtext(getnew) = text(stream, findnew - getnew)
+            NEXT getnew
+        END IF
+        EXIT FOR
+    END IF
+NEXT findnew
+
+IF row < 1 THEN row = 1
+IF row > findnew - rows THEN row = findnew - rows
+IF clrscr THEN
+    CALL cleartextbox(text(), stream)
+    IF new THEN
+        FOR replacenew = 1 TO new
+            text(stream, replacenew) = newtext(new - replacenew + 1)
+        NEXT replacenew
+    END IF
+    findnew = new + 1
+END IF
+IF rows = -1 THEN rows = new
+
+
+IF textboxshow THEN
+
+    LINE (boxlocleft, boxloctop)-(boxlocright, boxlocbottom), colortrim, B
+    PAINT (boxlocleft + 1, boxlocleft + 1), colorshade, colortrim
+
+
+    IF findnew = 1 THEN EXIT SUB
+    _PRINTMODE _KEEPBACKGROUND
+    COLOR colortext
+    IF behaviour = 0 THEN
+        row = 1
+    ELSE IF row = 0 THEN
+            row = findnew - rows
+            IF row < 1 THEN row = 1
+            IF row > findnew - new THEN row = findnew - new
+        END IF
+    END IF
+    rowprint = 0
+    Newprints = 0
+    IF new THEN
+        DO
+            IF speed OR ticks THEN
+                PAINT (locx + 1, locy + 1), colorshade, colortrim
+                row = findnew - rows - new + Newprints
+                rowprint = 0
+            END IF
+            FOR printrows = row TO row + (rows - 1)
+                rowprint = rowprint + 1
+                IF printrows > findnew THEN EXIT FOR
+                itsnew = 0
+                FOR isnew = 1 TO new
+                    IF newtext(isnew) = text(stream, printrows) THEN
+                        itsnew = 1
+                        EXIT FOR
+                    END IF
+                NEXT isnew
+                IF itsnew = 1 AND speed THEN
+                    IF (findnew - (new - (findnew - printrows))) - row > rows THEN row = (findnew - (new - (findnew - printrows))) - rows
+                    counttick = 0
+                    DO
+                        _LIMIT speed
+                        IF counttick = LEN(text(stream, printrows)) THEN EXIT DO
+                        _PRINTSTRING (locx + 2 + (8 * counttick), locy + 2 + (_FONTHEIGHT * (rowprint - 1))), MID$(text(stream, printrows), counttick + 1, 1)
+                        IF ticks THEN PLAY "MB L64 O4 C"
+                        counttick = counttick + 1
+                        Isinput = (INKEY$ > "")
+                        DO WHILE _MOUSEINPUT
+                            Isinput = (Isinput OR _MOUSEBUTTON(1) OR _MOUSEBUTTON(2) OR _MOUSEBUTTON(3))
+                        LOOP
+                        IF Isinput THEN
+                            IF Newprints = new THEN Newprints = Newprints - 1
+                            newtext(isnew) = ""
+                            EXIT FOR
+                        END IF
+                        _DISPLAY
+                    LOOP
+                    newtext(isnew) = ""
+                ELSE
+                    _PRINTSTRING (locx + 2, locy + 2 + (_FONTHEIGHT * (rowprint - 1))), text(stream, printrows)
+                END IF
+            NEXT printrows
+            IF speed = 0 THEN EXIT DO
+            Newprints = Newprints + 1
+        LOOP UNTIL Newprints > new
+    ELSE
+        FOR printrows = row TO row + (rows - 1)
+            rowprint = rowprint + 1
+            IF printrows >= findnew THEN EXIT FOR
+            _PRINTSTRING (locx + 2, locy + 2 + (_FONTHEIGHT * (rowprint - 1))), text(stream, printrows)
+        NEXT printrows
+    END IF
+END IF
+END SUB
+
+
+
+
+'clears an array
+'parameter: an array of strings
+'parameter: the stream of the array to use
+SUB cleartextbox (text() AS STRING, stream AS _UNSIGNED _BYTE)
+DIM clearing AS _UNSIGNED INTEGER
+FOR clearing = 1 TO 32767
+    IF text(stream, clearing) = "" THEN EXIT FOR
+    text(stream, clearing) = ""
+NEXT clearing
+END SUB
+
+
+
+
+'adds a string to the textbox string with proper division of lines
+'parameter: a string of arrays of the textbox text
+'parameter: the stream from the array to add to
+'parameter: a string of text to add to the textbox text array
+'parameter: the width in characters of the textbox
+'return: the number of new lines added to the textbox text array
+FUNCTION addtotextbox% (text() AS STRING, stream AS _UNSIGNED _BYTE, add AS STRING, size AS _UNSIGNED INTEGER)
+DIM adding AS _UNSIGNED INTEGER
+DIM addloc AS _UNSIGNED INTEGER
+DIM adds AS _UNSIGNED INTEGER
+DIM findlast AS _UNSIGNED INTEGER
+DIM remlast AS _UNSIGNED INTEGER
+FOR findlast = 1 TO 32767
+    IF text(stream, findlast) = "" THEN EXIT FOR
+NEXT findlast
+IF add = "" THEN
+    addtotextbox = 0
+    EXIT FUNCTION
+END IF
+REDIM adds(1024) AS STRING
+adds = 1
+addloc = 1
+DO
+    adds(adds) = MID$(add, addloc, size)
+    IF MID$(add, addloc + (size - 1), 1) <> " " AND MID$(add, addloc + (size - 1), 1) <> "" THEN
+        FOR remlast = LEN(adds(adds)) TO 1 STEP -1
+            IF MID$(adds(adds), remlast - 1, 1) = " " THEN
+                adds(adds) = LEFT$(adds(adds), remlast - 1)
+                EXIT FOR
+            END IF
+        NEXT remlast
+    END IF
+    addloc = addloc + LEN(adds(adds))
+    IF addloc >= LEN(add) THEN EXIT DO
+    adds = adds + 1
+LOOP
+FOR adding = 1 TO adds
+    text(stream, (findlast - 1) + adding) = adds(adding)
+NEXT adding
+addtotextbox = adds
+END FUNCTION
+
+
+
+
+'converts 4bit colors to 32bit colors
+'parameter: a 4bit color
+'return: the value of a 32bit color
+FUNCTION ctorgb& (c AS _BYTE)
+SELECT CASE c
+    CASE 0
+        ctorgb = 4278190080
+    CASE 1
+        ctorgb = 4278190248
+    CASE 2
+        ctorgb = 4278233088
+    CASE 3
+        ctorgb = 4278233256
+    CASE 4
+        ctorgb = 4289200128
+    CASE 5
+        ctorgb = 4289200296
+    CASE 6
+        ctorgb = 4289221632
+    CASE 7
+        ctorgb = 4289243304
+    CASE 8
+        ctorgb = 4283716692
+    CASE 9
+        ctorgb = 4283716860
+    CASE 10
+        ctorgb = 4283759700
+    CASE 11
+        ctorgb = 4283759868
+    CASE 12
+        ctorgb = 4294726740
+    CASE 13
+        ctorgb = 4294726908
+    CASE 14
+        ctorgb = 4294769748
+    CASE 15
+        ctorgb = 4294769916
+    CASE ELSE
+        ctorgb = 4278190080
+END SELECT
+END FUNCTION

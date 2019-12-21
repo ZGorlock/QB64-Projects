@@ -1,0 +1,46 @@
+animals = dbObjectNew
+drinks = dbObjectNew
+
+frog = dbPropertyNew(animals, 0, "frog", "frog")
+horse = dbPropertyNew(animals, 0, "horse", "horse")
+rat = dbPropertyNew(animals, 0, "rat", "rat")
+mammal = dbTypeNew(animals, 0, "mammal")
+
+
+dog = dbPropertyNew(0, mammal, "dog", "dog")
+cat = dbPropertyNew(0, mammal, "cat", "cat")
+primate = dbTypeNew(0, mammal, "primate")
+
+monkey = dbPropertyNew(0, primate, "monkey", "monkey")
+human = dbPropertyNew(0, primate, "human", "human")
+
+sloth = dbPropertyNew(0, mammal, "sloth", "sloth")
+
+fish = dbTypeNew(animals, 0, "fish")
+
+onefish = dbPropertyNew(0, fish, "onefish", "one fish")
+twofish = dbPropertyNew(0, fish, "twofish", "two fish")
+redfish = dbPropertyNew(0, fish, "redfish", "red fish")
+bluefish = dbPropertyNew(0, fish, "bluefish", "blue fish")
+
+
+
+
+water = dbPropertyNew(drinks, 0, "water", "water")
+soda = dbTypeNew(drinks, 0, "soda")
+
+drpepper = dbPropertyNew(0, soda, "drpepper", "dr pepper")
+coke = dbPropertyNew(0, soda, "coke", "coke")
+sprite = dbPropertyNew(0, soda, "sprite", "sprite")
+
+milk = dbPropertyNew(drinks, 0, "milk", "milk")
+
+
+
+
+
+PRINT "animals"
+printobject animals, 0, 1
+
+PRINT "drinks"
+printobject drinks, 0, 1

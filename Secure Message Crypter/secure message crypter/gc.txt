@@ -1,0 +1,14 @@
+FOR x = 1 TO 128
+    RANDOMIZE TIMER
+    a = INT(RND * 80 + 46)
+    b$ = CHR$(a)
+    c$ = c$ + b$
+NEXT x
+_CLIPBOARD$ = c$
+SYSTEM
+
+
+---
+
+
+haOo`Rgw]\I4]0CY=WBHp^ZPlh;]2;5GLc46ETLyA^}KB2cpqov_U`>RQjptg=UI1ei8dk1AavbMwIGrVq[a9bsj61TvL@:Kf|M:ImeCFxGO[K|:;8@cnyXlj39=0Wnc
